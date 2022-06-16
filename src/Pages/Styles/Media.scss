@@ -1,0 +1,575 @@
+// Deleted Animations
+@media screen and(max-width: 1500px) {
+  button, a:hover {
+    right: 30px !important;
+    transform: scale(1) !important;
+  }
+}
+
+@media screen and(max-width: 1350px) {
+  // Header
+  #header {
+    .main {
+      padding: 40px 0 !important;
+    }
+
+    // Burger Menu
+    .burger {
+      display: block !important;
+    }
+
+    // Navigation
+    .navigation {
+      flex-direction: column;
+      text-align: center;
+
+      .navigation__links {
+        height: 30px;
+        margin: 50px 0;
+        transition: 0.5s;
+        flex-direction: column;
+        overflow: hidden;
+
+        .links__item {
+          margin-right: 0 !important;
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 0 !important;
+          }
+        }
+      }
+    }
+
+    // Booking a course
+    .booking {
+      height: 400px !important;
+
+      .booking__container {
+        height: 300px !important;
+        flex-direction: column;
+      }
+    }
+
+    // Content
+    .about-course__content {
+      height: 1200px;
+      flex-direction: column;
+    }
+  }
+
+  // About Us
+  #about-us {
+    height: 900px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about-course {
+    .about-course__content {
+      height: 1300px;
+      flex-direction: column;
+    }
+  }
+
+  // Partners
+  #partners {
+    .photographs__row {
+      width: fit-content;
+      flex-direction: column;
+      margin: auto;
+
+      .row__item {
+        border-right: 0 !important;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 900px) {
+  // Teachers
+  #teachers {
+    .teachers__content {
+      height: 1400px;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and(max-width: 740px) {
+  // Header
+  #header {
+    // Timer
+    .timer {
+      margin-bottom: 0 !important;
+
+      .timer__title {
+        font-size: 50px !important;
+      }
+
+      .timer__item {
+        width: 100px !important;
+        height: 100px !important;
+
+        span {
+          font-size: 25px !important;
+        }
+
+        p {
+          font-size: 14px !important;
+        }
+      }
+    }
+
+    // Income Progress
+    .progress__bar_earned {
+      width: 340px !important;
+    }
+
+    .progress__bar_deficiency {
+      width: 174px !important;
+    }
+  }
+}
+
+@media screen and(max-width: 650px) {
+  // Training Program
+  #training-program {
+    .column__item {
+      width: 260px !important;
+
+      p {
+        font-size: 15px !important;
+      }
+    }
+  }
+
+  #partners {
+    .partners__title {
+      width: 520px !important;
+
+      .title {
+        font-size: 40px !important;
+      }
+    }
+  }
+
+  #about-us {
+    height: 800px !important;
+
+    // Img
+    .about__img {
+      width: 350px !important;
+      height: 350px !important;
+
+      img {
+        top: 60px !important;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 570px) {
+  // Header
+  #header {
+    // Timer
+    .timer {
+      .timer__title {
+        font-size: 40px !important;
+      }
+
+      .timer__item {
+        width: 80px !important;
+        height: 80px !important;
+
+        span {
+          font-size: 20px !important;
+        }
+
+        p {
+          font-size: 12px !important;
+        }
+      }
+    }
+
+    // Income Progress
+    .income__progress {
+      margin: 15px 0 10px !important;
+    }
+
+    .progress__bar_earned {
+      width: 290px !important;
+    }
+
+    .progress__bar_deficiency {
+      width: 124px !important;
+    }
+  }
+
+  // About Us
+  #about-us {
+    height: 550px !important;
+
+    // Img
+    .about__img {
+      width: 250px !important;
+      height: 250px !important;
+
+      img {
+        top: 50px !important;
+      }
+    }
+
+    // Text
+    .title {
+      font-size: 30px !important;
+      margin-bottom: 30px !important;
+    }
+
+    .txt__text {
+      font-size: 14px !important;
+    }
+  }
+
+  // About Course
+  #about-course {
+    .title {
+      font-size: 30px !important;
+    }
+  }
+
+  // Partners
+  #partners {
+    .partners__title {
+      width: 430px !important;
+
+      .title {
+        font-size: 30px !important;
+      }
+    }
+
+    .photographs__row {
+      .row__item {
+        width: 240px !important;
+        height: 120px !important;
+
+        img {
+          width: 150px !important;
+          height: 75px !important;
+        }
+      }
+    }
+  }
+
+  // Training Program
+  #training-program {
+    // Title
+    .training-program__title {
+      .title {
+        font-size: 40px !important;
+      }
+
+      .grey-subtitle {
+        font-size: 14px !important;
+      }
+    }
+
+    // Item
+    .column__item {
+      width: 225px !important;
+
+      h4 {
+        font-size: 12px !important;
+      }
+
+      p {
+        font-size: 12px !important;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 480px) {
+  // Header
+  #header {
+    // Timer
+    .timer {
+      .timer__title {
+        font-size: 30px !important;
+      }
+
+      .timer__row {
+        width: 350px !important;
+      }
+
+      .timer__item {
+        width: 70px !important;
+        height: 70px !important;
+
+        p {
+          font-size: 10px !important;
+        }
+      }
+    }
+
+    // Income Progress
+    .progress__bar_earned {
+      width: 250px !important;
+    }
+
+    .progress__bar_deficiency {
+      width: 84px !important;
+    }
+  }
+
+  // About Us
+  #about-us {
+    height: 500px !important;
+
+    // Img
+    .about__img {
+      width: 250px !important;
+      height: 250px !important;
+      border: 20px solid mediumpurple !important;
+
+      img {
+        top: 40px !important;
+      }
+    }
+
+    // Text
+    .title {
+      font-size: 25px !important;
+      margin-bottom: 20px !important;
+    }
+
+    .txt__text {
+      font-size: 12px !important;
+    }
+  }
+
+  // About Course
+  #about-course {
+    .light-grey-txt {
+      font-size: 14px !important;
+    }
+  }
+
+  // Partners
+  #partners {
+    .lds-ring {
+      width: 84px !important;
+      height: 84px !important;
+    }
+
+    .lds-ring div {
+      width: 84px !important;
+      height: 84px !important;
+    }
+
+    .partners__title {
+      width: 370px !important;
+
+      .title {
+        font-size: 25px !important;
+      }
+    }
+  }
+
+  // Training Program
+  #training-program {
+    // Title
+    .training-program__title {
+      .title {
+        font-size: 35px !important;
+      }
+
+      .grey-subtitle {
+        font-size: 12px !important;
+      }
+    }
+
+    // Line
+    .content__line {
+      width: 4px !important;
+    }
+
+    // Item
+    .column__item {
+      width: 180px !important;
+
+      hr {
+        width: 30px !important;
+      }
+
+      .item__txt {
+        margin-right: 25px !important;
+      }
+
+      h4 {
+        font-size: 10px !important;
+      }
+
+      p {
+        font-size: 10px !important;
+      }
+    }
+  }
+
+  // Social Networks
+  #social-networks {
+    .title {
+      font-size: 40px !important;
+    }
+
+    p {
+      font-size: 14px !important;
+    }
+
+    input {
+      width: 300px !important;
+    }
+
+    button {
+      width: 140px !important;
+    }
+  }
+}
+
+@media screen and(max-width: 415px) {
+  // About Us
+  #about-us {
+    height: 420px !important;
+
+    // Img
+    .about__img {
+      width: 200px !important;
+      height: 200px !important;
+
+      img {
+        top: 35px !important;
+      }
+    }
+
+    // Text
+    .title {
+      font-size: 20px !important;
+      margin-bottom: 15px !important;
+    }
+
+    .txt__text {
+      font-size: 10px !important;
+    }
+  }
+
+  // About Course
+  #about-course {
+    // Title
+    .title {
+      font-size: 25px !important;
+    }
+
+    // Content
+    .about-course__content {
+      height: 900px !important;
+      margin-top: 50px !important;
+
+      .item__img {
+        width: 80px !important;
+        height: 80px !important;
+      }
+
+      .item__subtitle {
+        font-size: 20px !important;
+        margin: 30px 0 15px !important;
+      }
+
+      .light-grey-txt {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  // Training Program
+  #training-program {
+    // Title
+    .training-program__title {
+      .lds-ring {
+        width: 84px !important;
+        height: 84px !important;
+      }
+
+      .lds-ring div {
+        width: 84px !important;
+        height: 84px !important;
+      }
+
+      .title {
+        font-size: 30px !important;
+      }
+    }
+
+    // Item
+    .column__item {
+      width: 170px !important;
+
+      hr {
+        width: 25px !important;
+      }
+
+      h4 {
+        font-size: 9px !important;
+      }
+
+      p {
+        font-size: 9px !important;
+      }
+    }
+  }
+
+  // Partners
+  #partners {
+    .partners__title {
+      width: 350px !important;
+
+      .title {
+        font-size: 23px !important;
+      }
+    }
+  }
+
+  // Teachers
+  #teachers {
+    // Title
+    .teachers__title {
+      width: 320px !important;
+
+      .title {
+        font-size: 35px !important;
+      }
+    }
+  }
+
+  // Social Networks
+  #social-networks {
+    .title {
+      font-size: 35px !important;
+    }
+
+    p {
+      font-size: 12px !important;
+    }
+
+    input {
+      width: 250px !important;
+      height: 35px !important;
+    }
+
+    button {
+      width: 100px !important;
+      height: 35px !important;
+      font-size: 14px !important;
+    }
+  }
+}
