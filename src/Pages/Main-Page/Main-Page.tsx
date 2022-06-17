@@ -1,8 +1,9 @@
+import React, {useEffect} from "react"
 import './Styles/Reset.css'
 import './Styles/Media.css'
 import './Styles/Main-Page.css'
-import {NavLink} from "react-router-dom";
-import React, {useEffect} from "react";
+import {NavLink} from "react-router-dom"
+import {Spinner} from "./Spinner"
 
 export function MainPage() {
     const timerRef: any = React.createRef()
@@ -167,12 +168,7 @@ export function MainPage() {
                     </section>
                     <section id="partners">
                         <div className="partners__title flex-property-set_between">
-                            <div className="lds-ring">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
+                            <Spinner/>
                             <p className="title">Partners - top brands</p>
                         </div>
                         <div className="partners__photographs">
@@ -208,12 +204,7 @@ export function MainPage() {
                     </section>
                     <section id="training-program">
                         <div className="training-program__title">
-                            <div className="lds-ring">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
+                            <Spinner/>
                             <h1 className="title">Training program</h1>
                             <p className="grey-subtitle">This is our training program developed by the bests teachers</p>
                         </div>
@@ -276,12 +267,7 @@ export function MainPage() {
                     </section>
                     <section id="teachers">
                         <div className="teachers__title flex-property-set_between">
-                            <div className="lds-ring">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
+                            <Spinner/>
                             <h1 className="title">Our teachers</h1>
                         </div>
                         <div className="teachers__content flex-property-set_between">
