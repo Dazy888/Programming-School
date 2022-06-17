@@ -1,4 +1,5 @@
 import './Styles/Contacts-Page.css'
+import './Styles/Contacts-Page-Media.css'
 import {Navigation} from "../../Components/Navigation";
 import {Field, Form, Formik} from "formik";
 
@@ -57,7 +58,7 @@ export function ContactsPage() {
                                     <Field className={'inputs__textarea'} type={'textarea'} name={'applicationTxt'} />
                                 </div>
                             </div>
-                            <p className={'form__txt'}>By clicking the send button you agree to the processing of personal data in accordance with the privacy policy</p>
+                            <p className={'form__txt form__agreemant'}>By clicking the send button you agree to the processing of personal data in accordance with the privacy policy</p>
                             <button className={'form__submit'}>Send</button>
                         </Form>
                     </Formik>
