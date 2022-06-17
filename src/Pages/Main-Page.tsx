@@ -35,9 +35,17 @@ export function MainPage() {
             startTimer()
         }, 1000)
 
-        const burgerBtn: any = navigation.querySelector('.burger')
-        burgerBtn.onclick = () => {
-            navigation.classList.toggle('show-nav')
+        const burgerOpen: any = navigation.querySelector('.burger_open')
+        const burgerClose: any = navigation.querySelector('.burger_close')
+        burgerOpen.onclick = () => {
+            navigation.classList.add('show-nav')
+            burgerOpen.style.display = 'none'
+            burgerClose.style.display = 'block'
+        }
+        burgerClose.onclick = () => {
+            navigation.classList.remove('show-nav')
+            burgerOpen.style.display = 'block'
+            burgerClose.style.display = 'none'
         }
     }, [])
 
@@ -50,7 +58,8 @@ export function MainPage() {
                             <img className="img__logo" src="/Photographs/Logo.png" alt="Logo" />
                         </div>
                         <nav className="navigation__links white-txt" ref={navigationRef}>
-                            <button className="burger"><i className="fa-solid fa-bars"></i></button>
+                            <button className="burger_close"><i className="fa-solid fa-square-xmark"></i></button>
+                            <button className="burger burger_open"><i className="fa-solid fa-bars"></i></button>
                             <NavLink to={'/home'} className="links__item">Home</NavLink>
                             <NavLink to={'/courses'} className="links__item">Courses</NavLink>
                             <NavLink to={'/schedule'} className="links__item">Schedule</NavLink>
