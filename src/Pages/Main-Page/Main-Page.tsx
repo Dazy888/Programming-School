@@ -4,6 +4,7 @@ import './Styles/Main-Page-Media.css'
 import './Styles/Main-Page.css'
 import {Spinner} from "./Spinner"
 import {Navigation} from "../../Components/Navigation";
+import {Field, Form, Formik} from "formik";
 
 export function MainPage() {
     const timerRef: any = React.createRef()
@@ -258,8 +259,14 @@ export function MainPage() {
                         <h1 className="title">News every week</h1>
                         <p className="social-networks__subtitle grey-subtitle">If you subscribe, you will receive the latest news and discount notifications</p>
                         <div className="social-networks__email">
-                            <input type="email" className="email__input" placeholder="E-mail" />
-                            <button className="email__btn flex-property-set_center">Subscribe</button>
+                            <Formik initialValues={{}} onSubmit={submit}>
+                                {({errors, touched}) => (
+                                    <Form>
+                                        <Field name={'email'} type="email" className="email__input" placeholder="E-mail"/>
+                                        <Field name={'submit'} type="submit" className="email__submit flex-property-set_center" value="Subscribe"/>
+                                    </Form>
+                                )}
+                            </Formik>
                         </div>
                         <div className="social-networks__links flex-property-set_between">
                             <a href={'https://www.youtube.com/'} className="links__item flex-property-set_center"><i className="fa-brands fa-youtube item__icon"></i></a>
@@ -271,4 +278,8 @@ export function MainPage() {
             </main>
         </div>
     )
+}
+
+function submit(values: any, formikHelpers: any) {
+
 }
