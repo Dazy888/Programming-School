@@ -75,6 +75,10 @@
 
     .content {
       flex-direction: column;
+
+      .content__column:last-child {
+        margin-top: 40px;
+      }
     }
   }
 }
@@ -82,7 +86,7 @@
 @media screen and(max-width: 440px) {
   #schedule-wrapper {
     .column__item {
-      width: 320px !important;
+      width: 330px !important;
       height: 180px !important;
 
       .item__title {
@@ -90,7 +94,7 @@
       }
 
       .item__txt {
-        font-size: 14px !important;
+        font-size: 13px !important;
       }
     }
   }
