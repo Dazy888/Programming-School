@@ -35,7 +35,7 @@
 
 @media screen and(max-width: 815px) {
   .contacts__row {
-    width: fit-content;
+    width: fit-content !important;
     height: 1200px;
     flex-direction: column;
   }

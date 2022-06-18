@@ -1,12 +1,22 @@
 import './Styles/Contacts-Page.css'
 import './Styles/Contacts-Page-Media.css'
-import {Navigation} from "../../Components/Navigation";
-import {Field, Form, Formik} from "formik";
+import {Navigation} from "../../Components/Navigation"
+import {Field, Form, Formik} from "formik"
+import React, {useState} from "react"
+import {useDispatch, useSelector} from "react-redux"
+import {ContactsReducerActions, getFetchingStatus} from "../../Redux/Contacts-Page-Reducer/Contacts-Reducer"
 
 export function ContactsPage() {
-    function submit() {
+    const formRef: any = React.createRef()
+    const fetching = useSelector(getFetchingStatus)
+    const dispatch = useDispatch()
 
+    function submit(values: any, formikHelpers: any) {
+        dispatch(ContactsReducerActions.changeFetchingStatus(true))
+        let inputs = formRef.current.querySelectorAll('input')
+        formikHelpers.resetForm()
     }
+
     return(
         <div id={'contacts-wrapper'}>
             <Navigation/>
@@ -46,24 +56,69 @@ export function ContactsPage() {
                 <div className={'information__form'}>
                     <h1 className={'form__title'}>We are in touch</h1>
                     <p className={'form__txt'}>Submit your application and we will contact you</p>
-                    <Formik initialValues={{}} onSubmit={submit}>
-                        <Form>
-                            <div className={'form__elements'}>
-                                <div className={'form__inputs'}>
-                                    <Field className={'inputs__txt'} placeholder={'Your name'} type={'text'} name={'name'} />
-                                    <Field className={'inputs__txt'} placeholder={'Reason of the application'} type={'text'} name={'companyName'} />
-                                    <Field className={'inputs__txt'} placeholder={'Your phone number'} type={'text'} name={'phone'} />
+                    <Formik initialValues={{firstName: '', reason: '', phone: '', applicationTxt: ''}} onSubmit={submit}>
+                        {({ errors, touched }) => (
+                            <Form ref={formRef}>
+                                <div className={'form__elements'}>
+                                    <div className={'form__inputs'}>
+                                        <div className={'error-container'}>
+                                            {errors.firstName && touched.firstName ? <p className={'error__txt'}>{errors.firstName}</p> : null}
+                                            <Field className={'inputs__txt'} minLength={3} maxLength={20} placeholder={'Your name'} type={'text'} name={'firstName'} validate={nameValidation} />
+                                            {errors.firstName}
+                                            {errors.firstName && touched.firstName ? <i className="fa-solid fa-circle-exclamation error"></i> : null}
+                                        </div>
+                                        <div className={'error-container'}>
+                                            {errors.reason && touched.reason ? <p className={'error__txt'}>{errors.reason}</p> : null}
+                                            <Field className={'inputs__txt'} minLength={5} maxLength={20} placeholder={'Reason of the application'} type={'text'} name={'reason'} validate={reasonValidation} />
+                                            {errors.reason && touched.reason ? <i className="fa-solid fa-circle-exclamation error"></i> : null}
+                                        </div>
+                                        <div className={'error-container'}>
+                                            {errors.phone && touched.phone ? <p className={'error__txt'}>{errors.phone}</p> : null}
+                                            <Field className={'inputs__txt'} minLength={10} maxLength={13} placeholder={'Your phone number'} type={'text'} name={'phone'} validate={phoneNumberValidator} />
+                                            {errors.phone && touched.phone ? <i className="fa-solid fa-circle-exclamation error"></i> : null}
+                                        </div>
+                                    </div>
+                                    <div className={'form__textarea'}>
+                                        <div className={'error-container'}>
+                                            {errors.applicationTxt && touched.applicationTxt ? <p className={'error__txt'}>{errors.applicationTxt}</p> : null}
+                                            <Field minLength={20} maxLength={100} as={'textarea'} className={'inputs__textarea'} placeholder={'Describe your request'} type={'textarea'} name={'applicationTxt'} validate={textareaValidator} />
+                                            {errors.applicationTxt && touched.applicationTxt ? <i className="fa-solid fa-circle-exclamation error"></i> : null}
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className={'form__textarea'}>
-                                    <Field className={'inputs__textarea'} type={'textarea'} name={'applicationTxt'} />
-                                </div>
-                            </div>
-                            <p className={'form__txt form__agreemant'}>By clicking the send button you agree to the processing of personal data in accordance with the privacy policy</p>
-                            <button className={'form__submit'}>Send</button>
-                        </Form>
+                                <p className={'form__txt form__agreemant'}>By clicking the send button you agree to the processing of personal data in accordance with the privacy policy</p>
+                                <Field disabled={fetching} type={'submit'} name={'submit'} className={'form__submit'} value={'Send'} />
+                            </Form>
+                        )}
                     </Formik>
                 </div>
             </div>
         </div>
     )
+}
+
+function nameValidation(value: string) {
+    if (!value) return 'Field is required'
+    if (!/^[a-zA-Z]+$/.test(value)) return 'There is a wrong symbols'
+}
+
+function reasonValidation(value: string) {
+    if (!value) return 'Field is required'
+    let errors;
+    if (value) errors = value.match(/[\W_]/g)
+
+    if (errors) {
+        for (const error of errors) {
+            if (error !== ' ') return 'There is a wrong symbols'
+        }
+    }
+}
+
+function phoneNumberValidator(value: string) {
+    if (!value) return 'Field is required'
+    if (!/^(\d+)$/.test(value)) return 'There is a wrong symbols'
+}
+
+function textareaValidator(value: string) {
+    if (!value) return 'Field is required'
 }
