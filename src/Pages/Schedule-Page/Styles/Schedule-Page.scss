@@ -68,26 +68,30 @@
 }
 
 @media screen and(max-width: 1020px) {
-  .container {
-    width: fit-content !important;
-  }
+  #schedule-wrapper {
+    .container {
+      width: fit-content !important;
+    }
 
-  .content {
-    flex-direction: column;
+    .content {
+      flex-direction: column;
+    }
   }
 }
 
 @media screen and(max-width: 440px) {
-  .column__item {
-    width: 320px !important;
-    height: 180px !important;
+  #schedule-wrapper {
+    .column__item {
+      width: 320px !important;
+      height: 180px !important;
 
-    .item__title {
-      font-size: 18px !important;
-    }
+      .item__title {
+        font-size: 18px !important;
+      }
 
-    .item__txt {
-      font-size: 14px !important;
+      .item__txt {
+        font-size: 14px !important;
+      }
     }
   }
 }

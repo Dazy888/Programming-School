@@ -1,13 +1,17 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useState} from "react"
 import './Styles/Reset.css'
 import './Styles/Main-Page-Media.css'
 import './Styles/Main-Page.css'
 import {Spinner} from "./Spinner"
 import {Navigation} from "../../Components/Navigation";
 import {Field, Form, Formik} from "formik";
+import {useDispatch, useSelector} from "react-redux";
+import {getNewsSubscribedUsers, ScheduleReducerActions} from "../../Redux/Main-Page-Reducer/Main-Reducer";
 
 export function MainPage() {
     const timerRef: any = React.createRef()
+    const newsSubscribedUsers = useSelector(getNewsSubscribedUsers)
+    const dispatch = useDispatch()
 
     useEffect(() => {
         const timer = timerRef.current
@@ -30,6 +34,18 @@ export function MainPage() {
             startTimer()
         }, 1000)
     }, [])
+
+    function submit(values: any, formikHelpers: any) {
+        for (const user of newsSubscribedUsers) {
+            if (user === values.email) {
+                formikHelpers.resetForm()
+                return
+            }
+        }
+
+        dispatch(ScheduleReducerActions.subscribeNews(values.email))
+        formikHelpers.resetForm()
+    }
 
     return(
         <div id={'wrapper'}>
@@ -259,11 +275,11 @@ export function MainPage() {
                         <h1 className="title">News every week</h1>
                         <p className="social-networks__subtitle grey-subtitle">If you subscribe, you will receive the latest news and discount notifications</p>
                         <div className="social-networks__email">
-                            <Formik initialValues={{}} onSubmit={submit}>
+                            <Formik initialValues={{email: ''}} onSubmit={submit}>
                                 {({errors, touched}) => (
                                     <Form>
                                         <Field name={'email'} type="email" className="email__input" placeholder="E-mail"/>
-                                        <Field name={'submit'} type="submit" className="email__submit flex-property-set_center" value="Subscribe"/>
+                                        <Field as={'button'} name={'submit'} type="submit" className="email__submit flex-property-set_center">Subscribe</Field>
                                     </Form>
                                 )}
                             </Formik>
@@ -278,8 +294,4 @@ export function MainPage() {
             </main>
         </div>
     )
-}
-
-function submit(values: any, formikHelpers: any) {
-
 }
