@@ -35,6 +35,11 @@ export function MainPage() {
         }, 1000)
     }, [])
 
+    function emailValidation(value: string) {
+        if (!value) return 'Field is required'
+        if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value)) return 'You have entered an invalid email address'
+    }
+
     function submit(values: any, formikHelpers: any) {
         for (const user of newsSubscribedUsers) {
             if (user === values.email) {
@@ -278,7 +283,11 @@ export function MainPage() {
                             <Formik initialValues={{email: ''}} onSubmit={submit}>
                                 {({errors, touched}) => (
                                     <Form>
-                                        <Field name={'email'} type="email" className="email__input" placeholder="E-mail"/>
+                                        <div className={'error-container'}>
+                                            {errors.email && touched.email ? <p className={'error__txt'}>{errors.email}</p> : null}
+                                            <Field name={'email'} type="email" className="email__input" placeholder="E-mail" validate={emailValidation}/>
+                                            {errors.email && touched.email ? <i className="fa-solid fa-circle-exclamation error"></i> : null}
+                                        </div>
                                         <Field as={'button'} name={'submit'} type="submit" className="email__submit flex-property-set_center">Subscribe</Field>
                                     </Form>
                                 )}

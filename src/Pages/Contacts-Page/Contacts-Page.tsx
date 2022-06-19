@@ -64,7 +64,6 @@ export function ContactsPage() {
                                         <div className={'error-container'}>
                                             {errors.firstName && touched.firstName ? <p className={'error__txt'}>{errors.firstName}</p> : null}
                                             <Field className={'inputs__txt'} minLength={3} maxLength={20} placeholder={'Your name'} type={'text'} name={'firstName'} validate={nameValidation} />
-                                            {errors.firstName}
                                             {errors.firstName && touched.firstName ? <i className="fa-solid fa-circle-exclamation error"></i> : null}
                                         </div>
                                         <div className={'error-container'}>
