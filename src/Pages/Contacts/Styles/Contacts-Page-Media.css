@@ -1,0 +1,92 @@
+@media screen and (max-width: 1300px) {
+  #contacts-wrapper {
+    padding: 40px 0 !important;
+  }
+}
+@media screen and (max-width: 1240px) {
+  #contacts-wrapper .map iframe {
+    width: 1000px;
+    height: 380px;
+  }
+  #contacts-wrapper .information {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  #contacts-wrapper .information .information__address {
+    margin: 0 auto 100px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1020px) {
+  #contacts-wrapper .map iframe {
+    width: 800px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 815px) {
+  #contacts-wrapper .contacts__row {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    height: 1200px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contacts-wrapper .map iframe {
+    width: 600px;
+    height: 320px;
+  }
+}
+@media screen and (max-width: 755px) {
+  #contacts-wrapper .form__elements {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto !important;
+  }
+  #contacts-wrapper .form__elements .form__inputs {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 50px auto;
+  }
+  #contacts-wrapper .form__elements .form__textarea {
+    margin-bottom: 50px;
+  }
+  #contacts-wrapper .form__submit {
+    width: 500px !important;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 630px) {
+  #contacts-wrapper .map iframe {
+    width: 450px;
+    height: 220px;
+  }
+}
+@media screen and (max-width: 515px) {
+  #contacts-wrapper .form__submit {
+    width: 350px !important;
+  }
+}
+@media screen and (max-width: 470px) {
+  #contacts-wrapper .map iframe {
+    width: 350px;
+    height: 180px;
+  }
+  #contacts-wrapper .form__agreement {
+    font-size: 13px !important;
+  }
+}
