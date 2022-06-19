@@ -59,16 +59,6 @@
   }
 }
 
-@media screen and(max-width: 900px) {
-  // Teachers
-  #teachers {
-    .teachers__content {
-      height: 1400px;
-      flex-direction: column;
-    }
-  }
-}
-
 @media screen and(max-width: 740px) {
   // Header
   #header {
@@ -520,18 +510,6 @@
 
       .title {
         font-size: 23px !important;
-      }
-    }
-  }
-
-  // Teachers
-  #teachers {
-    // Title
-    .teachers__title {
-      width: 320px !important;
-
-      .title {
-        font-size: 35px !important;
       }
     }
   }

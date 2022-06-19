@@ -1,6 +1,4 @@
 #courses-wrapper {
-  padding-bottom: 100px;
-
   .container {
     width: fit-content;
     margin: 100px auto 0;
@@ -14,6 +12,70 @@
       margin-top: 100px;
 
       .content__column {
+        &:first-child {
+          .column__item {
+            &:nth-child(2) {
+              background: #D1CAFF;
+            }
+
+            &:nth-child(3) {
+              background: #A3A3FF;
+            }
+
+            &:nth-child(4) {
+              background: #CAF4EA;
+            }
+
+            &:nth-child(5) {
+              background: #FECECF;
+            }
+
+            &:nth-child(6) {
+              background: #FFC27F;
+            }
+
+            &:nth-child(7) {
+              background: #81E3F0;
+            }
+
+            &:nth-child(8) {
+              background: #81E3F0;
+            }
+          }
+        }
+
+        &:last-child {
+          .column__item {
+            &:nth-child(1) {
+              background: #94BFFF;
+            }
+
+            &:nth-child(2) {
+              background: #F0EBFF;
+            }
+
+            &:nth-child(3) {
+              background: #FFBD59;
+            }
+
+            &:nth-child(4) {
+              background: #dff8ff;
+            }
+
+            &:nth-child(5) {
+              background: #C4FDEF;
+            }
+
+            &:nth-child(6) {
+              background: #FFE64B;
+            }
+
+            &:nth-child(7) {
+              background: #FFF4BB;
+            }
+          }
+        }
+
         .column__item {
           width: 425px;
           height: 175px;

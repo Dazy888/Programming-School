@@ -90,14 +90,14 @@ export function HomePage() {
                         <p className="number">1200</p>
                     </span>
                             <span className="students__bl flex-property-set_between">
-                        <p className="grey-txt">Successfully completed the course:</p>
+                        <p className="grey-txt">Successfully completed the courses:</p>
                         <p className="number">1000</p>
                     </span>
                         </div>
                         <div className="container__income">
                             <div className="income__stats flex-property-set_between">
                                 <p className="grey-txt">Places left:</p>
-                                <p className="number">40</p>
+                                <p className="number">120</p>
                             </div>
                             <div className="income__progress">
                                 <div className="progress__bar_earned"></div>
@@ -105,7 +105,7 @@ export function HomePage() {
                             </div>
                             <div className="income__goal flex-property-set_between">
                                 <p className="grey-txt">0</p>
-                                <p className="grey-txt">100</p>
+                                <p className="grey-txt">300</p>
                             </div>
                         </div>
                     </div>
@@ -247,32 +247,6 @@ export function HomePage() {
                                         <p className="txt__text">Finish studying programming and builded a good portfolio</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="teachers">
-                        <div className="teachers__title flex-property-set_between">
-                            <Spinner/>
-                            <h1 className="title">Our teachers</h1>
-                        </div>
-                        <div className="teachers__content flex-property-set_between">
-                            <div className="content__item">
-                                <img alt={'Avatar'} className="item__img" src="/Photographs/Main-Page/Avatar-1.png" />
-                                <h1 className="item__title subtitle">Dmitry Novikov</h1>
-                                <p className="light-grey-txt">Senior Front-End Developer</p>
-                                <button className="item__btn white-txt flex-property-set_center">Biography</button>
-                            </div>
-                            <div className="content__item">
-                                <img alt={'Avatar'} className="item__img" src="/Photographs/Main-Page/Avatar-2.png" />
-                                <h1 className="item__title subtitle">Kirill Rilchenko</h1>
-                                <p className="light-grey-txt">Senior C/C++ Developer</p>
-                                <button className="item__btn white-txt flex-property-set_center">Biography</button>
-                            </div>
-                            <div className="content__item">
-                                <img alt={'Avatar'} className="item__img" src="/Photographs/Main-Page/Avatar-3.png" />
-                                <h1 className="item__title subtitle">Sergey Yevtushenko</h1>
-                                <p className="light-grey-txt">Senior Back-End Developer</p>
-                                <button className="item__btn white-txt flex-property-set_center">Biography</button>
                             </div>
                         </div>
                     </section>
