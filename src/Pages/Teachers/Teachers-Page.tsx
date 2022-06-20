@@ -56,7 +56,7 @@ function TeacherBigRow({language, handler, descriptions, avatars, names, surname
     return(
         <div className={'container__item flex-property-set_between'}>
             <button onClick={handler} className={'item__btn'}>{language}</button>
-            <div className={'item__content-wrapper'}>
+            <div className={'item__content-wrapper item__content-wrapper_big'}>
                 <div className={'item__content_big item__content flex-property-set_between'}>
                     <TeacherItem imgUrl={avatars[0]} name={names[0]} surname={surnames[0]} text={descriptions[0]}/>
                     <TeacherItem imgUrl={avatars[1]} name={names[1]} surname={surnames[1]} text={descriptions[1]}/>
@@ -73,7 +73,7 @@ function TeacherMediumRow({language, handler, descriptions, avatars, names, surn
     return(
         <div className={'container__item flex-property-set_between'}>
             <button onClick={handler} className={'item__btn'}>{language}</button>
-            <div className={'item__content-wrapper'}>
+            <div className={'item__content-wrapper item__content-wrapper_medium'}>
                 <div className={'item__content_medium item__content flex-property-set_between'}>
                     <TeacherItem imgUrl={avatars[0]} name={names[0]} surname={surnames[0]} text={descriptions[0]}/>
                     <TeacherItem imgUrl={avatars[1]} name={names[1]} surname={surnames[1]} text={descriptions[1]}/>
@@ -87,10 +87,14 @@ function TeacherMediumRow({language, handler, descriptions, avatars, names, surn
 export function TeachersPage() {
     function showTeachers(e: any) {
         if (e.target.nextElementSibling.querySelector('.item__content_big')) {
+            e.target.nextElementSibling.classList.toggle('show-teachers')
             e.target.nextElementSibling.querySelector('div').classList.toggle('show-teachers')
+
         } else if(e.target.nextElementSibling.querySelector('.item__content_medium')) {
+            e.target.nextElementSibling.classList.toggle('show-teachers_medium')
             e.target.nextElementSibling.querySelector('div').classList.toggle('show-teachers_medium')
         } else {
+            e.target.nextElementSibling.classList.toggle('show-teachers_small')
             e.target.nextElementSibling.querySelector('div').classList.toggle('show-teachers_small')
         }
     }
@@ -143,8 +147,8 @@ export function TeachersPage() {
                 <TeacherMediumRow language={'PHP'} avatars={phpAvatars} names={phpNames} surnames={phpSurnames} descriptions={phpDescriptions} handler={showTeachers}/>
                 <div className={'container__item flex-property-set_between'}>
                     <button onClick={showTeachers} className={'item__btn'}>C#</button>
-                    <div className={'item__content-wrapper'}>
-                        <div className={'item__content'}>
+                    <div className={'item__content-wrapper item__content-wrapper_small'}>
+                        <div className={'item__content_small flex-property-set_center item__content'}>
                             <TeacherItem imgUrl={'https://248006.selcdn.ru/LandGen/phone_2d8aec3317a76994cd37ff522fd610a57db5706215792671717877.png'} name={'Sergey'} surname={'Kameneckiy'} text={'Microsoft Certified Developer'}/>
                         </div>
                     </div>
