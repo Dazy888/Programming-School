@@ -267,26 +267,44 @@
     }
 
     .item__content_big {
-      width: 200px !important;
+      width: 250px !important;
     }
 
     .item__content_medium {
-      width: 200px !important;
+      width: 250px !important;
     }
 
     .item__content-wrapper_big {
-      width: 200px !important;
+      width: 250px !important;
     }
 
     .item__content-wrapper_medium {
-      width: 200px !important;
+      width: 250px !important;
+    }
+
+    .container__item {
+      width: 250px !important;
+      margin: auto auto 100px auto !important;
     }
 
     .item__content_big, .item__content_medium {
       flex-direction: column;
 
       .content__teacher {
+        width: 150px !important;
         margin: auto;
+
+        img {
+          height: 165px !important;
+        }
+
+        .teacher__name {
+          font-size: 24px !important;
+        }
+
+        .teacher__txt {
+          font-size: 15px !important;
+        }
       }
     }
   }
