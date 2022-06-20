@@ -11,7 +11,7 @@ function CourseItem({title, time, imgUrl}: PropsType) {
     return (
         <div className={'column__item flex-property-set_between'}>
             <div className={'item__text'}>
-                <h2 className={'text__title small-title'}>{title}</h2>
+                <h2 className={'text__title'}>{title}</h2>
                 <p className={'text__time'}>{time}</p>
             </div>
             <div className={'item__img'}>
@@ -24,7 +24,6 @@ function CourseItem({title, time, imgUrl}: PropsType) {
 export function CoursesPage() {
     return (
         <div id={'courses-wrapper'}>
-            <Navigation/>
             <div className={'container'}>
                 <h1 className={'title'}>Courses</h1>
                 <div className={'content flex-property-set_between'}>

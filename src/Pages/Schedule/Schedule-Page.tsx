@@ -5,7 +5,6 @@ import {WeekDaySchedule} from "./WeekDaySchedule"
 export function SchedulePage() {
     return(
         <div id={'schedule-wrapper'}>
-            <Navigation/>
             <div className={'container'}>
                 <h1 className={'title'}>Schedule</h1>
                 <div className={'content flex-property-set_between'}>

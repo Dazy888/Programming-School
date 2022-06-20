@@ -56,7 +56,6 @@ export function HomePage() {
         <div id={'home-wrapper'}>
             <header id="header">
                 <div className="main">
-                    <Navigation/>
                     <div className="timer">
                         <h1 className="timer__title">Left before the start <br/> of the school year</h1>
                         <div className="timer__row flex-property-set_between" ref={timerRef}>

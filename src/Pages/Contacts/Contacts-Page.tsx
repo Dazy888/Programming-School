@@ -19,7 +19,6 @@ export function ContactsPage() {
 
     return(
         <div id={'contacts-wrapper'}>
-            <Navigation/>
             <div className={'contacts'}>
                 <h1 className={'title'}>Contacts</h1>
                 <div className={'contacts__row flex-property-set_between'}>
