@@ -6,10 +6,10 @@ import {Main} from "./Main"
 import {Python} from "./Python"
 import {JavaPro} from "./Java-Pro"
 import {Web} from "./Web"
-import {CPlusPlus} from "./C++"
+import {CPlusPlus} from "./C-Plus-Plus"
 import {PythonFullstack} from "./Python-Fullstack";
 import {Android} from "./Android";
-import {CSharp} from "./C#";
+import {CSharp} from "./C-Sharp";
 import {IOS} from "./IOS";
 import {PHPFullstack} from "./PHP-Fullstack";
 import {Mobile} from "./Mobile";
