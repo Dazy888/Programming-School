@@ -20,7 +20,7 @@ export function App() {
                         <Route path={'/home'} element={<HomePage/>}/>
                         <Route path={'/contacts'} element={<ContactsPage/>}/>
                         <Route path={'/schedule'} element={<SchedulePage/>}/>
-                        <Route path={'/courses'} element={<CoursesPage/>}/>
+                        <Route path={'/courses/*'} element={<CoursesPage/>}/>
                         <Route path={'/teachers'} element={<TeachersPage/>}/>
                     </Routes>
                 </div>

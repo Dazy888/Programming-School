@@ -36,7 +36,6 @@ export function Navigation() {
                 <NavLink to={'/courses'} className="links__item">Courses</NavLink>
                 <NavLink to={'/schedule'} className="links__item">Schedule</NavLink>
                 <NavLink to={'/teachers'} className="links__item">Teachers</NavLink>
-                <NavLink to={'/newsfeed'} className="links__item">Newsfeed</NavLink>
                 <NavLink to={'/contacts'} className="links__item">Contacts</NavLink>
             </nav>
             <div className="navigation__btn white-txt">
