@@ -4,8 +4,8 @@ const titleTxt = "You will learn how to develop full-fledged websites and web ap
 
 export function JavascriptFullstack() {
     return(
-        <div className={'course-container javascript-fullstack-course'}>
-            <CourseHeader profession={'Javascript Fullstack-developer'} titleTxt={titleTxt} imgUrl={'https://248006.selcdn.ru/LandGen/desktop_9567df25c360d949e492c6afcb047f9878baa2b3.webp'} time={'1 year'} projects={'4'}/>
+        <div className={'course-container'}>
+            <CourseHeader companies={'6 000'} salary={'1400'} classNames={['yellow-back', 'yellow-border']} profession={'Javascript Fullstack-developer'} titleTxt={titleTxt} imgUrl={'https://248006.selcdn.ru/LandGen/desktop_9567df25c360d949e492c6afcb047f9878baa2b3.webp'} time={'1 year'} projects={'4'}/>
         </div>
     )
 }
