@@ -178,5 +178,44 @@
         }
       }
     }
+
+    .for-who {
+      width: fit-content;
+      margin: 200px auto 0;
+      text-align: left;
+      color: white;
+
+      .for-who__content_small {
+        width: 1300px;
+        margin-top: 80px;
+
+        .content__item{
+          width: 630px;
+
+          .item__txt {
+            width: 430px;
+          }
+        }
+      }
+
+      .for-who__content {
+        width: 1150px;
+        align-items: baseline !important;
+        margin-top: 80px;
+      }
+
+      .content__item {
+        width: 330px;
+
+        img {
+          width: 164px;
+          height: 164px;
+        }
+
+        .small-title {
+          margin: 25px 0 10px;
+        }
+      }
+    }
   }
 }

@@ -19,6 +19,29 @@
     width: 370px !important;
     height: 370px !important;
   }
+  #courses-wrapper .for-who {
+    text-align: center !important;
+  }
+  #courses-wrapper .for-who__content_small {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    height: 850px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+  }
+  #courses-wrapper .for-who__content_small .content__item {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 @media screen and (max-width: 1180px) {
   #courses-wrapper .course-container {
@@ -73,9 +96,20 @@
             flex-direction: column;
     margin: auto !important;
   }
+  #courses-wrapper .for-who__content {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    height: 1200px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+  }
 }
 @media screen and (max-width: 1060px) {
-  #courses-wrapper .title__img img {
+  #courses-wrapper .header__title .title__img img {
     width: 250px !important;
     height: 250px !important;
   }
@@ -156,6 +190,20 @@
     font-size: 15px !important;
     line-height: 22px !important;
   }
+  #courses-wrapper .for-who .for-who__content_small {
+    height: 750px !important;
+  }
+  #courses-wrapper .for-who .for-who__content_small .item__txt {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  #courses-wrapper .for-who .title {
+    font-size: 38px !important;
+  }
+  #courses-wrapper .for-who .light-grey-txt {
+    font-size: 14px !important;
+  }
 }
 @media screen and (max-width: 465px) {
   #courses-wrapper .header__title {
@@ -182,6 +230,7 @@
 }
 @media screen and (max-width: 375px) {
   #courses-wrapper .header__title {
+    height: 530px !important;
     padding: 30px 20px !important;
   }
   #courses-wrapper .header__title .title__txt {
@@ -192,5 +241,15 @@
   }
   #courses-wrapper .header__title .title__txt .light-grey-txt {
     font-size: 12px !important;
+  }
+  #courses-wrapper .header__title .title__img img {
+    width: 175px !important;
+    height: 175px !important;
+  }
+  #courses-wrapper .for-who .for-who__content_small {
+    height: 800px !important;
+  }
+  #courses-wrapper .for-who .title {
+    font-size: 35px !important;
   }
 }
