@@ -2,11 +2,13 @@ import {combineReducers, createStore} from "redux";
 import {contactsReducer} from "./Contacts-Reducer/Contacts-Reducer";
 import {HomeReducer} from "./Home-Reducer/Home-Reducer";
 import {TeachersReducer} from "./Teachers-Reducer/Teachers-Reducer";
+import {CoursesReducer} from "./Courses-Reducer/Courses-Reducer";
 
 let reducers = combineReducers({
     contactsPage: contactsReducer,
     schedulePage: HomeReducer,
-    teachersPage: TeachersReducer
+    teachersPage: TeachersReducer,
+    coursesPage: CoursesReducer
 })
 
 type PropertiesTypes<T> = T extends {[key: string] : infer U} ? U : never

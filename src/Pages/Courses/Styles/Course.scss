@@ -217,5 +217,41 @@
         }
       }
     }
+
+    .skills {
+      width: 1300px;
+      margin: 150px auto 0;
+      color: white;
+
+      .skills__row {
+        margin-top: 45px;
+        align-items: baseline !important;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .skills__item {
+        width: 350px;
+        border: 2px solid #60B3FF;
+        border-radius: 10px;
+        padding: 10px;
+
+        i {
+          font-size: 20px;
+        }
+
+        .small-title {
+          font-size: 22px !important;
+          margin-top: 10px;
+        }
+
+        .light-grey-txt {
+          font-size: 18px !important;
+          margin-top: 10px;
+        }
+      }
+    }
   }
 }

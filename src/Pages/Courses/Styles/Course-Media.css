@@ -42,6 +42,27 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  #courses-wrapper .skills {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  #courses-wrapper .skills .title {
+    text-align: center;
+  }
+  #courses-wrapper .skills .skills__row {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+  }
+  #courses-wrapper .skills .skills__row .skills__item {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 1180px) {
   #courses-wrapper .course-container {
@@ -220,12 +241,27 @@
   }
 }
 @media screen and (max-width: 420px) {
-  .header-job-inf {
+  #courses-wrapper .header-job-inf {
     height: 370px;
   }
-  .header-job-inf .text {
+  #courses-wrapper .header-job-inf .text {
     width: 260px !important;
     text-align: center;
+  }
+  #courses-wrapper .skills .title {
+    font-size: 37px !important;
+  }
+  #courses-wrapper .skills .skills__row .skills__item {
+    width: 300px !important;
+  }
+  #courses-wrapper .skills .skills__row .skills__item i {
+    font-size: 18px;
+  }
+  #courses-wrapper .skills .skills__row .skills__item .small-title {
+    font-size: 20px !important;
+  }
+  #courses-wrapper .skills .skills__row .skills__item .light-grey-txt {
+    font-size: 16px !important;
   }
 }
 @media screen and (max-width: 375px) {

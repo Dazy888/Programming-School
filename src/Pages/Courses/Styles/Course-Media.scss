@@ -43,6 +43,24 @@
         flex-direction: column;
       }
     }
+
+    .skills {
+      width: fit-content !important;
+
+      .title {
+        text-align: center;
+      }
+
+      .skills__row {
+        width: fit-content;
+        flex-direction: column;
+        margin: auto;
+
+        .skills__item {
+          margin-bottom: 50px;
+        }
+      }
+    }
   }
 }
 
@@ -254,12 +272,39 @@
 }
 
 @media screen and(max-width: 420px) {
-  .header-job-inf {
-    height: 370px;
 
-    .text {
-      width: 260px !important;
-      text-align: center;
+  #courses-wrapper {
+    .header-job-inf {
+      height: 370px;
+
+      .text {
+        width: 260px !important;
+        text-align: center;
+      }
+    }
+
+    .skills {
+      .title {
+        font-size: 37px !important;
+      }
+
+      .skills__row {
+        .skills__item {
+          width: 300px !important;
+
+          i {
+            font-size: 18px;
+          }
+
+          .small-title {
+            font-size: 20px !important;
+          }
+
+          .light-grey-txt {
+            font-size: 16px !important;
+          }
+        }
+      }
     }
   }
 }
