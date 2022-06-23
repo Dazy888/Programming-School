@@ -127,8 +127,47 @@
       flex-direction: column;
       margin: auto;
     }
+
+    .projects {
+      width: fit-content !important;
+      text-align: center !important;
+
+      .projects__content {
+        height: 900px;
+        flex-direction: column;
+
+        .content__text {
+          .text__controls {
+            width: 250px !important;
+            height: fit-content;
+            left: 98px !important;
+
+            span {
+              font-size: 30px;
+            }
+
+            button i {
+              font-size: 45px !important;
+            }
+          }
+        }
+      }
+    }
   }
 }
+
+//.projects__content {
+//  height: 800px;
+//  flex-direction: column;
+//
+//  .content__text {
+//    height: fit-content !important;
+//
+//    .text__controls {
+//      position: relative; !important;
+//    }
+//  }
+//}
 
 @media screen and(max-width: 1060px) {
   #courses-wrapper {

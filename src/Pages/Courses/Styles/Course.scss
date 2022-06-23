@@ -64,6 +64,58 @@
     border-radius: 10px;
   }
 
+  .light-purple-color {
+    color: #D1CAFF !important;
+  }
+
+  .purple-color {
+    color: #A3A3FF !important;
+  }
+
+  .light-blue-color {
+    color: #CAF4EA !important;
+  }
+
+  .pink-color {
+    color: #FECECF !important;
+  }
+
+  .light-orange-color {
+     color: #FFC27F !important;
+  }
+
+  .blue-color {
+    color: #81E3F0 !important;
+  }
+
+  .light-dark-blue-color {
+    color: #94BFFF !important;
+  }
+
+  .light-pink-color {
+    color: #F0EBFF !important;
+  }
+
+  .orange-color {
+    color: #FFBD59 !important;
+  }
+
+  .grey-color {
+    color: #dff8ff !important;
+  }
+
+  .light-green-color {
+    color: #C4FDEF !important;
+  }
+
+  .yellow-color {
+    color: #FFE64B !important;
+  }
+
+  .light-yellow-color {
+    color: #FFF4BB !important;
+  }
+
   .course-container {
     width: 1500px;
     margin: auto;
@@ -250,6 +302,50 @@
         .light-grey-txt {
           font-size: 18px !important;
           margin-top: 10px;
+        }
+      }
+    }
+
+    .projects {
+      width: 1170px;
+      margin: 100px auto 0;
+      text-align: left;
+
+      .title {
+        margin-bottom: 50px;
+      }
+
+      .projects__content {
+        .content__img {
+          img {
+            width: 670px;
+            height: 380px;
+          }
+        }
+
+        .content__text {
+          width: 440px;
+          height: 380px;
+          position: relative;
+          color: white;
+
+          .light-grey-txt {
+            margin: 10px 0;
+          }
+
+          .text__controls {
+            width: 123px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            button {
+              i {
+                color: #60B3FF;
+                font-size: 25px;
+              }
+            }
+          }
         }
       }
     }

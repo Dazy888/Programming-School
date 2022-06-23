@@ -23,10 +23,18 @@ export type SkillsType = {
     texts: Array<string>
 }
 
+export type ProjectsType = {
+    photographs: Array<string>
+    titles: Array<string>
+    texts: Array<string>
+    className?: string
+}
+
 export type CourseType = {
     header: HeaderType
     for_who: ForWhoType
     skills: SkillsType
+    projects: ProjectsType
 }
 
 const initialState = {
@@ -70,6 +78,23 @@ const initialState = {
                     'Write database queries in Python with Sqlalchemy, Django-ORM',
                     'Work in a team'
                 ]
+            },
+            projects: {
+                photographs: [
+                    'https://248006.selcdn.ru/LandGen/phone_3cad607aaf00d5271f48e33cedf271afda9318c0.jpg',
+                    'https://248006.selcdn.ru/LandGen/phone_caa9f044e4661b45c4e92b2a7a7f3c2632b72e8a.jpg',
+                    'https://248006.selcdn.ru/LandGen/phone_e948f77490a7da379bc173aebd7a78dd185b783b.png'
+                ] ,
+                    titles: [
+                        'Python Basic Course: Travel Agency Bot',
+                        'Internship in a team: development of an online store',
+                        'Python Advanced Course: Problem Book'
+                    ],
+                texts: [
+                    'Develop a Telegram bot on the instructions of the travel agency Too Easy Travel. The bot will take the approximate cost of living and the location of the user, and return a list of the most suitable hotels',
+                    'Together with a team leader and a team of 3-5 people, you will develop a server part for a full-fledged marketplace. You will work according to the Scrum or Kanban system, regularly discuss current progress with the team leader and receive new tasks. All processes are as close as possible to real conditions - this is how commercial software is created in employing companies.As a result, you will create your own analogue of Yandex.Market',
+                    'Create a service like CodeWars or Leetcode where users can solve programming problems. Develop a built-in editor and add a runtime so that the visitor runs his code and sees the result of the program directly in the browser. Your task will be to create a fast and secure service that will not allow a visitor to inject a malicious script and break the application'
+                ],
             }
         } as CourseType
     },
@@ -171,6 +196,33 @@ const initialState = {
                     'You will connect databases, work with the file system, template engines, forms, and process search queries. Get familiar with microservice architecture and learn how to build resilient applications',
                     'Take part in a team internship and create your own project - an online store. You organize the work as in a real company - you will have sprints, calls with a team leader, and you will control versions in Git'
                 ]
+            },
+            projects: {
+                photographs: [
+                    'https://248006.selcdn.ru/LandGen/phone_e5d9722ff8a70e273d107d4854d25a7b34fd2e9a.png',
+                    'https://248006.selcdn.ru/LandGen/phone_b46cc8d11d486146413d685d94d5e725e0034680.png',
+                    'https://248006.selcdn.ru/LandGen/phone_c63de48ef9da79d1d3e75bace90410d4e81bf2e8.png',
+                    'https://248006.selcdn.ru/LandGen/phone_e3625203cdbd0b56be13418afdc551ff96718e2d.png',
+                    'https://248006.selcdn.ru/LandGen/phone_deed31f3e040ddc70870aaf05186663ba2169474.png',
+                    'https://248006.selcdn.ru/LandGen/phone_41e92ba59019c831e3a01c2d145c8ea74fbc44b7.png'
+                ],
+                titles: [
+                    'Landing',
+                    'Pages for an online store',
+                    'Customer contact management system',
+                    'Online store',
+                    'Pomodoro task tracker',
+                    'Note service'
+                ],
+                texts: [
+                    'You make up a landing page for the Blanchard art gallery according to the layout from the customer',
+                    'You make up several pages for an online furniture store according to the terms of reference from the customer',
+                    'You will develop a complete CRM system. Through your application, employees will be able to track the lists of transactions, clients, and follow the document flow. You will go through all stages of commercial software development in a company and be ready for teamwork',
+                    'You will develop a front-end for a product aggregator using Vue or Angular',
+                    'Write a task tracker with a timer in the React framework',
+                    'Develop a note service with the ability to autosave, delete, upload to PDF, search by notes and infinite scroll. Deploy the result to the server'
+                ],
+                className: 'purple-color'
             }
         } as CourseType
     },
@@ -221,6 +273,21 @@ const initialState = {
                     'You will learn how to create algorithms and will be able to develop complex programs from different independent components',
                     'Learn how to use the C++ toolkit for game development. You will be able to create simple arkanoid and shooters for the Unreal Engine'
                 ]
+            },
+            projects: {
+                photographs: [
+                    'https://248006.selcdn.ru/LandGen/phone_18ae41922e60ac6872cda3dd8bf35b9c724615f0.jpg',
+                    'https://248006.selcdn.ru/LandGen/phone_aa40443d4fc9f5711646e553cacabc96263c734f.jpg'
+                ],
+                titles: [
+                    'Search engine',
+                    'Browser'
+                ],
+                texts: [
+                    'You will develop a search engine for the company\'s corporate portal - an analogue of the Yandex or Google search string. Learn to get data from web pages and build search indexes. Write a relevancy formula to return search results',
+                    'Work with other course participants to create an app that your friends and family can use. Write a full-fledged browser in C ++: with its help, you can search for information, browse the web and surf social networks - like in Google Chrome or Yandex Browser'
+                ],
+                className: 'light-blue-color'
             }
         } as CourseType
     },
@@ -267,6 +334,24 @@ const initialState = {
                     'Apply the principles of OOP in practice',
                     'Understand modern web frameworks for frontend and backend development'
                 ]
+            },
+            projects: {
+                photographs: [
+                    'https://248006.selcdn.ru/LandGen/phone_3bfc250a3c5f8b047b88316a00b7ba67308e6387.png',
+                    'https://248006.selcdn.ru/LandGen/phone_ad3aea4c508c9b131827ca0271eae2ebec5f8d08.png',
+                    'https://248006.selcdn.ru/LandGen/phone_52d9665391a762e85e7b4d435ef33165056578a8.png'
+                ],
+                titles: [
+                    'Landing',
+                    'User interface',
+                    'Space game',
+                ],
+                texts: [
+                    'You create a landing page based on the brief to consolidate the knowledge gained in the course',
+                    'You will develop a user interface similar to Instagram',
+                    'You will write a behavior algorithm for space drones that collect fuel from asteroids'
+                ],
+                className: 'pink-color'
             }
         } as CourseType
     },
@@ -319,6 +404,30 @@ const initialState = {
                     "Who will use your app if it doesn't work? You will learn how to check the performance of projects under different conditions, use emulators and simulators",
                     'Design patterns will help you speed up the development process, and you will also learn how to avoid memory leaks - this aspect is often forgotten by beginners'
                 ]
+            },
+            projects: {
+                photographs: [
+                    'https://248006.selcdn.ru/LandGen/phone_e5eb8c8011201d0440fc0d3d9373ecfc5ec8d99d.jpg',
+                    'https://248006.selcdn.ru/LandGen/phone_ef2c80215f1056c911bf57384bfef0098751c627.jpg',
+                    'https://248006.selcdn.ru/LandGen/phone_841791802b54ac1f438813caec54c7658fc36fcd.jpg',
+                    'https://248006.selcdn.ru/LandGen/phone_9e37b4ded0db504e52607f5e7396d7aac3726603.jpg',
+                    'https://248006.selcdn.ru/LandGen/phone_c9f88e81fd6673c74ee7ab8034b672c1c9f8b4a9.jpg'
+                ],
+                titles: [
+                    'Team project: mobile application for Android',
+                    'Console application for the logistics center',
+                    'Analog Unsplash',
+                    'Strava analogue',
+                    'Reddit analogue'
+                ],
+                texts: [
+                    'As part of a team led by an experienced team leader, you will create an Android application. You will be given TOR, project design and roles in the team. All processes of this project are an experience as close as possible to real conditions. This is how applications are made',
+                    'Create a program that will track the movement of trucks with sorted goods, distribute car flows between loading and unloading points, and warn if the goods in the truck exceed the carrying capacity',
+                    'Develop an application for a photo sharing service where registered users can view photos, like them and download them',
+                    'Create an app for runners and cyclists that allows you to track your activity and weight and get workout reminders',
+                    'Develop an application that allows users to post links, find interesting content and discuss it.'
+                ],
+                className: 'light-orange-color'
             }
         } as CourseType
     },
@@ -361,6 +470,21 @@ const initialState = {
                     'Develop your own file database',
                     'Work with the .NET Framework and the Visual Studio development environment'
                 ]
+            },
+            projects: {
+                photographs: [
+                    'https://248006.selcdn.ru/LandGen/phone_1abaaf92542fe5d0427e1c01f840badae7c9c83e.jpg',
+                    'https://248006.selcdn.ru/LandGen/phone_16008aed7ceacd0b56d216f2d8a84ccda71c27d9.jpg'
+                ],
+                titles: [
+                    'Individual CRM system project',
+                    'Online store'
+                ],
+                texts: [
+                    'You will create a customer management system that brings disparate business tools together',
+                    'You make up several pages for an online store according to the terms of reference'
+                ],
+                className: 'blue-color'
             }
         } as CourseType
     },
@@ -413,6 +537,21 @@ const initialState = {
                     'Learn how to upload projects to AppStore Connect so that the whole world knows about your application',
                     'In practice, you will understand how the software development process works in large companies. Present team final project'
                 ]
+            },
+            projects: {
+                photographs: [
+                    'https://248006.selcdn.ru/LandGen/phone_5de25d4ab979cc7edb0d1bd10b85fca230e6cf88.png',
+                    'https://248006.selcdn.ru/LandGen/phone_8e006da29d42213ee2dea04d117d78afd4304969.jpg'
+                ],
+                titles: [
+                    'Analog Yandex.Go',
+                    'News application'
+                ],
+                texts: [
+                    'As part of a team led by an experienced team leader, you will create an analogue of Yandex.Go with a food delivery function. You will be given TOR, project design and roles in the team. All processes of this project are an experience as close as possible to real conditions. This is how real applications are built',
+                    'You will develop an application with news about the space industry. The project will consist of several screens: news, blog, favorites. Materials will be uploaded through a public API, and favorite notes can be saved on the device and read without an Internet connection'
+                ],
+                className: 'blue-color'
             }
         } as CourseType
     },
@@ -457,6 +596,21 @@ const initialState = {
                     'Create interactive websites with JavaScript',
                     'Work with technical documentation'
                 ]
+            },
+            projects: {
+                photographs: [
+                    'https://248006.selcdn.ru/LandGen/phone_86f59dba870b5baf61887669f2536831f81b4cdd15819384567948.png',
+                    'https://248006.selcdn.ru/LandGen/phone_94a5065d921b570b47d75309c0a5d3d011657c9715819384767634.png'
+                ],
+                titles: [
+                    'One page website',
+                    'Online store'
+                ],
+                texts: [
+                    'You will create an adaptive one-page website on the subject given by the teacher',
+                    'You are designing web pages for an online furniture store'
+                ],
+                className: 'light-dark-blue-color'
             }
         } as CourseType
     },
@@ -509,7 +663,20 @@ const initialState = {
                     'Familiarize yourself with design patterns and coding rules. Make your programs readable, structured and easy to debug',
                     'You will understand the requirements of designers and team leaders. In practice, you will understand how the application development process works, and defend a team thesis project'
                 ]
+            },
+            projects: {
+                titles: [
+                    'Profession iOS developer. news application',
+                    'Profession iOS developer. Analog Yandex Go',
+                    'Profession Android developer. Console application for the logistics center',
+                    'Profession Android developer. Analog Unsplash',
+                    'Profession Android developer. Strava analogue',
+                    'Profession Android developer. Reddit analogue',
+                    'Team project: mobile application for Android'
+                ],
+                className: 'light-pink-color'
             }
+
         } as CourseType
     },
     java: {
@@ -593,6 +760,9 @@ const initialState = {
                     'Develop server applications with Node.js',
                     'Work with Git'
                 ]
+            },
+            projects: {
+                className: 'grey-color'
             }
         } as CourseType
     },
@@ -642,6 +812,9 @@ const initialState = {
                     'You will save all stages of work on projects so that colleagues always have access to the code, and random errors can be fixed in two clicks',
                     'Learn how to work with sprints and Scrum methodology. Under the guidance of a team leader, together with other students, write a web application'
                 ]
+            },
+            projects: {
+                className: 'light-green-color'
             }
         } as CourseType
     },
@@ -693,6 +866,33 @@ const initialState = {
                     'Learn how to work with a distributed version control system, be able to easily make or roll back changes and work on a project in a large team',
                     'You will understand how client-server interaction works, learn how to work with the API and be able to set up frontend and backend communication within one project'
                 ]
+            },
+            projects: {
+                photographs: [
+                    'https://248006.selcdn.ru/LandGen/phone_fcd16c857d51e1e7ff159f2e3b19b591d800e4bd.png',
+                    'https://248006.selcdn.ru/LandGen/phone_54894499a809735b0210e8035a9065bcf9a7913d.png',
+                    'https://248006.selcdn.ru/LandGen/phone_c06f22ea4fddaec2152f9204580de3af38a0e9bb.png',
+                    'https://248006.selcdn.ru/LandGen/phone_c8ba4676dbc959880f952595712d2dfc2eecfbbd.png',
+                    'https://248006.selcdn.ru/LandGen/phone_047d974aa4b58de90a77668c6175d4e800c2d4cf.png',
+                    'https://248006.selcdn.ru/LandGen/phone_924eba8b05cc74dc51ab2644d2da4ad5fe751daa.png'
+                ],
+                titles: [
+                    'Landing',
+                    'User interface',
+                    'Note service',
+                    'Online store',
+                    'Integration with Reddit',
+                    'Online store'
+                ],
+                texts: [
+                    'Build a landing page based on a brief from a customer using HTML and CSS',
+                    'Develop a web application using JavaScript',
+                    'Develop the frontend and backend for a personal note service using Node.js',
+                    'Create a full-fledged online store using the Vue.js framework',
+                    'Set up the integration of posts from the Reddit news site using the React.js framework',
+                    'Develop a full-fledged online store on the Angular framework'
+                ],
+                className: 'yellow-color'
             }
         } as CourseType
     },
@@ -743,7 +943,7 @@ const initialState = {
                     'Learn how to connect MySQL to a project. Learn how to write queries in SQL, get, add, delete and change information in the database',
                     'Get acquainted with the principles of the framework, routing, set up interaction with the database, connect the Blade templating engine. Learn to write and test complex business logic'
                 ]
-            }
+            },
         } as CourseType
     }
 }
