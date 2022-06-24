@@ -407,5 +407,78 @@
         }
       }
     }
+
+    .employment {
+      padding: 75px 215px;
+      background: white;
+      box-sizing: border-box;
+      margin-top: 100px;
+      border-radius: 10px;
+
+      .employment__wrapper {
+        width: 1170px;
+
+        .employment__header {
+          .header__text {
+            width: 470px;
+
+            .title {
+              color: black;
+              margin-bottom: 50px;
+            }
+
+            .light-grey-txt {
+              font-size: 18px;
+              color: black;
+              opacity: 1;
+            }
+          }
+
+          .header__photographs {
+            width: 570px;
+            height: 585px;
+            position: relative;
+
+            img {
+              position: absolute;
+
+              &:first-child {
+                position: relative;
+              }
+            }
+
+            .photographs__main {
+              width: 240px;
+              height: 240px;
+            }
+
+            .photographs__medium {
+              width: 115px;
+              height: 115px;
+            }
+
+            .photographs__small {
+              width: 90px;
+              height: 90px;
+            }
+
+            .photographs__very-small {
+              width: 70px;
+              height: 70px;
+            }
+
+            .top-left {
+              top: 55px;
+              left: 110px;
+            }
+
+            .bottom-right {
+              right: 120px;
+              bottom: 45px;
+            }
+          }
+        }
+      }
+    }
   }
 }

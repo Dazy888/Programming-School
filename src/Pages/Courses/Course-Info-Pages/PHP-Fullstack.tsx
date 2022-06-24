@@ -4,6 +4,7 @@ import {Skill} from "../Components/Skills/Skill"
 import {Projects} from "../Components/Projects/Projects"
 import {CourseProjectsPropsType} from "./Types";
 import {HowUse} from "../Components/How-Use/How-Use";
+import {Employment} from "../Components/Employment/Employment";
 
 export function PHPFullstack({header, time, img, for_who, job_name, skills, projects, classNames = ['']}: CourseProjectsPropsType) {
     return(
@@ -29,6 +30,7 @@ export function PHPFullstack({header, time, img, for_who, job_name, skills, proj
             </div>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames} />
+            <Employment/>
         </div>
     )
 }

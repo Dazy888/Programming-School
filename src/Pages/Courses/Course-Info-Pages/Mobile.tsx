@@ -4,6 +4,7 @@ import {SkillsSixTitles} from "../Components/Skills/SkillsSixTitles"
 import {Projects} from "../Components/Projects/Projects"
 import {CourseProjectsPropsType} from "./Types"
 import {HowUse} from "../Components/How-Use/How-Use";
+import {Employment} from "../Components/Employment/Employment";
 
 export type ExtraProjectPropsType = {
     projects_photographs: Array<string>
@@ -19,6 +20,7 @@ export function Mobile({header, time, img, for_who, job_name, skills, projects, 
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects_photographs} titles={projects.titles} texts={projects_texts}/>
             <HowUse classNames={classNames} />
+            <Employment/>
         </div>
     )
 }

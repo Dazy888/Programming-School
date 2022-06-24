@@ -4,6 +4,7 @@ import {SkillsNineTexts} from "../Components/Skills/SkillsNineTexts"
 import {Projects} from "../Components/Projects/Projects"
 import {CourseProjectsPropsType} from "./Types";
 import {HowUse} from "../Components/How-Use/How-Use";
+import {Employment} from "../Components/Employment/Employment";
 
 export function Python({job_name, for_who, header, img, time, skills, projects}: CourseProjectsPropsType) {
     return(
@@ -13,6 +14,7 @@ export function Python({job_name, for_who, header, img, time, skills, projects}:
             <SkillsNineTexts texts={skills.texts}/>
             <Projects photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse/>
+            <Employment/>
         </div>
     )
 }

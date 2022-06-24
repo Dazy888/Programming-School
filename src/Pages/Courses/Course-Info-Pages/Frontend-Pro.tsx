@@ -4,6 +4,7 @@ import {SkillsFiveTitles} from "../Components/Skills/SkillsFiveTitles"
 import {Projects} from "../Components/Projects/Projects"
 import {CourseProjectsPropsType} from "./Types";
 import {HowUse} from "../Components/How-Use/How-Use";
+import {Employment} from "../Components/Employment/Employment";
 
 export function FrontendPro({header, time, img, for_who, job_name, skills, projects, classNames = ['']}: CourseProjectsPropsType) {
     return(
@@ -13,6 +14,7 @@ export function FrontendPro({header, time, img, for_who, job_name, skills, proje
             <SkillsFiveTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames} />
+            <Employment/>
         </div>
     )
 }
