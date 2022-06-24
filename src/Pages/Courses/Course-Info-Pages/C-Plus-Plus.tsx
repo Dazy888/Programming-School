@@ -1,8 +1,9 @@
-import {CourseHeader} from "../Components/Course-Header"
-import {ForWho} from "../Components/For-Who"
+import {CourseHeader} from "../Components/Header/Course-Header"
+import {ForWho} from "../Components/For-Who/For-Who"
 import {SkillsSixTitles} from "../Components/Skills/SkillsSixTitles"
-import {Projects} from "../Components/Projects"
+import {Projects} from "../Components/Projects/Projects"
 import {CourseProjectsPropsType} from "./Types"
+import {HowUse} from "../Components/How-Use/How-Use";
 
 export function CPlusPlus({header, img, time, for_who, job_name, skills, projects, classNames = ['']}: CourseProjectsPropsType) {
     console.log(1)
@@ -13,6 +14,7 @@ export function CPlusPlus({header, img, time, for_who, job_name, skills, project
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
+            <HowUse classNames={classNames} />
         </div>
     )
 }

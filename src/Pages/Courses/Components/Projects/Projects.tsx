@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {ProjectsType} from "../../../Redux/Courses-Reducer/Courses-Reducer"
+import {ProjectsType} from "../../../../Redux/Courses-Reducer/Courses-Reducer"
 
 export function Projects({photographs, texts, titles, className = ''}: ProjectsType) {
     const [id, changeId] = useState(0);

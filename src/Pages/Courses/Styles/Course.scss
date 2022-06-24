@@ -133,11 +133,15 @@
 
         .title__txt {
           width: 500px;
-          color: black;
+
+          .title {
+            color: black;
+          }
 
           .light-grey-txt {
             margin: 20px 0;
             opacity: 1 !important;
+            color: black;
           }
 
           .txt__btn {
@@ -340,6 +344,64 @@
                 color: #60B3FF;
                 font-size: 25px;
               }
+            }
+          }
+        }
+      }
+    }
+
+    .how-use {
+      width: 1300px;
+      margin: 100px auto 0;
+
+      .title {
+        margin-bottom: 100px;
+      }
+
+      .how-use__content {
+        .content__item {
+          width: 270px;
+          height: 490px;
+          background: white;
+          border-radius: 10px;
+          border: 2px solid #60B3FF;
+          position: relative;
+
+          .item__text {
+            padding: 25px;
+
+            .text__circle {
+              width: 36px;
+              height: 36px;
+              border-radius: 50%;
+              background: #60B3FF;
+              font-weight: 500;
+              font-size: 18px;
+            }
+
+            .small-title {
+              margin: 15px 0 10px;
+            }
+
+            .light-grey-txt {
+              color: black !important;
+              opacity: 1 !important;
+            }
+          }
+
+          .item__img {
+            width: 100%;
+            height: 180px;
+            position: absolute;
+            bottom: 0;
+            background: black;
+            margin-top: 117px;
+            border-radius: 0 0 10px 10px;
+
+            img {
+              display: block;
+              width: 225px;
+              height: 140px;
             }
           }
         }

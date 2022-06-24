@@ -1,8 +1,9 @@
-import {CourseHeader} from "../Components/Course-Header"
-import {ForWho} from "../Components/For-Who"
+import {CourseHeader} from "../Components/Header/Course-Header"
+import {ForWho} from "../Components/For-Who/For-Who"
 import {SkillsNineTexts} from "../Components/Skills/SkillsNineTexts"
-import {Projects} from "../Components/Projects"
+import {Projects} from "../Components/Projects/Projects"
 import {CourseProjectsPropsType} from "./Types";
+import {HowUse} from "../Components/How-Use/How-Use";
 
 export function Python({job_name, for_who, header, img, time, skills, projects}: CourseProjectsPropsType) {
     return(
@@ -11,6 +12,7 @@ export function Python({job_name, for_who, header, img, time, skills, projects}:
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsNineTexts texts={skills.texts}/>
             <Projects photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
+            <HowUse/>
         </div>
     )
 }

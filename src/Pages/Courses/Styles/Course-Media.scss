@@ -64,6 +64,19 @@
   }
 }
 
+@media screen and(max-width: 1300px) {
+  #courses-wrapper {
+    .how-use {
+      width: fit-content !important;
+
+      .how-use__content {
+        height: 2250px;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 1180px) {
   #courses-wrapper {
     .course-container {

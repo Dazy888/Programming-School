@@ -1,6 +1,7 @@
 import './Styles/Courses.css'
 import './Styles/Course.css'
 import './Styles/Course-Media.css'
+
 import {Route, Routes} from "react-router-dom"
 import {Main} from "./Main"
 import {Python} from "./Course-Info-Pages/Python"
