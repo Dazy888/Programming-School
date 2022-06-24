@@ -2,7 +2,6 @@ import React, {useEffect} from "react"
 import './Styles/Home-Media.css'
 import './Styles/Home.css'
 import {Spinner} from "./Spinner"
-import {Navigation} from "../../Components/Navigation/Navigation"
 import {Field, Form, Formik} from "formik"
 import {useDispatch, useSelector} from "react-redux"
 import {ScheduleReducerActions} from "../../Redux/Home-Reducer/Home-Reducer"

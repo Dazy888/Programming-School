@@ -1,19 +1,16 @@
 #teachers-wrapper {
   .show-teachers {
     width: 1100px !important;
-    box-sizing: border-box;
     padding: 20px;
   }
 
   .show-teachers_medium {
     width: 700px !important;
-    box-sizing: border-box;
     padding: 20px;
   }
 
   .show-teachers_small {
     width: 200px !important;
-    box-sizing: border-box;
     padding: 20px;
   }
 
@@ -32,25 +29,26 @@
       opacity: 0.8;
     }
 
-    .container__item {
+    .teachers {
       width: 1400px;
       margin-bottom: 200px;
 
-      .item__btn{
-        color: white;
-        font-size: 30px;
+      .teachers__btn {
         background: none;
         border: 2px solid mediumpurple;
         padding: 10px;
         text-align: center;
+        color: white;
+        font-size: 30px;
       }
 
-      .item__content-wrapper {
+      .teachers__content-wrapper {
         width: 1100px;
-        height: 450px;
+        height: 420px;
         position: relative;
+        padding: 0 !important;
 
-        .item__content {
+        .teachers__content {
           width: 0;
           align-items: baseline !important;
           position: absolute;
@@ -59,30 +57,31 @@
           overflow: hidden;
           border: 3px solid mediumpurple;
           border-radius: 10px;
+          box-sizing: border-box;
         }
 
         .content__teacher {
           width: 150px;
 
-          img {
+          .teacher__img {
             width: 100%;
             height: 165px;
             border-radius: 10px;
           }
 
-          .teacher__name {
+          .subtitle {
             text-align: left;
             margin: 14px 0 17px;
           }
 
-          hr {
+          .teacher__line {
             width: 100%;
             height: 2px;
             background: mediumpurple;
             border: none;
           }
 
-          .teacher__txt {
+          .light-grey-txt {
             font-size: 15px !important;
             margin-top: 5px;
           }
@@ -94,11 +93,11 @@
 
 @media screen and(max-width: 1450px) {
   #teachers-wrapper {
-    .item__content-wrapper_medium {
+    .teachers__content-wrapper_medium {
       width: 700px !important;
     }
 
-    .item__content-wrapper_small {
+    .teachers__content-wrapper_small {
       width: 250px !important;
     }
 
@@ -115,28 +114,28 @@
       height: 450px !important;
     }
 
-    .item__content_big {
+    .teachers__content_big {
       width: 1100px !important;
     }
 
-    .item__content_medium {
+    .teachers__content_medium {
       width: 700px !important;
     }
 
-    .item__content_small {
+    .teachers__content_small {
       width: 250px !important;
     }
 
-    .container__item {
+    .teachers {
       width: 1100px !important;
       flex-direction: column;
 
-      .item__btn {
+      .teachers__btn {
         margin-bottom: 50px;
       }
 
-      .item__content-wrapper {
-        .item__content {
+      .teachers__content-wrapper {
+        .teachers__content {
           width: 0;
           height: 0;
           top: 0;
@@ -160,48 +159,48 @@
       height: 380px !important;
     }
 
-    .item__content_big {
+    .teachers__content_big {
       width: 900px !important;
     }
 
-    .item__content_medium {
+    .teachers__content_medium {
       width: 580px !important;
     }
 
-    .item__content_small {
+    .teachers__content_small {
       width: 200px !important;
     }
 
-    .container__item {
+    .teachers {
       width: 900px !important;
       flex-direction: column;
     }
 
-    .item__content-wrapper {
+    .teachers__content-wrapper {
       width: 900px !important;
     }
 
-    .item__content-wrapper_medium {
+    .teachers__content-wrapper_medium {
       width: 580px !important;
     }
 
-    .item__content-wrapper_small {
+    .teachers__content-wrapper_small {
       width: 200px !important;
     }
 
     .content__teacher {
       width: 130px !important;
 
-      img {
+      .teacher__img {
         width: 100%;
         height: 165px;
       }
 
-      .teacher__name {
+      .subtitle {
         font-size: 22px !important;
       }
 
-      .teacher__txt {
+      .light-grey-txt {
         font-size: 14px !important;
       }
     }
@@ -210,47 +209,47 @@
 
 @media screen and(max-width: 925px) {
   #teachers-wrapper {
-    .item__content_big {
+    .teachers__content_big {
       width: 800px !important;
     }
 
-    .item__content_medium {
+    .teachers__content_medium {
       width: 500px !important;
     }
 
-    .item__content_small {
+    .teachers__content_small {
       width: 200px !important;
     }
 
-    .container__item {
+    .teachers {
       width: 800px !important;
       flex-direction: column;
     }
 
-    .item__content-wrapper {
+    .teachers__content-wrapper {
       width: 800px !important;
     }
 
-    .item__content-wrapper_medium {
+    .teachers__content-wrapper_medium {
       width: 500px !important;
     }
 
-    .item__content-wrapper_small {
+    .teachers__content-wrapper_small {
       width: 200px !important;
     }
 
     .content__teacher {
       width: 110px !important;
 
-      img {
+      .teacher__img {
         height: 135px !important;
       }
 
-      .teacher__name {
+      .subtitle {
         font-size: 20px !important;
       }
 
-      .teacher__txt {
+      .light-grey-txt {
         font-size: 12px !important;
       }
     }
@@ -267,43 +266,43 @@
       height: 1300px !important;
     }
 
-    .item__content_big {
+    .teachers__content_big {
       width: 250px !important;
     }
 
-    .item__content_medium {
+    .teachers__content_medium {
       width: 250px !important;
     }
 
-    .item__content-wrapper_big {
+    .teachers__content-wrapper_big {
       width: 250px !important;
     }
 
-    .item__content-wrapper_medium {
+    .teachers__content-wrapper_medium {
       width: 250px !important;
     }
 
-    .container__item {
+    .teachers {
       width: 250px !important;
       margin: auto auto 100px auto !important;
     }
 
-    .item__content_big, .item__content_medium {
+    .teachers__content_big, .teachers__content_medium {
       flex-direction: column;
 
       .content__teacher {
         width: 150px !important;
         margin: auto;
 
-        img {
+        .teacher__img {
           height: 165px !important;
         }
 
-        .teacher__name {
+        .subtitle {
           font-size: 24px !important;
         }
 
-        .teacher__txt {
+        .light-grey-txt {
           font-size: 15px !important;
         }
       }

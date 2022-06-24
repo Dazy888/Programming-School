@@ -6,5 +6,5 @@ export type SkillsTextsType = {
 export type SkillsTitlesType = {
     titles: Array<string>
     texts: Array<string>
-    className: string
+    className?: string
 }

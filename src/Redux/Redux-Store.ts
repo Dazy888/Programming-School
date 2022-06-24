@@ -1,8 +1,8 @@
-import {combineReducers, createStore} from "redux";
-import {contactsReducer} from "./Contacts-Reducer/Contacts-Reducer";
-import {HomeReducer} from "./Home-Reducer/Home-Reducer";
-import {TeachersReducer} from "./Teachers-Reducer/Teachers-Reducer";
-import {CoursesReducer} from "./Courses-Reducer/Courses-Reducer";
+import {combineReducers, createStore} from "redux"
+import {contactsReducer} from "./Contacts-Reducer/Contacts-Reducer"
+import {HomeReducer} from "./Home-Reducer/Home-Reducer"
+import {TeachersReducer} from "./Teachers-Reducer/Teachers-Reducer"
+import {CoursesReducer} from "./Courses-Reducer/Courses-Reducer"
 
 let reducers = combineReducers({
     contactsPage: contactsReducer,

@@ -1,5 +1,4 @@
 import './Styles/Schedule-Page.css'
-import {Navigation} from "../../Components/Navigation/Navigation"
 import {WeekDaySchedule} from "./WeekDaySchedule"
 
 export function SchedulePage() {

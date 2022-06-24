@@ -1,15 +1,9 @@
-export type MainType = {
-    backgroundClass?: string
-    path: string
-}
-
 export type HeaderType = {
     titleTxt: string
     textAboutJob?: string
     companies: string
     salary: string
     projects: string
-    classNames: Array<string>
 }
 
 export type ForWhoType = {
@@ -31,10 +25,17 @@ export type ProjectsType = {
 }
 
 export type CourseType = {
-    header: HeaderType
-    for_who: ForWhoType
-    skills: SkillsType
-    projects: ProjectsType
+    job_name: string,
+    main_img: string,
+    time: string,
+    classNames?: Array<string>,
+    path: string,
+    course: {
+        header: HeaderType
+        for_who: ForWhoType
+        skills: SkillsType
+        projects: ProjectsType
+    }
 }
 
 const initialState = {
@@ -42,10 +43,7 @@ const initialState = {
         job_name: 'Python-developer' as string,
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_4589beaf332198133164e04e0fb855c2c1368858.webp' as string,
         time: '1 year' as string,
-
-        main: {
-            path: 'python',
-        } as MainType,
+        path: 'python',
 
         course: {
             header: {
@@ -85,28 +83,25 @@ const initialState = {
                     'https://248006.selcdn.ru/LandGen/phone_caa9f044e4661b45c4e92b2a7a7f3c2632b72e8a.jpg',
                     'https://248006.selcdn.ru/LandGen/phone_e948f77490a7da379bc173aebd7a78dd185b783b.png'
                 ] ,
-                    titles: [
-                        'Python Basic Course: Travel Agency Bot',
-                        'Internship in a team: development of an online store',
-                        'Python Advanced Course: Problem Book'
-                    ],
+                titles: [
+                    'Python Basic Course: Travel Agency Bot',
+                    'Internship in a team: development of an online store',
+                    'Python Advanced Course: Problem Book'
+                ],
                 texts: [
                     'Develop a Telegram bot on the instructions of the travel agency Too Easy Travel. The bot will take the approximate cost of living and the location of the user, and return a list of the most suitable hotels',
                     'Together with a team leader and a team of 3-5 people, you will develop a server part for a full-fledged marketplace. You will work according to the Scrum or Kanban system, regularly discuss current progress with the team leader and receive new tasks. All processes are as close as possible to real conditions - this is how commercial software is created in employing companies.As a result, you will create your own analogue of Yandex.Market',
                     'Create a service like CodeWars or Leetcode where users can solve programming problems. Develop a built-in editor and add a runtime so that the visitor runs his code and sees the result of the program directly in the browser. Your task will be to create a fast and secure service that will not allow a visitor to inject a malicious script and break the application'
                 ],
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     java_pro: {
         job_name: 'Java-developer PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_57c9d80b2b75745579f68b99bdd0e2c0516a955f.webp',
         time: '2 years',
-
-        main: {
-            backgroundClass: 'light-purple-back',
-            path: 'java-pro',
-        } as MainType,
+        classNames: ['light-purple-back', 'light-purple-border'],
+        path: 'java-pro',
 
         course: {
             header: {
@@ -114,7 +109,6 @@ const initialState = {
                 companies: '3 000',
                 salary: '1900',
                 projects: '4',
-                classNames: ['light-purple-back', 'light-purple-border']
             },
             for_who: {
                 photographs: [
@@ -147,17 +141,14 @@ const initialState = {
                     'Explore the capabilities of the Spring framework and learn how to build web applications with it'
                 ]
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     web: {
         job_name: 'Web-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_1483b955a743f9098806cbe6c6d78d306a210b65.webp',
         time: '2 years',
-
-        main: {
-            backgroundClass: 'purple-back',
-            path: 'web',
-        } as MainType,
+        classNames: ['purple-back', 'purple-border', 'purple-color'],
+        path: 'web',
 
         course: {
             header: {
@@ -166,7 +157,6 @@ const initialState = {
                 companies: '3 160',
                 salary: '800',
                 projects: '6',
-                classNames: ['purple-back', 'purple-border']
             },
             for_who: {
                 photographs: [
@@ -222,19 +212,15 @@ const initialState = {
                     'Write a task tracker with a timer in the React framework',
                     'Develop a note service with the ability to autosave, delete, upload to PDF, search by notes and infinite scroll. Deploy the result to the server'
                 ],
-                className: 'purple-color'
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     c_plus_plus: {
         job_name: 'C++ developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_7d5b8e852952b4fc68ca058c53a3b9570fd4f3d7.webp',
         time: '1 year',
-
-        main: {
-            backgroundClass: 'light-blue-back',
-            path: 'c-plus-plus',
-        } as MainType,
+        classNames: ['light-blue-back','light-blue-border', 'light-blue-color'],
+        path: 'c-plus-plus',
 
         course: {
             header: {
@@ -243,7 +229,6 @@ const initialState = {
                 companies: '4 018',
                 salary: '3500',
                 projects: '2',
-                classNames: ['light-blue-back','light-blue-border']
             },
             for_who: {
                 photographs: [
@@ -287,19 +272,15 @@ const initialState = {
                     'You will develop a search engine for the company\'s corporate portal - an analogue of the Yandex or Google search string. Learn to get data from web pages and build search indexes. Write a relevancy formula to return search results',
                     'Work with other course participants to create an app that your friends and family can use. Write a full-fledged browser in C ++: with its help, you can search for information, browse the web and surf social networks - like in Google Chrome or Yandex Browser'
                 ],
-                className: 'light-blue-color'
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     python_fullstack: {
         job_name: 'Python Fullstack-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_43712003895f94c163a288e6e9e0e00bbf671110.webp',
         time: '1 year',
-
-        main: {
-            backgroundClass: 'pink-back',
-            path: 'python-fullstack',
-        } as MainType,
+        classNames: ['pink-back', 'pink-border', 'pink-color'],
+        path: 'python-fullstack',
 
         course: {
             header: {
@@ -307,7 +288,6 @@ const initialState = {
                 companies: '4 231',
                 salary: '1400',
                 projects: '4',
-                classNames: ['pink-back', 'pink-border']
             },
             for_who: {
                 photographs: [
@@ -351,19 +331,15 @@ const initialState = {
                     'You will develop a user interface similar to Instagram',
                     'You will write a behavior algorithm for space drones that collect fuel from asteroids'
                 ],
-                className: 'pink-color'
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     android: {
         job_name: 'Android-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_763111395fcf224a8e694cdfbf3bb3d198914536.webp',
         time: '22 months',
-
-        main: {
-            backgroundClass: 'light-orange-back',
-            path: 'android',
-        } as MainType,
+        classNames: ['light-orange-back', 'light-orange-border', 'light-orange-color'],
+        path: 'android',
 
         course: {
             header: {
@@ -372,7 +348,6 @@ const initialState = {
                 companies: '3 867',
                 salary: '1500',
                 projects: '2',
-                classNames: ['light-orange-back', 'light-orange-border']
             },
             for_who: {
                 photographs: [
@@ -427,19 +402,15 @@ const initialState = {
                     'Create an app for runners and cyclists that allows you to track your activity and weight and get workout reminders',
                     'Develop an application that allows users to post links, find interesting content and discuss it.'
                 ],
-                className: 'light-orange-color'
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     c_sharp: {
         job_name: 'C# developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_9d6b6453a2e5702f3848771f0bb79eda7566a530.webp',
         time: '1 year',
-
-        main: {
-            backgroundClass: 'blue-back',
-            path: 'c-sharp',
-        } as MainType,
+        classNames: ['blue-back', 'blue-border', 'blue-color'],
+        path: 'c-sharp',
 
         course: {
             header: {
@@ -448,7 +419,6 @@ const initialState = {
                 companies: '5 206',
                 salary: '900',
                 projects: '2',
-                classNames: ['blue-back', 'blue-border']
             },
             for_who: {
                 photographs: [
@@ -484,19 +454,15 @@ const initialState = {
                     'You will create a customer management system that brings disparate business tools together',
                     'You make up several pages for an online store according to the terms of reference'
                 ],
-                className: 'blue-color'
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     ios: {
         job_name: 'IOS-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_b0d52a8c5100ff4bb126ca5fc03cd1da32805b9b.webp',
         time: '1 year',
-
-        main: {
-            backgroundClass: 'blue-back',
-            path: 'ios',
-        } as MainType,
+        classNames: ['blue-back', 'blue-border', 'blue-color'],
+        path: 'ios',
 
         course: {
             header: {
@@ -505,7 +471,6 @@ const initialState = {
                 companies: '2 768',
                 salary: '2000',
                 projects: '3',
-                classNames: ['blue-back', 'blue-border']
             },
             for_who: {
                 photographs: [
@@ -551,19 +516,15 @@ const initialState = {
                     'As part of a team led by an experienced team leader, you will create an analogue of Yandex.Go with a food delivery function. You will be given TOR, project design and roles in the team. All processes of this project are an experience as close as possible to real conditions. This is how real applications are built',
                     'You will develop an application with news about the space industry. The project will consist of several screens: news, blog, favorites. Materials will be uploaded through a public API, and favorite notes can be saved on the device and read without an Internet connection'
                 ],
-                className: 'blue-color'
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     php_fullstack: {
         job_name: 'PHP Fullstack-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_62f01151670d0e3f00a7099b2501ac2e043a2314.webp',
         time: '1 year',
-
-        main: {
-            backgroundClass: 'light-dark-blue-back',
-            path: 'php-fullstack',
-        } as MainType,
+        classNames: ['light-dark-blue-back', 'light-dark-blue-border', 'light-dark-blue-color'],
+        path: 'php-fullstack',
 
         course: {
             header: {
@@ -571,7 +532,6 @@ const initialState = {
                 companies: '3 235',
                 salary: '1400',
                 projects: '4',
-                classNames: ['light-dark-blue-back', 'light-dark-blue-border']
             },
             for_who: {
                 photographs: [
@@ -610,19 +570,15 @@ const initialState = {
                     'You will create an adaptive one-page website on the subject given by the teacher',
                     'You are designing web pages for an online furniture store'
                 ],
-                className: 'light-dark-blue-color'
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     mobile: {
         job_name: 'Mobile-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_b21b1ae4f5baf79bc47f29ca1ab1ef7ad0d3b615.webp',
         time: '2 years',
-
-        main: {
-            backgroundClass: 'light-pink-back',
-            path: 'mobile',
-        } as MainType,
+        classNames: ['light-pink-back', 'light-pink-border', 'light-pink-color'],
+        path: 'mobile',
 
         course: {
             header: {
@@ -631,7 +587,6 @@ const initialState = {
                 companies: '6 000',
                 salary: '1900',
                 projects: '2',
-                classNames: ['light-pink-back', 'light-pink-border']
             },
             for_who: {
                 photographs: [
@@ -674,20 +629,16 @@ const initialState = {
                     'Profession Android developer. Reddit analogue',
                     'Team project: mobile application for Android'
                 ],
-                className: 'light-pink-color'
             }
 
-        } as CourseType
-    },
+        }
+    } as CourseType,
     java: {
         job_name: 'Java-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_477ae814606ca5e5256c683921f40d2d7f29bad4.webp',
         time: '9 months',
-
-        main: {
-            backgroundClass: 'orange-back',
-            path: 'java',
-        } as MainType,
+        classNames: ['orange-back', 'orange-border'],
+        path: 'java',
 
         course: {
             header: {
@@ -695,7 +646,6 @@ const initialState = {
                 companies: '3 000',
                 salary: '1900',
                 projects: '2',
-                classNames: ['orange-back', 'orange-border']
             },
             for_who: {
                 photographs: [
@@ -718,17 +668,14 @@ const initialState = {
                     'Relational database query writing skills'
                 ]
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     frontend_full: {
         job_name: 'Frontend-developer from zero to PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_af62204878d4eba3a075419b219ff11849d0bbc3.webp',
         time: '2 years',
-
-        main: {
-            backgroundClass: 'grey-back',
-            path: 'frontend-full',
-        } as MainType,
+        classNames: ['grey-back', 'grey-border', 'grey-color'],
+        path: 'frontend-full',
 
         course: {
             header: {
@@ -737,7 +684,6 @@ const initialState = {
                 companies: '6 660',
                 salary: '1100',
                 projects: '7',
-                classNames: ['grey-back', 'grey-border']
             },
             for_who: {
                 photographs: [
@@ -761,20 +707,14 @@ const initialState = {
                     'Work with Git'
                 ]
             },
-            projects: {
-                className: 'grey-color'
-            }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     frontend_pro: {
         job_name: 'Frontend-developer PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_98a708fd2012f5033663fece150133eac4387673.webp',
         time: '1 year',
-
-        main: {
-            backgroundClass: 'light-green-back',
-            path: 'frontend-pro',
-        } as MainType,
+        classNames: ['light-green-back', 'light-green-border', 'light-green-color'],
+        path: 'frontend-pro',
 
         course: {
             header: {
@@ -782,7 +722,6 @@ const initialState = {
                 companies: '4 100',
                 salary: '1100',
                 projects: '6',
-                classNames: ['light-green-back', 'light-green-border']
             },
             for_who: {
                 photographs: [
@@ -813,20 +752,14 @@ const initialState = {
                     'Learn how to work with sprints and Scrum methodology. Under the guidance of a team leader, together with other students, write a web application'
                 ]
             },
-            projects: {
-                className: 'light-green-color'
-            }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     js_fullstack: {
         job_name: 'Javascript Fullstack-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_9567df25c360d949e492c6afcb047f9878baa2b3.webp',
         time: '1 year',
-
-        main: {
-            backgroundClass: 'yellow-back',
-            path: 'javascript-fullstack',
-        } as MainType,
+        classNames: ['yellow-back', 'yellow-border', 'yellow-color'],
+        path: 'javascript-fullstack',
 
         course: {
             header: {
@@ -834,7 +767,6 @@ const initialState = {
                 companies: '6 000',
                 salary: '1400',
                 projects: '4',
-                classNames: ['yellow-back', 'yellow-border']
             },
             for_who: {
                 photographs: [
@@ -892,19 +824,15 @@ const initialState = {
                     'Set up the integration of posts from the Reddit news site using the React.js framework',
                     'Develop a full-fledged online store on the Angular framework'
                 ],
-                className: 'yellow-color'
             }
-        } as CourseType
-    },
+        }
+    } as CourseType,
     php_pro: {
         job_name: 'PHP-developer from zero to PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_ef69df0ff2b047f7d37fea27a790dd8187e4404a.webp',
         time: '1 year',
-
-        main: {
-            backgroundClass: 'light-yellow-back',
-            path: 'php-pro',
-        } as MainType,
+        classNames: ['light-yellow-back', 'light-yellow-border'],
+        path: 'php-pro',
 
         course: {
             header: {
@@ -913,7 +841,6 @@ const initialState = {
                 companies: '2 837',
                 salary: '1400',
                 projects: '3',
-                classNames: ['light-yellow-back', 'light-yellow-border']
             },
             for_who: {
                 photographs: [
@@ -944,8 +871,8 @@ const initialState = {
                     'Get acquainted with the principles of the framework, routing, set up interaction with the database, connect the Blade templating engine. Learn to write and test complex business logic'
                 ]
             },
-        } as CourseType
-    }
+        }
+    } as CourseType
 }
 
 export type InitialStateType = typeof initialState

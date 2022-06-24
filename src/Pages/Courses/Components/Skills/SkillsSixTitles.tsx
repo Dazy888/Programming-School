@@ -1,5 +1,5 @@
-import {Skill} from "./Skill";
-import {SkillsTitlesType} from "./SkillsTypes";
+import {Skill} from "./Skill"
+import {SkillsTitlesType} from "./SkillsTypes"
 
 export function SkillsSixTitles({titles, className, texts}: SkillsTitlesType) {
     return (

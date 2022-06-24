@@ -5,7 +5,7 @@ type PropsType = {
 export function WeekDaySchedule({weekDay}: PropsType) {
     return(
         <div className={'column__item'}>
-            <h3 className={'item__title small-title'}>{weekDay}</h3>
+            <h3 className={'small-title'}>{weekDay}</h3>
             <hr className={'item__line'}/>
             <p className={'item__txt'}>First lesson: 10:00-11:00</p>
             <p className={'item__txt'}>Second lesson: 11:20-12:20</p>

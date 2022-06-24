@@ -1,6 +1,5 @@
 import './Styles/Contacts-Page.css'
 import './Styles/Contacts-Page-Media.css'
-import {Navigation} from "../../Components/Navigation/Navigation"
 import {Field, Form, Formik} from "formik"
 import React from "react"
 import {useDispatch, useSelector} from "react-redux"
@@ -24,19 +23,19 @@ export function ContactsPage() {
                 <div className={'contacts__row flex-property-set_between'}>
                     <div className={'row__item'}>
                         <img alt={'Avatar'} className={'item__avatar'} src={'https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb'}/>
-                        <h3 className={'item__name small-title'}>Alex</h3>
+                        <h3 className={'small-title'}>Alex</h3>
                         <p className={'light-grey-txt'}>Advertising manager</p>
                         <p className={'light-grey-txt'}>alexmanager@gmail.com</p>
                     </div>
                     <div className={'row__item'}>
                         <img alt={'Avatar'} className={'item__avatar'} src={'https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg?w=2000'}/>
-                        <h3 className={'item__name small-title'}>Svetlana</h3>
+                        <h3 className={'small-title'}>Svetlana</h3>
                         <p className={'light-grey-txt'}>Social media manager</p>
                         <p className={'light-grey-txt'}>svetlanamanager@gmail.com</p>
                     </div>
                     <div className={'row__item'}>
                         <img alt={'Avatar'} className={'item__avatar'} src={'https://images.unsplash.com/photo-1539117332142-bdb5d548d1ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8&w=1000&q=80'}/>
-                        <h3 className={'item__name small-title'}>Yulia</h3>
+                        <h3 className={'small-title'}>Yulia</h3>
                         <p className={'light-grey-txt'}>Technical manager</p>
                         <p className={'light-grey-txt'}>yuliaanager@gmail.com</p>
                     </div>
