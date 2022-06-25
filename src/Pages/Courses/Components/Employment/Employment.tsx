@@ -15,7 +15,7 @@ export function Employment() {
                         <img className={'photographs__small bottom-left'} alt={'Img'} src={'https://248006.selcdn.ru/LandGen/blocks/work/v4/bottom-left-sm.png'}/>
                         <img className={'photographs__very-small aic'} alt={'Img'} src={'https://248006.selcdn.ru/LandGen/blocks/work/v4/logo-aic-sm.png'}/>
                         <img className={'photographs__very-small mailru'} alt={'Img'} src={'https://248006.selcdn.ru/LandGen/blocks/work/v4/logo-mailru-sm.png'}/>
-                        <img className={'photographs__very-small vk'} alt={'Img'} src={'https://248006.selcdn.ru/LandGen/blocks/work/v4/logo-aic-sm.png'}/>
+                        <img className={'photographs__very-small vk'} alt={'Img'} src={'https://248006.selcdn.ru/LandGen/blocks/work/v4/logo-vk-sm.png'}/>
                         <img className={'photographs__very-small youla'} alt={'Img'} src={'https://248006.selcdn.ru/LandGen/blocks/work/v4/logo-youla-sm.png'}/>
                     </div>
                 </div>

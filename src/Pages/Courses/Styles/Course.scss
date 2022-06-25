@@ -352,7 +352,7 @@
 
     .how-use {
       width: 1300px;
-      margin: 100px auto 0;
+      margin: 200px auto 0;
 
       .title {
         margin-bottom: 100px;
@@ -441,6 +441,10 @@
 
             img {
               position: absolute;
+              animation-duration: 4s;
+              animation-direction: alternate;
+              animation-iteration-count: infinite;
+              animation-timing-function: linear;
 
               &:first-child {
                 position: relative;
@@ -467,14 +471,76 @@
               height: 70px;
             }
 
+            @keyframes top-left {
+              from {transform: translate(-110px, -180px)}
+              to {transform: translate(-110px, -150px)}
+            }
+
+            @keyframes bottom-right {
+              from {transform: translate(110px, 190px)}
+              to {transform: translate(110px, 165px)}
+            }
+
+            @keyframes top-right {
+              from {transform: translate(180px, -60px)}
+              to {transform: translate(180px, -40px)}
+            }
+
+            @keyframes bottom-left {
+              from {transform: translate(-130px, 90px)}
+              to {transform: translate(-130px, 130px)}
+            }
+
+            @keyframes aic {
+              from {transform: translate(115px, -145px)}
+              to {transform: translate(115px, -120px)}
+            }
+
+            @keyframes mailru {
+              from {transform: translate(-20px, 195px)}
+              to {transform: translate(-20px, 225px)}
+            }
+
+            @keyframes vk {
+              from {transform: translate(185px, 110px)}
+              to {transform: translate(185px, 95px)}
+            }
+
+            @keyframes youla {
+              from {transform: translate(-190px, -20px)}
+              to {transform: translate(-190px, -50px)}
+            }
+
             .top-left {
-              top: 55px;
-              left: 110px;
+              animation-name: top-left;
             }
 
             .bottom-right {
-              right: 120px;
-              bottom: 45px;
+              animation-name: bottom-right;
+            }
+
+            .top-right {
+              animation-name: top-right;
+            }
+
+            .bottom-left {
+              animation-name: bottom-left;
+            }
+
+            .aic {
+              animation-name: aic;
+            }
+
+            .mailru {
+              animation-name: mailru;
+            }
+
+            .vk {
+              animation-name: vk;
+            }
+
+            .youla {
+              animation-name: youla;
             }
           }
         }

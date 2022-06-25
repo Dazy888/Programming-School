@@ -143,6 +143,10 @@ code {
   .navigation__links {
     display: flex;
 
+    .active {
+      color: mediumpurple !important;
+    }
+
     .links__item {
       display: block;
       cursor: pointer;

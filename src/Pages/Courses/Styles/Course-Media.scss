@@ -10,6 +10,19 @@
           padding: 60px 185px;
         }
       }
+
+      .employment {
+        padding: 75px 0;
+
+        .employment__header {
+          text-align: center;
+          flex-direction: column;
+
+          .header__text {
+            width: 600px !important;
+          }
+        }
+      }
     }
   }
 }
@@ -166,6 +179,11 @@
         }
       }
     }
+
+    .employment__wrapper {
+      width: fit-content !important;
+      margin: auto;
+    }
   }
 }
 
@@ -257,6 +275,29 @@
         }
       }
     }
+
+    .course-container {
+      .employment {
+        .employment__header {
+          .header__text {
+            width: 400px !important;
+
+            .title {
+              font-size: 38px !important;
+              margin-bottom: 40px !important;
+            }
+
+            .light-grey-txt {
+              font-size: 16px !important;
+            }
+          }
+
+          .header__photographs {
+            width: fit-content !important;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -331,6 +372,70 @@
         }
       }
     }
+
+    .employment {
+      .employment__header {
+        .photographs__main {
+          width: 200px !important;
+          height: 200px !important;
+        }
+
+        .photographs__medium {
+          width: 95px !important;
+          height: 95px !important;
+        }
+
+        .photographs__small {
+          width: 70px !important;
+          height: 70px !important;
+        }
+
+        .photographs__very-small {
+          width: 50px !important;
+          height: 50px !important;
+        }
+
+        @keyframes top-left {
+          from {transform: translate(-90px, -160px)}
+          to {transform: translate(-90px, -130px)}
+        }
+
+        @keyframes bottom-right {
+          from {transform: translate(90px, 170px)}
+          to {transform: translate(90px, 145px)}
+        }
+
+        @keyframes top-right {
+          from {transform: translate(160px, -40px)}
+          to {transform: translate(160px, -20px)}
+        }
+
+        @keyframes bottom-left {
+          from {transform: translate(-110px, 70px)}
+          to {transform: translate(-110px, 110px)}
+        }
+
+        @keyframes aic {
+          from {transform: translate(95px, -125px)}
+          to {transform: translate(95px, -100px)}
+        }
+
+        @keyframes mailru {
+          from {transform: translate(0, 175px)}
+          to {transform: translate(0, 205px)}
+        }
+
+        @keyframes vk {
+          from {transform: translate(165px, 90px)}
+          to {transform: translate(165px, 75px)}
+        }
+
+        @keyframes youla {
+          from {transform: translate(-170px, 0)}
+          to {transform: translate(-170px, -30px)}
+        }
+      }
+    }
   }
 }
 
@@ -394,6 +499,89 @@
   }
 }
 
+@media screen and(max-width: 440px) {
+  #courses-wrapper {
+    .course-container {
+      .employment {
+        .employment__header {
+          .header__text {
+            width: 300px !important;
+
+            .title {
+              font-size: 30px !important;
+              margin-bottom: 30px !important;
+            }
+
+            .light-grey-txt {
+              font-size: 14px !important;
+            }
+          }
+
+          .photographs__main {
+            width: 180px !important;
+            height: 180px !important;
+          }
+
+          .photographs__medium {
+            width: 85px !important;
+            height: 85px !important;
+          }
+
+          .photographs__small {
+            width: 60px !important;
+            height: 60px !important;
+          }
+
+          .photographs__very-small {
+            width: 40px !important;
+            height: 40px !important;
+          }
+
+          @keyframes top-left {
+            from {transform: translate(-70px, -140px)}
+            to {transform: translate(-70px, -110px)}
+          }
+
+          @keyframes bottom-right {
+            from {transform: translate(70px, 150px)}
+            to {transform: translate(70px, 125px)}
+          }
+
+          @keyframes top-right {
+            from {transform: translate(140px, -20px)}
+            to {transform: translate(140px, 0)}
+          }
+
+          @keyframes bottom-left {
+            from {transform: translate(-90px, 50px)}
+            to {transform: translate(-90px, 90px)}
+          }
+
+          @keyframes aic {
+            from {transform: translate(75px, -105px)}
+            to {transform: translate(75px, -80px)}
+          }
+
+          @keyframes mailru {
+            from {transform: translate(-20px, 155px)}
+            to {transform: translate(-20px, 185px)}
+          }
+
+          @keyframes vk {
+            from {transform: translate(145px, 70px)}
+            to {transform: translate(145px, 55px)}
+          }
+
+          @keyframes youla {
+            from {transform: translate(-150px, -20px)}
+            to {transform: translate(-150px, -10px)}
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 420px) {
 
   #courses-wrapper {
@@ -425,6 +613,108 @@
 
           .light-grey-txt {
             font-size: 16px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 390px) {
+  #courses-wrapper {
+    .projects {
+      .title {
+        font-size: 33px !important;
+      }
+
+      .projects__content {
+        .content__img {
+          img {
+            width: 300px !important;
+            height: 180px !important;
+          }
+        }
+
+        .content__text {
+          width: 320px !important;
+          height: 380px !important;
+
+          .small-title {
+            font-size: 17px !important;
+          }
+
+          .light-grey-txt {
+            font-size: 13px !important;
+          }
+
+          .text__controls {
+            left: 40px !important;
+          }
+        }
+      }
+    }
+
+    .course-container {
+      .employment {
+        .employment__header {
+          .photographs__main {
+            width: 170px !important;
+            height: 170px !important;
+          }
+
+          .photographs__medium {
+            width: 75px !important;
+            height: 75px !important;
+          }
+
+          .photographs__small {
+            width: 50px !important;
+            height: 50px !important;
+          }
+
+          .photographs__very-small {
+            width: 30px !important;
+            height: 30px !important;
+          }
+
+          @keyframes top-left {
+            from {transform: translate(-60px, -130px)}
+            to {transform: translate(-60px, -100px)}
+          }
+
+          @keyframes bottom-right {
+            from {transform: translate(60px, 140px)}
+            to {transform: translate(60px, 115px)}
+          }
+
+          @keyframes top-right {
+            from {transform: translate(120px, -10px)}
+            to {transform: translate(120px, -10px)}
+          }
+
+          @keyframes bottom-left {
+            from {transform: translate(-80px, 40px)}
+            to {transform: translate(-80px, 80px)}
+          }
+
+          @keyframes aic {
+            from {transform: translate(65px, -95px)}
+            to {transform: translate(65px, -70px)}
+          }
+
+          @keyframes mailru {
+            from {transform: translate(-10px, 145px)}
+            to {transform: translate(-10px, 175px)}
+          }
+
+          @keyframes vk {
+            from {transform: translate(125px, 60px)}
+            to {transform: translate(125px, 45px)}
+          }
+
+          @keyframes youla {
+            from {transform: translate(-130px, -10px)}
+            to {transform: translate(-130px, 0)}
           }
         }
       }
