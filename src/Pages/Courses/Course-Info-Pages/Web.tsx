@@ -14,7 +14,7 @@ export function Web({for_who, time, img, header, job_name, skills, projects, cla
             <SkillsFiveTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames} />
-            <Employment/>
+            <Employment className={classNames[2]}/>
         </div>
     )
 }

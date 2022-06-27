@@ -12,7 +12,7 @@ export function PHPPro({time, img, header, for_who, job_name, skills, classNames
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <HowUse classNames={classNames} />
-            <Employment/>
+            <Employment className={classNames[2]}/>
         </div>
     )
 }

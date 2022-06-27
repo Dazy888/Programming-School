@@ -10,21 +10,19 @@ import {TeachersPage} from "./Pages/Teachers/Teachers-Page"
 
 export function App() {
     const navigationRef: any = React.createRef()
-    let openMenu
-    let closeMenu
 
     useEffect(() => {
         const navigation = navigationRef.current
         const burgerOpen: any = navigation.querySelector('.burger_open')
         const burgerClose: any = navigation.querySelector('.burger_close')
 
-        openMenu = function() {
+        burgerOpen.onclick = () => {
             navigation.classList.add('show-nav')
             burgerOpen.style.display = 'none'
             burgerClose.style.display = 'block'
         }
 
-        closeMenu = function() {
+        burgerClose.onclick = () => {
             navigation.classList.remove('show-nav')
             burgerOpen.style.display = 'block'
             burgerClose.style.display = 'none'
@@ -40,8 +38,8 @@ export function App() {
                             <img className="img__logo" src="/Photographs/Main-Page/Logo.png" alt="Logo" />
                         </div>
                         <nav className="navigation__links white-txt" ref={navigationRef}>
-                            <button onClick={closeMenu} className="burger burger_close"><i className="fa-solid fa-square-xmark"></i></button>
-                            <button onClick={openMenu} className="burger burger_open"><i className="fa-solid fa-bars"></i></button>
+                            <button className="burger burger_close"><i className="fa-solid fa-square-xmark"></i></button>
+                            <button className="burger burger_open"><i className="fa-solid fa-bars"></i></button>
                             <NavLink to={'/home'} className="links__item">Home</NavLink>
                             <NavLink to={'/courses'} className="links__item">Courses</NavLink>
                             <NavLink to={'/schedule'} className="links__item">Schedule</NavLink>
