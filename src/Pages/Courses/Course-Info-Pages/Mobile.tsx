@@ -20,7 +20,7 @@ export function Mobile({header, time, img, for_who, job_name, skills, projects, 
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects_photographs} titles={projects.titles} texts={projects_texts}/>
             <HowUse classNames={classNames} />
-            <Employment className={classNames[2]}/>
+            <Employment classNames={classNames}/>
         </div>
     )
 }

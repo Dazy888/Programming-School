@@ -29,7 +29,7 @@ export function FrontendFull({header, time, img, for_who, job_name, skills, proj
             </div>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames} />
-            <Employment className={classNames[2]}/>
+            <Employment classNames={classNames}/>
         </div>
     )
 }

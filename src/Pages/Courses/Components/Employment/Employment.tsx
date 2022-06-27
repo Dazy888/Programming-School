@@ -2,10 +2,10 @@ import {SliderControls} from "../Projects/Projects";
 import React, {useEffect, useState} from "react";
 
 type PropsType = {
-    className?: string
+    classNames?: Array<string>
 }
 
-export function Employment({className = ''}: PropsType) {
+export function Employment({classNames = ['']}: PropsType) {
     const [id, changeId] = useState(0)
     const employmentRef: any = React.createRef()
 
@@ -13,13 +13,8 @@ export function Employment({className = ''}: PropsType) {
         const buttons = employmentRef.current.querySelectorAll('.controls__btn')
         const slider = employmentRef.current.querySelector('.slider__list')
 
-        buttons[0].onclick = () => {
-            slider.classList.remove('moveRight')
-        }
-
-        buttons[1].onclick = () => {
-            slider.classList.add('moveRight')
-        }
+        buttons[0].onclick = () => slider.classList.remove('moveRight')
+        buttons[1].onclick = () => slider.classList.add('moveRight')
     }, [])
 
     return(
@@ -98,7 +93,38 @@ export function Employment({className = ''}: PropsType) {
                             </li>
                         </ul>
                     </div>
-                    <SliderControls className={className} length={2} id={id} changeId={changeId}/>
+                    <SliderControls className={classNames[2]} length={2} id={id} changeId={changeId}/>
+                </div>
+                <div className={'employment__guarantees'}>
+                    <div className={`guarantees__users ${classNames[0]}`}>
+                        <div className={'users__title'}>
+                            <h1 className={'title'}>1300</h1>
+                            <h3 className={'small-title'}>users already employed in 2022</h3>
+                        </div>
+                        <div className={'users__item flex-property-set_between'}>
+                            <h1 className={'subtitle'}>88%</h1>
+                            <p className={'light-grey-txt'}>users find jobs after <br/> applying to the CRC</p>
+                        </div>
+                        <div className={'users__item flex-property-set_between'}>
+                            <h1 className={'subtitle'}>100%</h1>
+                            <p className={'light-grey-txt'}>join the company <br/> after an internship</p>
+                        </div>
+                    </div>
+                    <div className={'guarantees__text'}>
+                        <h1 className={'title'}>Why are we confident in your employment?</h1>
+                        <div className={'text__item'}>
+                            <h3 className={'small-title'}>Determine the needs of the market</h3>
+                            <p className={'light-grey-txt'}>We carefully analyze the professions in which we help with employment: we interview specialists, evaluate vacancies, the need for candidates and the availability of the profession for beginners</p>
+                        </div>
+                        <div className={'text__item'}>
+                            <h3 className={'small-title'}>We provide quality knowledge</h3>
+                            <p className={'light-grey-txt'}>We help you get the skills you need here and now. All speakers are practitioners, and their knowledge is in demand in the market</p>
+                        </div>
+                        <div className={'text__item'}>
+                            <h3 className={'small-title'}>Support at the start of a career</h3>
+                            <p className={'light-grey-txt'}>Our consultants control every step of the way to your career. They help to avoid mistakes and plan a professional path</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

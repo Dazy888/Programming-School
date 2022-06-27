@@ -660,6 +660,79 @@
             }
           }
         }
+
+        .employment__guarantees {
+          display: flex;
+          margin-top: 150px;
+
+          .title {
+            color: black;
+            font-size: 52px;
+            line-height: 60px;
+          }
+
+          .light-grey-txt {
+            color: black;
+            opacity: 1;
+          }
+
+          .guarantees__users {
+            width: 400px;
+            height: 400px;
+            padding: 0 0 20px;
+            border-radius: 15px;
+            background: #60B3FF;
+            box-sizing: border-box;
+            margin: 10px 100px 0 0;
+
+            .users__title {
+              padding: 50px 50px 0 50px;
+
+              .small-title {
+                margin: 20px 0 30px;
+              }
+            }
+
+            .users__item {
+              width: 350px;
+              padding: 16px 16px 16px 24px;
+              margin: 12px auto 0;
+              box-sizing: border-box;
+              border-radius: 10px;
+              border: 2px solid #e4e4e4;
+
+              .subtitle {
+                font-size: 32px;
+                line-height: 40px;
+                color: black;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          .guarantees__text {
+            width: 700px;
+
+            .title {
+              margin-bottom: 40px;
+            }
+
+            .text__item {
+              margin-bottom: 30px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              .small-title {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
       }
     }
   }

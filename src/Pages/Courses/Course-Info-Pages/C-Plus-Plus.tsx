@@ -14,7 +14,7 @@ export function CPlusPlus({header, img, time, for_who, job_name, skills, project
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames} />
-            <Employment className={classNames[2]}/>
+            <Employment classNames={classNames}/>
         </div>
     )
 }

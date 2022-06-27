@@ -30,8 +30,6 @@ type PropsType = {
 }
 
 export function Main({courses_info}: PropsType) {
-    console.log(courses_info.java_pro.classNames)
-
     return(
         <div className={'container'}>
             <h1 className={'title'}>Courses</h1>
