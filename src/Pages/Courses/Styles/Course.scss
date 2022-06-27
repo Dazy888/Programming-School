@@ -342,7 +342,7 @@
             button {
               i {
                 color: #60B3FF;
-                font-size: 25px;
+                font-size: 28px;
               }
             }
           }
@@ -414,6 +414,7 @@
       box-sizing: border-box;
       margin-top: 100px;
       border-radius: 10px;
+      overflow: hidden;
 
       .employment__wrapper {
         width: 1170px;
@@ -541,6 +542,121 @@
 
             .youla {
               animation-name: youla;
+            }
+          }
+        }
+
+        .employment__career-center {
+          margin-top: 100px;
+
+          h2.small-title {
+            font-size: 30px;
+            margin-bottom: 50px;
+          }
+
+          .career-center__slider {
+            margin-bottom: 50px;
+
+            .moveRight {
+              transform: translateX(-400px);
+            }
+
+            .slider__list {
+              width: 1650px;
+              display: flex;
+              list-style: none;
+              transition: 0.5s;
+
+              .list__item {
+                width: 350px;
+                height: 346px;
+                border-radius: 25px;
+                background: rgb(255, 223, 110);
+                margin-right: 20px;
+                padding: 30px;
+                box-sizing: border-box;
+                cursor: pointer;
+                position: relative;
+
+                &:last-child {
+                  margin-right: 0;
+                }
+
+                &:nth-child(2) {
+                  background: rgb(220, 244, 254) !important;
+                }
+
+                &:nth-child(3) {
+                  background: rgb(175, 223, 180) !important;
+                }
+
+                &:nth-child(4) {
+                  background: rgb(254, 188, 180) !important;
+                }
+
+                &:nth-child(5) {
+                  background: rgb(163, 163, 255) !important;
+                }
+
+                &:hover {
+                  .invisible-text {
+                    opacity: 1 !important;
+                  }
+
+                  .item__txt {
+                    opacity: 0;
+                  }
+                }
+
+                .item__circle {
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  background: black;
+                  color: white;
+                  font-size: 18px;
+                  margin-bottom: 50px;
+                }
+
+                .invisible-text {
+                  width: 270px;
+                  position: absolute;
+                  opacity: 0;
+                  font-size: 17px;
+                  transition: 0.5s;
+                  color: black;
+                  font-weight: 400;
+                  line-height: 160%;
+                }
+
+                .light-grey-txt {
+                  color: black;
+                  font-size: 18px;
+                  opacity: 1;
+                }
+                
+                .item__txt {
+                  position: relative;
+                  transition: 0.5s;
+                  
+                  .small-title {
+                    font-size: 25px;
+                    margin-bottom: 100px;
+                  }
+                }
+              }
+            }
+          }
+
+          .text__controls {
+            width: 123px;
+            margin: auto;
+
+            button {
+              i {
+                color: #60B3FF;
+                font-size: 28px;
+              }
             }
           }
         }
