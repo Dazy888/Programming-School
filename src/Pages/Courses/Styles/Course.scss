@@ -549,8 +549,8 @@
         .employment__career-center {
           margin-top: 100px;
 
-          h2.small-title {
-            font-size: 30px;
+          .title {
+            color: black;
             margin-bottom: 50px;
           }
 
@@ -558,13 +558,12 @@
             margin-bottom: 50px;
 
             .moveRight {
-              transform: translateX(-400px);
+              transform: translateX(-560px);
             }
 
             .slider__list {
-              width: 1650px;
+              width: fit-content;
               display: flex;
-              list-style: none;
               transition: 0.5s;
 
               .list__item {
@@ -647,18 +646,6 @@
               }
             }
           }
-
-          .text__controls {
-            width: 123px;
-            margin: auto;
-
-            button {
-              i {
-                color: #60B3FF;
-                font-size: 28px;
-              }
-            }
-          }
         }
 
         .employment__guarantees {
@@ -729,6 +716,58 @@
 
               .small-title {
                 margin-bottom: 10px;
+              }
+            }
+          }
+        }
+
+        .employment__reviews {
+          .title {
+            margin: 150px 0 50px;
+            color: black;
+          }
+
+          .reviews__slider {
+            margin-bottom: 50px;
+
+            .slider__list {
+              width: fit-content;
+              display: flex;
+              transition: 0.3s;
+
+              .list__item {
+                width: 470px;
+                height: 300px;
+                margin-right: 30px;
+                padding: 40px;
+                box-sizing: border-box;
+                border-radius: 20px;
+                background: #353535;
+
+                &:last-child {
+                  margin-right: 0;
+                }
+
+                .light-grey-txt {
+                  opacity: 1;
+                }
+
+                .item__title {
+                  width: fit-content;
+                  margin-bottom: 20px;
+
+                  img {
+                    display: block;
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                  }
+
+                  .light-grey-txt {
+                    opacity: 0.7;
+                  }
+                }
               }
             }
           }

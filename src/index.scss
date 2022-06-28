@@ -11,6 +11,10 @@ button {
   background: transparent;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -171,6 +175,22 @@ code {
       border-radius: 50px;
       border: none;
       cursor: pointer;
+    }
+  }
+}
+
+.text__controls {
+  width: 123px;
+  margin: auto;
+
+  .controls__count {
+    font-size: 20px;
+  }
+
+  button {
+    i {
+      color: #60B3FF;
+      font-size: 30px;
     }
   }
 }

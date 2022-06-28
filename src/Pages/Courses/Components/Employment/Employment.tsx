@@ -5,20 +5,40 @@ type PropsType = {
     classNames?: Array<string>
 }
 
+let marginLeft: any = 0
+
 export function Employment({classNames = ['']}: PropsType) {
-    const [id, changeId] = useState(0)
-    const employmentRef: any = React.createRef()
+    const [guaranteesId, changeGuaranteesId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
+    const careerCenterRef: any = React.createRef()
+    const reviewsRef: any = React.createRef()
 
     useEffect(() => {
-        const buttons = employmentRef.current.querySelectorAll('.controls__btn')
-        const slider = employmentRef.current.querySelector('.slider__list')
+        const careerCenter = careerCenterRef.current
+        const reviews = reviewsRef.current
 
-        buttons[0].onclick = () => slider.classList.remove('moveRight')
-        buttons[1].onclick = () => slider.classList.add('moveRight')
-    }, [])
+        const careerCenterButtons = careerCenter.querySelectorAll('.controls__btn')
+        const careerCenterSlider = careerCenter.querySelector('.slider__list')
+
+        careerCenterButtons[0].onclick = () => careerCenterSlider.classList.remove('moveRight')
+        careerCenterButtons[1].onclick = () => careerCenterSlider.classList.add('moveRight')
+
+        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
+        const reviewsSlider = reviews.querySelector('.slider__list')
+
+        reviewsButtons[0].onclick = () => {
+            (reviewsId === 2) ? marginLeft = marginLeft + 300 : marginLeft = marginLeft + 500
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+
+        reviewsButtons[1].onclick = () => {
+            (reviewsId === 2) ? marginLeft = marginLeft - 300 : marginLeft = marginLeft - 500
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+    }, [reviewsId])
 
     return(
-        <div className={'employment'} ref={employmentRef}>
+        <div className={'employment'}>
             <div className={'employment__wrapper'}>
                 <div className={'employment__header flex-property-set_between'}>
                     <div className={'header__text'}>
@@ -37,8 +57,8 @@ export function Employment({classNames = ['']}: PropsType) {
                         <img className={'photographs__very-small youla'} alt={'Img'} src={'https://248006.selcdn.ru/LandGen/blocks/work/v4/logo-youla-sm.png'}/>
                     </div>
                 </div>
-                <div className={'employment__career-center'}>
-                    <h2 className={'small-title'}>How the Career Center can help you:</h2>
+                <div className={'employment__career-center'} ref={careerCenterRef}>
+                    <h1 className={'title'}>How the Career Center can help you:</h1>
                     <div className={'career-center__slider'}>
                         <ul className={'slider__list'}>
                             <li className={'list__item'}>
@@ -93,7 +113,7 @@ export function Employment({classNames = ['']}: PropsType) {
                             </li>
                         </ul>
                     </div>
-                    <SliderControls className={classNames[2]} length={2} id={id} changeId={changeId}/>
+                    <SliderControls className={classNames[2]} length={2} id={guaranteesId} changeId={changeGuaranteesId}/>
                 </div>
                 <div className={'employment__guarantees'}>
                     <div className={`guarantees__users ${classNames[0]}`}>
@@ -125,6 +145,64 @@ export function Employment({classNames = ['']}: PropsType) {
                             <p className={'light-grey-txt'}>Our consultants control every step of the way to your career. They help to avoid mistakes and plan a professional path</p>
                         </div>
                     </div>
+                </div>
+                <div className={'employment__reviews'} ref={reviewsRef}>
+                    <h1 className={'title'}>Feedback from employers</h1>
+                    <div className={'reviews__slider'}>
+                        <ul className={'slider__list'}>
+                            <div className={'list__item'}>
+                                <div className={'item__title flex-property-set_between'}>
+                                    <img alt={'Avatar'} src={'https://248006.selcdn.ru/LandGen/c327a71b570e945f4b1c2ec8aca6c559bc81b0d6.png'}/>
+                                    <div className={'title__text'}>
+                                        <h3 className={'subtitle'}>Yulia Iliaeva</h3>
+                                        <p className={'light-grey-txt'}>Development director Team for Dream</p>
+                                    </div>
+                                </div>
+                                <p className={'light-grey-txt'}>Candidates are always distinguished by their high motivation, so we are happy to invite them for internships and job offers. For several times already, we have accepted participants in the course "Profession Event Manager" for Junior positions</p>
+                            </div>
+                            <div className={'list__item'}>
+                                <div className={'item__title flex-property-set_between'}>
+                                    <img alt={'Avatar'} src={'https://248006.selcdn.ru/LandGen/3e574a760e482658dd9e52c39903f369233e0297.png'}/>
+                                    <div className={'title__text'}>
+                                        <h3 className={'subtitle'}>Max Zubcov</h3>
+                                        <p className={'light-grey-txt'}>Marketing director at Checkroi</p>
+                                    </div>
+                                </div>
+                                <p className={'light-grey-txt'}>Skillbox select candidates with burning eyes and a desire to develop. For example, the head of our SEO department was once a newbie whom we met through the Career Center</p>
+                            </div>
+                            <div className={'list__item'}>
+                                <div className={'item__title flex-property-set_between'}>
+                                    <img alt={'Avatar'} src={'https://248006.selcdn.ru/LandGen/ae9a2170705a4b6510d8d02a43c811ce23d7191c.jpeg'}/>
+                                    <div className={'title__text'}>
+                                        <h3 className={'subtitle'}>Roman Gorbachev</h3>
+                                        <p className={'light-grey-txt'}>Founder of Logomashina Design Studio</p>
+                                    </div>
+                                </div>
+                                <p className={'light-grey-txt'}>When we were invited as speakers to Skillbox, we decided that this was a great chance to replenish the team with talented specialists. Now we have several designers working for us, and we are very pleased with them</p>
+                            </div>
+                            <div className={'list__item'}>
+                                <div className={'item__title flex-property-set_between'}>
+                                    <img alt={'Avatar'} src={'https://248006.selcdn.ru/LandGen/8c4789ef5438268b23a77155558dbc9dc6d8ab9a.jpg'}/>
+                                    <div className={'title__text'}>
+                                        <h3 className={'subtitle'}>Olga Novodvorskaya</h3>
+                                        <p className={'light-grey-txt'}> HR BP in Nauka</p>
+                                    </div>
+                                </div>
+                                <p className={'light-grey-txt'}>Cooperation with Skillbox is a guarantee that we will get future employees with certain knowledge. The beginners who came to us grew up and approached the Middle level after 8 months</p>
+                            </div>
+                            <div className={'list__item'}>
+                                <div className={'item__title flex-property-set_between'}>
+                                    <img alt={'Avatar'} src={'https://248006.selcdn.ru/LandGen/10b85ae059c5aba05bcfa23cc0bccba071bb6255.png'}/>
+                                    <div className={'title__text'}>
+                                        <h3 className={'subtitle'}>Bogdan Pilipenko</h3>
+                                        <p className={'light-grey-txt'}>Account manager at Appollo Digital</p>
+                                    </div>
+                                </div>
+                                <p className={'light-grey-txt'}>Skillbox helps you find enterprising beginners who are interested in simple but valuable tasks. After completing the courses, the guys leave with structured, fresh knowledge in the disciplines</p>
+                            </div>
+                        </ul>
+                    </div>
+                    <SliderControls className={classNames[3]} length={4} id={reviewsId} changeId={changeReviewsId}/>
                 </div>
             </div>
         </div>

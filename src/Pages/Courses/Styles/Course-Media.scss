@@ -88,8 +88,12 @@
       }
     }
 
+    .employment {
+      padding: 75px 0 !important;
+    }
+
     .employment__career-center {
-      .small-title:first-child {
+      .title {
         text-align: center;
       }
 
@@ -131,7 +135,32 @@
 
         .title {
           margin-bottom: 75px !important;
+          text-align: center;
         }
+      }
+    }
+
+    .employment__reviews {
+      .title {
+        text-align: center;
+      }
+
+      .slider__list {
+        flex-direction: column;
+        margin: auto;
+
+        .list__item {
+          margin-right: 0 !important;
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .text__controls {
+        display: none;
       }
     }
   }
@@ -359,6 +388,16 @@
   }
 }
 
+@media screen and(max-width: 610px) {
+  #courses-wrapper {
+    .employment__reviews {
+      .title {
+        font-size: 40px !important;
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 590px) {
   #courses-wrapper {
     .header__title {
@@ -431,66 +470,86 @@
       }
     }
 
-    .employment {
-      .employment__header {
-        .photographs__main {
-          width: 200px !important;
-          height: 200px !important;
-        }
+    .employment__header {
+      .photographs__main {
+        width: 200px !important;
+        height: 200px !important;
+      }
 
-        .photographs__medium {
-          width: 95px !important;
-          height: 95px !important;
-        }
+      .photographs__medium {
+        width: 95px !important;
+        height: 95px !important;
+      }
 
-        .photographs__small {
-          width: 70px !important;
-          height: 70px !important;
-        }
+      .photographs__small {
+        width: 70px !important;
+        height: 70px !important;
+      }
 
-        .photographs__very-small {
-          width: 50px !important;
-          height: 50px !important;
-        }
+      .photographs__very-small {
+        width: 50px !important;
+        height: 50px !important;
+      }
 
-        @keyframes top-left {
-          from {transform: translate(-90px, -160px)}
-          to {transform: translate(-90px, -130px)}
-        }
+      @keyframes top-left {
+        from {transform: translate(-90px, -160px)}
+        to {transform: translate(-90px, -130px)}
+      }
 
-        @keyframes bottom-right {
-          from {transform: translate(90px, 170px)}
-          to {transform: translate(90px, 145px)}
-        }
+      @keyframes bottom-right {
+        from {transform: translate(90px, 170px)}
+        to {transform: translate(90px, 145px)}
+      }
 
-        @keyframes top-right {
-          from {transform: translate(160px, -40px)}
-          to {transform: translate(160px, -20px)}
-        }
+      @keyframes top-right {
+        from {transform: translate(160px, -40px)}
+        to {transform: translate(160px, -20px)}
+      }
 
-        @keyframes bottom-left {
-          from {transform: translate(-110px, 70px)}
-          to {transform: translate(-110px, 110px)}
-        }
+      @keyframes bottom-left {
+        from {transform: translate(-110px, 70px)}
+        to {transform: translate(-110px, 110px)}
+      }
 
-        @keyframes aic {
-          from {transform: translate(95px, -125px)}
-          to {transform: translate(95px, -100px)}
-        }
+      @keyframes aic {
+        from {transform: translate(95px, -125px)}
+        to {transform: translate(95px, -100px)}
+      }
 
-        @keyframes mailru {
-          from {transform: translate(0, 175px)}
-          to {transform: translate(0, 205px)}
-        }
+      @keyframes mailru {
+        from {transform: translate(0, 175px)}
+        to {transform: translate(0, 205px)}
+      }
 
-        @keyframes vk {
-          from {transform: translate(165px, 90px)}
-          to {transform: translate(165px, 75px)}
-        }
+      @keyframes vk {
+        from {transform: translate(165px, 90px)}
+        to {transform: translate(165px, 75px)}
+      }
 
-        @keyframes youla {
-          from {transform: translate(-170px, 0)}
-          to {transform: translate(-170px, -30px)}
+      @keyframes youla {
+        from {transform: translate(-170px, 0)}
+        to {transform: translate(-170px, -30px)}
+      }
+    }
+
+    .employment__reviews {
+      .title {
+        font-size: 33px !important;
+      }
+
+      .slider__list {
+        .list__item {
+          width: 400px !important;
+          height: 250px !important;
+          padding: 35px !important;
+
+          .subtitle {
+            font-size: 20px !important;
+          }
+
+          .light-grey-txt {
+            font-size: 14px !important;
+          }
         }
       }
     }
@@ -637,6 +696,29 @@
         }
       }
     }
+
+    .employment__reviews {
+      .title {
+        font-size: 27px !important;
+        margin-bottom: 30px !important;
+      }
+
+      .slider__list {
+        .list__item {
+          width: 350px !important;
+          height: 200px !important;
+          padding: 30px !important;
+
+          .subtitle {
+            font-size: 18px !important;
+          }
+
+          .light-grey-txt {
+            font-size: 11.7px !important;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -676,8 +758,6 @@
     }
 
     .employment {
-      padding: 75px 0 !important;
-
       .guarantees__users {
         width: 330px !important;
         height: 360px !important;
@@ -817,6 +897,28 @@
           @keyframes youla {
             from {transform: translate(-130px, -10px)}
             to {transform: translate(-130px, 0)}
+          }
+        }
+      }
+    }
+
+    .employment__reviews {
+      .title {
+        margin-bottom: 20px !important;
+      }
+
+      .slider__list {
+        .list__item {
+          width: 300px !important;
+          height: 180px !important;
+          padding: 20px !important;
+
+          .subtitle {
+            font-size: 16px !important;
+          }
+
+          .light-grey-txt {
+            font-size: 10px !important;
           }
         }
       }
