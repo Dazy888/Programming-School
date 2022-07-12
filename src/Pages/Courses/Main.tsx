@@ -52,6 +52,7 @@ export function Main({courses_info}: PropsType) {
                     <CourseItem classNames={courses_info.frontend_pro.classNames} path={courses_info.frontend_pro.path} title={courses_info.frontend_pro.job_name} time={courses_info.frontend_pro.time} imgUrl={courses_info.frontend_pro.main_img}/>
                     <CourseItem classNames={courses_info.js_fullstack.classNames} path={courses_info.js_fullstack.path} title={courses_info.js_fullstack.job_name} time={courses_info.js_fullstack.time} imgUrl={courses_info.js_fullstack.main_img}/>
                     <CourseItem classNames={courses_info.php_pro.classNames} path={courses_info.php_pro.path} title={courses_info.php_pro.job_name} time={courses_info.php_pro.time} imgUrl={courses_info.php_pro.main_img}/>
+                    <CourseItem classNames={courses_info.flutter.classNames} path={courses_info.flutter.path} title={courses_info.flutter.job_name} time={courses_info.flutter.time} imgUrl={courses_info.flutter.main_img}/>
                 </div>
             </div>
         </div>

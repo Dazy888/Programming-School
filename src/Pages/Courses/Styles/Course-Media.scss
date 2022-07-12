@@ -27,6 +27,33 @@
   }
 }
 
+@media screen and(max-width: 1385px) {
+  #courses-wrapper {
+    .course-container {
+      .content {
+        width: 1000px !important;
+        padding: 55px 90px 60px !important;
+
+        .content__container {
+          .content__courses {
+            .courses__item {
+              &:hover {
+                .title__btn {
+                  background: white !important;
+
+                  i {
+                    color: black !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 1365px) {
   #courses-wrapper {
     .header__title {
@@ -166,6 +193,21 @@
   }
 }
 
+@media screen and(max-width: 1200px) {
+  #courses-wrapper {
+    .course-container {
+      .content {
+        width: 900px !important;
+        padding: 45px 80px 50px !important;
+
+        .content__container {
+          width: 770px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 1180px) {
   #courses-wrapper {
     .course-container {
@@ -263,6 +305,115 @@
   }
 }
 
+@media screen and(max-width: 1070px) {
+  #courses-wrapper {
+    .course-container {
+      .content {
+        width: 800px !important;
+        padding: 35px 70px 40px !important;
+
+        .content__container {
+          width: 670px;
+
+          .text {
+            font-size: 16px !important;
+            line-height: 25px !important;
+          }
+
+          .small-title {
+            max-width: 550px !important;
+            font-size: 18px !important;
+          }
+
+          .content__title {
+            margin-bottom: 80px;
+
+            .title {
+              font-size: 40px !important;
+            }
+
+            .title__text {
+              width: 400px;
+
+
+              .text__descriptions {
+                width: 265px;
+
+                .text__description {
+                  .description__count {
+                    width: 55px !important;
+                    height: 35px !important;
+                    margin-right: 10px;
+
+                    .number {
+                      font-size: 14px;
+                    }
+                  }
+
+                  .light-grey-txt {
+                    font-size: 14px;
+                    line-height: 18px;
+                  }
+                }
+              }
+            }
+          }
+
+          .content__courses {
+            .courses__title {
+              width: 670px;
+              margin-bottom: 40px;
+
+              .subtitle {
+                font-size: 30px;
+                margin-bottom: 20px;
+              }
+            }
+
+            .courses__item {
+              height: 70px;
+
+              .courses__item_big {
+                height: 90px;
+              }
+
+              p {
+                padding-bottom: 20px;
+              }
+
+              .item__title {
+                padding: 20px 0;
+
+                .title__btn {
+                  width: 25px;
+                  height: 25px;
+
+                  i {
+                    font-size: 19px;
+                  }
+                }
+              }
+
+              .item__list {
+                padding: 0 0 20px 55px;
+
+                li {
+                  margin-bottom: 20px;
+                  padding-left: 8px;
+                }
+              }
+            }
+          }
+
+          .content__note {
+            width: 550px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 1060px) {
   #courses-wrapper {
     .header__title {
@@ -285,11 +436,23 @@
         margin: auto !important;
       }
     }
+
     .header__inf {
       width: fit-content !important;
       height: 500px !important;
       flex-direction: column !important;
       margin: 100px auto !important;
+    }
+  }
+}
+
+@media screen and(max-width: 960px) {
+  #courses-wrapper {
+    .course-container {
+      .content {
+        width: 700px !important;
+        padding: 35px 60px 40px !important;
+      }
     }
   }
 }
@@ -316,6 +479,68 @@
   }
 }
 
+@media screen and(max-width: 835px) {
+  #courses-wrapper {
+    .course-container {
+      .content {
+        width: 600px !important;
+        padding: 35px 50px 40px !important;
+
+        .content__container {
+          width: 570px;
+
+          .small-title {
+            max-width: 420px !important;
+          }
+
+          .text {
+            font-size: 15px !important;
+            line-height: 20px !important;
+          }
+
+          .subtitle {
+            font-size: 27px !important;
+            margin-bottom: 0 !important;
+          }
+
+          .content__title {
+            .title {
+              font-size: 35px !important;
+            }
+
+            .title__text {
+              width: 350px;
+            }
+          }
+
+          .content__courses {
+            .courses__title {
+              width: 570px;
+              margin-bottom: 40px;
+
+              .text {
+                margin-top: 20px;
+              }
+            }
+
+            .courses__item {
+              height: 60px;
+            }
+
+            .courses__item_big {
+              height: 90px;
+            }
+          }
+
+          .content__note {
+            width: 520px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 710px) {
   #courses-wrapper {
     .header__title {
@@ -339,6 +564,81 @@
 
       .guarantees {
         width: fit-content !important;
+      }
+    }
+
+    .course-container {
+      .content {
+        width: 500px !important;
+        padding: 35px 20px 40px !important;
+
+        .content__container {
+          width: 400px;
+
+          .small-title {
+            max-width: 350px !important;
+            font-size: 16px !important;
+          }
+
+          .text {
+            font-size: 14px !important;
+          }
+
+          .subtitle {
+            font-size: 25px !important;
+          }
+
+          .content__title {
+            flex-direction: column;
+
+            .title {
+              font-size: 30px !important;
+              margin-bottom: 30px;
+            }
+
+            .title__text {
+              width: 280px !important;
+
+              .text__descriptions {
+                width: 270px;
+                margin-top: 30px;
+              }
+            }
+          }
+
+          .content__courses {
+            .courses__title {
+              width: 400px;
+              margin-bottom: 40px;
+
+              .text {
+                margin-top: 20px;
+              }
+            }
+
+            .courses__item_big {
+              height: 80px;
+            }
+
+            .objects-classes {
+              height: 80px;
+            }
+          }
+
+          .content__note {
+            width: 390px;
+
+            .note__circle {
+              width: 38px;
+              height: 38px;
+              font-size: 16px;
+            }
+
+            .note__text {
+              width: 300px;
+            }
+          }
+        }
       }
     }
   }
@@ -424,6 +724,65 @@
   }
 }
 
+@media screen and(max-width: 550px) {
+  #courses-wrapper {
+    .course-container {
+      .content {
+        width: 400px !important;
+
+        .content__container {
+          width: 300px;
+
+          .text {
+            font-size: 13px !important;
+          }
+
+          .small-title {
+            max-width: 270px !important;
+            font-size: 15px !important;
+          }
+
+          .content__courses {
+            .courses__title {
+              width: 300px;
+              margin-bottom: 20px;
+            }
+
+            .big-item {
+              height: 80px;
+            }
+
+            .courses__item {
+              .title__btn {
+                width: 22px !important;
+                height: 22px !important;
+
+                i {
+                  font-size: 16px !important;
+                }
+              }
+            }
+          }
+
+          .content__note {
+            width: 300px;
+
+            .note__circle {
+              width: 35px;
+              height: 35px;
+              font-size: 15px;
+            }
+
+            .note__text {
+              width: 230px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 510px) {
   #courses-wrapper {
     .header-text {
@@ -492,43 +851,75 @@
       }
 
       @keyframes top-left {
-        from {transform: translate(-90px, -160px)}
-        to {transform: translate(-90px, -130px)}
+        from {
+          transform: translate(-90px, -160px)
+        }
+        to {
+          transform: translate(-90px, -130px)
+        }
       }
 
       @keyframes bottom-right {
-        from {transform: translate(90px, 170px)}
-        to {transform: translate(90px, 145px)}
+        from {
+          transform: translate(90px, 170px)
+        }
+        to {
+          transform: translate(90px, 145px)
+        }
       }
 
       @keyframes top-right {
-        from {transform: translate(160px, -40px)}
-        to {transform: translate(160px, -20px)}
+        from {
+          transform: translate(160px, -40px)
+        }
+        to {
+          transform: translate(160px, -20px)
+        }
       }
 
       @keyframes bottom-left {
-        from {transform: translate(-110px, 70px)}
-        to {transform: translate(-110px, 110px)}
+        from {
+          transform: translate(-110px, 70px)
+        }
+        to {
+          transform: translate(-110px, 110px)
+        }
       }
 
       @keyframes aic {
-        from {transform: translate(95px, -125px)}
-        to {transform: translate(95px, -100px)}
+        from {
+          transform: translate(95px, -125px)
+        }
+        to {
+          transform: translate(95px, -100px)
+        }
       }
 
       @keyframes mailru {
-        from {transform: translate(0, 175px)}
-        to {transform: translate(0, 205px)}
+        from {
+          transform: translate(0, 175px)
+        }
+        to {
+          transform: translate(0, 205px)
+        }
       }
 
       @keyframes vk {
-        from {transform: translate(165px, 90px)}
-        to {transform: translate(165px, 75px)}
+        from {
+          transform: translate(165px, 90px)
+        }
+        to {
+          transform: translate(165px, 75px)
+        }
       }
 
       @keyframes youla {
-        from {transform: translate(-170px, 0)}
-        to {transform: translate(-170px, -30px)}
+        from {
+          transform: translate(-170px, 0)
+        }
+        to {
+          transform: translate(-170px, -30px)
+        }
       }
     }
 
@@ -616,6 +1007,78 @@
   }
 }
 
+@media screen and(max-width: 450px) {
+  #courses-wrapper {
+    .course-container {
+      .content {
+        width: 300px !important;
+
+        .content__container {
+          width: 250px;
+
+          .text {
+            font-size: 12px !important;
+            line-height: 18px !important;
+          }
+
+          .small-title {
+            max-width: 200px !important;
+            font-size: 13px !important;
+          }
+
+          .subtitle {
+            font-size: 23px !important;
+            line-height: 35px;
+          }
+
+          .content__courses {
+            .courses__title {
+              width: 250px;
+            }
+
+            .courses__item_big {
+              height: 90px;
+            }
+
+            .reset-height_big {
+              height: 80px;
+            }
+
+            .reset-height {
+              height: 60px !important;
+            }
+
+            .courses__item {
+              .title__btn {
+                width: 20px !important;
+                height: 20px !important;
+
+                i {
+                  font-size: 14px !important;
+                }
+              }
+            }
+          }
+
+          .content__note {
+            width: 250px;
+
+            .note__circle {
+              width: 30px;
+              height: 30px;
+              font-size: 13px;
+            }
+
+            .note__text {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 440px) {
   #courses-wrapper {
     .course-container {
@@ -655,43 +1118,75 @@
           }
 
           @keyframes top-left {
-            from {transform: translate(-70px, -140px)}
-            to {transform: translate(-70px, -110px)}
+            from {
+              transform: translate(-70px, -140px)
+            }
+            to {
+              transform: translate(-70px, -110px)
+            }
           }
 
           @keyframes bottom-right {
-            from {transform: translate(70px, 150px)}
-            to {transform: translate(70px, 125px)}
+            from {
+              transform: translate(70px, 150px)
+            }
+            to {
+              transform: translate(70px, 125px)
+            }
           }
 
           @keyframes top-right {
-            from {transform: translate(140px, -20px)}
-            to {transform: translate(140px, 0)}
+            from {
+              transform: translate(140px, -20px)
+            }
+            to {
+              transform: translate(140px, 0)
+            }
           }
 
           @keyframes bottom-left {
-            from {transform: translate(-90px, 50px)}
-            to {transform: translate(-90px, 90px)}
+            from {
+              transform: translate(-90px, 50px)
+            }
+            to {
+              transform: translate(-90px, 90px)
+            }
           }
 
           @keyframes aic {
-            from {transform: translate(75px, -105px)}
-            to {transform: translate(75px, -80px)}
+            from {
+              transform: translate(75px, -105px)
+            }
+            to {
+              transform: translate(75px, -80px)
+            }
           }
 
           @keyframes mailru {
-            from {transform: translate(-20px, 155px)}
-            to {transform: translate(-20px, 185px)}
+            from {
+              transform: translate(-20px, 155px)
+            }
+            to {
+              transform: translate(-20px, 185px)
+            }
           }
 
           @keyframes vk {
-            from {transform: translate(145px, 70px)}
-            to {transform: translate(145px, 55px)}
+            from {
+              transform: translate(145px, 70px)
+            }
+            to {
+              transform: translate(145px, 55px)
+            }
           }
 
           @keyframes youla {
-            from {transform: translate(-150px, -20px)}
-            to {transform: translate(-150px, -10px)}
+            from {
+              transform: translate(-150px, -20px)
+            }
+            to {
+              transform: translate(-150px, -10px)
+            }
           }
         }
       }
@@ -860,43 +1355,75 @@
           }
 
           @keyframes top-left {
-            from {transform: translate(-60px, -130px)}
-            to {transform: translate(-60px, -100px)}
+            from {
+              transform: translate(-60px, -130px)
+            }
+            to {
+              transform: translate(-60px, -100px)
+            }
           }
 
           @keyframes bottom-right {
-            from {transform: translate(60px, 140px)}
-            to {transform: translate(60px, 115px)}
+            from {
+              transform: translate(60px, 140px)
+            }
+            to {
+              transform: translate(60px, 115px)
+            }
           }
 
           @keyframes top-right {
-            from {transform: translate(120px, -10px)}
-            to {transform: translate(120px, -10px)}
+            from {
+              transform: translate(120px, -10px)
+            }
+            to {
+              transform: translate(120px, -10px)
+            }
           }
 
           @keyframes bottom-left {
-            from {transform: translate(-80px, 40px)}
-            to {transform: translate(-80px, 80px)}
+            from {
+              transform: translate(-80px, 40px)
+            }
+            to {
+              transform: translate(-80px, 80px)
+            }
           }
 
           @keyframes aic {
-            from {transform: translate(65px, -95px)}
-            to {transform: translate(65px, -70px)}
+            from {
+              transform: translate(65px, -95px)
+            }
+            to {
+              transform: translate(65px, -70px)
+            }
           }
 
           @keyframes mailru {
-            from {transform: translate(-10px, 145px)}
-            to {transform: translate(-10px, 175px)}
+            from {
+              transform: translate(-10px, 145px)
+            }
+            to {
+              transform: translate(-10px, 175px)
+            }
           }
 
           @keyframes vk {
-            from {transform: translate(125px, 60px)}
-            to {transform: translate(125px, 45px)}
+            from {
+              transform: translate(125px, 60px)
+            }
+            to {
+              transform: translate(125px, 45px)
+            }
           }
 
           @keyframes youla {
-            from {transform: translate(-130px, -10px)}
-            to {transform: translate(-130px, 0)}
+            from {
+              transform: translate(-130px, -10px)
+            }
+            to {
+              transform: translate(-130px, 0)
+            }
           }
         }
       }

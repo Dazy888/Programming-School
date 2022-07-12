@@ -1,62 +1,20 @@
-export type HeaderType = {
-    titleTxt: string
-    textAboutJob?: string
-    companies: string
-    salary: string
-    projects: string
-}
-
-export type ForWhoType = {
-    photographs: Array<string>,
-    texts: Array<string>,
-    titles: Array<string>
-}
-
-export type SkillsType = {
-    titles: Array<string>
-    texts: Array<string>
-}
-
-export type ProjectsType = {
-    photographs: Array<string>
-    titles: Array<string>
-    texts: Array<string>
-    className?: string
-}
-
-export type ContentType = {
-    title: {
-        text: string
-        numbers: Array<string>
-        descriptions: Array<string>
-    }
-    courses: {
-        titles: Array<string>
-    }
-}
-
-export type CourseType = {
-    job_name: string,
-    main_img: string,
-    time: string,
-    classNames?: Array<string>,
-    path: string,
-    course: {
-        header: HeaderType
-        for_who: ForWhoType
-        skills: SkillsType
-        projects: ProjectsType
-        content: ContentType
-    }
-}
-
-const initialState = {
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var initialState = {
     python: {
         job_name: 'Python-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_4589beaf332198133164e04e0fb855c2c1368858.webp',
         time: '1 year',
         path: 'python',
-
         course: {
             header: {
                 titleTxt: 'Python is used to write web applications and neural networks, conduct scientific calculations and automate processes. The language is easy to learn, even if you have never programmed. On the course, you will create a Telegram bot, a full-fledged store and a portfolio task book, and the Career Center will help you find a job as a Python developer',
@@ -104,7 +62,7 @@ const initialState = {
                     'Develop a Telegram bot on the instructions of the travel agency Too Easy Travel. The bot will take the approximate cost of living and the location of the user, and return a list of the most suitable hotels',
                     'Together with a team leader and a team of 3-5 people, you will develop a server part for a full-fledged marketplace. You will work according to the Scrum or Kanban system, regularly discuss current progress with the team leader and receive new tasks. All processes are as close as possible to real conditions - this is how commercial software is created in employing companies.As a result, you will create your own analogue of Yandex.Market',
                     'Create a service like CodeWars or Leetcode where users can solve programming problems. Develop a built-in editor and add a runtime so that the visitor runs his code and sees the result of the program directly in the browser. Your task will be to create a fast and secure service that will not allow a visitor to inject a malicious script and break the application'
-                ],
+                ]
             },
             content: {
                 title: {
@@ -113,25 +71,24 @@ const initialState = {
                     descriptions: ['practical work', 'final project']
                 },
                 courses: {
-                    titles: ['Python Basic ≈ 4–6 months', 'Django ≈ 2–4 months', 'Carier start', 'Python Advanced ≈ 3–6 months'],
+                    titles: ['Python Basic ≈ 4–6 months', 'Django ≈ 2–4 months', 'Carier start', 'Python Advanced ≈ 3–6 months']
                 }
             }
         }
-    } as CourseType,
+    },
     flutter: {
         job_name: 'Flutter-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/phone_24ac61b9f3b96df7e1c5263ebfe4573425addfd0.png',
         time: '14 months',
         classNames: ['grey-back', 'grey-border', 'grey-color', 'grey-triangle', 'grey-content-course'],
         path: 'flutter',
-
         course: {
             header: {
                 titleTxt: 'You will master the Flutter framework and native development in Swift or Kotlin. You will be able to develop complex applications, provide communication between cross-platform and platform parts. Learn to solve problems that only the coolest specialists can do',
                 textAboutJob: "Flutter developer creates cross-platform mobile apps for iOS and Android. He programs in Dart, and the framework compiles the code into native libraries. Applications on Flutter are not inferior in performance to their counterparts on Swift and Kotlin, with the help of widgets you can create powerful animations and customize the interface.Companies are hiring Flutter developers to launch a product faster, cheaper and on both OSes at once",
                 companies: '3 230',
                 salary: '1400',
-                projects: '6',
+                projects: '6'
             },
             for_who: {
                 photographs: [
@@ -163,24 +120,23 @@ const initialState = {
                     descriptions: ['modules', 'practical task']
                 },
                 courses: {
-                    titles: ['Flutter', 'Android', 'IOS', 'Mobile app design from scratch to PRO',],
+                    titles: ['Flutter', 'Android', 'IOS', 'Mobile app design from scratch to PRO',]
                 }
             }
         }
-    } as CourseType,
+    },
     java_pro: {
         job_name: 'Java-developer PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_57c9d80b2b75745579f68b99bdd0e2c0516a955f.webp',
         time: '2 years',
         classNames: ['light-purple-back', 'light-purple-border', 'light-purple-color', 'light-purple-triangle', 'light-purple-content-course'],
         path: 'java-pro',
-
         course: {
             header: {
                 titleTxt: 'You will master a popular programming language from scratch, learn how to create high-quality applications for different platforms, and become a valuable middle-level Java specialist',
                 companies: '3 000',
                 salary: '1900',
-                projects: '4',
+                projects: '4'
             },
             for_who: {
                 photographs: [
@@ -262,25 +218,24 @@ const initialState = {
                         'Algorithms and data structures for developers',
                         'Search engine',
                         'Social network',
-                    ],
+                    ]
                 }
             }
         }
-    } as CourseType,
+    },
     web: {
         job_name: 'Web-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_1483b955a743f9098806cbe6c6d78d306a210b65.webp',
         time: '2 years',
         classNames: ['purple-back', 'purple-border', 'purple-color', 'purple-triangle', 'purple-content-course'],
         path: 'web',
-
         course: {
             header: {
                 titleTxt: "You will learn how to create full-fledged websites and web applications from scratch. Master HTML, CSS, JavaScript and PHP, get familiar with frameworks and become a sought-after web developer. Even if you haven't programmed before' as string",
                 textAboutJob: "A web developer creates websites, services and applications that we use every day. He develops online stores, online banks, search engines, maps and email clients. A web developer designs the appearance of the site - the frontend and programs the service part - the backend.Demand for web developers remains high - business profit directly depends on how convenient it is for customers to use the company's website",
                 companies: '3 160',
                 salary: '800',
-                projects: '6',
+                projects: '6'
             },
             for_who: {
                 photographs: [
@@ -335,7 +290,7 @@ const initialState = {
                     'You will develop a front-end for a product aggregator using Vue or Angular',
                     'Write a task tracker with a timer in the React framework',
                     'Develop a note service with the ability to autosave, delete, upload to PDF, search by notes and infinite scroll. Deploy the result to the server'
-                ],
+                ]
             },
             content: {
                 title: {
@@ -352,21 +307,20 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     c_plus_plus: {
         job_name: 'C++ developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_7d5b8e852952b4fc68ca058c53a3b9570fd4f3d7.webp',
         time: '1 year',
         classNames: ['light-blue-back', 'light-blue-border', 'light-blue-color', 'light-blue-triangle', 'light-blue-content-course'],
         path: 'c-plus-plus',
-
         course: {
             header: {
                 titleTxt: "C++ programmers create complex programs and services. They develop high-load network applications, games, graphics engines, components for operating systems and hardware. Windows, Linux and macOS, Android, Chrome, Counter-Strike, StarCraft and Diablo are written in this language.You will master the legendary programming language from scratch: write a search engine, your own browser, and gain teamwork skills",
                 textAboutJob: "C++ developers work in large IT companies, game development, web development, create corporate and banking applications, design operating systems and software for robots",
                 companies: '4 018',
                 salary: '3500',
-                projects: '2',
+                projects: '2'
             },
             for_who: {
                 photographs: [
@@ -409,7 +363,7 @@ const initialState = {
                 texts: [
                     "You will develop a search engine for the company's corporate portal - an analogue of the Yandex or Google search string. Learn to get data from web pages and build search indexes. Write a relevancy formula to return search results",
                     'Work with other course participants to create an app that your friends and family can use. Write a full-fledged browser in C ++: with its help, you can search for information, browse the web and surf social networks - like in Google Chrome or Yandex Browser'
-                ],
+                ]
             },
             content: {
                 title: {
@@ -427,20 +381,19 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     python_fullstack: {
         job_name: 'Python Fullstack-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_43712003895f94c163a288e6e9e0e00bbf671110.webp',
         time: '1 year',
         classNames: ['pink-back', 'pink-border', 'pink-color', 'pink-triangle', 'pink-content-course'],
         path: 'python-fullstack',
-
         course: {
             header: {
                 titleTxt: "You will be able to actively participate in all stages of the development of sites and web interfaces - from working with design layouts to programming and configuring servers. Get comprehensive knowledge in web development and start earning more as string",
                 companies: '4 231',
                 salary: '1400',
-                projects: '4',
+                projects: '4'
             },
             for_who: {
                 photographs: [
@@ -483,7 +436,7 @@ const initialState = {
                     'You create a landing page based on the brief to consolidate the knowledge gained in the course',
                     'You will develop a user interface similar to Instagram',
                     'You will write a behavior algorithm for space drones that collect fuel from asteroids'
-                ],
+                ]
             },
             content: {
                 title: {
@@ -496,21 +449,20 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     android: {
         job_name: 'Android-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_763111395fcf224a8e694cdfbf3bb3d198914536.webp',
         time: '22 months',
         classNames: ['light-orange-back', 'light-orange-border', 'light-orange-color', 'light-orange-triangle', 'light-orange-content-course'],
         path: 'android',
-
         course: {
             header: {
                 titleTxt: "According to Google, 3 billion devices run on Android. TVs, smartphones and smartwatches are packed with useful apps that we use to watch TV shows, pay for purchases, communicate and order food. Now you can create such services.You'll add up to five apps to your portfolio, gain teamwork experience, and become an Android developer. And the Career Center will help you find a job already during the course",
                 textAboutJob: "Junior Android developers earn an average of 400 usd, middles - 2000 usd, and seniors and leads can count on salaries from 3000 usd",
                 companies: '3 867',
                 salary: '1500',
-                projects: '2',
+                projects: '2'
             },
             for_who: {
                 photographs: [
@@ -564,7 +516,7 @@ const initialState = {
                     'Develop an application for a photo sharing service where registered users can view photos, like them and download them',
                     'Create an app for runners and cyclists that allows you to track your activity and weight and get workout reminders',
                     'Develop an application that allows users to post links, find interesting content and discuss it.'
-                ],
+                ]
             },
             content: {
                 title: {
@@ -577,21 +529,20 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     c_sharp: {
         job_name: 'C# developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_9d6b6453a2e5702f3848771f0bb79eda7566a530.webp',
         time: '1 year',
         classNames: ['blue-back', 'blue-border', 'blue-color', 'blue-triangle', 'blue-content-course'],
         path: 'c-sharp',
-
         course: {
             header: {
                 titleTxt: "Do you want to create a website or a game? Or write a mobile application? Or maybe you dream of programming multi-threaded services? Then you should definitely learn C#. The language has absorbed the best of Java and C++ and is used in all areas: from web development to game development.Learn C# from scratch to Pro level, take part in the team development of the messenger and become a cool programmer in the in-demand language",
                 textAboutJob: "C# developers create backends for ASP.NET websites, Unity video games, Xamarin mobile apps, high-load desktop programs such as CRM systems, and design smart chatbots. Microsoft maintains and develops the language to this day.A beginner can master C# in a few months. After studying, you will be able to find yourself in web development, you will write corporate software for banks and large businesses. Or master Unity and create indie games in the studio",
                 companies: '5 206',
                 salary: '900',
-                projects: '2',
+                projects: '2'
             },
             for_who: {
                 photographs: [
@@ -626,7 +577,7 @@ const initialState = {
                 texts: [
                     'You will create a customer management system that brings disparate business tools together',
                     'You make up several pages for an online store according to the terms of reference'
-                ],
+                ]
             },
             content: {
                 title: {
@@ -639,21 +590,20 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     ios: {
         job_name: 'IOS-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_b0d52a8c5100ff4bb126ca5fc03cd1da32805b9b.webp',
         time: '1 year',
         classNames: ['blue-back', 'blue-border', 'blue-color', 'blue-triangle', 'blue-content-course'],
         path: 'ios',
-
         course: {
             header: {
                 titleTxt: "An IOS developer creates applications for Apple devices — online banks, navigators, fitness trackers, and other useful services. He programs logic in Swift and designs interfaces, tests code, and uploads projects to the App Store.On the course, you will master Swift from scratch, write a news application, take part in the team development of an analogue of Yandex:GO and get help in finding a job",
                 textAboutJob: "Business lacks great programmers, so companies offer high salaries and remote work.Junior iOS developers earn an average of 400 usd, middles - 1500 usd, and seniors and leads can count on salaries from 2300 usd",
                 companies: '2 768',
                 salary: '2000',
-                projects: '3',
+                projects: '3'
             },
             for_who: {
                 photographs: [
@@ -698,7 +648,7 @@ const initialState = {
                 texts: [
                     'As part of a team led by an experienced team leader, you will create an analogue of Yandex.Go with a food delivery function. You will be given TOR, project design and roles in the team. All processes of this project are an experience as close as possible to real conditions. This is how real applications are built',
                     'You will develop an application with news about the space industry. The project will consist of several screens: news, blog, favorites. Materials will be uploaded through a public API, and favorite notes can be saved on the device and read without an Internet connection'
-                ],
+                ]
             },
             content: {
                 title: {
@@ -711,20 +661,19 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     php_fullstack: {
         job_name: 'PHP Fullstack-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_62f01151670d0e3f00a7099b2501ac2e043a2314.webp',
         time: '1 year',
         classNames: ['light-dark-blue-back', 'light-dark-blue-border', 'light-dark-blue-color', 'light-dark-blue-triangle', 'light-dark-blue-content-course'],
         path: 'php-fullstack',
-
         course: {
             header: {
                 titleTxt: "You will learn how to design web pages from scratch, as well as how to program and create turnkey web applications in PHP. You can start a career as a fullstack specialist or reach a new level in web development",
                 companies: '3 235',
                 salary: '1400',
-                projects: '4',
+                projects: '4'
             },
             for_who: {
                 photographs: [
@@ -763,7 +712,7 @@ const initialState = {
                 texts: [
                     'You will create an adaptive one-page website on the subject given by the teacher',
                     'You are designing web pages for an online furniture store'
-                ],
+                ]
             },
             content: {
                 title: {
@@ -776,21 +725,20 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     mobile: {
         job_name: 'Mobile-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_b21b1ae4f5baf79bc47f29ca1ab1ef7ad0d3b615.webp',
         time: '2 years',
         classNames: ['light-pink-back', 'light-pink-border', 'light-pink-color', 'light-pink-triangle', 'light-pink-content-course'],
         path: 'mobile',
-
         course: {
             header: {
                 titleTxt: "You will master a profession in demand and learn how to create applications on Android or iOS, gain skills in developing complex UX / UI solutions and be able to expand the functionality of the product. Our managers will help you choose your specialization",
                 textAboutJob: "A mobile developer creates applications that we use every day on smartphones, smartwatches and tablets. For example, he writes services for ordering a taxi and food delivery, online banking, applications for booking hotels, selecting airline tickets and listening to music. Such a professional understands the peculiarities of mobile platforms, works in conjunction with UX and UI designers, knows how to test and optimize code for work on different devices",
                 companies: '6 000',
                 salary: '1900',
-                projects: '2',
+                projects: '2'
             },
             for_who: {
                 photographs: [
@@ -832,7 +780,7 @@ const initialState = {
                     'Profession Android developer. Strava analogue',
                     'Profession Android developer. Reddit analogue',
                     'Team project: mobile application for Android'
-                ],
+                ]
             },
             content: {
                 title: {
@@ -845,20 +793,19 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     java: {
         job_name: 'Java-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_477ae814606ca5e5256c683921f40d2d7f29bad4.webp',
         time: '9 months',
         classNames: ['orange-back', 'orange-border', 'orange-color', 'orange-triangle', 'orange-content-course'],
         path: 'java',
-
         course: {
             header: {
                 titleTxt: "Learn the popular Java programming language from scratch. Become a sought-after specialist in 9 months, even if you have never programmed before",
                 companies: '3 000',
                 salary: '1900',
-                projects: '2',
+                projects: '2'
             },
             for_who: {
                 photographs: [
@@ -924,21 +871,20 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     frontend_full: {
         job_name: 'Frontend-developer from zero to PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_af62204878d4eba3a075419b219ff11849d0bbc3.webp',
         time: '2 years',
         classNames: ['grey-back', 'grey-border', 'grey-color', 'grey-triangle', 'grey-content-course'],
         path: 'frontend-full',
-
         course: {
             header: {
                 titleTxt: "Learn JavaScript, TypeScript, and other trending web application development technologies from scratch. Build a portfolio, learn how to work in a team and start a career as a frontend developer",
                 textAboutJob: "A frontend developer creates the visible part of websites and web applications using markup and programming languages, frameworks, and other tools. He develops interfaces for complex services - task schedulers, instant messengers, online stores. Without a frontend developer, there will be no likes under posts in social networks, a basket of goods, comments, and convenient navigation through online maps.Frontend developers are needed by both large corporations and startups. And if you don’t want to work for a company, freelancing options are always available",
                 companies: '6 660',
                 salary: '1100',
-                projects: '7',
+                projects: '7'
             },
             for_who: {
                 photographs: [
@@ -973,20 +919,19 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     frontend_pro: {
         job_name: 'Frontend-developer PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_98a708fd2012f5033663fece150133eac4387673.webp',
         time: '1 year',
         classNames: ['light-green-back', 'light-green-border', 'light-green-color', 'light-green-triangle', 'light-green-content-course'],
         path: 'frontend-pro',
-
         course: {
             header: {
                 titleTxt: "You will start with the basics of layout and JavaScript, and by the end of the course, you will have learned how to create enterprise services. Gain teamwork experience and start your career as a web developer",
                 companies: '4 100',
                 salary: '1100',
-                projects: '6',
+                projects: '6'
             },
             for_who: {
                 photographs: [
@@ -1044,20 +989,19 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     js_fullstack: {
         job_name: 'Javascript Fullstack-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_9567df25c360d949e492c6afcb047f9878baa2b3.webp',
         time: '1 year',
         classNames: ['yellow-back', 'yellow-border', 'yellow-color', 'yellow-triangle', 'yellow-content-course'],
         path: 'javascript-fullstack',
-
         course: {
             header: {
                 titleTxt: "You will learn how to develop full-fledged websites and web applications in JS from scratch and learn one of the frameworks - Vue, React or Angular. Become a valuable employee for any IT company, understand how to get a promotion, and be able to earn more",
                 companies: '6 000',
                 salary: '1400',
-                projects: '4',
+                projects: '4'
             },
             for_who: {
                 photographs: [
@@ -1114,7 +1058,7 @@ const initialState = {
                     'Create a full-fledged online store using the Vue.js framework',
                     'Set up the integration of posts from the Reddit news site using the React.js framework',
                     'Develop a full-fledged online store on the Angular framework'
-                ],
+                ]
             },
             content: {
                 title: {
@@ -1129,21 +1073,20 @@ const initialState = {
                 }
             }
         }
-    } as CourseType,
+    },
     php_pro: {
         job_name: 'PHP-developer from zero to PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_ef69df0ff2b047f7d37fea27a790dd8187e4404a.webp',
         time: '1 year',
         classNames: ['light-yellow-back', 'light-yellow-border', 'light-yellow-color', 'light-yellow-triangle', 'light-yellow-content-course'],
         path: 'php-pro',
-
         course: {
             header: {
                 titleTxt: "You will learn how to program sites and web applications in PHP from scratch, master the Laravel framework, write cloud storage and work on an online store as a team.You could apply for a junior developer position",
                 textAboutJob: "PHP is one of the ten most popular programming languages in the TIOBE ranking. Most CMS are written on it, including WordPress, which powers 65% of all sites in the world. PHP under the hood of Wikipedia, VKontakte, Facebook* and YouTube. Developers have been developing the language for over 25 years and introducing new features with each version.To keep old projects running and write web applications from scratch, companies hire PHP programmers",
                 companies: '2 837',
                 salary: '1400',
-                projects: '3',
+                projects: '3'
             },
             for_who: {
                 photographs: [
@@ -1191,16 +1134,12 @@ const initialState = {
                 }
             }
         }
-    } as CourseType
-}
-
-export type InitialStateType = typeof initialState
-
-export function CoursesReducer(state = initialState, action: any): InitialStateType {
+    }
+};
+export function CoursesReducer(state, action) {
+    if (state === void 0) { state = initialState; }
     switch (action.type) {
         default:
-            return {
-                ...state
-            }
+            return __assign({}, state);
     }
 }

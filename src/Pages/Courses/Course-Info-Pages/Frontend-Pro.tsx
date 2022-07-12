@@ -2,11 +2,18 @@ import {CourseHeader} from "../Components/Header/Course-Header"
 import {ForWho} from "../Components/For-Who/For-Who"
 import {SkillsFiveTitles} from "../Components/Skills/SkillsFiveTitles"
 import {Projects} from "../Components/Projects/Projects"
-import {CourseProjectsPropsType} from "./Types";
-import {HowUse} from "../Components/How-Use/How-Use";
-import {Employment} from "../Components/Employment/Employment";
+import {CourseProjectsPropsType} from "./Types"
+import {HowUse} from "../Components/How-Use/How-Use"
+import {Employment} from "../Components/Employment/Employment"
+import {Title} from "../Components/Content/Title"
+import {Note} from "../Components/Content/Note"
+import {CourseSmall} from "../Components/Content/Course-Small"
+import {Triangle} from "../Components/Content/Triangle"
+import {CoursesTitle} from "../Components/Content/Courses-Title"
+import {React} from "../Components/Content/Courses/React"
+import {CourseTitleSmall} from "../Components/Content/Course-Title-Small";
 
-export function FrontendPro({header, time, img, for_who, job_name, skills, projects, classNames = ['']}: CourseProjectsPropsType) {
+export function FrontendPro({header, time, img, for_who, job_name, skills, projects, classNames = [''], content}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -14,7 +21,35 @@ export function FrontendPro({header, time, img, for_who, job_name, skills, proje
             <SkillsFiveTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames} />
-            <Employment classNames={classNames}/>
+            <Employment/>
+            <div className={`content`}>
+                <Triangle/>
+                <div className={`content__container`}>
+                    <Title text={content.title.text} numbers={content.title.numbers} descriptions={content.title.descriptions}/>
+                    <div className={'content__courses'}>
+                        <CoursesTitle title={'Basic Skills'}/>
+                        <CourseSmall title={content.courses.titles[0]} text={'You will get acquainted with HTML and CSS, cross-browser and adaptive layout. Learn to work with animation and hosting. Designing a site for an art gallery according to ready-made layouts'}/>
+                        <CourseSmall title={content.courses.titles[1]} text={'Learn to work with variables and numbers, explore arrays, loops, objects and functions. Get familiar with constants, const and var keywords, scopes, closures and learn how to use them in your work'}/>
+                        <CourseSmall title={content.courses.titles[2]} text={'Expand your professional knowledge and skills as a developer by learning how to use the React.js framework in your work'}/>
+                        <CourseSmall title={content.courses.titles[3]} text={'Course for practicing web and frontend developers. Expand your skills by learning the Vue.js trending framework'}/>
+                    </div>
+                    <div className={'content__courses'}>
+                        <CoursesTitle title={'Additional courses'}/>
+                        <CourseTitleSmall title={content.courses.titles[4]}/>
+                        <CourseTitleSmall title={content.courses.titles[5]}/>
+                        <CourseTitleSmall title={content.courses.titles[6]}/>
+                        <CourseTitleSmall title={content.courses.titles[7]}/>
+                        <CourseTitleSmall title={content.courses.titles[8]}/>
+                        <CourseTitleSmall title={content.courses.titles[9]}/>
+                        <CourseTitleSmall title={content.courses.titles[10]}/>
+                        <CourseTitleSmall title={content.courses.titles[11]}/>
+                        <CourseTitleSmall className={'big-item'} title={content.courses.titles[12]}/>
+                        <CourseTitleSmall className={'reset-height_big'} title={content.courses.titles[13]}/>
+                        <CourseTitleSmall title={content.courses.titles[14]}/>
+                    </div>
+                    <Note/>
+                </div>
+            </div>
         </div>
     )
 }

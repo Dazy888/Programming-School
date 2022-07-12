@@ -2,12 +2,32 @@ import {CourseHeader} from "../Components/Header/Course-Header"
 import {ForWho} from "../Components/For-Who/For-Who"
 import {Skill} from "../Components/Skills/Skill"
 import {Projects} from "../Components/Projects/Projects"
-import {CourseProjectsPropsType} from "./Types";
-import {HowUse} from "../Components/How-Use/How-Use";
-import {Employment} from "../Components/Employment/Employment";
+import {CourseProjectsPropsType} from "./Types"
+import {HowUse} from "../Components/How-Use/How-Use"
+import {Employment} from "../Components/Employment/Employment"
+import {Title} from "../Components/Content/Title"
+import {CourseTitle} from "../Components/Content/Course-Title"
+import {Note} from "../Components/Content/Note"
+import {MarkupBasic} from "../Components/Content/Courses/Markup-Basic"
+import {JSBasic} from "../Components/Content/Courses/JS-Basic"
+import {Node} from "../Components/Content/Courses/Node"
+import {Vue} from "../Components/Content/Courses/Vue"
+import {React} from "../Components/Content/Courses/React"
+import {Angular} from "../Components/Content/Courses/Angular"
+import {MarkupAdvanced} from "../Components/Content/Courses/Markup-Advanced"
+import {JSAdvanced} from "../Components/Content/Courses/JS-Advanced"
+import {Bash} from "../Components/Content/Courses/Bash"
+import {FigmaPro} from "../Components/Content/Courses/Figma-Pro"
+import {Photoshop} from "../Components/Content/Courses/Photoshop"
+import {Knowledge} from "../Components/Content/Courses/Knowledges"
+import {Career} from "../Components/Content/Courses/Career"
+import {English} from "../Components/Content/Courses/English"
+import {Git} from "../Components/Content/Courses/Git"
+import {Triangle} from "../Components/Content/Triangle"
+import {CoursesTitle} from "../Components/Content/Courses-Title"
 
-export function FrontendFull({header, time, img, for_who, job_name, skills, projects, classNames = ['']}: CourseProjectsPropsType) {
-    return(
+export function FrontendFull({header,time,img,for_who,job_name,skills,projects,classNames = [''],content}: CourseProjectsPropsType) {
+    return (
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
@@ -28,8 +48,51 @@ export function FrontendFull({header, time, img, for_who, job_name, skills, proj
                 </div>
             </div>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
-            <HowUse classNames={classNames} />
+            <HowUse classNames={classNames}/>
             <Employment classNames={classNames}/>
+            <div className={`content`}>
+                <Triangle/>
+                <div className={`content__container`}>
+                    <Title text={content.title.text} numbers={content.title.numbers} descriptions={content.title.descriptions}/>
+                    <div className={'content__courses'}>
+                        <CoursesTitle title={'Main Courses'}/>
+                        <MarkupBasic/>
+                        <JSBasic/>
+                        <Node/>
+                        <div className={'courses__item'}>
+                            <CourseTitle title={content.courses.titles[0]} isButton={true}/>
+                            <ul className={'item__list'}>
+                                <li className={'text'}>Introduction</li>
+                                <li className={'text'}>Compilation and primitive types</li>
+                                <li className={'text'}>Applying Types</li>
+                                <li className={'text'}>OOP typing</li>
+                                <li className={'text'}>Generics</li>
+                                <li className={'text'}>Utility types</li>
+                                <li className={'text'}>Additional types</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className={'content__courses'}>
+                        <CoursesTitle title={'Choice of direction'}/>
+                        <Vue/>
+                        <React/>
+                        <Angular/>
+                    </div>
+                    <div className={'content__courses'}>
+                        <CoursesTitle title={'Additional courses'}/>
+                        <MarkupAdvanced/>
+                        <JSAdvanced/>
+                        <Git/>
+                        <Bash/>
+                        <FigmaPro/>
+                        <Photoshop/>
+                        <English/>
+                        <Knowledge/>
+                        <Career/>
+                    </div>
+                    <Note/>
+                </div>
+            </div>
         </div>
     )
 }

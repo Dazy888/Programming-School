@@ -202,7 +202,7 @@ export function Employment({classNames = ['']}: PropsType) {
                             </div>
                         </ul>
                     </div>
-                    <SliderControls className={classNames[3]} length={4} id={reviewsId} changeId={changeReviewsId}/>
+                    <SliderControls className={classNames[2]} length={4} id={reviewsId} changeId={changeReviewsId}/>
                 </div>
             </div>
         </div>
