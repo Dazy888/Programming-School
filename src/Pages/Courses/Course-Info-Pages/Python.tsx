@@ -16,8 +16,9 @@ import {Career} from "../Components/Content/Courses/Career"
 import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
+import {TeachersItem} from "../../Teachers/Components/TeachersItem";
 
-export function Python({job_name, for_who, header, img, time, skills, projects, content}: CourseProjectsPropsType) {
+export function Python({job_name, for_who, header, img, time, skills, projects, content, teachers}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -146,6 +147,17 @@ export function Python({job_name, for_who, header, img, time, skills, projects, 
                         <Career/>
                     </div>
                     <Note/>
+                </div>
+            </div>
+            <div className={'teachers'}>
+                <h1 className={'title'}>Teachers</h1>
+                <div className={'teachers__row flex-property-set_between'}>
+                    <TeachersItem img={teachers.avatars[0]} name={teachers.names[0]} surname={teachers.surnames[0]} description={teachers.descriptions[0]}/>
+                    <TeachersItem img={teachers.avatars[1]} name={teachers.names[1]} surname={teachers.surnames[1]} description={teachers.descriptions[1]}/>
+                    <TeachersItem img={teachers.avatars[2]} name={teachers.names[2]} surname={teachers.surnames[2]} description={teachers.descriptions[2]}/>
+                    <TeachersItem img={teachers.avatars[3]} name={teachers.names[3]} surname={teachers.surnames[3]} description={teachers.descriptions[3]}/>
+                    <TeachersItem img={teachers.avatars[4]} name={teachers.names[4]} surname={teachers.surnames[4]} description={teachers.descriptions[4]}/>
+                    <TeachersItem img={teachers.avatars[5]} name={teachers.names[5]} surname={teachers.surnames[5]} description={teachers.descriptions[5]}/>
                 </div>
             </div>
         </div>

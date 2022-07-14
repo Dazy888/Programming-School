@@ -18,7 +18,7 @@ export function getJsTeachers(state: AppStateType) {
 
 
 export function getCPlusPlusTeachers(state: AppStateType) {
-   return state.teachersPage.cPlusPlus
+   return state.teachersPage.c_plus_plus
 }
 
 export function getPhpTeachers(state: AppStateType) {

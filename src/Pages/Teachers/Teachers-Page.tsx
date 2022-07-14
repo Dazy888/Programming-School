@@ -50,7 +50,7 @@ export function TeachersPage() {
                     <button onClick={showTeachers} className={'teachers__btn'}>C#</button>
                     <div className={'teachers__content-wrapper teachers__content-wrapper_small flex-property-set_center'}>
                         <div className={'teachers__content_small teachers__content flex-property-set_center'}>
-                            <TeachersItem img={c_sharp_teachers.avatar} name={c_sharp_teachers.name} surname={c_sharp_teachers.surname} description={c_sharp_teachers.description}/>
+                            <TeachersItem img={c_sharp_teachers.avatars[0]} name={c_sharp_teachers.names[0]} surname={c_sharp_teachers.surnames[0]} description={c_sharp_teachers.descriptions[0]}/>
                         </div>
                     </div>
                 </div>
