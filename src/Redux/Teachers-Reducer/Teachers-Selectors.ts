@@ -1,5 +1,9 @@
 import {AppStateType} from "../Redux-Store"
 
+export function getCommonTeachers(state: AppStateType) {
+   return state.teachersPage.common
+}
+
 export function getPythonTeachers(state: AppStateType) {
    return state.teachersPage.python
 }
@@ -15,7 +19,6 @@ export function getIosTeachers(state: AppStateType) {
 export function getJsTeachers(state: AppStateType) {
    return state.teachersPage.js
 }
-
 
 export function getCPlusPlusTeachers(state: AppStateType) {
    return state.teachersPage.c_plus_plus

@@ -26,8 +26,9 @@ import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {CourseSmallList} from "../Components/Content/Course-Small-List"
+import {EightTeachers} from "../Components/Teachers/Eight-Teachers"
 
-export function PythonFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content}: CourseProjectsPropsType) {
+export function PythonFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -136,6 +137,10 @@ export function PythonFullstack({time, img, header, for_who, job_name, skills, p
                     <Note/>
                 </div>
             </div>
+            <EightTeachers avatars={[teachers.avatars[0], teachers.avatars[1], teachers.avatars[2], teachers.kornienko.img, teachers.vasiyanovich.img, teachers.yakovushen.img, teachers.krotov.img, teachers.shulaev.img]}
+                           names={[teachers.names[0], teachers.names[1], teachers.names[2], teachers.kornienko.name, teachers.vasiyanovich.name, teachers.yakovushen.name, teachers.krotov.name, teachers.shulaev.name]}
+                           surnames={[teachers.surnames[0], teachers.surnames[1], teachers.surnames[2], teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.yakovushen.surname, teachers.krotov.surname, teachers.shulaev.surname]}
+                           descriptions={[teachers.descriptions[0], teachers.descriptions[1], teachers.descriptions[2], teachers.kornienko.description, teachers.vasiyanovich.description, teachers.yakovushen.description, teachers.krotov.description, teachers.shulaev.description]}/>
         </div>
     )
 }

@@ -76,55 +76,6 @@ var initialState = {
             }
         }
     },
-    flutter: {
-        job_name: 'Flutter-developer',
-        main_img: 'https://248006.selcdn.ru/LandGen/phone_24ac61b9f3b96df7e1c5263ebfe4573425addfd0.png',
-        time: '14 months',
-        classNames: ['grey-back', 'grey-border', 'grey-color', 'grey-triangle', 'grey-content-course'],
-        path: 'flutter',
-        course: {
-            header: {
-                titleTxt: 'You will master the Flutter framework and native development in Swift or Kotlin. You will be able to develop complex applications, provide communication between cross-platform and platform parts. Learn to solve problems that only the coolest specialists can do',
-                textAboutJob: "Flutter developer creates cross-platform mobile apps for iOS and Android. He programs in Dart, and the framework compiles the code into native libraries. Applications on Flutter are not inferior in performance to their counterparts on Swift and Kotlin, with the help of widgets you can create powerful animations and customize the interface.Companies are hiring Flutter developers to launch a product faster, cheaper and on both OSes at once",
-                companies: '3 230',
-                salary: '1400',
-                projects: '6'
-            },
-            for_who: {
-                photographs: [
-                    'https://248006.selcdn.ru/LandGen/phone_be7c1d4e7b19170ce3b2ff6aab88458c64021917.png',
-                    'https://248006.selcdn.ru/LandGen/phone_d02e2de43a6e17c326448aeca6b346bc8be1cce8.png',
-                ],
-                texts: [
-                    "Go beyond one platform and become a universal developer. Learn how to create working prototypes and complete projects with Flutter. Master Dart and add cross-platform apps to your portfolio. Rewrite personal projects for Android and iOS, offer to implement the framework in your company or join a new team",
-                    'Learn about the features of developing and testing mobile applications. Master one of the native programming languages Swift or Kotlin. Get to know Dart, the Flutter framework, and write cross-platform portfolio apps. After the course, you will be able to change direction and start a career in mobile development',
-                ],
-                titles: ['For native developers', 'Programmers in other areas']
-            },
-            skills: {
-                texts: [
-                    'Write application blocks in native language',
-                    'Build apps with Flutter and Dart',
-                    'Use ready-made functions from libraries',
-                    'Customize the interaction of applications with the backend',
-                    'Interact with UX Design',
-                    'Work in the Git version control system',
-                    'Work according to Scrum methodology for sprints',
-                    'Test mobile applications'
-                ]
-            },
-            content: {
-                title: {
-                    text: 'You are waiting for a video with theory and practice based on real cases',
-                    numbers: ['115', '113'],
-                    descriptions: ['modules', 'practical task']
-                },
-                courses: {
-                    titles: ['Flutter', 'Android', 'IOS', 'Mobile app design from scratch to PRO',]
-                }
-            }
-        }
-    },
     java_pro: {
         job_name: 'Java-developer PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_57c9d80b2b75745579f68b99bdd0e2c0516a955f.webp',
@@ -1131,6 +1082,55 @@ var initialState = {
                         'Booking.com analogue',
                         'Team project: online store'
                     ]
+                }
+            }
+        }
+    },
+    flutter: {
+        job_name: 'Flutter-developer',
+        main_img: 'https://248006.selcdn.ru/LandGen/phone_24ac61b9f3b96df7e1c5263ebfe4573425addfd0.png',
+        time: '14 months',
+        classNames: ['grey-back', 'grey-border', 'grey-color', 'grey-triangle', 'grey-content-course'],
+        path: 'flutter',
+        course: {
+            header: {
+                titleTxt: 'You will master the Flutter framework and native development in Swift or Kotlin. You will be able to develop complex applications, provide communication between cross-platform and platform parts. Learn to solve problems that only the coolest specialists can do',
+                textAboutJob: "Flutter developer creates cross-platform mobile apps for iOS and Android. He programs in Dart, and the framework compiles the code into native libraries. Applications on Flutter are not inferior in performance to their counterparts on Swift and Kotlin, with the help of widgets you can create powerful animations and customize the interface.Companies are hiring Flutter developers to launch a product faster, cheaper and on both OSes at once",
+                companies: '3 230',
+                salary: '1400',
+                projects: '6'
+            },
+            for_who: {
+                photographs: [
+                    'https://248006.selcdn.ru/LandGen/phone_be7c1d4e7b19170ce3b2ff6aab88458c64021917.png',
+                    'https://248006.selcdn.ru/LandGen/phone_d02e2de43a6e17c326448aeca6b346bc8be1cce8.png',
+                ],
+                texts: [
+                    "Go beyond one platform and become a universal developer. Learn how to create working prototypes and complete projects with Flutter. Master Dart and add cross-platform apps to your portfolio. Rewrite personal projects for Android and iOS, offer to implement the framework in your company or join a new team",
+                    'Learn about the features of developing and testing mobile applications. Master one of the native programming languages Swift or Kotlin. Get to know Dart, the Flutter framework, and write cross-platform portfolio apps. After the course, you will be able to change direction and start a career in mobile development',
+                ],
+                titles: ['For native developers', 'Programmers in other areas']
+            },
+            skills: {
+                texts: [
+                    'Write application blocks in native language',
+                    'Build apps with Flutter and Dart',
+                    'Use ready-made functions from libraries',
+                    'Customize the interaction of applications with the backend',
+                    'Interact with UX Design',
+                    'Work in the Git version control system',
+                    'Work according to Scrum methodology for sprints',
+                    'Test mobile applications'
+                ]
+            },
+            content: {
+                title: {
+                    text: 'You are waiting for a video with theory and practice based on real cases',
+                    numbers: ['115', '113'],
+                    descriptions: ['modules', 'practical task']
+                },
+                courses: {
+                    titles: ['Flutter', 'Android', 'IOS', 'Mobile app design from scratch to PRO',]
                 }
             }
         }

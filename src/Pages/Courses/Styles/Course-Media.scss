@@ -204,6 +204,22 @@
           width: 770px;
         }
       }
+
+      .teachers {
+        .title {
+          text-align: center;
+        }
+
+        .teacher-big {
+          margin-bottom: 100px;
+        }
+
+        .teachers__row {
+          width: fit-content !important;
+          flex-direction: column-reverse;
+          margin: auto;
+        }
+      }
     }
   }
 }
@@ -1291,6 +1307,35 @@
 
         .text__item {
           padding-left: 10px;
+        }
+      }
+    }
+
+    .teachers {
+      .teachers__row {
+        .teacher-big__names {
+          font-size: 22px !important;
+          line-height: 30px !important;
+          margin: 10px 0 15px !important;
+        }
+
+        .light-grey-txt {
+          margin: 5px 0 35px !important;
+          font-size: 13px !important;
+        }
+
+        .small-title {
+          font-size: 17px !important;
+          line-height: 130% !important;
+        }
+
+        .teacher-big {
+          width: 300px !important;
+
+          .teacher-big__img {
+            width: 300px !important;
+            height: 350px !important;
+          }
         }
       }
     }

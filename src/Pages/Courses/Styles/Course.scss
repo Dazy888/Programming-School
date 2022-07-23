@@ -1177,9 +1177,66 @@
 
     .teachers {
       max-width: 1180px;
-      margin: auto;
+      margin: 100px auto;
 
+      .title {
+        margin-bottom: 50px;
+      }
 
+      .teachers__row_small {
+        width: 355px;
+      }
+
+      .teachers__row_medium {
+        width: 560px;
+      }
+
+      .teachers__row-four {
+        align-items: baseline;
+        width: 765px;
+      }
+
+      .teachers__row {
+        align-items: baseline;
+        margin-bottom: 50px;
+
+        .teacher-big__names {
+          font-size: 28px;
+          line-height: 36px;
+          color: white;
+          font-weight: 500;
+          margin: 15px 0 20px;
+        }
+
+        .light-grey-txt {
+          margin: 5px 0 45px;
+          opacity: 1;
+          font-size: 15px;
+        }
+
+        .small-title {
+          font-weight: 400;
+          color: white;
+        }
+
+        .teacher-medium {
+          width: 270px;
+
+          .teacher-medium__img {
+            width: 270px;
+            height: 330px;
+          }
+        }
+
+        .teacher-big {
+          width: 370px;
+
+          .teacher-big__img {
+            width: 370px;
+            height: 450px;
+          }
+        }
+      }
     }
   }
 }

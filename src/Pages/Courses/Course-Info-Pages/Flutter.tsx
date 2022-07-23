@@ -15,8 +15,9 @@ import {Git} from "../Components/Content/Courses/Git"
 import {SQL} from "../Components/Content/Courses/SQL"
 import {EnglishBig} from "../Components/Content/Courses/English-Big"
 import {Career} from "../Components/Content/Courses/Career"
+import {TwelveTeachers} from "../Components/Teachers/Twelve-Teachers";
 
-export function Flutter({img, header, time, for_who, job_name, skills, classNames = [''], content}: CoursePropsType) {
+export function Flutter({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers}: CoursePropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -24,7 +25,7 @@ export function Flutter({img, header, time, for_who, job_name, skills, className
             <SkillsEightTexts texts={skills.texts} className={classNames[1]}/>
             <HowUse classNames={classNames} />
             <Employment/>
-            <div className={`content`}>
+            <div className={'content'}>
                 <Triangle/>
                 <div className={`content__container`}>
                     <Title text={content.title.text} numbers={content.title.numbers} descriptions={content.title.descriptions}/>
@@ -163,6 +164,10 @@ export function Flutter({img, header, time, for_who, job_name, skills, className
                     <Note/>
                 </div>
             </div>
+            <TwelveTeachers avatars={[...teachers.avatars, teachers.pilipenko.img, teachers.ovchinnikov.img, teachers.alexandrov.img, teachers.rybakov.img, teachers.malyx.img]}
+                            names={[...teachers.names, teachers.pilipenko.name, teachers.ovchinnikov.name, teachers.alexandrov.name, teachers.rybakov.name, teachers.malyx.name]}
+                            surnames={[...teachers.surnames, teachers.pilipenko.surnames, teachers.ovchinnikov.surnames, teachers.alexandrov.surnames, teachers.rybakov.surnames, teachers.malyx.surnames]}
+                            descriptions={[...teachers.descriptions, teachers.pilipenko.description, teachers.ovchinnikov.description, teachers.alexandrov.description, teachers.rybakov.description, teachers.malyx.description]}/>
         </div>
     )
 }

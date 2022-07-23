@@ -15,8 +15,9 @@ import {Testing} from "../Components/Content/Courses/Testing"
 import {Note} from "../Components/Content/Note"
 import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
+import {TeachersItem} from "../../Teachers/Components/TeachersItem"
 
-export function IOS({header, time, img, for_who, job_name, skills, projects, classNames = [''], content}: CourseProjectsPropsType) {
+export function IOS({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -86,6 +87,16 @@ export function IOS({header, time, img, for_who, job_name, skills, projects, cla
                         <Testing/>
                     </div>
                     <Note/>
+                </div>
+            </div>
+            <div className={'teachers'}>
+                <h1 className={'title'}>Teachers</h1>
+                <div className={'teachers__row flex-property-set_between'}>
+                    <TeachersItem img={teachers.avatars[0]} name={teachers.names[0]} surname={teachers.surnames[0]} description={teachers.descriptions[0]}/>
+                    <TeachersItem img={teachers.nikolaev.img} name={teachers.nikolaev.name} surname={teachers.nikolaev.surname} description={teachers.nikolaev.description}/>
+                    <TeachersItem img={teachers.pilipenko.img} name={teachers.pilipenko.name} surname={teachers.pilipenko.surname} description={teachers.pilipenko.description}/>
+                    <TeachersItem img={teachers.rybakov.img} name={teachers.rybakov.name} surname={teachers.rybakov.surname} description={teachers.rybakov.description}/>
+                    <TeachersItem img={teachers.malyx.img} name={teachers.malyx.name} surname={teachers.malyx.surname} description={teachers.malyx.description}/>
                 </div>
             </div>
         </div>

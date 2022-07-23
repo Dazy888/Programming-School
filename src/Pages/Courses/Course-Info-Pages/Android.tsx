@@ -14,10 +14,12 @@ import {Career} from "../Components/Content/Courses/Career"
 import {Figma} from "../Components/Content/Courses/Figma"
 import {Testing} from "../Components/Content/Courses/Testing"
 import {Git} from "../Components/Content/Courses/Git"
-import {Triangle} from "../Components/Content/Triangle";
-import {CoursesTitle} from "../Components/Content/Courses-Title";
+import {Triangle} from "../Components/Content/Triangle"
+import {CoursesTitle} from "../Components/Content/Courses-Title"
+import {TeachersItem} from "../../Teachers/Components/TeachersItem"
+import {TeachersRow} from "../Components/Teachers/Teachers-Row";
 
-export function Android({header, time, img, for_who, job_name, skills, projects, classNames = [''], content}: CourseProjectsPropsType) {
+export function Android({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -99,6 +101,18 @@ export function Android({header, time, img, for_who, job_name, skills, projects,
                         <Testing text={'You will navigate the interface of the graphic editor and create design layouts for future applications'}/>
                     </div>
                     <Note/>
+                </div>
+            </div>
+            <div className={'teachers'}>
+                <h1 className={'title'}>Teachers</h1>
+                <TeachersRow avatars={[...teachers.avatars, teachers.malyx.img, teachers.pilipenko.img]}
+                             names={[...teachers.names, teachers.malyx.name, teachers.pilipenko.name]}
+                             surnames={[...teachers.surnames, teachers.malyx.surname, teachers.pilipenko.surname]}
+                             descriptions={[...teachers.descriptions, teachers.malyx.description, teachers.pilipenko.description]}/>
+                <div className={'teachers__row teachers__row_medium flex-property-set_between'}>
+                    <TeachersItem img={teachers.ageychenko.img} name={teachers.ageychenko.name} surname={teachers.ageychenko.surname} description={teachers.ageychenko.description}/>
+                    <TeachersItem img={teachers.ovchinnikov.img} name={teachers.ovchinnikov.name} surname={teachers.ovchinnikov.surname} description={teachers.ovchinnikov.description}/>
+                    <TeachersItem img={teachers.rybakov.img} name={teachers.rybakov.name} surname={teachers.rybakov.surname} description={teachers.rybakov.description}/>
                 </div>
             </div>
         </div>

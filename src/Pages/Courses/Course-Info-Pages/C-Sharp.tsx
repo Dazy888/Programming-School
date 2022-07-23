@@ -6,18 +6,19 @@ import {CourseProjectsPropsType} from "./Types"
 import {HowUse} from "../Components/How-Use/How-Use"
 import {Employment} from "../Components/Employment/Employment"
 import {Title} from "../Components/Content/Title"
-import {CourseTitle} from "../Components/Content/Course-Title";
-import {MarkupBasic} from "../Components/Content/Courses/Markup-Basic";
-import {MarkupAdvanced} from "../Components/Content/Courses/Markup-Advanced";
-import {EnglishSmall} from "../Components/Content/Courses/English-Small";
-import {Knowledge} from "../Components/Content/Courses/Knowledges";
-import {SQL} from "../Components/Content/Courses/SQL";
-import {Career} from "../Components/Content/Courses/Career";
-import {Note} from "../Components/Content/Note";
-import {Git} from "../Components/Content/Courses/Git";
-import {Triangle} from "../Components/Content/Triangle";
+import {CourseTitle} from "../Components/Content/Course-Title"
+import {MarkupBasic} from "../Components/Content/Courses/Markup-Basic"
+import {MarkupAdvanced} from "../Components/Content/Courses/Markup-Advanced"
+import {EnglishSmall} from "../Components/Content/Courses/English-Small"
+import {Knowledge} from "../Components/Content/Courses/Knowledges"
+import {SQL} from "../Components/Content/Courses/SQL"
+import {Career} from "../Components/Content/Courses/Career"
+import {Note} from "../Components/Content/Note"
+import {Git} from "../Components/Content/Courses/Git"
+import {Triangle} from "../Components/Content/Triangle"
+import {TwoTeachers} from "../Components/Teachers/Two-Teachers";
 
-export function CSharp({header, for_who, img, time, job_name, skills, projects, classNames = [''], content}: CourseProjectsPropsType) {
+export function CSharp({header, for_who, img, time, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
     return (
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} text={header.textAboutJob} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -67,6 +68,7 @@ export function CSharp({header, for_who, img, time, job_name, skills, projects, 
                     <Note/>
                 </div>
             </div>
+            <TwoTeachers avatars={[teachers.avatars[0], teachers.img]} names={[teachers.names[0], teachers.name]} surnames={[teachers.surnames[0], teachers.surname]} descriptions={[teachers.descriptions[0], teachers.description]} texts={[teachers.texts[0], teachers.text]}/>
         </div>
     )
 }

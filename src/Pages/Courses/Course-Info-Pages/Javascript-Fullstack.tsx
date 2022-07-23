@@ -26,8 +26,9 @@ import {Git} from "../Components/Content/Courses/Git"
 import {CourseSmall} from "../Components/Content/Course-Small"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
+import {EightTeachers} from "../Components/Teachers/Eight-Teachers"
 
-export function JavascriptFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content}: CourseProjectsPropsType) {
+export function JavascriptFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
     return (
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -69,6 +70,10 @@ export function JavascriptFullstack({time, img, header, for_who, job_name, skill
                     <Note/>
                 </div>
             </div>
+            <EightTeachers avatars={[teachers.kornienko.img, teachers.vasiyanovich.img, teachers.yakovushen.img, teachers.bondarovich.img, teachers.savchenko.img, teachers.kuznetsov.img, teachers.klimonova.img, teachers.mirotin.img]}
+                           names={[teachers.kornienko.name, teachers.vasiyanovich.name, teachers.yakovushen.name, teachers.bondarovich.name, teachers.savchenko.name, teachers.kuznetsov.name, teachers.klimonova.name, teachers.mirotin.name]}
+                           surnames={[teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.yakovushen.surname, teachers.bondarovich.surname, teachers.savchenko.surname, teachers.kuznetsov.surname, teachers.klimonova.surname, teachers.mirotin.surname]}
+                           descriptions={[teachers.kornienko.description, teachers.vasiyanovich.description, teachers.yakovushen.description, teachers.bondarovich.description, teachers.savchenko.description, teachers.kuznetsov.description, teachers.klimonova.description, teachers.mirotin.description]}/>
         </div>
     )
 }

@@ -7,12 +7,13 @@ import {Employment} from "../Components/Employment/Employment"
 import {Title} from "../Components/Content/Title"
 import {CourseTitle} from "../Components/Content/Course-Title"
 import {Note} from "../Components/Content/Note"
-import {Triangle} from "../Components/Content/Triangle";
-import {CoursesTitle} from "../Components/Content/Courses-Title";
-import {CourseSmall} from "../Components/Content/Course-Small";
-import {CourseTitleSmall} from "../Components/Content/Course-Title-Small";
+import {Triangle} from "../Components/Content/Triangle"
+import {CoursesTitle} from "../Components/Content/Courses-Title"
+import {CourseSmall} from "../Components/Content/Course-Small"
+import {CourseTitleSmall} from "../Components/Content/Course-Title-Small"
+import {TwoTeachers} from "../Components/Teachers/Two-Teachers";
 
-export function JavaPro({img, header, time, for_who, job_name, skills, classNames = [''], content}: CoursePropsType) {
+export function JavaPro({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers}: CoursePropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -126,6 +127,7 @@ export function JavaPro({img, header, time, for_who, job_name, skills, className
                     <Note/>
                 </div>
             </div>
+            <TwoTeachers avatars={[teachers.pilipenko.img, teachers.ovchinnikov.img]} names={[teachers.pilipenko.name, teachers.ovchinnikov.name]} surnames={[teachers.pilipenko.surname, teachers.ovchinnikov.surname]} descriptions={[teachers.pilipenko.description, teachers.ovchinnikov.description]} texts={[teachers.pilipenko.text, teachers.ovchinnikov.text]}/>
         </div>
     )
 }

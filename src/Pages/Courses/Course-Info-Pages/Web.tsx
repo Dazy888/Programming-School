@@ -22,11 +22,12 @@ import {Career} from "../Components/Content/Courses/Career"
 import {FigmaPro} from "../Components/Content/Courses/Figma-Pro"
 import {Bash} from "../Components/Content/Courses/Bash"
 import {Knowledge} from "../Components/Content/Courses/Knowledges"
-import {Git} from "../Components/Content/Courses/Git";
-import {Triangle} from "../Components/Content/Triangle";
-import {CoursesTitle} from "../Components/Content/Courses-Title";
+import {Git} from "../Components/Content/Courses/Git"
+import {Triangle} from "../Components/Content/Triangle"
+import {CoursesTitle} from "../Components/Content/Courses-Title"
+import {TwelveTeachers} from "../Components/Teachers/Twelve-Teachers"
 
-export function Web({for_who, time, img, header, job_name, skills, projects, classNames = [''], content}: CourseProjectsPropsType) {
+export function Web({for_who, time, img, header, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -144,6 +145,10 @@ export function Web({for_who, time, img, header, job_name, skills, projects, cla
                     <Note/>
                 </div>
             </div>
+            <TwelveTeachers avatars={[teachers.avatars[0], teachers.kornienko.img, teachers.vasiyanovich.img, teachers.tiunov.img, teachers.avdeev.img, teachers.molesku.img, teachers.pozdnyakov.img, teachers.bondarovich.img, teachers.savchenko.img, teachers.mirotin.img, teachers.ignatiev.img, teachers.pilipenko.img]}
+                            names={[teachers.names[0], teachers.kornienko.name, teachers.vasiyanovich.name, teachers.tiunov.name, teachers.avdeev.name, teachers.molesku.name, teachers.pozdnyakov.name, teachers.bondarovich.name, teachers.savchenko.name, teachers.mirotin.name, teachers.ignatiev.name, teachers.pilipenko.name]}
+                            surnames={[teachers.surnames[0], teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.tiunov.surname, teachers.avdeev.surname, teachers.molesku.surname, teachers.pozdnyakov.surname, teachers.bondarovich.surname, teachers.savchenko.surname, teachers.mirotin.surname, teachers.ignatiev.surname, teachers.pilipenko.surname]}
+                            descriptions={[teachers.descriptions[0], teachers.kornienko.description, teachers.vasiyanovich.description, teachers.tiunov.description, teachers.avdeev.description, teachers.molesku.description, teachers.pozdnyakov.description, teachers.bondarovich.description, teachers.savchenko.description, teachers.mirotin.description, teachers.ignatiev.description, teachers.pilipenko.description]}/>
         </div>
     )
 }

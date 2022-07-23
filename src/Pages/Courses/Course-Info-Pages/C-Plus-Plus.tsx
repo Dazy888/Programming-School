@@ -14,8 +14,10 @@ import {EnglishSmall} from "../Components/Content/Courses/English-Small"
 import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
+import React from "react";
 
-export function CPlusPlus({header, img, time, for_who, job_name, skills, projects, classNames = [''], content}: CourseProjectsPropsType) {
+export function CPlusPlus({header, img, time, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
+    console.log(teachers.texts)
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -116,6 +118,31 @@ export function CPlusPlus({header, img, time, for_who, job_name, skills, project
                         </div>
                     </div>
                     <Note/>
+                </div>
+            </div>
+            <div className={'teachers'}>
+                <h1 className={'title'}>Teachers</h1>
+                <div className={'teachers__row flex-property-set_between'}>
+                    <div className={'teacher-medium'}>
+                        <img className={'teacher-medium__img'} alt={'Teacher'} src={teachers.avatars[0]}/>
+                        <h2 className={'teacher-big__names'}>{teachers.names[0]}<br/>{teachers.surnames[0]}</h2>
+                        <hr className={'teacher-big__line'}/>
+                        <p className={'light-grey-txt'}>{teachers.descriptions[0]}</p>
+                        <p className={'small-title'}>{teachers.texts[0]}</p>
+                    </div>
+                    <div className={'teacher-medium'}>
+                        <img className={'teacher-medium__img'} alt={'Teacher'} src={teachers.avatars[1]}/>
+                        <h2 className={'teacher-big__names'}>{teachers.names[1]}<br/>{teachers.surnames[1]}</h2>
+                        <hr className={'teacher-big__line'}/>
+                        <p className={'light-grey-txt'}>{teachers.descriptions[1]}</p>
+                    </div>
+                    <div className={'teacher-medium'}>
+                        <img className={'teacher-medium__img'} alt={'Teacher'} src={teachers.avatars[2]}/>
+                        <h2 className={'teacher-big__names'}>{teachers.names[2]}<br/>{teachers.surnames[2]}</h2>
+                        <hr className={'teacher-big__line'}/>
+                        <p className={'light-grey-txt'}>{teachers.descriptions[2]}</p>
+                        <p className={'small-title'}>{teachers.texts[1]}</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,8 +12,9 @@ import {CourseSmall} from "../Components/Content/Course-Small";
 import {Triangle} from "../Components/Content/Triangle";
 import {CoursesTitle} from "../Components/Content/Courses-Title";
 import {React} from "../Components/Content/Courses/React";
+import {TwoTeachers} from "../Components/Teachers/Two-Teachers";
 
-export function Java({header, time, img, for_who, job_name, skills, classNames = [''], content}: CoursePropsType) {
+export function Java({header, time, img, for_who, job_name, skills, classNames = [''], content, teachers}: CoursePropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -73,6 +74,7 @@ export function Java({header, time, img, for_who, job_name, skills, classNames =
                     <Note/>
                 </div>
             </div>
+            <TwoTeachers avatars={[teachers.pilipenko.img, teachers.ovchinnikov.img]} names={[teachers.pilipenko.name, teachers.ovchinnikov.name]} surnames={[teachers.pilipenko.surname, teachers.ovchinnikov.surname]} descriptions={[teachers.pilipenko.description, teachers.ovchinnikov.description]} texts={[teachers.pilipenko.text, teachers.ovchinnikov.text]}/>
         </div>
     )
 }

@@ -26,8 +26,9 @@ import {SkillsEightTexts} from "../Components/Skills/SkillsEightTexts"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {CourseTitleSmall} from "../Components/Content/Course-Title-Small"
+import {TeachersItem} from "../../Teachers/Components/TeachersItem";
 
-export function PHPFullstack({header, time, img, for_who, job_name, skills, projects, classNames = [''], content}: CourseProjectsPropsType) {
+export function PHPFullstack({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -92,6 +93,15 @@ export function PHPFullstack({header, time, img, for_who, job_name, skills, proj
                         <CourseTitleSmall title={'Algorithms and data structures'}/>
                     </div>
                     <Note/>
+                </div>
+            </div>
+            <div className={'teachers'}>
+                <h1 className={'title'}>Teachers</h1>
+                <div className={'teachers__row flex-property-set_between'}>
+                    <TeachersItem img={teachers.avatars[0]} name={teachers.names[0]} surname={teachers.surnames[0]} description={teachers.descriptions[0]}/>
+                    <TeachersItem img={teachers.avatars[1]} name={teachers.names[1]} surname={teachers.surnames[1]} description={teachers.descriptions[1]}/>
+                    <TeachersItem img={teachers.pilipenko.img} name={teachers.pilipenko.name} surname={teachers.pilipenko.surname} description={teachers.pilipenko.description}/>
+                    <TeachersItem img={teachers.yakovushen.img} name={teachers.yakovushen.name} surname={teachers.yakovushen.surname} description={teachers.yakovushen.description}/>
                 </div>
             </div>
         </div>

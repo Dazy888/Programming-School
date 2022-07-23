@@ -12,8 +12,10 @@ import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {React} from "../Components/Content/Courses/React"
 import {CourseTitleSmall} from "../Components/Content/Course-Title-Small";
+import {TeachersRow} from "../Components/Teachers/Teachers-Row";
+import {TeachersItem} from "../../Teachers/Components/TeachersItem";
 
-export function FrontendPro({header, time, img, for_who, job_name, skills, projects, classNames = [''], content}: CourseProjectsPropsType) {
+export function FrontendPro({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -48,6 +50,19 @@ export function FrontendPro({header, time, img, for_who, job_name, skills, proje
                         <CourseTitleSmall title={content.courses.titles[14]}/>
                     </div>
                     <Note/>
+                </div>
+            </div>
+            <div className={'teachers'}>
+                <h1 className={'title'}>Teachers</h1>
+                <TeachersRow avatars={[teachers.mixeev.img, teachers.tiunov.img, teachers.kornienko.img, teachers.vasiyanovich.img, teachers.klimonova.img, teachers.bondarovich.img, teachers.mixeev.img]}
+                             names={[teachers.mixeev.name, teachers.tiunov.name, teachers.kornienko.name, teachers.vasiyanovich.name, teachers.klimonova.name, teachers.bondarovich.name, teachers.mixeev.name]}
+                             surnames={[teachers.mixeev.surname, teachers.tiunov.surname, teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.klimonova.surname, teachers.bondarovich.surname, teachers.mixeev.surname]}
+                             descriptions={[teachers.mixeev.description, teachers.tiunov.description, teachers.kornienko.description, teachers.vasiyanovich.description, teachers.klimonova.description, teachers.bondarovich.description, teachers.mixeev.description]}/>
+                <div className={'teachers__row-four teachers__row-four flex-property-set_between'}>
+                    <TeachersItem img={teachers.savchenko.img} name={teachers.savchenko.name} surname={teachers.savchenko.surname} description={teachers.savchenko.description}/>
+                    <TeachersItem img={teachers.avdeev.img} name={teachers.avdeev.name} surname={teachers.avdeev.surname} description={teachers.avdeev.description}/>
+                    <TeachersItem img={teachers.borzunov.img} name={teachers.borzunov.name} surname={teachers.borzunov.surname} description={teachers.borzunov.description}/>
+                    <TeachersItem img={teachers.kuznetsov.img} name={teachers.kuznetsov.name} surname={teachers.kuznetsov.surname} description={teachers.kuznetsov.description}/>
                 </div>
             </div>
         </div>
