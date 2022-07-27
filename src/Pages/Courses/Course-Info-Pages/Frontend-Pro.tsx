@@ -10,7 +10,7 @@ import {Note} from "../Components/Content/Note"
 import {CourseSmall} from "../Components/Content/Course-Small"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
-import {React} from "../Components/Content/Courses/React"
+import {ReactFramework} from "../Components/Content/Courses/React-Framework"
 import {CourseTitleSmall} from "../Components/Content/Course-Title-Small";
 import {TeachersRow} from "../Components/Teachers/Teachers-Row";
 import {TeachersItem} from "../../Teachers/Components/TeachersItem";
@@ -32,7 +32,7 @@ export function FrontendPro({header, time, img, for_who, job_name, skills, proje
                         <CoursesTitle title={'Basic Skills'}/>
                         <CourseSmall title={content.courses.titles[0]} text={'You will get acquainted with HTML and CSS, cross-browser and adaptive layout. Learn to work with animation and hosting. Designing a site for an art gallery according to ready-made layouts'}/>
                         <CourseSmall title={content.courses.titles[1]} text={'Learn to work with variables and numbers, explore arrays, loops, objects and functions. Get familiar with constants, const and var keywords, scopes, closures and learn how to use them in your work'}/>
-                        <CourseSmall title={content.courses.titles[2]} text={'Expand your professional knowledge and skills as a developer by learning how to use the React.js framework in your work'}/>
+                        <CourseSmall title={content.courses.titles[2]} text={'Expand your professional knowledge and skills as a developer by learning how to use the ReactFramework.js framework in your work'}/>
                         <CourseSmall title={content.courses.titles[3]} text={'Course for practicing web and frontend developers. Expand your skills by learning the Vue.js trending framework'}/>
                     </div>
                     <div className={'content__courses'}>

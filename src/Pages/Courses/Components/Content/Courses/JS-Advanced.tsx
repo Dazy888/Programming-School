@@ -1,4 +1,4 @@
-import {React} from "./React"
+import {ReactFramework} from "./React-Framework"
 import {CourseTitle} from "../Course-Title"
 
 export function JSAdvanced() {

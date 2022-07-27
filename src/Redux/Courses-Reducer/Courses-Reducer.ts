@@ -35,6 +35,13 @@ export type ContentType = {
     }
 }
 
+export type ReviewsType = {
+    user_data: Array<string>
+    course: string
+    texts: Array<string>
+    letters: Array<string>
+}
+
 export type CourseType = {
     job_name: string,
     main_img: string,
@@ -47,6 +54,7 @@ export type CourseType = {
         skills: SkillsType
         projects: ProjectsType
         content: ContentType
+        reviews: ReviewsType
     }
 }
 
@@ -115,6 +123,22 @@ const initialState = {
                 courses: {
                     titles: ['Python Basic ≈ 4–6 months', 'Django ≈ 2–4 months', 'Carier start', 'Python Advanced ≈ 3–6 months'],
                 }
+            },
+            reviews: {
+                letters: ['M', 'I', 'N', 'S', 'P', 'P', 'N', 'D', 'I'],
+                user_data: ['Maxim Brechko, Russia, Moscow', 'Igor Novikov, Moscow', 'Nikita Pack', 'Sergey Kolesnik', 'Pavel Semenov', 'Phedor Egorov, Gagarin', 'Nikita Ivliev', 'Dmitry Bondarev', 'Irina Melnikova'],
+                course: `Course "Profession Python-developer"`,
+                texts: [
+                    'I like the presentation, the ability to explain a topic that you could not understand on your own for a week in a few 10-minute videos, and moderately complex practical work that allows you to consolidate the studied material',
+                    'I like that you can choose the pace of learning that suits you. Clear and uncluttered videos with elements of humor. Good practical tasks that help to consolidate the studied material and develop practical skills. Prompt and friendly support of the curator. Interesting Telegram channel',
+                    'I like the constant feedback from the platform and the curator. A large number of practical work, allowing you to instantly apply the knowledge gained. An abundance of bonus courses that provide an opportunity to independently develop not only according to the program chosen for study, but also in other aspects. The process of checking practical tasks sometimes takes time, but this is not a minus: while you wait, you can consolidate the material you have covered and remember important formulations and concepts',
+                    'Very extensive training, excellent practical tasks, excellent communication with the curator. I will say right away that it is not for the lazy - you have to work here',
+                    'I liked the communication with the curator and the depth of knowledge gained on the course. Some points at first seem incomprehensible, but as practical tasks are completed, everything becomes clear as two times two',
+                    "It's all pretty compelling. But the most magnificent thing is the curator's approach to the participants. Good open dialogue, without pretense of severity and precision. You feel free, and not shaking from tension, as before defending your thesis at the university",
+                    'Everything is fine. The material is understandable, sometimes you have to tinker in order to figure it out yourself, but this is part of the profession, as I understand it :). Excellent feedback from the curators, this concerns both the response time (I never waited for feedback on the work for more than 12 hours, and in the evenings generally answered within 30-60 minutes), and comments: they gave good advice, paid attention to stylistic mistakes explained how and why. A good decision was to break the hour-long videos into short ones: it became more convenient to watch materials and return to poorly understood topics',
+                    "The curators (I had two of them) chewed the information so that I could understand everything, thanks to them for that! Everyone answered differently, so the verdict on the speed of work on average is half a day to a day. If you buy the course, you won't regret it. You will definitely be taught!",
+                    'I liked the simple and understandable presentation of the material, a lot of practical work, round-the-clock support in the chat, feedback from the curator'
+                ]
             }
         }
     } as CourseType,
@@ -215,6 +239,19 @@ const initialState = {
                     ],
                 }
             },
+            reviews: {
+                letters: ['R', 'E', 'A', 'V', 'O', 'R'],
+                user_data: ['Roman Zulcov', 'Eduard Kuksa', 'Alex Zemlyakov', 'Vyacheslav Mamontov', 'Olga Shvec', 'Roman Akamelkov'],
+                course: `Course "Profession Java-developer PRO"`,
+                texts: [
+                    'I liked the new videos on the "Java developer from scratch" course: the speaker energetically talks and shares useful information. As well as autotests in practical work, which speed up the approval of assignments if you do not need the help of a curator',
+                    'Tasks are great! Not always everything turns out right away, sometimes you have to look for additional information in third-party sources, but they make you think, this is a plus',
+                    'I like that the information is presented in great detail, as well as the realization that, in fact, all the material is here and even more than is necessary for obtaining the cherished profession. In some practical tasks, they make you think too much :)',
+                    'A MEGA resource and a great help for those who decide to change their profession and start a new life. I speak as a person who not only completed the course, but also successfully found a job. When questions or problems arose, I was helped by associates from the chat and mentors. And when the motivation weakened, the mailings from Skillbox were very encouraging. Thanks to the whole team, you are doing a great job!',
+                    'I like how the material was chosen, the program was drawn up. The video explains everything clearly and interestingly. Lots of practical tasks. The good thing is that you can do it anytime',
+                    "The quality of the training videos is high. The tasks are interesting, although sometimes too simple :). The curator responded within a day, plus or minus a few hours. And if I asked questions, I always got exhaustive answers to them. In the profession, in addition to the main program, there are many related training materials on various topics: from hard methodologies to soft skills and topics that broaden one's horizons - you can choose what you like. And, of course, it is convenient that you can practice at a pace that suits you"
+                ]
+            }
         }
     } as CourseType,
     web: {
@@ -240,7 +277,7 @@ const initialState = {
                 ],
                 texts: [
                     'Learn the basics of JavaScript and PHP programming from scratch. Learn how to design websites in HTML and CSS. Create your first portfolio projects',
-                    'Level up with the most popular programming languages Learn Vue, React or Angular frameworks and expand your coding skills',
+                    'Level up with the most popular programming languages Learn Vue, ReactFramework or Angular frameworks and expand your coding skills',
                     'Learn to program in JavaScript and PHP, you will create projects on the Laravel framework. You can change direction and become a popular web developer'
                 ],
                 titles: ['Beginners in web development', 'Beginning developers', 'IT specialists']
@@ -256,7 +293,7 @@ const initialState = {
                 texts: [
                     'Which will adaptively adapt to the screen size and look equally cool on different devices: from small smartphones to TVs',
                     'Master two popular languages at once - using JavaScript you will create interactive interfaces, and use PHP to program the server side of sites',
-                    'With the help of frameworks, you will easily assemble web applications from individual components, as from the details of a designer. You will have 3 frameworks to choose from: React, Vue or Angular',
+                    'With the help of frameworks, you will easily assemble web applications from individual components, as from the details of a designer. You will have 3 frameworks to choose from: ReactFramework, Vue or Angular',
                     'You will connect databases, work with the file system, template engines, forms, and process search queries. Get familiar with microservice architecture and learn how to build resilient applications',
                     'Take part in a team internship and create your own project - an online store. You organize the work as in a real company - you will have sprints, calls with a team leader, and you will control versions in Git'
                 ]
@@ -283,7 +320,7 @@ const initialState = {
                     'You make up several pages for an online furniture store according to the terms of reference from the customer',
                     'You will develop a complete CRM system. Through your application, employees will be able to track the lists of transactions, clients, and follow the document flow. You will go through all stages of commercial software development in a company and be ready for teamwork',
                     'You will develop a front-end for a product aggregator using Vue or Angular',
-                    'Write a task tracker with a timer in the React framework',
+                    'Write a task tracker with a timer in the ReactFramework framework',
                     'Develop a note service with the ability to autosave, delete, upload to PDF, search by notes and infinite scroll. Deploy the result to the server'
                 ],
             },
@@ -300,6 +337,19 @@ const initialState = {
                         'Algorithms and data structures for developers ~18 hours of video',
                     ]
                 }
+            },
+            reviews: {
+                letters: ['S', 'E', 'S', 'E', 'A', 'R'],
+                user_data: ['Sergey Gadaev', 'Elena Nekit, Moldova, Kishinev', 'Salavat Sadriev', 'Elena Volkova', 'Andrey Korobka', 'Radik Gataulin'],
+                course: `Course "Profession Web-developer"`,
+                texts: [
+                    'I have never regretted that I took the courses of the “Web developer” profession. Everything is cool, I especially liked the work of the curators - Alexander Dudukalo and Maxim Vasyanovich, thanks to them and the whole Skillbox team! I also want to highlight the availability of additional courses on intersecting technologies and knowledge, they are very useful',
+                    "I want to note the live presentation of the material. The speakers explain in detail, and most importantly, clearly explain and share their personal experience. This is very valuable and distinguishes learning in Skillbox from the classical university. I'm still only at the beginning of the journey, but I like it, and this is already a lot to maintain motivation",
+                    'Proper distribution of materials, step-by-step training - I really like everything! I have been going to this for a long time',
+                    'I really like that I can adjust the training schedule as it suits me. As well as interesting and informative videos',
+                    "I like how the material for training is presented, tests are presented, as well as the curators' answers to questions in the course's Telegram chat",
+                    'I like the opportunity to build my own training schedule, as well as the presence of an assistant when performing practical tasks. It is worth noting special attention to the verification of practical work: they check it qualitatively and reasonably'
+                ]
             }
         }
     } as CourseType,
@@ -375,10 +425,20 @@ const initialState = {
                         'Understanding the main classes and methods',
                     ]
                 }
+            },
+            reviews: {
+                letters: ['D', 'N', 'S'],
+                user_data: ['Denis Katkov', 'Nikita Xolodkov', 'Stanisla Talanov'],
+                course: `Course "Profession C++ developer"`,
+                texts: [
+                    'I like the availability of explanations, conciseness, brevity of presentation of rather complex things. A fairly quick response of the curator to messages and completed tasks, detailed recommendations and links to additional materials on the topic, if required',
+                    "I liked the attitude of the curators and the understanding that the study of absolutely new material is given to everyone in different ways. Regardless of the student's skill level, the curators will always respond as positively as possible, support and guide, so to speak, on the right path",
+                    'Well chosen material. Interesting practical tasks motivate to study additional sources and deeper immersion in the topic. At the same time, there is enough material in the videos to complete them'
+                ]
             }
         }
     } as CourseType,
-    python_fullstack: {
+    python_fullstack:  {
         job_name: 'Python Fullstack-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_43712003895f94c163a288e6e9e0e00bbf671110.webp',
         time: '1 year',
@@ -444,6 +504,16 @@ const initialState = {
                 courses: {
                     titles: ['Python Basic', 'Python Advanced', 'Soft skills for a programmer', 'Algorithms and data structures',]
                 }
+            },
+            reviews: {
+                letters: ['V', 'A', 'P'],
+                user_data: ['Vyacheslav Smirnov', 'Alexander Chemakin', 'Pavel Shkaburin'],
+                course: `Course "Profession Python Fullstack-developer"`,
+                texts: [
+                    'Very well designed curriculum. Curators are always ready to help and suggest the best solution to problems',
+                    'Skillbox is the best educational platform: cool speakers and curators, very good feedback, understandable and high-quality educational content',
+                    'Excellent presentation of information. The volume of new material in each module is such that it is neither too much nor too little. The content of the modules is constantly updated'
+                ]
             }
         }
     } as CourseType,
@@ -525,6 +595,12 @@ const initialState = {
                 courses: {
                     titles: ['Kotlin ≈ 4-5 months', 'Android developer. Level 1 ≈ 5-6 months', 'Android developer. Level 2 ≈4 months',]
                 }
+            },
+            reviews: {
+                letters: ['B'],
+                user_data: ['Bukreev Andrey'],
+                course: `Course "Profession Android-developer"`,
+                texts: ["Learning on the Skillbox platform gave me exactly what I wanted. But keep in mind that you have to write a lot of code. Sometimes, in order to do practical work, you need to ask the curator for help. It's cool that he does not give direct hints, but advises additional materials. Sometimes it was necessary to literally break the brain to correct the mistake. But it was worth it. Thanks to my curator Octavian for his support. Also, some advice for newbies. Don't be afraid to make tasks with an asterisk if you want to get the most out of the course"]
             }
         }
     } as CourseType,
@@ -659,6 +735,12 @@ const initialState = {
                 courses: {
                     titles: ['iOS development. Level 1 ~6 months', 'iOS development. Level 2 ~4 months']
                 }
+            },
+            reviews: {
+                letters: ['I'],
+                user_data: ['Ivan Pestov'],
+                course: 'Course "Profession IOS-developer"',
+                texts: ['I liked that the teacher answers quickly, even on his days off']
             }
         }
     } as CourseType,
@@ -717,13 +799,19 @@ const initialState = {
             },
             content: {
                 title: {
-                    text: '3 basic courses are waiting for you: on web layout, JavaScript basics and one of its frameworks - React, Vue or Angular.To master backend development, you will learn PHP. And then take 11 additional courses on algorithms, Git, technical EnglishBig and more',
+                    text: '3 basic courses are waiting for you: on web layout, JavaScript basics and one of its frameworks - ReactFramework, Vue or Angular.To master backend development, you will learn PHP. And then take 11 additional courses on algorithms, Git, technical EnglishBig and more',
                     numbers: ['100+', '500'],
                     descriptions: ['thematic modules', 'video materials']
                 },
                 courses: {
                     titles: ['PHP. Level 1', 'PHP. Level 2', 'Soft skills for a programmer', 'Algorithms and data structures']
                 }
+            },
+            reviews: {
+                letters: ['I'],
+                user_data: ['Ivan Dudikov'],
+                course: 'Course "Profession PHP Fullstack-developer"',
+                texts: ['I liked the video answer on practical work with a detailed report. I see that the curator has a deep knowledge of the course material. He easily navigates the topic, gives advice on improving my code. I am facing this for the first time']
             }
         }
     } as CourseType,
@@ -872,6 +960,19 @@ const initialState = {
                         'Team Internship: Social Network Development',
                     ]
                 }
+            },
+            reviews: {
+                letters: ['A', 'D', 'D', 'V', 'A', 'M'],
+                user_data: ['Anna Rudova', 'Dmitry Slepec, Belgorod', 'Danil Panik', 'Vladislav Vidin', 'Anton Chupin', 'Max Vlasov'],
+                course: 'Course "Profession Java-developer"',
+                texts: [
+                    'I like the feedback from the curators, updating materials and a lot of additional useful information for self-study',
+                    'I like the opportunity to study at any time, the structure of the course and the reworked content of the program, the good presentation of the material on video and the response time of the curator - no more than one day. At the same time, I would like to be able to submit several works at once within the same block',
+                    'There is a lot of interesting material in the course. I try to go through it carefully and study all the additional information on the topic. It\'s great that you can test the programs in practical tasks with autotests and figure it out yourself',
+                    'Lots of practice, lots of topics to explore. Feedback from the curator. Positive attitude, beautiful and comfortable design. In general, it is difficult, but interesting',
+                    'I liked the approach to learning. I myself choose the pace of study and how much time per week to devote to it',
+                    'I like the good elaboration of old material. Skillbox does not stand still, and every month the courses improve: new videos are added, the material of practical work becomes more interesting. Webinars from Konstantin are very useful for learning and consolidating the material. Good community of participants'
+                ]
             }
         }
     } as CourseType,
@@ -904,7 +1005,7 @@ const initialState = {
             skills: {
                 texts: [
                     'Build web pages and emails with HTML and CSS',
-                    'Work with frameworks: Angular, React.js, Vue.js',
+                    'Work with frameworks: Angular, ReactFramework.js, Vue.js',
                     'Work with TypeScript',
                     'Programming in JavaScript',
                     'Apply algorithms and data structures',
@@ -921,6 +1022,12 @@ const initialState = {
                 courses: {
                     titles: ['Typescript. Basic level']
                 }
+            },
+            reviews: {
+                letters: ['A'],
+                user_data: ['Alexander Kostenko, Russia, Istra'],
+                course: 'Course "Profession Frontend-developer from zero to PRO"',
+                texts: ['The quality of the material and the speakers are on top: they explain without water and with interest. Quick feedback from the curator']
             }
         }
     } as CourseType,
@@ -962,7 +1069,7 @@ const initialState = {
                 texts: [
                     'Study in detail all the possibilities of modern CSS, learn how to layout adaptive sites that are convenient to use. Make projects more aesthetic with animations and transitions',
                     'You will design the logic of the site. From a simple modal window to asynchronous data loading from the server and enterprise application programming. Learn one of the most popular programming languages without stress',
-                    'With the help of frameworks, you can develop complex web services faster, and they also consume browser resources more efficiently. You choose what to learn - React or Vue',
+                    'With the help of frameworks, you can develop complex web services faster, and they also consume browser resources more efficiently. You choose what to learn - ReactFramework or Vue',
                     'You will save all stages of work on projects so that colleagues always have access to the code, and random errors can be fixed in two clicks',
                     'Learn how to work with sprints and Scrum methodology. Under the guidance of a team leader, together with other students, write a web application'
                 ]
@@ -977,7 +1084,7 @@ const initialState = {
                     titles: [
                         'Web layout. Basic level',
                         'JavaScript. Basic level',
-                        'Choice course. React.js',
+                        'Choice course. ReactFramework.js',
                         'Choice course. Vue.js',
                         'Web layout. Advanced level',
                         'JavaScript. Advanced level',
@@ -1004,7 +1111,7 @@ const initialState = {
 
         course: {
             header: {
-                titleTxt: "You will learn how to develop full-fledged websites and web applications in JS from scratch and learn one of the frameworks - Vue, React or Angular. Become a valuable employee for any IT company, understand how to get a promotion, and be able to earn more",
+                titleTxt: "You will learn how to develop full-fledged websites and web applications in JS from scratch and learn one of the frameworks - Vue, ReactFramework or Angular. Become a valuable employee for any IT company, understand how to get a promotion, and be able to earn more",
                 companies: '6 000',
                 salary: '1400',
                 projects: '4',
@@ -1018,7 +1125,7 @@ const initialState = {
                 texts: [
                     "You will learn how to make up, code in JavaScript and develop full-fledged websites from scratch. Master the full cycle of creating web projects and be able to get a job in an IT company",
                     'You will get acquainted with Node.js and frameworks and deepen your knowledge. You can move to the position of a fullstack developer in a web studio or create turnkey websites on freelance',
-                    'You will learn Vue.js, React.js or Angular and be able to create complex interactive interfaces. Get soft skills for professional development and understand where to go next'
+                    'You will learn Vue.js, ReactFramework.js or Angular and be able to create complex interactive interfaces. Get soft skills for professional development and understand where to go next'
                 ],
                 titles: ['Those who want to start a career as a programmer', 'Beginning developers', 'Experienced professionals']
             },
@@ -1033,7 +1140,7 @@ const initialState = {
                 ],
                 texts: [
                     "Get familiar with HTML and CSS, be able to create landing pages and multi-page responsive websites. Learn to find errors in someone else's layout and fix already finished code",
-                    'Learn React.js, Vue.js or Angular and learn how to create dynamic interactive user interfaces',
+                    'Learn ReactFramework.js, Vue.js or Angular and learn how to create dynamic interactive user interfaces',
                     'You will learn the principles of object-oriented programming and will be able to develop sites with different functionality in JavaScript using Node.JS',
                     'Learn the difference between MySQL, Redis and MongoDB. Learn to manage large amounts of data and get what you want with queries',
                     'Learn how to work with a distributed version control system, be able to easily make or roll back changes and work on a project in a large team',
@@ -1062,7 +1169,7 @@ const initialState = {
                     'Develop a web application using JavaScript',
                     'Develop the frontend and backend for a personal note service using Node.js',
                     'Create a full-fledged online store using the Vue.js framework',
-                    'Set up the integration of posts from the Reddit news site using the React.js framework',
+                    'Set up the integration of posts from the Reddit news site using the ReactFramework.js framework',
                     'Develop a full-fledged online store on the Angular framework'
                 ],
             },
@@ -1077,6 +1184,12 @@ const initialState = {
                         'Soft skills for a programmer',
                     ]
                 }
+            },
+            reviews: {
+                letters: ['M'],
+                user_data: ['Muxamadzhon Nabiev, Uzbekistan, Phergana'],
+                course: 'Course "Profession Javascript Fullstack-developer"',
+                texts: ['Everything is clear and clearly explained. Before starting my studies, I thought that it would be simply unrealistic to learn this profession, but Skillbox proved the opposite, which I am very happy about. Thanks a lot!']
             }
         }
     } as CourseType,

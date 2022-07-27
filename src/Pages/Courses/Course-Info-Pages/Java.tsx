@@ -8,13 +8,36 @@ import {Title} from "../Components/Content/Title"
 import {Knowledge} from "../Components/Content/Courses/Knowledges"
 import {EnglishSmall} from "../Components/Content/Courses/English-Small"
 import {Note} from "../Components/Content/Note"
-import {CourseSmall} from "../Components/Content/Course-Small";
-import {Triangle} from "../Components/Content/Triangle";
-import {CoursesTitle} from "../Components/Content/Courses-Title";
-import {React} from "../Components/Content/Courses/React";
-import {TwoTeachers} from "../Components/Teachers/Two-Teachers";
+import {CourseSmall} from "../Components/Content/Course-Small"
+import {Triangle} from "../Components/Content/Triangle"
+import {CoursesTitle} from "../Components/Content/Courses-Title"
+import {TwoTeachers} from "../Components/Teachers/Two-Teachers"
+import {SixReviews} from "../Components/Reviews/Six-Reviews";
+import React, {useEffect, useState} from "react";
 
-export function Java({header, time, img, for_who, job_name, skills, classNames = [''], content, teachers}: CoursePropsType) {
+let marginLeft = 0
+
+export function Java({header, time, img, for_who, job_name, skills, classNames = [''], content, teachers, reviews}: CoursePropsType) {
+    const [id, changeId] = useState(0)
+    const course_container: any = React.createRef()
+
+    useEffect(() => {
+        const reviews = course_container.current.querySelector('.reviews')
+
+        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
+        const reviewsSlider = reviews.querySelector('.row__list')
+
+        reviewsButtons[0].onclick = () => {
+            marginLeft = marginLeft + 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+
+        reviewsButtons[1].onclick = () => {
+            marginLeft = marginLeft - 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+    })
+
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -75,6 +98,7 @@ export function Java({header, time, img, for_who, job_name, skills, classNames =
                 </div>
             </div>
             <TwoTeachers avatars={[teachers.pilipenko.img, teachers.ovchinnikov.img]} names={[teachers.pilipenko.name, teachers.ovchinnikov.name]} surnames={[teachers.pilipenko.surname, teachers.ovchinnikov.surname]} descriptions={[teachers.pilipenko.description, teachers.ovchinnikov.description]} texts={[teachers.pilipenko.text, teachers.ovchinnikov.text]}/>
+            <SixReviews letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts} id={id} changeId={changeId}/>
         </div>
     )
 }

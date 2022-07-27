@@ -11,7 +11,6 @@ import {Note} from "../Components/Content/Note"
 import {MarkupBasic} from "../Components/Content/Courses/Markup-Basic"
 import {JSBasic} from "../Components/Content/Courses/JS-Basic"
 import {Vue} from "../Components/Content/Courses/Vue"
-import {React} from "../Components/Content/Courses/React"
 import {Angular} from "../Components/Content/Courses/Angular"
 import {MarkupAdvanced} from "../Components/Content/Courses/Markup-Advanced"
 import {JSAdvanced} from "../Components/Content/Courses/JS-Advanced"
@@ -26,10 +25,34 @@ import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {TwelveTeachers} from "../Components/Teachers/Twelve-Teachers"
+import React, {useEffect, useState} from "react"
+import {ReactFramework} from "../Components/Content/Courses/React-Framework";
 
-export function Web({for_who, time, img, header, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
+let marginLeft = 0
+
+export function Web({for_who, time, img, header, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
+    const [id, changeId] = useState(0)
+    const course_container: any = React.createRef()
+
+    useEffect(() => {
+        const reviews = course_container.current.querySelector('.reviews')
+
+        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
+        const reviewsSlider = reviews.querySelector('.row__list')
+
+        reviewsButtons[0].onclick = () => {
+            marginLeft = marginLeft + 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+
+        reviewsButtons[1].onclick = () => {
+            marginLeft = marginLeft - 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+    })
+
     return(
-        <div className={'course-container'}>
+        <div className={'course-container'} ref={course_container}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts} />
             <SkillsFiveTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
@@ -74,7 +97,7 @@ export function Web({for_who, time, img, header, job_name, skills, projects, cla
                     <div className={'content__courses'}>
                         <CoursesTitle title={'Choice course'}/>
                         <Vue/>
-                        <React/>
+                        <ReactFramework/>
                         <Angular/>
                     </div>
                     <div className={'content__courses'}>

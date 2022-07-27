@@ -11,7 +11,7 @@ import {MarkupAdvanced} from "../Components/Content/Courses/Markup-Advanced"
 import {JSBasic} from "../Components/Content/Courses/JS-Basic"
 import {JSAdvanced} from "../Components/Content/Courses/JS-Advanced"
 import {Vue} from "../Components/Content/Courses/Vue"
-import {React} from "../Components/Content/Courses/React"
+import {ReactFramework} from "../Components/Content/Courses/React-Framework"
 import {Angular} from "../Components/Content/Courses/Angular"
 import {TouchTyping} from "../Components/Content/Courses/Touch-Typing"
 import {Photoshop} from "../Components/Content/Courses/Photoshop"
@@ -26,9 +26,10 @@ import {SkillsEightTexts} from "../Components/Skills/SkillsEightTexts"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {CourseTitleSmall} from "../Components/Content/Course-Title-Small"
-import {TeachersItem} from "../../Teachers/Components/TeachersItem";
+import {TeachersItem} from "../../Teachers/Components/TeachersItem"
+import {OneReview} from "../Components/Reviews/One-Review"
 
-export function PHPFullstack({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
+export function PHPFullstack({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -76,7 +77,7 @@ export function PHPFullstack({header, time, img, for_who, job_name, skills, proj
                     <div className={'content__courses'}>
                         <CoursesTitle title={'Choice course'}/>
                         <Vue/>
-                        <React/>
+                        <ReactFramework/>
                         <Angular/>
                     </div>
                     <div className={'content__courses'}>
@@ -104,6 +105,7 @@ export function PHPFullstack({header, time, img, for_who, job_name, skills, proj
                     <TeachersItem img={teachers.yakovushen.img} name={teachers.yakovushen.name} surname={teachers.yakovushen.surname} description={teachers.yakovushen.description}/>
                 </div>
             </div>
+            <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
         </div>
     )
 }

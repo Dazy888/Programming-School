@@ -12,7 +12,7 @@ import {JSBasic} from "../Components/Content/Courses/JS-Basic"
 import {JSAdvanced} from "../Components/Content/Courses/JS-Advanced"
 import {Node} from "../Components/Content/Courses/Node"
 import {Vue} from "../Components/Content/Courses/Vue"
-import {React} from "../Components/Content/Courses/React"
+import {ReactFramework} from "../Components/Content/Courses/React-Framework"
 import {Angular} from "../Components/Content/Courses/Angular"
 import {Knowledge} from "../Components/Content/Courses/Knowledges"
 import {TouchTyping} from "../Components/Content/Courses/Touch-Typing"
@@ -27,8 +27,9 @@ import {CourseSmall} from "../Components/Content/Course-Small"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {EightTeachers} from "../Components/Teachers/Eight-Teachers"
+import {OneReview} from "../Components/Reviews/One-Review";
 
-export function JavascriptFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
+export function JavascriptFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
     return (
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -52,7 +53,7 @@ export function JavascriptFullstack({time, img, header, for_who, job_name, skill
                     <div className={'content__courses'}>
                         <CoursesTitle title={'Choice course'}/>
                         <Vue/>
-                        <React/>
+                        <ReactFramework/>
                         <Angular/>
                     </div>
                     <div className={'content__courses'}>
@@ -74,6 +75,7 @@ export function JavascriptFullstack({time, img, header, for_who, job_name, skill
                            names={[teachers.kornienko.name, teachers.vasiyanovich.name, teachers.yakovushen.name, teachers.bondarovich.name, teachers.savchenko.name, teachers.kuznetsov.name, teachers.klimonova.name, teachers.mirotin.name]}
                            surnames={[teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.yakovushen.surname, teachers.bondarovich.surname, teachers.savchenko.surname, teachers.kuznetsov.surname, teachers.klimonova.surname, teachers.mirotin.surname]}
                            descriptions={[teachers.kornienko.description, teachers.vasiyanovich.description, teachers.yakovushen.description, teachers.bondarovich.description, teachers.savchenko.description, teachers.kuznetsov.description, teachers.klimonova.description, teachers.mirotin.description]}/>
+            <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
         </div>
     )
 }

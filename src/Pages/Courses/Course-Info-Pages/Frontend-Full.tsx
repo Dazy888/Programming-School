@@ -12,7 +12,7 @@ import {MarkupBasic} from "../Components/Content/Courses/Markup-Basic"
 import {JSBasic} from "../Components/Content/Courses/JS-Basic"
 import {Node} from "../Components/Content/Courses/Node"
 import {Vue} from "../Components/Content/Courses/Vue"
-import {React} from "../Components/Content/Courses/React"
+import {ReactFramework} from "../Components/Content/Courses/React-Framework"
 import {Angular} from "../Components/Content/Courses/Angular"
 import {MarkupAdvanced} from "../Components/Content/Courses/Markup-Advanced"
 import {JSAdvanced} from "../Components/Content/Courses/JS-Advanced"
@@ -25,9 +25,10 @@ import {English} from "../Components/Content/Courses/English"
 import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
-import {TwelveTeachers} from "../Components/Teachers/Twelve-Teachers";
+import {TwelveTeachers} from "../Components/Teachers/Twelve-Teachers"
+import {OneReview} from "../Components/Reviews/One-Review";
 
-export function FrontendFull({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
+export function FrontendFull({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
     return (
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -76,7 +77,7 @@ export function FrontendFull({header, time, img, for_who, job_name, skills, proj
                     <div className={'content__courses'}>
                         <CoursesTitle title={'Choice of direction'}/>
                         <Vue/>
-                        <React/>
+                        <ReactFramework/>
                         <Angular/>
                     </div>
                     <div className={'content__courses'}>
@@ -98,6 +99,7 @@ export function FrontendFull({header, time, img, for_who, job_name, skills, proj
                             names={[teachers.mixeev.name, teachers.tiunov.name, teachers.kornienko.name, teachers.vasiyanovich.name, teachers.avdeev.name, teachers.bondarovich.name, teachers.savchenko.name, teachers.mirotin.name, teachers.pozdnyakov.name, teachers.klimonova.name, teachers.kuznetsov.name, teachers.borzunov.name]}
                             surnames={[teachers.mixeev.surname, teachers.tiunov.surname, teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.avdeev.surname, teachers.bondarovich.surname, teachers.savchenko.surname, teachers.mirotin.surname, teachers.pozdnyakov.surname, teachers.klimonova.surname, teachers.kuznetsov.surname, teachers.borzunov.surname]}
                             descriptions={[teachers.mixeev.description, teachers.tiunov.description, teachers.kornienko.description, teachers.vasiyanovich.description, teachers.avdeev.description, teachers.bondarovich.description, teachers.savchenko.description, teachers.mirotin.description, teachers.pozdnyakov.description, teachers.klimonova.description, teachers.kuznetsov.description, teachers.borzunov.description]}/>
+            <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
         </div>
     )
 }

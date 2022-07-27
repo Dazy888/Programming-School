@@ -1,5 +1,5 @@
 import {CourseTitle} from "../Course-Title"
-import {React} from "./React"
+import {ReactFramework} from "./React-Framework"
 
 export function Vue() {
     return(

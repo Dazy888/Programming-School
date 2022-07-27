@@ -11,9 +11,34 @@ import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {CourseSmall} from "../Components/Content/Course-Small"
 import {CourseTitleSmall} from "../Components/Content/Course-Title-Small"
-import {TwoTeachers} from "../Components/Teachers/Two-Teachers";
+import {TwoTeachers} from "../Components/Teachers/Two-Teachers"
+import {SixReviews} from "../Components/Reviews/Six-Reviews"
+import {SliderControls} from "../Components/Projects/Projects"
+import React, {useEffect, useState} from "react"
 
-export function JavaPro({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers}: CoursePropsType) {
+let marginLeft = 0
+
+export function JavaPro({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers, reviews}: CoursePropsType) {
+    const [id, changeId] = useState(0)
+    const reviews_ref: any = React.createRef()
+
+    useEffect(() => {
+        const reviews = reviews_ref.current
+
+        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
+        const reviewsSlider = reviews.querySelector('.row__list')
+
+        reviewsButtons[0].onclick = () => {
+            marginLeft = marginLeft + 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+
+        reviewsButtons[1].onclick = () => {
+            marginLeft = marginLeft - 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+    })
+
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -128,6 +153,7 @@ export function JavaPro({img, header, time, for_who, job_name, skills, className
                 </div>
             </div>
             <TwoTeachers avatars={[teachers.pilipenko.img, teachers.ovchinnikov.img]} names={[teachers.pilipenko.name, teachers.ovchinnikov.name]} surnames={[teachers.pilipenko.surname, teachers.ovchinnikov.surname]} descriptions={[teachers.pilipenko.description, teachers.ovchinnikov.description]} texts={[teachers.pilipenko.text, teachers.ovchinnikov.text]}/>
+            <SixReviews changeId={changeId} id={id} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
         </div>
     )
 }

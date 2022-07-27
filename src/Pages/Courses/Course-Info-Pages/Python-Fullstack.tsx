@@ -13,7 +13,7 @@ import {MarkupAdvanced} from "../Components/Content/Courses/Markup-Advanced"
 import {JSBasic} from "../Components/Content/Courses/JS-Basic"
 import {JSAdvanced} from "../Components/Content/Courses/JS-Advanced"
 import {Vue} from "../Components/Content/Courses/Vue"
-import {React} from "../Components/Content/Courses/React"
+import {ReactFramework} from "../Components/Content/Courses/React-Framework"
 import {Angular} from "../Components/Content/Courses/Angular"
 import {TouchTyping} from "../Components/Content/Courses/Touch-Typing"
 import {Photoshop} from "../Components/Content/Courses/Photoshop"
@@ -27,8 +27,33 @@ import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {CourseSmallList} from "../Components/Content/Course-Small-List"
 import {EightTeachers} from "../Components/Teachers/Eight-Teachers"
+import {ThreeReviews} from "../Components/Reviews/Three-Reviews"
+import {Simulate} from "react-dom/test-utils"
+import React, {useEffect, useState} from "react";
 
-export function PythonFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
+let marginLeft = 0
+
+export function PythonFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
+    const [id, changeId] = useState(0)
+    const course_container: any = React.createRef()
+
+    useEffect(() => {
+        const reviews = course_container.current.querySelector('.reviews')
+
+        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
+        const reviewsSlider = reviews.querySelector('.row__list')
+
+        reviewsButtons[0].onclick = () => {
+            marginLeft = marginLeft + 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+
+        reviewsButtons[1].onclick = () => {
+            marginLeft = marginLeft - 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+    })
+
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -118,7 +143,7 @@ export function PythonFullstack({time, img, header, for_who, job_name, skills, p
                     <div className={'content__courses'}>
                         <CoursesTitle title={'Frameworks for JavaScript'}/>
                         <Vue/>
-                        <React/>
+                        <ReactFramework/>
                         <Angular/>
                     </div>
                     <div className={'content__courses'}>
@@ -141,6 +166,7 @@ export function PythonFullstack({time, img, header, for_who, job_name, skills, p
                            names={[teachers.names[0], teachers.names[1], teachers.names[2], teachers.kornienko.name, teachers.vasiyanovich.name, teachers.yakovushen.name, teachers.krotov.name, teachers.shulaev.name]}
                            surnames={[teachers.surnames[0], teachers.surnames[1], teachers.surnames[2], teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.yakovushen.surname, teachers.krotov.surname, teachers.shulaev.surname]}
                            descriptions={[teachers.descriptions[0], teachers.descriptions[1], teachers.descriptions[2], teachers.kornienko.description, teachers.vasiyanovich.description, teachers.yakovushen.description, teachers.krotov.description, teachers.shulaev.description]}/>
+            <ThreeReviews letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts} id={id} changeId={changeId}/>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import {CourseHeader} from "../Components/Header/Course-Header"
 import {ForWho} from "../Components/For-Who/For-Who"
 import {SkillsSixTitles} from "../Components/Skills/SkillsSixTitles"
-import {Projects} from "../Components/Projects/Projects"
+import {Projects, SliderControls} from "../Components/Projects/Projects"
 import {CourseProjectsPropsType} from "./Types"
 import {HowUse} from "../Components/How-Use/How-Use"
 import {Employment} from "../Components/Employment/Employment"
@@ -14,12 +14,35 @@ import {EnglishSmall} from "../Components/Content/Courses/English-Small"
 import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
-import React from "react";
+import React, {useEffect, useState} from "react";
+import {ReviewsItem} from "../Components/Reviews/Reviews-Item";
+import {ThreeReviews} from "../Components/Reviews/Three-Reviews";
 
-export function CPlusPlus({header, img, time, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
-    console.log(teachers.texts)
+let marginLeft = 0
+
+export function CPlusPlus({header, img, time, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
+    const [id, changeId] = useState(0)
+    const course_container: any = React.createRef()
+
+    useEffect(() => {
+        const reviews = course_container.current.querySelector('.reviews')
+
+        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
+        const reviewsSlider = reviews.querySelector('.row__list')
+
+        reviewsButtons[0].onclick = () => {
+            marginLeft = marginLeft + 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+
+        reviewsButtons[1].onclick = () => {
+            marginLeft = marginLeft - 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+    })
+
     return(
-        <div className={'course-container'}>
+        <div className={'course-container'} ref={course_container}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
@@ -145,6 +168,7 @@ export function CPlusPlus({header, img, time, for_who, job_name, skills, project
                     </div>
                 </div>
             </div>
+            <ThreeReviews letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts} id={id} changeId={changeId}/>
         </div>
     )
 }

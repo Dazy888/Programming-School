@@ -1,7 +1,7 @@
 import {CourseHeader} from "../Components/Header/Course-Header"
 import {ForWho} from "../Components/For-Who/For-Who"
 import {SkillsNineTexts} from "../Components/Skills/SkillsNineTexts"
-import {Projects} from "../Components/Projects/Projects"
+import {Projects, SliderControls} from "../Components/Projects/Projects"
 import {CourseProjectsPropsType} from "./Types"
 import {HowUse} from "../Components/How-Use/How-Use"
 import {Employment} from "../Components/Employment/Employment"
@@ -17,10 +17,34 @@ import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {SixTeachers} from "../Components/Teachers/Six-Teachers"
+import {SixReviews} from "../Components/Reviews/Six-Reviews"
+import React, {useEffect, useState} from "react"
 
-export function Python({job_name, for_who, header, img, time, skills, projects, content, teachers}: CourseProjectsPropsType) {
+let marginLeft = 0
+
+export function Python({job_name, for_who, header, img, time, skills, projects, content, teachers, reviews}: CourseProjectsPropsType) {
+    const [id, changeId] = useState(0)
+    const course_container: any = React.createRef()
+
+    useEffect(() => {
+        const reviews = course_container.current.querySelector('.reviews')
+
+        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
+        const reviewsSlider = reviews.querySelector('.row__list')
+
+        reviewsButtons[0].onclick = () => {
+            marginLeft = marginLeft + 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+
+        reviewsButtons[1].onclick = () => {
+            marginLeft = marginLeft - 750
+            reviewsSlider.style.marginLeft = marginLeft + 'px'
+        }
+    })
+
     return(
-        <div className={'course-container'}>
+        <div className={'course-container'} ref={course_container}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsNineTexts texts={skills.texts}/>
@@ -150,6 +174,7 @@ export function Python({job_name, for_who, header, img, time, skills, projects, 
                 </div>
             </div>
             <SixTeachers avatars={[...teachers.avatars, teachers.shulaev.img, teachers.krotov.img]} names={[...teachers.names, teachers.shulaev.name, teachers.krotov.name]} surnames={[...teachers.surnames, teachers.shulaev.surname, teachers.krotov.surname]} descriptions={[...teachers.descriptions, teachers.shulaev.description, teachers.krotov.description]}/>
+            <SixReviews changeId={changeId} id={id} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
         </div>
     )
 }

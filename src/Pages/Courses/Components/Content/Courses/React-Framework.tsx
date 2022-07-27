@@ -1,9 +1,9 @@
 import {CourseTitle} from "../Course-Title"
 
-export function React() {
+export function ReactFramework() {
     return (
         <div className={'courses__item'}>
-            <CourseTitle title={'React'} isButton={true}/>
+            <CourseTitle title={'ReactFramework'} isButton={true}/>
             <ul className={'item__list'}>
                 <li className={'text'}>Introduction to React</li>
                 <li className={'text'}>Create a project</li>

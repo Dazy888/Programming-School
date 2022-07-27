@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Create ReactFramework App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create ReactFramework App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -22,7 +22,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### `yarn build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It correctly bundles ReactFramework in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
@@ -41,6 +41,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can learn more in the [Create ReactFramework App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn ReactFramework, check out the [ReactFramework documentation](https://reactjs.org/).
