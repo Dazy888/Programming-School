@@ -15,15 +15,16 @@ import {TwoTeachers} from "../Components/Teachers/Two-Teachers"
 import {SixReviews} from "../Components/Reviews/Six-Reviews"
 import {SliderControls} from "../Components/Projects/Projects"
 import React, {useEffect, useState} from "react"
+import {ElevenResumes} from "../Components/Resume/Eleven-Resumes";
 
 let marginLeft = 0
 
-export function JavaPro({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers, reviews}: CoursePropsType) {
+export function JavaPro({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers, reviews, resume}: CoursePropsType) {
     const [id, changeId] = useState(0)
-    const reviews_ref: any = React.createRef()
+    const course_container: any = React.createRef()
 
     useEffect(() => {
-        const reviews = reviews_ref.current
+        const reviews = course_container.current
 
         const reviewsButtons = reviews.querySelectorAll('.controls__btn')
         const reviewsSlider = reviews.querySelector('.row__list')
@@ -40,7 +41,7 @@ export function JavaPro({img, header, time, for_who, job_name, skills, className
     })
 
     return(
-        <div className={'course-container'}>
+        <div className={'course-container'} ref={course_container}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
@@ -154,6 +155,7 @@ export function JavaPro({img, header, time, for_who, job_name, skills, className
             </div>
             <TwoTeachers avatars={[teachers.pilipenko.img, teachers.ovchinnikov.img]} names={[teachers.pilipenko.name, teachers.ovchinnikov.name]} surnames={[teachers.pilipenko.surname, teachers.ovchinnikov.surname]} descriptions={[teachers.pilipenko.description, teachers.ovchinnikov.description]} texts={[teachers.pilipenko.text, teachers.ovchinnikov.text]}/>
             <SixReviews changeId={changeId} id={id} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
+            <ElevenResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

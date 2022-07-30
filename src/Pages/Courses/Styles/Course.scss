@@ -299,11 +299,11 @@
   }
 
   .course-container {
-    width: 1500px;
     margin: auto;
 
     .course-header {
-      margin-top: 100px;
+      width: 1500px;
+      margin: 100px auto 0;
 
       .header__title {
         width: 100%;
@@ -590,10 +590,11 @@
     }
 
     .employment {
+      width: 1500px;
       padding: 75px 215px;
       background: white;
       box-sizing: border-box;
-      margin-top: 100px;
+      margin: 100px auto 0;
       border-radius: 10px;
       overflow: hidden;
 
@@ -1240,7 +1241,8 @@
     }
 
     .reviews {
-      margin-bottom: 100px;
+      width: 1500px;
+      margin: 0 auto 100px;
       overflow: hidden;
       background: white;
       border-radius: 20px;
@@ -1306,6 +1308,166 @@
                 font-size: 10px;
               }
             }
+          }
+        }
+      }
+    }
+
+    .resume {
+      width: 1170px;
+      padding: 30px 0;
+      border: 3px solid #60B3FF;
+      border-radius: 20px;
+      margin: auto;
+
+      .title {
+        font-size: 32px;
+        color: white;
+      }
+
+      .small-title {
+        color: white;
+      }
+
+      .light-grey-txt {
+        width: 235px;
+        display: inline-block;
+        opacity: 1;
+        position: relative;
+        padding-left: 18px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: 0;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: white;
+        }
+      }
+
+      .resume__title {
+        max-width: 1070px;
+        margin: auto;
+
+        .title__job {
+          display: flex;
+
+          img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+          }
+        }
+      }
+
+      .resume__skills {
+        width: 1070px;
+        margin: 50px auto;
+
+        .skills__title {
+          color: white;
+          font-size: 25px;
+          font-weight: 400;
+          margin-bottom: 20px;
+        }
+
+        .skills__list {
+          align-items: baseline;
+          margin: auto auto 15px;
+
+          .list__block {
+            width: 490px;
+            align-items: baseline;
+          }
+
+          .list__item {
+            margin-right: 19px;
+          }
+        }
+      }
+
+      .line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #60B3FF;
+      }
+
+      .resume__certificate {
+        max-width: 920px;
+        margin: 50px auto;
+
+        img {
+          width: 238px;
+          height: 335px;
+        }
+
+        .certificate__text {
+          max-width: 515px;
+
+          .title {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .registration {
+      width: 100%;
+      height: 650px;
+      background: #60B3FF;
+      margin-top: 100px;
+
+      .registration__content {
+        width: 1170px;
+        height: 430px;
+        display: flex;
+        padding: 48px;
+        background: white;
+        border-radius: 20px;
+
+        .content__title {
+          max-width: 420px;
+          margin-right: 100px;
+          color: black;
+          font-size: 32px;
+          line-height: 40px;
+        }
+
+        .light-grey-txt {
+          opacity: 1;
+          color: black;
+        }
+
+        .input:focus-visible {
+          outline: 0;
+        }
+
+        input {
+          height: 20px;
+          padding: 23px 18px 10px;
+          border: 1px solid #e4e4e4;
+          margin-bottom: 15px;
+          border-radius: 10px;
+
+          &:focus {
+            border: 1px solid #c3c2be;
+          }
+        }
+
+        .name-input {
+          width: 500px;
+        }
+
+        .form__row {
+          width: 538px;
+
+          input {
+            width: 220px;
           }
         }
       }

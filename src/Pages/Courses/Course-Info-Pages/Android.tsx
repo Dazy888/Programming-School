@@ -19,8 +19,9 @@ import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {TeachersItem} from "../../Teachers/Components/TeachersItem"
 import {TeachersRow} from "../Components/Teachers/Teachers-Row"
 import {OneReview} from "../Components/Reviews/One-Review"
+import {TwelveResumes} from "../Components/Resume/Twelve-Resumes"
 
-export function Android({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
+export function Android({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -117,6 +118,7 @@ export function Android({header, time, img, for_who, job_name, skills, projects,
                 </div>
             </div>
             <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
+            <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

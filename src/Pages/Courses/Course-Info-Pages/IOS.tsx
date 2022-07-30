@@ -17,8 +17,9 @@ import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {TeachersItem} from "../../Teachers/Components/TeachersItem"
 import {OneReview} from "../Components/Reviews/One-Review";
+import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
 
-export function IOS({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
+export function IOS({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -101,6 +102,7 @@ export function IOS({header, time, img, for_who, job_name, skills, projects, cla
                 </div>
             </div>
             <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
+            <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

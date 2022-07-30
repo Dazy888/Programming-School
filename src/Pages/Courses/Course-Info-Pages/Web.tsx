@@ -27,32 +27,11 @@ import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {TwelveTeachers} from "../Components/Teachers/Twelve-Teachers"
 import React, {useEffect, useState} from "react"
 import {ReactFramework} from "../Components/Content/Courses/React-Framework";
+import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
 
-let marginLeft = 0
-
-export function Web({for_who, time, img, header, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
-    const [id, changeId] = useState(0)
-    const course_container: any = React.createRef()
-
-    useEffect(() => {
-        const reviews = course_container.current.querySelector('.reviews')
-
-        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
-        const reviewsSlider = reviews.querySelector('.row__list')
-
-        reviewsButtons[0].onclick = () => {
-            marginLeft = marginLeft + 750
-            reviewsSlider.style.marginLeft = marginLeft + 'px'
-        }
-
-        reviewsButtons[1].onclick = () => {
-            marginLeft = marginLeft - 750
-            reviewsSlider.style.marginLeft = marginLeft + 'px'
-        }
-    })
-
+export function Web({for_who, time, img, header, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
     return(
-        <div className={'course-container'} ref={course_container}>
+        <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts} />
             <SkillsFiveTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
@@ -172,6 +151,7 @@ export function Web({for_who, time, img, header, job_name, skills, projects, cla
                             names={[teachers.names[0], teachers.kornienko.name, teachers.vasiyanovich.name, teachers.tiunov.name, teachers.avdeev.name, teachers.molesku.name, teachers.pozdnyakov.name, teachers.bondarovich.name, teachers.savchenko.name, teachers.mirotin.name, teachers.ignatiev.name, teachers.pilipenko.name]}
                             surnames={[teachers.surnames[0], teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.tiunov.surname, teachers.avdeev.surname, teachers.molesku.surname, teachers.pozdnyakov.surname, teachers.bondarovich.surname, teachers.savchenko.surname, teachers.mirotin.surname, teachers.ignatiev.surname, teachers.pilipenko.surname]}
                             descriptions={[teachers.descriptions[0], teachers.kornienko.description, teachers.vasiyanovich.description, teachers.tiunov.description, teachers.avdeev.description, teachers.molesku.description, teachers.pozdnyakov.description, teachers.bondarovich.description, teachers.savchenko.description, teachers.mirotin.description, teachers.ignatiev.description, teachers.pilipenko.description]}/>
+            <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

@@ -14,13 +14,13 @@ import {EnglishSmall} from "../Components/Content/Courses/English-Small"
 import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
-import React, {useEffect, useState} from "react";
-import {ReviewsItem} from "../Components/Reviews/Reviews-Item";
-import {ThreeReviews} from "../Components/Reviews/Three-Reviews";
+import React, {useEffect, useState} from "react"
+import {ThreeReviews} from "../Components/Reviews/Three-Reviews"
+import {ElevenResumes} from "../Components/Resume/Eleven-Resumes";
 
 let marginLeft = 0
 
-export function CPlusPlus({header, img, time, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
+export function CPlusPlus({header, img, time, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
     const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
@@ -169,6 +169,7 @@ export function CPlusPlus({header, img, time, for_who, job_name, skills, project
                 </div>
             </div>
             <ThreeReviews letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts} id={id} changeId={changeId}/>
+            <ElevenResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

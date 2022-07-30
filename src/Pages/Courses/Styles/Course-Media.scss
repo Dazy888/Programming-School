@@ -337,6 +337,30 @@
       width: fit-content !important;
       margin: auto;
     }
+
+    .resume {
+      width: 1000px !important;
+
+      .resume__title {
+        width: 900px !important;
+      }
+
+      .resume__skills {
+        width: fit-content !important;
+
+        .skills__title {
+          margin-bottom: 40px !important;
+        }
+
+        .skills__list {
+          flex-direction: column;
+
+          .list__block {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -481,6 +505,48 @@
   }
 }
 
+@media screen and(max-width: 1010px) {
+  #courses-wrapper {
+    .course-container {
+      .resume {
+        width: 900px !important;
+
+        .title {
+          font-size: 27px;
+        }
+
+        .small-title {
+          font-size: 17px;
+        }
+
+        .light-grey-txt {
+          font-size: 15px;
+        }
+
+        .resume__title {
+          width: 800px !important;
+        }
+
+        .resume__skills {
+          .skills__title {
+            font-size: 22px;
+            margin-bottom: 30px !important;
+          }
+        }
+
+        .resume__certificate {
+          width: 720px;
+
+          img {
+            width: 220px;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 960px) {
   #courses-wrapper {
     .course-container {
@@ -519,6 +585,49 @@
       .text {
         font-size: 21px !important;
         line-height: 30px !important;
+      }
+    }
+
+    .course-container {
+      .resume {
+        width: 800px !important;
+
+        .title {
+          font-size: 25px;
+          font-weight: 400;
+        }
+
+        .small-title {
+          font-size: 15px;
+          font-weight: 400;
+        }
+
+        .light-grey-txt {
+          font-size: 14px;
+        }
+
+        .resume__title {
+          width: 700px !important;
+        }
+
+        .resume__skills {
+          .skills__title {
+            font-size: 20px;
+          }
+        }
+
+        .resume__certificate {
+          width: 620px;
+
+          img {
+            width: 200px;
+            height: 280px;
+          }
+
+          .certificate__text {
+            max-width: 350px;
+          }
+        }
       }
     }
   }
@@ -620,6 +729,47 @@
 
           .content__note {
             width: 520px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 810px) {
+  #courses-wrapper {
+    .course-container {
+      .resume {
+        width: 700px !important;
+
+        .title {
+          font-size: 22px;
+        }
+
+        .small-title {
+          font-size: 14px;
+        }
+
+        .resume__title {
+          width: 600px !important;
+        }
+
+        .resume__skills {
+          .skills__title {
+            font-size: 19px;
+          }
+        }
+
+        .resume__certificate {
+          width: 520px;
+
+          img {
+            width: 180px;
+            height: 260px;
+          }
+
+          .certificate__text {
+            max-width: 300px;
           }
         }
       }
@@ -743,6 +893,14 @@
           }
         }
       }
+
+      .resume {
+        width: 600px !important;
+
+        .resume__title {
+          width: 500px !important;
+        }
+      }
     }
   }
 }
@@ -796,6 +954,62 @@
     .employment__reviews {
       .title {
         font-size: 40px !important;
+      }
+    }
+
+    .course-container {
+      .resume {
+        width: 500px !important;
+
+        .title {
+          font-size: 22px;
+        }
+
+        .small-title {
+          font-size: 14px;
+        }
+
+        .light-grey-txt {
+          margin-bottom: 30px;
+        }
+
+        .resume__title {
+          width: fit-content !important;
+          flex-direction: column;
+
+          .title__salary {
+            margin-top: 30px;
+          }
+        }
+
+        .resume__skills {
+          width: 240px !important;
+          margin: 50px auto;
+
+          .skills__title {
+            font-size: 19px;
+          }
+
+          .skills__list {
+            margin-bottom: 0;
+
+            .list__block {
+              width: fit-content;
+              margin-bottom: 0;
+              flex-direction: column;
+            }
+          }
+        }
+
+        .resume__certificate {
+          width: fit-content;
+          flex-direction: column;
+          text-align: center;
+
+          img {
+            margin-top: 30px;
+          }
+        }
       }
     }
   }
@@ -1091,6 +1305,12 @@
             font-size: 14px !important;
           }
         }
+      }
+    }
+
+    .course-container {
+      .resume {
+        width: 400px !important;
       }
     }
   }
@@ -1519,6 +1739,16 @@
             height: 350px !important;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 410px) {
+  #courses-wrapper {
+    .course-container {
+      .resume {
+        width: 340px !important;
       }
     }
   }

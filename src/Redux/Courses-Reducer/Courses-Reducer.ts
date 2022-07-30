@@ -42,6 +42,12 @@ export type ReviewsType = {
     letters: Array<string>
 }
 
+export type ResumeType = {
+    salary: string
+    texts: Array<string>
+    certificate: string
+}
+
 export type CourseType = {
     job_name: string,
     main_img: string,
@@ -55,6 +61,7 @@ export type CourseType = {
         projects: ProjectsType
         content: ContentType
         reviews: ReviewsType
+        resume: ResumeType
     }
 }
 
@@ -139,6 +146,13 @@ const initialState = {
                     "The curators (I had two of them) chewed the information so that I could understand everything, thanks to them for that! Everyone answered differently, so the verdict on the speed of work on average is half a day to a day. If you buy the course, you won't regret it. You will definitely be taught!",
                     'I liked the simple and understandable presentation of the material, a lot of practical work, round-the-clock support in the chat, feedback from the curator'
                 ]
+            },
+            resume: {
+                salary: '300 usd',
+                texts: ['Python Core', 'Installing and configuring the web server', 'Clean code', 'Working with external APIs', 'Git version control system',
+                    'Async/await', 'Working with databases (pure SQL, ORM, Postgres)', 'Working with Django, Flask, FastAPI frameworks', 'Web mark-up',
+                    'Deploying applications and working with docker/docker-compose', 'Creation of bots', 'API design'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -251,6 +265,14 @@ const initialState = {
                     'I like how the material was chosen, the program was drawn up. The video explains everything clearly and interestingly. Lots of practical tasks. The good thing is that you can do it anytime',
                     "The quality of the training videos is high. The tasks are interesting, although sometimes too simple :). The curator responded within a day, plus or minus a few hours. And if I asked questions, I always got exhaustive answers to them. In the profession, in addition to the main program, there are many related training materials on various topics: from hard methodologies to soft skills and topics that broaden one's horizons - you can choose what you like. And, of course, it is convenient that you can practice at a pace that suits you"
                 ]
+            },
+            resume: {
+                salary: '550 usd',
+                texts: ['Java application development', 'Working with the Git version control system', 'Working on the Bash command line',
+                    'Debugging and testing applications, JUnit', 'Working with MySQL, ability to write queries with JOIN, knowledge of HAVING, GROUP BY, ORDER BY',
+                    'Development of web applications on the Spring framework, working with Hibernate', 'Excellent knowledge of OOP principles and design patterns',
+                    'Java Core, Collections Framework, Multithreading', 'Work on Scrum methodology', 'Web mark-up', 'Application optimization'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -350,6 +372,13 @@ const initialState = {
                     "I like how the material for training is presented, tests are presented, as well as the curators' answers to questions in the course's Telegram chat",
                     'I like the opportunity to build my own training schedule, as well as the presence of an assistant when performing practical tasks. It is worth noting special attention to the verification of practical work: they check it qualitatively and reasonably'
                 ]
+            },
+            resume: {
+                salary: '270 usd',
+                texts: ['Cross-browser, adaptive layout on HTML, CSS', 'Working with databases', 'Developing Laravel-applications', 'Teamwork',
+                'Working with front-end frameworks React, Vue, Angular', 'PHP and JavaScript programming', 'Working with external APIs', 'Knowledge of algorithms and data structures',
+                'JavaScript programming', 'Applying the principles of OOP in practice', 'Application testing', 'Building a high load backend'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -435,6 +464,13 @@ const initialState = {
                     "I liked the attitude of the curators and the understanding that the study of absolutely new material is given to everyone in different ways. Regardless of the student's skill level, the curators will always respond as positively as possible, support and guide, so to speak, on the right path",
                     'Well chosen material. Interesting practical tasks motivate to study additional sources and deeper immersion in the topic. At the same time, there is enough material in the videos to complete them'
                 ]
+            },
+            resume: {
+                salary: '650 usd',
+                texts: ['Application development in C++', 'Cross-platform development', 'Working with the STL library', 'Debugging and monitoring applications',
+                'Working with SQL', 'Working with multithreading', 'Writing code for Unreal Engine 4', 'Creating microservices', 'Working with git, gcc, gdb',
+                'Creating a REST API', 'Work with the documentation'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -514,6 +550,13 @@ const initialState = {
                     'Skillbox is the best educational platform: cool speakers and curators, very good feedback, understandable and high-quality educational content',
                     'Excellent presentation of information. The volume of new material in each module is such that it is neither too much nor too little. The content of the modules is constantly updated'
                 ]
+            },
+            resume: {
+                salary: '300 usd',
+                texts: ['Development of turnkey online stores', 'Writing commented and formatted code', 'Administration and deployment of pilot works',
+                'Ability to set and meet deadlines', 'Creation of animation sites', "Ability to understand other people's code", 'Setting up CRM integration with external systems',
+                'Writing queries against relational databases'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -601,6 +644,13 @@ const initialState = {
                 user_data: ['Bukreev Andrey'],
                 course: `Course "Profession Android-developer"`,
                 texts: ["Learning on the Skillbox platform gave me exactly what I wanted. But keep in mind that you have to write a lot of code. Sometimes, in order to do practical work, you need to ask the curator for help. It's cool that he does not give direct hints, but advises additional materials. Sometimes it was necessary to literally break the brain to correct the mistake. But it was worth it. Thanks to my curator Octavian for his support. Also, some advice for newbies. Don't be afraid to make tasks with an asterisk if you want to get the most out of the course"]
+            },
+            resume: {
+                salary: '400 usd',
+                texts: ['Strong knowledge of the Kotlin programming language', 'Testing mobile apps', 'Experience with multithreading', 'Basic skills in Figma',
+                'I create applications for Android devices', 'Conducting a code review', 'Skills with SQLite, Firebase', 'I follow the code style — my code is easy to read and understand for colleagues',
+                'Understand design patterns', 'Working with the API', 'Version control in Git', 'Technical english'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -663,6 +713,13 @@ const initialState = {
                 courses: {
                     titles: ['Profession C#-developer from scratch to PRO']
                 }
+            },
+            resume: {
+                salary: '270 usd',
+                texts: ['Knowledge of C#, .NET, Visual Studio environment', 'ADO.NET и EntityFramework Code First', 'Understanding how network protocols work',
+                'Administration and deployment of pilot works', 'Working with XML and JSON', 'HTML, CSS and JavaScript for building websites', 'The habit of writing commented and strongly formatted code',
+                'Understanding the principles of OOP', 'Familiarity with the Git version control system', 'Working with WPF to develop database user interfaces'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -741,6 +798,14 @@ const initialState = {
                 user_data: ['Ivan Pestov'],
                 course: 'Course "Profession IOS-developer"',
                 texts: ['I liked that the teacher answers quickly, even on his days off']
+            },
+            resume: {
+                salary: '400 usd',
+                texts: ['I develop mobile applications for IOS', 'I know basic sorting and searching algorithms', 'Writing reactive code using RxSwift',
+                'Teamwork experience in Git', 'I own the IOS SDK', 'Experience in developing multithreaded applications', 'Layout complex interfaces using UIKit and Swift',
+                'I can meet deadlines', 'Network request skills', 'I follow the principles of OOP and SOLID, I apply design patterns', "Read and understand other people's code",
+                'I understand the specifics of working with the App Store'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -812,6 +877,12 @@ const initialState = {
                 user_data: ['Ivan Dudikov'],
                 course: 'Course "Profession PHP Fullstack-developer"',
                 texts: ['I liked the video answer on practical work with a detailed report. I see that the curator has a deep knowledge of the course material. He easily navigates the topic, gives advice on improving my code. I am facing this for the first time']
+            },
+            resume: {
+                salary: '800 usd',
+                texts: ['Development of turnkey online stores', 'Ability to set and meet deadlines', 'Writing commented and formatted code', 'Creation of animation sites',
+                'Writing queries against relational databases', "Ability to understand other people's code", 'Setting up CRM integration with external systems', 'Administration and deployment of pilot works'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -881,7 +952,7 @@ const initialState = {
                 courses: {
                     titles: ['iOS development. Level 1', 'iOS development. Level 2', 'Kotlin', 'Android developer. Level 1', 'Android developer. Level 2 ']
                 }
-            }
+            },
         }
     } as CourseType,
     java: {
@@ -973,6 +1044,13 @@ const initialState = {
                     'I liked the approach to learning. I myself choose the pace of study and how much time per week to devote to it',
                     'I like the good elaboration of old material. Skillbox does not stand still, and every month the courses improve: new videos are added, the material of practical work becomes more interesting. Webinars from Konstantin are very useful for learning and consolidating the material. Good community of participants'
                 ]
+            },
+            resume: {
+                salary: '540 usd',
+                texts: ['Administration and deployment of pilot works', 'Knowledge of OOP principles', 'Ability to set and meet deadlines', 'The habit of writing commented and strongly formatted code',
+                'Java web application development', 'Development of web applications on the Spring framework', 'Relational database query writing skills', "Ability to understand other people's code",
+                'Working with the Git version control system'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -1028,6 +1106,12 @@ const initialState = {
                 user_data: ['Alexander Kostenko, Russia, Istra'],
                 course: 'Course "Profession Frontend-developer from zero to PRO"',
                 texts: ['The quality of the material and the speakers are on top: they explain without water and with interest. Quick feedback from the curator']
+            },
+            resume: {
+                salary: '270 usd',
+                texts: ['Responsive layout of websites and emails', 'Working with TypeScript', 'Strong knowledge of JavaScript and OOP', 'Developing Server Applications with Node.js',
+                'Working with Git version control', 'Knowledge of React.js/Angular/Vue.js', 'Understanding algorithms and data structures in projects'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -1099,6 +1183,13 @@ const initialState = {
                         'Algorithms and data structures',
                     ]
                 }
+            },
+            resume: {
+                salary: '300 usd',
+                texts: ['Responsive and cross-browser layout', 'Adjusting layouts in Figma and Photoshop', 'Knowledge of JavaScript', 'Scrum development',
+                'Working with Web API and HTTP/HTTPS protocols', 'Knowledge of SQL', 'Creation of sites and applications on Vue.js, React.js', 'Working on the Bash command line',
+                'Advanced CSS3 and HTML5 skills', 'Working with Git version control systems', 'Building server solutions', 'Deploy, assembly of projects for production'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -1190,6 +1281,13 @@ const initialState = {
                 user_data: ['Muxamadzhon Nabiev, Uzbekistan, Phergana'],
                 course: 'Course "Profession Javascript Fullstack-developer"',
                 texts: ['Everything is clear and clearly explained. Before starting my studies, I thought that it would be simply unrealistic to learn this profession, but Skillbox proved the opposite, which I am very happy about. Thanks a lot!']
+            },
+            resume: {
+                salary: '540 usd',
+                texts: ['Layout of sites on HTML and CSS', 'Working with HTTP/HTTPS protocols', 'Redux basics', 'Web development with JavaScript',
+                    'Backend development with Node.js', 'Working with Web API', 'Adaptive layout', 'Working with databases: MySQL, MongoDB, Redis', 'Creating web applications on the React.js/Vue.js/Angular framework',
+                    'Working with the Git version control system'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -1252,6 +1350,14 @@ const initialState = {
                         'Team project: online store'
                     ]
                 }
+            },
+            resume: {
+                salary: '270 usd',
+                texts: ['Install and configure Denwer, OpenServer', 'Understand and apply OOP in projects', 'Structure the code into files and folders',
+                    'I understand the principles of network operation, GET- and POST-requests', 'Working on the command line', 'Working with MySQL databases',
+                    'Working with the file system', 'Knowledge of Laravel PHP framework', 'Programming in PHP 7', 'I know the basics of HTML/CSS', 'I debug code manually and am familiar with Xdebug',
+                    'I adhere to the DRY principles and follow the code style'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType,
@@ -1302,6 +1408,14 @@ const initialState = {
                 courses: {
                     titles: ['Flutter', 'Android', 'IOS', 'Mobile app design from scratch to PRO',],
                 }
+            },
+            resume: {
+                salary: '600 usd',
+                texts: ['Creation of mobile applications according to platform guidelines', 'Experience in designing client-server applications', "Ability to understand other people's code",
+                'Knowledge of Flutter and Dart', 'Working with API, including social networks', 'Working with eactive libraries', 'Creating blocks in Swift or Kotlin',
+                'Working with Git version control', 'Working with multithreading in applications', 'Ability to set and meet deadlines', 'Uploading the application to the store',
+                'Mobile application testing'],
+                certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
             }
         }
     } as CourseType

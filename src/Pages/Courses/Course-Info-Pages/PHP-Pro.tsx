@@ -16,8 +16,9 @@ import {CourseSmall} from "../Components/Content/Course-Small"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {TwoTeachers} from "../Components/Teachers/Two-Teachers"
+import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
 
-export function PHPPro({time, img, header, for_who, job_name, skills, classNames = [''], content, teachers}: CoursePropsType) {
+export function PHPPro({time, img, header, for_who, job_name, skills, classNames = [''], content, teachers, resume}: CoursePropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -94,6 +95,7 @@ export function PHPPro({time, img, header, for_who, job_name, skills, classNames
                 </div>
             </div>
             <TwoTeachers avatars={[teachers.ignatiev.img, teachers.molesku.img]} names={[teachers.ignatiev.name, teachers.molesku.name]} surnames={[teachers.ignatiev.surname, teachers.molesku.surname]} descriptions={[teachers.ignatiev.description, teachers.molesku.description]} texts={[teachers.ignatiev.text, teachers.molesku.text]}/>
+            <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

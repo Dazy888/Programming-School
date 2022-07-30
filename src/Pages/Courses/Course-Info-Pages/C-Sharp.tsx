@@ -17,8 +17,9 @@ import {Note} from "../Components/Content/Note"
 import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {TwoTeachers} from "../Components/Teachers/Two-Teachers";
+import {TenResumes} from "../Components/Resume/Ten-Resumes";
 
-export function CSharp({header, for_who, img, time, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
+export function CSharp({header, for_who, img, time, job_name, skills, projects, classNames = [''], content, teachers, resume}: CourseProjectsPropsType) {
     return (
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} text={header.textAboutJob} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -69,6 +70,7 @@ export function CSharp({header, for_who, img, time, job_name, skills, projects, 
                 </div>
             </div>
             <TwoTeachers avatars={[teachers.avatars[0], teachers.img]} names={[teachers.names[0], teachers.name]} surnames={[teachers.surnames[0], teachers.surname]} descriptions={[teachers.descriptions[0], teachers.description]} texts={[teachers.texts[0], teachers.text]}/>
+            <TenResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

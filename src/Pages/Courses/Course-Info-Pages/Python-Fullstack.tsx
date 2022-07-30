@@ -30,10 +30,11 @@ import {EightTeachers} from "../Components/Teachers/Eight-Teachers"
 import {ThreeReviews} from "../Components/Reviews/Three-Reviews"
 import {Simulate} from "react-dom/test-utils"
 import React, {useEffect, useState} from "react";
+import {EightResumes} from "../Components/Resume/Eight-Resumes";
 
 let marginLeft = 0
 
-export function PythonFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
+export function PythonFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
     const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
@@ -55,7 +56,7 @@ export function PythonFullstack({time, img, header, for_who, job_name, skills, p
     })
 
     return(
-        <div className={'course-container'}>
+        <div className={'course-container'} ref={course_container}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsNineTexts texts={skills.texts} className={classNames[1]}/>
@@ -167,6 +168,7 @@ export function PythonFullstack({time, img, header, for_who, job_name, skills, p
                            surnames={[teachers.surnames[0], teachers.surnames[1], teachers.surnames[2], teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.yakovushen.surname, teachers.krotov.surname, teachers.shulaev.surname]}
                            descriptions={[teachers.descriptions[0], teachers.descriptions[1], teachers.descriptions[2], teachers.kornienko.description, teachers.vasiyanovich.description, teachers.yakovushen.description, teachers.krotov.description, teachers.shulaev.description]}/>
             <ThreeReviews letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts} id={id} changeId={changeId}/>
+            <EightResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

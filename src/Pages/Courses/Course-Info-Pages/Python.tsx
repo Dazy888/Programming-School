@@ -19,10 +19,12 @@ import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {SixTeachers} from "../Components/Teachers/Six-Teachers"
 import {SixReviews} from "../Components/Reviews/Six-Reviews"
 import React, {useEffect, useState} from "react"
+import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
+import {Registration} from "../Components/Registration/Registration";
 
 let marginLeft = 0
 
-export function Python({job_name, for_who, header, img, time, skills, projects, content, teachers, reviews}: CourseProjectsPropsType) {
+export function Python({job_name, for_who, header, img, time, skills, projects, content, teachers, reviews, resume}: CourseProjectsPropsType) {
     const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
@@ -175,6 +177,8 @@ export function Python({job_name, for_who, header, img, time, skills, projects, 
             </div>
             <SixTeachers avatars={[...teachers.avatars, teachers.shulaev.img, teachers.krotov.img]} names={[...teachers.names, teachers.shulaev.name, teachers.krotov.name]} surnames={[...teachers.surnames, teachers.shulaev.surname, teachers.krotov.surname]} descriptions={[...teachers.descriptions, teachers.shulaev.description, teachers.krotov.description]}/>
             <SixReviews changeId={changeId} id={id} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
+            <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate}/>
+            <Registration/>
         </div>
     )
 }

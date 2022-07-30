@@ -12,12 +12,15 @@ import {CourseSmall} from "../Components/Content/Course-Small"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {TwoTeachers} from "../Components/Teachers/Two-Teachers"
-import {SixReviews} from "../Components/Reviews/Six-Reviews";
-import React, {useEffect, useState} from "react";
+import {SixReviews} from "../Components/Reviews/Six-Reviews"
+import React, {useEffect, useState} from "react"
+import {ResumeTitle} from "../Components/Resume/Resume-Title"
+import {SkillsRow} from "../Components/Resume/Skills-Row"
+import {Certificate} from "../Components/Resume/Certificate"
 
 let marginLeft = 0
 
-export function Java({header, time, img, for_who, job_name, skills, classNames = [''], content, teachers, reviews}: CoursePropsType) {
+export function Java({header, time, img, for_who, job_name, skills, classNames = [''], content, teachers, reviews, resume}: CoursePropsType) {
     const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
@@ -39,7 +42,7 @@ export function Java({header, time, img, for_who, job_name, skills, classNames =
     })
 
     return(
-        <div className={'course-container'}>
+        <div className={'course-container'} ref={course_container}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsSixTexts texts={skills.texts} className={classNames[1]}/>
@@ -99,6 +102,21 @@ export function Java({header, time, img, for_who, job_name, skills, classNames =
             </div>
             <TwoTeachers avatars={[teachers.pilipenko.img, teachers.ovchinnikov.img]} names={[teachers.pilipenko.name, teachers.ovchinnikov.name]} surnames={[teachers.pilipenko.surname, teachers.ovchinnikov.surname]} descriptions={[teachers.pilipenko.description, teachers.ovchinnikov.description]} texts={[teachers.pilipenko.text, teachers.ovchinnikov.text]}/>
             <SixReviews letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts} id={id} changeId={changeId}/>
+            <div className={`resume ${classNames[1]}`}>
+                <ResumeTitle job={job_name} salary={resume.salary}/>
+                <div className={'resume__skills'}>
+                    <h3 className={'skills__title'}>Professionals skills:</h3>
+                    <SkillsRow texts={resume.texts.slice(0,4)}/>
+                    <SkillsRow texts={resume.texts.slice(4,9)}/>
+                    <div className={'skills__row'}>
+                        <ul className={'row__list'}>
+                            <li className={'list__item'}>{resume.texts[9]}</li>
+                        </ul>
+                    </div>
+                </div>
+                <span className={`line ${classNames[0]}`}/>
+                <Certificate img={resume.certificate}/>
+            </div>
         </div>
     )
 }

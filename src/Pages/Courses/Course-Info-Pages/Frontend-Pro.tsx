@@ -10,12 +10,12 @@ import {Note} from "../Components/Content/Note"
 import {CourseSmall} from "../Components/Content/Course-Small"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
-import {ReactFramework} from "../Components/Content/Courses/React-Framework"
 import {CourseTitleSmall} from "../Components/Content/Course-Title-Small";
 import {TeachersRow} from "../Components/Teachers/Teachers-Row";
 import {TeachersItem} from "../../Teachers/Components/TeachersItem";
+import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
 
-export function FrontendPro({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers}: CourseProjectsPropsType) {
+export function FrontendPro({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, resume}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -65,6 +65,7 @@ export function FrontendPro({header, time, img, for_who, job_name, skills, proje
                     <TeachersItem img={teachers.kuznetsov.img} name={teachers.kuznetsov.name} surname={teachers.kuznetsov.surname} description={teachers.kuznetsov.description}/>
                 </div>
             </div>
+            <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

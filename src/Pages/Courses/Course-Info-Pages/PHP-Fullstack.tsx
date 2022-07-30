@@ -28,8 +28,9 @@ import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {CourseTitleSmall} from "../Components/Content/Course-Title-Small"
 import {TeachersItem} from "../../Teachers/Components/TeachersItem"
 import {OneReview} from "../Components/Reviews/One-Review"
+import {EightResumes} from "../Components/Resume/Eight-Resumes";
 
-export function PHPFullstack({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
+export function PHPFullstack({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -106,6 +107,7 @@ export function PHPFullstack({header, time, img, for_who, job_name, skills, proj
                 </div>
             </div>
             <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
+            <EightResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

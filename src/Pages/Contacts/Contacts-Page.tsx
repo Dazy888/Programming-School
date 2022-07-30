@@ -94,7 +94,7 @@ export function ContactsPage() {
     )
 }
 
-function nameValidation(value: string) {
+export function nameValidation(value: string) {
     if (!value) return 'Field is required'
     if (!/^[a-zA-Z]+$/.test(value)) return 'There is a wrong symbols'
 }
@@ -111,7 +111,7 @@ function reasonValidation(value: string) {
     }
 }
 
-function phoneNumberValidator(value: string) {
+export function phoneNumberValidator(value: string) {
     if (!value) return 'Field is required'
     if (!/^(\d+)$/.test(value)) return 'There is a wrong symbols'
 }

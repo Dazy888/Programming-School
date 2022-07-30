@@ -28,8 +28,9 @@ import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {EightTeachers} from "../Components/Teachers/Eight-Teachers"
 import {OneReview} from "../Components/Reviews/One-Review";
+import {TenResumes} from "../Components/Resume/Ten-Resumes";
 
-export function JavascriptFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
+export function JavascriptFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
     return (
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -76,6 +77,7 @@ export function JavascriptFullstack({time, img, header, for_who, job_name, skill
                            surnames={[teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.yakovushen.surname, teachers.bondarovich.surname, teachers.savchenko.surname, teachers.kuznetsov.surname, teachers.klimonova.surname, teachers.mirotin.surname]}
                            descriptions={[teachers.kornienko.description, teachers.vasiyanovich.description, teachers.yakovushen.description, teachers.bondarovich.description, teachers.savchenko.description, teachers.kuznetsov.description, teachers.klimonova.description, teachers.mirotin.description]}/>
             <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
+            <TenResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

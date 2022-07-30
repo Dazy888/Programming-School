@@ -16,8 +16,9 @@ import {SQL} from "../Components/Content/Courses/SQL"
 import {EnglishBig} from "../Components/Content/Courses/English-Big"
 import {Career} from "../Components/Content/Courses/Career"
 import {TwelveTeachers} from "../Components/Teachers/Twelve-Teachers";
+import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
 
-export function Flutter({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers}: CoursePropsType) {
+export function Flutter({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers, resume}: CoursePropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -168,6 +169,7 @@ export function Flutter({img, header, time, for_who, job_name, skills, className
                             names={[...teachers.names, teachers.pilipenko.name, teachers.ovchinnikov.name, teachers.alexandrov.name, teachers.rybakov.name, teachers.malyx.name]}
                             surnames={[...teachers.surnames, teachers.pilipenko.surnames, teachers.ovchinnikov.surnames, teachers.alexandrov.surnames, teachers.rybakov.surnames, teachers.malyx.surnames]}
                             descriptions={[...teachers.descriptions, teachers.pilipenko.description, teachers.ovchinnikov.description, teachers.alexandrov.description, teachers.rybakov.description, teachers.malyx.description]}/>
+            <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
         </div>
     )
 }

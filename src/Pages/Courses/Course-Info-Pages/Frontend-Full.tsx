@@ -26,9 +26,13 @@ import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {TwelveTeachers} from "../Components/Teachers/Twelve-Teachers"
-import {OneReview} from "../Components/Reviews/One-Review";
+import {OneReview} from "../Components/Reviews/One-Review"
+import {ResumeTitle} from "../Components/Resume/Resume-Title";
+import {SkillsRow} from "../Components/Resume/Skills-Row";
+import {Certificate} from "../Components/Resume/Certificate";
+import React from "react";
 
-export function FrontendFull({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews}: CourseProjectsPropsType) {
+export function FrontendFull({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
     return (
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -100,6 +104,19 @@ export function FrontendFull({header, time, img, for_who, job_name, skills, proj
                             surnames={[teachers.mixeev.surname, teachers.tiunov.surname, teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.avdeev.surname, teachers.bondarovich.surname, teachers.savchenko.surname, teachers.mirotin.surname, teachers.pozdnyakov.surname, teachers.klimonova.surname, teachers.kuznetsov.surname, teachers.borzunov.surname]}
                             descriptions={[teachers.mixeev.description, teachers.tiunov.description, teachers.kornienko.description, teachers.vasiyanovich.description, teachers.avdeev.description, teachers.bondarovich.description, teachers.savchenko.description, teachers.mirotin.description, teachers.pozdnyakov.description, teachers.klimonova.description, teachers.kuznetsov.description, teachers.borzunov.description]}/>
             <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
+            <div className={`resume ${classNames[1]}`}>
+                <ResumeTitle job={job_name} salary={resume.salary}/>
+                <div className={'resume__skills'}>
+                    <SkillsRow texts={resume.texts.slice(0,4)}/>
+                    <ul className={'skills__list flex-property-set_between'}>
+                        <li className={'light-grey-txt'}>{resume.texts[4]}</li>
+                        <li className={'light-grey-txt'}>{resume.texts[5]}</li>
+                        <li className={'light-grey-txt'}>{resume.texts[6]}</li>
+                    </ul>
+                </div>
+                <span className={`line ${classNames[0]}`}/>
+                <Certificate img={resume.certificate}/>
+            </div>
         </div>
     )
 }
