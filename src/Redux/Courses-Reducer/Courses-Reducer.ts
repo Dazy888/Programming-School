@@ -1,3 +1,5 @@
+import {InferActionTypes} from "../Redux-Store";
+
 export type HeaderType = {
     titleTxt: string
     textAboutJob?: string
@@ -66,6 +68,7 @@ export type CourseType = {
 }
 
 const initialState = {
+    fetching: false as boolean,
     python: {
         job_name: 'Python-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_4589beaf332198133164e04e0fb855c2c1368858.webp',
@@ -1423,11 +1426,22 @@ const initialState = {
 
 export type InitialStateType = typeof initialState
 
-export function CoursesReducer(state = initialState, action: any): InitialStateType {
+export function CoursesReducer(state = initialState, action: ActionType): InitialStateType {
     switch (action.type) {
+        case 'Programming-Courses/Courses/CHANGE-FETCHING-STATUS':
+            return {
+                ...state,
+                fetching: action.status
+            }
         default:
             return {
                 ...state
             }
     }
+}
+
+type ActionType = InferActionTypes<typeof CoursesReducerActions>
+
+export const CoursesReducerActions = {
+    changeFetchingStatus: (status: boolean) => ({type: 'Programming-Courses/Courses/CHANGE-FETCHING-STATUS', status} as const)
 }

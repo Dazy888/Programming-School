@@ -1,4 +1,4 @@
-import {InferActionTypes} from "../Redux-Store"
+ import {InferActionTypes} from "../Redux-Store"
 
 let initialState = {
     fetching: false

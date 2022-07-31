@@ -1,7 +1,7 @@
 @media screen and(max-width: 1515px) {
   #courses-wrapper {
     .course-container {
-      width: fit-content;
+      width: 100%;
 
       .course-header {
         .header__title {
@@ -26,7 +26,6 @@
 
       .reviews {
         .reviews__row {
-
           .row__list {
             width: fit-content;
             flex-direction: column;
@@ -117,6 +116,25 @@
 
         .skills__item {
           margin-bottom: 50px;
+        }
+      }
+    }
+
+    .course-container {
+      .registration {
+        .registration__content {
+          width: fit-content;
+          height: 500px;
+          flex-direction: column;
+          text-align: center;
+
+          .form__row {
+            margin: auto ;
+          }
+
+          .content__title {
+            margin: auto auto 50px !important;
+          }
         }
       }
     }
@@ -629,6 +647,12 @@
           }
         }
       }
+
+      .registration {
+        .registration__content{
+          width: 540px;
+        }
+      }
     }
   }
 }
@@ -942,6 +966,53 @@
 
           .header__photographs {
             width: fit-content !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 665px) {
+  #courses-wrapper {
+    .course-container {
+      .registration {
+        .registration__content {
+          width: 400px;
+
+          .content__title {
+            font-size: 27px;
+            line-height: 35px;
+          }
+
+          .content__form {
+            .name-input {
+              width: 350px;
+            }
+
+            .form__row {
+              width: 388px;
+
+              input {
+                width: 140px;
+              }
+            }
+
+            .submit-input {
+              width: 150px;
+              height: 45px;
+            }
+
+            .error-container {
+              .error__txt {
+                font-size: 15px ;
+              }
+
+              .error__icon {
+                top: 19px;
+                font-size: 18px;
+              }
+            }
           }
         }
       }
@@ -1311,6 +1382,49 @@
     .course-container {
       .resume {
         width: 400px !important;
+      }
+
+      .registration {
+        .registration__content {
+          width: 280px;
+          padding: 30px;
+
+          .content__title {
+            font-size: 22px;
+            line-height: 30px;
+          }
+
+          .content__form {
+            .name-input {
+              width: 240px;
+            }
+
+            .form__row {
+              width: 278px;
+
+              input {
+                width: 90px;
+              }
+            }
+
+            .submit-input {
+              width: 150px;
+              height: 45px;
+            }
+
+            .error-container {
+              .error__txt {
+                top: -20px;
+                font-size: 13px ;
+              }
+
+              .error__icon {
+                top: 22px;
+                font-size: 15px;
+              }
+            }
+          }
+        }
       }
     }
   }

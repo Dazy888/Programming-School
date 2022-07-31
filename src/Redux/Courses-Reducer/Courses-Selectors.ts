@@ -7,3 +7,7 @@ export function getCoursesInfo(state: AppStateType) {
 export function getTeachersInfo(state: AppStateType) {
     return state.teachersPage
 }
+
+export function getFetchingStatus(state: AppStateType) {
+    return state.coursesPage.fetching
+}
