@@ -28,8 +28,9 @@ import {TwelveTeachers} from "../Components/Teachers/Twelve-Teachers"
 import React, {useEffect, useState} from "react"
 import {ReactFramework} from "../Components/Content/Courses/React-Framework";
 import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
+import {FiveQuestions} from "../Components/Questions/Five-Question";
 
-export function Web({for_who, time, img, header, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
+export function Web({for_who, time, img, header, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -46,31 +47,33 @@ export function Web({for_who, time, img, header, job_name, skills, projects, cla
                         <CoursesTitle title={'Main courses'} text={'Required courses for your profession. These are the basics that are important to learn for a successful career start. It will take you approximately 12 months to complete the courses in this block'}/>
                         <MarkupBasic/>
                         <JSBasic/>
-                        <div className={'courses__item big-item'}>
+                        <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[0]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Introduction to PHP Programming</li>
-                                <li className={'text'}>Variables, numbers and boolean</li>
-                                <li className={'text'}>Conditional Operators and Boolean Algebra</li>
-                                <li className={'text'}>Strings and arrays</li>
-                                <li className={'text'}>Cycles</li>
-                                <li className={'text'}>Functions: creation and use</li>
-                                <li className={'text'}>Recursion, callback and anonymous functions</li>
-                                <li className={'text'}>Classes, methods and objects</li>
-                                <li className={'text'}>Inheritance and abstract classes</li>
-                                <li className={'text'}>Interfaces and polymorphism</li>
-                                <li className={'text'}>Access modifiers, getters and setters</li>
-                                <li className={'text'}>HTML/CSS</li>
-                                <li className={'text'}>Connecting frontend to backend</li>
-                                <li className={'text'}>Splitting the application into files</li>
-                                <li className={'text'}>Working with files and network</li>
-                                <li className={'text'}>Error Handling, Exceptions and Logs</li>
-                                <li className={'text'}>Handling GET and POST requests, Header, Cookie and Session</li>
-                                <li className={'text'}>REST and RESTful API</li>
-                                <li className={'text'}>SQL query language</li>
-                                <li className={'text'}>Working with databases in PHP</li>
-                                <li className={'text'}>Laravel Framework</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Introduction to PHP Programming</li>
+                                    <li className={'text'}>Variables, numbers and boolean</li>
+                                    <li className={'text'}>Conditional Operators and Boolean Algebra</li>
+                                    <li className={'text'}>Strings and arrays</li>
+                                    <li className={'text'}>Cycles</li>
+                                    <li className={'text'}>Functions: creation and use</li>
+                                    <li className={'text'}>Recursion, callback and anonymous functions</li>
+                                    <li className={'text'}>Classes, methods and objects</li>
+                                    <li className={'text'}>Inheritance and abstract classes</li>
+                                    <li className={'text'}>Interfaces and polymorphism</li>
+                                    <li className={'text'}>Access modifiers, getters and setters</li>
+                                    <li className={'text'}>HTML/CSS</li>
+                                    <li className={'text'}>Connecting frontend to backend</li>
+                                    <li className={'text'}>Splitting the application into files</li>
+                                    <li className={'text'}>Working with files and network</li>
+                                    <li className={'text'}>Error Handling, Exceptions and Logs</li>
+                                    <li className={'text'}>Handling GET and POST requests, Header, Cookie and Session</li>
+                                    <li className={'text'}>REST and RESTful API</li>
+                                    <li className={'text'}>SQL query language</li>
+                                    <li className={'text'}>Working with databases in PHP</li>
+                                    <li className={'text'}>Laravel Framework</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className={'content__courses'}>
@@ -91,57 +94,61 @@ export function Web({for_who, time, img, header, job_name, skills, projects, cla
                     <div className={'content__courses'}>
                         <CoursesTitle title={'Bonus courses'} text={'In these courses, you will gain versatile skills that will help you feel more confident in the profession'}/>
                         <FigmaPro/>
-                        <div className={'courses__item objects-classes'}>
+                        <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[1]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Getting Started as a Web Designer</li>
-                                <li className={'text'}>First order: communication with the customer</li>
-                                <li className={'text'}>Search for ideas</li>
-                                <li className={'text'}>Composition</li>
-                                <li className={'text'}>Modular grids</li>
-                                <li className={'text'}>Typography</li>
-                                <li className={'text'}>Text in the interface</li>
-                                <li className={'text'}>Color on the web</li>
-                                <li className={'text'}>Contrast and readability</li>
-                                <li className={'text'}>CJM, User-flow or map and user path</li>
-                                <li className={'text'}>Navigation and site architecture</li>
-                                <li className={'text'}>Types of blocks and concept creation</li>
-                                <li className={'text'}>Design work</li>
-                                <li className={'text'}>Creating a UI KIT</li>
-                                <li className={'text'}>Adaptability and Components</li>
-                                <li className={'text'}>Presentation of the project to the customer</li>
-                                <li className={'text'}>Developer Specifications</li>
-                                <li className={'text'}>Portfolio case</li>
-                                <li className={'text'}>Bonus module. Principles of successful work with the customer</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Getting Started as a Web Designer</li>
+                                    <li className={'text'}>First order: communication with the customer</li>
+                                    <li className={'text'}>Search for ideas</li>
+                                    <li className={'text'}>Composition</li>
+                                    <li className={'text'}>Modular grids</li>
+                                    <li className={'text'}>Typography</li>
+                                    <li className={'text'}>Text in the interface</li>
+                                    <li className={'text'}>Color on the web</li>
+                                    <li className={'text'}>Contrast and readability</li>
+                                    <li className={'text'}>CJM, User-flow or map and user path</li>
+                                    <li className={'text'}>Navigation and site architecture</li>
+                                    <li className={'text'}>Types of blocks and concept creation</li>
+                                    <li className={'text'}>Design work</li>
+                                    <li className={'text'}>Creating a UI KIT</li>
+                                    <li className={'text'}>Adaptability and Components</li>
+                                    <li className={'text'}>Presentation of the project to the customer</li>
+                                    <li className={'text'}>Developer Specifications</li>
+                                    <li className={'text'}>Portfolio case</li>
+                                    <li className={'text'}>Bonus module. Principles of successful work with the customer</li>
+                                </ul>
+                            </div>
                         </div>
                         <Bash/>
                         <Git/>
                         <Knowledge/>
-                        <div className={'courses__item courses__item_big reset-height_big'}>
+                        <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[2]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Introduction to Algorithms</li>
-                                <li className={'text'}>Binary search algorithm</li>
-                                <li className={'text'}>Hash tables and hash functions</li>
-                                <li className={'text'}>Linked lists</li>
-                                <li className={'text'}>Stack and Queue</li>
-                                <li className={'text'}>Sorting algorithms</li>
-                                <li className={'text'}>Recursive Algorithms</li>
-                                <li className={'text'}>Complexity of algorithms and O-notation</li>
-                                <li className={'text'}>Introduction to Greedy Algorithms</li>
-                                <li className={'text'}>Trees. Binary search tree</li>
-                                <li className={'text'}>B-tree, R-tree, K-d-tree</li>
-                                <li className={'text'}>Suffix trees</li>
-                                <li className={'text'}>Balancing trees and heaps</li>
-                                <li className={'text'}>Graphs and their varieties</li>
-                                <li className={'text'}>Algorithms on graphs</li>
-                                <li className={'text'}>Information compression algorithms</li>
-                                <li className={'text'}>Introduction to cryptography</li>
-                                <li className={'text'}>Hashing algorithms</li>
-                                <li className={'text'}>Bit Algorithms</li>
-                                <li className={'text'}>Probabilistic and iterative algorithms</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Introduction to Algorithms</li>
+                                    <li className={'text'}>Binary search algorithm</li>
+                                    <li className={'text'}>Hash tables and hash functions</li>
+                                    <li className={'text'}>Linked lists</li>
+                                    <li className={'text'}>Stack and Queue</li>
+                                    <li className={'text'}>Sorting algorithms</li>
+                                    <li className={'text'}>Recursive Algorithms</li>
+                                    <li className={'text'}>Complexity of algorithms and O-notation</li>
+                                    <li className={'text'}>Introduction to Greedy Algorithms</li>
+                                    <li className={'text'}>Trees. Binary search tree</li>
+                                    <li className={'text'}>B-tree, R-tree, K-d-tree</li>
+                                    <li className={'text'}>Suffix trees</li>
+                                    <li className={'text'}>Balancing trees and heaps</li>
+                                    <li className={'text'}>Graphs and their varieties</li>
+                                    <li className={'text'}>Algorithms on graphs</li>
+                                    <li className={'text'}>Information compression algorithms</li>
+                                    <li className={'text'}>Introduction to cryptography</li>
+                                    <li className={'text'}>Hashing algorithms</li>
+                                    <li className={'text'}>Bit Algorithms</li>
+                                    <li className={'text'}>Probabilistic and iterative algorithms</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <Note/>
@@ -152,6 +159,7 @@ export function Web({for_who, time, img, header, job_name, skills, projects, cla
                             surnames={[teachers.surnames[0], teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.tiunov.surname, teachers.avdeev.surname, teachers.molesku.surname, teachers.pozdnyakov.surname, teachers.bondarovich.surname, teachers.savchenko.surname, teachers.mirotin.surname, teachers.ignatiev.surname, teachers.pilipenko.surname]}
                             descriptions={[teachers.descriptions[0], teachers.kornienko.description, teachers.vasiyanovich.description, teachers.tiunov.description, teachers.avdeev.description, teachers.molesku.description, teachers.pozdnyakov.description, teachers.bondarovich.description, teachers.savchenko.description, teachers.mirotin.description, teachers.ignatiev.description, teachers.pilipenko.description]}/>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <FiveQuestions  classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

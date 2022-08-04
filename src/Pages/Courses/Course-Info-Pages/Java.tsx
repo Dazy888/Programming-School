@@ -17,10 +17,11 @@ import React, {useEffect, useState} from "react"
 import {ResumeTitle} from "../Components/Resume/Resume-Title"
 import {SkillsRow} from "../Components/Resume/Skills-Row"
 import {Certificate} from "../Components/Resume/Certificate"
+import {FiveQuestions} from "../Components/Questions/Five-Question";
 
 let marginLeft = 0
 
-export function Java({header, time, img, for_who, job_name, skills, classNames = [''], content, teachers, reviews, resume}: CoursePropsType) {
+export function Java({header, time, img, for_who, job_name, skills, classNames = [''], content, teachers, reviews, resume, questions}: CoursePropsType) {
     const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
@@ -57,27 +58,27 @@ export function Java({header, time, img, for_who, job_name, skills, classNames =
                         <CourseSmall title={content.courses.titles[0]} text={'You will learn where the Java language is used and what the code looks like. Set up a development environment and write your first console application'}/>
                         <CourseSmall title={content.courses.titles[1]} text={'Get familiar with variables in the Java language, learn how to use conditions and comparison operators'}/>
                         <CourseSmall title={content.courses.titles[2]} text={'Learn to use loops in Java, navigate complex code'}/>
-                        <CourseSmall className={'objects-classes'} title={content.courses.titles[3]} text={'Learn about objects, classes and methods in Java. Understand how they work, learn how to create them and use them'}/>
-                        <CourseSmall className={'big-item'} title={content.courses.titles[4]} text={'Familiarize yourself with the principle of encapsulation. Learn about POJO classes, getters and setters, immutability and object copying'}/>
-                        <CourseSmall className={'courses__item_big reset-height_big'} title={content.courses.titles[5]} text={'Learn how methods and variables work in program code. Learn how to create constants and understand what they are for'}/>
+                        <CourseSmall title={content.courses.titles[3]} text={'Learn about objects, classes and methods in Java. Understand how they work, learn how to create them and use them'}/>
+                        <CourseSmall title={content.courses.titles[4]} text={'Familiarize yourself with the principle of encapsulation. Learn about POJO classes, getters and setters, immutability and object copying'}/>
+                        <CourseSmall title={content.courses.titles[5]} text={'Learn how methods and variables work in program code. Learn how to create constants and understand what they are for'}/>
                         <CourseSmall title={content.courses.titles[6]} text={'Understand what primitives are, how they are similar to objects and how they differ from them'}/>
                         <CourseSmall title={content.courses.titles[7]} text={'Familiarize yourself with the various operations that can be performed on numbers: arithmetic, assignment, increment, decrement, and comparison operations'}/>
                         <CourseSmall title={content.courses.titles[8]} text={'Learn to define strings and check their length. Learn how to compare strings with each other and combine several into one'}/>
                         <CourseSmall title={content.courses.titles[9]} text={'Learn to work with arrays and their elements. You will be able to search for elements using HashMap and TreeMap'}/>
                         <CourseSmall title={content.courses.titles[10]} text={'Learn how to inherit classes in Java and learn how to work with the Comparable, Comparator, Map and Set interfaces'}/>
                         <CourseSmall title={content.courses.titles[11]} text={'Learn object-oriented programming in Java and new development techniques. Familiarize yourself with the build system and the Maven repository'}/>
-                        <CourseSmall className={'big-item'} title={content.courses.titles[12]} text={'You will learn how exceptions occur and how to "catch" them. Learn to test and debug applications, write logs with information about applications'}/>
+                        <CourseSmall title={content.courses.titles[12]} text={'You will learn how exceptions occur and how to "catch" them. Learn to test and debug applications, write logs with information about applications'}/>
                         <CourseSmall title={content.courses.titles[13]} text={'Understand how to read files using FileInputStream, BufferedReader and the Files class. Learn to work with HTML and JSON files'}/>
                         <CourseSmall title={content.courses.titles[14]} text={'Learn how to work with the MySQL database, change data and access it with various queries'}/>
                         <CourseSmall title={content.courses.titles[15]} text={'Learn what multithreading is and how to work with it in the Runnable interface. You will understand how to set up the interaction of streams, learn how to block, suspend and interrupt data streams'}/>
                         <CourseSmall title={content.courses.titles[16]} text={'Familiarize yourself with the HTTP protocol, study the headers, the body of the request and response. Learn how to work with PUT, DELETE, OPTIONS, GET and POST requests'}/>
                         <CourseSmall title={content.courses.titles[17]} text={'Develop your first Spring Boot application, creating a controller and connecting to a database'}/>
-                        <CourseSmall className={'big-item'} title={content.courses.titles[18]} text={'Get to know Redis and learn about data structures. Explore the features and data aggregation in MongoDB'}/>
+                        <CourseSmall title={content.courses.titles[18]} text={'Get to know Redis and learn about data structures. Explore the features and data aggregation in MongoDB'}/>
                         <CourseSmall title={content.courses.titles[19]} text={'Find out what resources you need to save to optimize the application. Explore two ways to lighten your applications and learn how to index and optimize queries'}/>
-                        <CourseSmall className={'reset-height_big'} title={content.courses.titles[20]} text={'Learn to develop user-friendly and functional applications for the desktop'}/>
+                        <CourseSmall title={content.courses.titles[20]} text={'Learn to develop user-friendly and functional applications for the desktop'}/>
                         <CourseSmall title={content.courses.titles[21]} text={'Learn why algorithms are needed and learn how to work with binary search algorithms, sorting, substring search and others'}/>
                         <CourseSmall title={content.courses.titles[22]} text={'Learn hash tables, queue and stack, linked tables, binary and suffix tree'}/>
-                        <CourseSmall className={'reset-height_big'} title={content.courses.titles[23]} text={'You will learn what big data is and how to work with the HDFS file system. Get familiar with the Spark framework and learn how to run your own applications in it'}/>
+                        <CourseSmall title={content.courses.titles[23]} text={'You will learn what big data is and how to work with the HDFS file system. Get familiar with the Spark framework and learn how to run your own applications in it'}/>
                         <CourseSmall title={content.courses.titles[24]} text={'Learn what design patterns are and get to know Singleton, Factory, Decorator, Adapter and other patterns'}/>
                     </div>
                     <div className={'content__courses'}>
@@ -95,7 +96,7 @@ export function Java({header, time, img, for_who, job_name, skills, classNames =
                     <div className={'content__courses'}>
                         <CoursesTitle title={'Final projects'}/>
                         <CourseSmall title={content.courses.titles[29]} text={'You will develop a search engine that will help site visitors quickly find the information they need using the search box'}/>
-                        <CourseSmall className={'big-item'} title={content.courses.titles[30]} text={'You will work under the guidance of an experienced team leader as part of a team of 5-7 people. Create your own social network in 3 months according to the TOR from a real customer. In practice, get acquainted with the SCRUM project management methodology. All the processes through which you will go through is an experience as close as possible to combat conditions. This is how commercial software is created in employer companies'}/>
+                        <CourseSmall title={content.courses.titles[30]} text={'You will work under the guidance of an experienced team leader as part of a team of 5-7 people. Create your own social network in 3 months according to the TOR from a real customer. In practice, get acquainted with the SCRUM project management methodology. All the processes through which you will go through is an experience as close as possible to combat conditions. This is how commercial software is created in employer companies'}/>
                     </div>
                     <Note/>
                 </div>
@@ -117,6 +118,7 @@ export function Java({header, time, img, for_who, job_name, skills, classNames =
                 <span className={`line ${classNames[0]}`}/>
                 <Certificate img={resume.certificate}/>
             </div>
+            <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

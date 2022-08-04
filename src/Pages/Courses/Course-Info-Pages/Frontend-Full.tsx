@@ -31,8 +31,9 @@ import {ResumeTitle} from "../Components/Resume/Resume-Title";
 import {SkillsRow} from "../Components/Resume/Skills-Row";
 import {Certificate} from "../Components/Resume/Certificate";
 import React from "react";
+import {FiveQuestions} from "../Components/Questions/Five-Question";
 
-export function FrontendFull({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
+export function FrontendFull({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
     return (
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -67,15 +68,17 @@ export function FrontendFull({header, time, img, for_who, job_name, skills, proj
                         <Node/>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[0]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Introduction</li>
-                                <li className={'text'}>Compilation and primitive types</li>
-                                <li className={'text'}>Applying Types</li>
-                                <li className={'text'}>OOP typing</li>
-                                <li className={'text'}>Generics</li>
-                                <li className={'text'}>Utility types</li>
-                                <li className={'text'}>Additional types</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Introduction</li>
+                                    <li className={'text'}>Compilation and primitive types</li>
+                                    <li className={'text'}>Applying Types</li>
+                                    <li className={'text'}>OOP typing</li>
+                                    <li className={'text'}>Generics</li>
+                                    <li className={'text'}>Utility types</li>
+                                    <li className={'text'}>Additional types</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className={'content__courses'}>
@@ -117,6 +120,7 @@ export function FrontendFull({header, time, img, for_who, job_name, skills, proj
                 <span className={`line ${classNames[0]}`}/>
                 <Certificate img={resume.certificate}/>
             </div>
+            <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

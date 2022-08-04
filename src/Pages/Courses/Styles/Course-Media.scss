@@ -45,6 +45,27 @@
   }
 }
 
+@media screen and(max-width: 1410px) {
+  #courses-wrapper {
+    .course-container {
+      .questions {
+        width: fit-content;
+        flex-direction: column;
+
+        .title {
+          max-width: 9999px;
+          margin: auto auto 50px;
+          text-align: center;
+        }
+
+        .questions__column {
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 1385px) {
   #courses-wrapper {
     .course-container {
@@ -412,7 +433,6 @@
             .title__text {
               width: 400px;
 
-
               .text__descriptions {
                 width: 265px;
 
@@ -448,12 +468,6 @@
             }
 
             .courses__item {
-              height: 70px;
-
-              .courses__item_big {
-                height: 90px;
-              }
-
               p {
                 padding-bottom: 20px;
               }
@@ -741,14 +755,6 @@
                 margin-top: 20px;
               }
             }
-
-            .courses__item {
-              height: 60px;
-            }
-
-            .courses__item_big {
-              height: 90px;
-            }
           }
 
           .content__note {
@@ -794,6 +800,33 @@
 
           .certificate__text {
             max-width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 780px) {
+  #courses-wrapper {
+    .course-container {
+      .questions {
+        width: 500px;
+
+        .title {
+          font-size: 35px;
+        }
+
+        .questions__column {
+          width: fit-content;
+          margin: auto;
+
+          .courses__item {
+            width: 500px;
+
+            .small-title {
+              max-width: 400px;
+            }
           }
         }
       }
@@ -874,14 +907,6 @@
               .text {
                 margin-top: 20px;
               }
-            }
-
-            .courses__item_big {
-              height: 80px;
-            }
-
-            .objects-classes {
-              height: 80px;
             }
           }
 
@@ -1082,6 +1107,59 @@
           }
         }
       }
+
+      .questions {
+        width: 300px;
+
+        .title {
+          font-size: 23px;
+        }
+
+        .small-title {
+          font-size: 15px;
+        }
+
+        .text {
+          font-size: 14px;
+          line-height: 22px;
+        }
+
+        .questions__column {
+          .courses__item {
+            width: 300px;
+            height: 80px;
+
+            .small-title {
+              max-width: 250px;
+            }
+
+            .title__btn {
+              width: 25px;
+              height: 25px;
+
+              i {
+                font-size: 16px;
+              }
+            }
+          }
+
+          .questions-big-item {
+            height: 100px;
+          }
+
+          .big-item {
+            height: 100px;
+          }
+
+          .medium-item {
+            height: 100px;
+          }
+
+          .super-big-item {
+            height: 120px;
+          }
+        }
+      }
     }
   }
 }
@@ -1180,10 +1258,6 @@
             .courses__title {
               width: 300px;
               margin-bottom: 20px;
-            }
-
-            .big-item {
-              height: 80px;
             }
 
             .courses__item {
@@ -1568,18 +1642,6 @@
               width: 250px;
             }
 
-            .courses__item_big {
-              height: 90px;
-            }
-
-            .reset-height_big {
-              height: 80px;
-            }
-
-            .reset-height {
-              height: 60px !important;
-            }
-
             .courses__item {
               .title__btn {
                 width: 20px !important;
@@ -1863,6 +1925,35 @@
     .course-container {
       .resume {
         width: 340px !important;
+      }
+
+      .questions {
+        width: 250px;
+
+        .small-title {
+          font-size: 13px;
+          max-width: 200px !important;
+        }
+
+        .text {
+          font-size: 13px;
+          line-height: 21px;
+        }
+
+        .questions__column {
+          .courses__item {
+            width: 250px;
+
+            .title__btn {
+              width: 22px;
+              height: 22px;
+
+              i {
+                font-size: 14px;
+              }
+            }
+          }
+        }
       }
     }
   }

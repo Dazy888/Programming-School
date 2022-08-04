@@ -29,8 +29,9 @@ import {CourseTitleSmall} from "../Components/Content/Course-Title-Small"
 import {TeachersItem} from "../../Teachers/Components/TeachersItem"
 import {OneReview} from "../Components/Reviews/One-Review"
 import {EightResumes} from "../Components/Resume/Eight-Resumes";
+import {FiveQuestions} from "../Components/Questions/Five-Question";
 
-export function PHPFullstack({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
+export function PHPFullstack({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -51,28 +52,32 @@ export function PHPFullstack({header, time, img, for_who, job_name, skills, proj
                         <JSAdvanced/>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[0]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Introduction to programming</li>
-                                <li className={'text'}>Data management structure. PHP 7 basic concepts</li>
-                                <li className={'text'}>Protocol HTTP/HTTPS</li>
-                                <li className={'text'}>Custom functions</li>
-                                <li className={'text'}>Files and directories</li>
-                                <li className={'text'}>Cookie/Session</li>
-                                <li className={'text'}>MySQL database</li>
-                                <li className={'text'}>Course work</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Introduction to programming</li>
+                                    <li className={'text'}>Data management structure. PHP 7 basic concepts</li>
+                                    <li className={'text'}>Protocol HTTP/HTTPS</li>
+                                    <li className={'text'}>Custom functions</li>
+                                    <li className={'text'}>Files and directories</li>
+                                    <li className={'text'}>Cookie/Session</li>
+                                    <li className={'text'}>MySQL database</li>
+                                    <li className={'text'}>Course work</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[1]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Objects (basic concepts)</li>
-                                <li className={'text'}>Principles</li>
-                                <li className={'text'}>Objects (advanced concepts)</li>
-                                <li className={'text'}>Functions and standards for working with classes</li>
-                                <li className={'text'}>Exceptions and other built-in classes</li>
-                                <li className={'text'}>OOP. Templates</li>
-                                <li className={'text'}>Course work</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Objects (basic concepts)</li>
+                                    <li className={'text'}>Principles</li>
+                                    <li className={'text'}>Objects (advanced concepts)</li>
+                                    <li className={'text'}>Functions and standards for working with classes</li>
+                                    <li className={'text'}>Exceptions and other built-in classes</li>
+                                    <li className={'text'}>OOP. Templates</li>
+                                    <li className={'text'}>Course work</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className={'content__courses'}>
@@ -108,6 +113,7 @@ export function PHPFullstack({header, time, img, for_who, job_name, skills, proj
             </div>
             <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
             <EightResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

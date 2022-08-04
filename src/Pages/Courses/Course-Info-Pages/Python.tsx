@@ -19,12 +19,13 @@ import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {SixTeachers} from "../Components/Teachers/Six-Teachers"
 import {SixReviews} from "../Components/Reviews/Six-Reviews"
 import React, {useEffect, useState} from "react"
-import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
-import {Registration} from "../Components/Registration/Registration";
+import {TwelveResumes} from "../Components/Resume/Twelve-Resumes"
+import {Registration} from "../Components/Registration/Registration"
+import {EightQuestions} from "../Components/Questions/Eight-Questions";
 
 let marginLeft = 0
 
-export function Python({job_name, for_who, header, img, time, skills, projects, content, teachers, reviews, resume}: CourseProjectsPropsType) {
+export function Python({job_name, for_who, header, img, time, skills, projects, content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
     const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
@@ -61,103 +62,111 @@ export function Python({job_name, for_who, header, img, time, skills, projects, 
                         <CoursesTitle title={'Main courses'} text={'Required courses for your profession. These are the basics you need to learn in order to be successful in your career. It will take you approximately 12 months to complete the courses in this block'}/>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[0]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Introduction</li>
-                                <li className={'text'}>Python Basics</li>
-                                <li className={'text'}>Operators, expressions</li>
-                                <li className={'text'}>Conditional if statement, branches</li>
-                                <li className={'text'}>Conditional if statement: continuation</li>
-                                <li className={'text'}>While loop</li>
-                                <li className={'text'}>The for loop: loops with a counter</li>
-                                <li className={'text'}>The for loop: features of working with range</li>
-                                <li className={'text'}>The for loop: working with strings</li>
-                                <li className={'text'}>Nested Loops</li>
-                                <li className={'text'}>Numbers. int and float types</li>
-                                <li className={'text'}>Functions: start</li>
-                                <li className={'text'}>Float features</li>
-                                <li className={'text'}>Installing and configuring the IDE</li>
-                                <li className={'text'}>Basic collections. Lists</li>
-                                <li className={'text'}>List: methods for working with lists</li>
-                                <li className={'text'}>List views</li>
-                                <li className={'text'}>Basic collections. Strings</li>
-                                <li className={'text'}>Basic collections. Dictionaries</li>
-                                <li className={'text'}>Basic collections. Tuples</li>
-                                <li className={'text'}>Functions: continued</li>
-                                <li className={'text'}>Working with files</li>
-                                <li className={'text'}>Exceptions: Dealing with Errors</li>
-                                <li className={'text'}>Introduction to PLO</li>
-                                <li className={'text'}>Basic principles of OOP</li>
-                                <li className={'text'}>Iterators and Generators</li>
-                                <li className={'text'}>Decorators: basic level</li>
-                                <li className={'text'}>Deep class work and built-in decorators</li>
-                                <li className={'text'}>Decorators: Advanced</li>
-                                <li className={'text'}>Functions: end</li>
-                                <li className={'text'}>Libraries for working with data</li>
-                                <li className={'text'}>Bonus module. Network Basics</li>
-                                <li className={'text'}>Final project. Telegram bot for hotel search</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Introduction</li>
+                                    <li className={'text'}>Python Basics</li>
+                                    <li className={'text'}>Operators, expressions</li>
+                                    <li className={'text'}>Conditional if statement, branches</li>
+                                    <li className={'text'}>Conditional if statement: continuation</li>
+                                    <li className={'text'}>While loop</li>
+                                    <li className={'text'}>The for loop: loops with a counter</li>
+                                    <li className={'text'}>The for loop: features of working with range</li>
+                                    <li className={'text'}>The for loop: working with strings</li>
+                                    <li className={'text'}>Nested Loops</li>
+                                    <li className={'text'}>Numbers. int and float types</li>
+                                    <li className={'text'}>Functions: start</li>
+                                    <li className={'text'}>Float features</li>
+                                    <li className={'text'}>Installing and configuring the IDE</li>
+                                    <li className={'text'}>Basic collections. Lists</li>
+                                    <li className={'text'}>List: methods for working with lists</li>
+                                    <li className={'text'}>List views</li>
+                                    <li className={'text'}>Basic collections. Strings</li>
+                                    <li className={'text'}>Basic collections. Dictionaries</li>
+                                    <li className={'text'}>Basic collections. Tuples</li>
+                                    <li className={'text'}>Functions: continued</li>
+                                    <li className={'text'}>Working with files</li>
+                                    <li className={'text'}>Exceptions: Dealing with Errors</li>
+                                    <li className={'text'}>Introduction to PLO</li>
+                                    <li className={'text'}>Basic principles of OOP</li>
+                                    <li className={'text'}>Iterators and Generators</li>
+                                    <li className={'text'}>Decorators: basic level</li>
+                                    <li className={'text'}>Deep class work and built-in decorators</li>
+                                    <li className={'text'}>Decorators: Advanced</li>
+                                    <li className={'text'}>Functions: end</li>
+                                    <li className={'text'}>Libraries for working with data</li>
+                                    <li className={'text'}>Bonus module. Network Basics</li>
+                                    <li className={'text'}>Final project. Telegram bot for hotel search</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[1]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Introduction to web frameworks</li>
-                                <li className={'text'}>Introduction to Django</li>
-                                <li className={'text'}>Handling Requests in Django</li>
-                                <li className={'text'}>Database and Models</li>
-                                <li className={'text'}>Forms</li>
-                                <li className={'text'}>Working with files</li>
-                                <li className={'text'}>Testing</li>
-                                <li className={'text'}>Admin</li>
-                                <li className={'text'}>Localization and internationalization</li>
-                                <li className={'text'}>Access rights</li>
-                                <li className={'text'}>Documentation</li>
-                                <li className={'text'}>Optimization</li>
-                                <li className={'text'}>Data export</li>
-                                <li className={'text'}>Internship. Development of an online store in a team with a team leader</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Introduction to web frameworks</li>
+                                    <li className={'text'}>Introduction to Django</li>
+                                    <li className={'text'}>Handling Requests in Django</li>
+                                    <li className={'text'}>Database and Models</li>
+                                    <li className={'text'}>Forms</li>
+                                    <li className={'text'}>Working with files</li>
+                                    <li className={'text'}>Testing</li>
+                                    <li className={'text'}>Admin</li>
+                                    <li className={'text'}>Localization and internationalization</li>
+                                    <li className={'text'}>Access rights</li>
+                                    <li className={'text'}>Documentation</li>
+                                    <li className={'text'}>Optimization</li>
+                                    <li className={'text'}>Data export</li>
+                                    <li className={'text'}>Internship. Development of an online store in a team with a team leader</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[2]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>At this stage, you are ready for employment - a career consultant will begin to help you find a job and prepare you for an interview</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>At this stage, you are ready for employment - a career consultant will begin to help you find a job and prepare you for an interview</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[3]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Flask: Getting Started</li>
-                                <li className={'text'}>Basics of working in Linux. Part 1</li>
-                                <li className={'text'}>Fundamentals of CI culture. Part 1</li>
-                                <li className={'text'}>Flask</li>
-                                <li className={'text'}>Basics of working in Linux. Part 2</li>
-                                <li className={'text'}>Basics of debugging and profiling. Part 1</li>
-                                <li className={'text'}>Logger</li>
-                                <li className={'text'}>Deploy application on linux</li>
-                                <li className={'text'}>Docker</li>
-                                <li className={'text'}>Database. Part 1</li>
-                                <li className={'text'}>Multitasking. Part 1</li>
-                                <li className={'text'}>Multitasking. Part 2</li>
-                                <li className={'text'}>Database. Part 2</li>
-                                <li className={'text'}>An introductory module on the MVC framework. Part 1</li>
-                                <li className={'text'}>An introductory module on the MVC framework. Part 2</li>
-                                <li className={'text'}>Database. Part 3</li>
-                                <li className={'text'}>RESTful API</li>
-                                <li className={'text'}>MVC, templating language. Part 3</li>
-                                <li className={'text'}>Database. Part 4</li>
-                                <li className={'text'}>Introduction to ORM SQLAlchemy. Part 1</li>
-                                <li className={'text'}>ORM SQLAlchemy. Part 2</li>
-                                <li className={'text'}>CGI server</li>
-                                <li className={'text'}>Basics of debugging and profiling. Part 2</li>
-                                <li className={'text'}>Basics of debugging and profiling. Part 3</li>
-                                <li className={'text'}>Multitasking: asyncio</li>
-                                <li className={'text'}>Multitasking: fastAPI</li>
-                                <li className={'text'}>Postgres + Migrations</li>
-                                <li className={'text'}>Pytest, Mock</li>
-                                <li className={'text'}>Safety</li>
-                                <li className={'text'}>Fundamentals of CI culture: linters</li>
-                                <li className={'text'}>CD, automatic deployment</li>
-                                <li className={'text'}>Graduation project. Development of a problem book in Python</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Flask: Getting Started</li>
+                                    <li className={'text'}>Basics of working in Linux. Part 1</li>
+                                    <li className={'text'}>Fundamentals of CI culture. Part 1</li>
+                                    <li className={'text'}>Flask</li>
+                                    <li className={'text'}>Basics of working in Linux. Part 2</li>
+                                    <li className={'text'}>Basics of debugging and profiling. Part 1</li>
+                                    <li className={'text'}>Logger</li>
+                                    <li className={'text'}>Deploy application on linux</li>
+                                    <li className={'text'}>Docker</li>
+                                    <li className={'text'}>Database. Part 1</li>
+                                    <li className={'text'}>Multitasking. Part 1</li>
+                                    <li className={'text'}>Multitasking. Part 2</li>
+                                    <li className={'text'}>Database. Part 2</li>
+                                    <li className={'text'}>An introductory module on the MVC framework. Part 1</li>
+                                    <li className={'text'}>An introductory module on the MVC framework. Part 2</li>
+                                    <li className={'text'}>Database. Part 3</li>
+                                    <li className={'text'}>RESTful API</li>
+                                    <li className={'text'}>MVC, templating language. Part 3</li>
+                                    <li className={'text'}>Database. Part 4</li>
+                                    <li className={'text'}>Introduction to ORM SQLAlchemy. Part 1</li>
+                                    <li className={'text'}>ORM SQLAlchemy. Part 2</li>
+                                    <li className={'text'}>CGI server</li>
+                                    <li className={'text'}>Basics of debugging and profiling. Part 2</li>
+                                    <li className={'text'}>Basics of debugging and profiling. Part 3</li>
+                                    <li className={'text'}>Multitasking: asyncio</li>
+                                    <li className={'text'}>Multitasking: fastAPI</li>
+                                    <li className={'text'}>Postgres + Migrations</li>
+                                    <li className={'text'}>Pytest, Mock</li>
+                                    <li className={'text'}>Safety</li>
+                                    <li className={'text'}>Fundamentals of CI culture: linters</li>
+                                    <li className={'text'}>CD, automatic deployment</li>
+                                    <li className={'text'}>Graduation project. Development of a problem book in Python</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className={'content__courses'}>
@@ -179,6 +188,7 @@ export function Python({job_name, for_who, header, img, time, skills, projects, 
             <SixReviews changeId={changeId} id={id} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate}/>
             <Registration/>
+            <EightQuestions classNames={['', '', '', '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

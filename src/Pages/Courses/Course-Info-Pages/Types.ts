@@ -2,7 +2,7 @@ import {
     ContentType,
     ForWhoType,
     HeaderType,
-    ProjectsType, ResumeType, ReviewsType,
+    ProjectsType, QuestionsType, ResumeType, ReviewsType,
     SkillsType
 } from "../../../Redux/Courses-Reducer/Courses-Reducer"
 import {TeachersType} from "../../../Redux/Teachers-Reducer/Teachers-Reducer";
@@ -16,6 +16,7 @@ export type CourseProjectsPropsType = {
     teachers: any
     reviews?: ReviewsType | any
     resume: ResumeType
+    questions: QuestionsType
     job_name: string
     img: string
     time: string
@@ -30,6 +31,7 @@ export type CoursePropsType = {
     teachers: any
     reviews?: ReviewsType | any
     resume: ResumeType
+    questions: QuestionsType
     job_name: string
     img: string
     time: string

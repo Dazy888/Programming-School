@@ -5,7 +5,7 @@ type PropsType = {
 
 function openList(e: any) {
     if (e.target.closest('.courses__item')) {
-        e.target.closest('.courses__item').classList.toggle('open-list')
+        e.target.closest('.courses__item').querySelector('.item__txt').classList.toggle('show-block')
         e.target.closest('.item__title').querySelector('i').classList.toggle('change-sign')
     }
 }

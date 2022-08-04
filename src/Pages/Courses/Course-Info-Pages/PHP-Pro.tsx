@@ -17,8 +17,9 @@ import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {TwoTeachers} from "../Components/Teachers/Two-Teachers"
 import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
+import {FiveQuestions} from "../Components/Questions/Five-Question";
 
-export function PHPPro({time, img, header, for_who, job_name, skills, classNames = [''], content, teachers, resume}: CoursePropsType) {
+export function PHPPro({time, img, header, for_who, job_name, skills, classNames = [''], content, teachers, resume, questions}: CoursePropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -34,29 +35,31 @@ export function PHPPro({time, img, header, for_who, job_name, skills, classNames
                         <CoursesTitle title={'Main courses'}/>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[0]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Introduction to PHP Programming</li>
-                                <li className={'text'}>Variables, numbers and boolean</li>
-                                <li className={'text'}>Conditional Operators and Boolean Algebra</li>
-                                <li className={'text'}>Strings and arrays</li>
-                                <li className={'text'}>Cycles</li>
-                                <li className={'text'}>Functions: creation and use</li>
-                                <li className={'text'}>Recursion, callback and anonymous functions</li>
-                                <li className={'text'}>Classes, methods and objects</li>
-                                <li className={'text'}>Inheritance and abstract classes</li>
-                                <li className={'text'}>Interfaces and polymorphism</li>
-                                <li className={'text'}>Access modifiers, getters and setters</li>
-                                <li className={'text'}>HTML/CSS</li>
-                                <li className={'text'}>Splitting the application into files</li>
-                                <li className={'text'}>Working with files and with the network</li>
-                                <li className={'text'}>Error handling, exceptions and logs</li>
-                                <li className={'text'}>Protocol HTTP</li>
-                                <li className={'text'}>Handling GET and POST requests, header, cookies and sessions</li>
-                                <li className={'text'}>REST and RESTful API</li>
-                                <li className={'text'}>SQL query language</li>
-                                <li className={'text'}>Working with databases in PHP</li>
-                                <li className={'text'}>Laravel framework</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Introduction to PHP Programming</li>
+                                    <li className={'text'}>Variables, numbers and boolean</li>
+                                    <li className={'text'}>Conditional Operators and Boolean Algebra</li>
+                                    <li className={'text'}>Strings and arrays</li>
+                                    <li className={'text'}>Cycles</li>
+                                    <li className={'text'}>Functions: creation and use</li>
+                                    <li className={'text'}>Recursion, callback and anonymous functions</li>
+                                    <li className={'text'}>Classes, methods and objects</li>
+                                    <li className={'text'}>Inheritance and abstract classes</li>
+                                    <li className={'text'}>Interfaces and polymorphism</li>
+                                    <li className={'text'}>Access modifiers, getters and setters</li>
+                                    <li className={'text'}>HTML/CSS</li>
+                                    <li className={'text'}>Splitting the application into files</li>
+                                    <li className={'text'}>Working with files and with the network</li>
+                                    <li className={'text'}>Error handling, exceptions and logs</li>
+                                    <li className={'text'}>Protocol HTTP</li>
+                                    <li className={'text'}>Handling GET and POST requests, header, cookies and sessions</li>
+                                    <li className={'text'}>REST and RESTful API</li>
+                                    <li className={'text'}>SQL query language</li>
+                                    <li className={'text'}>Working with databases in PHP</li>
+                                    <li className={'text'}>Laravel framework</li>
+                                </ul>
+                            </div>
                         </div>
                         <Laravel/>
                     </div>
@@ -71,18 +74,20 @@ export function PHPPro({time, img, header, for_who, job_name, skills, classNames
                         <Knowledge/>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[1]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Philosophy of development. Workplace preparation</li>
-                                <li className={'text'}>Source of goods and content</li>
-                                <li className={'text'}>Create pages and templates</li>
-                                <li className={'text'}>Standard components</li>
-                                <li className={'text'}>Online store catalog</li>
-                                <li className={'text'}>Product card</li>
-                                <li className={'text'}>Checkout</li>
-                                <li className={'text'}>Personal area</li>
-                                <li className={'text'}>We are working on the site. Part 1</li>
-                                <li className={'text'}>We are working on the site. Part 2</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Philosophy of development. Workplace preparation</li>
+                                    <li className={'text'}>Source of goods and content</li>
+                                    <li className={'text'}>Create pages and templates</li>
+                                    <li className={'text'}>Standard components</li>
+                                    <li className={'text'}>Online store catalog</li>
+                                    <li className={'text'}>Product card</li>
+                                    <li className={'text'}>Checkout</li>
+                                    <li className={'text'}>Personal area</li>
+                                    <li className={'text'}>We are working on the site. Part 1</li>
+                                    <li className={'text'}>We are working on the site. Part 2</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className={'content__courses'}>
@@ -96,6 +101,7 @@ export function PHPPro({time, img, header, for_who, job_name, skills, classNames
             </div>
             <TwoTeachers avatars={[teachers.ignatiev.img, teachers.molesku.img]} names={[teachers.ignatiev.name, teachers.molesku.name]} surnames={[teachers.ignatiev.surname, teachers.molesku.surname]} descriptions={[teachers.ignatiev.description, teachers.molesku.description]} texts={[teachers.ignatiev.text, teachers.molesku.text]}/>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

@@ -16,10 +16,11 @@ import {SixReviews} from "../Components/Reviews/Six-Reviews"
 import {SliderControls} from "../Components/Projects/Projects"
 import React, {useEffect, useState} from "react"
 import {ElevenResumes} from "../Components/Resume/Eleven-Resumes";
+import {FiveQuestions} from "../Components/Questions/Five-Question";
 
 let marginLeft = 0
 
-export function JavaPro({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers, reviews, resume}: CoursePropsType) {
+export function JavaPro({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers, reviews, resume, questions}: CoursePropsType) {
     const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
@@ -56,16 +57,16 @@ export function JavaPro({img, header, time, for_who, job_name, skills, className
                         <CourseTitleSmall title={content.courses.titles[0]}/>
                         <CourseTitleSmall title={content.courses.titles[1]}/>
                         <CourseTitleSmall title={content.courses.titles[2]}/>
-                        <CourseTitleSmall title={content.courses.titles[3]} className={'objects-classes'}/>
-                        <CourseTitleSmall title={content.courses.titles[4]} className={'big-item'}/>
-                        <CourseTitleSmall title={content.courses.titles[5]} className={'courses__item_big reset-height_big'}/>
+                        <CourseTitleSmall title={content.courses.titles[3]}/>
+                        <CourseTitleSmall title={content.courses.titles[4]}/>
+                        <CourseTitleSmall title={content.courses.titles[5]}/>
                         <CourseTitleSmall title={content.courses.titles[6]}/>
                         <CourseTitleSmall title={content.courses.titles[7]}/>
                         <CourseTitleSmall title={content.courses.titles[8]}/>
                         <CourseTitleSmall title={content.courses.titles[9]}/>
                         <CourseTitleSmall title={content.courses.titles[10]}/>
                         <CourseTitleSmall title={content.courses.titles[11]}/>
-                        <CourseTitleSmall title={content.courses.titles[12]} className={'big-item'}/>
+                        <CourseTitleSmall title={content.courses.titles[12]}/>
                         <CourseTitleSmall title={content.courses.titles[13]}/>
                         <CourseTitleSmall title={content.courses.titles[14]}/>
                         <CourseTitleSmall title={content.courses.titles[15]}/>
@@ -84,48 +85,52 @@ export function JavaPro({img, header, time, for_who, job_name, skills, className
                         <CoursesTitle title={'Level 2: Java Developer'}/>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[26]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Introduction to Spring MVC (XML-based approach)</li>
-                                <li className={'text'}>Introduction to Spring MVC (Java-based approach)</li>
-                                <li className={'text'}>Spring Boot Development</li>
-                                <li className={'text'}>Templates and Thymeleaf</li>
-                                <li className={'text'}>Working with data</li>
-                                <li className={'text'}>Spring REST API. Part 1</li>
-                                <li className={'text'}>Spring REST API. Part 2</li>
-                                <li className={'text'}>Spring Application Security</li>
-                                <li className={'text'}>Testing Spring Applications</li>
-                                <li className={'text'}>Spring AOP</li>
-                                <li className={'text'}>Integration with external services</li>
-                                <li className={'text'}>Preparation for the final project</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Introduction to Spring MVC (XML-based approach)</li>
+                                    <li className={'text'}>Introduction to Spring MVC (Java-based approach)</li>
+                                    <li className={'text'}>Spring Boot Development</li>
+                                    <li className={'text'}>Templates and Thymeleaf</li>
+                                    <li className={'text'}>Working with data</li>
+                                    <li className={'text'}>Spring REST API. Part 1</li>
+                                    <li className={'text'}>Spring REST API. Part 2</li>
+                                    <li className={'text'}>Spring Application Security</li>
+                                    <li className={'text'}>Testing Spring Applications</li>
+                                    <li className={'text'}>Spring AOP</li>
+                                    <li className={'text'}>Integration with external services</li>
+                                    <li className={'text'}>Preparation for the final project</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className={'content__courses'}>
                         <CoursesTitle title={'Level 3: Java Enterprise Developer'}/>
-                        <div className={'courses__item courses__item_big'}>
+                        <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[27]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Teamwork. Flexible management methodologies</li>
-                                <li className={'text'}>Teamwork. Interaction tools</li>
-                                <li className={'text'}>Development lifecycle</li>
-                                <li className={'text'}>IT architecture. From app to ecosystem</li>
-                                <li className={'text'}>Microservices. Organization</li>
-                                <li className={'text'}>JVM mechanisms. Memory management</li>
-                                <li className={'text'}>JVM mechanisms. Compilation</li>
-                                <li className={'text'}>JVM mechanisms. Processes and Threads</li>
-                                <li className={'text'}>Advanced technologies in Java. Exceptions</li>
-                                <li className={'text'}>Advanced technologies in Java. Generics</li>
-                                <li className={'text'}>Advanced technologies in Java. Collections in development</li>
-                                <li className={'text'}>Advanced technologies in Java. Functional interfaces</li>
-                                <li className={'text'}>QA (Quality Assurance)</li>
-                                <li className={'text'}>Development infrastructure</li>
-                                <li className={'text'}>Monitoring, logging and audit</li>
-                                <li className={'text'}>Microservices. Data flow management</li>
-                                <li className={'text'}>Microservices. Administration</li>
-                                <li className={'text'}>Technologies of corporate development. Work with protocols and protection of data transmission channels</li>
-                                <li className={'text'}>Technologies of corporate development. Service tires</li>
-                                <li className={'text'}>Apache Camel integration framework</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Teamwork. Flexible management methodologies</li>
+                                    <li className={'text'}>Teamwork. Interaction tools</li>
+                                    <li className={'text'}>Development lifecycle</li>
+                                    <li className={'text'}>IT architecture. From app to ecosystem</li>
+                                    <li className={'text'}>Microservices. Organization</li>
+                                    <li className={'text'}>JVM mechanisms. Memory management</li>
+                                    <li className={'text'}>JVM mechanisms. Compilation</li>
+                                    <li className={'text'}>JVM mechanisms. Processes and Threads</li>
+                                    <li className={'text'}>Advanced technologies in Java. Exceptions</li>
+                                    <li className={'text'}>Advanced technologies in Java. Generics</li>
+                                    <li className={'text'}>Advanced technologies in Java. Collections in development</li>
+                                    <li className={'text'}>Advanced technologies in Java. Functional interfaces</li>
+                                    <li className={'text'}>QA (Quality Assurance)</li>
+                                    <li className={'text'}>Development infrastructure</li>
+                                    <li className={'text'}>Monitoring, logging and audit</li>
+                                    <li className={'text'}>Microservices. Data flow management</li>
+                                    <li className={'text'}>Microservices. Administration</li>
+                                    <li className={'text'}>Technologies of corporate development. Work with protocols and protection of data transmission channels</li>
+                                    <li className={'text'}>Technologies of corporate development. Service tires</li>
+                                    <li className={'text'}>Apache Camel integration framework</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className={'content__courses'}>
@@ -142,8 +147,8 @@ export function JavaPro({img, header, time, for_who, job_name, skills, className
                         <CourseTitleSmall title={content.courses.titles[34]}/>
                         <CourseTitleSmall title={content.courses.titles[35]}/>
                         <CourseTitleSmall title={content.courses.titles[36]}/>
-                        <CourseTitleSmall title={content.courses.titles[37]} className={'big-item'}/>
-                        <CourseTitleSmall title={content.courses.titles[38]} className={'big-item'}/>
+                        <CourseTitleSmall title={content.courses.titles[37]}/>
+                        <CourseTitleSmall title={content.courses.titles[38]}/>
                     </div>
                     <div className={'content__courses'}>
                         <CoursesTitle title={'Final projects'}/>
@@ -156,6 +161,7 @@ export function JavaPro({img, header, time, for_who, job_name, skills, className
             <TwoTeachers avatars={[teachers.pilipenko.img, teachers.ovchinnikov.img]} names={[teachers.pilipenko.name, teachers.ovchinnikov.name]} surnames={[teachers.pilipenko.surname, teachers.ovchinnikov.surname]} descriptions={[teachers.pilipenko.description, teachers.ovchinnikov.description]} texts={[teachers.pilipenko.text, teachers.ovchinnikov.text]}/>
             <SixReviews changeId={changeId} id={id} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
             <ElevenResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

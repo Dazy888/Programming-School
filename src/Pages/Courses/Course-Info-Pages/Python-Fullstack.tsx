@@ -31,10 +31,11 @@ import {ThreeReviews} from "../Components/Reviews/Three-Reviews"
 import {Simulate} from "react-dom/test-utils"
 import React, {useEffect, useState} from "react";
 import {EightResumes} from "../Components/Resume/Eight-Resumes";
+import {FiveQuestions} from "../Components/Questions/Five-Question";
 
 let marginLeft = 0
 
-export function PythonFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
+export function PythonFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
     const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
@@ -75,70 +76,74 @@ export function PythonFullstack({time, img, header, for_who, job_name, skills, p
                         <JSAdvanced/>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[0]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Introduction</li>
-                                <li className={'text'}>Python Basics</li>
-                                <li className={'text'}>Operators, expressions</li>
-                                <li className={'text'}>Conditional operator If, branches</li>
-                                <li className={'text'}>Conditional if statement: advanced conditions</li>
-                                <li className={'text'}>While loop</li>
-                                <li className={'text'}>For loop. Cycles with a counter</li>
-                                <li className={'text'}>For loop. range() function parameters</li>
-                                <li className={'text'}>Numbers</li>
-                                <li className={'text'}>Base collections: list</li>
-                                <li className={'text'}>The for loop: working with lists</li>
-                                <li className={'text'}>List comprehensions, slice and list sorting</li>
-                                <li className={'text'}>2D arrays</li>
-                                <li className={'text'}>Basic Collections: Tuples and Strings</li>
-                                <li className={'text'}>Core Collections: Dictionaries</li>
-                                <li className={'text'}>Functions. Basics</li>
-                                <li className={'text'}>Functions. Advanced Topics</li>
-                                <li className={'text'}>Base Collections: Sets</li>
-                                <li className={'text'}>Algorithms and data structures</li>
-                                <li className={'text'}>Functions. Design and documentation</li>
-                                <li className={'text'}>Working with files</li>
-                                <li className={'text'}>Substring search with trees and regex</li>
-                                <li className={'text'}>Functions. recursion</li>
-                                <li className={'text'}>Introduction to OOP</li>
-                                <li className={'text'}>Working with modules</li>
-                                <li className={'text'}>Working with the file system</li>
-                                <li className={'text'}>Elements of Functional Programming</li>
-                                <li className={'text'}>Algorithms</li>
-                                <li className={'text'}>Data Structures</li>
-                                <li className={'text'}>OOP principles</li>
-                                <li className={'text'}>OOP. Advanced Topics</li>
-                                <li className={'text'}>Exceptions</li>
-                                <li className={'text'}>Protocols, Generators, Decorators, and Context Managers</li>
-                                <li className={'text'}>Network Basics</li>
-                                <li className={'text'}>Advanced Topics</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Introduction</li>
+                                    <li className={'text'}>Python Basics</li>
+                                    <li className={'text'}>Operators, expressions</li>
+                                    <li className={'text'}>Conditional operator If, branches</li>
+                                    <li className={'text'}>Conditional if statement: advanced conditions</li>
+                                    <li className={'text'}>While loop</li>
+                                    <li className={'text'}>For loop. Cycles with a counter</li>
+                                    <li className={'text'}>For loop. range() function parameters</li>
+                                    <li className={'text'}>Numbers</li>
+                                    <li className={'text'}>Base collections: list</li>
+                                    <li className={'text'}>The for loop: working with lists</li>
+                                    <li className={'text'}>List comprehensions, slice and list sorting</li>
+                                    <li className={'text'}>2D arrays</li>
+                                    <li className={'text'}>Basic Collections: Tuples and Strings</li>
+                                    <li className={'text'}>Core Collections: Dictionaries</li>
+                                    <li className={'text'}>Functions. Basics</li>
+                                    <li className={'text'}>Functions. Advanced Topics</li>
+                                    <li className={'text'}>Base Collections: Sets</li>
+                                    <li className={'text'}>Algorithms and data structures</li>
+                                    <li className={'text'}>Functions. Design and documentation</li>
+                                    <li className={'text'}>Working with files</li>
+                                    <li className={'text'}>Substring search with trees and regex</li>
+                                    <li className={'text'}>Functions. recursion</li>
+                                    <li className={'text'}>Introduction to OOP</li>
+                                    <li className={'text'}>Working with modules</li>
+                                    <li className={'text'}>Working with the file system</li>
+                                    <li className={'text'}>Elements of Functional Programming</li>
+                                    <li className={'text'}>Algorithms</li>
+                                    <li className={'text'}>Data Structures</li>
+                                    <li className={'text'}>OOP principles</li>
+                                    <li className={'text'}>OOP. Advanced Topics</li>
+                                    <li className={'text'}>Exceptions</li>
+                                    <li className={'text'}>Protocols, Generators, Decorators, and Context Managers</li>
+                                    <li className={'text'}>Network Basics</li>
+                                    <li className={'text'}>Advanced Topics</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[1]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Linux basics</li>
-                                <li className={'text'}>Fundamentals of CI culture</li>
-                                <li className={'text'}>Basics of debugging and profiling</li>
-                                <li className={'text'}>Basics of CI/CD</li>
-                                <li className={'text'}>Application testing</li>
-                                <li className={'text'}>HTML, DOM etc</li>
-                                <li className={'text'}>Networking</li>
-                                <li className={'text'}>Multitasking</li>
-                                <li className={'text'}>Database</li>
-                                <li className={'text'}>Indices</li>
-                                <li className={'text'}>Python Protocols</li>
-                                <li className={'text'}>Flask</li>
-                                <li className={'text'}>Async web</li>
-                                <li className={'text'}>Fundamentals of CI/CD N</li>
-                                <li className={'text'}>Basics of CI/CD N+1</li>
-                                <li className={'text'}>Docker. What it is?</li>
-                                <li className={'text'}>RESTful API</li>
-                                <li className={'text'}>Introduction to ORM</li>
-                                <li className={'text'}>CGI server</li>
-                                <li className={'text'}>Web development</li>
-                                <li className={'text'}>Safety</li>
-                                <li className={'text'}>Team graduation project</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Linux basics</li>
+                                    <li className={'text'}>Fundamentals of CI culture</li>
+                                    <li className={'text'}>Basics of debugging and profiling</li>
+                                    <li className={'text'}>Basics of CI/CD</li>
+                                    <li className={'text'}>Application testing</li>
+                                    <li className={'text'}>HTML, DOM etc</li>
+                                    <li className={'text'}>Networking</li>
+                                    <li className={'text'}>Multitasking</li>
+                                    <li className={'text'}>Database</li>
+                                    <li className={'text'}>Indices</li>
+                                    <li className={'text'}>Python Protocols</li>
+                                    <li className={'text'}>Flask</li>
+                                    <li className={'text'}>Async web</li>
+                                    <li className={'text'}>Fundamentals of CI/CD N</li>
+                                    <li className={'text'}>Basics of CI/CD N+1</li>
+                                    <li className={'text'}>Docker. What it is?</li>
+                                    <li className={'text'}>RESTful API</li>
+                                    <li className={'text'}>Introduction to ORM</li>
+                                    <li className={'text'}>CGI server</li>
+                                    <li className={'text'}>Web development</li>
+                                    <li className={'text'}>Safety</li>
+                                    <li className={'text'}>Team graduation project</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className={'content__courses'}>
@@ -169,6 +174,7 @@ export function PythonFullstack({time, img, header, for_who, job_name, skills, p
                            descriptions={[teachers.descriptions[0], teachers.descriptions[1], teachers.descriptions[2], teachers.kornienko.description, teachers.vasiyanovich.description, teachers.yakovushen.description, teachers.krotov.description, teachers.shulaev.description]}/>
             <ThreeReviews letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts} id={id} changeId={changeId}/>
             <EightResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

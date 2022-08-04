@@ -14,8 +14,9 @@ import {CourseTitleSmall} from "../Components/Content/Course-Title-Small";
 import {TeachersRow} from "../Components/Teachers/Teachers-Row";
 import {TeachersItem} from "../../Teachers/Components/TeachersItem";
 import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
+import {FiveQuestions} from "../Components/Questions/Five-Question";
 
-export function FrontendPro({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, resume}: CourseProjectsPropsType) {
+export function FrontendPro({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, resume, questions}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -45,8 +46,8 @@ export function FrontendPro({header, time, img, for_who, job_name, skills, proje
                         <CourseTitleSmall title={content.courses.titles[9]}/>
                         <CourseTitleSmall title={content.courses.titles[10]}/>
                         <CourseTitleSmall title={content.courses.titles[11]}/>
-                        <CourseTitleSmall className={'big-item'} title={content.courses.titles[12]}/>
-                        <CourseTitleSmall className={'reset-height_big'} title={content.courses.titles[13]}/>
+                        <CourseTitleSmall title={content.courses.titles[12]}/>
+                        <CourseTitleSmall title={content.courses.titles[13]}/>
                         <CourseTitleSmall title={content.courses.titles[14]}/>
                     </div>
                     <Note/>
@@ -66,6 +67,7 @@ export function FrontendPro({header, time, img, for_who, job_name, skills, proje
                 </div>
             </div>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

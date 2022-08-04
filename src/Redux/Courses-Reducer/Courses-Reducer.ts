@@ -50,6 +50,11 @@ export type ResumeType = {
     certificate: string
 }
 
+export type QuestionsType = {
+    titles: Array<string>
+    texts: Array<string>
+}
+
 export type CourseType = {
     job_name: string,
     main_img: string,
@@ -64,6 +69,7 @@ export type CourseType = {
         content: ContentType
         reviews: ReviewsType
         resume: ResumeType
+        questions: QuestionsType
     }
 }
 
@@ -156,6 +162,28 @@ const initialState = {
                     'Async/await', 'Working with databases (pure SQL, ORM, Postgres)', 'Working with Django, Flask, FastAPI frameworks', 'Web mark-up',
                     'Deploying applications and working with docker/docker-compose', 'Creation of bots', 'API design'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have no programming experience. Is this course right for me?',
+                    'Do you need to know math?',
+                    'How is streaming learning different from regular learning?',
+                    'How many hours per week will I need to devote to the course?',
+                    'Who will help me on the course?',
+                    'Will there be bonuses for results on the course?',
+                    'Are there any special computer requirements?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Of course - the course is designed for absolute beginners. But you will have to try - read additional literature, do not miss classes and do practical work on time. Skillbox will help with the rest - curators will analyze practical tasks, assistants will answer questions about the process of passing, and the Career Center will take care of your employment',
+                    'At the initial stages, advanced knowledge is not required from you - a school mathematics course is enough. However, do not be alarmed if you have to figure out topics that you forgot or did not go through - the curator will help you refresh your knowledge or give useful links',
+                    'In the stream, you will complete the Python Basic course in 2 times faster than regular participants. You are waiting for daily online classes in a group, deadlines for completing training modules and reviewing work at online meetings with the curator and the team',
+                    'Depends on the format. According to the usual schedule, you can study at a convenient time - on average, platform users spend 3 to 5 hours a week on the course. You do not have a rigid schedule and deadlines. An accelerated schedule in the stream requires more time - you need to find at least 3 hours a day for practical classes and 1.5 hours a week for an online meeting with a curator. It is also impossible to postpone the execution of practical work in the flow - you must hand it in before a certain deadline',
+                    "Practical work is checked by a curator - a practicing Python developer. You can ask him a question in your personal account or contact the course's Telegram chat.Participants of streaming training communicate with the group curator in Discord, discuss difficult tasks with a personal partner - buddy. The team leader at the weekly team meeting makes a list of topics for analysis at the final webinar with the curator",
+                    'Participants who complete practical work and submit projects receive internship invitations before the end of the course. For individual achievements in streaming training, you will receive achievements - awards that can be attached to the name',
+                    'Python does not require powerful hardware and large resources. Any computer running Windows 7 or 10, Linux Ubuntu or macOS 10.11 or higher will do. To install the PyCharm development environment, you will need at least 4Gb of RAM, 5 Gb of free hard disk space and one of the latest versions of a 64-bit operating system',
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -276,6 +304,22 @@ const initialState = {
                     'Development of web applications on the Spring framework, working with Hibernate', 'Excellent knowledge of OOP principles and design patterns',
                     'Java Core, Collections Framework, Multithreading', 'Work on Scrum methodology', 'Web mark-up', 'Application optimization'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never done Java development. Will I succeed?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    'Who will help me learn on the platform?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Of course! With hard work and timely implementation of practical work, you can achieve results even without special basic knowledge. Experienced mentors will help you with everything, who will supervise you throughout the course',
+                    'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    'You will have reviewing experts and a curator in the course\'s Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks',
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -382,6 +426,22 @@ const initialState = {
                 'Working with front-end frameworks React, Vue, Angular', 'PHP and JavaScript programming', 'Working with external APIs', 'Knowledge of algorithms and data structures',
                 'JavaScript programming', 'Applying the principles of OOP in practice', 'Application testing', 'Building a high load backend'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have no experience in web development. Is this course right for me?',
+                    'Is English required?',
+                    'How many hours per week will I need to study?',
+                    'Who will help me learn on the platform?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Yes, the course is suitable for absolute beginners with no programming experience. But in order to achieve a result, you need to try - to complete practical tasks, read additional literature and develop final projects. The rest will be helped by practicing experts who will accompany you throughout the course',
+                    'Not at all necessary. The documentation of all programming languages has a translation into Russian, and you will remember the names of the code functions in the process of learning on the platform',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours per week. Next to each course name is an approximate duration in hours. You can focus on this data and plan training on the platform according to the schedule that is convenient for you',
+                    "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -474,6 +534,22 @@ const initialState = {
                 'Working with SQL', 'Working with multithreading', 'Writing code for Unreal Engine 4', 'Creating microservices', 'Working with git, gcc, gdb',
                 'Creating a REST API', 'Work with the documentation'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never programmed in C++. Will I succeed?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    'Who will help me learn on the platform?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course. The rest will be helped by experienced mentors who will supervise you throughout the course',
+                    'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -560,6 +636,22 @@ const initialState = {
                 'Ability to set and meet deadlines', 'Creation of animation sites', "Ability to understand other people's code", 'Setting up CRM integration with external systems',
                 'Writing queries against relational databases'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never programmed. Will I succeed?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    'Who will help me learn on the platform?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Of course! With the right approach to learning, independent expansion of horizons and timely completion of practical tasks, you can achieve results even without special basic knowledge. Experienced tutors will help you with everything, who will accompany you throughout the course',
+                    'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -654,6 +746,24 @@ const initialState = {
                 'I create applications for Android devices', 'Conducting a code review', 'Skills with SQLite, Firebase', 'I follow the code style — my code is easy to read and understand for colleagues',
                 'Understand design patterns', 'Working with the API', 'Version control in Git', 'Technical english'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never developed mobile applications. Will I succeed?',
+                    'Which computer is suitable for the course?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    'Who will accompany me?',
+                    'Are there any installment programs?'
+                ],
+                texts: [
+                    'Of course! The course is ideal for beginners without special knowledge. The main thing is not to miss classes and do not forget to practice. Under some videos you will find additional materials - we advise you to devote time to them. If you have any questions about the topic of classes, do not hesitate to contact the Telegram chat',
+                    'To work in Android Studio, you need Windows (64 bit), Linux (64 bit) or macOS versions from 10.10 (Yosemite) to 10.14 (Mojave). Minimum 4 GB RAM, recommended 8 GB. Minimum - 2 gigabytes of free disk space, recommended size - 4 GB. Screen resolution - from 1280x800',
+                    'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    'You will have a mentor in the Telegram chat, and the curator will comment on practical work and give useful advice. So you can learn from experience, professional knowledge and life hacks from leading experts',
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -723,6 +833,22 @@ const initialState = {
                 'Administration and deployment of pilot works', 'Working with XML and JSON', 'HTML, CSS and JavaScript for building websites', 'The habit of writing commented and strongly formatted code',
                 'Understanding the principles of OOP', 'Familiarity with the Git version control system', 'Working with WPF to develop database user interfaces'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never programmed. Will I succeed?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    'Who will help me learn on the platform?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course',
+                    'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -809,6 +935,22 @@ const initialState = {
                 'I can meet deadlines', 'Network request skills', 'I follow the principles of OOP and SOLID, I apply design patterns', "Read and understand other people's code",
                 'I understand the specifics of working with the App Store'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never programmed. Will I succeed?',
+                    'What are the general Mac requirements for iOS development?',
+                    'What are the Mac hardware requirements?',
+                    'Is English required?',
+                    'Will I definitely get a job?',
+                ],
+                texts: [
+                    'It will turn out. When we develop the content of the courses, we understand that the classes should be focused on those who want to learn programming from scratch. Therefore, speakers explain each topic from the most basic things - or you can always close unanswered questions through communication with the curator or in the course chat',
+                    'Your Mac must also have at least 4 GB of memory and 12.5 GB of free disk space. Either up to 18.5 GB of free space when upgrading from OS X Yosemite or earlier',
+                    'You will write code in the Swift 5 programming language and work in the Xcode 12.4 environment. Xcode 12.4 requires a Mac running macOS Catalina 10.15.4 or later',
+                    'It is desirable to know English. In the course, we give links to the official Swift documentation, and it is completely written in English. If you are new to the language, Google Translate will help you at first, but it is better to study English additionally - any programmer needs it',
+                    'Yes, if you take the course - it teaches enough skills to get a job as a programmer. For our part, we will help you to correctly compose a resume and arrange a portfolio, as well as provide contacts of companies',
+                ]
             }
         }
     } as CourseType,
@@ -886,6 +1028,22 @@ const initialState = {
                 texts: ['Development of turnkey online stores', 'Ability to set and meet deadlines', 'Writing commented and formatted code', 'Creation of animation sites',
                 'Writing queries against relational databases', "Ability to understand other people's code", 'Setting up CRM integration with external systems', 'Administration and deployment of pilot works'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never done web development. Will I succeed?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    'Who will help me learn on the platform?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course',
+                    'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -956,6 +1114,29 @@ const initialState = {
                     titles: ['iOS development. Level 1', 'iOS development. Level 2', 'Kotlin', 'Android developer. Level 1', 'Android developer. Level 2 ']
                 }
             },
+            questions: {
+                titles: [
+                    "I don't really understand what to choose - iOS or Android. Tell!",
+                    'I have no experience in mobile development. Is this course right for me?',
+                    'Which computer is suitable for the course?',
+                    'Is English required?',
+                    'Will I get a job after the course?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    'Who will help me learn on the platform?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    "Don't worry if you haven't decided yet. After the application, we will discuss specialization options together by phone. We will tell you in detail about the features of each platform, answer questions and choose a direction",
+                    'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course',
+                    "To work in Android Studio, you need Windows 8/10 (64 bit), Linux (64 bit) with support for Gnome, KDE or macOS version 10.14 (Mojave) or higher. 4 GB RAM minimum, 8 GB recommended. Minimum - 2 free gigabytes on the disk, the recommended amount is 4 GB. Screen resolution - from 1280 × 800. You'll need a MacBook or other macOS computer to take iOS courses. The operating system is macOS Catalina 10.15.4 or later. The course uses the Swift 5 programming language, as well as the Xcode 12.4 development environment. The Mac must also have at least 4 GB of memory and 12.5 GB of free disk space. Either up to 18.5 GB of free space when upgrading from OS X Yosemite or earlier",
+                    'It is desirable to know English. In the course, we provide links to the official Swift/Kotlin documentation, and it is written entirely in English. If you are not familiar with the language, then Google Translate will help you at first, but it is better to study English additionally - any programmer needs it',
+                    'The courses cover all the topics that a mobile developer needs. If you study regularly, complete practical tasks and work on final projects, then by the end of the course you will be ready for employment. We will take care of the rest — we will select vacancies, help you write a resume, correctly draw up a portfolio and prepare for an interview. If the interview fails, we will collect feedback from the employer and suggest in what aspects you need to develop, and continue working. Most often, platform users get a chance to prove themselves in an internship or get a junior position',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
+            }
         }
     } as CourseType,
     java: {
@@ -1054,6 +1235,22 @@ const initialState = {
                 'Java web application development', 'Development of web applications on the Spring framework', 'Relational database query writing skills', "Ability to understand other people's code",
                 'Working with the Git version control system'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never done Java development. Will I succeed?',
+                    'What is the training schedule? Can you combine it with work?',
+                    'How many hours per week will I need to study?',
+                    'Will I be able to communicate with teachers?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Of course! With diligent study and timely completion of homework, you can achieve results even without special basic knowledge. Experienced mentors will help you with everything, who will supervise you throughout the course',
+                    'You can work through the course materials at your convenience, moving through the program at your own pace. Moreover, all lessons will be available at the end of the course, forever, so you can refresh your knowledge at any time. Training is organized in such a way that you can combine it with work, study and personal life',
+                    'Everything depends on you. On average, our students study three to five hours per week',
+                    'You will have a curator in the Telegram chat, and the teacher will personally comment on homework and give useful advice. So you can learn from experience, professional knowledge and life hacks from leading experts',
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -1115,6 +1312,22 @@ const initialState = {
                 texts: ['Responsive layout of websites and emails', 'Working with TypeScript', 'Strong knowledge of JavaScript and OOP', 'Developing Server Applications with Node.js',
                 'Working with Git version control', 'Knowledge of React.js/Angular/Vue.js', 'Understanding algorithms and data structures in projects'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never developed websites. Will I succeed?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    'Who will help me learn on the platform?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course',
+                    'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    'You will have reviewing experts and a curator in the course\'s Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks',
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -1193,6 +1406,22 @@ const initialState = {
                 'Working with Web API and HTTP/HTTPS protocols', 'Knowledge of SQL', 'Creation of sites and applications on Vue.js, React.js', 'Working on the Bash command line',
                 'Advanced CSS3 and HTML5 skills', 'Working with Git version control systems', 'Building server solutions', 'Deploy, assembly of projects for production'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never programmed. Will I succeed?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    "Who will help me learn on the platform?",
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course',
+                    'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -1291,6 +1520,22 @@ const initialState = {
                     'Backend development with Node.js', 'Working with Web API', 'Adaptive layout', 'Working with databases: MySQL, MongoDB, Redis', 'Creating web applications on the React.js/Vue.js/Angular framework',
                     'Working with the Git version control system'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never done programming. Will I succeed?',
+                    'What is the training schedule? Can you combine it with work?',
+                    'How many hours per week will I need to study?',
+                    'Will I be able to communicate with teachers?',
+                    'Are there any installment programs?',
+                ],
+                texts: [
+                    'Of course! With the right approach to learning, independent expansion of horizons and timely completion of homework, you can achieve results even without special basic knowledge. Experienced mentors will help you with everything, who will supervise you throughout the course',
+                    'You can work through the course materials at your convenience, moving through the program at your own pace. Moreover, all lessons will be available at the end of the course, forever, so you can refresh your knowledge at any time. Training is organized in such a way that you can combine it with work, study and personal life',
+                    'Everything depends on you. On average, our students study three to five hours per week',
+                    'You will have a curator in the Telegram chat, and the teacher will personally comment on homework and give useful advice. So you can learn from experience, professional knowledge and life hacks from leading experts',
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
+                ]
             }
         }
     } as CourseType,
@@ -1361,6 +1606,22 @@ const initialState = {
                     'Working with the file system', 'Knowledge of Laravel PHP framework', 'Programming in PHP 7', 'I know the basics of HTML/CSS', 'I debug code manually and am familiar with Xdebug',
                     'I adhere to the DRY principles and follow the code style'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have no programming experience. Will this course help me?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    'Who will help me learn on the platform?',
+                    'Will I be able to communicate with teachers?',
+                ],
+                texts: [
+                    'Of course! The course is designed for beginners, and the PHP programming language can be mastered without special technical training. The main thing - do not forget to read additional literature and consolidate knowledge on practical tasks at the end of the module',
+                    'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
+                    'You will have a curator in the Telegram chat, and the checking teacher will comment on homework and give useful advice. So you can learn from experience, professional knowledge and life hacks from leading experts',
+                ]
             }
         }
     } as CourseType,
@@ -1419,6 +1680,29 @@ const initialState = {
                 'Working with Git version control', 'Working with multithreading in applications', 'Ability to set and meet deadlines', 'Uploading the application to the store',
                 'Mobile application testing'],
                 certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
+            },
+            questions: {
+                titles: [
+                    'I have never developed applications for mobile platforms. Will I succeed?',
+                    'What are the hardware requirements?',
+                    'What are the general Mac requirements for iOS development?',
+                    'Is English required?',
+                    'What is the training schedule on the platform? Can you combine it with work?',
+                    'How many hours per week will I need to devote to training on the platform?',
+                    'Who will help me learn on the platform?',
+                    'Are there any installment programs?'
+                ],
+                texts: [
+                    'The course is designed for mobile developers or developers from related fields. During the course, we recommend paying attention to practical work and reading additional literature. The rest will be assisted by experienced practitioners who will accompany you throughout the profession',
+                    'If you choose Swift as your native language to learn, Mac models that are compatible with macOS from High Sierra and above are suitable: MacBook and iMac (Late 2009 or later), MacBook Pro, MacBook Air, Mac mini, and Mac Pro (Mid 2010) year or newer). To get information about your Mac model, click the Apple icon in the top left corner of the screen and choose About This Mac from the menu. The course uses the Swift programming language (version 4 at the first level, version 5 at the second level), as well as the Xcode development environment (version 10 at the first level, 11.1 at the second level).',
+                    'If you choose the Kotlin language, you will need Windows (64 bit), Linux (64 bit) or macOS versions from 10.10 (Yosemite) to 10.14 (Mojave). Minimum 4 GB RAM, recommended 8 GB. Minimum - 2 free gigabytes on the disk, the recommended amount is 4 GB. Screen resolution - from 1280x800',
+                    'OS X 10.8 or later, 2 GB RAM, 14.3 GB free space for system updates. Some features require an Apple ID and a compatible ISP',
+                    'Basic knowledge of English is required. In the future, the language will come in handy, since all documentation for developers and the latest information is published on it',
+                    'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
+                    'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
+                    "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
+                    'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments'
+                ]
             }
         }
     } as CourseType

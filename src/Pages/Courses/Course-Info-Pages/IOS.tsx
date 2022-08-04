@@ -18,8 +18,9 @@ import {Triangle} from "../Components/Content/Triangle"
 import {TeachersItem} from "../../Teachers/Components/TeachersItem"
 import {OneReview} from "../Components/Reviews/One-Review";
 import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
+import {FiveQuestions} from "../Components/Questions/Five-Question";
 
-export function IOS({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume}: CourseProjectsPropsType) {
+export function IOS({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -33,53 +34,57 @@ export function IOS({header, time, img, for_who, job_name, skills, projects, cla
                 <div className={`content__container ${classNames[4]}`}>
                     <Title text={content.title.text} numbers={content.title.numbers} descriptions={content.title.descriptions}/>
                     <div className={'content__courses'}>
-                        <div className={'courses__item reset-height_big'}>
+                        <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[0]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Development environment</li>
-                                <li className={'text'}>Swift development basics. Part 1. Variables and Numeric Types</li>
-                                <li className={'text'}>Swift development basics. Part 2. Working with strings</li>
-                                <li className={'text'}>Swift development basics. Part 3. Boolean types and flow control</li>
-                                <li className={'text'}>Swift development basics. Part 4. Working with arrays. Methods</li>
-                                <li className={'text'}>Swift development basics. Part 5. Working with dictionaries</li>
-                                <li className={'text'}>UI development basics</li>
-                                <li className={'text'}>Classes and structures in Swift</li>
-                                <li className={'text'}>OOP</li>
-                                <li className={'text'}>Protocols</li>
-                                <li className={'text'}>The layout of UI elements. Using Enum</li>
-                                <li className={'text'}>Working with layouts</li>
-                                <li className={'text'}>Life cycle and navigation</li>
-                                <li className={'text'}>Lists</li>
-                                <li className={'text'}>Libraries. Access Modifiers</li>
-                                <li className={'text'}>Version control</li>
-                                <li className={'text'}>Multithreading</li>
-                                <li className={'text'}>Network requests. Part 1</li>
-                                <li className={'text'}>Network requests. Part 2</li>
-                                <li className={'text'}>User data storage</li>
-                                <li className={'text'}>Animations</li>
-                                <li className={'text'}>Modern approaches to development</li>
-                                <li className={'text'}>Creating navigation in code</li>
-                                <li className={'text'}>Publishing an App to the AppStore</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Development environment</li>
+                                    <li className={'text'}>Swift development basics. Part 1. Variables and Numeric Types</li>
+                                    <li className={'text'}>Swift development basics. Part 2. Working with strings</li>
+                                    <li className={'text'}>Swift development basics. Part 3. Boolean types and flow control</li>
+                                    <li className={'text'}>Swift development basics. Part 4. Working with arrays. Methods</li>
+                                    <li className={'text'}>Swift development basics. Part 5. Working with dictionaries</li>
+                                    <li className={'text'}>UI development basics</li>
+                                    <li className={'text'}>Classes and structures in Swift</li>
+                                    <li className={'text'}>OOP</li>
+                                    <li className={'text'}>Protocols</li>
+                                    <li className={'text'}>The layout of UI elements. Using Enum</li>
+                                    <li className={'text'}>Working with layouts</li>
+                                    <li className={'text'}>Life cycle and navigation</li>
+                                    <li className={'text'}>Lists</li>
+                                    <li className={'text'}>Libraries. Access Modifiers</li>
+                                    <li className={'text'}>Version control</li>
+                                    <li className={'text'}>Multithreading</li>
+                                    <li className={'text'}>Network requests. Part 1</li>
+                                    <li className={'text'}>Network requests. Part 2</li>
+                                    <li className={'text'}>User data storage</li>
+                                    <li className={'text'}>Animations</li>
+                                    <li className={'text'}>Modern approaches to development</li>
+                                    <li className={'text'}>Creating navigation in code</li>
+                                    <li className={'text'}>Publishing an App to the AppStore</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div className={'courses__item reset-height_big'}>
+                        <div className={'courses__item'}>
                             <CourseTitle title={content.courses.titles[1]} isButton={true}/>
-                            <ul className={'item__list'}>
-                                <li className={'text'}>Generics, native operators</li>
-                                <li className={'text'}>Application architecture</li>
-                                <li className={'text'}>Testing</li>
-                                <li className={'text'}>Asynchronous programming</li>
-                                <li className={'text'}>Xcode Optimization and Tools</li>
-                                <li className={'text'}>Algorithms and data structures</li>
-                                <li className={'text'}>Design patterns</li>
-                                <li className={'text'}>Push-notifications</li>
-                                <li className={'text'}>Frameworks/Modularization</li>
-                                <li className={'text'}>SwiftUI + Combine</li>
-                                <li className={'text'}>Multithreading</li>
-                                <li className={'text'}>Networking</li>
-                                <li className={'text'}>Specific tools</li>
-                                <li className={'text'}>Data storage</li>
-                            </ul>
+                            <div className={'item__txt'}>
+                                <ul className={'item__list'}>
+                                    <li className={'text'}>Generics, native operators</li>
+                                    <li className={'text'}>Application architecture</li>
+                                    <li className={'text'}>Testing</li>
+                                    <li className={'text'}>Asynchronous programming</li>
+                                    <li className={'text'}>Xcode Optimization and Tools</li>
+                                    <li className={'text'}>Algorithms and data structures</li>
+                                    <li className={'text'}>Design patterns</li>
+                                    <li className={'text'}>Push-notifications</li>
+                                    <li className={'text'}>Frameworks/Modularization</li>
+                                    <li className={'text'}>SwiftUI + Combine</li>
+                                    <li className={'text'}>Multithreading</li>
+                                    <li className={'text'}>Networking</li>
+                                    <li className={'text'}>Specific tools</li>
+                                    <li className={'text'}>Data storage</li>
+                                </ul>
+                            </div>
                         </div>
                         <Git/>
                         <SQL/>
@@ -103,6 +108,7 @@ export function IOS({header, time, img, for_who, job_name, skills, projects, cla
             </div>
             <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

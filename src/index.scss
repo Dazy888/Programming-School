@@ -249,3 +249,87 @@ code {
     margin-top: 15px;
   }
 }
+
+.show-block {
+  display: block !important;
+}
+
+.change-sign {
+  transform: rotate(45deg);
+}
+
+.courses__item {
+  overflow: hidden;
+  border-top: 2px solid #60B3FF;
+
+  p {
+    padding-bottom: 30px;
+  }
+
+  &:hover {
+    .title__btn {
+      background: black !important;
+
+      i {
+        color: white !important;
+      }
+    }
+  }
+
+  &:last-child {
+    border-bottom: 2px solid #60B3FF;
+  }
+
+  .item__title_extended {
+    cursor: pointer;
+  }
+
+  .item__title {
+    padding: 30px 0;
+
+    .small-title {
+      max-width: 750px;
+      font-size: 22px;
+    }
+
+    .title__btn {
+      width: 28px;
+      height: 28px;
+      background: transparent;
+      border-radius: 50%;
+      border: 1px solid black;
+      transition: 0.3s;
+
+      i {
+        font-size: 20px;
+        color: black;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .item__list {
+    list-style-type: disc;
+    padding: 0 0 30px 55px;
+
+    li {
+      margin-bottom: 25px;
+      padding-left: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .item__txt {
+    display: none;
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: black;
+}
