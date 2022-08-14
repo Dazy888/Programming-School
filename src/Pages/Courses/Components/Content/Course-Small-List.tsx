@@ -9,9 +9,11 @@ export function CourseSmallList({title, text}: PropsType) {
     return(
         <div className={'courses__item'}>
             <CourseTitle title={title} isButton={true}/>
-            <ul className={'item__list default-list'}>
-                <li className={'text'}>{text}</li>
-            </ul>
+            <div className={'item__txt'}>
+                <ul className={'item__list default-list'}>
+                    <li className={'text'}>{text}</li>
+                </ul>
+            </div>
         </div>
     )
 }

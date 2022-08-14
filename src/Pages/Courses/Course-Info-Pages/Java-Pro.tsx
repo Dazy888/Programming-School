@@ -17,29 +17,19 @@ import {SliderControls} from "../Components/Projects/Projects"
 import React, {useEffect, useState} from "react"
 import {ElevenResumes} from "../Components/Resume/Eleven-Resumes";
 import {FiveQuestions} from "../Components/Questions/Five-Question";
+import {Registration} from "../Components/Registration/Registration";
 
 let marginLeft = 0
 
 export function JavaPro({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers, reviews, resume, questions}: CoursePropsType) {
-    const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
-    useEffect(() => {
-        const reviews = course_container.current
+    const [reviewsSectionId, changeReviewsSectionId] = useState(0)
+    const [reviews_section_margin, changeReviewsSectionMargin] = useState(0)
 
-        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
-        const reviewsSlider = reviews.querySelector('.row__list')
-
-        reviewsButtons[0].onclick = () => {
-            marginLeft = marginLeft + 750
-            reviewsSlider.style.marginLeft = marginLeft + 'px'
-        }
-
-        reviewsButtons[1].onclick = () => {
-            marginLeft = marginLeft - 750
-            reviewsSlider.style.marginLeft = marginLeft + 'px'
-        }
-    })
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
 
     return(
         <div className={'course-container'} ref={course_container}>
@@ -47,7 +37,7 @@ export function JavaPro({img, header, time, for_who, job_name, skills, className
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <HowUse classNames={classNames} />
-            <Employment classNames={classNames}/>
+            <Employment changeCareerCenterId={changeCareerCenterId} careerCenterId={careerCenterId} changeReviewsId={changeReviewsId} reviewsId={reviewsId} margin={employers_feedback_margin} changeMargin={changeEmployersFeedbackMargin} classNames={classNames}/>
             <div className={`content ${classNames[1]}`}>
                 <Triangle className={classNames[3]}/>
                 <div className={`content__container ${classNames[4]}`}>
@@ -159,8 +149,9 @@ export function JavaPro({img, header, time, for_who, job_name, skills, className
                 </div>
             </div>
             <TwoTeachers avatars={[teachers.pilipenko.img, teachers.ovchinnikov.img]} names={[teachers.pilipenko.name, teachers.ovchinnikov.name]} surnames={[teachers.pilipenko.surname, teachers.ovchinnikov.surname]} descriptions={[teachers.pilipenko.description, teachers.ovchinnikov.description]} texts={[teachers.pilipenko.text, teachers.ovchinnikov.text]}/>
-            <SixReviews changeId={changeId} id={id} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
+            <SixReviews left={reviews_section_margin} changeLeft={changeReviewsSectionMargin} classNames={classNames} changeId={changeReviewsSectionId} id={reviewsSectionId} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
             <ElevenResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <Registration className={classNames[0]}/>
             <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )

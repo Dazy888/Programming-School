@@ -1,10 +1,11 @@
 import './Styles/Contacts-Page.css'
 import './Styles/Contacts-Page-Media.css'
 import {Field, Form, Formik} from "formik"
-import React from "react"
+import React, {useEffect} from "react"
 import {useDispatch, useSelector} from "react-redux"
 import {ContactsReducerActions} from "../../Redux/Contacts-Reducer/Contacts-Reducer"
 import {getFetchingStatus} from "../../Redux/Contacts-Reducer/Contacts-Selectors"
+import IMask from "imask";
 
 export function ContactsPage() {
     const formRef: any = React.createRef()
@@ -15,6 +16,18 @@ export function ContactsPage() {
         dispatch(ContactsReducerActions.changeFetchingStatus(true))
         formikHelpers.resetForm()
     }
+
+    useEffect(() => {
+        let element = formRef.current.querySelector('.phone-input')
+
+        let maskOptions = {
+            mask: '+{38}(000)-000-00-00',
+            lazy: false
+        };
+
+        element.onfocus = () => IMask(element, maskOptions);
+    }, [])
+
 
     return(
         <div id={'contacts-wrapper'}>
@@ -62,24 +75,23 @@ export function ContactsPage() {
                                         <div className={'error-container'}>
                                             {errors.firstName && touched.firstName ? <p className={'error__txt'}>{errors.firstName}</p> : null}
                                             <Field className={'inputs__txt subtitle'} minLength={3} maxLength={20} placeholder={'Your name'} type={'text'} name={'firstName'} validate={nameValidation} />
-                                            {errors.firstName && touched.firstName ? <i className="fa-solid fa-circle-exclamation error"></i> : null}
+                                            {errors.firstName && touched.firstName ? <i className="fa-solid fa-circle-exclamation error__icon"></i> : null}
                                         </div>
                                         <div className={'error-container'}>
                                             {errors.reason && touched.reason ? <p className={'error__txt'}>{errors.reason}</p> : null}
                                             <Field className={'inputs__txt subtitle'} minLength={5} maxLength={20} placeholder={'Reason of the application'} type={'text'} name={'reason'} validate={reasonValidation} />
-                                            {errors.reason && touched.reason ? <i className="fa-solid fa-circle-exclamation error"></i> : null}
+                                            {errors.reason && touched.reason ? <i className="fa-solid fa-circle-exclamation error__icon"></i> : null}
                                         </div>
                                         <div className={'error-container'}>
                                             {errors.phone && touched.phone ? <p className={'error__txt'}>{errors.phone}</p> : null}
-                                            <Field className={'inputs__txt subtitle'} minLength={10} maxLength={13} placeholder={'Your phone number'} type={'text'} name={'phone'} validate={phoneNumberValidator} />
-                                            {errors.phone && touched.phone ? <i className="fa-solid fa-circle-exclamation error"></i> : null}
+                                            <Field className={'inputs__txt subtitle phone-input'} minLength={10} maxLength={20} placeholder={'Your phone number'} type={'text'} name={'phone'} validate={phoneNumberValidator} />
+                                            {errors.phone && touched.phone ? <i className="fa-solid fa-circle-exclamation error__icon"></i> : null}
                                         </div>
                                     </div>
                                     <div className={'form__textarea'}>
                                         <div className={'error-container'}>
                                             {errors.applicationTxt && touched.applicationTxt ? <p className={'error__txt'}>{errors.applicationTxt}</p> : null}
                                             <Field minLength={20} maxLength={100} as={'textarea'} className={'inputs__textarea subtitle'} placeholder={'Describe your request'} type={'textarea'} name={'applicationTxt'} validate={textareaValidator} />
-                                            {errors.applicationTxt && touched.applicationTxt ? <i className="fa-solid fa-circle-exclamation error"></i> : null}
                                         </div>
                                     </div>
                                 </div>

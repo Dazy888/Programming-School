@@ -18,15 +18,21 @@ import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {TwoTeachers} from "../Components/Teachers/Two-Teachers"
 import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
 import {FiveQuestions} from "../Components/Questions/Five-Question";
+import React, {useState} from "react";
+import {Registration} from "../Components/Registration/Registration";
 
 export function PHPPro({time, img, header, for_who, job_name, skills, classNames = [''], content, teachers, resume, questions}: CoursePropsType) {
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
+
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <HowUse classNames={classNames} />
-            <Employment classNames={classNames}/>
+            <Employment changeMargin={changeEmployersFeedbackMargin} margin={employers_feedback_margin} reviewsId={reviewsId} changeCareerCenterId={changeCareerCenterId} changeReviewsId={changeReviewsId} careerCenterId={careerCenterId} classNames={classNames}/>
             <div className={`content ${classNames[1]}`}>
                 <Triangle className={classNames[3]}/>
                 <div className={`content__container ${classNames[4]}`}>
@@ -101,6 +107,7 @@ export function PHPPro({time, img, header, for_who, job_name, skills, classNames
             </div>
             <TwoTeachers avatars={[teachers.ignatiev.img, teachers.molesku.img]} names={[teachers.ignatiev.name, teachers.molesku.name]} surnames={[teachers.ignatiev.surname, teachers.molesku.surname]} descriptions={[teachers.ignatiev.description, teachers.molesku.description]} texts={[teachers.ignatiev.text, teachers.molesku.text]}/>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <Registration className={classNames[0]}/>
             <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )

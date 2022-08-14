@@ -21,8 +21,14 @@ import {TeachersRow} from "../Components/Teachers/Teachers-Row"
 import {OneReview} from "../Components/Reviews/One-Review"
 import {TwelveResumes} from "../Components/Resume/Twelve-Resumes"
 import {CourseSmall} from "../Components/Content/Course-Small";
+import React, {useState} from "react";
+import {Registration} from "../Components/Registration/Registration";
 
 export function Android({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
+
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -30,7 +36,7 @@ export function Android({header, time, img, for_who, job_name, skills, projects,
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames} />
-            <Employment classNames={classNames}/>
+            <Employment changeMargin={changeEmployersFeedbackMargin} margin={employers_feedback_margin} reviewsId={reviewsId} changeCareerCenterId={changeCareerCenterId} changeReviewsId={changeReviewsId} careerCenterId={careerCenterId} classNames={classNames}/>
             <div className={`content ${classNames[1]}`}>
                 <Triangle className={classNames[3]}/>
                 <div className={`content__container ${classNames[4]}`}>
@@ -124,8 +130,9 @@ export function Android({header, time, img, for_who, job_name, skills, projects,
                     <TeachersItem img={teachers.rybakov.img} name={teachers.rybakov.name} surname={teachers.rybakov.surname} description={teachers.rybakov.description}/>
                 </div>
             </div>
-            <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
+            <OneReview className={classNames[0]} letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <Registration className={classNames[0]}/>
             <div className={`questions flex-property-set_between ${classNames[4]}`}>
                 <h1 className={'title'}>Frequently asked Questions</h1>
                 <div className={'questions__column'}>

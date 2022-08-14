@@ -17,6 +17,8 @@ import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
 import {EightTeachers} from "../Components/Teachers/Eight-Teachers"
 import {CourseSmall} from "../Components/Content/Course-Small";
+import React, {useState} from "react";
+import {Registration} from "../Components/Registration/Registration";
 
 export type ExtraProjectPropsType = {
     projects_photographs: Array<string>
@@ -25,6 +27,10 @@ export type ExtraProjectPropsType = {
 }
 
 export function Mobile({header, time, img, for_who, job_name, skills, projects, projects_texts, projects_photographs, classNames = [''], content, teachers, questions}: CourseProjectsPropsType & ExtraProjectPropsType) {
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
+
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -32,7 +38,7 @@ export function Mobile({header, time, img, for_who, job_name, skills, projects, 
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects_photographs} titles={projects.titles} texts={projects_texts}/>
             <HowUse classNames={classNames} />
-            <Employment/>
+            <Employment changeMargin={changeEmployersFeedbackMargin} margin={employers_feedback_margin} reviewsId={reviewsId} changeCareerCenterId={changeCareerCenterId} changeReviewsId={changeReviewsId} careerCenterId={careerCenterId}/>
             <div className={`content`}>
                 <Triangle/>
                 <div className={`content__container`}>
@@ -180,7 +186,8 @@ export function Mobile({header, time, img, for_who, job_name, skills, projects, 
                            names={[teachers.nikolaev.name, teachers.lisakov.name, teachers.nikolaev.name, teachers.alexandrov.name, teachers.ageychenko.name, teachers.ovchinnikov.name, teachers.rybakov.name, teachers.malyx.name, teachers.pilipenko.name]}
                            surnames={[teachers.nikolaev.surname, teachers.lisakov.surname, teachers.nikolaev.surname, teachers.alexandrov.surname, teachers.ageychenko.surname, teachers.ovchinnikov.surname, teachers.rybakov.surname, teachers.malyx.surname, teachers.pilipenko.surname]}
                            descriptions={[teachers.nikolaev.description, teachers.lisakov.description, teachers.nikolaev.description, teachers.alexandrov.description, teachers.ageychenko.description, teachers.ovchinnikov.description, teachers.rybakov.description, teachers.malyx.description, teachers.pilipenko.description]}/>
-            <div className={`questions flex-property-set_between ${classNames[4]}`}>
+            <Registration className={classNames[0]}/>
+            <div className={`questions flex-property-set_between`}>
                 <h1 className={'title'}>Frequently asked Questions</h1>
                 <div className={'questions__column'}>
                     <CourseSmall title={questions.titles[0]} text={questions.texts[0]}/>

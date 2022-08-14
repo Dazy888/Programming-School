@@ -30,10 +30,15 @@ import {OneReview} from "../Components/Reviews/One-Review"
 import {ResumeTitle} from "../Components/Resume/Resume-Title";
 import {SkillsRow} from "../Components/Resume/Skills-Row";
 import {Certificate} from "../Components/Resume/Certificate";
-import React from "react";
+import React, {useState} from "react";
 import {FiveQuestions} from "../Components/Questions/Five-Question";
+import {Registration} from "../Components/Registration/Registration";
 
 export function FrontendFull({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
+
     return (
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -56,7 +61,7 @@ export function FrontendFull({header, time, img, for_who, job_name, skills, proj
             </div>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames}/>
-            <Employment classNames={classNames}/>
+            <Employment changeMargin={changeEmployersFeedbackMargin} margin={employers_feedback_margin} reviewsId={reviewsId} changeCareerCenterId={changeCareerCenterId} changeReviewsId={changeReviewsId} careerCenterId={careerCenterId}/>
             <div className={`content`}>
                 <Triangle/>
                 <div className={`content__container`}>
@@ -120,7 +125,8 @@ export function FrontendFull({header, time, img, for_who, job_name, skills, proj
                 <span className={`line ${classNames[0]}`}/>
                 <Certificate img={resume.certificate}/>
             </div>
-            <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
+            <Registration className={classNames[0]}/>
+            <FiveQuestions classNames={[``, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

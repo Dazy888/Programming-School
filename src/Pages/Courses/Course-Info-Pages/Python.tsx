@@ -21,30 +21,17 @@ import {SixReviews} from "../Components/Reviews/Six-Reviews"
 import React, {useEffect, useState} from "react"
 import {TwelveResumes} from "../Components/Resume/Twelve-Resumes"
 import {Registration} from "../Components/Registration/Registration"
-import {EightQuestions} from "../Components/Questions/Eight-Questions";
-
-let marginLeft = 0
+import {EightQuestions} from "../Components/Questions/Eight-Questions"
 
 export function Python({job_name, for_who, header, img, time, skills, projects, content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
-    const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
-    useEffect(() => {
-        const reviews = course_container.current.querySelector('.reviews')
+    const [reviewsSectionId, changeReviewsSectionId] = useState(0)
+    const [reviews_section_margin, changeReviewsSectionMargin] = useState(0)
 
-        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
-        const reviewsSlider = reviews.querySelector('.row__list')
-
-        reviewsButtons[0].onclick = () => {
-            marginLeft = marginLeft + 750
-            reviewsSlider.style.marginLeft = marginLeft + 'px'
-        }
-
-        reviewsButtons[1].onclick = () => {
-            marginLeft = marginLeft - 750
-            reviewsSlider.style.marginLeft = marginLeft + 'px'
-        }
-    })
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
 
     return(
         <div className={'course-container'} ref={course_container}>
@@ -53,7 +40,7 @@ export function Python({job_name, for_who, header, img, time, skills, projects, 
             <SkillsNineTexts texts={skills.texts}/>
             <Projects photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse/>
-            <Employment/>
+            <Employment changeMargin={changeEmployersFeedbackMargin} margin={employers_feedback_margin} reviewsId={reviewsId} changeCareerCenterId={changeCareerCenterId} changeReviewsId={changeReviewsId} careerCenterId={careerCenterId}/>
             <div className={'content'}>
                 <Triangle/>
                 <div className={'content__container'}>
@@ -185,7 +172,7 @@ export function Python({job_name, for_who, header, img, time, skills, projects, 
                 </div>
             </div>
             <SixTeachers avatars={[...teachers.avatars, teachers.shulaev.img, teachers.krotov.img]} names={[...teachers.names, teachers.shulaev.name, teachers.krotov.name]} surnames={[...teachers.surnames, teachers.shulaev.surname, teachers.krotov.surname]} descriptions={[...teachers.descriptions, teachers.shulaev.description, teachers.krotov.description]}/>
-            <SixReviews changeId={changeId} id={id} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
+            <SixReviews left={reviews_section_margin} id={reviewsSectionId} changeId={changeReviewsSectionId} changeLeft={changeReviewsSectionMargin} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate}/>
             <Registration/>
             <EightQuestions classNames={['', '', '', '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>

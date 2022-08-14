@@ -14,33 +14,21 @@ import {EnglishSmall} from "../Components/Content/Courses/English-Small"
 import {Git} from "../Components/Content/Courses/Git"
 import {Triangle} from "../Components/Content/Triangle"
 import {CoursesTitle} from "../Components/Content/Courses-Title"
-import React, {useEffect, useState} from "react"
+import React, {useState} from "react"
 import {ThreeReviews} from "../Components/Reviews/Three-Reviews"
-import {ElevenResumes} from "../Components/Resume/Eleven-Resumes";
-import {FiveQuestions} from "../Components/Questions/Five-Question";
-
-let marginLeft = 0
+import {ElevenResumes} from "../Components/Resume/Eleven-Resumes"
+import {FiveQuestions} from "../Components/Questions/Five-Question"
+import {Registration} from "../Components/Registration/Registration"
 
 export function CPlusPlus({header, img, time, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
-    const [id, changeId] = useState(0)
     const course_container: any = React.createRef()
 
-    useEffect(() => {
-        const reviews = course_container.current.querySelector('.reviews')
+    const [reviewsSectionId, changeReviewsSectionId] = useState(0)
+    const [reviews_section_margin, changeReviewsSectionMargin] = useState(0)
 
-        const reviewsButtons = reviews.querySelectorAll('.controls__btn')
-        const reviewsSlider = reviews.querySelector('.row__list')
-
-        reviewsButtons[0].onclick = () => {
-            marginLeft = marginLeft + 750
-            reviewsSlider.style.marginLeft = marginLeft + 'px'
-        }
-
-        reviewsButtons[1].onclick = () => {
-            marginLeft = marginLeft - 750
-            reviewsSlider.style.marginLeft = marginLeft + 'px'
-        }
-    })
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
 
     return(
         <div className={'course-container'} ref={course_container}>
@@ -49,7 +37,7 @@ export function CPlusPlus({header, img, time, for_who, job_name, skills, project
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames} />
-            <Employment classNames={classNames}/>
+            <Employment changeMargin={changeEmployersFeedbackMargin} margin={employers_feedback_margin} reviewsId={reviewsId} changeCareerCenterId={changeCareerCenterId} changeReviewsId={changeReviewsId} careerCenterId={careerCenterId} classNames={classNames}/>
             <div className={`content ${classNames[1]}`}>
                 <Triangle className={classNames[3]}/>
                 <div className={`content__container ${classNames[4]}`}>
@@ -177,8 +165,9 @@ export function CPlusPlus({header, img, time, for_who, job_name, skills, project
                     </div>
                 </div>
             </div>
-            <ThreeReviews letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts} id={id} changeId={changeId}/>
+            <ThreeReviews left={reviews_section_margin} changeLeft={changeReviewsSectionMargin} classNames={classNames} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts} id={reviewsSectionId} changeId={changeReviewsSectionId}/>
             <ElevenResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <Registration className={classNames[0]}/>
             <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )

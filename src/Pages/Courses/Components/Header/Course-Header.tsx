@@ -10,7 +10,7 @@ type PropsType = {
     salary: string
 }
 
-export function CourseHeader({projects, imgUrl, profession, titleTxt, time, classNames = [''], salary, text, companies}: PropsType) {
+export function CourseHeader({projects, imgUrl, profession, titleTxt, time, classNames = ['', '', '', ''], salary, text, companies}: PropsType) {
     return(
         <div className={'course-header'}>
             <div className={`header__title flex-property-set_between ${classNames[0]}`}>
@@ -24,21 +24,25 @@ export function CourseHeader({projects, imgUrl, profession, titleTxt, time, clas
                 </div>
             </div>
             <div className={'header__inf flex-property-set_between'}>
-                <div className={`inf__item ${classNames[1]}`}>
-                    <h3 className={'small-title'}>Duration</h3>
-                    <p className={'light-grey-txt'}>{time}</p>
+                <div className={'inf__block flex-property-set_between'}>
+                    <div className={`block__item ${classNames[1]}`}>
+                        <h3 className={'small-title'}>Duration</h3>
+                        <p className={'light-grey-txt'}>{time}</p>
+                    </div>
+                    <div className={`block__item ${classNames[1]}`}>
+                        <h3 className={'small-title'}>{projects} projects</h3>
+                        <p className={'light-grey-txt'}>in portfolio on GitHub</p>
+                    </div>
                 </div>
-                <div className={`inf__item ${classNames[1]}`}>
-                    <h3 className={'small-title'}>{projects} projects</h3>
-                    <p className={'light-grey-txt'}>in portfolio on GitHub</p>
-                </div>
-                <div className={`inf__item ${classNames[1]}`}>
-                    <h3 className={'small-title'}>Team internship</h3>
-                    <p className={'light-grey-txt'}>under the leadership of a team leader</p>
-                </div>
-                <div className={`inf__item ${classNames[1]}`}>
-                    <h3 className={'small-title'}>We guarantee employment</h3>
-                    <p className={'light-grey-txt'}>or refund money</p>
+                <div className={'inf__block flex-property-set_between'}>
+                    <div className={`block__item ${classNames[1]}`}>
+                        <h3 className={'small-title'}>Team internship</h3>
+                        <p className={'light-grey-txt'}>under the leadership of a team leader</p>
+                    </div>
+                    <div className={`block__item ${classNames[1]}`}>
+                        <h3 className={'small-title'}>We guarantee employment</h3>
+                        <p className={'light-grey-txt'}>or refund money</p>
+                    </div>
                 </div>
             </div>
             {(text)
@@ -58,7 +62,7 @@ export function CourseHeader({projects, imgUrl, profession, titleTxt, time, clas
                     </div>
                 ) : (
                     <div className={`header-job-inf job-inf-container flex-property-set_between ${classNames[1]}`}>
-                        <h2 className={`text ${classNames[1]}`}>There is not enough staff in the development market</h2>
+                        <h2 className={`text ${classNames[1]}`}>There is not enough <br/> staff in the development market</h2>
                         <div className={'job-inf'}>
                             <div className={`job-inf__item ${classNames[1]}`}>
                                 <h3 className={'small-title'}>{companies} companies</h3>

@@ -30,8 +30,14 @@ import {EightTeachers} from "../Components/Teachers/Eight-Teachers"
 import {OneReview} from "../Components/Reviews/One-Review"
 import {TenResumes} from "../Components/Resume/Ten-Resumes"
 import {FiveQuestions} from "../Components/Questions/Five-Question"
+import React, {useState} from "react";
+import {Registration} from "../Components/Registration/Registration";
 
 export function JavascriptFullstack({time, img, header, for_who, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
+
     return (
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -39,7 +45,7 @@ export function JavascriptFullstack({time, img, header, for_who, job_name, skill
             <SkillsSixTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames}/>
-            <Employment classNames={classNames}/>
+            <Employment changeMargin={changeEmployersFeedbackMargin} margin={employers_feedback_margin} reviewsId={reviewsId} changeCareerCenterId={changeCareerCenterId} changeReviewsId={changeReviewsId} careerCenterId={careerCenterId} classNames={classNames}/>
             <div className={`content ${classNames[1]}`}>
                 <Triangle className={classNames[3]}/>
                 <div className={`content__container ${classNames[4]}`}>
@@ -77,8 +83,9 @@ export function JavascriptFullstack({time, img, header, for_who, job_name, skill
                            names={[teachers.kornienko.name, teachers.vasiyanovich.name, teachers.yakovushen.name, teachers.bondarovich.name, teachers.savchenko.name, teachers.kuznetsov.name, teachers.klimonova.name, teachers.mirotin.name]}
                            surnames={[teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.yakovushen.surname, teachers.bondarovich.surname, teachers.savchenko.surname, teachers.kuznetsov.surname, teachers.klimonova.surname, teachers.mirotin.surname]}
                            descriptions={[teachers.kornienko.description, teachers.vasiyanovich.description, teachers.yakovushen.description, teachers.bondarovich.description, teachers.savchenko.description, teachers.kuznetsov.description, teachers.klimonova.description, teachers.mirotin.description]}/>
-            <OneReview letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
+            <OneReview className={classNames[0]} letter={reviews.letters[0]} user_data={reviews.user_data[0]} course={reviews.course} text={reviews.texts[0]}/>
             <TenResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <Registration className={classNames[0]}/>
             <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )

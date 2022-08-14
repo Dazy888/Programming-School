@@ -3,12 +3,13 @@ export type ReviewsItemPropsType = {
     user_data: string
     course: string
     text: string
+    className?: string
 }
 
-export function ReviewsItem({course, user_data, text, letter}: ReviewsItemPropsType) {
+export function ReviewsItem({course, user_data, text, letter, className}: ReviewsItemPropsType) {
     return (
-        <div className={'list__item'}>
-            <div className={'item__circle flex-property-set_center'}>
+        <div className={'reviews__item swiper-slide'}>
+            <div className={`item__circle flex-property-set_center ${className}`}>
                 <p className={'small-title'}>{letter}</p>
             </div>
             <div className={'item__content'}>

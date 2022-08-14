@@ -29,8 +29,17 @@ import React, {useEffect, useState} from "react"
 import {ReactFramework} from "../Components/Content/Courses/React-Framework";
 import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
 import {FiveQuestions} from "../Components/Questions/Five-Question";
+import {SixReviews} from "../Components/Reviews/Six-Reviews";
+import {Registration} from "../Components/Registration/Registration";
 
 export function Web({for_who, time, img, header, job_name, skills, projects, classNames = [''], content, teachers, reviews, resume, questions}: CourseProjectsPropsType) {
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
+
+    const [reviewsSectionId, changeReviewsSectionId] = useState(0)
+    const [reviews_section_margin, changeReviewsSectionMargin] = useState(0)
+
     return(
         <div className={'course-container'}>
             <CourseHeader text={header.textAboutJob} salary={header.salary} companies={header.companies} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -38,7 +47,7 @@ export function Web({for_who, time, img, header, job_name, skills, projects, cla
             <SkillsFiveTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames} />
-            <Employment classNames={classNames}/>
+            <Employment changeMargin={changeEmployersFeedbackMargin} margin={employers_feedback_margin} reviewsId={reviewsId} changeCareerCenterId={changeCareerCenterId} changeReviewsId={changeReviewsId} careerCenterId={careerCenterId} classNames={classNames}/>
             <div className={`content ${classNames[1]}`}>
                 <Triangle className={classNames[3]}/>
                 <div className={`content__container ${classNames[4]}`}>
@@ -158,8 +167,10 @@ export function Web({for_who, time, img, header, job_name, skills, projects, cla
                             names={[teachers.names[0], teachers.kornienko.name, teachers.vasiyanovich.name, teachers.tiunov.name, teachers.avdeev.name, teachers.molesku.name, teachers.pozdnyakov.name, teachers.bondarovich.name, teachers.savchenko.name, teachers.mirotin.name, teachers.ignatiev.name, teachers.pilipenko.name]}
                             surnames={[teachers.surnames[0], teachers.kornienko.surname, teachers.vasiyanovich.surname, teachers.tiunov.surname, teachers.avdeev.surname, teachers.molesku.surname, teachers.pozdnyakov.surname, teachers.bondarovich.surname, teachers.savchenko.surname, teachers.mirotin.surname, teachers.ignatiev.surname, teachers.pilipenko.surname]}
                             descriptions={[teachers.descriptions[0], teachers.kornienko.description, teachers.vasiyanovich.description, teachers.tiunov.description, teachers.avdeev.description, teachers.molesku.description, teachers.pozdnyakov.description, teachers.bondarovich.description, teachers.savchenko.description, teachers.mirotin.description, teachers.ignatiev.description, teachers.pilipenko.description]}/>
+            <SixReviews classNames={classNames} left={reviews_section_margin} id={reviewsSectionId} changeId={changeReviewsSectionId} changeLeft={changeReviewsSectionMargin} letters={reviews.letters} user_data={reviews.user_data} course={reviews.course} texts={reviews.texts}/>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
-            <FiveQuestions  classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
+            <Registration className={classNames[0]}/>
+            <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

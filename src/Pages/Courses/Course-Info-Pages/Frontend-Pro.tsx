@@ -15,8 +15,14 @@ import {TeachersRow} from "../Components/Teachers/Teachers-Row";
 import {TeachersItem} from "../../Teachers/Components/TeachersItem";
 import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
 import {FiveQuestions} from "../Components/Questions/Five-Question";
+import React, {useState} from "react";
+import {Registration} from "../Components/Registration/Registration";
 
 export function FrontendPro({header, time, img, for_who, job_name, skills, projects, classNames = [''], content, teachers, resume, questions}: CourseProjectsPropsType) {
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
+
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
@@ -24,7 +30,7 @@ export function FrontendPro({header, time, img, for_who, job_name, skills, proje
             <SkillsFiveTitles titles={skills.titles} texts={skills.texts} className={classNames[1]}/>
             <Projects className={classNames[2]} photographs={projects.photographs} titles={projects.titles} texts={projects.texts}/>
             <HowUse classNames={classNames} />
-            <Employment/>
+            <Employment changeMargin={changeEmployersFeedbackMargin} margin={employers_feedback_margin} reviewsId={reviewsId} changeCareerCenterId={changeCareerCenterId} changeReviewsId={changeReviewsId} careerCenterId={careerCenterId} classNames={classNames}/>
             <div className={`content`}>
                 <Triangle/>
                 <div className={`content__container`}>
@@ -67,6 +73,7 @@ export function FrontendPro({header, time, img, for_who, job_name, skills, proje
                 </div>
             </div>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
+            <Registration className={classNames[0]}/>
             <FiveQuestions classNames={[`${classNames[4]}`, '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )

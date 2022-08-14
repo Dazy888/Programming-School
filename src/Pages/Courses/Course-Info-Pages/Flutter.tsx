@@ -18,15 +18,21 @@ import {Career} from "../Components/Content/Courses/Career"
 import {TwelveTeachers} from "../Components/Teachers/Twelve-Teachers";
 import {TwelveResumes} from "../Components/Resume/Twelve-Resumes";
 import {EightQuestions} from "../Components/Questions/Eight-Questions";
+import React, {useState} from "react";
+import {Registration} from "../Components/Registration/Registration";
 
 export function Flutter({img, header, time, for_who, job_name, skills, classNames = [''], content, teachers, resume, questions}: CoursePropsType) {
+    const [employers_feedback_margin, changeEmployersFeedbackMargin] = useState(0)
+    const [careerCenterId, changeCareerCenterId] = useState(0)
+    const [reviewsId, changeReviewsId] = useState(0)
+
     return(
         <div className={'course-container'}>
             <CourseHeader companies={header.companies} salary={header.salary} classNames={classNames} profession={job_name} titleTxt={header.titleTxt} imgUrl={img} time={time} projects={header.projects}/>
             <ForWho photographs={for_who.photographs} titles={for_who.titles} texts={for_who.texts}/>
             <SkillsEightTexts texts={skills.texts} className={classNames[1]}/>
-            <HowUse classNames={classNames} />
-            <Employment/>
+            <HowUse classNames={classNames}/>
+            <Employment changeMargin={changeEmployersFeedbackMargin} margin={employers_feedback_margin} reviewsId={reviewsId} changeCareerCenterId={changeCareerCenterId} changeReviewsId={changeReviewsId} careerCenterId={careerCenterId}/>
             <div className={'content'}>
                 <Triangle/>
                 <div className={`content__container`}>
@@ -152,7 +158,8 @@ export function Flutter({img, header, time, for_who, job_name, skills, className
                             surnames={[...teachers.surnames, teachers.pilipenko.surnames, teachers.ovchinnikov.surnames, teachers.alexandrov.surnames, teachers.rybakov.surnames, teachers.malyx.surnames]}
                             descriptions={[...teachers.descriptions, teachers.pilipenko.description, teachers.ovchinnikov.description, teachers.alexandrov.description, teachers.rybakov.description, teachers.malyx.description]}/>
             <TwelveResumes job={job_name} salary={resume.salary} texts={resume.texts} certificate={resume.certificate} classNames={classNames}/>
-            <EightQuestions classNames={[`${classNames[0]}`, '', '', '', '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
+            <Registration className={classNames[0]}/>
+            <EightQuestions classNames={[``, '', '', '', '', '', '', '', '']} titles={questions.titles} texts={questions.texts}/>
         </div>
     )
 }

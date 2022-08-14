@@ -1,3 +1,36 @@
+@media screen and(max-width: 1550px) {
+  #courses-wrapper {
+    .course-container {
+      .reviews {
+        .swiper {
+          width: fit-content;
+          height: fit-content;
+          margin: auto;
+
+          .swiper-wrapper {
+            flex-direction: column;
+            transform: translate3d(0px, 0px, 0px) !important;
+
+            .swiper-slide {
+              width: fit-content !important;
+              height: fit-content;
+              margin-bottom: 100px;
+
+              &:last-child {
+                margin-bottom: 0 !important;
+              }
+            }
+          }
+        }
+
+        .text__controls {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 @media screen and(max-width: 1515px) {
   #courses-wrapper {
     .course-container {
@@ -12,6 +45,7 @@
       }
 
       .employment {
+        max-width: 1300px;
         padding: 75px 20px;
 
         .employment__header {
@@ -22,23 +56,31 @@
             width: 600px !important;
           }
         }
-      }
 
-      .reviews {
-        .reviews__row {
-          .row__list {
+        .employment__reviews {
+          .swiper {
             width: fit-content;
-            flex-direction: column;
             margin: auto;
 
-            .list__item {
-              margin-bottom: 100px;
+            .swiper-wrapper {
+              transform: translate3d(0px, 0px, 0px) !important;
+              flex-direction: column;
+              margin-left: 0 !important;
+
+              .swiper-slide {
+                margin-bottom: 50px;
+                margin-right: 0;
+
+                &:last-child {
+                  margin-bottom: 0 !important;
+                }
+              }
             }
           }
-        }
 
-        .text__controls {
-          display: none;
+          .text__controls {
+            display: none;
+          }
         }
       }
     }
@@ -164,88 +206,80 @@
 
 @media screen and(max-width: 1300px) {
   #courses-wrapper {
-    .how-use {
-      width: fit-content !important;
-
-      .how-use__content {
-        height: 2250px;
-        flex-direction: column;
-      }
-    }
-
-    .employment {
-      padding: 75px 0 !important;
-    }
-
-    .employment__career-center {
-      .title {
-        text-align: center;
-      }
-
-      .slider__list {
-        width: fit-content !important;
-        flex-direction: column;
-        margin: auto;
-
-        .list__item {
-          margin-right: 0 !important;
-          margin-bottom: 30px;
-
-          .invisible-text {
-            opacity: 1 !important;
-          }
-
-          .item__txt {
-            display: none;
-          }
-        }
-      }
-
-      .text__controls {
-        display: none;
-      }
-    }
-
-    .employment__guarantees {
-      width: fit-content;
-      flex-direction: column-reverse;
-      margin: auto;
-
-      .guarantees__users {
-        margin: 100px auto auto auto !important;
-      }
-
-      .guarantees__text {
+    .course-container {
+      .how-use {
         width: fit-content !important;
 
         .title {
-          margin-bottom: 75px !important;
           text-align: center;
         }
-      }
-    }
 
-    .employment__reviews {
-      .title {
-        text-align: center;
-      }
-
-      .slider__list {
-        flex-direction: column;
-        margin: auto;
-
-        .list__item {
-          margin-right: 0 !important;
-          margin-bottom: 30px;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
+        .how-use__content {
+          height: 1100px;
+          flex-direction: column;
         }
       }
 
-      .text__controls {
-        display: none;
+      .employment {
+        max-width: 1000px;
+
+        .employment__header {
+          width: fit-content !important;
+        }
+
+        .employment__career-center {
+          .title {
+            text-align: center;
+          }
+
+          .career-center__swiper {
+            transform: translate3d(0px, 0px, 0px);
+            flex-direction: column;
+            margin: auto;
+
+            .career-center__slide {
+              margin-bottom: 50px;
+              margin-right: 0;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          .text__controls {
+            display: none;
+          }
+        }
+
+        .employment__guarantees {
+          width: fit-content;
+          flex-direction: column-reverse;
+          margin: auto;
+
+          .guarantees__users {
+            margin: 100px auto auto auto !important;
+          }
+
+          .guarantees__text {
+            width: fit-content !important;
+
+            .title {
+              margin-bottom: 75px !important;
+              text-align: center;
+            }
+
+            .text__item {
+              max-width: 1000px;
+            }
+          }
+        }
+
+        .employment__reviews {
+          .title {
+            text-align: center;
+          }
+        }
       }
     }
   }
@@ -320,6 +354,24 @@
 
     .header__inf {
       width: 1000px !important;
+      height: fit-content !important;
+      flex-direction: column;
+
+      .inf__block {
+        width: auto;
+        margin: auto;
+
+        &:first-child {
+          padding-left: 100px;
+          margin-bottom: 30px;
+        }
+
+        .block__item {
+          &:last-child {
+            margin-right: 0 !important;
+          }
+        }
+      }
     }
 
     .header-text {
@@ -332,9 +384,7 @@
       }
 
       .job-inf-container {
-        width: fit-content !important;
-        height: 200px;
-        flex-direction: column;
+        width: 500px !important;
         margin: auto !important;
       }
     }
@@ -373,7 +423,6 @@
     }
 
     .employment__wrapper {
-      width: fit-content !important;
       margin: auto;
     }
 
@@ -590,25 +639,6 @@
   }
 }
 
-@media screen and(max-width: 925px) {
-  #courses-wrapper {
-    .course-container {
-      .reviews {
-        .title {
-          font-size: 40px;
-        }
-
-        .reviews__row {
-          .list__item {
-            width: 870px;
-            margin-right: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
 @media screen and(max-width: 915px) {
   #courses-wrapper {
     .header-text {
@@ -678,38 +708,6 @@
     flex-direction: column;
     margin: auto;
   }
-
-  #courses-wrapper {
-    .course-container {
-      .reviews {
-        padding: 20px 30px;
-
-        .title {
-          font-size: 35px;
-          margin-bottom: 70px;
-        }
-
-        .reviews__row {
-          .list__item {
-            width: 700px;
-
-            .course {
-              margin: 10px 0 20px;
-            }
-
-            .item__circle {
-              width: 40px;
-              height: 40px;
-            }
-
-            .item__content {
-              max-width: 600px;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 @media screen and(max-width: 835px) {
@@ -769,6 +767,54 @@
 @media screen and(max-width: 810px) {
   #courses-wrapper {
     .course-container {
+      .employment {
+        .employment__career-center {
+          .title {
+            font-size: 35px;
+          }
+
+          .career-center__slide {
+            width: 300px !important;
+            height: 300px !important;
+
+            .small-title {
+              margin-bottom: 80px !important;
+            }
+
+            .invisible-text {
+              max-width: 250px;
+              font-size: 15px !important;
+            }
+          }
+        }
+      }
+
+      .reviews {
+        padding: 20px 30px;
+
+        .title {
+          font-size: 35px;
+          margin-bottom: 70px;
+        }
+
+        .swiper-slide {
+          width: 700px;
+
+          .course {
+            margin: 10px 0 20px;
+          }
+
+          .item__circle {
+            width: 40px;
+            height: 40px;
+          }
+
+          .item__content {
+            max-width: 600px;
+          }
+        }
+      }
+
       .resume {
         width: 700px !important;
 
@@ -846,6 +892,13 @@
       .text {
         font-size: 18px !important;
         line-height: 27px !important;
+      }
+
+      .job-inf-container {
+        width: fit-content !important;
+        margin: auto;
+        flex-direction: column;
+        height: 200px;
       }
     }
 
@@ -926,23 +979,6 @@
         }
       }
 
-      .reviews {
-        .reviews__row {
-          .list__item {
-            width: 545px;
-
-            .item__circle {
-              width: 35px;
-              height: 35px;
-            }
-
-            .item__content {
-              width: 500px;
-            }
-          }
-        }
-      }
-
       .resume {
         width: 600px !important;
 
@@ -1001,6 +1037,55 @@
 @media screen and(max-width: 665px) {
   #courses-wrapper {
     .course-container {
+      .course-header {
+        .header__inf {
+          .inf__block {
+            flex-direction: column;
+
+            &:first-child {
+              padding: 0;
+            }
+
+            .block__item {
+              margin: auto auto 40px;
+
+              &:last-child {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .how-use {
+        .how-use__content {
+          width: fit-content;
+          height: 2300px;
+          margin: auto;
+
+          .content__block {
+            width: fit-content;
+            height: 1100px;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .reviews {
+        .swiper-slide {
+          width: 545px;
+
+          .item__circle {
+            width: 35px;
+            height: 35px;
+          }
+
+          .item__content {
+            width: 500px;
+          }
+        }
+      }
+
       .registration {
         .registration__content {
           width: 400px;
@@ -1054,6 +1139,16 @@
     }
 
     .course-container {
+      .teachers {
+        .teachers__row {
+          .row__block {
+            width: fit-content;
+            flex-direction: column;
+            margin: auto;
+          }
+        }
+      }
+
       .resume {
         width: 500px !important;
 
@@ -1127,7 +1222,6 @@
         .questions__column {
           .courses__item {
             width: 300px;
-            height: 80px;
 
             .small-title {
               max-width: 250px;
@@ -1187,52 +1281,6 @@
         font-size: 40px !important;
       }
     }
-
-    .course-container {
-      .reviews {
-        .title {
-          font-size: 30px;
-          margin-bottom: 60px;
-        }
-
-        .reviews__row {
-          .list__item {
-            width: 450px;
-
-            .light-grey-txt {
-              font-size: 15px;
-            }
-
-            .course {
-              margin: 5px 0 15px;
-            }
-
-            .item__circle {
-              width: 30px;
-              height: 30px;
-
-              .small-title {
-                font-size: 15px;
-              }
-            }
-
-            .item__content {
-              width: 400px;
-
-              .content__stars {
-                width: 80px;
-                margin-bottom: 20px;
-
-                i {
-                  color: orange;
-                  font-size: 10px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
   }
 }
 
@@ -1287,6 +1335,48 @@
           }
         }
       }
+
+      .reviews {
+        .title {
+          font-size: 30px;
+          margin-bottom: 60px;
+        }
+
+        .swiper-slide {
+          width: 450px;
+
+          .light-grey-txt {
+            font-size: 15px;
+          }
+
+          .course {
+            margin: 5px 0 15px;
+          }
+
+          .item__circle {
+            width: 30px;
+            height: 30px;
+
+            .small-title {
+              font-size: 15px;
+            }
+          }
+
+          .item__content {
+            width: 400px;
+
+            .content__stars {
+              width: 80px;
+              margin-bottom: 20px;
+
+              i {
+                color: orange;
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -1337,123 +1427,160 @@
       }
     }
 
-    .employment__header {
-      .photographs__main {
-        width: 200px !important;
-        height: 200px !important;
-      }
-
-      .photographs__medium {
-        width: 95px !important;
-        height: 95px !important;
-      }
-
-      .photographs__small {
-        width: 70px !important;
-        height: 70px !important;
-      }
-
-      .photographs__very-small {
-        width: 50px !important;
-        height: 50px !important;
-      }
-
-      @keyframes top-left {
-        from {
-          transform: translate(-90px, -160px)
-        }
-        to {
-          transform: translate(-90px, -130px)
-        }
-      }
-
-      @keyframes bottom-right {
-        from {
-          transform: translate(90px, 170px)
-        }
-        to {
-          transform: translate(90px, 145px)
-        }
-      }
-
-      @keyframes top-right {
-        from {
-          transform: translate(160px, -40px)
-        }
-        to {
-          transform: translate(160px, -20px)
-        }
-      }
-
-      @keyframes bottom-left {
-        from {
-          transform: translate(-110px, 70px)
-        }
-        to {
-          transform: translate(-110px, 110px)
-        }
-      }
-
-      @keyframes aic {
-        from {
-          transform: translate(95px, -125px)
-        }
-        to {
-          transform: translate(95px, -100px)
-        }
-      }
-
-      @keyframes mailru {
-        from {
-          transform: translate(0, 175px)
-        }
-        to {
-          transform: translate(0, 205px)
-        }
-      }
-
-      @keyframes vk {
-        from {
-          transform: translate(165px, 90px)
-        }
-        to {
-          transform: translate(165px, 75px)
-        }
-      }
-
-      @keyframes youla {
-        from {
-          transform: translate(-170px, 0)
-        }
-        to {
-          transform: translate(-170px, -30px)
-        }
-      }
-    }
-
-    .employment__reviews {
-      .title {
-        font-size: 33px !important;
-      }
-
-      .slider__list {
-        .list__item {
-          width: 400px !important;
-          height: 250px !important;
-          padding: 35px !important;
-
-          .subtitle {
-            font-size: 20px !important;
-          }
-
-          .light-grey-txt {
-            font-size: 14px !important;
-          }
-        }
-      }
-    }
-
     .course-container {
+      .employment {
+        .employment__header {
+          .photographs__main {
+            width: 200px !important;
+            height: 200px !important;
+          }
+
+          .photographs__medium {
+            width: 95px !important;
+            height: 95px !important;
+          }
+
+          .photographs__small {
+            width: 70px !important;
+            height: 70px !important;
+          }
+
+          .photographs__very-small {
+            width: 50px !important;
+            height: 50px !important;
+          }
+
+          @keyframes top-left {
+            from {
+              transform: translate(-90px, -160px)
+            }
+            to {
+              transform: translate(-90px, -130px)
+            }
+          }
+
+          @keyframes bottom-right {
+            from {
+              transform: translate(90px, 170px)
+            }
+            to {
+              transform: translate(90px, 145px)
+            }
+          }
+
+          @keyframes top-right {
+            from {
+              transform: translate(160px, -40px)
+            }
+            to {
+              transform: translate(160px, -20px)
+            }
+          }
+
+          @keyframes bottom-left {
+            from {
+              transform: translate(-110px, 70px)
+            }
+            to {
+              transform: translate(-110px, 110px)
+            }
+          }
+
+          @keyframes aic {
+            from {
+              transform: translate(95px, -125px)
+            }
+            to {
+              transform: translate(95px, -100px)
+            }
+          }
+
+          @keyframes mailru {
+            from {
+              transform: translate(0, 175px)
+            }
+            to {
+              transform: translate(0, 205px)
+            }
+          }
+
+          @keyframes vk {
+            from {
+              transform: translate(165px, 90px)
+            }
+            to {
+              transform: translate(165px, 75px)
+            }
+          }
+
+          @keyframes youla {
+            from {
+              transform: translate(-170px, 0)
+            }
+            to {
+              transform: translate(-170px, -30px)
+            }
+          }
+        }
+
+        .employment__career-center {
+          .title {
+            font-size: 28px !important;
+          }
+
+          .career-center__slide {
+            width: 280px !important;
+            height: 280px !important;
+
+            .item__circle {
+              width: 35px !important;
+              height: 35px !important;
+              font-size: 17px !important;
+              margin-bottom: 40px !important;
+            }
+
+            .small-title {
+              font-size: 20px !important;
+              margin-bottom: 70px !important;
+            }
+
+            .light-grey-txt {
+              font-size: 17px !important;
+              line-height: 150% !important;
+            }
+
+            .invisible-text {
+              max-width: 230px;
+              font-size: 15px !important;
+            }
+          }
+        }
+
+        .employment__reviews {
+          .title {
+            font-size: 33px !important;
+          }
+
+          .swiper {
+            .swiper-wrapper {
+              .swiper-slide {
+                width: 380px !important;
+                height: 250px !important;
+                padding: 30px !important;
+
+                .subtitle {
+                  font-size: 20px !important;
+                }
+
+                .light-grey-txt {
+                  font-size: 14px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+
       .resume {
         width: 400px !important;
       }
@@ -1495,55 +1622,6 @@
               .error__icon {
                 top: 22px;
                 font-size: 15px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and(max-width: 490px) {
-  #courses-wrapper {
-    .course-container {
-      .reviews {
-        .title {
-          font-size: 25px;
-          margin-bottom: 50px;
-        }
-
-        .reviews__row {
-          .list__item {
-            width: 350px;
-
-            .light-grey-txt {
-              font-size: 13px;
-            }
-
-            .course {
-              margin: 3px 0 10px;
-            }
-
-            .item__circle {
-              width: 25px;
-              height: 25px;
-
-              .small-title {
-                font-size: 13px;
-              }
-            }
-
-            .item__content {
-              width: 300px;
-
-              .content__stars {
-                width: 70px;
-                margin-bottom: 15px;
-
-                i {
-                  font-size: 8px;
-                }
               }
             }
           }
@@ -1669,6 +1747,53 @@
           }
         }
       }
+
+      .reviews {
+        .title {
+          font-size: 25px;
+          margin-bottom: 50px;
+        }
+
+        .swiper {
+          .swiper-wrapper {
+            .swiper-slide {
+              width: 350px;
+              height: fit-content !important;
+              margin-bottom: 60px !important;
+
+              .light-grey-txt {
+                font-size: 13px;
+              }
+
+              .course {
+                margin: 3px 0 10px;
+              }
+
+              .item__circle {
+                width: 25px;
+                height: 25px;
+
+                .small-title {
+                  font-size: 13px;
+                }
+              }
+
+              .item__content {
+                width: 300px;
+
+                .content__stars {
+                  width: 70px;
+                  margin-bottom: 15px;
+
+                  i {
+                    font-size: 8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -1783,27 +1908,34 @@
             }
           }
         }
-      }
-    }
 
-    .employment__reviews {
-      .title {
-        font-size: 27px !important;
-        margin-bottom: 30px !important;
-      }
-
-      .slider__list {
-        .list__item {
-          width: 350px !important;
-          height: 200px !important;
-          padding: 30px !important;
-
-          .subtitle {
-            font-size: 18px !important;
+        .employment__reviews {
+          .title {
+            font-size: 27px !important;
+            margin-bottom: 30px !important;
           }
 
-          .light-grey-txt {
-            font-size: 11.7px !important;
+          .swiper {
+            .swiper-wrapper {
+              .swiper-slide {
+                width: 350px !important;
+                height: 200px !important;
+                padding: 25px !important;
+
+                img {
+                  width: 50px !important;
+                  height: 50px !important;
+                }
+
+                .subtitle {
+                  font-size: 17px !important;
+                }
+
+                .light-grey-txt {
+                  font-size: 11.7px !important;
+                }
+              }
+            }
           }
         }
       }
@@ -2088,26 +2220,28 @@
             }
           }
         }
-      }
-    }
 
-    .employment__reviews {
-      .title {
-        margin-bottom: 20px !important;
-      }
-
-      .slider__list {
-        .list__item {
-          width: 300px !important;
-          height: 180px !important;
-          padding: 20px !important;
-
-          .subtitle {
-            font-size: 16px !important;
+        .employment__reviews {
+          .title {
+            margin-bottom: 20px !important;
           }
 
-          .light-grey-txt {
-            font-size: 10px !important;
+          .swiper {
+            .swiper-wrapper {
+              .swiper-slide {
+                width: 300px !important;
+                height: 180px !important;
+                padding: 20px !important;
+
+                .subtitle {
+                  font-size: 15px !important;
+                }
+
+                .light-grey-txt {
+                  font-size: 10.5px !important;
+                }
+              }
+            }
           }
         }
       }
@@ -2148,24 +2282,6 @@
 
       .title {
         font-size: 35px !important;
-      }
-    }
-
-    .course-container {
-      .reviews {
-        .reviews__row {
-          .list__item {
-            width: 300px;
-
-            .light-grey-txt {
-              font-size: 12px;
-            }
-
-            .item__content {
-              width: 250px;
-            }
-          }
-        }
       }
     }
   }

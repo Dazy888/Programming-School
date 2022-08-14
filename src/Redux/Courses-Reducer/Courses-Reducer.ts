@@ -141,8 +141,8 @@ const initialState = {
                 }
             },
             reviews: {
-                letters: ['M', 'I', 'N', 'S', 'P', 'P', 'N', 'D', 'I'],
-                user_data: ['Maxim Brechko, Russia, Moscow', 'Igor Novikov, Moscow', 'Nikita Pack', 'Sergey Kolesnik', 'Pavel Semenov', 'Phedor Egorov, Gagarin', 'Nikita Ivliev', 'Dmitry Bondarev', 'Irina Melnikova'],
+                letters: ['M', 'I', 'N', 'S', 'P', 'P'],
+                user_data: ['Maxim Brechko, Russia, Moscow', 'Igor Novikov, Moscow', 'Nikita Pack', 'Sergey Kolesnik', 'Pavel Semenov', 'Phedor Egorov, Gagarin'],
                 course: `Course "Profession Python-developer"`,
                 texts: [
                     'I like the presentation, the ability to explain a topic that you could not understand on your own for a week in a few 10-minute videos, and moderately complex practical work that allows you to consolidate the studied material',
@@ -151,9 +151,6 @@ const initialState = {
                     'Very extensive training, excellent practical tasks, excellent communication with the curator. I will say right away that it is not for the lazy - you have to work here',
                     'I liked the communication with the curator and the depth of knowledge gained on the course. Some points at first seem incomprehensible, but as practical tasks are completed, everything becomes clear as two times two',
                     "It's all pretty compelling. But the most magnificent thing is the curator's approach to the participants. Good open dialogue, without pretense of severity and precision. You feel free, and not shaking from tension, as before defending your thesis at the university",
-                    'Everything is fine. The material is understandable, sometimes you have to tinker in order to figure it out yourself, but this is part of the profession, as I understand it :). Excellent feedback from the curators, this concerns both the response time (I never waited for feedback on the work for more than 12 hours, and in the evenings generally answered within 30-60 minutes), and comments: they gave good advice, paid attention to stylistic mistakes explained how and why. A good decision was to break the hour-long videos into short ones: it became more convenient to watch materials and return to poorly understood topics',
-                    "The curators (I had two of them) chewed the information so that I could understand everything, thanks to them for that! Everyone answered differently, so the verdict on the speed of work on average is half a day to a day. If you buy the course, you won't regret it. You will definitely be taught!",
-                    'I liked the simple and understandable presentation of the material, a lot of practical work, round-the-clock support in the chat, feedback from the curator'
                 ]
             },
             resume: {
