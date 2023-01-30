@@ -1,7 +1,11 @@
+import React from "react"
+import type { AppProps } from 'next/app'
+// Styles
 import '@/styles/reset.scss'
 import '@/styles/main.scss'
-import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return <Component {...pageProps} />
 }
+
+export default React.memo(App)

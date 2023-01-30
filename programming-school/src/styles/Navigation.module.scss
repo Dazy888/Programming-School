@@ -1,0 +1,55 @@
+.navigation {
+  padding: 40px 80px;
+
+  .show-nav {
+    height: 370px !important;
+  }
+
+  .navigation__img {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  nav {
+    .active {
+      color: mediumpurple !important;
+    }
+
+    .burger {
+      display: none;
+      font-size: 30px;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        display: block;
+        cursor: pointer;
+        margin-right: 56px;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.5);
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .navigation__btn {
+    button {
+      width: 183px;
+      height: 44px;
+      background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+      border-radius: 50px;
+    }
+  }
+}
