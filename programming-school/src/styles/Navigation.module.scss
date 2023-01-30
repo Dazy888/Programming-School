@@ -2,7 +2,7 @@
   padding: 40px 80px;
 
   .show-nav {
-    height: 370px !important;
+    height: 390px !important;
   }
 
   .navigation__img {
@@ -13,15 +13,18 @@
   }
 
   nav {
+    transition: 0.6s;
+    overflow: hidden;
+
     .active {
       color: mediumpurple !important;
     }
 
     .burger {
       display: none;
-      font-size: 30px;
+      font-size: 33px;
       color: white;
-      margin-bottom: 30px;
+      margin: 40px auto 20px;
     }
 
     ul {
@@ -30,6 +33,7 @@
       li {
         display: block;
         cursor: pointer;
+        font-size: 18px;
         margin-right: 56px;
         transition: 0.3s;
 
@@ -45,11 +49,41 @@
   }
 
   .navigation__btn {
-    button {
-      width: 183px;
-      height: 44px;
-      background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
-      border-radius: 50px;
+    width: 183px;
+    height: 44px;
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navigation {
+    flex-direction: column;
+
+    nav {
+      height: 80px;
+
+      .burger {
+        display: block;
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+
+        li {
+          margin: 30px 0 0 0;
+          font-size: 20px;
+
+          &:hover {
+            transform: none;
+          }
+        }
+      }
+    }
+
+    .navigation__btn {
+      margin-top: 40px;
     }
   }
 }

@@ -9,6 +9,17 @@ interface Props {
 const NavigationLayoutComponent: React.FC<Props> = ({ children }) => {
     const router = useRouter()
     const [isBurgerMenuOpened, setBurgerMenuStatus] = useState(false)
+    const [navClass, setNavClass] = useState<string>(styles['show-nav'])
+
+    function burgerListener() {
+        if (isBurgerMenuOpened) {
+            setBurgerMenuStatus(false)
+            setNavClass('')
+        } else {
+            setBurgerMenuStatus(true)
+            setNavClass(styles['show-nav'])
+        }
+    }
 
     function checkPath(path: string, currentPath: string) {
         if (currentPath === path) {
@@ -22,9 +33,9 @@ const NavigationLayoutComponent: React.FC<Props> = ({ children }) => {
                 <div className={styles['navigation__img']}>
                     <img src={"/logo.png"} alt={"Logo"} />
                 </div>
-                <nav className={'white-txt'}>
-                    <button onClick={() => (isBurgerMenuOpened) ? setBurgerMenuStatus(false) : setBurgerMenuStatus(true)} className={styles['burger']}>
-                        <i className={`fa - solid fa-${isBurgerMenuOpened ? 'xmark' : 'bars'}`}/>
+                <nav className={`${navClass} white-txt`}>
+                    <button onClick={burgerListener} className={styles['burger']}>
+                        <i className={`fa-solid fa-${isBurgerMenuOpened ? 'xmark' : 'bars'}`}/>
                     </button>
                     <ul>
                         <li className={checkPath(router.pathname, '/')} onClick={() => router.push('/')}>Home</li>
@@ -34,9 +45,7 @@ const NavigationLayoutComponent: React.FC<Props> = ({ children }) => {
                         <li className={checkPath(router.pathname, '/contacts')} onClick={() => router.push('/contacts')}>Contacts</li>
                     </ul>
                 </nav>
-                <div className={styles['navigation__btn']}>
-                    <button className={'white-txt'}>Go to office</button>
-                </div>
+                <button className={`${styles['navigation__btn']} white-txt`}>Go to office</button>
             </div>
             {children}
         </div>
