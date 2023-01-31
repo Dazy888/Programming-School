@@ -8,6 +8,9 @@ import { NavigationLayout } from "@/layouts/Navigation"
 // Components
 import { TimerItem } from "@/components/home/TimerItem"
 import { StudentsCounterItem } from "@/components/home/StudentsCounterItem"
+import { AboutCoursesItem } from "@/components/home/AboutCoursesItem"
+import { Spinner } from "@/components/home/Spinner"
+import { Partners } from "@/components/home/Parthners"
 
 const Index = () => {
     const router = useRouter()
@@ -92,83 +95,25 @@ const Index = () => {
                                 </p>
                             </div>
                         </section>
-                        {/*<section id="about-course">
-                            <h1 className="title">Get a profession right now</h1>
-                            <div className="about-course__content flex-property-set_between">
-                                <div className="content__item">
-                                    <img alt={'Computer'} className="item__img"
-                                         src="/Photographs/Main-Page/Computer-Icon.png"/>
-                                    <p className="item__subtitle subtitle">Only practical skills at work</p>
-                                    <p className="light-grey-txt">In our courses you will learn only practical <br/> and
-                                        modern skills,
-                                        that will help you in your work.Also, <br/> our teachers will teach you how to work
-                                        in a team,
-                                        ask the right <br/> questions and how to pass your the first interview</p>
-                                </div>
-                                <div className="content__item">
-                                    <img alt={'Flash Drive'} className="item__img"
-                                         src="/Photographs/Main-Page/Flash-Drive.png"/>
-                                    <p className="item__subtitle subtitle">Work on modern equipment</p>
-                                    <p className="light-grey-txt">Thanks to our sponsors in our classrooms
-                                        are <br/> equipped with the bests computers, mice, keyboards, <br/> headphones,
-                                        monitors, chairs and
-                                        other equipment.You will <br/> enjoy every second being in classroom
-                                    </p>
-                                </div>
-                                <div className="content__item">
-                                    <img alt={'Usb'} className="item__img" src="/Photographs/Main-Page/Usb.png"/>
-                                    <p className="item__subtitle subtitle">Certification upon graduation</p>
-                                    <p className="light-grey-txt">Our courses are different from others, at <br/> the end
-                                        you will receive not only our certificate <br/> (which is appreciated in many
-                                        places), but we also <br/> promise you a 100% job placement</p>
-                                </div>
+                        <section id={styles['about-courses']}>
+                            <h1 className={"title"}>Get a profession right now</h1>
+                            <div className={`${styles['about-courses__content']} flex-between`}>
+                                <AboutCoursesItem imgAlt={'Computer Icon'} imgPath={'/computer-icon.png'} subtitle={'Only practical skills at work'} text={'In our courses you will learn only practical and modern skills, that will help you in your work.Also, our teachers will teach you how to work in a team, ask the right questions and how to pass your the first interview'}/>
+                                <AboutCoursesItem imgAlt={'Flash Drive Icon'} imgPath={'/flash-drive.png'} subtitle={'Work on modern equipment'} text={'Thanks to our sponsors in our classrooms are equipped with the bests computers, computer mice, keyboards, headphones, monitors, chairs and other equipment.You will enjoy every second being in classroom'}/>
+                                <AboutCoursesItem imgAlt={'USB Icon'} imgPath={'/usb.png'} subtitle={'Certification upon graduation'} text={'Our courses are different from others, at the end you will receive not only our certificate (which is appreciated in many places), but we also promise you a 100% job placement'}/>
                             </div>
                         </section>
-                        <section id="partners">
-                            <div className="partners__title flex-property-set_between">
+                        <section id={styles['partners']}>
+                            <div className={`${styles['partners__title']} flex-between`}>
                                 <Spinner/>
-                                <p className="title">Partners - top brands</p>
+                                <h1 className={"title"}>Partners - top brands</h1>
                             </div>
-                            <div className="partners__photographs">
-                                <div className="photographs__row">
-                                    <div className="row__item flex-property-set_center">
-                                        <img alt={'Msi Logo'} className="item__img"
-                                             src="/Photographs/Main-Page/Msi-Logo.png"/>
-                                    </div>
-                                    <div className="row__item flex-property-set_center">
-                                        <img alt={'Nvidia Logo'} className="item__img"
-                                             src="/Photographs/Main-Page/Nvidia-Logo.jpg"/>
-                                    </div>
-                                    <div className="row__item flex-property-set_center">
-                                        <img alt={'Logitech Logo'} className="item__img"
-                                             src="/Photographs/Main-Page/Logitech-Logo.png"/>
-                                    </div>
-                                    <div className="row__item flex-property-set_center">
-                                        <img alt={'Intel Logo'} className="item__img"
-                                             src="/Photographs/Main-Page/Intel-Logo.jpg"/>
-                                    </div>
-                                </div>
-                                <div className="photographs__row">
-                                    <div className="row__item flex-property-set_center">
-                                        <img alt={'HyperX Logo'} className="item__img"
-                                             src="/Photographs/Main-Page/HyperX-Logo.jpg"/>
-                                    </div>
-                                    <div className="row__item flex-property-set_center">
-                                        <img alt={'Acer Logo'} className="item__img"
-                                             src="/Photographs/Main-Page/Acer-Logo.jpg"/>
-                                    </div>
-                                    <div className="row__item flex-property-set_center">
-                                        <img alt={'Samsung Logo'} className="item__img"
-                                             src="/Photographs/Main-Page/Samsung-logo.jpg"/>
-                                    </div>
-                                    <div className="row__item flex-property-set_center">
-                                        <img alt={'Gigabyte Logo'} className="item__img"
-                                             src="/Photographs/Main-Page/Gigabyte-Logo.png"/>
-                                    </div>
-                                </div>
+                            <div className={styles['partners__logos']}>
+                                <Partners imgAlts={['Msi Logo', 'Nvidia Logo', 'Logitech Logo', 'Intel Logo']} imgPaths={['/msi-logo.png', '/nvidia-logo.jpg', '/logitech-logo.png', '/intel-logo.jpg']}/>
+                                <Partners imgAlts={['HyperX Logo', 'Acer Logo', 'Samsung Logo', 'Gigabyte Logo']} imgPaths={['/hyperx-logo.jpg', '/acer-logo.jpg', '/samsung-logo.jpg', '/gigabyte-logo.png']}/>
                             </div>
                         </section>
-                        <section id="training-program">
+                        {/*<section id="training-program">
                             <div className="training-program__title">
                                 <Spinner/>
                                 <h1 className="title">Training program</h1>

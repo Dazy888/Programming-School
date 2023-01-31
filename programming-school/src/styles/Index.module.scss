@@ -37,31 +37,29 @@
     position: relative;
     width: 94px;
     height: 94px;
-  }
 
-  .lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 94px;
-    height: 94px;
-    margin: 8px;
-    border: 12px solid mediumpurple;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: mediumpurple transparent transparent transparent;
-  }
+    div {
+      position: absolute;
+      width: 94px;
+      height: 94px;
+      margin: 8px;
+      border: 12px solid mediumpurple;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: mediumpurple transparent transparent transparent;
 
-  .lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
+      &:nth-child(1) {
+        animation-delay: -0.45s;
+      }
 
-  .lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
+      &:nth-child(2) {
+        animation-delay: -0.3s;
+      }
 
-  .lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
+      &:nth-child(3) {
+        animation-delay: -0.15s;
+      }
+    }
   }
 
   @keyframes lds-ring {
@@ -197,21 +195,24 @@
         }
       }
 
-      #about-course {
-        margin-bottom: 230px;
+      #about-courses {
         text-align: center;
 
-        .about-course__content {
+        .about-courses__content {
           margin-top: 120px;
 
-          .content__item {
-            .item__subtitle {
+          div {
+            img {
+              width: 100px;
+              height: 100px;
+            }
+
+            h3 {
               margin: 60px 0 30px;
             }
 
-            .item__img {
-              width: 100px;
-              height: 100px;
+            p {
+              max-width: 400px;
             }
           }
         }
@@ -222,11 +223,11 @@
 
         .partners__title {
           width: 600px;
-          margin-bottom: 90px;
+          margin: 0 auto 90px;
         }
 
-        .partners__photographs {
-          .photographs__row {
+        .partners__logos {
+          .partners__row {
             display: flex;
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
@@ -234,7 +235,7 @@
               border: none;
             }
 
-            .row__item {
+            div {
               width: 325px;
               height: 150px;
               border-right: 1px solid rgba(255, 255, 255, 0.3);
@@ -243,7 +244,7 @@
                 border: none;
               }
 
-              .item__img {
+              img {
                 width: 200px;
                 height: 95px;
               }
@@ -412,6 +413,56 @@
             margin-top: 80px;
           }
         }
+
+        #about-courses {
+          .about-courses__content {
+            flex-direction: column;
+
+            div:nth-child(2) {
+              margin: 100px 0;
+            }
+          }
+        }
+
+        #partners {
+          .partners__logos {
+            .partners__row {
+              display: grid;
+              grid-template-areas:  'first second'
+                                    'third fourth';
+              border: none;
+
+              &:first-child, &:last-child {
+                div:nth-child(2) {
+                  border-right: none;
+                }
+              }
+
+              div {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+                &:last-child {
+                  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                }
+
+                &:nth-child(1) {
+                  grid-area: first;
+                }
+
+                &:nth-child(2) {
+                  grid-area: second;
+                }
+                &:nth-child(3) {
+                  grid-area: third;
+                }
+
+                &:nth-child(4) {
+                  grid-area: fourth;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -419,6 +470,16 @@
 
 @media (max-width: 768px) {
   #home {
+    .lds-ring {
+      width: 75px;
+      height: 75px;
+
+      div {
+        width: 75px;
+        height: 75px;
+      }
+    }
+
     header {
       .timer {
         h1 {
@@ -491,6 +552,37 @@
             p {
               max-width: 420px;
               font-size: 15px;
+            }
+          }
+        }
+
+        #about-courses {
+          h1 {
+            font-size: 40px;
+          }
+        }
+
+        #partners {
+          .partners__title {
+            width: 420px;
+            text-align: center;
+
+            h1 {
+              font-size: 40px;
+            }
+          }
+
+          .partners__logos {
+            .partners__row {
+              width: fit-content;
+              display: flex;
+              flex-direction: column;
+              margin: auto;
+
+              div {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                border-right: none;
+              }
             }
           }
         }
@@ -578,6 +670,41 @@
             }
           }
         }
+
+        #about-courses {
+          h1 {
+            font-size: 30px;
+          }
+
+          .about-courses__content {
+            div {
+              img {
+                width: 90px;
+                height: 90px;
+              }
+
+              h3 {
+                margin: 50px 0 25px;
+                font-size: 22px;
+              }
+
+              p {
+                max-width: 370px;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+
+        #partners {
+          .partners__title {
+            width: 370px;
+
+            h1 {
+              font-size: 35px;
+            }
+          }
+        }
       }
     }
   }
@@ -585,6 +712,16 @@
 
 @media (max-width: 375px) {
   #home {
+    .lds-ring {
+      width: 65px;
+      height: 65px;
+
+      div {
+        width: 65px;
+        height: 65px;
+      }
+    }
+
     header {
       .timer {
         margin: 160px auto;
@@ -656,6 +793,50 @@
             p {
               max-width: 320px;
               font-size: 13px;
+            }
+          }
+        }
+
+        #about-courses {
+          h1 {
+            font-size: 29px;
+          }
+          .about-courses__content {
+            margin-top: 100px;
+
+            div {
+              img {
+                width: 85px;
+                height: 85px;
+              }
+
+              h3 {
+                font-size: 20px;
+                margin: 40px 0 20px;
+              }
+
+              p {
+                max-width: 320px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        #partners {
+          .partners__title {
+            width: 320px;
+
+            h1 {
+              font-size: 30px;
+            }
+          }
+
+          .partners__logos {
+            .partners__row {
+              div {
+                width: 300px;
+              }
             }
           }
         }
