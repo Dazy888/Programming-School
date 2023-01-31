@@ -73,7 +73,7 @@
     }
   }
 
-  .header {
+  header {
     .grey-txt {
       font-weight: 400;
       font-size: 16px;
@@ -158,40 +158,37 @@
     }
   }
 
-  #main {
-    width: 100%;
-    background: black;
-    padding: 200px 0 30px;
-
+  main {
     .container {
-      max-width: 1310px;
-      margin: auto;
+      width: 1310px;
+
+      section {
+        margin-top: 200px;
+      }
 
       #about-us {
-        width: 100%;
-        margin-bottom: 200px;
-
-        .about__img {
-          width: 490px;
-          height: 459px;
+        .about-us__img {
+          width: 550px;
+          height: 520px;
+          border: 30px solid #9370db;
           position: relative;
-          border: 30px solid mediumpurple;
 
-          .img__computer {
+          img {
             width: 100%;
             height: 100%;
             position: absolute;
-            top: 86px;
+            bottom: -80px;
             left: 10px;
           }
         }
 
-        .about__txt {
-          .title {
+        .about-us__text {
+          h1 {
             margin-bottom: 45px;
           }
 
-          .txt__text {
+          p {
+            max-width: 485px;
             font-weight: 400;
             font-size: 16px;
             line-height: 160%;
@@ -388,7 +385,7 @@
 
 @media (max-width: 1440px) {
   #home {
-    .header {
+    header {
       .booking {
         height: fit-content;
         padding: 30px 0;
@@ -402,12 +399,27 @@
         }
       }
     }
+
+    main {
+      .container {
+        width: fit-content;
+
+        #about-us {
+          flex-direction: column;
+
+          .about-us__text {
+            text-align: center;
+            margin-top: 80px;
+          }
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
   #home {
-    .header {
+    header {
       .timer {
         h1 {
           font-size: 44px;
@@ -457,13 +469,39 @@
         }
       }
     }
+
+    main {
+      .container {
+        #about-us {
+          .about-us__img {
+            width: 420px;
+            height: 400px;
+
+            img {
+              bottom: -70px;
+            }
+          }
+
+          .about-us__text {
+            h1 {
+              font-size: 40px;
+              margin-bottom: 40px;
+            }
+
+            p {
+              max-width: 420px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 425px) {
   #home {
-    .header {
-
+    header {
       .timer {
         margin: 160px auto;
 
@@ -514,13 +552,40 @@
         }
       }
     }
+
+    main {
+      .container {
+        #about-us {
+          .about-us__img {
+            width: 370px;
+            height: 350px;
+            border: 25px solid #9370db;
+
+            img {
+              bottom: -60px;
+            }
+          }
+
+          .about-us__text {
+            h1 {
+              font-size: 35px;
+              margin-bottom: 35px;
+            }
+
+            p {
+              max-width: 370px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media (max-width: 375px) {
   #home {
-    .header {
-
+    header {
       .timer {
         margin: 160px auto;
 
@@ -563,6 +628,34 @@
           .booking__orders {
             .booking__orders_progress-bar {
               width: 310px;
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      .container {
+        #about-us {
+          .about-us__img {
+            width: 320px;
+            height: 300px;
+            border: 20px solid #9370db;
+
+            img {
+              bottom: -50px;
+            }
+          }
+
+          .about-us__text {
+            h1 {
+              font-size: 30px;
+              margin-bottom: 30px;
+            }
+
+            p {
+              max-width: 320px;
+              font-size: 13px;
             }
           }
         }

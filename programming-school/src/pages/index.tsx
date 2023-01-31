@@ -42,7 +42,7 @@ const Index = () => {
                 <title>Home</title>
             </Head>
             <div id={styles['home']}>
-                <div className={styles['header']}>
+                <header>
                     <div className={styles['timer']}>
                         <h1>Left before the start <br/> of the school year</h1>
                         <div className={`${styles['timer__row']} flex-between`}>
@@ -75,25 +75,24 @@ const Index = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                {/*<main id="main">
-                    <div className="container">
-                        <section id="about-us" className="flex-property-set_between">
-                            <div className="about__img">
-                                <img alt={'Computer'} className="img__computer" src="/Photographs/Main-Page/Computer.png"/>
+                </header>
+                <main className={'flex-center'}>
+                    <div className={styles['container']}>
+                        <section id={styles['about-us']} className={'flex-between'}>
+                            <div className={styles['about-us__img']}>
+                                <img alt={'Computer'} src="/computer.png"/>
                             </div>
-                            <div className="about__txt">
-                                <h1 className="title">What are we doing?</h1>
-                                <p className="txt__text">We are engaged training of highly qualified specialists who are
-                                    ready <br/> to cope with
-                                    the difficulties at work. Thanks to our sponsors, our <br/> classrooms are equipped with
-                                    the best equipment. We have the best <br/>teachers and in our courses you will learn the
-                                    newest technologies. <br/> After completing our courses, you will receive a certificate
-                                    and a 100 <br/> percent job placement
+                            <div className={styles['about-us__text']}>
+                                <h1 className={'title'}>What are we doing?</h1>
+                                <p>We are engaged training of highly qualified specialists who are
+                                    ready to cope with the difficulties at work. Thanks to our sponsors, our classrooms are equipped with
+                                    the best equipment. We have the best teachers and in our courses you will learn the
+                                    newest technologies. After completing our courses, you will receive a certificate
+                                    and a 100 percent job placement
                                 </p>
                             </div>
                         </section>
-                        <section id="about-course">
+                        {/*<section id="about-course">
                             <h1 className="title">Get a profession right now</h1>
                             <div className="about-course__content flex-property-set_between">
                                 <div className="content__item">
@@ -269,9 +268,10 @@ const Index = () => {
                                 <a href={'https://www.instagram.com/'} className="links__item flex-property-set_center"><i
                                     className="fa-brands fa-instagram item__icon"></i></a>
                             </div>
-                        </section>
+                        </section>*/}
                     </div>
-                </main>*/}
+                </main>
+                <footer></footer>
             </div>
         </NavigationLayout>
     )
