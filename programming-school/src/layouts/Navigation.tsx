@@ -9,7 +9,7 @@ interface Props {
 const NavigationLayoutComponent: React.FC<Props> = ({ children }) => {
     const router = useRouter()
     const [isBurgerMenuOpened, setBurgerMenuStatus] = useState(false)
-    const [navClass, setNavClass] = useState<string>(styles['show-nav'])
+    const [navClass, setNavClass] = useState('')
 
     function burgerListener() {
         if (isBurgerMenuOpened) {
@@ -30,14 +30,12 @@ const NavigationLayoutComponent: React.FC<Props> = ({ children }) => {
     return(
         <div id={'wrapper'}>
             <div className={`${styles['navigation']} flex-between`}>
-                <div className={styles['navigation__img']}>
-                    <img src={"/logo.png"} alt={"Logo"} />
-                </div>
+                <img src={"/logo.png"} alt={"Logo"} />
                 <nav className={`${navClass} white-txt`}>
                     <button onClick={burgerListener} className={styles['burger']}>
                         <i className={`fa-solid fa-${isBurgerMenuOpened ? 'xmark' : 'bars'}`}/>
                     </button>
-                    <ul>
+                    <ul className={'flex-center'}>
                         <li className={checkPath(router.pathname, '/')} onClick={() => router.push('/')}>Home</li>
                         <li className={checkPath(router.pathname, '/courses')} onClick={() => router.push('/courses')}>Courses</li>
                         <li className={checkPath(router.pathname, '/schedule')} onClick={() => router.push('/schedule')}>Schedule</li>

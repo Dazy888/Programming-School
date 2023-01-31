@@ -1,15 +1,9 @@
 .navigation {
   padding: 40px 80px;
 
-  .show-nav {
-    height: 390px !important;
-  }
-
-  .navigation__img {
-    img {
-      width: 40px;
-      height: 40px;
-    }
+  img {
+    width: 40px;
+    height: 40px;
   }
 
   nav {
@@ -60,6 +54,10 @@
   .navigation {
     flex-direction: column;
 
+    .show-nav {
+      height: 390px !important;
+    }
+
     nav {
       height: 80px;
 
@@ -84,6 +82,33 @@
 
     .navigation__btn {
       margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .navigation {
+    img {
+      width: 35px;
+      height: 35px;
+    }
+
+    nav {
+      .burger {
+        font-size: 30px;
+      }
+
+      ul {
+        li {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .navigation__btn {
+      width: 160px;
+      height: 40px;
+      font-size: 15px;
     }
   }
 }
