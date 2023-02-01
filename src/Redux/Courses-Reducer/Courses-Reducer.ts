@@ -686,7 +686,7 @@ const initialState = {
                     'Work in Android Studio environment',
                     'Use Android SDK',
                     'Create animations and custom screens',
-                    'Test applications',
+                    'Timer applications',
                     'Design stable and fast applications'
                 ],
                 texts: [
@@ -1077,7 +1077,7 @@ const initialState = {
                     'Create native apps',
                     'Design interfaces and animations',
                     'Set up the client-server part',
-                    'Test applications',
+                    'Timer applications',
                     'Write clean and efficient code',
                     'Work in a team'
                 ],
@@ -1657,7 +1657,7 @@ const initialState = {
                     'Interact with UX Design',
                     'Work in the Git version control system',
                     'Work according to Scrum methodology for sprints',
-                    'Test mobile applications'
+                    'Timer mobile applications'
                 ]
             },
             content: {

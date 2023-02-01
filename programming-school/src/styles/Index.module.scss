@@ -35,8 +35,8 @@
   .lds-ring {
     display: inline-block;
     position: relative;
-    width: 94px;
-    height: 94px;
+    width: 110px;
+    height: 110px;
 
     div {
       position: absolute;
@@ -157,6 +157,23 @@
   }
 
   main {
+    .title-column {
+      flex-direction: column;
+      text-align: center;
+
+      h1 {
+        margin: 75px 0 30px !important;
+      }
+    }
+
+    .title-block {
+      margin: 0 auto 90px;
+
+      h1 {
+        margin-left: 50px;
+      }
+    }
+
     .container {
       width: 1310px;
 
@@ -219,13 +236,6 @@
       }
 
       #partners {
-        margin-bottom: 245px;
-
-        .partners__title {
-          width: 600px;
-          margin: 0 auto 90px;
-        }
-
         .partners__logos {
           .partners__row {
             display: flex;
@@ -254,19 +264,8 @@
       }
 
       #training-program {
-        margin-bottom: 215px;
-
-        .training-program__title {
-          margin: 0 auto 80px;
-          text-align: center;
-
-          .title {
-            margin: 75px 0 30px;
-          }
-        }
-
         .training-program__content {
-          .content__column {
+          .training-program__column {
             &:last-child {
               .column__item {
                 text-align: left;
@@ -278,7 +277,7 @@
               }
             }
 
-            .column__item {
+            .training-program__item {
               width: 310px;
               height: 90px;
               text-align: right;
@@ -288,10 +287,10 @@
                 margin-bottom: 0;
               }
 
-              .item__txt {
+              div {
                 margin-right: 35px;
 
-                .txt__text {
+                p {
                   margin-top: 15px;
                   font-weight: 400;
                   font-size: 18px;
@@ -304,16 +303,14 @@
                 width: 40px;
                 height: 1px;
                 background: rgba(255, 255, 255, 0.3);
-                border: none;
               }
             }
           }
 
-          .content__line {
+          .training-program__line {
             width: 6px;
             height: 677px;
             background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
-            border: none;
           }
         }
       }
@@ -471,8 +468,8 @@
 @media (max-width: 768px) {
   #home {
     .lds-ring {
-      width: 75px;
-      height: 75px;
+      width: 90px;
+      height: 90px;
 
       div {
         width: 75px;
@@ -532,6 +529,14 @@
     }
 
     main {
+      .title-block {
+        width: 420px;
+
+        h1 {
+          font-size: 40px;
+        }
+      }
+
       .container {
         #about-us {
           .about-us__img {
@@ -563,15 +568,6 @@
         }
 
         #partners {
-          .partners__title {
-            width: 420px;
-            text-align: center;
-
-            h1 {
-              font-size: 40px;
-            }
-          }
-
           .partners__logos {
             .partners__row {
               width: fit-content;
@@ -582,6 +578,36 @@
               div {
                 border-bottom: 1px solid rgba(255, 255, 255, 0.3);
                 border-right: none;
+              }
+            }
+          }
+        }
+
+        #training-program {
+          .training-program__content {
+            .training-program__line {
+              width: 5px;
+            }
+
+            .training-program__column {
+              .training-program__item {
+                width: 210px;
+
+                div {
+                  margin-right: 20px;
+
+                  h4 {
+                    font-size: 10px;
+                  }
+
+                  p {
+                    font-size: 12px;
+                  }
+                }
+
+                hr {
+                  width: 25px;
+                }
               }
             }
           }
@@ -646,6 +672,14 @@
     }
 
     main {
+      .title-block {
+        width: 370px;
+
+        h1 {
+          font-size: 35px;
+        }
+      }
+
       .container {
         #about-us {
           .about-us__img {
@@ -696,12 +730,33 @@
           }
         }
 
-        #partners {
-          .partners__title {
-            width: 370px;
+        #training-program {
+          .training-program__content {
+            .training-program__line {
+              height: 1200px;
+            }
 
-            h1 {
-              font-size: 35px;
+            .training-program__column {
+              .training-program__item {
+                width: 300px;
+                height: fit-content;
+
+                div {
+                  margin-right: 25px;
+
+                  h4 {
+                    font-size: 14px;
+                  }
+
+                  p {
+                    font-size: 16px;
+                  }
+                }
+
+                hr {
+                  width: 35px;
+                }
+              }
             }
           }
         }
@@ -772,6 +827,14 @@
     }
 
     main {
+      .title-block {
+        width: 320px;
+
+        h1 {
+          font-size: 30px;
+        }
+      }
+
       .container {
         #about-us {
           .about-us__img {
@@ -824,14 +887,6 @@
         }
 
         #partners {
-          .partners__title {
-            width: 320px;
-
-            h1 {
-              font-size: 30px;
-            }
-          }
-
           .partners__logos {
             .partners__row {
               div {

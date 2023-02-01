@@ -6,38 +6,15 @@ import styles from '@/styles/Index.module.scss'
 // Layout
 import { NavigationLayout } from "@/layouts/Navigation"
 // Components
-import { TimerItem } from "@/components/home/TimerItem"
 import { StudentsCounterItem } from "@/components/home/StudentsCounterItem"
 import { AboutCoursesItem } from "@/components/home/AboutCoursesItem"
-import { Spinner } from "@/components/home/Spinner"
 import { Partners } from "@/components/home/Parthners"
+import { Title } from "@/components/home/Title"
+import { Timer } from "@/components/home/Timer"
+import {TrainingProgram} from "@/components/home/TrainingProgram";
 
 const Index = () => {
     const router = useRouter()
-
-    const [days, setDays] = useState(0)
-    const [hours, setHours] = useState(0)
-    const [minutes, setMinutes] = useState(0)
-    const [seconds, setSeconds] = useState(0)
-
-    useEffect(() => {
-        const release: any = new Date(2022, 8, 1)
-
-        function startTimer() {
-            const currentTime: any = new Date()
-            let ms: number
-
-            (release > currentTime) ? ms = release - currentTime : ms = 31536000000 - Date.parse(currentTime) + Date.parse(release)
-
-            setDays(Math.round(ms / 86400000))
-            setHours(24 - currentTime.getHours())
-            setMinutes(60 - currentTime.getMinutes())
-            setSeconds(60 - currentTime.getSeconds())
-        }
-
-        startTimer()
-        setInterval(() => startTimer(), 1000)
-    }, [])
 
     return (
         <NavigationLayout>
@@ -46,15 +23,7 @@ const Index = () => {
             </Head>
             <div id={styles['home']}>
                 <header>
-                    <div className={styles['timer']}>
-                        <h1>Left before the start <br/> of the school year</h1>
-                        <div className={`${styles['timer__row']} flex-between`}>
-                            <TimerItem time={days} text={'Days'}/>
-                            <TimerItem time={hours} text={'Hours'}/>
-                            <TimerItem time={minutes} text={'Minutes'}/>
-                            <TimerItem time={seconds} text={'Seconds'}/>
-                        </div>
-                    </div>
+                    <Timer/>
                     <div className={`${styles['booking']} flex-center`}>
                         <div className={`${styles['booking__content']} flex-between`}>
                             <button onClick={() => router.push('/courses')} className={`${styles['booking__btn']} flex-center number`}>Book a course</button>
@@ -104,86 +73,14 @@ const Index = () => {
                             </div>
                         </section>
                         <section id={styles['partners']}>
-                            <div className={`${styles['partners__title']} flex-between`}>
-                                <Spinner/>
-                                <h1 className={"title"}>Partners - top brands</h1>
-                            </div>
+                            <Title title={'Partners - top brands'}/>
                             <div className={styles['partners__logos']}>
                                 <Partners imgAlts={['Msi Logo', 'Nvidia Logo', 'Logitech Logo', 'Intel Logo']} imgPaths={['/msi-logo.png', '/nvidia-logo.jpg', '/logitech-logo.png', '/intel-logo.jpg']}/>
                                 <Partners imgAlts={['HyperX Logo', 'Acer Logo', 'Samsung Logo', 'Gigabyte Logo']} imgPaths={['/hyperx-logo.jpg', '/acer-logo.jpg', '/samsung-logo.jpg', '/gigabyte-logo.png']}/>
                             </div>
                         </section>
-                        {/*<section id="training-program">
-                            <div className="training-program__title">
-                                <Spinner/>
-                                <h1 className="title">Training program</h1>
-                                <p className="grey-subtitle">This is our training program developed by the bests
-                                    teachers</p>
-                            </div>
-                            <div className="training-program__content flex-property-set_center">
-                                <div className="content__column">
-                                    <div className="column__item flex-property-set_between">
-                                        <div className="item__txt">
-                                            <h4 className="small-grey">Month №1</h4>
-                                            <p className="txt__text">Meeting teachers and learning the basics of
-                                                programming</p>
-                                        </div>
-                                        <hr/>
-                                    </div>
-                                    <div className="column__item flex-property-set_between">
-                                        <div className="item__txt">
-                                            <h4 className="small-grey">Month №3</h4>
-                                            <p className="txt__text">Deepening into programming and building a portfolio</p>
-                                        </div>
-                                        <hr/>
-                                    </div>
-                                    <div className="column__item flex-property-set_between">
-                                        <div className="item__txt">
-                                            <h4 className="small-grey">Month №5</h4>
-                                            <p className="txt__text">Continue to study complex technologies and create a
-                                                good portfolio</p>
-                                        </div>
-                                        <hr/>
-                                    </div>
-                                    <div className="column__item flex-property-set_between">
-                                        <div className="item__txt">
-                                            <h4 className="small-grey">Week №7</h4>
-                                            <p className="txt__text">Writing the final work, obtaining a certificate and the
-                                                first work</p>
-                                        </div>
-                                        <hr/>
-                                    </div>
-                                </div>
-                                <hr className="content__line"/>
-                                <div className="content__column">
-                                    <div className="column__item flex-property-set_between">
-                                        <hr/>
-                                        <div className="item__txt">
-                                            <h4 className="small-grey">Month №2</h4>
-                                            <p className="txt__text">Thoroughly study the basics of programming and perform
-                                                simple tasks</p>
-                                        </div>
-                                    </div>
-                                    <div className="column__item flex-property-set_between">
-                                        <hr/>
-                                        <div className="item__txt">
-                                            <h4 className="small-grey">Month №4</h4>
-                                            <p className="txt__text">Builded portfolio and start studying complex
-                                                technologies</p>
-                                        </div>
-                                    </div>
-                                    <div className="column__item flex-property-set_between">
-                                        <hr/>
-                                        <div className="item__txt">
-                                            <h4 className="small-grey">Month №6</h4>
-                                            <p className="txt__text">Finish studying programming and builded a good
-                                                portfolio</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section id="social-networks">
+                        <TrainingProgram/>
+                        {/*<section id="social-networks">
                             <h1 className="title">News every week</h1>
                             <p className="social-networks__subtitle grey-subtitle">If you subscribe, you will receive the
                                 latest news and discount notifications</p>
