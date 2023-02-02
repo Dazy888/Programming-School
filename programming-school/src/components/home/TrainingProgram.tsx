@@ -1,65 +1,27 @@
-import React, {useEffect, useState} from "react"
+import React, { useEffect, useState } from "react"
+import { useSelector } from "react-redux"
 // Styles
 import styles from "@/styles/Index.module.scss"
 // Components
 import { Title} from "@/components/home/Title"
 import { TrainingProgramColumn } from "@/components/home/TrainingProgramColumn"
 import { TrainingProgramItem } from "@/components/home/TrainingProgramItem";
-// Interface
-import { TrainingProgramItemI } from "@/interfaces/home"
+// Store
+import { getTrainingProgramFirstColumnContent, getTrainingProgramSecondColumnContent } from "@/store/reducers/home/home-selectors"
 
 const TrainingProgramComponent = () => {
-    const FirstColumnContent: TrainingProgramItemI[] = [
-        {
-            month: 1,
-            text:  'Meeting teachers and learning the basics of programming',
-            rightLinePosition: true
-        },
-        {
-            month: 3,
-            text:  'Deepening into programming and building a portfolio',
-            rightLinePosition: true
-        },
-        {
-            month: 5,
-            text:  'Continue to study complex technologies and create a good portfolio',
-            rightLinePosition: true
-        },
-        {
-            month: 7,
-            text:  'Writing the final work, obtaining a certificate and the first work',
-            rightLinePosition: true
-        },
-    ]
+    const firstColumnContent = useSelector(getTrainingProgramFirstColumnContent)
+    const secondColumnContent = useSelector(getTrainingProgramSecondColumnContent)
 
-    const SecondsColumnContent: TrainingProgramItemI[] = [
-        {
-            month: 2,
-            text:  'Thoroughly study the basics of programming and perform simple tasks',
-            rightLinePosition: false
-        },
-        {
-            month: 4,
-            text:  'Build portfolio and start studying complex technologies',
-            rightLinePosition: false
-        },
-        {
-            month: 6,
-            text:  'Finish studying programming and build a good portfolio',
-            rightLinePosition: false
-        },
-    ]
 
-    const content = [...FirstColumnContent, ...SecondsColumnContent]
+    const content = [...firstColumnContent, ...secondColumnContent]
     content.sort((a, b) => a.month > b.month ? 1 : -1);
 
     const [isPhone, setPhoneStatus] = useState(false)
 
     useEffect(() => {
         window.onresize = () => {
-            console.log(window.innerWidth)
-
-            if (window.innerWidth <= 426) {
+            if (window.innerWidth <= 427) {
                 setPhoneStatus(true)
             } else {
                 setPhoneStatus(false)
@@ -78,9 +40,9 @@ const TrainingProgramComponent = () => {
                         <hr className={styles['training-program__line']}/>
                     </div>
                 :   <div className={`${styles['training-program__content']} flex-center`}>
-                        <TrainingProgramColumn content={FirstColumnContent}/>
+                        <TrainingProgramColumn content={firstColumnContent}/>
                         <hr className={styles['training-program__line']}/>
-                        <TrainingProgramColumn content={SecondsColumnContent}/>
+                        <TrainingProgramColumn content={secondColumnContent}/>
                     </div>
             }
         </section>

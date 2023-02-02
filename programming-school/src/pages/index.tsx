@@ -11,10 +11,20 @@ import { AboutCoursesItem } from "@/components/home/AboutCoursesItem"
 import { Partners } from "@/components/home/Parthners"
 import { Title } from "@/components/home/Title"
 import { Timer } from "@/components/home/Timer"
-import {TrainingProgram} from "@/components/home/TrainingProgram";
+import { TrainingProgram } from "@/components/home/TrainingProgram"
+// Form
+import {SubmitHandler, useForm} from "react-hook-form"
+import {Link} from "@/components/home/Link";
 
 const Index = () => {
     const router = useRouter()
+
+    interface FormI {
+        email: string
+    }
+
+    const { register, handleSubmit, formState: { errors } } = useForm<FormI>({mode: 'onChange'})
+    const onSubmit: SubmitHandler<FormI> = data => console.log(data);
 
     return (
         <NavigationLayout>
@@ -80,37 +90,21 @@ const Index = () => {
                             </div>
                         </section>
                         <TrainingProgram/>
-                        {/*<section id="social-networks">
-                            <h1 className="title">News every week</h1>
-                            <p className="social-networks__subtitle grey-subtitle">If you subscribe, you will receive the
-                                latest news and discount notifications</p>
-                            <div className="social-networks__email">
-                                <Formik initialValues={{email: ''}} onSubmit={submit}>
-                                    {({errors, touched}) => (
-                                        <Form>
-                                            <div className={'error-container'}>
-                                                {errors.email && touched.email ?
-                                                    <p className={'error__txt'}>{errors.email}</p> : null}
-                                                <Field name={'email'} type="email" className="email__input light-grey-txt"
-                                                       placeholder="E-mail" validate={emailValidator}/>
-                                                {errors.email && touched.email ?
-                                                    <i className="fa-solid fa-circle-exclamation error__icon"></i> : null}
-                                            </div>
-                                            <Field as={'button'} name={'submit'} type="submit"
-                                                   className="email__submit number flex-property-set_center">Subscribe</Field>
-                                        </Form>
-                                    )}
-                                </Formik>
+                        <section id={styles['news']}>
+                            <h1 className={'title'}>News every week</h1>
+                            <h3 className={styles['grey-subtitle']}>If you subscribe, you will receive the latest news and discount notifications</h3>
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                {errors.email && <p className={'error-text'}>{errors.email.message}</p>}
+                                <input maxLength={19} type={'text'} {...register('email', { required: { value: true, message: 'Field is required '}, pattern: {value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message: 'Invalid e-mail'}  })} />
+                                {errors.email && <i className={'error-icon fa-solid fa-circle-exclamation'}/>}
+                                <button className={'number'}>Subscribe</button>
+                            </form>
+                            <div className={`${styles['news__social-networks']} flex-between`}>
+                                <Link className={'fa-brands fa-youtube'} href={'https://www.youtube.com/'}/>
+                                <Link className={'fa-brands fa-facebook-f'} href={'https://www.facebook.com/'}/>
+                                <Link className={'fa-brands fa-instagram'} href={'https://www.instagram.com/'}/>
                             </div>
-                            <div className="social-networks__links flex-property-set_between">
-                                <a href={'https://www.youtube.com/'} className="links__item flex-property-set_center"><i
-                                    className="fa-brands fa-youtube item__icon"></i></a>
-                                <a href={'https://www.facebook.com/'} className="links__item flex-property-set_center"><i
-                                    className="fa-brands fa-facebook-f item__icon"></i></a>
-                                <a href={'https://www.instagram.com/'} className="links__item flex-property-set_center"><i
-                                    className="fa-brands fa-instagram item__icon"></i></a>
-                            </div>
-                        </section>*/}
+                        </section>
                     </div>
                 </main>
                 <footer></footer>

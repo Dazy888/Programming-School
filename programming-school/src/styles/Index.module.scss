@@ -315,62 +315,57 @@
         }
       }
 
-      #social-networks {
+      #news {
         width: fit-content;
-        margin: auto;
+        margin: 200px auto 0;
         text-align: center;
 
-        .social-networks__subtitle {
+        h3 {
           margin: 30px 0 60px;
         }
 
-        .social-networks__email {
+        form {
+          width: 410px;
           display: flex;
           position: relative;
           margin: auto;
 
-          .email__input {
-            width: 363px;
+          input {
+            width: 65%;
             height: 44px;
             background: rgba(255, 255, 255, 0.25);
-            border: none;
             border-radius: 50px 0 0 50px;
-            box-sizing: border-box;
             padding-left: 25px;
-            margin-left: 30px;
-            outline: none;
-            opacity: 1 !important;
+            color: white;
+            font-size: 16px;
           }
 
-          .email__submit {
+          button {
             width: 160px;
-            height: 44px;
+            height: 46px;
             position: absolute;
-            top: 0;
-            right: 30px;
+            right: 0;
             background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
             border-radius: 50px;
-            border: none;
             transition: 0.4s;
 
             &:hover {
-              right: 50px;
+              right: 10px;
             }
           }
         }
 
-        .social-networks__links {
+        .news__social-networks {
           width: 290px;
           margin: 40px auto 0;
 
-          .links__item {
+          a {
             width: 50px;
             height: 50px;
             background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
             border-radius: 50%;
-            cursor: pointer;
 
-            .item__icon {
+            i {
               color: white;
               font-size: 20px;
             }
@@ -484,6 +479,8 @@
         }
 
         .timer__row {
+          width: 425px;
+
           .timer__item {
             width: 95px;
             height: 95px;
@@ -612,6 +609,28 @@
             }
           }
         }
+
+        #news {
+          h1 {
+            font-size: 40px;
+          }
+
+          h3 {
+            margin: 20px 0 50px;
+            font-size: 15px;
+          }
+
+          form {
+            button {
+              width: 130px;
+              right: 10px;
+
+              &:hover {
+                right: 10px;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -629,6 +648,8 @@
         }
 
         .timer__row {
+          width: 375px;
+
           .timer__item {
             width: 80px;
             height: 80px;
@@ -760,6 +781,50 @@
             }
           }
         }
+
+        #news {
+          h1 {
+            font-size: 35px;
+          }
+
+          h3 {
+            font-size: 14px;
+          }
+
+          form {
+            width: 360px;
+
+            input {
+              height: 38px;
+              font-size: 15px;
+            }
+
+            button {
+              width: 110px;
+              height: 40px;
+              right: 5px;
+              font-size: 15px;
+
+              &:hover {
+                right: 5px;
+              }
+            }
+          }
+
+          .news__social-networks {
+            width: 260px;
+            margin: 40px auto 0;
+
+            a {
+              width: 45px;
+              height: 45px;
+
+              i {
+                font-size: 18px;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -786,6 +851,8 @@
         }
 
         .timer__row {
+          width: 320px;
+
           .timer__item {
             width: 70px;
             height: 70px;
@@ -891,6 +958,52 @@
             .partners__row {
               div {
                 width: 300px;
+              }
+            }
+          }
+        }
+
+        #news {
+          h1 {
+            font-size: 30px;
+          }
+
+          h3 {
+            font-size: 13px;
+          }
+
+          form {
+            width: 320px;
+
+            input {
+              width: 70%;
+              height: 36px;
+              font-size: 14px;
+              padding-left: 20px;
+            }
+
+            button {
+              width: 90px;
+              height: 38px;
+              right: 5px;
+              font-size: 14px;
+
+              &:hover {
+                right: 5px;
+              }
+            }
+          }
+
+          .news__social-networks {
+            width: 220px;
+            margin: 40px auto 0;
+
+            a {
+              width: 40px;
+              height: 40px;
+
+              i {
+                font-size: 16px;
               }
             }
           }
