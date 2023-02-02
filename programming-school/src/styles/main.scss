@@ -12,7 +12,6 @@
   min-height: 100vh;
   background: black;
   font-family: "Roboto", sans-serif;
-  padding-bottom: 100px;
   opacity: 0.9;
 }
 
@@ -85,20 +84,13 @@
   position: absolute;
   color: #f92552;
   font-size: 20px;
-  right: 180px;
+  right: 140px;
   top: 13px;
 }
 
 @media (max-width: 786px) {
   .error-icon {
-    right: 160px;
-  }
-}
-
-@media (max-width: 425px) {
-  .error-icon {
-    top: 10px;
-    right: 130px;
+    right: 150px;
   }
 }
 
@@ -108,7 +100,15 @@
   }
 
   .error-icon {
-    right: 110px;
+    top: 10px;
+    right: 130px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .error-icon {
+    right: 115px;
     font-size: 18px;
   }
 }

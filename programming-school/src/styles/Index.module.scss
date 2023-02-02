@@ -1,14 +1,4 @@
 #home {
-  .error__txt {
-    top: -25px;
-    left: 50px;
-  }
-
-  .error__icon {
-    right: 80px !important;
-    top: 12px;
-  }
-
   .big-number {
     font-weight: 700;
     font-size: 36px;
@@ -331,7 +321,7 @@
           margin: auto;
 
           input {
-            width: 65%;
+            width: 70%;
             height: 44px;
             background: rgba(255, 255, 255, 0.25);
             border-radius: 50px 0 0 50px;
@@ -341,7 +331,7 @@
           }
 
           button {
-            width: 160px;
+            width: 30%;
             height: 46px;
             position: absolute;
             right: 0;
@@ -356,7 +346,7 @@
         }
 
         .news__social-networks {
-          width: 290px;
+          width: 50%;
           margin: 40px auto 0;
 
           a {
@@ -373,6 +363,15 @@
         }
       }
     }
+  }
+
+  footer {
+    height: 100px;
+    margin-top: 50px;
+    text-align: center;
+    background: #242424;
+    color: white;
+    font-size: 18px;
   }
 }
 
@@ -622,7 +621,6 @@
 
           form {
             button {
-              width: 130px;
               right: 10px;
 
               &:hover {
@@ -800,7 +798,6 @@
             }
 
             button {
-              width: 110px;
               height: 40px;
               right: 5px;
               font-size: 15px;
@@ -812,7 +809,7 @@
           }
 
           .news__social-networks {
-            width: 260px;
+            //width: 260px;
             margin: 40px auto 0;
 
             a {
@@ -931,6 +928,7 @@
           h1 {
             font-size: 29px;
           }
+
           .about-courses__content {
             margin-top: 100px;
 
@@ -976,14 +974,12 @@
             width: 320px;
 
             input {
-              width: 70%;
               height: 36px;
               font-size: 14px;
               padding-left: 20px;
             }
 
             button {
-              width: 90px;
               height: 38px;
               right: 5px;
               font-size: 14px;
@@ -995,7 +991,6 @@
           }
 
           .news__social-networks {
-            width: 220px;
             margin: 40px auto 0;
 
             a {

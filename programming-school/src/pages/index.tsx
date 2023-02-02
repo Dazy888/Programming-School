@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import Head from "next/head"
 import { useRouter } from "next/router"
 // Styles
@@ -12,9 +12,9 @@ import { Partners } from "@/components/home/Parthners"
 import { Title } from "@/components/home/Title"
 import { Timer } from "@/components/home/Timer"
 import { TrainingProgram } from "@/components/home/TrainingProgram"
+import { Link } from "@/components/home/Link"
 // Form
 import {SubmitHandler, useForm} from "react-hook-form"
-import {Link} from "@/components/home/Link";
 
 const Index = () => {
     const router = useRouter()
@@ -23,8 +23,12 @@ const Index = () => {
         email: string
     }
 
-    const { register, handleSubmit, formState: { errors } } = useForm<FormI>({mode: 'onChange'})
+    const { register, reset, handleSubmit, formState: { errors, isSubmitSuccessful } } = useForm<FormI>({mode: 'onChange'})
     const onSubmit: SubmitHandler<FormI> = data => console.log(data);
+
+    useEffect(() => {
+        if (isSubmitSuccessful) reset({ email: '' });
+    }, [isSubmitSuccessful])
 
     return (
         <NavigationLayout>
@@ -95,7 +99,7 @@ const Index = () => {
                             <h3 className={styles['grey-subtitle']}>If you subscribe, you will receive the latest news and discount notifications</h3>
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 {errors.email && <p className={'error-text'}>{errors.email.message}</p>}
-                                <input maxLength={19} type={'text'} {...register('email', { required: { value: true, message: 'Field is required '}, pattern: {value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message: 'Invalid e-mail'}  })} />
+                                <input maxLength={25} type={'text'} {...register('email', { required: { value: true, message: 'Field is required '}, pattern: {value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message: 'Invalid e-mail'}  })} />
                                 {errors.email && <i className={'error-icon fa-solid fa-circle-exclamation'}/>}
                                 <button className={'number'}>Subscribe</button>
                             </form>
@@ -107,7 +111,11 @@ const Index = () => {
                         </section>
                     </div>
                 </main>
-                <footer></footer>
+                <footer className={'flex-center'}>
+                    <div>
+                        <p>We use cookies to personalize services and improve the user experience of the site. If you do not agree to their use, please change your browser settings.</p>
+                    </div>
+                </footer>
             </div>
         </NavigationLayout>
     )
