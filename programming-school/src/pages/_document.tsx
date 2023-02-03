@@ -5,7 +5,7 @@ const Document = () => {
   return (
     <Html lang="en">
       <Head>
-          <link rel={'icon'} href={'/favicon.png'}/>
+          <link rel={'icon'} href={'/common/favicon.png'}/>
           <script src="https://kit.fontawesome.com/0a15c952b0.js" crossOrigin="anonymous" data-nscript="afterInteractive"/>
       </Head>
       <body>

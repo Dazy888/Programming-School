@@ -1,7 +1,7 @@
 import React from "react"
-import styles from '@/styles/Index.module.scss'
+import styles from '@/styles/Home.module.scss'
 import { TrainingProgramItemI } from "@/interfaces/home"
-const TrainingProgramItemComponent: React.FC<TrainingProgramItemI> = ({ month, text, rightLinePosition }) => {
+const ColumnItemComponent: React.FC<TrainingProgramItemI> = ({ month, text, rightLinePosition }) => {
     return(
         <div className={`${styles['training-program__item']} flex-between`}>
             {rightLinePosition ? null : <hr/>}
@@ -14,4 +14,4 @@ const TrainingProgramItemComponent: React.FC<TrainingProgramItemI> = ({ month, t
     )
 }
 
-export const TrainingProgramItem = React.memo(TrainingProgramItemComponent)
+export const ColumnItem = React.memo(ColumnItemComponent)

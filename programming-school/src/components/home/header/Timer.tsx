@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import styles from "@/styles/Index.module.scss"
-import { TimerItem } from "@/components/home/TimerItem"
+import styles from "@/styles/Home.module.scss"
+import { TimerItem } from "@/components/home/header/TimerItem"
 
 const TimerComponent = () => {
     const [days, setDays] = useState(0)
