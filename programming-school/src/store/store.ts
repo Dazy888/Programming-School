@@ -1,8 +1,10 @@
 import { combineReducers, createStore } from "redux"
-import testReducer from "@/store/reducers/home/home-reducer"
+import { testReducer } from "@/store/reducers/home/home-reducer"
+import { coursesReducer } from "@/store/reducers/courses/courses-reducer"
 
 let rootReducer = combineReducers({
-    home: testReducer
+    home: testReducer,
+    courses: coursesReducer
 })
 
 type RootReducerType = typeof rootReducer

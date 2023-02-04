@@ -42,7 +42,7 @@ let initialState = {
 
 type InitialStateType = typeof initialState
 
-function testReducer(state = initialState, action: any): InitialStateType {
+export function testReducer(state = initialState, action: any): InitialStateType {
     switch (action.type) {
         default:
             return {
@@ -50,5 +50,3 @@ function testReducer(state = initialState, action: any): InitialStateType {
             }
     }
 }
-
-export default testReducer

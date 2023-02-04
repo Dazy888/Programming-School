@@ -89,8 +89,8 @@ code {
 }
 
 .error-container {
+  width: fit-content;
   position: relative;
-  margin-bottom: 40px;
 
   &:last-child {
     margin-bottom: 0;
