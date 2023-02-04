@@ -19,16 +19,16 @@ const NavigationLinksComponents = () => {
     }
 
     return(
-        <nav className={`${navClass} white-txt`}>
-            <button onClick={burgerListener} className={styles['burger']}>
+        <nav className={`${navClass} duration-500 overflow-hidden text-white`}>
+            <button onClick={burgerListener} className={`${styles['burger']} text-3xl mt-10 mb-5 mx-auto hidden`}>
                 <i className={`fa-solid fa-${isBurgerMenuOpened ? 'xmark' : 'bars'}`}/>
             </button>
-            <ul className={'flex-center'}>
-                <Link className={(router.pathname === '/') ? styles['active'] : ''} href={'/'}>Home</Link>
-                <Link className={(router.pathname === '/courses') ? styles['active'] : ''} href={'/courses'}>Courses</Link>
-                <Link className={(router.pathname === '/schedule') ? styles['active'] : ''} href={'/schedule'}>Schedule</Link>
-                <Link className={(router.pathname === '/teachers') ? styles['active'] : ''} href={'/teachers'}>Teachers</Link>
-                <Link className={(router.pathname === '/contacts') ? styles['active'] : ''} href={'/contacts'}>Contacts</Link>
+            <ul className={'flex justify-center text-lg'}>
+                <Link className={(router.pathname === '/') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/'}>Home</Link>
+                <Link className={(router.pathname === '/courses') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/courses'}>Courses</Link>
+                <Link className={(router.pathname === '/schedule') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/schedule'}>Schedule</Link>
+                <Link className={(router.pathname === '/teachers') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/teachers'}>Teachers</Link>
+                <Link className={(router.pathname === '/contacts') ? `${styles['active']} mr-14 duration-300` : ' duration-300'} href={'/contacts'}>Contacts</Link>
             </ul>
         </nav>
     )

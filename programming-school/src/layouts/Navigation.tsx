@@ -10,10 +10,10 @@ interface Props {
 const NavigationLayoutComponent: React.FC<Props> = ({ children }) => {
     return(
         <div id={'wrapper'}>
-            <div className={`${styles['navigation']} flex-between`}>
-                <Image height={100} width={100} src={"/logo.png"} alt={"Logo"} />
+            <div className={`${styles['navigation']} flex items-center justify-between py-10 px-20`}>
+                <Image height={40} width={40} src={"/navigation/logo.png"} alt={"Logo"}/>
                 <NavigationLinks/>
-                <button className={`${styles['navigation__btn']} white-txt`}>Go to office</button>
+                <button className={`${styles['navigation__btn']} w-44 h-11 rounded-full text-base text-white`}>Go to office</button>
             </div>
             {children}
         </div>

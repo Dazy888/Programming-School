@@ -13,8 +13,6 @@ import { getAllPreviewData } from "@/store/reducers/courses/courses-selectors"
 const Courses = () => {
     const data = useSelector(getAllPreviewData)
 
-    console.log(data)
-
     return(
         <NavigationLayout>
             <Head>

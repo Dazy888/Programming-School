@@ -1,52 +1,20 @@
 .navigation {
-  padding: 40px 80px;
-
-  img {
-    width: 40px;
-    height: 40px;
-  }
-
   nav {
-    transition: 0.6s;
-    overflow: hidden;
-
     .active {
       color: mediumpurple !important;
     }
 
-    .burger {
-      display: none;
-      font-size: 33px;
-      color: white;
-      margin: 40px auto 20px;
-    }
-
     ul {
       width: 600px;
-      display: flex;
 
-      a {
-        color: white;
-        font-size: 18px;
-        margin-right: 56px;
-        transition: 0.3s;
-
-        &:hover {
-          transform: scale(1.5);
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
+      a:hover {
+        transform: scale(1.5);
       }
     }
   }
 
   .navigation__btn {
-    width: 183px;
-    height: 44px;
     background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
-    border-radius: 50px;
   }
 }
 
