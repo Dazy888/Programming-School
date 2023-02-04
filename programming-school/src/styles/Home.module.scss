@@ -1,11 +1,4 @@
 #home {
-  .big-number {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 140%;
-    color: white;
-  }
-
   .grey-subtitle {
     font-weight: 400;
     font-size: 16px;
@@ -71,73 +64,30 @@
     }
 
     .timer {
-      width: fit-content;
-      margin: 190px auto;
-      text-align: center;
-
-      h1 {
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 140%;
-        margin-bottom: 50px;
-        color: #FFFFFF;
-      }
-
-      .timer__row {
-        margin: auto;
-
-        .timer__item {
-          width: 122px;
-          height: 122px;
+      div {
+        div {
           background: #121212;
         }
       }
     }
 
     .booking {
-      height: 130px;
       background: #121212;
 
       .booking__content {
-        width: 1300px;
+        width: 1400px;
 
-        .booking__btn {
-          width: 169px;
-          height: 44px;
+        button {
           background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
-          border-radius: 50px;
-        }
-
-        .booking__students-counter {
-          width: 310px;
-
-          div {
-            &:first-child {
-              margin-bottom: 10px;
-            }
-          }
         }
 
         .booking__orders {
-          .booking__orders_places {
-            width: 40%;
-          }
-
           .booking__orders_progress-bar {
             width: 715px;
-            display: flex;
-            height: 6px;
-            margin: 7px 0 5px;
 
             div {
               &:first-child {
-                width: 60%;
                 background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
-              }
-
-              &:last-child {
-                width: 40%;
-                background: white;
               }
             }
           }

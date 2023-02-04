@@ -28,9 +28,9 @@ const TimerComponent = () => {
     }, [])
 
     return (
-        <div className={styles['timer']}>
-            <h1>Start of the school <br/> year in</h1>
-            <div className={`${styles['timer__row']} flex-between`}>
+        <div className={`${styles['timer']} w-fit my-48 mx-auto text-center`}>
+            <h1 className={'text-white text-7xl font-bold mb-12'}>Start of the school <br/> year in</h1>
+            <div className={`${styles['timer__row']} flex justify-between`}>
                 <TimerItem time={days} text={'Days'}/>
                 <TimerItem time={hours} text={'Hours'}/>
                 <TimerItem time={minutes} text={'Minutes'}/>
