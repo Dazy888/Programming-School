@@ -13,12 +13,12 @@ const ColumnItemComponent: React.FC<Props> = ({ path, imgPath, time, title }) =>
     const router = useRouter()
 
     return(
-        <div onClick={() => router.push(`/courses/${path}`)} className={`${styles['courses__item']} flex-between`}>
-            <div>
-                <h2>{title}</h2>
-                <p>{time}</p>
+        <div onClick={() => router.push(`/courses/${path}`)} className={`${styles['courses__item']} h-48 flex justify-between items-center cursor-pointer duration-300 p-4 mb-14 rounded-xl`}>
+            <div className={'flex flex-col justify-between h-full'}>
+                <h2 className={'text-2xl font-medium'}>{title}</h2>
+                <p className={'font-medium'}>{time}</p>
             </div>
-            <img alt={'Logo'} src={imgPath}/>
+            <img className={'w-28 h-28'} alt={'Logo'} src={imgPath}/>
         </div>
     )
 }

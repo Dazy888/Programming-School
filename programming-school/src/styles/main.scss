@@ -18,55 +18,6 @@
   opacity: 0.9;
 }
 
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.subtitle {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 140%;
-  color: #FFFFFF;
-}
-
-.light-grey-txt {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160%;
-  color: #FFFFFF;
-  opacity: 0.8;
-}
-
-.number {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 150%;
-  color: white;
-}
-
-.grey-txt {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: white;
-  opacity: 0.4;
-}
-
-.white-txt {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: white;
-}
-
 .error-text {
   position: absolute;
   top: -23px;

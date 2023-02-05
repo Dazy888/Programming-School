@@ -1,17 +1,6 @@
 #courses {
-  padding: 100px 0;
-
-  h1 {
-    font-size: 48px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: white;
-    text-align: center;
-  }
-
   .courses__content {
     max-width: 1000px;
-    margin: 100px auto 0;
 
     .courses__column {
       &:nth-child(1) {
@@ -92,32 +81,10 @@
 
       .courses__item {
         max-width: 425px;
-        height: 175px;
         background: #60B3FF;
-        padding: 16px;
-        margin-bottom: 50px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.3s;
 
         &:hover {
           transform: scale(1.02);
-        }
-
-        div {
-          h2 {
-            font-size: 23px;
-            margin: 10px 0 70px;
-          }
-
-          p {
-            font-weight: 500;
-          }
-        }
-
-        img {
-          width: 130px;
-          height: 130px;
         }
       }
     }
