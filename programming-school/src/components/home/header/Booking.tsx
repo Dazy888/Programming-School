@@ -4,8 +4,8 @@ import { useRouter } from "next/router"
 import styles from "@/styles/Home.module.scss"
 // Components
 import { StudentsCounterItem } from "@/components/home/header/StudentsCounterItem"
-import { GreyText } from "@/components/home/common/GreyText"
-import { Number } from "@/components/home/common/Number"
+import { GreyText } from "@/components/home/header/GreyText"
+import { Number } from "@/components/home/header/Number"
 
 const BookingComponent = () => {
     const router = useRouter()

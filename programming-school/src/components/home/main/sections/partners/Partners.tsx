@@ -5,7 +5,7 @@ import { LogosRow } from "@/components/home/main/sections/partners/LogosRow"
 
 const PartnersComponent = () => {
     return(
-        <section id={styles['partners']}>
+        <section id={styles['partners']} className={'mt-48'}>
             <Title title={'Partners - top brands'}/>
             <div className={styles['partners__logos']}>
                 <LogosRow imgAlts={['Msi Logo', 'Nvidia Logo', 'Logitech Logo', 'Intel Logo']} imgPaths={['/home/msi-logo.png', '/home/nvidia-logo.jpg', '/home/logitech-logo.png', '/home/intel-logo.png']}/>

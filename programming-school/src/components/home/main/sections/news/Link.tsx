@@ -7,8 +7,8 @@ interface Props {
 
 const LinkComponent: React.FC<Props> = ({ icon, href }) => {
     return(
-        <a href={href} className={'flex-center'}>
-            <i className={`fa-brands fa-${icon}`}/>
+        <a href={href} className={'flex items-center justify-center rounded-full w-12 h-12'}>
+            <i className={`fa-brands fa-${icon} text-white text-xl`}/>
         </a>
     )
 }

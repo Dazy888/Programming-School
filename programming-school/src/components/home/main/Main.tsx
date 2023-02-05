@@ -10,7 +10,7 @@ import { News } from "@/components/home/main/sections/news/News"
 
 const MainComponent = () => {
     return(
-        <main className={'flex-center'}>
+        <main className={'flex justify-center'}>
             <div className={styles['container']}>
                 <AboutUs/>
                 <AboutCourses/>

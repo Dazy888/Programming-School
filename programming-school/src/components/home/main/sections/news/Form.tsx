@@ -12,9 +12,9 @@ const FormComponent: React.FC<Props> = ({ onSubmit, handleSubmit, errorMessage, 
     return(
         <form onSubmit={handleSubmit(onSubmit)}>
             {errorMessage && <p className={'error-text'}>{errorMessage}</p>}
-            <input maxLength={25} type={'text'} {...register('email', { required: { value: true, message: 'Field is required '}, pattern: {value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message: 'Invalid e-mail'}  })} />
+            <input className={'font-base text-white h-11 pl-6 rounded-full'} maxLength={25} type={'text'} {...register('email', { required: { value: true, message: 'Field is required '}, pattern: {value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message: 'Invalid e-mail'}  })} />
             {errorMessage && <i className={'error-icon fa-solid fa-circle-exclamation'}/>}
-            <button className={'number'}>Subscribe</button>
+            <button className={'font-bold text-white text-base block mx-auto duration-300 rounded-full mt-3'}>Subscribe</button>
         </form>
     )
 }

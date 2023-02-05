@@ -15,7 +15,7 @@ interface Props {
 
 const ContentComponent: React.FC<Props> = ({ smallResolution, content, secondColumnContent, firstColumnContent }) => {
     return(
-        <div className={`${styles['training-program__content']} flex-center`}>
+        <div className={`${styles['training-program__content']} flex justify-center items-center`}>
             {smallResolution
                 ?   <>
                         <div className={styles['training-program__column']}>
@@ -25,7 +25,7 @@ const ContentComponent: React.FC<Props> = ({ smallResolution, content, secondCol
                     </>
                 :   <>
                         <ContentColumn content={firstColumnContent}/>
-                        <hr className={styles['training-program__line']}/>
+                        <hr className={`${styles['training-program__line']} w-1.5`}/>
                         <ContentColumn content={secondColumnContent}/>
                     </>
             }

@@ -7,4 +7,4 @@ interface Props {
 
 const GreyTextComponent: React.FC<Props> = ({ text, classNames = '' }) => <p className={`text-base text-white opacity-40 ${classNames}`}>{text}</p>
 
-export const GreyText= React.memo(GreyTextComponent)
+export const GreyText = React.memo(GreyTextComponent)

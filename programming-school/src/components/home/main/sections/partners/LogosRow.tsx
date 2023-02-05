@@ -5,11 +5,12 @@ import { RowItem } from "@/components/home/main/sections/partners/RowItem"
 interface Props {
     imgAlts: string[]
     imgPaths: string[]
+    borderNone?: boolean
 }
 
-const LogosRowComponent: React.FC<Props> = ({ imgAlts, imgPaths }) => {
+const LogosRowComponent: React.FC<Props> = ({ imgAlts, imgPaths, borderNone = false }) => {
     return(
-        <div className={styles['partners__row']}>
+        <div className={`${styles['partners__row']} ${borderNone ? 'border-none' : ''} flex`}>
             <RowItem imgPath={imgPaths[0]} imgAlt={imgAlts[0]}/>
             <RowItem imgPath={imgPaths[1]} imgAlt={imgAlts[1]}/>
             <RowItem imgPath={imgPaths[2]} imgAlt={imgAlts[2]}/>

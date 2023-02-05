@@ -25,7 +25,7 @@ const TrainingProgramComponent = () => {
     }, [])
 
     return(
-        <section id={styles['training-program']}>
+        <section id={styles['training-program']} className={'mt-48'}>
             <Title column={true} title={'Training program'} text={'This is our training program developed by the bests teachers'}/>
             <Content smallResolution={smallResolution} content={content} firstColumnContent={firstColumnContent} secondColumnContent={secondColumnContent}/>
         </section>

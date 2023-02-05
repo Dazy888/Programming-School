@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "@/styles/Home.module.scss"
-import {GreyText} from "@/components/home/common/GreyText";
-import {Number} from "@/components/home/common/Number";
+import {GreyText} from "@/components/home/header/GreyText";
+import {Number} from "@/components/home/header/Number";
 
 interface Props {
     text: string

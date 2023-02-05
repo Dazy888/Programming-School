@@ -1,5 +1,7 @@
 import React from "react"
 import styles from '@/styles/Home.module.scss'
+import {TitleText} from "@/components/home/main/TitleText";
+import {Subtitle} from "@/components/home/main/Subtitle";
 
 interface Props {
     title: string
@@ -9,15 +11,15 @@ interface Props {
 
 const TitleComponent: React.FC<Props> = ({ title, text, column = false }) => {
     return(
-        <div className={`${styles['title-block']} ${column && styles['title-column']} flex-center`}>
+        <div className={`${styles['title-block']} ${column && styles['title-column']} flex justify-center items-center`}>
             <div className={styles['lds-ring']}>
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-            <h1 className={"title"}>{title}</h1>
-            {text && <p className={styles['grey-subtitle']}>{text}</p>}
+            <TitleText text={title}/>
+            {text && <Subtitle text={text}/>}
         </div>
     )
 }

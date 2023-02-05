@@ -8,8 +8,8 @@ interface Props {
 
 const PartnersItemComponent: React.FC<Props> = ({ imgPath, imgAlt }) => {
     return(
-        <div className={'flex-center'}>
-            <Image width={1000} height={1000} alt={imgAlt} src={imgPath}/>
+        <div className={'flex justify-center items-center w-80 h-36'}>
+            <Image width={200} height={100} alt={imgAlt} src={imgPath}/>
         </div>
     )
 }

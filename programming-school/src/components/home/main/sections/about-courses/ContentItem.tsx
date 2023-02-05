@@ -12,9 +12,9 @@ interface Props {
 const ContentItemComponent: React.FC<Props> = ({ imgPath, subtitle, text, imgAlt }) => {
     return(
         <div className={styles['about-courses__item']}>
-            <Image width={100} height={100} alt={imgAlt} src={imgPath}/>
-            <h3 className={"subtitle"}>{subtitle}</h3>
-            <p className={"light-grey-txt"}>{text}</p>
+            <Image className={'m-auto'} width={100} height={100} alt={imgAlt} src={imgPath}/>
+            <h3 className={"font-medium text-2xl text-white mt-14 mb-8"}>{subtitle}</h3>
+            <p className={"font-base text-white opacity-80 max-w-sm"}>{text}</p>
         </div>
     )
 }
