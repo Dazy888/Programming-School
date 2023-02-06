@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "@/styles/Home.module.scss"
 import { ContentItem } from "@/components/home/main/sections/about-courses/ContentItem"
-import { TitleText } from "@/components/home/main/TitleText";
+import { TitleText } from "@/components/common/TitleText";
 
 const AboutCoursesComponent = () => {
     return(

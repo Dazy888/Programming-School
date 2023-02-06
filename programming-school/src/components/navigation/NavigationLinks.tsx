@@ -26,7 +26,6 @@ const NavigationLinksComponents = () => {
             <ul className={'flex justify-center text-lg'}>
                 <Link className={(router.pathname === '/') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/'}>Home</Link>
                 <Link className={(router.pathname === '/courses') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/courses'}>Courses</Link>
-                <Link className={(router.pathname === '/schedule') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/schedule'}>Schedule</Link>
                 <Link className={(router.pathname === '/teachers') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/teachers'}>Teachers</Link>
                 <Link className={(router.pathname === '/contacts') ? `${styles['active']} mr-14 duration-300` : ' duration-300'} href={'/contacts'}>Contacts</Link>
             </ul>

@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "@/styles/Home.module.scss"
-import { TitleText } from "@/components/home/main/TitleText"
+import { TitleText } from "@/components/common/TitleText"
 
 const AboutUsComponent = () => {
     return(

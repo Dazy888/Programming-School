@@ -8,7 +8,7 @@ import { Form } from "@/components/home/main/sections/news/Form"
 import { SubmitHandler, useForm } from "react-hook-form"
 // Interfaces
 import { FormI } from "@/interfaces/home"
-import {TitleText} from "@/components/home/main/TitleText";
+import {TitleText} from "@/components/common/TitleText";
 import {Subtitle} from "@/components/home/main/Subtitle";
 
 const NewsComponent = () => {

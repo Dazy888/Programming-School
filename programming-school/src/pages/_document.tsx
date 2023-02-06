@@ -11,6 +11,8 @@ const Document = () => {
       <body>
         <Main />
         <NextScript />
+      <script src={"./courses/maska-nomera.js"}/>
+        <script src="https://unpkg.com/imask" type="text/javascript" ></script>
       </body>
     </Html>
   )

@@ -1,0 +1,143 @@
+#contacts {
+  .contacts__container {
+    width: 1200px;
+
+    .contacts__managers {
+      .contacts__row {
+        width: 800px;
+
+        div {
+          img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+    }
+
+    .contacts__map {
+      iframe {
+        border: 3px solid mediumpurple;
+      }
+    }
+
+    .contacts__connection {
+      .contacts__form {
+        span {
+          top: -25px;
+          color: #f92552;
+          left: 5px;
+        }
+
+        i {
+          top: 9px;
+          right: 10px;
+        }
+
+        input {
+          border: 1px solid mediumpurple;
+        }
+
+        textarea {
+          border: 1px solid mediumpurple;
+        }
+
+        button {
+          background: mediumpurple;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  #contacts {
+    .contacts__container {
+      width: 1020px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #contacts {
+    .contacts__container {
+      width: 760px;
+
+      .contacts__managers {
+        .contacts__row {
+          width: 100%;
+        }
+      }
+
+      .contacts__connection {
+        flex-direction: column;
+
+        .contacts__contact-information {
+          margin: auto;
+          text-align: center;
+        }
+
+        .contacts__form {
+          width: fit-content;
+          margin-top: 80px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #contacts {
+    .contacts__container {
+      width: 420px;
+
+      .contacts__managers {
+        .contacts__row {
+          flex-direction: column;
+
+          div:nth-child(2) {
+            margin: 50px 0;
+          }
+        }
+      }
+
+      .contacts__connection {
+
+        .contacts__contact-information {
+
+        }
+
+        .contacts__form {
+          form {
+            div {
+              flex-direction: column;
+
+              textarea {
+                width: 100%;
+                height: 150px;
+                margin-top: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  #contacts {
+    .contacts__container {
+      width: 370px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #contacts {
+    .contacts__container {
+      width: 320px;
+    }
+  }
+}

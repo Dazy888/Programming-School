@@ -91,6 +91,13 @@ input, select {
 input[type=submit] {
   cursor: pointer;
 }
+textarea {
+  resize: none !important;
+
+  &:focus-visible {
+    outline: none !important;
+  }
+}
 button {
   display: inline-block;
   cursor: pointer;
