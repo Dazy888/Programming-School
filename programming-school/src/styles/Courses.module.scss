@@ -118,11 +118,11 @@ $devopsPro-bgColor : #B4DF92;
     .courses__content {
       flex-direction: column;
 
-      .courses__column {
-        .courses__item {
-          &:hover {
-            transform: none;
-          }
+      .courses__item {
+        margin: 0 auto 50px;
+
+        &:hover {
+          transform: none;
         }
       }
     }
