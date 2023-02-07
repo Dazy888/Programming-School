@@ -1,3 +1,21 @@
+$fullstackPython-bgColor : #FECECF;
+$web-bgColor : #A3A3FF;
+$fullstackPHP-bgColor : #94BFFF;
+$frontend-bgColor : #C9C8FF;
+$frontendPro-bgColor : #C4FDEF;
+$fullstackJs-bgColor : #FFE64B;
+$phpPro-bgColor : #FFF4BB;
+$c-bgColor : #CAF4EA;
+$android-bgColor : #C5EFD9;
+$ios-bgColor : #93E7FF;
+$mobile-bgColor : #F0EBFF;
+$flutter-bgColor : #D2EBFC;
+$java-bgColor : #FFBD59;
+$javaPro-bgColor : #D1CAFF;
+$cyberSecurity-bgColor : #00CFA1;
+$devops-bgColor : #80CAF2;
+$devopsPro-bgColor : #B4DF92;
+
 #courses {
   .courses__content {
     max-width: 1000px;
@@ -6,35 +24,35 @@
       &:nth-child(1) {
         .courses__item {
           &:nth-child(2) {
-            background: #FECECF;
+            background: $fullstackPython-bgColor;
           }
 
           &:nth-child(3) {
-            background: #A3A3FF;
+            background: $web-bgColor;
           }
 
           &:nth-child(4) {
-            background: #94BFFF;
+            background: $fullstackPHP-bgColor;
           }
 
           &:nth-child(5) {
-            background: #C9C8FF;
+            background: $frontend-bgColor;
           }
 
           &:nth-child(6) {
-            background: #C4FDEF;
+            background: $frontendPro-bgColor;
           }
 
           &:nth-child(7) {
-            background: #FFE64B;
+            background: $fullstackJs-bgColor;
           }
 
           &:nth-child(8) {
-            background: #FFF4BB;
+            background: $phpPro-bgColor;
           }
 
           &:nth-child(9) {
-            background: #CAF4EA;
+            background: $c-bgColor;
           }
         }
       }
@@ -42,39 +60,39 @@
       &:nth-child(2) {
         .courses__item {
           &:nth-child(1) {
-            background: #C5EFD9;
+            background: $android-bgColor;
           }
 
           &:nth-child(2) {
-            background: #93E7FF;
+            background: $ios-bgColor;
           }
 
           &:nth-child(3) {
-            background: #F0EBFF;
+            background: $mobile-bgColor;
           }
 
           &:nth-child(4) {
-            background: #D2EBFC;
+            background: $flutter-bgColor;
           }
 
           &:nth-child(5) {
-            background: #FFBD59;
+            background: $java-bgColor;
           }
 
           &:nth-child(6) {
-            background: #D1CAFF;
+            background: $javaPro-bgColor;
           }
 
           &:nth-child(7) {
-            background: #00CFA1;
+            background: $cyberSecurity-bgColor;
           }
 
           &:nth-child(8) {
-            background: #80CAF2;
+            background: $devops-bgColor;
           }
 
           &:nth-child(9) {
-            background: #B4DF92;
+            background: $devopsPro-bgColor;
           }
         }
       }

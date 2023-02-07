@@ -1,0 +1,318 @@
+@import "Courses.module";
+
+#course {
+  #header {
+    max-width: 1430px;
+
+    .header__title {
+      background: #60b3ff;
+
+      h1 {
+        color: black !important;
+      }
+
+      button {
+        background: #3D3BFF;
+      }
+
+      img {
+        width: 486px;
+        height: 486px;
+      }
+
+      &[course=fullstack-python] {
+        background: $fullstackPython-bgColor;
+      }
+
+      &[course=web] {
+        background: $web-bgColor;
+      }
+
+      &[course=fullstack-php] {
+        background: $fullstackPHP-bgColor;
+      }
+      &[course=frontend] {
+        background: $frontend-bgColor;
+      }
+
+      &[course=frontend-pro] {
+        background: $frontendPro-bgColor;
+      }
+
+      &[course=fullstack-js] {
+        background: $fullstackJs-bgColor;
+      }
+
+      &[course=php-pro] {
+        background: $phpPro-bgColor;
+      }
+
+      &[course=c-plus-plus] {
+        background: $c-bgColor;
+      }
+
+      &[course=android] {
+        background: $android-bgColor;
+      }
+
+      &[course=ios] {
+        background: $ios-bgColor;
+      }
+
+      &[course=mobile] {
+        background: $mobile-bgColor;
+      }
+
+      &[course=flutter] {
+        background: $flutter-bgColor;
+      }
+
+      &[course=java] {
+        background: $java-bgColor;
+      }
+
+      &[course=java-pro] {
+        background: $javaPro-bgColor;
+      }
+
+      &[course=cyber-security] {
+        background: $cyberSecurity-bgColor;
+      }
+
+      &[course=devops] {
+        background: $devops-bgColor;
+      }
+
+      &[course=devops-pro] {
+        background: $devopsPro-bgColor;
+      }
+    }
+
+    .header__features {
+      div {
+        max-width: 300px;
+        border: 3px solid #60b3ff;
+
+        &[course=fullstack-python] {
+          border: 3px solid $fullstackPython-bgColor;
+        }
+
+        &[course=web] {
+          border: 3px solid $web-bgColor;
+        }
+
+        &[course=fullstack-php] {
+          border: 3px solid $fullstackPHP-bgColor;
+        }
+        &[course=frontend] {
+          border: 3px solid $frontend-bgColor;
+        }
+
+        &[course=frontend-pro] {
+          border: 3px solid $frontendPro-bgColor;
+        }
+
+        &[course=fullstack-js] {
+          border: 3px solid $fullstackJs-bgColor;
+        }
+
+        &[course=php-pro] {
+          border: 3px solid $phpPro-bgColor;
+        }
+
+        &[course=c-plus-plus] {
+          border: 3px solid $c-bgColor;
+        }
+
+        &[course=android] {
+          border: 3px solid $android-bgColor;
+        }
+
+        &[course=ios] {
+          border: 3px solid $ios-bgColor;
+        }
+
+        &[course=mobile] {
+          border: 3px solid $mobile-bgColor;
+        }
+
+        &[course=flutter] {
+          border: 3px solid $flutter-bgColor;
+        }
+
+        &[course=java] {
+          border: 3px solid $java-bgColor;
+        }
+
+        &[course=java-pro] {
+          border: 3px solid $javaPro-bgColor;
+        }
+
+        &[course=cyber-security] {
+          border: 3px solid $cyberSecurity-bgColor;
+        }
+
+        &[course=devops] {
+          border: 3px solid $devops-bgColor;
+        }
+
+        &[course=devops-pro] {
+          border: 3px solid $devopsPro-bgColor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  #course {
+    #header {
+      max-width: 1020px;
+
+      .header__title {
+        padding: 40px 120px;
+
+        h1 {
+          font-size: 35px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        button {
+          height: 45px;
+        }
+
+        img {
+          width: 350px;
+          height: 350px;
+        }
+      }
+
+      .header__features {
+        div {
+          max-width: 180px;
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        i {
+          font-size: 7px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #course {
+    #header {
+      max-width: 760px;
+
+      .header__title {
+        flex-direction: column;
+      }
+
+      .header__features {
+        width: fit-content;
+        flex-direction: column;
+
+        div {
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #course {
+    #header {
+      max-width: 420px;
+
+      .header__title {
+        flex-direction: column;
+        padding: 20px;
+
+        h1 {
+          font-size: 30px;
+        }
+
+        img {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  #course {
+    #header {
+      max-width: 370px;
+
+      .header__title {
+        h1 {
+          font-size: 25px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        button {
+          height: 40px;
+          font-size: 16px;
+        }
+
+        img {
+          width: 270px;
+          height: 270px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #course {
+    #header {
+      max-width: 320px;
+
+      .header__title {
+        h1 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        button {
+          font-size: 15px;
+        }
+
+        img {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+  }
+}

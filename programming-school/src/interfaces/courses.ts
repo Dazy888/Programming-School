@@ -1,18 +1,21 @@
-import {AppStateType} from "@/store/store";
+import { AppStateType } from "@/store/store"
 
 export interface PreviewI {
     occupation: string
     time: string
-    imgPath: string
+    imgSrc: string
     path: string
 }
 
-export interface HeaderI {
-    titleTxt: string
-    textAboutJob?: string
-    companies: string
-    salary: string
-    projects: string
+interface FeaturesI {
+    title: string
+    text: string
+}
+
+interface HeaderI {
+    text: string
+    features: FeaturesI[]
+    imgSrc: string
 }
 
 export interface ForWhoI {
@@ -65,6 +68,7 @@ export interface QuestionsI {
 export interface CourseI {
     preview: PreviewI
     course: {
+        logoSrc: string
         header: HeaderI
         for_who: ForWhoI
         skills: SkillsI

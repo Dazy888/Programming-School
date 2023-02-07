@@ -24,10 +24,9 @@ const NavigationLinksComponents = () => {
                 <i className={`fa-solid fa-${isBurgerMenuOpened ? 'xmark' : 'bars'}`}/>
             </button>
             <ul className={'flex justify-center text-lg'}>
-                <Link className={(router.pathname === '/') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/'}>Home</Link>
-                <Link className={(router.pathname === '/courses') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/courses'}>Courses</Link>
-                <Link className={(router.pathname === '/teachers') ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/teachers'}>Teachers</Link>
-                <Link className={(router.pathname === '/contacts') ? `${styles['active']} mr-14 duration-300` : ' duration-300'} href={'/contacts'}>Contacts</Link>
+                <Link className={(/^\/$/.test(router.pathname)) ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/'}>Home</Link>
+                <Link className={(/\/(courses|courses\/python)/.test(router.pathname)) ? `${styles['active']} mr-14 duration-300` : 'mr-14 duration-300'} href={'/courses'}>Courses</Link>
+                <Link className={(/\/contacts/.test(router.pathname)) ? `${styles['active']} duration-300` : ' duration-300'} href={'/contacts'}>Contacts</Link>
             </ul>
         </nav>
     )
