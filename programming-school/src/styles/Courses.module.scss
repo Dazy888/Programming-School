@@ -21,6 +21,8 @@ $devopsPro-bgColor : #B4DF92;
     max-width: 1000px;
 
     .courses__column {
+      width: 425px;
+
       &:nth-child(1) {
         .courses__item {
           &:nth-child(2) {
@@ -98,7 +100,6 @@ $devopsPro-bgColor : #B4DF92;
       }
 
       .courses__item {
-        max-width: 425px;
         background: #60B3FF;
 
         &:hover {
@@ -118,11 +119,15 @@ $devopsPro-bgColor : #B4DF92;
     .courses__content {
       flex-direction: column;
 
-      .courses__item {
-        margin: 0 auto 50px;
+      .courses__column {
+        margin: auto;
 
-        &:hover {
-          transform: none;
+        .courses__item {
+          margin-bottom: 50px;
+
+          &:hover {
+            transform: none;
+          }
         }
       }
     }
@@ -137,9 +142,7 @@ $devopsPro-bgColor : #B4DF92;
 
     .courses__content {
       .courses__column {
-        .courses__item {
-          max-width: 370px;
-        }
+        width: 370px;
       }
     }
   }
@@ -153,8 +156,9 @@ $devopsPro-bgColor : #B4DF92;
 
     .courses__content {
       .courses__column {
+        width: 320px;
+
         .courses__item {
-          max-width: 320px;
           height: 150px;
 
           div {

@@ -1,21 +1,26 @@
 import { AppStateType } from "@/store/store"
 
 export interface PreviewI {
-    occupation: string
+    profession: string
     time: string
     imgSrc: string
     path: string
 }
 
-interface FeaturesI {
+interface ListItemTextI {
     title: string
     text: string
 }
 
 interface HeaderI {
     text: string
-    features: FeaturesI[]
+    features: ListItemTextI[]
     imgSrc: string
+}
+
+interface MarketI {
+    titleText: string
+    list: ListItemTextI[]
 }
 
 export interface ForWhoI {
@@ -70,6 +75,7 @@ export interface CourseI {
     course: {
         logoSrc: string
         header: HeaderI
+        market: MarketI
         for_who: ForWhoI
         skills: SkillsI
         projects: ProjectsI

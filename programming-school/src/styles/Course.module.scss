@@ -1,163 +1,196 @@
 @import "Courses.module";
 
 #course {
-  #header {
+  .course__container {
     max-width: 1430px;
 
-    .header__title {
-      background: #60b3ff;
+    #header {
+      .header__title {
+        background: #60b3ff;
 
-      h1 {
-        color: black !important;
-      }
+        h1 {
+          color: black !important;
+        }
 
-      button {
-        background: #3D3BFF;
-      }
+        button {
+          background: #3D3BFF;
+        }
 
-      img {
-        width: 486px;
-        height: 486px;
-      }
-
-      &[course=fullstack-python] {
-        background: $fullstackPython-bgColor;
-      }
-
-      &[course=web] {
-        background: $web-bgColor;
-      }
-
-      &[course=fullstack-php] {
-        background: $fullstackPHP-bgColor;
-      }
-      &[course=frontend] {
-        background: $frontend-bgColor;
-      }
-
-      &[course=frontend-pro] {
-        background: $frontendPro-bgColor;
-      }
-
-      &[course=fullstack-js] {
-        background: $fullstackJs-bgColor;
-      }
-
-      &[course=php-pro] {
-        background: $phpPro-bgColor;
-      }
-
-      &[course=c-plus-plus] {
-        background: $c-bgColor;
-      }
-
-      &[course=android] {
-        background: $android-bgColor;
-      }
-
-      &[course=ios] {
-        background: $ios-bgColor;
-      }
-
-      &[course=mobile] {
-        background: $mobile-bgColor;
-      }
-
-      &[course=flutter] {
-        background: $flutter-bgColor;
-      }
-
-      &[course=java] {
-        background: $java-bgColor;
-      }
-
-      &[course=java-pro] {
-        background: $javaPro-bgColor;
-      }
-
-      &[course=cyber-security] {
-        background: $cyberSecurity-bgColor;
-      }
-
-      &[course=devops] {
-        background: $devops-bgColor;
-      }
-
-      &[course=devops-pro] {
-        background: $devopsPro-bgColor;
-      }
-    }
-
-    .header__features {
-      div {
-        max-width: 300px;
-        border: 3px solid #60b3ff;
+        img {
+          width: 486px;
+          height: 486px;
+        }
 
         &[course=fullstack-python] {
-          border: 3px solid $fullstackPython-bgColor;
+          background: $fullstackPython-bgColor;
         }
 
         &[course=web] {
-          border: 3px solid $web-bgColor;
+          background: $web-bgColor;
         }
 
         &[course=fullstack-php] {
-          border: 3px solid $fullstackPHP-bgColor;
+          background: $fullstackPHP-bgColor;
         }
         &[course=frontend] {
-          border: 3px solid $frontend-bgColor;
+          background: $frontend-bgColor;
         }
 
         &[course=frontend-pro] {
-          border: 3px solid $frontendPro-bgColor;
+          background: $frontendPro-bgColor;
         }
 
         &[course=fullstack-js] {
-          border: 3px solid $fullstackJs-bgColor;
+          background: $fullstackJs-bgColor;
         }
 
         &[course=php-pro] {
-          border: 3px solid $phpPro-bgColor;
+          background: $phpPro-bgColor;
         }
 
         &[course=c-plus-plus] {
-          border: 3px solid $c-bgColor;
+          background: $c-bgColor;
         }
 
         &[course=android] {
-          border: 3px solid $android-bgColor;
+          background: $android-bgColor;
         }
 
         &[course=ios] {
-          border: 3px solid $ios-bgColor;
+          background: $ios-bgColor;
         }
 
         &[course=mobile] {
-          border: 3px solid $mobile-bgColor;
+          background: $mobile-bgColor;
         }
 
         &[course=flutter] {
-          border: 3px solid $flutter-bgColor;
+          background: $flutter-bgColor;
         }
 
         &[course=java] {
-          border: 3px solid $java-bgColor;
+          background: $java-bgColor;
         }
 
         &[course=java-pro] {
-          border: 3px solid $javaPro-bgColor;
+          background: $javaPro-bgColor;
         }
 
         &[course=cyber-security] {
-          border: 3px solid $cyberSecurity-bgColor;
+          background: $cyberSecurity-bgColor;
         }
 
         &[course=devops] {
-          border: 3px solid $devops-bgColor;
+          background: $devops-bgColor;
         }
 
         &[course=devops-pro] {
-          border: 3px solid $devopsPro-bgColor;
+          background: $devopsPro-bgColor;
+        }
+      }
+
+      .header__features {
+        div {
+          max-width: 300px;
+          border: 3px solid #60b3ff;
+
+          &[course=fullstack-python] {
+            border: 3px solid $fullstackPython-bgColor;
+          }
+
+          &[course=web] {
+            border: 3px solid $web-bgColor;
+          }
+
+          &[course=fullstack-php] {
+            border: 3px solid $fullstackPHP-bgColor;
+          }
+          &[course=frontend] {
+            border: 3px solid $frontend-bgColor;
+          }
+
+          &[course=frontend-pro] {
+            border: 3px solid $frontendPro-bgColor;
+          }
+
+          &[course=fullstack-js] {
+            border: 3px solid $fullstackJs-bgColor;
+          }
+
+          &[course=php-pro] {
+            border: 3px solid $phpPro-bgColor;
+          }
+
+          &[course=c-plus-plus] {
+            border: 3px solid $c-bgColor;
+          }
+
+          &[course=android] {
+            border: 3px solid $android-bgColor;
+          }
+
+          &[course=ios] {
+            border: 3px solid $ios-bgColor;
+          }
+
+          &[course=mobile] {
+            border: 3px solid $mobile-bgColor;
+          }
+
+          &[course=flutter] {
+            border: 3px solid $flutter-bgColor;
+          }
+
+          &[course=java] {
+            border: 3px solid $java-bgColor;
+          }
+
+          &[course=java-pro] {
+            border: 3px solid $javaPro-bgColor;
+          }
+
+          &[course=cyber-security] {
+            border: 3px solid $cyberSecurity-bgColor;
+          }
+
+          &[course=devops] {
+            border: 3px solid $devops-bgColor;
+          }
+
+          &[course=devops-pro] {
+            border: 3px solid $devopsPro-bgColor;
+          }
+        }
+      }
+    }
+
+    #disclaimer {
+      background: #F7F7F5;
+    }
+
+    #market {
+      .market__list {
+        display: grid;
+        grid-gap: 50px;
+        grid-template-areas:  'first second'
+                            'third fourth';
+
+        div {
+          &:nth-child(1) {
+            grid-area: first;
+          }
+
+          &:nth-child(2) {
+            grid-area: second;
+          }
+
+          &:nth-child(3) {
+            grid-area: third;
+          }
+
+          &:nth-child(4) {
+            grid-area: fourth;
+          }
         }
       }
     }
@@ -166,47 +199,50 @@
 
 @media (max-width: 1440px) {
   #course {
-    #header {
+    .course__container {
       max-width: 1020px;
+      margin: auto;
 
-      .header__title {
-        padding: 40px 120px;
+      #header {
+        .header__title {
+          padding: 40px 120px;
 
-        h1 {
-          font-size: 35px;
+          h1 {
+            font-size: 35px;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          button {
+            height: 45px;
+          }
+
+          img {
+            width: 350px;
+            height: 350px;
+          }
         }
 
-        p {
-          font-size: 16px;
-          line-height: 24px;
-        }
+        .header__features {
+          div {
+            max-width: 180px;
+          }
 
-        button {
-          height: 45px;
-        }
+          h3 {
+            font-size: 18px;
+          }
 
-        img {
-          width: 350px;
-          height: 350px;
-        }
-      }
+          p {
+            font-size: 14px;
+            line-height: 20px;
+          }
 
-      .header__features {
-        div {
-          max-width: 180px;
-        }
-
-        h3 {
-          font-size: 18px;
-        }
-
-        p {
-          font-size: 14px;
-          line-height: 20px;
-        }
-
-        i {
-          font-size: 7px;
+          i {
+            font-size: 7px;
+          }
         }
       }
     }
@@ -215,23 +251,32 @@
 
 @media (max-width: 1024px) {
   #course {
-    #header {
+    .course__container {
       max-width: 760px;
 
-      .header__title {
-        flex-direction: column;
+      #header {
+        .header__title {
+          flex-direction: column;
+        }
+
+        .header__features {
+          width: fit-content;
+          flex-direction: column;
+
+          div {
+            margin-bottom: 30px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
       }
 
-      .header__features {
-        width: fit-content;
-        flex-direction: column;
-
-        div {
-          margin-bottom: 30px;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
+      #disclaimer {
+        p {
+          font-size: 16px;
+          line-height: 24px;
         }
       }
     }
@@ -240,20 +285,62 @@
 
 @media (max-width: 768px) {
   #course {
-    #header {
+    .course__container {
       max-width: 420px;
 
-      .header__title {
-        flex-direction: column;
-        padding: 20px;
+      #header {
+        .header__title {
+          flex-direction: column;
+          padding: 20px;
 
-        h1 {
-          font-size: 30px;
+          h1 {
+            font-size: 30px;
+          }
+
+          img {
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+
+      #disclaimer {
+        padding: 30px 40px;
+        text-align: center;
+
+        div {
+          flex-direction: column;
         }
 
-        img {
-          width: 300px;
-          height: 300px;
+        p {
+          width: 100%;
+          margin-top: 20px;
+        }
+      }
+
+      #market {
+        h1 {
+          font-size: 39px;
+          line-height: 44px;
+        }
+
+        p, h3 {
+          font-size: 22px;
+          line-height: 30px;
+        }
+
+        .market__list {
+          p {
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+
+        .market__list {
+          grid-template-areas:  'first'
+                                'second'
+                                'third'
+                                'fourth';
         }
       }
     }
@@ -262,27 +349,55 @@
 
 @media (max-width: 425px) {
   #course {
-    #header {
+    .course__container {
       max-width: 370px;
 
-      .header__title {
+      #header {
+        .header__title {
+          h1 {
+            font-size: 25px;
+          }
+
+          p {
+            font-size: 15px;
+            line-height: 20px;
+          }
+
+          button {
+            height: 40px;
+            font-size: 16px;
+          }
+
+          img {
+            width: 270px;
+            height: 270px;
+          }
+        }
+      }
+
+      #market {
         h1 {
-          font-size: 25px;
+          font-size: 36px;
+          line-height: 40px;
         }
 
-        p {
-          font-size: 15px;
-          line-height: 20px;
+        p, h3 {
+          font-size: 20px;
+          line-height: 28px;
         }
 
-        button {
-          height: 40px;
-          font-size: 16px;
+        .market__list {
+          p {
+            font-size: 16px;
+            line-height: 24px;
+          }
         }
 
-        img {
-          width: 270px;
-          height: 270px;
+        .market__list {
+          grid-template-areas:  'first'
+                                'second'
+                                'third'
+                                'fourth';
         }
       }
     }
@@ -291,26 +406,28 @@
 
 @media (max-width: 375px) {
   #course {
-    #header {
+    .course__container {
       max-width: 320px;
 
-      .header__title {
-        h1 {
-          font-size: 30px;
-        }
+      #header {
+        .header__title {
+          h1 {
+            font-size: 30px;
+          }
 
-        p {
-          font-size: 15px;
-          line-height: 20px;
-        }
+          p {
+            font-size: 15px;
+            line-height: 20px;
+          }
 
-        button {
-          font-size: 15px;
-        }
+          button {
+            font-size: 15px;
+          }
 
-        img {
-          width: 250px;
-          height: 250px;
+          img {
+            width: 250px;
+            height: 250px;
+          }
         }
       }
     }

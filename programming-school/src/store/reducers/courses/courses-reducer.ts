@@ -2,30 +2,49 @@ import { CourseI } from "@/interfaces/courses"
 import { InferActionTypes } from "../../../../../src/Redux/Redux-Store";
 
 const commonItems = {
-    frontendHeader: {
-        text: 'Thanks to frontend developers, we leave likes and comments, add products to the cart and quickly understand online maps. In the course, you will learn how to create web service interfaces using programming languages and additional technologies. You will be able to develop task planners, instant messengers, online stores',
-        features: [
-            {
-                title: 'Suitable for beginners',
-                text: 'without programming experience'
-            },
-            {
-                title: '6 months',
-                text: 'before employment'
-            },
-            {
-                title: 'Up to 8 projects',
-                text: 'in portfolio'
-            },
-            {
-                title: 'We guarantee employment',
-                text: 'or refund money *'
-            },
-            {
-                title: 'Practice on webinars',
-                text: 'with developers from large companies'
-            },
-        ],
+    frontend: {
+        header: {
+            text: 'Thanks to frontend developers, we leave likes and comments, add products to the cart and quickly understand online maps. In the course, you will learn how to create web service interfaces using programming languages and additional technologies. You will be able to develop task planners, instant messengers, online stores',
+            features: [
+                {
+                    title: 'Suitable for beginners',
+                    text: 'without programming experience'
+                },
+                {
+                    title: '6 months',
+                    text: 'before employment'
+                },
+                {
+                    title: 'Up to 8 projects',
+                    text: 'in portfolio'
+                },
+                {
+                    title: 'We guarantee employment',
+                    text: 'or refund money *'
+                },
+                {
+                    title: 'Practice on webinars',
+                    text: 'with developers from large companies'
+                },
+            ],
+        },
+        market: {
+            titleText: "Demand for web developers remains high - business profits directly depend on how convenient it is for customers to use the company's website. There are not enough specialists in the market, so companies offer high salaries and remote work",
+            list: [
+                {
+                    title: '4 100 vacancies',
+                    text: 'Now open for a frontend developer position'
+                },
+                {
+                    title: '55 000 dollars',
+                    text: 'beginner salary'
+                },
+                {
+                    title: '6 months',
+                    text: 'intensive training on the platform is enough to get your first job'
+                }
+            ]
+        },
     },
     header: {
         features: {
@@ -67,6 +86,25 @@ const commonItems = {
             },
         }
     },
+    market: {
+        titleTexts: {
+            fullstackText: 'There are not enough fullstack developers on the market'
+        },
+        listItems: {
+            thirdPlace: {
+                title: '3rd place',
+                text: 'in the list of the most in-demand IT professions in 2019, according to Lucky Hunter'
+            },
+            devopsVacancies: {
+                title: 'over 4,000 vacancies',
+                text: 'open to DevOps engineers'
+            },
+            devopsSalary: {
+                title: 'from 70 000 dollars',
+                text: 'beginner salary specialist'
+            }
+        }
+    }
 }
 
 const initialState = {
@@ -74,7 +112,7 @@ const initialState = {
     courses: {
         python: {
             preview: {
-                occupation: 'Python developer',
+                profession: 'Python developer',
                 imgSrc: '/courses/previews/python.png',
                 time: '10 months',
                 path: 'python',
@@ -86,7 +124,7 @@ const initialState = {
                     features: [
                         {
                             title: '★ 4,75 out of 5',
-                            text: 'based on 26,293 course evaluations'
+                            text: 'based on 26 293 course evaluations'
                         },
                         commonItems.header.features.getJobInSixMonths,
                         {
@@ -99,6 +137,27 @@ const initialState = {
                         },
                         commonItems.header.features.guarantees
                     ]
+                },
+                market: {
+                  titleText: 'Python is the perfect language for a beginner. Python code is easy to write and read, the language consistently ranks highly in high rankings, and Pythonists are in demand in almost all broad IT - programming, data analysis, system administration and testing. YouTube, Intel, Pixar, NASA - these are just a few of the countries in the world that use Python in their products',
+                  list: [
+                      {
+                          title: 'Over 8,778 vacancies',
+                          text: 'open to Python developers in August 2022'
+                      },
+                      {
+                          title: '80 000 dollars',
+                          text: 'salary of a novice Python developer'
+                      },
+                      {
+                          title: '6 months',
+                          text: 'intensive classes and practice on the course are enough to find your first job'
+                      },
+                      {
+                          title: 'YouTube, Intel, Pixar, NASA',
+                          text: 'companies in which the participants of the course got a job'
+                      }
+                  ]
                 },
                 for_who: {
                     photographs: [
@@ -197,7 +256,7 @@ const initialState = {
         } as CourseI,
         fullstack_python:  {
             preview: {
-                occupation: 'Fullstack Python developer',
+                profession: 'Fullstack Python developer',
                 imgSrc: '/courses/previews/fullstack-python.png',
                 time: '10 months',
                 path: 'fullstack-python',
@@ -213,6 +272,16 @@ const initialState = {
                             text: 'in employment'
                         },
                         commonItems.header.features.fourProjectsInPortfolio
+                    ]
+                },
+                market: {
+                    titleText: commonItems.market.titleTexts.fullstackText,
+                    list: [
+                        commonItems.market.listItems.thirdPlace,
+                        {
+                            title: '90 000 dollars',
+                            text: 'skilled worker salary'
+                        },
                     ]
                 },
                 for_who: {
@@ -305,7 +374,7 @@ const initialState = {
         } as CourseI,
         web: {
             preview: {
-                occupation: 'Web developer',
+                profession: 'Web developer',
                 imgSrc: '/courses/previews/web.png',
                 time: '9 months',
                 path: 'web',
@@ -329,6 +398,23 @@ const initialState = {
                             title: 'Course fit',
                             text: 'beginners without experience'
                         },
+                    ]
+                },
+                market: {
+                    titleText: "Demand for web developers remains high - business profits directly depend on how convenient it is for customers to use the company's website. There are not enough specialists in the market, so companies offer high salaries and remote work",
+                    list: [
+                        {
+                            title: '3,160 vacancies',
+                            text: 'web developers open for July 2022'
+                        },
+                        {
+                            title: '65 000 dollars',
+                            text: 'beginner salary'
+                        },
+                        {
+                            title: '6 months',
+                            text: 'intensive training on the platform is enough to get your first job'
+                        }
                     ]
                 },
                 for_who: {
@@ -440,7 +526,7 @@ const initialState = {
         } as CourseI,
         fullstack_php: {
             preview: {
-                occupation: 'Fullstack PHP developer',
+                profession: 'Fullstack PHP developer',
                 imgSrc: '/courses/previews/fullstack-php.png',
                 time: '10 months',
                 path: 'fullstack-php',
@@ -456,6 +542,16 @@ const initialState = {
                         },
                         commonItems.header.features.getJobInSixMonths,
                         commonItems.header.features.fourProjectsInPortfolio
+                    ]
+                },
+                market: {
+                    titleText: "Demand for web developers remains high - business profits directly depend on how convenient it is for customers to use the company's website. There are not enough specialists in the market, so companies offer high salaries and remote work",
+                    list: [
+                        commonItems.market.listItems.thirdPlace,
+                        {
+                            title: '75 000 dollars',
+                            text: 'skilled programmer salary'
+                        }
                     ]
                 },
                 for_who: {
@@ -539,26 +635,28 @@ const initialState = {
         } as CourseI,
         frontend: {
             preview: {
-                occupation: 'Frontend developer',
+                profession: 'Frontend developer',
                 imgSrc: '/courses/previews/frontend.png',
                 time: '7 months',
                 path: 'frontend'
             },
             course: {
                 logoSrc: '/courses/course/logos/frontend.png',
-                header: commonItems.frontendHeader
+                header: commonItems.frontend.header,
+                market: commonItems.frontend.market
             }
         } as CourseI,
         frontend_pro: {
             preview: {
-                occupation: 'Frontend developer PRO',
+                profession: 'Frontend developer PRO',
                 imgSrc: '/courses/previews/frontend-pro.png',
                 time: '10 months',
                 path: 'frontend-pro',
             },
             course: {
                 logoSrc: '/courses/course/logos/frontend-pro.png',
-                header: commonItems.frontendHeader,
+                header: commonItems.frontend.header,
+                market: commonItems.frontend.market,
                 for_who: {
                     photographs: [
                         'https://248006.selcdn.ru/LandGen/phone_8324597e2efaf50fd1f52ad8ae50538cf7f0cc7b15821163457558.png',
@@ -641,7 +739,7 @@ const initialState = {
         } as CourseI,
         fullstack_js: {
             preview: {
-                occupation: 'Fullstack JavaScript developer',
+                profession: 'Fullstack JavaScript developer',
                 imgSrc: '/courses/previews/fullstack-js.png',
                 time: '10 months',
                 path: 'fullstack-js',
@@ -658,6 +756,19 @@ const initialState = {
                         commonItems.header.features.getJobInSixMonths,
                         commonItems.header.features.fourProjectsInPortfolio,
                         commonItems.header.features.guarantees
+                    ]
+                },
+                market: {
+                    titleText: 'There are not enough experts in the market',
+                    list: [
+                        {
+                            title: '6 000 companies',
+                            text: 'currently looking for JavaScript developers'
+                        },
+                        {
+                            title: '80 000 dollars',
+                            text: 'skilled worker salary'
+                        }
                     ]
                 },
                 for_who: {
@@ -762,7 +873,7 @@ const initialState = {
         } as CourseI,
         php_pro: {
             preview: {
-                occupation: 'PHP developer PRO',
+                profession: 'PHP developer PRO',
                 imgSrc: '/courses/previews/php-pro.png',
                 time: '7 months',
                 path: 'php-pro',
@@ -783,6 +894,19 @@ const initialState = {
                         },
                         commonItems.header.features.threeProjectsInPortfolio,
                         commonItems.header.features.guarantees
+                    ]
+                },
+                market: {
+                    titleText: 'PHP is one of the ten most popular programming languages in the TIOBE ranking. Most CMS are written on it, including WordPress, which powers 65% of all sites in the world. PHP under the hood of Wikipedia, Facebook and YouTube. Developers have been developing the language for over 25 years and introducing new features with each version. To keep old projects running and write web applications from scratch, companies hire PHP programmers',
+                    list: [
+                        {
+                            title: '2 837 companies',
+                            text: 'currently looking for PHP developers'
+                        },
+                        {
+                            title: '80 000 dollars',
+                            text: 'average PHP developer salary'
+                        }
                     ]
                 },
                 for_who: {
@@ -858,7 +982,7 @@ const initialState = {
         } as CourseI,
         c_plus_plus: {
             preview: {
-                occupation: 'C++ developer',
+                profession: 'C++ developer',
                 imgSrc: '/courses/previews/c++.png',
                 time: '7 months',
                 path: 'c-plus-plus',
@@ -882,6 +1006,19 @@ const initialState = {
                             text: 'curator'
                         },
                         commonItems.header.features.guarantees
+                    ]
+                },
+                market: {
+                    titleText: 'C++ developers work in large IT companies, game development, web development, create corporate and banking applications, design operating systems and software for robots',
+                    list: [
+                        {
+                            title: '4 018 companies',
+                            text: 'currently looking for C++ developers'
+                        },
+                        {
+                            title: '100 000 dollars',
+                            text: 'average C++ developer salary'
+                        }
                     ]
                 },
                 for_who: {
@@ -979,7 +1116,7 @@ const initialState = {
         } as CourseI,
         android: {
             preview: {
-                occupation: 'Android developer',
+                profession: 'Android developer',
                 imgSrc: '/courses/previews/android.png',
                 time: '7 months',
                 path: 'android',
@@ -1001,6 +1138,23 @@ const initialState = {
                             text: '43 practical work to develop skills'
                         },
                     ]
+                },
+                market: {
+                    titleText: '72% of mobile devices in the world run on Android. Therefore, millions of people will be able to use your applications. This is quite realistic, because you can distribute Android applications through several stores at the same time: Play Market, Samsung Store, App Gallery',
+                    list: [
+                        {
+                            title: '2 491 vacancies',
+                            text: 'Android Developers Open September 2022'
+                        },
+                        {
+                            title: '75 000 dollars',
+                            text: 'average beginner salary'
+                        },
+                        {
+                            title: 'Crossroads Vprok, CleverPumpkin',
+                            text: 'companies in which the participants of the course were employed'
+                        }
+                    ],
                 },
                 for_who: {
                     photographs: [
@@ -1101,7 +1255,7 @@ const initialState = {
         } as CourseI,
         ios: {
             preview: {
-                occupation: 'IOS developer',
+                profession: 'IOS developer',
                 imgSrc: '/courses/previews/ios.png',
                 time: '6 months',
                 path: 'ios',
@@ -1123,6 +1277,19 @@ const initialState = {
                         commonItems.header.features.guarantees,
                         commonItems.header.features.forBeginners
                     ]
+                },
+                market: {
+                    titleText: 'Businesses lack iOS developers, so companies offer high salaries and remote work. Novice iOS developers earn from 60 000 to 80 000 dollars, middles receive up to 100 000 dollars, and seniors and leads can count on salaries of up to 130 000 dollars',
+                    list: [
+                        {
+                            title: '2 491 vacancies',
+                            text: 'open to iOS developers'
+                        },
+                        {
+                            title: '60 000 dollars',
+                            text: 'ios developer beginner salary'
+                        }
+                    ],
                 },
                 for_who: {
                     photographs: [
@@ -1213,7 +1380,7 @@ const initialState = {
         } as CourseI,
         mobile: {
             preview: {
-                occupation: 'Mobile developer',
+                profession: 'Mobile developer',
                 imgSrc: '/courses/previews/mobile.png',
                 time: '7 months',
                 path: 'mobile',
@@ -1231,6 +1398,27 @@ const initialState = {
                         commonItems.header.features.feedback,
                         commonItems.header.features.guarantees
                     ]
+                },
+                market: {
+                    titleText: 'According to Statista, more than 6.5 billion people worldwide use smartphones in 2022. By 2027, this figure is projected to rise to almost 8 billion. Every year, smartphones become more powerful, with their help we can solve more and more tasks. Mobile developers create applications for iOS and Android, without which it is difficult to imagine modern life: online banks, marketplaces, streaming services, instant messengers, online navigators and fitness trackers',
+                    list: [
+                        {
+                            title: 'over 3,000 vacancies',
+                            text: 'available to mobile developers in November 2022'
+                        },
+                        {
+                            title: '60 000 dollars',
+                            text: 'beginner mobile developer salary'
+                        },
+                        {
+                            title: '80 000 dollars',
+                            text: 'mobile developer salary with 1 year experience'
+                        },
+                        {
+                            title: '110 000 dollars',
+                            text: 'mobile developer salary with 3 year experience'
+                        }
+                    ],
                 },
                 for_who: {
                     photographs: [
@@ -1311,7 +1499,7 @@ const initialState = {
         } as CourseI,
         flutter: {
             preview: {
-                occupation: 'Flutter developer',
+                profession: 'Flutter developer',
                 imgSrc: '/courses/previews/flutter.png',
                 time: '6 months',
                 path: 'flutter',
@@ -1328,6 +1516,19 @@ const initialState = {
                         commonItems.header.features.guarantees,
                         commonItems.header.features.feedback
                     ]
+                },
+                market: {
+                    titleText: 'Companies are looking for Flutter developers because they help save money on creating a product. Instead of two separate specialists, the business hires one who makes the application for Android and iOS at once. Today, more than 500,000 applications are powered by Flutter worldwide. Among the companies that use it: WeChat, Toyota, BMW, Google, Alibaba Group, eBay and the Brazilian government',
+                    list: [
+                        {
+                            title: '90 000 dollars',
+                            text: 'specialist salary'
+                        },
+                        {
+                            title: '322 vacancies',
+                            text: 'right now open for the position of Flutter developer'
+                        }
+                    ],
                 },
                 for_who: {
                     photographs: [
@@ -1397,7 +1598,7 @@ const initialState = {
         } as CourseI,
         java: {
             preview: {
-                occupation: 'Java developer',
+                profession: 'Java developer',
                 imgSrc: '/courses/previews/java.png',
                 time: '6 months',
                 path: 'java',
@@ -1425,6 +1626,19 @@ const initialState = {
                         },
                         commonItems.header.features.guarantees
                     ]
+                },
+                market: {
+                    titleText: 'Novice Java developers earn from 60,000, middles receive up to 80 000 dollars, and seniors and leads can count on salaries up to 120 000 dollars',
+                    list: [
+                        {
+                            title: '90 000 dollars',
+                            text: 'specialist salary'
+                        },
+                        {
+                            title: '322 vacancies',
+                            text: 'right now open for the position of Flutter developer'
+                        }
+                    ],
                 },
                 for_who: {
                     photographs: [
@@ -1529,7 +1743,7 @@ const initialState = {
         } as CourseI,
         java_pro: {
             preview: {
-                occupation: 'Java developer PRO',
+                profession: 'Java developer PRO',
                 imgSrc: '/courses/previews/java-pro.png',
                 time: '11 months',
                 path: 'java-pro',
@@ -1553,6 +1767,19 @@ const initialState = {
                         },
                         commonItems.header.features.guarantees
                     ]
+                },
+                market: {
+                    titleText: 'There are not enough experts in the market',
+                    list: [
+                        {
+                            title: '3 000 companies',
+                            text: 'currently looking for Java Developers'
+                        },
+                        {
+                            title: '90 000 dollars',
+                            text: 'average salary of a middle-specialist'
+                        }
+                    ],
                 },
                 for_who: {
                     photographs: [
@@ -1678,7 +1905,7 @@ const initialState = {
         } as CourseI,
         cyber_security: {
             preview: {
-                occupation: 'Cyber security specialist',
+                profession: 'Cyber security specialist',
                 imgSrc: '/courses/previews/cyber-security.png',
                 time: '1 year',
                 path: 'cyber-security'
@@ -1699,12 +1926,25 @@ const initialState = {
                             text: '100 works'
                         }
                     ]
-                }
+                },
+                market: {
+                    titleText: 'The task of a cyber security specialist is to look for vulnerabilities in programs, websites and mobile applications, protect data and repel hacker attacks',
+                    list: [
+                        {
+                            title: '2,000+ jobs for cyber security professionals',
+                            text: 'open'
+                        },
+                        {
+                            title: '70 000 dollars',
+                            text: 'cyber security specialist salary'
+                        }
+                    ],
+                },
             }
         } as CourseI,
         devops: {
             preview: {
-                occupation: 'DevOps engineer',
+                profession: 'DevOps engineer',
                 imgSrc: '/courses/previews/devops.png',
                 time: '7 months',
                 path: 'devops'
@@ -1714,12 +1954,16 @@ const initialState = {
                 header: {
                     text: 'You will learn how to administer Linux, set up web servers and master the DevOps methodology: you will automate the development of complex IT products. Get support from the Career Center and get a job as a Junior Specialist in 7 months. The course will suit you even if you have never done system administration or programming',
                     features: [commonItems.header.features.durationSevenMonths, commonItems.header.features.threeProjectsInPortfolio, commonItems.header.features.guarantees]
-                }
+                },
+                market: {
+                    titleText: 'DevOps engineer automates application development. It helps the company to quickly and safely implement changes to the code, supports the work of highly loaded services. Thanks to the DevOps approach, the quality of applications does not suffer due to the high speed of development, and the business does not lose profit due to failures and can focus on development. A DevOps engineer knows how to program in Python, organizes continuous integration and code delivery - CI / CD, works with Docker, Ansible, Terraform, Gitlab, implements tools and processes to improve product security. Such specialists are hired by companies with a large IT infrastructure. For example, banks, IT and telecom, fintech and retailers',
+                    list: [commonItems.market.listItems.devopsVacancies, commonItems.market.listItems.devopsSalary],
+                },
             }
         } as CourseI,
         devops_pro: {
             preview: {
-                occupation: 'DevOps engineer PRO',
+                profession: 'DevOps engineer PRO',
                 imgSrc: '/courses/previews/devops-pro.png',
                 time: '1 year',
                 path: 'devops-pro'
@@ -1736,7 +1980,18 @@ const initialState = {
                         },
                         commonItems.header.features.guarantees
                     ]
-                }
+                },
+                market: {
+                    titleText: 'DevOps engineer automates build, test, deployment and production. It helps the company quickly and safely introduce changes to the code or launch a new product, and supports the operation of highly loaded services. Thanks to the DevOps approach, the quality of development does not suffer due to speed, and the business does not lose profit due to failures and can focus on development. Such specialists are hired by companies with a large IT infrastructure, for example, banks, IT and telecom, fintech and retailers',
+                    list: [
+                        commonItems.market.listItems.devopsVacancies,
+                        commonItems.market.listItems.devopsSalary,
+                        {
+                            title: 'from 100 000 dollars',
+                            text: 'earn Middle DevOps Engineers'
+                        }
+                    ],
+                },
             }
         } as CourseI
     }
