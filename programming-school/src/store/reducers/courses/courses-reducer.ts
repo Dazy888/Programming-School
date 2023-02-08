@@ -45,6 +45,28 @@ const commonItems = {
                 }
             ]
         },
+        skills: [
+            {
+                title: 'Build websites in HTML and CSS',
+                text: 'Master the most popular layout languages and be able to create websites that will look good on any screen'
+            },
+            {
+                title: 'Work with frameworks',
+                text: 'Learn to use Angular, React. js, Vue.js. You can easily assemble web applications from individual components'
+            },
+            {
+                title: 'Program in JavaScript and TypeScript',
+                text: 'Master two popular programming languages at once. With JavaScript you will create interactive interfaces, and with TypeScript you will be able to quickly and reliably develop complex projects'
+            },
+            {
+                title: 'Develop server applications with Node.js',
+                text: 'Learn how to create a backend part of a service, work on its security and load resistance. You can take on more tasks and increase your earnings'
+            },
+            {
+                title: 'Work in a team like a pro',
+                text: 'Boost your time management and personal efficiency. You will be able to work effectively in a team with other developers, designers and team leaders'
+            },
+        ]
     },
     header: {
         features: {
@@ -103,6 +125,20 @@ const commonItems = {
                 title: 'from 70 000 dollars',
                 text: 'beginner salary specialist'
             }
+        }
+    },
+    skills: {
+        devopsDocker: {
+            title: 'Work in Docker',
+            text: 'Learn all about containerization. You will write your own docker images, run containers, build dependencies and define access parameters'
+        },
+        devopsInfrastructure: {
+            title: 'Manage infrastructure like code',
+            text: 'Learn to create, modify and version environments with Terraform and Ansible'
+        },
+        devopsMonitoring: {
+            title: 'Set up monitoring',
+            text: 'You will collect metrics and logs using Prometheus and the elk stack, build convenient dashboards in Grafana. Learn about incident handling and feedback systems'
         }
     }
 }
@@ -171,19 +207,35 @@ const initialState = {
                         text: 'For those who are already learning Python on their own or from textbooks. But there is no one to ask a question and ask for help'
                     }
                 ],
-                skills: {
-                    texts: [
-                        'Create simple and complex modular programs: from console scripts to chat bots',
-                        'Write autotests',
-                        'Deploy applications to the server',
-                        'Work with databases',
-                        'Work with popular frameworks - Django, Flask',
-                        'Package projects in Docker and apply DevOps practices',
-                        'Use industrial development tools: Git, PyCharm, Postman',
-                        'Write database queries in Python with Sqlalchemy, Django-ORM',
-                        'Work in a team'
-                    ]
-                },
+                skills: [
+                    {
+                        text: 'Create simple and complex modular programs: from console scripts to chat bots'
+                    },
+                    {
+                        text: 'Write autotests'
+                    },
+                    {
+                        text: 'Deploy applications to the server'
+                    },
+                    {
+                        text: 'Work with databases'
+                    },
+                    {
+                        text: 'Work with popular frameworks - Django, Flask'
+                    },
+                    {
+                        text: 'Package projects in Docker and apply DevOps practices'
+                    },
+                    {
+                        text: 'Use industrial development tools: Git, PyCharm, Postman'
+                    },
+                    {
+                        text: 'Write database queries in Python with Sqlalchemy, Django-ORM'
+                    },
+                    {
+                        text: 'Work in a team'
+                    },
+                ],
                 projects: {
                     photographs: [
                         'https://248006.selcdn.ru/LandGen/phone_3cad607aaf00d5271f48e33cedf271afda9318c0.jpg',
@@ -302,19 +354,35 @@ const initialState = {
                         text: 'You will increase your chances of getting a high-paying job, get advice from experienced teachers and learn how to develop as a fullstack programmer and work on complex and expensive projects'
                     }
                 ],
-                skills: {
-                    texts: [
-                        'Build websites in HTML and CSS',
-                        'Work with databases',
-                        'Work with API',
-                        'Programming in Python',
-                        'Build modern web applications',
-                        'Use the Git version control system',
-                        'Create interactive websites with JavaScript',
-                        'Apply the principles of OOP in practice',
-                        'Understand modern web frameworks for frontend and backend development'
-                    ]
-                },
+                skills: [
+                    {
+                        text: 'Build websites in HTML and CSS'
+                    },
+                    {
+                        text: 'Work with databases'
+                    },
+                    {
+                        text: 'Work with API'
+                    },
+                    {
+                        text: 'Programming in Python'
+                    },
+                    {
+                        text: 'Build modern web applications'
+                    },
+                    {
+                        text: 'Use the Git version control system'
+                    },
+                    {
+                        text: 'Create interactive websites with JavaScript'
+                    },
+                    {
+                        text: 'Apply the principles of OOP in practice'
+                    },
+                    {
+                        text: 'Understand modern web frameworks for frontend and backend development'
+                    }
+                ],
                 projects: {
                     photographs: [
                         'https://248006.selcdn.ru/LandGen/phone_3bfc250a3c5f8b047b88316a00b7ba67308e6387.png',
@@ -439,22 +507,28 @@ const initialState = {
                         text: 'Learn to program in JavaScript and PHP, you will create projects on the Laravel framework. You can change direction and become a popular web developer'
                     }
                 ],
-                skills: {
-                    titles: [
-                        'Build websites in HTML and CSS',
-                        'Program in JavaScript and PHP',
-                        'Work with JavaScript frameworks',
-                        'Building the backend with Node.js and Laravel',
-                        'Work in a team'
-                    ],
-                    texts: [
-                        'Which will adaptively adapt to the screen size and look equally cool on different devices: from small smartphones to TVs',
-                        'Master two popular languages at once - using JavaScript you will create interactive interfaces, and use PHP to program the server side of sites',
-                        'With the help of frameworks, you will easily assemble web applications from individual components, as from the details of a designer. You will have 3 frameworks to choose from: ReactFramework, Vue or Angular',
-                        'You will connect databases, work with the file system, template engines, forms, and process search queries. Get familiar with microservice architecture and learn how to build resilient applications',
-                        'Take part in a team internship and create your own project - an online store. You organize the work as in a real company - you will have sprints, calls with a team leader, and you will control versions in Git'
-                    ]
-                },
+                skills: [
+                    {
+                        title: 'Build websites in HTML and CSS',
+                        text: 'Which will adaptively adapt to the screen size and look equally cool on different devices: from small smartphones to TVs'
+                    },
+                    {
+                        title: 'Program in JavaScript and PHP',
+                        text: 'Master two popular languages at once - using JavaScript you will create interactive interfaces, and use PHP to program the server side of sites'
+                    },
+                    {
+                        title: 'Work with JavaScript frameworks',
+                        text: 'With the help of frameworks, you will easily assemble web applications from individual components, as from the details of a designer. You will have 3 frameworks to choose from: ReactFramework, Vue or Angular'
+                    },
+                    {
+                        title: 'Building the backend with Node.js and Laravel',
+                        text: 'You will connect databases, work with the file system, template engines, forms, and process search queries. Get familiar with microservice architecture and learn how to build resilient applications'
+                    },
+                    {
+                        title: 'Work in a team',
+                        text: 'Take part in a team internship and create your own project - an online store. You organize the work as in a real company - you will have sprints, calls with a team leader, and you will control versions in Git'
+                    }
+                ],
                 projects: {
                     photographs: [
                         'https://248006.selcdn.ru/LandGen/phone_e5d9722ff8a70e273d107d4854d25a7b34fd2e9a.png',
@@ -580,18 +654,32 @@ const initialState = {
                         text: 'You will be able to create projects in JavaScript and its frameworks, program in PHP and make up. Learn to work in a team and be a versatile developer'
                     }
                 ],
-                skills: {
-                    texts: [
-                        'Build quality and fast websites',
-                        'Apply the principles of OOP in practice',
-                        'Work in the Git version control system',
-                        'Responsive layout for mobile devices',
-                        'Develop pages and site modules in PHP',
-                        'Create admin panels with Bootstrap and Laravel',
-                        'Create interactive websites with JavaScript',
-                        'Work with technical documentation'
-                    ]
-                },
+                skills: [
+                    {
+                        text: 'Build quality and fast websites'
+                    },
+                    {
+                        text: 'Apply the principles of OOP in practice'
+                    },
+                    {
+                        text: 'Work in the Git version control system'
+                    },
+                    {
+                        text: 'Responsive layout for mobile devices'
+                    },
+                    {
+                        text: 'Develop pages and site modules in PHP'
+                    },
+                    {
+                        text: 'Create admin panels with Bootstrap and Laravel'
+                    },
+                    {
+                        text: 'Create interactive websites with JavaScript'
+                    },
+                    {
+                        text: 'Work with technical documentation'
+                    }
+                ],
                 projects: {
                     photographs: [
                         'https://248006.selcdn.ru/LandGen/phone_86f59dba870b5baf61887669f2536831f81b4cdd15819384567948.png',
@@ -669,6 +757,7 @@ const initialState = {
                         text: 'Improve your layout skills, learn how to work with frameworks and create desktop applications in JS. Become a sought-after web developer and understand how to develop in the profession'
                     }
                 ],
+                skills: commonItems.frontend.skills,
             }
         } as CourseI,
         frontend_pro: {
@@ -699,22 +788,7 @@ const initialState = {
                         text: 'Turn programming from a hobby into a profitable profession. Master advanced layout skills, learn JavaScript and frameworks in depth. Close gaps in knowledge and be able to apply for the position of a middle-developer in a large company'
                     }
                 ],
-                skills: {
-                    titles: [
-                        'Make websites right',
-                        'Programming in JavaScript',
-                        'Work with modern frameworks',
-                        'Work with Git',
-                        'Create beauty in a team'
-                    ],
-                    texts: [
-                        'Study in detail all the possibilities of modern CSS, learn how to layout adaptive sites that are convenient to use. Make projects more aesthetic with animations and transitions',
-                        'You will design the logic of the site. From a simple modal window to asynchronous data loading from the server and enterprise application programming. Learn one of the most popular programming languages without stress',
-                        'With the help of frameworks, you can develop complex web services faster, and they also consume browser resources more efficiently. You choose what to learn - ReactFramework or Vue',
-                        'You will save all stages of work on projects so that colleagues always have access to the code, and random errors can be fixed in two clicks',
-                        'Learn how to work with sprints and Scrum methodology. Under the guidance of a team leader, together with other students, write a web application'
-                    ]
-                },
+                skills: commonItems.frontend.skills,
                 content: {
                     title: {
                         text: 'You are waiting for 14 courses with different levels of complexity, videos and practice',
@@ -817,24 +891,32 @@ const initialState = {
                         text: 'You will learn Vue.js, ReactFramework.js or Angular and be able to create complex interactive interfaces. Get soft skills for professional development and understand where to go next'
                     }
                 ],
-                skills: {
-                    titles: [
-                        'Make up websites',
-                        'Work with frameworks',
-                        'Develop backend sites',
-                        'Work with databases',
-                        'Use Git',
-                        'Work with the network'
-                    ],
-                    texts: [
-                        "Get familiar with HTML and CSS, be able to create landing pages and multi-page responsive websites. Learn to find errors in someone else's layout and fix already finished code",
-                        'Learn ReactFramework.js, Vue.js or Angular and learn how to create dynamic interactive user interfaces',
-                        'You will learn the principles of object-oriented programming and will be able to develop sites with different functionality in JavaScript using Node.JS',
-                        'Learn the difference between MySQL, Redis and MongoDB. Learn to manage large amounts of data and get what you want with queries',
-                        'Learn how to work with a distributed version control system, be able to easily make or roll back changes and work on a project in a large team',
-                        'You will understand how client-server interaction works, learn how to work with the API and be able to set up frontend and backend communication within one project'
-                    ]
-                },
+                skills: [
+                    {
+                        title: 'Make up websites',
+                        text: "Get familiar with HTML and CSS, be able to create landing pages and multi-page responsive websites. Learn to find errors in someone else's layout and fix already finished code"
+                    },
+                    {
+                        title: 'Work with frameworks',
+                        text: 'Learn ReactFramework.js, Vue.js or Angular and learn how to create dynamic interactive user interfaces'
+                    },
+                    {
+                        title: 'Develop backend sites',
+                        text: 'You will learn the principles of object-oriented programming and will be able to develop sites with different functionality in JavaScript using Node.JS'
+                    },
+                    {
+                        title: 'Work with databases',
+                        text: 'Learn the difference between MySQL, Redis and MongoDB. Learn to manage large amounts of data and get what you want with queries'
+                    },
+                    {
+                        title: 'Use Git',
+                        text: 'Learn how to work with a distributed version control system, be able to easily make or roll back changes and work on a project in a large team'
+                    },
+                    {
+                        title: 'Work with the network',
+                        text: 'You will understand how client-server interaction works, learn how to work with the API and be able to set up frontend and backend communication within one project'
+                    },
+                ],
                 projects: {
                     photographs: [
                         'https://248006.selcdn.ru/LandGen/phone_fcd16c857d51e1e7ff159f2e3b19b591d800e4bd.png',
@@ -954,24 +1036,32 @@ const initialState = {
                         text: 'You structure your existing knowledge, and curators will help you deal with difficult-to-understand topics and recommend additional literature. Learn how to effectively solve everyday tasks for a PHP programmer'
                     }
                 ],
-                skills: {
-                    titles: [
-                        'Programming in PHP',
-                        'Understand the principles of OOP',
-                        'Work with the file system',
-                        'Find errors in code',
-                        'Work with databases',
-                        'Develop on Laravel'
-                    ],
-                    texts: [
-                        'You will go through the basics, without which it is impossible to grow into a cool PHP developer: learn how to work with variables, data types, conditions, loops, functions. Learn about recursion and scope',
-                        'Learn how to organize code into classes, control access to properties, and encapsulate methods. Make your applications more predictable and secure, and your code more readable',
-                        'Learn how to open files for reading or writing on the local system and over the Internet. Get familiar with XML, JSON formats',
-                        'Familiarize yourself with the Xdebug debugging tool, you can find and fix errors in the application',
-                        'Learn how to connect MySQL to a project. Learn how to write queries in SQL, get, add, delete and change information in the database',
-                        'Get acquainted with the principles of the framework, routing, set up interaction with the database, connect the Blade templating engine. Learn to write and test complex business logic'
-                    ]
-                },
+                skills: [
+                    {
+                        title: 'Programming in PHP',
+                        text: 'You will go through the basics, without which it is impossible to grow into a cool PHP developer: learn how to work with variables, data types, conditions, loops, functions. Learn about recursion and scope'
+                    },
+                    {
+                        title: 'Understand the principles of OOP',
+                        text: 'Learn how to organize code into classes, control access to properties, and encapsulate methods. Make your applications more predictable and secure, and your code more readable'
+                    },
+                    {
+                        title: 'Work with the file system',
+                        text: 'Learn how to open files for reading or writing on the local system and over the Internet. Get familiar with XML, JSON formats'
+                    },
+                    {
+                        title: 'Find errors in code',
+                        text: 'Familiarize yourself with the Xdebug debugging tool, you can find and fix errors in the application'
+                    },
+                    {
+                        title: 'Work with databases',
+                        text: 'Learn how to connect MySQL to a project. Learn how to write queries in SQL, get, add, delete and change information in the database'
+                    },
+                    {
+                        title: 'Develop on Laravel',
+                        text: 'Get acquainted with the principles of the framework, routing, set up interaction with the database, connect the Blade templating engine. Learn to write and test complex business logic'
+                    }
+                ],
                 content: {
                     title: {
                         text: 'Webinars and practice based on real cases are waiting for you',
@@ -1067,24 +1157,32 @@ const initialState = {
                         text: 'Get familiar with C++ syntax and learn the in-demand language. Write a microservice, make a game for UE4 and be able to apply for the position of a middle developer in a game dev or IT company'
                     }
                 ],
-                skills: {
-                    titles: [
-                        'Program in C++',
-                        'Work with databases',
-                        'Use Git',
-                        'Understand the principles of OOP',
-                        'Develop microservices',
-                        'Create games for UE4',
-                    ],
-                    texts: [
-                        'Learn the syntax, loops, conditions, and features of the language. Learn how to turn lines of code into working programs',
-                        'Learn the SQL language and be able to quickly get information using database queries',
-                        'Learn how to work with a distributed version control system and be able to make changes to the project together with the team',
-                        'Get familiar with the object-oriented programming paradigm and learn how to work with objects and classes',
-                        'You will learn how to create algorithms and will be able to develop complex programs from different independent components',
-                        'Learn how to use the C++ toolkit for game development. You will be able to create simple arkanoid and shooters for the Unreal Engine'
-                    ]
-                },
+                skills: [
+                    {
+                        title: 'Program in C++',
+                        text: 'Learn the syntax, loops, conditions, and features of the language. Learn how to turn lines of code into working programs'
+                    },
+                    {
+                        title: 'Work with databases',
+                        text: 'Learn the SQL language and be able to quickly get information using database queries'
+                    },
+                    {
+                        title: 'Use Git',
+                        text: 'Learn how to work with a distributed version control system and be able to make changes to the project together with the team'
+                    },
+                    {
+                        title: 'Understand the principles of OOP',
+                        text: 'Get familiar with the object-oriented programming paradigm and learn how to work with objects and classes'
+                    },
+                    {
+                        title: 'Develop microservices',
+                        text: 'You will learn how to create algorithms and will be able to develop complex programs from different independent components'
+                    },
+                    {
+                        title: 'Create games for UE4',
+                        text: 'Learn how to use the C++ toolkit for game development. You will be able to create simple arkanoids and shooters for the Unreal Engine'
+                    },
+                ],
                 projects: {
                     photographs: [
                         'https://248006.selcdn.ru/LandGen/phone_18ae41922e60ac6872cda3dd8bf35b9c724615f0.jpg',
@@ -1208,24 +1306,32 @@ const initialState = {
                         text: 'Learn about the features of developing and testing mobile software. Get system knowledge and portfolio, you can find a job as an Android developer and increase your income'
                     }
                 ],
-                skills: {
-                    titles: [
-                        'Programming in Kotlin',
-                        'Work in Android Studio environment',
-                        'Use Android SDK',
-                        'Create animations and custom screens',
-                        'Timer applications',
-                        'Design stable and fast applications'
-                    ],
-                    texts: [
-                        'Kotlin is the main programming language for Android applications. You will learn from scratch both the basic features of the language and advanced concepts such as multithreading',
-                        'Learn how to design screens and program application logic, learn how to release your projects on Google Play',
-                        "You will create dynamic applications that solve user problems. For example, learn how to access the device's camera or location",
-                        'Boring and static apps are a thing of the past. You will learn everything you need to design custom transitions between application states, and you will be able to code even the most unusual screen',
-                        "Who will use your app if it doesn't work? You will learn how to check the performance of projects under different conditions, use emulators and simulators",
-                        'Design patterns will help you speed up the development process, and you will also learn how to avoid memory leaks - this aspect is often forgotten by beginners'
-                    ]
-                },
+                skills: [
+                    {
+                        title: 'Programming in Kotlin',
+                        text: 'Kotlin is the main programming language for Android applications. You will learn from scratch both the basic features of the language and advanced concepts such as multithreading'
+                    },
+                    {
+                        title: 'Work in Android Studio environment',
+                        text: 'Learn how to design screens and program application logic, learn how to release your projects on Google Play'
+                    },
+                    {
+                        title: 'Use Android SDK',
+                        text: "You will create dynamic applications that solve user problems. For example, learn how to access the device's camera or location"
+                    },
+                    {
+                        title: 'Create animations and custom screens',
+                        text: 'Boring and static apps are a thing of the past. You will learn everything you need to design custom transitions between application states, and you will be able to code even the most unusual screen'
+                    },
+                    {
+                        title: 'Timer applications',
+                        text: "Who will use your app if it doesn't work? You will learn how to check the performance of projects under different conditions, use emulators and simulators"
+                    },
+                    {
+                        title: 'Design stable and fast applications',
+                        text: 'Design patterns will help you speed up the development process, and you will also learn how to avoid memory leaks - this aspect is often forgotten by beginners'
+                    },
+                ],
                 projects: {
                     photographs: [
                         'https://248006.selcdn.ru/LandGen/phone_e5eb8c8011201d0440fc0d3d9373ecfc5ec8d99d.jpg',
@@ -1347,24 +1453,32 @@ const initialState = {
                         text: 'Get to know the specifics of iOS development better, hone the necessary skills, find a profitable and interesting job'
                     }
                 ],
-                skills: {
-                    titles: [
-                        'Programming in Swift',
-                        'Design mobile applications',
-                        'Create interfaces for applications',
-                        'Make your applications efficient',
-                        'Release your projects in the App Store',
-                        'Work in a team'
-                    ],
-                    texts: [
-                        'Learn the language in which you will describe the entire logic of the applications. Step by step, you will understand the basics and understand how the language works from the inside',
-                        'Learn how to choose the right architecture for your application, get acquainted with the MVC, MVVM, SOLID models. Make your code readable and structured',
-                        'You will learn how to design both basic UI elements and custom buttons, screens, animations, and transitions',
-                        'Get familiar with multithreading and learn how to work effectively with the transfer of large amounts of data over the network',
-                        'Learn how to upload projects to AppStore Connect so that the whole world knows about your application',
-                        'In practice, you will understand how the software development process works in large companies. Present team final project'
-                    ]
-                },
+                skills: [
+                    {
+                        title: 'Programming in Swift',
+                        text: 'Learn the language in which you will describe the entire logic of the applications. Step by step, you will understand the basics and understand how the language works from the inside'
+                    },
+                    {
+                        title: 'Design mobile applications',
+                        text: 'Learn how to choose the right architecture for your application, get acquainted with the MVC, MVVM, SOLID models. Make your code readable and structured'
+                    },
+                    {
+                        title: 'Create interfaces for applications',
+                        text: 'You will learn how to design both basic UI elements and custom buttons, screens, animations, and transitions'
+                    },
+                    {
+                        title: 'Make your applications efficient',
+                        text: 'Get familiar with multithreading and learn how to work effectively with the transfer of large amounts of data over the network'
+                    },
+                    {
+                        title: 'Release your projects in the App Store',
+                        text: 'Learn how to upload projects to AppStore Connect so that the whole world knows about your application'
+                    },
+                    {
+                        title: 'Work in a team',
+                        text: 'In practice, you will understand how the software development process works in large companies. Present team final project'
+                    },
+                ],
                 projects: {
                     photographs: [
                         'https://248006.selcdn.ru/LandGen/phone_5de25d4ab979cc7edb0d1bd10b85fca230e6cf88.png',
@@ -1480,24 +1594,32 @@ const initialState = {
                         text: 'Learn about the features of designing, developing and testing mobile applications. Add projects to your portfolio, add skills to your resume, change jobs or move up the career ladder'
                     }
                 ],
-                skills: {
-                    titles: [
-                        'Create native apps',
-                        'Design interfaces and animations',
-                        'Set up the client-server part',
-                        'Timer applications',
-                        'Write clean and efficient code',
-                        'Work in a team'
-                    ],
-                    texts: [
-                        'You will not only learn the basics of Swift or Kotlin, but also dive into advanced topics: learn how to work with multithreading, get acquainted with algorithms, data structures, and learn how to code-review',
-                        'You will lay out basic UI elements and assemble them on the screen. Learn how to create custom interfaces, screen transitions and animations',
-                        'You will connect interfaces and program logic into a single whole, learn how to communicate with databases using SQL and make network queries. Connect third party services to your apps',
-                        'Learn how to use emulators and simulators to test your code. You will test projects in different conditions, for example, when the signal is lost',
-                        'Familiarize yourself with design patterns and coding rules. Make your programs readable, structured and easy to debug',
-                        'You will understand the requirements of designers and team leaders. In practice, you will understand how the application development process works, and defend a team thesis project'
-                    ]
-                },
+                skills: [
+                    {
+                        title: 'Create native apps',
+                        text: 'You will not only learn the basics of Swift or Kotlin, but also dive into advanced topics: learn how to work with multithreading, get acquainted with algorithms, data structures, and learn how to code-review'
+                    },
+                    {
+                        title: 'Design interfaces and animations',
+                        text: 'You will lay out basic UI elements and assemble them on the screen. Learn how to create custom interfaces, screen transitions and animations'
+                    },
+                    {
+                        title: 'Set up the client-server part',
+                        text: 'You will connect interfaces and program logic into a single whole, learn how to communicate with databases using SQL and make network queries. Connect third party services to your apps'
+                    },
+                    {
+                        title: 'Timer applications',
+                        text: 'Learn how to use emulators and simulators to test your code. You will test projects in different conditions, for example, when the signal is lost'
+                    },
+                    {
+                        title: 'Write clean and efficient code',
+                        text: 'Familiarize yourself with design patterns and coding rules. Make your programs readable, structured and easy to debug'
+                    },
+                    {
+                        title: 'Work in a team',
+                        text: 'You will understand the requirements of designers and team leaders. In practice, you will understand how the application development process works, and defend a team thesis project'
+                    }
+                ],
                 projects: {
                     titles: [
                         'Profession iOS developer. news application',
@@ -1589,18 +1711,32 @@ const initialState = {
                         text: 'Learn about the features of developing and testing mobile applications. Master one of the native programming languages Swift or Kotlin. Get to know Dart, the Flutter framework, and write cross-platform portfolio apps. After the course, you will be able to change direction and start a career in mobile development'
                     }
                 ],
-                skills: {
-                    texts: [
-                        'Write application blocks in native language',
-                        'Build apps with Flutter and Dart',
-                        'Use ready-made functions from libraries',
-                        'Customize the interaction of applications with the backend',
-                        'Interact with UX Design',
-                        'Work in the Git version control system',
-                        'Work according to Scrum methodology for sprints',
-                        'Timer mobile applications'
-                    ]
-                },
+                skills: [
+                    {
+                        title: 'Write application blocks in native language',
+                        text: 'Learn Kotlin for Android development or Swift for iOS. Be able to write clean code for every platform'
+                    },
+                    {
+                        title: 'Build apps with Flutter and Dart',
+                        text: 'Understand how to work with widgets, forms and media. Learn to use services and plugins. Can write multi-platform applications'
+                    },
+                    {
+                        title: 'Use ready-made functions from libraries',
+                        text: 'You will be able to assemble applications from individual components and speed up the development process'
+                    },
+                    {
+                        title: 'Customize the interaction of applications with the backend',
+                        text: 'Learn how to connect databases. Learn to work with the file system, template engines, forms. Can handle incoming requests'
+                    },
+                    {
+                        title: 'Interact with UX design',
+                        text: 'Master Figma. You will be able to customize user interfaces and develop design for application pages'
+                    },
+                    {
+                        title: 'Test applications',
+                        text: 'Learn how to find errors using the built-in tools of Android Studio and XCode. You can remove data about the operation of the application'
+                    },
+                ],
                 content: {
                     title: {
                         text: 'You are waiting for a video with theory and practice based on real cases',
@@ -1700,16 +1836,26 @@ const initialState = {
                         text: 'If you are attracted by modern technologies and high salaries in the field of IT, then this course is definitely for you. You will learn how to write code, learn that the legend that a programmer must be perfect in mathematics is a fiction, begin to think critically and be able to code in the most popular language in the world'
                     }
                 ],
-                skills: {
-                    texts: [
-                        'Administration and deployment of pilot works',
-                        'Knowledge of OOP principles',
-                        'Java web application development',
-                        'Development of web applications on the Spring framework',
-                        'Working with the Git version control system',
-                        'Relational database query writing skills'
-                    ]
-                },
+                skills: [
+                    {
+                        text: 'Administration and deployment of pilot works'
+                    },
+                    {
+                        text: 'Knowledge of OOP principles'
+                    },
+                    {
+                        text: 'Java web application development'
+                    },
+                    {
+                        text: 'Development of web applications on the Spring framework'
+                    },
+                    {
+                        text: 'Working with the Git version control system'
+                    },
+                    {
+                        text: 'Relational database query writing skills'
+                    },
+                ],
                 content: {
                     title: {
                         text: 'Methodologists-practitioners prepared 26 basic, 9 additional and 22 bonus thematic modules based on the requirements of employers. Without "water", only important information',
@@ -1847,24 +1993,32 @@ const initialState = {
                         text: 'Learn how to structure and debug your code, work with frameworks and databases, improve your level and be able to take on complex expensive projects in Java'
                     }
                 ],
-                skills: {
-                    titles: [
-                        'Create applications in Java',
-                        'Understand algorithms and data structures',
-                        'Use Git',
-                        'Work with databases',
-                        'Optimize code',
-                        'Use Spring'
-                    ],
-                    texts: [
-                        'You will understand how to turn lines of code into a working program, master object-oriented programming and be able to develop applications with different functionality',
-                        'Learn how to efficiently solve typical problems using well-known algorithms and existing data structures in Java',
-                        'Learn how to work with a distributed version control system and be able to easily make or roll back changes in different versions of the same project',
-                        'Learn the difference between MySQL, Redis and MongoDB, get familiar with Hadoop and learn how to manage large amounts of data',
-                        'Learn how to debug and optimize your code, and be able to create programs with high performance',
-                        'Explore the capabilities of the Spring framework and learn how to build web applications with it'
-                    ]
-                },
+                skills: [
+                    {
+                        title: 'Create applications in Java',
+                        text: 'You will understand how to turn lines of code into a working program, master object-oriented programming and be able to develop applications with different functionality'
+                    },
+                    {
+                        title: 'Understand algorithms and data structures',
+                        text: 'Learn how to efficiently solve typical problems using well-known algorithms and existing data structures in Java'
+                    },
+                    {
+                        title: 'Use Git',
+                        text: 'Learn how to work with a distributed version control system and be able to easily make or roll back changes in different versions of the same project'
+                    },
+                    {
+                        title: 'Work with databases',
+                        text: 'Learn the difference between MySQL, Redis and MongoDB, get familiar with Hadoop and learn how to manage large amounts of data'
+                    },
+                    {
+                        title: 'Optimize code',
+                        text: 'Learn how to debug and optimize your code, and be able to create programs with high performance'
+                    },
+                    {
+                        title: 'Use Spring',
+                        text: 'Explore the capabilities of the Spring framework and learn how to build web applications with it'
+                    }
+                ],
                 content: {
                     title: {
                         text: 'You are waiting for 3 blocks with different levels of difficulty, videos from experts and practical tasks',
@@ -1992,7 +2146,36 @@ const initialState = {
                             text: 'cyber security specialist salary'
                         }
                     ],
-                }
+                },
+                skills: [
+                    {
+                        text: 'Understand system and network administration'
+                    },
+                    {
+                        text: 'Find and exploit OS and web application vulnerabilities'
+                    },
+                    {
+                        text: 'Analyze application source code'
+                    },
+                    {
+                        text: 'Identify potential cyber threats to systems'
+                    },
+                    {
+                        text: 'Recover systems after a cyberattack'
+                    },
+                    {
+                        text: 'Work with security and access policies'
+                    },
+                    {
+                        text: 'Capture and analyze network traffic'
+                    },
+                    {
+                        text: 'Automate routine cyber security processes'
+                    },
+                    {
+                        text: 'Work with intrusion detection systems'
+                    },
+                ]
             }
         } as CourseI,
         devops: {
@@ -2028,6 +2211,23 @@ const initialState = {
                         subtitle: 'Professionals who need DevOps skills',
                         text: 'You will understand the intricacies of DevOps practices from scratch and will be able to expand your competencies at work and increase your value as a specialist'
                     }
+                ],
+                skills: [
+                    {
+                        title: 'Administer linux',
+                        text: 'Learn how this operating system works and get to know the Linux terminal'
+                    },
+                    {
+                        title: 'Work with databases',
+                        text: 'Get familiar with SQL and MySQL databases. Learn to manage large volumes of information and quickly get what you need using queries'
+                    },
+                    commonItems.skills.devopsDocker,
+                    {
+                        title: 'Apply CI/CD principles',
+                        text: 'Understand what problems continuous integration and delivery solves. Using gitlab-ci as an example, learn how to set up the layout of services in development and testing environments'
+                    },
+                    commonItems.skills.devopsInfrastructure,
+                    commonItems.skills.devopsMonitoring
                 ],
             }
         } as CourseI,
@@ -2079,6 +2279,23 @@ const initialState = {
                         text: 'You will understand the intricacies of the DevOps methodology from scratch, expand your working competencies and increase your value as a specialist'
                     }
                 ],
+                skills: [
+                    commonItems.skills.devopsDocker,
+                    commonItems.skills.devopsInfrastructure,
+                    {
+                        title: 'Work with version control systems',
+                        text: 'Learn Git to work effectively with your codebase. Learn to apply the principles of CI / CD, learn how to set up the layout of services in development and testing environments'
+                    },
+                    {
+                        title: 'Automate processes',
+                        text: 'Get to know Ansible: learn how to set up servers and deploy applications at the click of a button'
+                    },
+                    {
+                        title: 'Use kubernetes (k8s)',
+                        text: 'You will manage loads between containers, automate deployment, and ensure data privacy'
+                    },
+                    commonItems.skills.devopsMonitoring
+                ]
             }
         } as CourseI
     }

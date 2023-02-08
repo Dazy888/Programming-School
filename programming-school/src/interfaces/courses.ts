@@ -30,8 +30,8 @@ export interface ForWhoI {
 }
 
 export interface SkillsI {
-    titles: Array<string>
-    texts: Array<string>
+    title?: string
+    text: string
 }
 
 export interface ProjectsI {
@@ -77,7 +77,7 @@ export interface CourseI {
         header: HeaderI
         market: MarketI
         for_who: ForWhoI[]
-        skills: SkillsI
+        skills: SkillsI[]
         projects: ProjectsI
         content: ContentI
         reviews: ReviewsI

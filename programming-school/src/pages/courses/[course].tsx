@@ -14,6 +14,7 @@ import Image from "next/image";
 import {FeaturesItem} from "@/components/courses/course/FeaturesItem";
 import {MarketItem} from "@/components/courses/course/MarketItem";
 import {ForWhoItem} from "@/components/courses/course/ForWhoItem";
+import {SkillsItem} from "@/components/courses/course/SkillsItem";
 
 const Course = () => {
     const dispatch = useDispatch()
@@ -23,6 +24,7 @@ const Course = () => {
     const course = useSelector(getCoursePage)
 
     const stylesAttr = {'course' : course.preview.path}
+    const gridColumns = {'columns': course.course.header.features.length}
 
     return(
         <NavigationLayout>
@@ -40,7 +42,7 @@ const Course = () => {
                             </div>
                             <img alt={'Logo'} src={course.course.logoSrc}/>
                         </div>
-                        <div className={`${styles['header__features']} flex justify-between mt-20 mx-auto w-11/12`}>
+                        <div {...gridColumns} className={`${styles['header__features']} grid gap-9 mt-20 mx-auto w-fit`}>
                             {...course.course.header.features.map((feature, key) => <FeaturesItem styleAttr={stylesAttr} key={key} title={feature.title} text={feature.text} />)}
                         </div>
                     </section>
@@ -53,15 +55,23 @@ const Course = () => {
                     <section id={styles['market']} className={'mb-32 text-white'}>
                         <TitleText text={'About the profession'}/>
                         <p className={'text-2xl max-w-5xl my-20'}>{course.course.market.titleText}</p>
-                        <div className={styles['market__list']}>
+                        <div className={`${styles['market__list']} grid gap-12 grid-cols-2`}>
                             {...course.course.market.list.map((item, key) => <MarketItem key={key} title={item.title} text={item.text}/>)}
                         </div>
                     </section>
                     {course.course.for_who &&
                         <section id={styles['for-who']} className={'mb-32 text-white'}>
                             <TitleText text={'Who is this course for'}/>
-                            <div className={`${styles['for-who__content']} mt-14`}>
-                                {...course.course.for_who.map((item, key) => <ForWhoItem imgSrc={item.imgSrc} subtitle={item.subtitle} text={item.text}/>)}
+                            <div className={`${styles['for-who__content']} mt-14 grid gap-12 grid-cols-3`}>
+                                {...course.course.for_who.map((item, key) => <ForWhoItem key={key} imgSrc={item.imgSrc} subtitle={item.subtitle} text={item.text}/>)}
+                            </div>
+                        </section>
+                    }
+                    {course.course.skills &&
+                        <section id={styles['skills']} className={'text-white'}>
+                            <TitleText text={'What will you learn'}/>
+                            <div {...stylesAttr} className={`${styles['skills__content']} mt-16 grid gap-12 grid-cols-3`}>
+                                {...course.course.skills.map((item, key) => <SkillsItem key={key} title={item?.title} text={item.text}/>)}
                             </div>
                         </section>
                     }
