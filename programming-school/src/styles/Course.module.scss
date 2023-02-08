@@ -91,7 +91,7 @@
 
       .header__features {
         div {
-          max-width: 300px;
+          max-width: 280px;
           border: 3px solid #60b3ff;
 
           &[course=fullstack-python] {
@@ -194,6 +194,35 @@
         }
       }
     }
+
+    #for-who {
+      .for-who__content {
+        display: grid;
+        grid-gap: 50px;
+        grid-template-areas:  'first second third fourth';
+
+        div {
+          max-width: 380px;
+
+          &:nth-child(1) {
+            grid-area: first;
+          }
+
+          &:nth-child(2) {
+            grid-area: second;
+          }
+
+          &:nth-child(3) {
+            grid-area: third
+          }
+
+          img {
+            width: 164px;
+            height: 164px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -243,6 +272,13 @@
           i {
             font-size: 7px;
           }
+        }
+      }
+
+      #for-who {
+        .for-who__content {
+          grid-template-areas:  'first second'
+                                'third fourth';
         }
       }
     }
@@ -343,6 +379,20 @@
                                 'fourth';
         }
       }
+
+      #for-who {
+        h1 {
+          font-size: 38px;
+        }
+
+        .for-who__content {
+          grid-template-areas:  'first'
+                                'second'
+                                'third'
+                                'fourth';
+          grid-gap: 70px;
+        }
+      }
     }
   }
 }
@@ -398,6 +448,29 @@
                                 'second'
                                 'third'
                                 'fourth';
+        }
+      }
+
+      #for-who {
+        h1 {
+          font-size: 36px;
+        }
+
+        .for-who__content {
+          div {
+            h3 {
+              font-size: 18px;
+            }
+
+            p {
+              font-size: 15px;
+            }
+
+            img {
+              width: 130px;
+              height: 130px;
+            }
+          }
         }
       }
     }

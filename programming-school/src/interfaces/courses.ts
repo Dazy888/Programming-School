@@ -7,7 +7,7 @@ export interface PreviewI {
     path: string
 }
 
-interface ListItemTextI {
+export interface ListItemTextI {
     title: string
     text: string
 }
@@ -24,9 +24,9 @@ interface MarketI {
 }
 
 export interface ForWhoI {
-    photographs: Array<string>,
-    texts: Array<string>,
-    titles: Array<string>
+    imgSrc: string
+    subtitle: string
+    text: string,
 }
 
 export interface SkillsI {
@@ -76,7 +76,7 @@ export interface CourseI {
         logoSrc: string
         header: HeaderI
         market: MarketI
-        for_who: ForWhoI
+        for_who: ForWhoI[]
         skills: SkillsI
         projects: ProjectsI
         content: ContentI

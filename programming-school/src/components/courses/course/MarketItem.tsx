@@ -1,11 +1,7 @@
 import React from "react"
+import { ListItemTextI } from "@/interfaces/courses"
 
-interface Props {
-    title: string
-    text: string
-}
-
-const MarketItemComponent: React.FC<Props> = ({ text, title }) => {
+const MarketItemComponent: React.FC<ListItemTextI> = ({ text, title }) => {
     return(
         <div>
             <h3 className={'text-2xl font-medium'}>{title}</h3>

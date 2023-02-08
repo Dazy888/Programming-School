@@ -13,6 +13,7 @@ import {TitleText} from "@/components/common/TitleText";
 import Image from "next/image";
 import {FeaturesItem} from "@/components/courses/course/FeaturesItem";
 import {MarketItem} from "@/components/courses/course/MarketItem";
+import {ForWhoItem} from "@/components/courses/course/ForWhoItem";
 
 const Course = () => {
     const dispatch = useDispatch()
@@ -56,6 +57,14 @@ const Course = () => {
                             {...course.course.market.list.map((item, key) => <MarketItem key={key} title={item.title} text={item.text}/>)}
                         </div>
                     </section>
+                    {course.course.for_who &&
+                        <section id={styles['for-who']} className={'mb-32 text-white'}>
+                            <TitleText text={'Who is this course for'}/>
+                            <div className={`${styles['for-who__content']} mt-14`}>
+                                {...course.course.for_who.map((item, key) => <ForWhoItem imgSrc={item.imgSrc} subtitle={item.subtitle} text={item.text}/>)}
+                            </div>
+                        </section>
+                    }
                 </div>
             </div>
         </NavigationLayout>

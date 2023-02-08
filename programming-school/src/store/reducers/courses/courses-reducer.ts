@@ -96,7 +96,7 @@ const commonItems = {
                 text: 'in the list of the most in-demand IT professions in 2019, according to Lucky Hunter'
             },
             devopsVacancies: {
-                title: 'over 4,000 vacancies',
+                title: 'over 4 000 vacancies',
                 text: 'open to DevOps engineers'
             },
             devopsSalary: {
@@ -159,17 +159,18 @@ const initialState = {
                       }
                   ]
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_471f5ca3cdee26f3899e1a97f1b69a32c2053785.png',
-                        'https://248006.selcdn.ru/LandGen/phone_4d557d9c97e5a6e31a1a72d88cda2d659b21abe1.png'
-                    ],
-                    texts: [
-                        "Those who have just decided to become a programmer, but have not chosen in which area they are going to work. Python is a universal language",
-                        'For those who are already learning Python on their own or from textbooks. But there is no one to ask a question and ask for help'
-                    ],
-                    titles: ['Newbies in code', 'Beginning developers']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/python/1.png',
+                        subtitle: 'Newbies in code',
+                        text: 'Those who have just decided to become a programmer, but have not chosen in which area they are going to work. Python is a universal language'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/python/2.png',
+                        subtitle: 'Beginning developers',
+                        text: 'For those who are already learning Python on their own or from textbooks. But there is no one to ask a question and ask for help'
+                    }
+                ],
                 skills: {
                     texts: [
                         'Create simple and complex modular programs: from console scripts to chat bots',
@@ -284,19 +285,23 @@ const initialState = {
                         },
                     ]
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_a5641cfe6d40558046dc9d3de8bdc54a07c0a9fc.png',
-                        'https://248006.selcdn.ru/LandGen/phone_8183cf0898f74c94cd37425aba13d98e180b5e2a.png',
-                        'https://248006.selcdn.ru/LandGen/phone_b7d3c38e3dc9f8fb00449084468c15465fbff35c.png'
-                    ],
-                    texts: [
-                        "You will master a sought-after profession from scratch, learn how to program in Python and JavaScript, create websites and work with databases. You will be able to write the backend and frontend part yourself",
-                        'If you already have basic knowledge of frontend or backend, then the training will help you master the full cycle of product development. You will become a universal specialist and increase your income',
-                        'You will increase your chances of getting a high-paying job, get advice from experienced teachers and learn how to develop as a fullstack programmer and work on complex and expensive projects'
-                    ],
-                    titles: ['Beginners in programming', 'Beginning developers', 'Experienced programmers']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/fullstack-python/1.png',
+                        subtitle: 'Beginners in programming',
+                        text: 'You will master a sought-after profession from scratch, learn how to program in Python and JavaScript, create websites and work with databases. You will be able to write the backend and frontend part yourself'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/fullstack-python/2.png',
+                        subtitle: 'Beginning developers',
+                        text: 'If you already have basic knowledge of frontend or backend, then the training will help you master the full cycle of product development. You will become a universal specialist and increase your income'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/fullstack-python/3.png',
+                        subtitle: 'Experienced programmers',
+                        text: 'You will increase your chances of getting a high-paying job, get advice from experienced teachers and learn how to develop as a fullstack programmer and work on complex and expensive projects'
+                    }
+                ],
                 skills: {
                     texts: [
                         'Build websites in HTML and CSS',
@@ -417,19 +422,23 @@ const initialState = {
                         }
                     ]
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_229c6152337eeea798e1bf5b4a10ad9e9f49bb53.png',
-                        'https://248006.selcdn.ru/LandGen/phone_7f3b1a0a5d3c4980bb91dd4dc88c4810fbd342ba.png',
-                        'https://248006.selcdn.ru/LandGen/phone_0627a8ae28c8e2540cd2c941653d2ee50b135da9.png'
-                    ],
-                    texts: [
-                        'Learn the basics of JavaScript and PHP programming from scratch. Learn how to design websites in HTML and CSS. Create your first portfolio projects',
-                        'Level up with the most popular programming languages Learn Vue, ReactFramework or Angular frameworks and expand your coding skills',
-                        'Learn to program in JavaScript and PHP, you will create projects on the Laravel framework. You can change direction and become a popular web developer'
-                    ],
-                    titles: ['Beginners in web development', 'Beginning developers', 'IT specialists']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/web/1.png',
+                        subtitle: 'Beginners in web development',
+                        text: 'Learn the basics of JavaScript and PHP programming from scratch. Learn how to design websites in HTML and CSS. Create your first portfolio projects'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/web/2.png',
+                        subtitle: 'Beginning developers',
+                        text: 'Level up with the most popular programming languages Learn Vue, ReactFramework or Angular frameworks and expand your coding skills'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/web/3.png',
+                        subtitle: 'IT specialists',
+                        text: 'Learn to program in JavaScript and PHP, you will create projects on the Laravel framework. You can change direction and become a popular web developer'
+                    }
+                ],
                 skills: {
                     titles: [
                         'Build websites in HTML and CSS',
@@ -554,19 +563,23 @@ const initialState = {
                         }
                     ]
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_add8ef2702c18d96050f6a29be5ec4e12863862715816824596821.png',
-                        'https://248006.selcdn.ru/LandGen/phone_5cbc8afcd5fd843306b0738e58153dc108c6874c15816824765285.png',
-                        'https://248006.selcdn.ru/LandGen/phone_ea2850648ba9f13c89f1fd6a30086b3aacd8691d15816824940198.png'
-                    ],
-                    texts: [
-                        "Learn the basic principles of programming and overcome the first difficulties with a personal mentor",
-                        'Master backend, frontend and other stacks. Learn PHP and learn how to work with application programming interface',
-                        'You will be able to create projects in JavaScript and its frameworks, program in PHP and make up. Learn to work in a team and be a versatile developer'
-                    ],
-                    titles: ['For those new to web development', 'Beginning developers', 'IT specialists']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/fullstack-php/1.png',
+                        subtitle: 'For those new to web development',
+                        text: 'Learn the basic principles of programming and overcome the first difficulties with a personal mentor'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/fullstack-php/2.png',
+                        subtitle: 'Beginning developers',
+                        text: 'Master backend, frontend and other stacks. Learn PHP and learn how to work with application programming interface'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/fullstack-php/3.png',
+                        subtitle: 'IT specialists',
+                        text: 'You will be able to create projects in JavaScript and its frameworks, program in PHP and make up. Learn to work in a team and be a versatile developer'
+                    }
+                ],
                 skills: {
                     texts: [
                         'Build quality and fast websites',
@@ -643,7 +656,19 @@ const initialState = {
             course: {
                 logoSrc: '/courses/course/logos/frontend.png',
                 header: commonItems.frontend.header,
-                market: commonItems.frontend.market
+                market: commonItems.frontend.market,
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/frontend/1.png',
+                        subtitle: 'For absolute beginners',
+                        text: 'You will go from a person far from IT to a confident web developer with teamwork skills. You can start a career in a promising IT studio'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/frontend/2.png',
+                        subtitle: 'Beginning programmers',
+                        text: 'Improve your layout skills, learn how to work with frameworks and create desktop applications in JS. Become a sought-after web developer and understand how to develop in the profession'
+                    }
+                ],
             }
         } as CourseI,
         frontend_pro: {
@@ -657,19 +682,23 @@ const initialState = {
                 logoSrc: '/courses/course/logos/frontend-pro.png',
                 header: commonItems.frontend.header,
                 market: commonItems.frontend.market,
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_8324597e2efaf50fd1f52ad8ae50538cf7f0cc7b15821163457558.png',
-                        'https://248006.selcdn.ru/LandGen/phone_f6137b382419ffb2e58e12fbba50a78ea600e86e15821163808598.png',
-                        'https://248006.selcdn.ru/LandGen/phone_227ecf445249bb751716bda2dae6c03be894783515821163999428.png'
-                    ],
-                    texts: [
-                        "You don't need to be good at math or have programming experience. Step by step you will learn how to develop websites. You will start with simple landing pages, and by the end of the training you will know frameworks, create complex enterprise services and work in a team",
-                        'Improve your layout skills, learn how to work with frameworks and create desktop applications in JS. Become a sought-after web developer and understand how to develop in the profession',
-                        'Turn programming from a hobby into a profitable profession. Master advanced layout skills, learn JavaScript and frameworks in depth. Close gaps in knowledge and be able to apply for the position of a middle-developer in a large company'
-                    ],
-                    titles: ['For beginners', 'Beginning programmers', 'Freelancers with no experience in IT']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/frontend-pro/1.png',
+                        subtitle: 'For beginners',
+                        text: "You don't need to be good at math or have programming experience. Step by step you will learn how to develop websites. You will start with simple landing pages, and by the end of the training you will know frameworks, create complex enterprise services and work in a team"
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/frontend-pro/2.png',
+                        subtitle: 'Beginning programmers',
+                        text: 'Improve your layout skills, learn how to work with frameworks and create desktop applications in JS. Become a sought-after web developer and understand how to develop in the profession'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/frontend-pro/3.png',
+                        subtitle: 'Freelancers with no experience in IT',
+                        text: 'Turn programming from a hobby into a profitable profession. Master advanced layout skills, learn JavaScript and frameworks in depth. Close gaps in knowledge and be able to apply for the position of a middle-developer in a large company'
+                    }
+                ],
                 skills: {
                     titles: [
                         'Make websites right',
@@ -771,19 +800,23 @@ const initialState = {
                         }
                     ]
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_93b2747395829db9f89d3c9073d02c35a68e1df2.png',
-                        'https://248006.selcdn.ru/LandGen/phone_c22d4893414c49389d082537f881ae623775de78.png',
-                        'https://248006.selcdn.ru/LandGen/phone_6af395b8a94ab67c78231fa5af4f5faac40babae.png'
-                    ],
-                    texts: [
-                        "You will learn how to make up, code in JavaScript and develop full-fledged websites from scratch. Master the full cycle of creating web projects and be able to get a job in an IT company",
-                        'You will get acquainted with Node.js and frameworks and deepen your knowledge. You can move to the position of a fullstack developer in a web studio or create turnkey websites on freelance',
-                        'You will learn Vue.js, ReactFramework.js or Angular and be able to create complex interactive interfaces. Get soft skills for professional development and understand where to go next'
-                    ],
-                    titles: ['Those who want to start a career as a programmer', 'Beginning developers', 'Experienced professionals']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/fullstack-js/1.png',
+                        subtitle: 'Those who want to start a career as a programmer',
+                        text: 'You will learn how to make up, code in JavaScript and develop full-fledged websites from scratch. Master the full cycle of creating web projects and be able to get a job in an IT company'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/fullstack-js/2.png',
+                        subtitle: 'Beginning developers',
+                        text: 'You will get acquainted with Node.js and frameworks and deepen your knowledge. You can move to the position of a fullstack developer in a web studio or create turnkey websites on freelance'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/fullstack-js/3.png',
+                        subtitle: 'Experienced professionals',
+                        text: 'You will learn Vue.js, ReactFramework.js or Angular and be able to create complex interactive interfaces. Get soft skills for professional development and understand where to go next'
+                    }
+                ],
                 skills: {
                     titles: [
                         'Make up websites',
@@ -909,17 +942,18 @@ const initialState = {
                         }
                     ]
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_b4782595d4ffad7b2ecfc8400c85a592e03025e5.png',
-                        'https://248006.selcdn.ru/LandGen/phone_8cd6e5c42746f20a62e91b241dd16aaa8740d94e.png'
-                    ],
-                    texts: [
-                        "Learn the PHP programming language from scratch, get help and advice from experienced speakers, and practice on real problems. Write the first projects for the portfolio and work in a team",
-                        'You structure your existing knowledge, and curators will help you deal with difficult-to-understand topics and recommend additional literature. Learn how to effectively solve everyday tasks for a PHP programmer'
-                    ],
-                    titles: ['For those who want to learn how to program', 'Beginning developers']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/php-pro/1.png',
+                        subtitle: 'For those who want to learn how to program',
+                        text: 'Learn the PHP programming language from scratch, get help and advice from experienced speakers, and practice on real problems. Write the first projects for the portfolio and work in a team'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/php-pro/2.png',
+                        subtitle: 'Beginning developers',
+                        text: 'You structure your existing knowledge, and curators will help you deal with difficult-to-understand topics and recommend additional literature. Learn how to effectively solve everyday tasks for a PHP programmer'
+                    }
+                ],
                 skills: {
                     titles: [
                         'Programming in PHP',
@@ -1021,17 +1055,18 @@ const initialState = {
                         }
                     ]
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_73434525171cc8231ff2b24ddfa2c05fa84f74dc15789991354209.png',
-                        'https://248006.selcdn.ru/LandGen/phone_3e46222e2f153a264c5c16f81c19e5e68a28a02f1578999111297.png'
-                    ],
-                    texts: [
-                        'Learn the basic principles of C++ programming. Write your first programs, build a portfolio and start a career in the direction you like',
-                        'Get familiar with C++ syntax and learn the in-demand language. Write a microservice, make a game for UE4 and be able to apply for the position of a middle developer in a game dev or IT company',
-                    ],
-                    titles: ['For those who want to become a programmer', 'Developers in other languages']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/c/1.png',
+                        subtitle: 'For those who want to become a programmer',
+                        text: 'Learn the basic principles of C++ programming. Write your first programs, build a portfolio and start a career in the direction you like'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/c/2.png',
+                        subtitle: 'Developers in other languages',
+                        text: 'Get familiar with C++ syntax and learn the in-demand language. Write a microservice, make a game for UE4 and be able to apply for the position of a middle developer in a game dev or IT company'
+                    }
+                ],
                 skills: {
                     titles: [
                         'Program in C++',
@@ -1156,19 +1191,23 @@ const initialState = {
                         }
                     ],
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_21e32f33213998f2b4586418fa6658202d2fecf3.png',
-                        'https://248006.selcdn.ru/LandGen/phone_7246954690f98ed86dcd2a2aeb73599726eeef4a.png',
-                        'https://248006.selcdn.ru/LandGen/phone_ea200f53b190b7e75a1d4ca5cb054c4461588d9a.png'
-                    ],
-                    texts: [
-                        'You will go from a beginner to a confident Android developer without stress: learn to code in Kotlin from scratch, write your first applications for your portfolio and be able to get a job right after the course',
-                        'In practice, solidify the basics and delve into more complex topics. Learn how to create and test large applications according to technical specifications from a real customer',
-                        'Learn about the features of developing and testing mobile software. Get system knowledge and portfolio, you can find a job as an Android developer and increase your income'
-                    ],
-                    titles: ['Beginners in programming', 'Beginning developers', 'Programmers who want to change direction']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/android/1.png',
+                        subtitle: 'Beginners in programming',
+                        text: 'You will go from a beginner to a confident Android developer without stress: learn to code in Kotlin from scratch, write your first applications for your portfolio and be able to get a job right after the course'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/android/2.png',
+                        subtitle: 'Beginning developers',
+                        text: 'In practice, solidify the basics and delve into more complex topics. Learn how to create and test large applications according to technical specifications from a real customer'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/android/3.png',
+                        subtitle: 'Programmers who want to change direction',
+                        text: 'Learn about the features of developing and testing mobile software. Get system knowledge and portfolio, you can find a job as an Android developer and increase your income'
+                    }
+                ],
                 skills: {
                     titles: [
                         'Programming in Kotlin',
@@ -1291,19 +1330,23 @@ const initialState = {
                         }
                     ],
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_27077d4ce08bed215d90e1d22ef764aea176ff9d.png',
-                        'https://248006.selcdn.ru/LandGen/phone_b8dff30ace11f525a49f10951c610d8e1f7c3613.png',
-                        'https://248006.selcdn.ru/LandGen/phone_3162715cbab5423a858090e2a5b5e1521ddc289c.png'
-                    ],
-                    texts: [
-                        "The course will allow you to master the profession of an iOS developer from scratch. You will write your first portfolio applications, and after graduation we will help you with employment",
-                        'You will receive the systematic knowledge that is necessary for a successful career as an iOS developer',
-                        'Get to know the specifics of iOS development better, hone the necessary skills, find a profitable and interesting job'
-                    ],
-                    titles: ['Beginners in programming', 'Beginning developers', 'Programmers who want to change specialization']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/ios/1.png',
+                        subtitle: 'Beginners in programming',
+                        text: 'The course will allow you to master the profession of an iOS developer from scratch. You will write your first portfolio applications, and after graduation we will help you with employment'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/ios/2.png',
+                        subtitle: 'Beginning developers',
+                        text: 'You will receive the systematic knowledge that is necessary for a successful career as an iOS developer'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/ios/3.png',
+                        subtitle: 'Programmers who want to change specialization',
+                        text: 'Get to know the specifics of iOS development better, hone the necessary skills, find a profitable and interesting job'
+                    }
+                ],
                 skills: {
                     titles: [
                         'Programming in Swift',
@@ -1420,19 +1463,23 @@ const initialState = {
                         }
                     ],
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_24a404e808fbfd0cf8466bfcb32d18f4502e5d8d.png',
-                        'https://248006.selcdn.ru/LandGen/phone_68b506bc505531a0702e65e3475a69c37a462f65.png',
-                        'https://248006.selcdn.ru/LandGen/phone_2e532061dfe18df2dd8f19041d43b9d8e085f7ef.png'
-                    ],
-                    texts: [
-                        "Master programming in Swift or Kotlin, learn how to design interfaces and test applications. Get a sought-after profession: you will work in a studio or in a product team",
-                        'Fix the basics and go through more advanced topics. Learn how to create and test mobile applications according to technical specifications from a real customer',
-                        'Learn about the features of designing, developing and testing mobile applications. Add projects to your portfolio, add skills to your resume, change jobs or move up the career ladder'
-                    ],
-                    titles: ['Beginners in programming', 'Beginning mobile developers', 'Developers from other fields']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/mobile/1.png',
+                        subtitle: 'Beginners in programming',
+                        text: 'Master programming in Swift or Kotlin, learn how to design interfaces and test applications. Get a sought-after profession: you will work in a studio or in a product team'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/mobile/2.png',
+                        subtitle: 'Beginning mobile developers',
+                        text: 'Fix the basics and go through more advanced topics. Learn how to create and test mobile applications according to technical specifications from a real customer'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/mobile/3.png',
+                        subtitle: 'Developers from other fields',
+                        text: 'Learn about the features of designing, developing and testing mobile applications. Add projects to your portfolio, add skills to your resume, change jobs or move up the career ladder'
+                    }
+                ],
                 skills: {
                     titles: [
                         'Create native apps',
@@ -1530,17 +1577,18 @@ const initialState = {
                         }
                     ],
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_be7c1d4e7b19170ce3b2ff6aab88458c64021917.png',
-                        'https://248006.selcdn.ru/LandGen/phone_d02e2de43a6e17c326448aeca6b346bc8be1cce8.png',
-                    ],
-                    texts: [
-                        "Go beyond one platform and become a universal developer. Learn how to create working prototypes and complete projects with Flutter. Master Dart and add cross-platform apps to your portfolio. Rewrite personal projects for Android and iOS, offer to implement the framework in your company or join a new team",
-                        'Learn about the features of developing and testing mobile applications. Master one of the native programming languages Swift or Kotlin. Get to know Dart, the Flutter framework, and write cross-platform portfolio apps. After the course, you will be able to change direction and start a career in mobile development',
-                    ],
-                    titles: ['For native developers', 'Programmers in other areas']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/flutter/1.png',
+                        subtitle: 'For native developers',
+                        text: 'Go beyond one platform and become a universal developer. Learn how to create working prototypes and complete projects with Flutter. Master Dart and add cross-platform apps to your portfolio. Rewrite personal projects for Android and iOS, offer to implement the framework in your company or join a new team'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/flutter/2.png',
+                        subtitle: 'Programmers in other areas',
+                        text: 'Learn about the features of developing and testing mobile applications. Master one of the native programming languages Swift or Kotlin. Get to know Dart, the Flutter framework, and write cross-platform portfolio apps. After the course, you will be able to change direction and start a career in mobile development'
+                    }
+                ],
                 skills: {
                     texts: [
                         'Write application blocks in native language',
@@ -1640,17 +1688,18 @@ const initialState = {
                         }
                     ],
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_eda894e08bd420dceebe9236359421172560b8b0.png',
-                        'https://248006.selcdn.ru/LandGen/phone_61edcc5c3bc4f8c0db7805ac7c3cfdb91f618a02.png'
-                    ],
-                    texts: [
-                        'Perhaps you already have basic skills and understanding of programming and apply this knowledge in your projects. Our course will give you an in-depth knowledge of the universal Java language, and you will begin to properly structure the code and follow everyone\'s "favorite" syntax to create outstanding projects',
-                        'If you are attracted by modern technologies and high salaries in the field of IT, then this course is definitely for you. You will learn how to write code, learn that the legend that a programmer must be perfect in mathematics is a fiction, begin to think critically and be able to code in the most popular language in the world',
-                    ],
-                    titles: ['Beginning programmers', 'Beginners']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/java/1.png',
+                        subtitle: 'Beginning programmers',
+                        text: `Perhaps you already have basic skills and understanding of programming and apply this knowledge in your projects. Our course will give you an in-depth knowledge of the universal Java language, and you will begin to properly structure the code and follow everyone's "favorite" syntax to create outstanding projects`
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/java/2.png',
+                        subtitle: 'Beginners',
+                        text: 'If you are attracted by modern technologies and high salaries in the field of IT, then this course is definitely for you. You will learn how to write code, learn that the legend that a programmer must be perfect in mathematics is a fiction, begin to think critically and be able to code in the most popular language in the world'
+                    }
+                ],
                 skills: {
                     texts: [
                         'Administration and deployment of pilot works',
@@ -1781,19 +1830,23 @@ const initialState = {
                         }
                     ],
                 },
-                for_who: {
-                    photographs: [
-                        'https://248006.selcdn.ru/LandGen/phone_8842a60ff215e4738db6796099e7b2b688439fb215845377455302.png',
-                        'https://248006.selcdn.ru/LandGen/phone_5c55c73f3bf2c300b90f540a7ff6406c99c172e315845377647246.png',
-                        'https://248006.selcdn.ru/LandGen/phone_757b950c687cb8d1e31c6d93c611bf42fe69ddc915845377824032.png'
-                    ],
-                    texts: [
-                        "You will understand how to create web applications, explore the possibilities of Java, develop the first projects for real customers and build a portfolio",
-                        'You will understand the features and syntax of Java, master a new popular language and be able to change the direction of work to work on interesting projects and earn more',
-                        'Learn how to structure and debug your code, work with frameworks and databases, improve your level and be able to take on complex expensive projects in Java'
-                    ],
-                    titles: ['For those who want to get started in Java development', 'Programmers from other fields', 'Beginners in Java']
-                },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/java-pro/1.png',
+                        subtitle: 'For those who want to get started in Java development',
+                        text: 'You will understand how to create web applications, explore the possibilities of Java, develop the first projects for real customers and build a portfolio'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/java-pro/2.png',
+                        subtitle: 'Programmers from other fields',
+                        text: 'You will understand the features and syntax of Java, master a new popular language and be able to change the direction of work to work on interesting projects and earn more'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/java-pro/3.png',
+                        subtitle: 'Beginners in Java',
+                        text: 'Learn how to structure and debug your code, work with frameworks and databases, improve your level and be able to take on complex expensive projects in Java'
+                    }
+                ],
                 skills: {
                     titles: [
                         'Create applications in Java',
@@ -1939,7 +1992,7 @@ const initialState = {
                             text: 'cyber security specialist salary'
                         }
                     ],
-                },
+                }
             }
         } as CourseI,
         devops: {
@@ -1959,6 +2012,23 @@ const initialState = {
                     titleText: 'DevOps engineer automates application development. It helps the company to quickly and safely implement changes to the code, supports the work of highly loaded services. Thanks to the DevOps approach, the quality of applications does not suffer due to the high speed of development, and the business does not lose profit due to failures and can focus on development. A DevOps engineer knows how to program in Python, organizes continuous integration and code delivery - CI / CD, works with Docker, Ansible, Terraform, Gitlab, implements tools and processes to improve product security. Such specialists are hired by companies with a large IT infrastructure. For example, banks, IT and telecom, fintech and retailers',
                     list: [commonItems.market.listItems.devopsVacancies, commonItems.market.listItems.devopsSalary],
                 },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/devops/1.png',
+                        subtitle: 'For beginners',
+                        text: 'You will master the created IT-specialty from scratch and learn the skills on practical cases. You will be able to start practicing June the next day after the course'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/devops/2.png',
+                        subtitle: 'Junior level IT specialists',
+                        text: 'You will learn how to work with Linux and databases. The course will help close gaps in knowledge and master DevOps from scratch. You can earn more in a related field'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/devops/3.png',
+                        subtitle: 'Professionals who need DevOps skills',
+                        text: 'You will understand the intricacies of DevOps practices from scratch and will be able to expand your competencies at work and increase your value as a specialist'
+                    }
+                ],
             }
         } as CourseI,
         devops_pro: {
@@ -1992,6 +2062,23 @@ const initialState = {
                         }
                     ],
                 },
+                for_who: [
+                    {
+                        imgSrc: '/courses/course/for-who/devops-pro/1.png',
+                        subtitle: 'Beginners without experience',
+                        text: 'First, master system administration, and then delve into DevOps and you can start a career in this area'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/devops-pro/2.png',
+                        subtitle: 'DevOps entry-level engineers',
+                        text: 'Build a clear step-by-step path of professional development. The course will help close gaps in knowledge and grow in income'
+                    },
+                    {
+                        imgSrc: '/courses/course/for-who/devops-pro/3.png',
+                        subtitle: 'Professionals who need DevOps skills',
+                        text: 'You will understand the intricacies of the DevOps methodology from scratch, expand your working competencies and increase your value as a specialist'
+                    }
+                ],
             }
         } as CourseI
     }

@@ -1,5 +1,4 @@
 import React from "react"
-import styles from "@/styles/Course.module.scss"
 
 interface Props {
     title: string
