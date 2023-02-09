@@ -13,7 +13,7 @@ const FormComponent = ({  }) => {
         let element = phoneRef.current.querySelector('.phone')
 
         let maskOptions = {
-            mask: '+{38}(000)-000-00-00',
+            mask: '+{38}(000)_ 000 _ 00 _ 00',
             lazy: false
         };
 
@@ -32,7 +32,7 @@ const FormComponent = ({  }) => {
                     <ValidatedInput placeHolder={'Reason of the application'} divClass={'my-10'} register={register} errorMessage={errors.reason?.message} inpName={'reason'} pattern={/.*/} patternMessage={'reason'} minLength={5} maxLength={20}/>
                     <ValidatedInput placeHolder={'Your phone number'} inpClass={'phone'} register={register} errorMessage={errors.phone?.message} inpName={'phone'} pattern={/.*/} patternMessage={'phone number'} minLength={10} maxLength={20}/>
                 </div>
-                <textarea className={'w-1/2 text-black rounded-lg p-2.5'} minLength={20} {...register('description', {required: true})}/>
+                <textarea className={'w-1/2 text-black rounded-lg p-2.5'} minLength={20} {...(register('description', {required: true}))}/>
             </div>
             <p className={'text-base font-normal text-center'}>By clicking the send button you agree to the processing of personal data in accordance with the privacy policy</p>
             <button className={'w-full text-xl rounded h-9 mt-5'}>Send</button>

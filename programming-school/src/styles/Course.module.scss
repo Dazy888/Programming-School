@@ -289,6 +289,99 @@
       }
     }
   }
+
+  #consultation {
+    background: #60b3ff;
+
+    .consultation__content {
+      background: white;
+
+      .error-text {
+        color: #FF603F;
+      }
+
+      .error {
+        background: #FFE7E7 !important;
+        border: 1px solid #FF603F !important;
+      }
+
+      input {
+        background: #F7F7F5;
+        padding: 23px 18px 10px;
+        border-radius: 10px;
+        border: 1px solid #EAEAEA;
+        color: black;
+      }
+
+      .focus {
+        font-size: 11px;
+        color: gray;
+        transform: translateY(-80%);
+      }
+
+      span {
+        top: 20px;
+        left: 18px;
+        transition: 0.2s;
+      }
+
+      .consultation__phone-number {
+        input {
+          border-radius: 0 10px 10px 0;
+        }
+
+        .consultation__selected-country {
+          background: #F7F7F5;
+          padding: 18px 14px;
+          border-radius: 10px 0 0 10px;
+          border: 1px solid #EAEAEA;
+          border-right: none;
+
+          .arrow-up {
+            transform: rotate(180deg);
+          }
+        }
+
+        .consultation__countries-list {
+          width: 240px;
+          padding: 16px 12px;
+          bottom: -350px;
+          left: 5px;
+          background: white;
+          border-radius: 10px;
+
+          .active {
+            background: #3D3BFF;
+            color: white;
+          }
+
+          .consultation__country {
+            padding: 8px 12px;
+            border-radius: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &:hover {
+              background: #3D3BFF;
+              color: white;
+            }
+
+            div {
+              p {
+                max-width: 100px;
+              }
+            }
+          }
+        }
+      }
+
+      button {
+        background: #3D3BFF;
+      }
+    }
+  }
 }
 
 @media (max-width: 1440px) {
@@ -402,6 +495,30 @@
         }
       }
     }
+
+    #consultation {
+      .consultation__content {
+        grid-template-columns: repeat(1, auto);
+
+        h1 {
+          text-align: center;
+          margin: auto;
+        }
+
+        form {
+          max-width: 760px;
+          margin: auto;
+        }
+
+        button {
+          width: 100%;
+        }
+
+        .agreement {
+          text-align: center;
+        }
+      }
+    }
   }
 }
 
@@ -504,6 +621,32 @@
         }
       }
     }
+
+    #consultation {
+      .consultation__content {
+        grid-template-columns: repeat(1, auto);
+
+        h1 {
+          text-align: center;
+          margin: auto;
+        }
+
+        form {
+          max-width: 420px;
+          margin: auto;
+
+          .consultation__inputs {
+            grid-template-columns: repeat(1, auto);
+          }
+
+          .consultation__phone-number {
+            .consultation__input {
+              width: 88%;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -571,6 +714,35 @@
       #for-who {
         h1 {
           font-size: 36px;
+        }
+      }
+    }
+
+    #consultation {
+      h1 {
+        font-size: 30px;
+      }
+
+      .consultation__content {
+        input {
+          height: 45px;
+          padding: 23px 18px 10px;
+        }
+
+        span {
+          top: 15px;
+          left: 18px;
+          transition: 0.2s;
+        }
+
+        .consultation__phone-number {
+          .consultation__selected-country {
+            height: 45px;
+          }
+        }
+
+        button {
+          height: 45px;
         }
       }
     }

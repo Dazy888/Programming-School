@@ -87,3 +87,9 @@ export interface CourseI {
 }
 
 export type PreviewsResponse = (state: AppStateType) => PreviewI[]
+
+export interface FormI {
+    name: string
+    phoneNumber: string
+    mail: string
+}
