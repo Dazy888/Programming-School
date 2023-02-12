@@ -23,7 +23,6 @@ const FormComponent = ({  }) => {
     const { handleSubmit, reset, register, formState: { errors } } = useForm<FormI>({mode: 'onChange'})
     const onSubmit: SubmitHandler<FormI> = (data) => reset()
 
-
     return(
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className={'flex justify-between my-10'}>

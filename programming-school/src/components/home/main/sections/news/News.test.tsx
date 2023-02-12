@@ -2,6 +2,7 @@ import React from "react"
 import { act, render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { News } from "@/components/home/main/sections/news/News"
+
 describe('News', () => {
     describe('Input validation', () => {
         it('should be "Field is required" error', async () => {
