@@ -12,14 +12,14 @@ const commonItems = {
                 },
                 {
                     title: '6 months',
-                    text: 'before employment'
+                    text: 'before animation'
                 },
                 {
                     title: 'Up to 8 projects',
                     text: 'in portfolio'
                 },
                 {
-                    title: 'We guarantee employment',
+                    title: 'We guarantee animation',
                     text: 'or refund money *'
                 },
                 {
@@ -71,7 +71,7 @@ const commonItems = {
     header: {
         features: {
             guarantees: {
-                title: 'We guarantee employment',
+                title: 'We guarantee animation',
                 text: 'or refund money *'
             },
             getJobInSixMonths: {
@@ -295,7 +295,7 @@ const initialState = {
                         'Are there any installment programs?',
                     ],
                     texts: [
-                        'Of course - the course is designed for absolute beginners. But you will have to try - read additional literature, do not miss classes and do practical work on time. Skillbox will help with the rest - curators will analyze practical tasks, assistants will answer questions about the process of passing, and the Career Center will take care of your employment',
+                        'Of course - the course is designed for absolute beginners. But you will have to try - read additional literature, do not miss classes and do practical work on time. Skillbox will help with the rest - curators will analyze practical tasks, assistants will answer questions about the process of passing, and the Career Center will take care of your animation',
                         'At the initial stages, advanced knowledge is not required from you - a school mathematics course is enough. However, do not be alarmed if you have to figure out topics that you forgot or did not go through - the curator will help you refresh your knowledge or give useful links',
                         'In the stream, you will complete the Python Basic course in 2 times faster than regular participants. You are waiting for daily online classes in a group, deadlines for completing training modules and reviewing work at online meetings with the curator and the team',
                         'Depends on the format. According to the usual schedule, you can study at a convenient time - on average, platform users spend 3 to 5 hours a week on the course. You do not have a rigid schedule and deadlines. An accelerated schedule in the stream requires more time - you need to find at least 3 hours a day for practical classes and 1.5 hours a week for an online meeting with a curator. It is also impossible to postpone the execution of practical work in the flow - you must hand it in before a certain deadline',
@@ -322,7 +322,7 @@ const initialState = {
                         commonItems.header.features.getJobInSixMonths,
                         {
                             title: 'Help',
-                            text: 'in employment'
+                            text: 'in animation'
                         },
                         commonItems.header.features.fourProjectsInPortfolio
                     ]
@@ -1440,7 +1440,7 @@ const initialState = {
                     {
                         imgSrc: '/courses/course/for-who/ios/1.png',
                         subtitle: 'Beginners in programming',
-                        text: 'The course will allow you to master the profession of an iOS developer from scratch. You will write your first portfolio applications, and after graduation we will help you with employment'
+                        text: 'The course will allow you to master the profession of an iOS developer from scratch. You will write your first portfolio applications, and after graduation we will help you with animation'
                     },
                     {
                         imgSrc: '/courses/course/for-who/ios/2.png',
@@ -1658,7 +1658,7 @@ const initialState = {
                         'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course',
                         "To work in Android Studio, you need Windows 8/10 (64 bit), Linux (64 bit) with support for Gnome, KDE or macOS version 10.14 (Mojave) or higher. 4 GB RAM minimum, 8 GB recommended. Minimum - 2 free gigabytes on the disk, the recommended amount is 4 GB. Screen resolution - from 1280 × 800. You'll need a MacBook or other macOS computer to take iOS courses. The operating system is macOS Catalina 10.15.4 or later. The course uses the Swift 5 programming language, as well as the Xcode 12.4 development environment. The Mac must also have at least 4 GB of memory and 12.5 GB of free disk space. Either up to 18.5 GB of free space when upgrading from OS X Yosemite or earlier",
                         'It is desirable to know English. In the course, we provide links to the official Swift/Kotlin documentation, and it is written entirely in English. If you are not familiar with the language, then Google Translate will help you at first, but it is better to study English additionally - any programmer needs it',
-                        'The courses cover all the topics that a mobile developer needs. If you study regularly, complete practical tasks and work on final projects, then by the end of the course you will be ready for employment. We will take care of the rest — we will select vacancies, help you write a resume, correctly draw up a portfolio and prepare for an interview. If the interview fails, we will collect feedback from the employer and suggest in what aspects you need to develop, and continue working. Most often, platform users get a chance to prove themselves in an internship or get a junior position',
+                        'The courses cover all the topics that a mobile developer needs. If you study regularly, complete practical tasks and work on final projects, then by the end of the course you will be ready for animation. We will take care of the rest — we will select vacancies, help you write a resume, correctly draw up a portfolio and prepare for an interview. If the interview fails, we will collect feedback from the employer and suggest in what aspects you need to develop, and continue working. Most often, platform users get a chance to prove themselves in an internship or get a junior position',
                         'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
                         "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
                         'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',

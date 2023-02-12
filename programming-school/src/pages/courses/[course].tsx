@@ -16,6 +16,7 @@ import { Market } from "@/components/courses/course/sections/market/Market"
 import { ForWho } from "@/components/courses/course/sections/for-who/ForWho"
 import { Skills } from "@/components/courses/course/sections/skills/Skills"
 import { Consultation } from "@/components/courses/course/sections/consultation/Consultation"
+import {Employment} from "@/components/courses/course/sections/employment/Employment";
 
 const Course = () => {
     const dispatch = useDispatch()
@@ -45,6 +46,9 @@ const Course = () => {
                     <Skills courseAttr={courseAttr} skills={course.course.skills}/>
                 </div>
                 <Consultation courseAttr={courseAttr}/>
+                <div className={`${styles['course__container']} mx-auto px-2`}>
+                    <Employment courseAttr={courseAttr}/>
+                </div>
             </div>
         </NavigationLayout>
     )

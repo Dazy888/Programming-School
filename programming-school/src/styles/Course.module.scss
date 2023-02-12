@@ -288,6 +288,213 @@
         }
       }
     }
+
+    #employment {
+      background: white;
+
+      .employment__container {
+        padding: 72px 68px;
+      }
+
+      .employment__animation {
+        grid-column: 2/-1;
+        grid-row: 1/-1;
+
+        img {
+          animation-duration: 4s;
+          animation-direction: alternate;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+
+        .big {
+          width: 115px;
+          height: 115px;
+        }
+
+        .medium {
+          width: 90px;
+          height: 90px;
+        }
+
+        .small {
+          width: 70px;
+          height: 70px;
+        }
+
+        @keyframes top-left {
+          from {
+            transform: translate(-110px, -180px)
+          }
+          to {
+            transform: translate(-110px, -150px)
+          }
+        }
+
+        @keyframes bottom-right {
+          from {
+            transform: translate(110px, 190px)
+          }
+          to {
+            transform: translate(110px, 165px)
+          }
+        }
+
+        @keyframes top-right {
+          from {
+            transform: translate(180px, -60px)
+          }
+          to {
+            transform: translate(180px, -40px)
+          }
+        }
+
+        @keyframes bottom-left {
+          from {
+            transform: translate(-130px, 90px)
+          }
+          to {
+            transform: translate(-130px, 130px)
+          }
+        }
+
+        @keyframes aic {
+          from {
+            transform: translate(115px, -145px)
+          }
+          to {
+            transform: translate(115px, -120px)
+          }
+        }
+
+        @keyframes mail {
+          from {
+            transform: translate(-20px, 195px)
+          }
+          to {
+            transform: translate(-20px, 225px)
+          }
+        }
+
+        @keyframes vk {
+          from {
+            transform: translate(185px, 110px)
+          }
+          to {
+            transform: translate(185px, 95px)
+          }
+        }
+
+        @keyframes youla {
+          from {
+            transform: translate(-190px, -20px)
+          }
+          to {
+            transform: translate(-190px, -50px)
+          }
+        }
+
+        .top-left {
+          animation-name: top-left;
+        }
+
+        .bottom-right {
+          animation-name: bottom-right;
+        }
+
+        .top-right {
+          animation-name: top-right;
+        }
+
+        .bottom-left {
+          animation-name: bottom-left;
+        }
+
+        .aic {
+          animation-name: aic;
+        }
+
+        .mail {
+          animation-name: mail;
+        }
+
+        .vk {
+          animation-name: vk;
+        }
+
+        .youla {
+          animation-name: youla;
+        }
+      }
+
+      .employment__career-center {
+        h1 {
+          margin-left: 135px;
+        }
+
+        .second {
+          background: rgb(220, 244, 254) !important;
+        }
+
+        .third {
+          background: rgb(175, 223, 180) !important;
+        }
+
+        .fourth {
+          background: rgb(254, 188, 180) !important;
+        }
+
+        .fifth {
+          background: rgb(163, 163, 255) !important;
+        }
+
+        .employment__slide {
+          width: 336px;
+          height: 346px;
+          background: rgb(255, 223, 110);
+          position: relative;
+          margin-left: 17px;
+
+          span {
+            background: black;
+          }
+
+          &:hover {
+            .invisible-text {
+              opacity: 1;
+            }
+
+            .title {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      .employment__guarantees {
+        .employment__stats {
+          grid-row: 1/-1;
+          grid-column: 1/2;
+          background: black;
+          padding: 48px 24px 24px;
+
+          .employment__stats-item {
+            border: 1px solid #e4e4e4;
+            margin-bottom: 12px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .employment__text {
+          div:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
   }
 
   #consultation {
@@ -438,6 +645,37 @@
           grid-template-columns: repeat(2, auto);
         }
       }
+
+      #employment {
+        .employment__header {
+          grid-template-columns: repeat(1, auto);
+          text-align: center;
+
+          .employment__animation {
+            height: 500px;
+            grid-column: 1/-1;
+          }
+
+          .employment__title {
+            margin: auto;
+          }
+        }
+
+        .employment__career-center {
+          h1 {
+            margin-left: 0;
+            text-align: center;
+          }
+        }
+
+        .employment__guarantees {
+          grid-template-columns: repeat(1, auto);
+
+          .employment__stats {
+            grid-row: 2/2;
+          }
+        }
+      }
     }
   }
 }
@@ -494,6 +732,22 @@
           grid-template-columns: repeat(2,auto);
         }
       }
+
+      #employment {
+        .employment__career-center {
+          padding: 0 68px;
+
+          .employment__slide {
+            width: 100%;
+            height: fit-content !important;
+            margin: auto auto 30px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
     }
 
     #consultation {
@@ -525,7 +779,7 @@
 @media (max-width: 768px) {
   #course {
     .course__container {
-      max-width: 420px;
+      width: 100%;
 
       #header {
         .header__title {
@@ -620,6 +874,125 @@
           grid-template-columns: repeat(1,auto);
         }
       }
+
+      #employment {
+        .employment__container {
+          padding: 60px 10px;
+        }
+
+        .employment__header {
+          grid-template-columns: repeat(1, auto);
+          text-align: center;
+
+          .employment__animation {
+            .main {
+              width: 210px;
+              height: 210px;
+            }
+
+            .big {
+              width: 105px;
+              height: 105px;
+            }
+
+            .medium {
+              width: 80px;
+              height: 80px;
+            }
+
+            .small {
+              width: 60px;
+              height: 60px;
+            }
+
+            @keyframes top-left {
+              from {
+                transform: translate(-90px, -170px)
+              }
+              to {
+                transform: translate(-90px, -140px)
+              }
+            }
+
+            @keyframes bottom-right {
+              from {
+                transform: translate(90px, 180px)
+              }
+              to {
+                transform: translate(90px, 155px)
+              }
+            }
+
+            @keyframes top-right {
+              from {
+                transform: translate(160px, -50px)
+              }
+              to {
+                transform: translate(160px, -30px)
+              }
+            }
+
+            @keyframes bottom-left {
+              from {
+                transform: translate(-110px, 80px)
+              }
+              to {
+                transform: translate(-110px, 120px)
+              }
+            }
+
+            @keyframes aic {
+              from {
+                transform: translate(95px, -135px)
+              }
+              to {
+                transform: translate(95px, -110px)
+              }
+            }
+
+            @keyframes main {
+              from {
+                transform: translate(0, 185px)
+              }
+              to {
+                transform: translate(0, 215px)
+              }
+            }
+
+            @keyframes vk {
+              from {
+                transform: translate(155px, 110px)
+              }
+              to {
+                transform: translate(155px, 95px)
+              }
+            }
+
+            @keyframes youla {
+              from {
+                transform: translate(-170px, 10px)
+              }
+              to {
+                transform: translate(-170px, -40px)
+              }
+            }
+          }
+
+          .employment__title {
+            h1 {
+              font-size: 39px;
+            }
+
+            p {
+              font-size: 17px;
+            }
+          }
+        }
+
+        .employment__career-center {
+          padding: 0 10px;
+        }
+      }
     }
 
     #consultation {
@@ -653,8 +1026,6 @@
 @media (max-width: 425px) {
   #course {
     .course__container {
-      max-width: 370px;
-
       #header {
         .header__title {
           h1 {
@@ -716,6 +1087,139 @@
           font-size: 36px;
         }
       }
+
+      #employment {
+        .employment__header {
+          .employment__animation {
+            .main {
+              width: 190px;
+              height: 190px;
+            }
+
+            .big {
+              width: 95px;
+              height: 95px;
+            }
+
+            .medium {
+              width: 70px;
+              height: 70px;
+            }
+
+            .small {
+              width: 50px;
+              height: 50px;
+            }
+
+            @keyframes top-left {
+              from {
+                transform: translate(-80px, -150px)
+              }
+              to {
+                transform: translate(-80px, -120px)
+              }
+            }
+
+            @keyframes bottom-right {
+              from {
+                transform: translate(80px, 160px)
+              }
+              to {
+                transform: translate(80px, 135px)
+              }
+            }
+
+            @keyframes top-right {
+              from {
+                transform: translate(140px, -30px)
+              }
+              to {
+                transform: translate(140px, 10px)
+              }
+            }
+
+            @keyframes bottom-left {
+              from {
+                transform: translate(-100px, 60px)
+              }
+              to {
+                transform: translate(-100px, 100px)
+              }
+            }
+
+            @keyframes aic {
+              from {
+                transform: translate(85px, -115px)
+              }
+              to {
+                transform: translate(85px, -90px)
+              }
+            }
+
+            @keyframes mail {
+              from {
+                transform: translate(-30px, 165px)
+              }
+              to {
+                transform: translate(-30px, 195px)
+              }
+            }
+
+            @keyframes vk {
+              from {
+                transform: translate(135px, 100px)
+              }
+              to {
+                transform: translate(135px, 85px)
+              }
+            }
+
+            @keyframes youla {
+              from {
+                transform: translate(-150px, -30px)
+              }
+              to {
+                transform: translate(-150px, -10px)
+              }
+            }
+          }
+
+          .employment__title {
+            h1 {
+              font-size: 35px;
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .employment__career-center {
+          h1 {
+            font-size: 28px;
+          }
+
+          .employment__slide {
+            h3 {
+              font-size: 20px;
+            }
+
+            span {
+              width: 38px;
+              height: 38px;
+
+              i {
+                font-size: 18px;
+              }
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
     }
 
     #consultation {
@@ -752,8 +1256,6 @@
 @media (max-width: 375px) {
   #course {
     .course__container {
-      max-width: 320px;
-
       #header {
         .header__title {
           h1 {
@@ -789,6 +1291,125 @@
 
           p {
             font-size: 15px;
+          }
+        }
+      }
+
+      #employment {
+        .employment__header {
+          .employment__animation {
+            .main {
+              width: 180px;
+              height: 180px;
+            }
+
+            .big {
+              width: 80px;
+              height: 80px;
+            }
+
+            .medium {
+              width: 60px;
+              height: 60px;
+            }
+
+            .small {
+              width: 40px;
+              height: 40px;
+            }
+
+            @keyframes top-left {
+              from {
+                transform: translate(-80px, -130px)
+              }
+              to {
+                transform: translate(-80px, -100px)
+              }
+            }
+
+            @keyframes bottom-right {
+              from {
+                transform: translate(60px, 140px)
+              }
+              to {
+                transform: translate(60px, 115px)
+              }
+            }
+
+            @keyframes top-right {
+              from {
+                transform: translate(130px, -20px)
+              }
+              to {
+                transform: translate(130px, 0px)
+              }
+            }
+
+            @keyframes bottom-left {
+              from {
+                transform: translate(-90px, 90px)
+              }
+              to {
+                transform: translate(-90px, 60px)
+              }
+            }
+
+            @keyframes aic {
+              from {
+                transform: translate(85px, -95px)
+              }
+              to {
+                transform: translate(85px, -70px)
+              }
+            }
+
+            @keyframes mail {
+              from {
+                transform: translate(-30px, 135px)
+              }
+              to {
+                transform: translate(-30px, 165px)
+              }
+            }
+
+            @keyframes vk {
+              from {
+                transform: translate(105px, 90px)
+              }
+              to {
+                transform: translate(105px, 75px)
+              }
+            }
+
+            @keyframes youla {
+              from {
+                transform: translate(-130px, -40px)
+              }
+              to {
+                transform: translate(-130px, 0)
+              }
+            }
+          }
+        }
+
+        .employment__career-center {
+          .employment__slide {
+            h3 {
+              font-size: 17px;
+            }
+
+            span {
+              width: 36px;
+              height: 36px;
+
+              i {
+                font-size: 17px;
+              }
+            }
+
+            p {
+              font-size: 15px;
+            }
           }
         }
       }
