@@ -11,13 +11,28 @@ const FormComponent = ({  }) => {
     const phoneRef: any = useRef()
     useEffect(() => {
         let element = phoneRef.current.querySelector('.phone')
+        let mask: any
 
-        let maskOptions = {
-            mask: '+{38}(000)_ 000 _ 00 _ 00',
-            lazy: false
-        };
+        mask = IMask(element, {
+            mask: '',
+            lazy: true
+        })
 
-        element.onfocus = () => IMask(element, maskOptions);
+        element.addEventListener('focus', () => {
+            mask.updateOptions({
+                mask: '+{38\\0} 00 000 00 00',
+                lazy: false
+            })
+        })
+
+        element.addEventListener('blur', () => {
+            if (element.value === '+380 __ ___ __ __') {
+                mask.updateOptions({
+                    mask: '',
+                    lazy: false
+                })
+            }
+        })
     }, [])
 
     const { handleSubmit, reset, register, formState: { errors } } = useForm<FormI>({mode: 'onChange'})
