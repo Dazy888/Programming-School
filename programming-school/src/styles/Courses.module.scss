@@ -1,20 +1,21 @@
-$fullstackPython-bgColor : #FECECF;
-$web-bgColor : #A3A3FF;
-$fullstackPHP-bgColor : #94BFFF;
-$frontend-bgColor : #C9C8FF;
-$frontendPro-bgColor : #C4FDEF;
-$fullstackJs-bgColor : #FFE64B;
-$phpPro-bgColor : #FFF4BB;
-$c-bgColor : #CAF4EA;
-$android-bgColor : #C5EFD9;
-$ios-bgColor : #93E7FF;
-$mobile-bgColor : #F0EBFF;
-$flutter-bgColor : #D2EBFC;
-$java-bgColor : #FFBD59;
-$javaPro-bgColor : #D1CAFF;
-$cyberSecurity-bgColor : #00CFA1;
-$devops-bgColor : #80CAF2;
-$devopsPro-bgColor : #B4DF92;
+$python-color : #60b3ff;
+$fullstack-python-color : #FECECF;
+$web-color : #A3A3FF;
+$fullstack-php-color : #94BFFF;
+$frontend-color : #C9C8FF;
+$frontend-pro-color : #C4FDEF;
+$fullstack-js-color : #FFE64B;
+$php-pro-color : #FFF4BB;
+$c-color : #CAF4EA;
+$android-color : #C5EFD9;
+$ios-color : #93E7FF;
+$mobile-color : #F0EBFF;
+$flutter-color : #D2EBFC;
+$java-color : #FFBD59;
+$java-pro-color : #D1CAFF;
+$cyber-security-color : #00CFA1;
+$devops-color : #80CAF2;
+$devops-pro-color : #B4DF92;
 
 #courses {
   .courses__content {
@@ -26,35 +27,35 @@ $devopsPro-bgColor : #B4DF92;
       &:nth-child(1) {
         .courses__item {
           &:nth-child(2) {
-            background: $fullstackPython-bgColor;
+            background: $fullstack-python-color;
           }
 
           &:nth-child(3) {
-            background: $web-bgColor;
+            background: $web-color;
           }
 
           &:nth-child(4) {
-            background: $fullstackPHP-bgColor;
+            background: $fullstack-php-color;
           }
 
           &:nth-child(5) {
-            background: $frontend-bgColor;
+            background: $frontend-color;
           }
 
           &:nth-child(6) {
-            background: $frontendPro-bgColor;
+            background: $frontend-pro-color;
           }
 
           &:nth-child(7) {
-            background: $fullstackJs-bgColor;
+            background: $fullstack-js-color;
           }
 
           &:nth-child(8) {
-            background: $phpPro-bgColor;
+            background: $php-pro-color;
           }
 
           &:nth-child(9) {
-            background: $c-bgColor;
+            background: $c-color;
           }
         }
       }
@@ -62,45 +63,45 @@ $devopsPro-bgColor : #B4DF92;
       &:nth-child(2) {
         .courses__item {
           &:nth-child(1) {
-            background: $android-bgColor;
+            background: $android-color;
           }
 
           &:nth-child(2) {
-            background: $ios-bgColor;
+            background: $ios-color;
           }
 
           &:nth-child(3) {
-            background: $mobile-bgColor;
+            background: $mobile-color;
           }
 
           &:nth-child(4) {
-            background: $flutter-bgColor;
+            background: $flutter-color;
           }
 
           &:nth-child(5) {
-            background: $java-bgColor;
+            background: $java-color;
           }
 
           &:nth-child(6) {
-            background: $javaPro-bgColor;
+            background: $java-pro-color;
           }
 
           &:nth-child(7) {
-            background: $cyberSecurity-bgColor;
+            background: $cyber-security-color;
           }
 
           &:nth-child(8) {
-            background: $devops-bgColor;
+            background: $devops-color;
           }
 
           &:nth-child(9) {
-            background: $devopsPro-bgColor;
+            background: $devops-pro-color;
           }
         }
       }
 
       .courses__item {
-        background: #60B3FF;
+        background: $python-color;
 
         &:hover {
           transform: scale(1.02);

@@ -6,7 +6,7 @@
 
     #header {
       .header__title {
-        background: #60b3ff;
+        background: $python-color;
 
         h1 {
           color: black !important;
@@ -22,70 +22,70 @@
         }
 
         &[course=fullstack-python] {
-          background: $fullstackPython-bgColor;
+          background: $fullstack-python-color;
         }
 
         &[course=web] {
-          background: $web-bgColor;
+          background: $web-color;
         }
 
         &[course=fullstack-php] {
-          background: $fullstackPHP-bgColor;
+          background: $fullstack-php-color;
         }
         &[course=frontend] {
-          background: $frontend-bgColor;
+          background: $frontend-color;
         }
 
         &[course=frontend-pro] {
-          background: $frontendPro-bgColor;
+          background: $frontend-pro-color;
         }
 
         &[course=fullstack-js] {
-          background: $fullstackJs-bgColor;
+          background: $fullstack-js-color;
         }
 
         &[course=php-pro] {
-          background: $phpPro-bgColor;
+          background: $php-pro-color;
         }
 
         &[course=c-plus-plus] {
-          background: $c-bgColor;
+          background: $c-color;
         }
 
         &[course=android] {
-          background: $android-bgColor;
+          background: $android-color;
         }
 
         &[course=ios] {
-          background: $ios-bgColor;
+          background: $ios-color;
         }
 
         &[course=mobile] {
-          background: $mobile-bgColor;
+          background: $mobile-color;
         }
 
         &[course=flutter] {
-          background: $flutter-bgColor;
+          background: $flutter-color;
         }
 
         &[course=java] {
-          background: $java-bgColor;
+          background: $java-color;
         }
 
         &[course=java-pro] {
-          background: $javaPro-bgColor;
+          background: $java-pro-color;
         }
 
         &[course=cyber-security] {
-          background: $cyberSecurity-bgColor;
+          background: $cyber-security-color;
         }
 
         &[course=devops] {
-          background: $devops-bgColor;
+          background: $devops-color;
         }
 
         &[course=devops-pro] {
-          background: $devopsPro-bgColor;
+          background: $devops-pro-color;
         }
       }
 
@@ -103,73 +103,74 @@
         }
 
         div {
-          border: 3px solid #60b3ff;
+          border: 3px solid $python-color;
 
           &[course=fullstack-python] {
-            border: 3px solid $fullstackPython-bgColor;
+            border: 3px solid $fullstack-python-color;
           }
 
           &[course=web] {
-            border: 3px solid $web-bgColor;
+            border: 3px solid $web-color;
           }
 
           &[course=fullstack-php] {
-            border: 3px solid $fullstackPHP-bgColor;
+            border: 3px solid $fullstack-php-color;
           }
+
           &[course=frontend] {
-            border: 3px solid $frontend-bgColor;
+            border: 3px solid $frontend-color;
           }
 
           &[course=frontend-pro] {
-            border: 3px solid $frontendPro-bgColor;
+            border: 3px solid $frontend-pro-color;
           }
 
           &[course=fullstack-js] {
-            border: 3px solid $fullstackJs-bgColor;
+            border: 3px solid $fullstack-js-color;
           }
 
           &[course=php-pro] {
-            border: 3px solid $phpPro-bgColor;
+            border: 3px solid $php-pro-color;
           }
 
           &[course=c-plus-plus] {
-            border: 3px solid $c-bgColor;
+            border: 3px solid $c-color;
           }
 
           &[course=android] {
-            border: 3px solid $android-bgColor;
+            border: 3px solid $android-color;
           }
 
           &[course=ios] {
-            border: 3px solid $ios-bgColor;
+            border: 3px solid $ios-color;
           }
 
           &[course=mobile] {
-            border: 3px solid $mobile-bgColor;
+            border: 3px solid $mobile-color;
           }
 
           &[course=flutter] {
-            border: 3px solid $flutter-bgColor;
+            border: 3px solid $flutter-color;
           }
 
           &[course=java] {
-            border: 3px solid $java-bgColor;
+            border: 3px solid $java-color;
           }
 
           &[course=java-pro] {
-            border: 3px solid $javaPro-bgColor;
+            border: 3px solid $java-pro-color;
           }
 
           &[course=cyber-security] {
-            border: 3px solid $cyberSecurity-bgColor;
+            border: 3px solid $cyber-security-color;
           }
 
           &[course=devops] {
-            border: 3px solid $devops-bgColor;
+            border: 3px solid $devops-color;
           }
 
           &[course=devops-pro] {
-            border: 3px solid $devopsPro-bgColor;
+            border: 3px solid $devops-pro-color;
           }
         }
       }
@@ -183,108 +184,108 @@
       .skills__content {
         &[course=fullstack-python] {
           div {
-            border: 3px solid $fullstackPython-bgColor;
+            border: 3px solid $fullstack-python-color;
           }
         }
 
         &[course=web] {
           div {
-            border: 3px solid $web-bgColor;
+            border: 3px solid $web-color;
           }
         }
 
         &[course=fullstack-php] {
           div {
-            border: 3px solid $fullstackPHP-bgColor;
+            border: 3px solid $fullstack-php-color;
           }
         }
 
         &[course=frontend] {
           div {
-            border: 3px solid $frontend-bgColor;
+            border: 3px solid $frontend-color;
           }
         }
 
         &[course=frontend-pro] {
           div {
-            border: 3px solid $frontendPro-bgColor;
+            border: 3px solid $frontend-pro-color;
           }
         }
 
         &[course=fullstack-js] {
           div {
-            border: 3px solid $fullstackJs-bgColor;
+            border: 3px solid $fullstack-js-color;
           }
         }
 
         &[course=php-pro] {
           div {
-            border: 3px solid $phpPro-bgColor;
+            border: 3px solid $php-pro-color;
           }
         }
 
         &[course=c-plus-plus] {
           div {
-            border: 3px solid $c-bgColor;
+            border: 3px solid $c-color;
           }
         }
 
         &[course=android] {
           div {
-            border: 3px solid $android-bgColor;
+            border: 3px solid $android-color;
           }
         }
 
         &[course=ios] {
           div {
-            border: 3px solid $ios-bgColor;
+            border: 3px solid $ios-color;
           }
         }
 
         &[course=mobile] {
           div {
-            border: 3px solid $mobile-bgColor;
+            border: 3px solid $mobile-color;
           }
         }
 
         &[course=flutter] {
           div {
-            border: 3px solid $flutter-bgColor;
+            border: 3px solid $flutter-color;
           }
         }
 
         &[course=java] {
           div {
-            border: 3px solid $java-bgColor;
+            border: 3px solid $java-color;
           }
         }
 
         &[course=java-pro] {
           div {
-            border: 3px solid $javaPro-bgColor;
+            border: 3px solid $java-pro-color;
           }
         }
 
         &[course=cyber-security] {
           div {
-            border: 3px solid $cyberSecurity-bgColor;
+            border: 3px solid $cyber-security-color;
           }
         }
 
         &[course=devops] {
           div {
-            border: 3px solid $devops-bgColor;
+            border: 3px solid $devops-color;
           }
         }
 
         &[course=devops-pro] {
           div {
-            border: 3px solid $devopsPro-bgColor;
+            border: 3px solid $devops-pro-color;
           }
         }
 
         div {
-          border: 3px solid #60b3ff;
+          border: 3px solid $python-color;
         }
       }
     }
@@ -293,138 +294,161 @@
       background: white;
 
       .employment__container {
-        padding: 72px 68px;
-      }
+        .employment__animation {
+          grid-column: 2/-1;
+          grid-row: 1/-1;
 
-      .employment__animation {
-        grid-column: 2/-1;
-        grid-row: 1/-1;
-
-        img {
-          animation-duration: 4s;
-          animation-direction: alternate;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear;
-        }
-
-        .big {
-          width: 115px;
-          height: 115px;
-        }
-
-        .medium {
-          width: 90px;
-          height: 90px;
-        }
-
-        .small {
-          width: 70px;
-          height: 70px;
-        }
-
-        @keyframes top-left {
-          from {
-            transform: translate(-110px, -180px)
+          img {
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
           }
-          to {
-            transform: translate(-110px, -150px)
+
+          .big {
+            width: 115px;
+            height: 115px;
+          }
+
+          .medium {
+            width: 90px;
+            height: 90px;
+          }
+
+          .small {
+            width: 70px;
+            height: 70px;
+          }
+
+          @keyframes top-left {
+            from {
+              transform: translate(-110px, -180px)
+            }
+            to {
+              transform: translate(-110px, -150px)
+            }
+          }
+
+          @keyframes bottom-right {
+            from {
+              transform: translate(110px, 190px)
+            }
+            to {
+              transform: translate(110px, 165px)
+            }
+          }
+
+          @keyframes top-right {
+            from {
+              transform: translate(180px, -60px)
+            }
+            to {
+              transform: translate(180px, -40px)
+            }
+          }
+
+          @keyframes bottom-left {
+            from {
+              transform: translate(-130px, 90px)
+            }
+            to {
+              transform: translate(-130px, 130px)
+            }
+          }
+
+          @keyframes aic {
+            from {
+              transform: translate(115px, -145px)
+            }
+            to {
+              transform: translate(115px, -120px)
+            }
+          }
+
+          @keyframes mail {
+            from {
+              transform: translate(-20px, 195px)
+            }
+            to {
+              transform: translate(-20px, 225px)
+            }
+          }
+
+          @keyframes vk {
+            from {
+              transform: translate(185px, 110px)
+            }
+            to {
+              transform: translate(185px, 95px)
+            }
+          }
+
+          @keyframes youla {
+            from {
+              transform: translate(-190px, -20px)
+            }
+            to {
+              transform: translate(-190px, -50px)
+            }
+          }
+
+          .top-left {
+            animation-name: top-left;
+          }
+
+          .bottom-right {
+            animation-name: bottom-right;
+          }
+
+          .top-right {
+            animation-name: top-right;
+          }
+
+          .bottom-left {
+            animation-name: bottom-left;
+          }
+
+          .aic {
+            animation-name: aic;
+          }
+
+          .mail {
+            animation-name: mail;
+          }
+
+          .vk {
+            animation-name: vk;
+          }
+
+          .youla {
+            animation-name: youla;
           }
         }
 
-        @keyframes bottom-right {
-          from {
-            transform: translate(110px, 190px)
-          }
-          to {
-            transform: translate(110px, 165px)
-          }
-        }
+        .employment__guarantees {
+          .employment__stats {
+            grid-row: 1/-1;
+            grid-column: 1/2;
+            background: black;
+            padding: 48px 24px 24px;
 
-        @keyframes top-right {
-          from {
-            transform: translate(180px, -60px)
-          }
-          to {
-            transform: translate(180px, -40px)
-          }
-        }
+            .employment__stats-item {
+              border: 1px solid #e4e4e4;
+              margin-bottom: 12px;
 
-        @keyframes bottom-left {
-          from {
-            transform: translate(-130px, 90px)
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
           }
-          to {
-            transform: translate(-130px, 130px)
+
+          .employment__text {
+            div:last-child {
+              margin-bottom: 0;
+            }
           }
         }
 
-        @keyframes aic {
-          from {
-            transform: translate(115px, -145px)
-          }
-          to {
-            transform: translate(115px, -120px)
-          }
-        }
-
-        @keyframes mail {
-          from {
-            transform: translate(-20px, 195px)
-          }
-          to {
-            transform: translate(-20px, 225px)
-          }
-        }
-
-        @keyframes vk {
-          from {
-            transform: translate(185px, 110px)
-          }
-          to {
-            transform: translate(185px, 95px)
-          }
-        }
-
-        @keyframes youla {
-          from {
-            transform: translate(-190px, -20px)
-          }
-          to {
-            transform: translate(-190px, -50px)
-          }
-        }
-
-        .top-left {
-          animation-name: top-left;
-        }
-
-        .bottom-right {
-          animation-name: bottom-right;
-        }
-
-        .top-right {
-          animation-name: top-right;
-        }
-
-        .bottom-left {
-          animation-name: bottom-left;
-        }
-
-        .aic {
-          animation-name: aic;
-        }
-
-        .mail {
-          animation-name: mail;
-        }
-
-        .vk {
-          animation-name: vk;
-        }
-
-        .youla {
-          animation-name: youla;
-        }
       }
 
       .employment__career-center {
@@ -448,7 +472,7 @@
           background: rgb(163, 163, 255) !important;
         }
 
-        .employment__slide {
+        .employment__career-center-slide {
           width: 336px;
           height: 346px;
           background: rgb(255, 223, 110);
@@ -471,34 +495,498 @@
         }
       }
 
-      .employment__guarantees {
-        .employment__stats {
-          grid-row: 1/-1;
-          grid-column: 1/2;
-          background: black;
-          padding: 48px 24px 24px;
+      .employment__reviews {
+        h1 {
+          margin-left: 135px;
+        }
 
-          .employment__stats-item {
-            border: 1px solid #e4e4e4;
-            margin-bottom: 12px;
+        .employment__reviews-slide {
+          width: 470px;
+          height: 300px;
+          margin-left: 17px;
+          background: #353535;
+        }
+      }
+    }
+
+    #content {
+      background: white;
+      border: 3px solid $python-color;
+
+      &[course=fullstack-python] {
+        border: 3px solid $fullstack-python-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $fullstack-python-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $fullstack-python-color;
 
             &:last-child {
-              margin-bottom: 0;
+              border-bottom: 2px solid $fullstack-python-color;
             }
           }
         }
+      }
 
-        .employment__text {
-          div:last-child {
-            margin-bottom: 0;
+      &[course=web] {
+        border: 3px solid $web-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $web-color;
           }
         }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $web-color;
+
+            &:last-child {
+              border-bottom: 2px solid $web-color;
+            }
+          }
+        }
+      }
+
+      &[course=fullstack-php] {
+        border: 3px solid $fullstack-php-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $fullstack-php-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $fullstack-php-color;
+
+            &:last-child {
+              border-bottom: 2px solid $fullstack-php-color;
+            }
+          }
+        }
+      }
+
+      &[course=frontend] {
+        border: 3px solid $frontend-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $frontend-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $frontend-color;
+
+            &:last-child {
+              border-bottom: 2px solid $frontend-color;
+            }
+          }
+        }
+      }
+
+      &[course=frontend-pro] {
+        border: 3px solid $frontend-pro-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $frontend-pro-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $frontend-pro-color;
+
+            &:last-child {
+              border-bottom: 2px solid $frontend-pro-color;
+            }
+          }
+        }
+      }
+
+      &[course=fullstack-js] {
+        border: 3px solid $fullstack-js-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $fullstack-js-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $fullstack-js-color;
+
+            &:last-child {
+              border-bottom: 2px solid $fullstack-js-color;
+            }
+          }
+        }
+      }
+
+      &[course=php-pro] {
+        border: 3px solid $php-pro-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $php-pro-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $php-pro-color;
+
+            &:last-child {
+              border-bottom: 2px solid $php-pro-color;
+            }
+          }
+        }
+      }
+
+      &[course=c-plus-plus] {
+        border: 3px solid $c-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $c-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $c-color;
+
+            &:last-child {
+              border-bottom: 2px solid $c-color;
+            }
+          }
+        }
+      }
+
+      &[course=android] {
+        border: 3px solid $android-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $android-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $android-color;
+
+            &:last-child {
+              border-bottom: 2px solid $android-color;
+            }
+          }
+        }
+      }
+
+      &[course=ios] {
+        border: 3px solid $ios-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $ios-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $ios-color;
+
+            &:last-child {
+              border-bottom: 2px solid $ios-color;
+            }
+          }
+        }
+      }
+
+      &[course=mobile] {
+        border: 3px solid $mobile-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $mobile-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $mobile-color;
+
+            &:last-child {
+              border-bottom: 2px solid $mobile-color;
+            }
+          }
+        }
+      }
+
+      &[course=flutter] {
+        border: 3px solid $flutter-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $flutter-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $flutter-color;
+
+            &:last-child {
+              border-bottom: 2px solid $flutter-color;
+            }
+          }
+        }
+      }
+
+      &[course=java] {
+        border: 3px solid $java-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $java-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $java-color;
+
+            &:last-child {
+              border-bottom: 2px solid $java-color;
+            }
+          }
+        }
+      }
+
+      &[course=java-pro] {
+        border: 3px solid $java-pro-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $java-pro-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $java-pro-color;
+
+            &:last-child {
+              border-bottom: 2px solid $java-pro-color;
+            }
+          }
+        }
+      }
+
+      &[course=cyber-security] {
+        border: 3px solid $cyber-security-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $cyber-security-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $cyber-security-color;
+
+            &:last-child {
+              border-bottom: 2px solid $cyber-security-color;
+            }
+          }
+        }
+      }
+
+      &[course=devops] {
+        border: 3px solid $devops-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $devops-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $devops-color;
+
+            &:last-child {
+              border-bottom: 2px solid $devops-color;
+            }
+          }
+        }
+      }
+
+      &[course=devops-pro] {
+        border: 3px solid $devops-pro-color;
+
+        .rectangle {
+          div {
+            border-bottom: 65px solid $devops-pro-color;
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            border-top: 2px solid $devops-pro-color;
+
+            &:last-child {
+              border-bottom: 2px solid $devops-pro-color;
+            }
+          }
+        }
+      }
+
+      .rectangle {
+        width: 65px;
+        height: 65px;
+        right: -3px;
+        top: -68px;
+
+        div {
+          border: 65px solid black;
+          border-bottom: 65px solid $python-color;
+          border-left: 65px;
+
+          &[course=fullstack-python] {
+            border-bottom: 65px solid $fullstack-python-color;
+          }
+
+          &[course=web] {
+            border-bottom: 65px solid $web-color;
+          }
+
+          &[course=fullstack-php] {
+            border-bottom: 65px solid $fullstack-php-color;
+          }
+
+          &[course=frontend] {
+            border-bottom: 65px solid $frontend-color;
+          }
+
+          &[course=frontend-pro] {
+            border-bottom: 65px solid $frontend-pro-color;
+          }
+
+          &[course=fullstack-js] {
+            border-bottom: 65px solid $fullstack-js-color;
+          }
+
+          &[course=php-pro] {
+            border-bottom: 65px solid $php-pro-color;
+          }
+
+          &[course=c-plus-plus] {
+            border-bottom: 65px solid $c-color;
+          }
+
+          &[course=android] {
+            border-bottom: 65px solid $android-color;
+          }
+
+          &[course=ios] {
+            border-bottom: 65px solid $ios-color;
+          }
+
+          &[course=mobile] {
+            border-bottom: 65px solid $mobile-color;
+          }
+
+          &[course=flutter] {
+            border-bottom: 65px solid $flutter-color;
+          }
+
+          &[course=java] {
+            border-bottom: 65px solid $java-color;
+          }
+
+          &[course=java-pro] {
+            border-bottom: 65px solid $java-pro-color;
+          }
+
+          &[course=cyber-security] {
+            border-bottom: 65px solid $cyber-security-color;
+          }
+
+          &[course=devops] {
+            border-bottom: 65px solid $devops-color;
+          }
+
+          &[course=devops-pro] {
+            border-bottom: 65px solid $devops-pro-color;
+          }
+        }
+      }
+
+      .content__title {
+        .content__count-item {
+          div {
+            background: black;
+          }
+        }
+      }
+
+      .content__program {
+        .content__program-item {
+          border-top: 2px solid $python-color;
+
+          &:last-child {
+            border-bottom: 2px solid $python-color;
+          }
+
+          .content__program-item-title {
+            cursor: pointer;
+
+            .rotate {
+              transform: rotate(45deg);
+            }
+
+            &:hover {
+              button {
+                color: white;
+                background: black;
+              }
+            }
+
+            button {
+              border: 1px solid black;
+              transition: 0.1s;
+            }
+          }
+
+          li:before {
+            content: '\2022';
+            color: black;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+
+      .content__disclaimer-icon {
+        background: black;
       }
     }
   }
 
   #consultation {
-    background: #60b3ff;
+    background: $python-color;
 
     .consultation__content {
       background: white;
@@ -568,11 +1056,6 @@
 
             &:last-child {
               margin-bottom: 0;
-            }
-
-            &:hover {
-              background: #3D3BFF;
-              color: white;
             }
 
             div {
@@ -672,8 +1155,46 @@
           grid-template-columns: repeat(1, auto);
 
           .employment__stats {
+            width: 90%;
             grid-row: 2/2;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto 30px;
+
+            .employment__stats-title {
+              margin: 0;
+            }
+
+            .employment__stats-item {
+              max-width: 280px;
+            }
           }
+
+          .employment__text {
+            h1 {
+              text-align: center;
+            }
+
+          }
+        }
+
+        .employment__reviews {
+          h1 {
+            text-align: center;
+            margin-left: 0;
+          }
+        }
+      }
+
+      #content {
+        .content__title {
+          .content__subtitle {
+            width: 360px;
+          }
+        }
+
+        .content__disclaimer {
+           width: 500px;
         }
       }
     }
@@ -737,13 +1258,57 @@
         .employment__career-center {
           padding: 0 68px;
 
-          .employment__slide {
+          .employment__career-center-slide {
             width: 100%;
             height: fit-content !important;
             margin: auto auto 30px;
 
             &:last-child {
               margin-bottom: 0;
+            }
+          }
+        }
+
+        .employment__guarantees {
+          .employment__stats {
+            width: 100%;
+          }
+        }
+
+        .employment__reviews {
+          .employment__reviews-slide {
+            margin: 0 auto 30px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      #content {
+        .content__title {
+          flex-direction: column;
+
+          h1 {
+            text-align: center;
+            margin-bottom: 30px;
+          }
+
+          .content__subtitle {
+            width: 90%;
+            margin: auto;
+
+            p:first-child {
+              text-align: center;
+            }
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            .content__program-item-title {
+              cursor: none;
             }
           }
         }
@@ -992,6 +1557,201 @@
         .employment__career-center {
           padding: 0 10px;
         }
+
+        .employment__guarantees {
+          .employment__text {
+            h1 {
+              font-size: 37px;
+            }
+          }
+
+          .employment__stats {
+            flex-direction: column;
+
+            .employment__stats-title {
+              text-align: center;
+              margin-bottom: 20px;
+            }
+
+            .employment__stats-item {
+              max-width: 100%;
+            }
+          }
+        }
+
+        .employment__reviews {
+          .employment__reviews-slide {
+            width: 380px;
+            height: 250px;
+            padding: 20px;
+
+            img {
+              width: 45px;
+              height: 45px;
+            }
+
+            p {
+              font-size: 15px;
+            }
+
+            div:first-child {
+              h3 {
+                font-size: 18px;
+                margin-bottom: 6px;
+              }
+
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+
+      #content {
+        padding: 20px 50px;
+
+        .rectangle {
+          width: 50px;
+          height: 50px;
+          top: -53px;
+
+          div {
+            border: 50px solid black;
+            border-bottom: 50px solid $python-color;
+            border-left: 50px;
+
+            &[course=fullstack-python] {
+              border-bottom: 50px solid $fullstack-python-color;
+            }
+
+            &[course=web] {
+              border-bottom: 50px solid $web-color;
+            }
+
+            &[course=fullstack-php] {
+              border-bottom: 50px solid $fullstack-php-color;
+            }
+
+            &[course=frontend] {
+              border-bottom: 50px solid $frontend-color;
+            }
+
+            &[course=frontend-pro] {
+              border-bottom: 50px solid $frontend-pro-color;
+            }
+
+            &[course=fullstack-js] {
+              border-bottom: 50px solid $fullstack-js-color;
+            }
+
+            &[course=php-pro] {
+              border-bottom: 50px solid $php-pro-color;
+            }
+
+            &[course=c-plus-plus] {
+              border-bottom: 50px solid $c-color;
+            }
+
+            &[course=android] {
+              border-bottom: 50px solid $android-color;
+            }
+
+            &[course=ios] {
+              border-bottom: 50px solid $ios-color;
+            }
+
+            &[course=mobile] {
+              border-bottom: 50px solid $mobile-color;
+            }
+
+            &[course=flutter] {
+              border-bottom: 50px solid $flutter-color;
+            }
+
+            &[course=java] {
+              border-bottom: 50px solid $java-color;
+            }
+
+            &[course=java-pro] {
+              border-bottom: 50px solid $java-pro-color;
+            }
+
+            &[course=cyber-security] {
+              border-bottom: 50px solid $cyber-security-color;
+            }
+
+            &[course=devops] {
+              border-bottom: 50px solid $devops-color;
+            }
+
+            &[course=devops-pro] {
+              border-bottom: 50px solid $devops-pro-color;
+            }
+          }
+        }
+
+        .content__title {
+          h1 {
+            font-size: 40px;
+          }
+
+          .content__subtitle {
+            p:first-child {
+              font-size: 17px;
+            }
+
+            .content__counts {
+              grid-template-columns: repeat(1, auto);
+
+              .content__count-item {
+                margin: auto;
+
+                div {
+                  font-size: 15px;
+                }
+
+                p {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            .content__program-item-title {
+              font-size: 18px;
+
+              h1 {
+                max-width: 250px;
+              }
+            }
+          }
+
+          .content__program-item-content {
+            p {
+              width: 95%;
+            }
+          }
+
+          li {
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .content__disclaimer {
+          width: fit-content;
+          flex-direction: column;
+          margin: 30px auto auto;
+          text-align: center;
+
+          div {
+            margin-bottom: 10px;
+          }
+        }
       }
     }
 
@@ -1200,7 +1960,7 @@
             font-size: 28px;
           }
 
-          .employment__slide {
+          .employment__career-center-slide {
             h3 {
               font-size: 20px;
             }
@@ -1216,6 +1976,99 @@
 
             p {
               font-size: 16px;
+            }
+          }
+        }
+
+        .employment__guarantees {
+          .employment__text {
+            h1 {
+              font-size: 32px;
+            }
+
+            h3 {
+              font-size: 18px;
+            }
+
+            p {
+              font-size: 15px;
+            }
+          }
+
+          .employment__stats {
+            .employment__stats-title {
+              h1 {
+                font-size: 40px;
+              }
+
+              h3 {
+                font-size: 18px;
+              }
+            }
+
+            .employment__stats-item {
+              h1 {
+                font-size: 28px;
+              }
+
+              p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .employment__reviews {
+          h1 {
+              font-size: 28px;
+          }
+
+          .employment__reviews-slide {
+            width: 340px;
+            height: 220px;
+            padding: 15px;
+
+            img {
+              width: 40px;
+              height: 40px;
+              margin-right: 15px;
+            }
+
+            p {
+              font-size: 14px;
+            }
+
+            div:first-child {
+              margin-bottom: 10px;
+
+              h3 {
+                font-size: 16px;
+                margin-bottom: 5px;
+              }
+
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      #content {
+        .content__title {
+          h1 {
+            font-size: 35px;
+          }
+
+          .content__subtitle {
+            p:first-child {
+              font-size: 16px;
+            }
+
+            .content__counts {
+              .content__count-item:first-child {
+                margin-bottom: 10px;
+              }
             }
           }
         }
@@ -1393,7 +2246,7 @@
         }
 
         .employment__career-center {
-          .employment__slide {
+          .employment__career-center-slide {
             h3 {
               font-size: 17px;
             }
@@ -1410,6 +2263,221 @@
             p {
               font-size: 15px;
             }
+          }
+        }
+
+        .employment__guarantees {
+          .employment__text {
+            h1 {
+              font-size: 27px;
+            }
+
+            h3 {
+              font-size: 17px;
+            }
+
+            p {
+              font-size: 14px;
+            }
+          }
+
+          .employment__stats {
+            .employment__stats-title {
+              h1 {
+                font-size: 38px;
+              }
+
+              h3 {
+                font-size: 16px;
+              }
+            }
+
+            .employment__stats-item {
+              h1 {
+                font-size: 26px;
+              }
+            }
+          }
+        }
+
+        .employment__reviews {
+          h1 {
+            font-size: 24px;
+          }
+
+          .employment__reviews-slide {
+            width: 290px;
+            height: 200px;
+
+            p {
+              font-size: 13px;
+            }
+
+            div:first-child {
+              margin-bottom: 8px;
+
+              h3 {
+                font-size: 15px;
+                margin-bottom: 0;
+              }
+
+              p {
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+
+      #content {
+        padding: 20px 30px;
+
+        .rectangle {
+          width: 30px;
+          height: 30px;
+          top: -33px;
+
+          div {
+            border: 30px solid black;
+            border-bottom: 30px solid $python-color;
+            border-left: 30px;
+
+            &[course=fullstack-python] {
+              border-bottom: 30px solid $fullstack-python-color;
+            }
+
+            &[course=web] {
+              border-bottom: 30px solid $web-color;
+            }
+
+            &[course=fullstack-php] {
+              border-bottom: 30px solid $fullstack-php-color;
+            }
+
+            &[course=frontend] {
+              border-bottom: 30px solid $frontend-color;
+            }
+
+            &[course=frontend-pro] {
+              border-bottom: 30px solid $frontend-pro-color;
+            }
+
+            &[course=fullstack-js] {
+              border-bottom: 30px solid $fullstack-js-color;
+            }
+
+            &[course=php-pro] {
+              border-bottom: 30px solid $php-pro-color;
+            }
+
+            &[course=c-plus-plus] {
+              border-bottom: 30px solid $c-color;
+            }
+
+            &[course=android] {
+              border-bottom: 30px solid $android-color;
+            }
+
+            &[course=ios] {
+              border-bottom: 30px solid $ios-color;
+            }
+
+            &[course=mobile] {
+              border-bottom: 30px solid $mobile-color;
+            }
+
+            &[course=flutter] {
+              border-bottom: 30px solid $flutter-color;
+            }
+
+            &[course=java] {
+              border-bottom: 30px solid $java-color;
+            }
+
+            &[course=java-pro] {
+              border-bottom: 30px solid $java-pro-color;
+            }
+
+            &[course=cyber-security] {
+              border-bottom: 30px solid $cyber-security-color;
+            }
+
+            &[course=devops] {
+              border-bottom: 30px solid $devops-color;
+            }
+
+            &[course=devops-pro] {
+              border-bottom: 30px solid $devops-pro-color;
+            }
+          }
+        }
+
+        .content__title {
+          h1 {
+            font-size: 32px;
+          }
+
+          .content__subtitle {
+            p:first-child {
+              font-size: 15px;
+            }
+
+            .content__counts {
+              .content__count-item {
+                width: 170px;
+
+                div {
+                  width: 55px;
+                  height: 35px;
+                  font-size: 14px;
+                }
+
+                p {
+                  font-size: 14px;
+                }
+
+                &:first-child {
+                  margin-bottom: 10px;
+                }
+              }
+            }
+          }
+        }
+
+        .content__program {
+          .content__program-item {
+            .content__program-item-title {
+              font-size: 16px;
+
+              h1 {
+                max-width: 200px;
+              }
+
+              button {
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
+
+          li {
+            font-size: 15px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .content__disclaimer {
+          .content__disclaimer-icon {
+            width: 35px;
+            height: 35px;
+          }
+
+          h3 {
+            font-size: 17px;
+          }
+
+          p {
+            font-size: 14px;
           }
         }
       }

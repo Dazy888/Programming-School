@@ -19,22 +19,22 @@ export function Employment({classNames = [''], reviewsId, changeReviewsId, chang
     useEffect(() => {
         let left = margin
 
-        const careerCenter = careerCenterRef.current
+        // const careerCenter = careerCenterRef.current
         const reviews = reviewsRef.current
 
-        const careerCenterButtons = careerCenter.querySelectorAll('.controls__btn')
-        const careerCenterSlider = careerCenter.querySelector('.career-center__swiper')
-
-        if (document.documentElement.clientWidth < 1300) {
-            careerCenterButtons[0].onclick = () => careerCenterSlider.style.transform = 'translateX(0px)'
-            careerCenterButtons[1].onclick = () => careerCenterSlider.style.transform = 'translateX(-750px)'
-        } else if(document.documentElement.clientWidth < 1515) {
-            careerCenterButtons[0].onclick = () => careerCenterSlider.style.transform = 'translateX(165px)'
-            careerCenterButtons[1].onclick = () => careerCenterSlider.style.transform = 'translateX(-570px)'
-        } else {
-            careerCenterButtons[0].onclick = () => careerCenterSlider.style.transform = 'translateX(165px)'
-            careerCenterButtons[1].onclick = () => careerCenterSlider.style.transform = 'translateX(-500px)'
-        }
+        // const careerCenterButtons = careerCenter.querySelectorAll('.controls__btn')
+        // const careerCenterSlider = careerCenter.querySelector('.career-center__swiper')
+        //
+        // if (document.documentElement.clientWidth < 1300) {
+        //     careerCenterButtons[0].onclick = () => careerCenterSlider.style.transform = 'translateX(0px)'
+        //     careerCenterButtons[1].onclick = () => careerCenterSlider.style.transform = 'translateX(-750px)'
+        // } else if(document.documentElement.clientWidth < 1515) {
+        //     careerCenterButtons[0].onclick = () => careerCenterSlider.style.transform = 'translateX(165px)'
+        //     careerCenterButtons[1].onclick = () => careerCenterSlider.style.transform = 'translateX(-570px)'
+        // } else {
+        //     careerCenterButtons[0].onclick = () => careerCenterSlider.style.transform = 'translateX(165px)'
+        //     careerCenterButtons[1].onclick = () => careerCenterSlider.style.transform = 'translateX(-500px)'
+        // }
 
         const reviewsButtons = reviews.querySelectorAll('.controls__btn')
         const reviewsSlider = reviews.querySelector('.swiper-wrapper')
@@ -87,7 +87,7 @@ export function Employment({classNames = [''], reviewsId, changeReviewsId, chang
                     <img className={'photographs__very-small youla'} alt={'Img'} src={'https://248006.selcdn.ru/LandGen/blocks/work/v4/logo-youla-sm.png'}/>
                 </div>
             </div>
-            <div className={'employment__career-center'} ref={careerCenterRef}>
+            {/*<div className={'employment__career-center'} ref={careerCenterRef}>
                 <h1 className={'title'}>How the Career Center can help you:</h1>
                 <div className={'career-center__swiper flex-property-set_between'}>
                     <div className={'career-center__slide'}>
@@ -142,7 +142,7 @@ export function Employment({classNames = [''], reviewsId, changeReviewsId, chang
                     </div>
                 </div>
                 <SliderControls className={classNames[2]} length={2} id={careerCenterId} changeId={changeCareerCenterId}/>
-            </div>
+            </div>*/}
             <div className={'employment__guarantees'}>
                 <div className={`guarantees__users ${classNames[0]}`}>
                     <div className={'users__title'}>

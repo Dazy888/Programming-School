@@ -26,30 +26,42 @@ interface MarketI {
 export interface ForWhoI {
     imgSrc: string
     subtitle: string
-    text: string,
+    text: string
 }
 
-export interface SkillsI {
+export interface SkillI {
     title?: string
     text: string
 }
 
-export interface ProjectsI {
-    photographs: Array<string>
-    titles: Array<string>
-    texts: Array<string>
-    className?: string
+export interface ProjectI {
+    imgSrc: string
+    title: string
+    text?: string
+    firstParagraph?: string
+    listItems?: string[]
+    secondParagraph?: string
+}
+
+export interface CountI {
+    number: string
+    text: string
+}
+
+export interface ProgramItemI {
+    title: string
+    number: number
+    listItems?: string[]
+    text?: string
+    subtitle?: string
 }
 
 export interface ContentI {
     title: {
         text: string
-        numbers: Array<string>
-        descriptions: Array<string>
+        counts: CountI[]
     }
-    courses: {
-        titles: Array<string>
-    }
+    programItems: ProgramItemI[]
 }
 
 export interface ReviewsI {
@@ -77,8 +89,8 @@ export interface CourseI {
         header: HeaderI
         market: MarketI
         for_who: ForWhoI[]
-        skills: SkillsI[]
-        projects: ProjectsI
+        skills: SkillI[]
+        projects: ProjectI[]
         content: ContentI
         reviews: ReviewsI
         resume: CvI

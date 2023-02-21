@@ -16,7 +16,8 @@ import { Market } from "@/components/courses/course/sections/market/Market"
 import { ForWho } from "@/components/courses/course/sections/for-who/ForWho"
 import { Skills } from "@/components/courses/course/sections/skills/Skills"
 import { Consultation } from "@/components/courses/course/sections/consultation/Consultation"
-import {Employment} from "@/components/courses/course/sections/employment/Employment";
+import { Employment } from "@/components/courses/course/sections/employment/Employment"
+import {Content} from "@/components/courses/course/sections/content/Content";
 
 const Course = () => {
     const dispatch = useDispatch()
@@ -31,6 +32,7 @@ const Course = () => {
     const header = course.course.header
     const market = course.course.market
     const for_who = course.course.for_who
+    const content = course.course.content
 
     return(
         <NavigationLayout>
@@ -47,7 +49,8 @@ const Course = () => {
                 </div>
                 <Consultation courseAttr={courseAttr}/>
                 <div className={`${styles['course__container']} mx-auto px-2`}>
-                    <Employment courseAttr={courseAttr}/>
+                    <Employment/>
+                    <Content programItems={content.programItems} countItems={content.title.counts} titleText={content.title.text} courseAttr={courseAttr}/>
                 </div>
             </div>
         </NavigationLayout>

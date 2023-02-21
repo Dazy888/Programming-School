@@ -10,9 +10,9 @@ interface Props {
     isSlider?: boolean
 }
 
-const SlideComponent: React.FC<Props> = ({ number, subtitle, hiddenText, title, bgColor = '', isSlider = true }) => {
+const CareerCenterSlideComponent: React.FC<Props> = ({ number, subtitle, hiddenText, title, bgColor = '', isSlider = true }) => {
     return(
-        <div className={`${styles['employment__slide']} ${bgColor} p-7 cursor-pointer rounded-3xl relative`}>
+        <div className={`${styles['employment__career-center-slide']} ${bgColor} p-7 cursor-pointer rounded-3xl relative`}>
             {isSlider
                 ?   <>
                         <span className={'w-11 h-11 rounded-full flex justify-center items-center'}>
@@ -38,4 +38,4 @@ const SlideComponent: React.FC<Props> = ({ number, subtitle, hiddenText, title, 
     )
 }
 
-export const Slide = React.memo(SlideComponent)
+export const CareerCenterSlide = React.memo(CareerCenterSlideComponent)
