@@ -63,6 +63,9 @@ const Course = () => {
                     <Questions questions={course.course.questions}/>
                 </div>
             </div>
+            <div>
+
+            </div>
         </NavigationLayout>
     )
 }

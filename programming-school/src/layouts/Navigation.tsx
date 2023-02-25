@@ -10,12 +10,15 @@ interface Props {
 const NavigationLayoutComponent: React.FC<Props> = ({ children }) => {
     return(
         <div id={'wrapper'}>
-            <div className={`${styles['navigation']} flex items-center justify-between py-10 px-20`}>
+            <header className={`${styles['navigation']} flex items-center justify-between py-10 px-20`}>
                 <Image height={40} width={40} src={"/navigation/logo.png"} alt={"Logo"}/>
                 <NavigationLinks/>
                 <button className={`w-44 h-11 rounded-full text-base text-white`}>Go to office</button>
-            </div>
+            </header>
             {children}
+            <footer className={'py-8 text-center mt-12 text-lg text-white px-5'}>
+                <p>We use cookies to personalize services and improve the user experience of the site. If you do not agree to their use, please change your browser settings.</p>
+            </footer>
         </div>
     )
 }

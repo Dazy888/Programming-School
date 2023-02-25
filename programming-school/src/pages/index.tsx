@@ -18,7 +18,6 @@ const Index = () => {
             <div id={styles['home']}>
                 <Header/>
                 <Main/>
-                <Footer/>
             </div>
         </NavigationLayout>
     )
