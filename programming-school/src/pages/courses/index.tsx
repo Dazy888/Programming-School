@@ -2,7 +2,7 @@ import React from "react"
 import Head from "next/head"
 import { useSelector } from "react-redux"
 // Layouts
-import { NavigationLayout } from "@/layouts/Navigation"
+import { NavigationLayout } from "@/layouts/pageFrame-layout"
 // Styles
 import styles from '@/styles/Courses.module.scss'
 // Components

@@ -3,15 +3,14 @@ import Head from "next/head"
 // Styles
 import styles from '@/styles/Home.module.scss'
 // Layout
-import { NavigationLayout } from "@/layouts/Navigation"
+import { PageFrame } from "@/layouts/pageFrame-layout"
 // Components
 import { Main } from "@/components/home/main/Main"
 import { Header } from "@/components/home/header/Header"
-import { Footer } from "@/components/home/footer/Footer"
 
 const Index = () => {
     return (
-        <NavigationLayout>
+        <PageFrame>
             <Head>
                 <title>Home</title>
             </Head>
@@ -19,7 +18,7 @@ const Index = () => {
                 <Header/>
                 <Main/>
             </div>
-        </NavigationLayout>
+        </PageFrame>
     )
 }
 

@@ -3,7 +3,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import { useDispatch, useSelector } from "react-redux"
 // Layout
-import { NavigationLayout } from "@/layouts/Navigation"
+import { NavigationLayout } from "@/layouts/pageFrame-layout"
 // Styles
 import styles from '@/styles/Course.module.scss'
 // Store

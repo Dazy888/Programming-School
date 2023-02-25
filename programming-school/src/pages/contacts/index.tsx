@@ -6,7 +6,7 @@ import styles from '@/styles/Contacs.module.scss'
 import { TitleText } from "@/components/common/TitleText"
 import { Form } from "@/components/contacts/Form"
 // Layouts
-import { NavigationLayout } from "@/layouts/Navigation"
+import { NavigationLayout } from "@/layouts/pageFrame-layout"
 import {Manager} from "@/components/contacts/Manager";
 
 const Contacts = () => {
