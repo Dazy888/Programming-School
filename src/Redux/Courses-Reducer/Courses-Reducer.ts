@@ -188,7 +188,7 @@ const initialState = {
         job_name: 'Java-developer PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_57c9d80b2b75745579f68b99bdd0e2c0516a955f.webp',
         time: '2 years',
-        classNames: ['light-purple-back', 'light-purple-border', 'light-purple-color', 'light-purple-triangle', 'light-purple-content-course'],
+        classNames: ['light-purple-back', 'light-purple-border', 'light-purple-color', 'light-purple-triangle', 'light-purple-program-course'],
         path: 'java-pro',
 
         course: {
@@ -324,7 +324,7 @@ const initialState = {
         job_name: 'Web-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_1483b955a743f9098806cbe6c6d78d306a210b65.webp',
         time: '2 years',
-        classNames: ['purple-back', 'purple-border', 'purple-color', 'purple-triangle', 'purple-content-course'],
+        classNames: ['purple-back', 'purple-border', 'purple-color', 'purple-triangle', 'purple-program-course'],
         path: 'web',
 
         course: {
@@ -446,7 +446,7 @@ const initialState = {
         job_name: 'C++ developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_7d5b8e852952b4fc68ca058c53a3b9570fd4f3d7.webp',
         time: '1 year',
-        classNames: ['light-blue-back', 'light-blue-border', 'light-blue-color', 'light-blue-triangle', 'light-blue-content-course'],
+        classNames: ['light-blue-back', 'light-blue-border', 'light-blue-color', 'light-blue-triangle', 'light-blue-program-course'],
         path: 'c-plus-plus-plus-plus-plus-plus',
 
         course: {
@@ -554,7 +554,7 @@ const initialState = {
         job_name: 'Python Fullstack-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_43712003895f94c163a288e6e9e0e00bbf671110.webp',
         time: '1 year',
-        classNames: ['pink-back', 'pink-border', 'pink-color', 'pink-triangle', 'pink-content-course'],
+        classNames: ['pink-back', 'pink-border', 'pink-color', 'pink-triangle', 'pink-program-course'],
         path: 'python-fullstack',
 
         course: {
@@ -623,8 +623,8 @@ const initialState = {
                 course: `Course "Profession Python Fullstack-developer"`,
                 texts: [
                     'Very well designed curriculum. Curators are always ready to help and suggest the best solution to problems',
-                    'Skillbox is the best educational platform: cool speakers and curators, very good feedback, understandable and high-quality educational content',
-                    'Excellent presentation of information. The volume of new material in each module is such that it is neither too much nor too little. The content of the modules is constantly updated'
+                    'Skillbox is the best educational platform: cool speakers and curators, very good feedback, understandable and high-quality educational program',
+                    'Excellent presentation of information. The volume of new material in each module is such that it is neither too much nor too little. The program of the modules is constantly updated'
                 ]
             },
             resume: {
@@ -656,7 +656,7 @@ const initialState = {
         job_name: 'Android-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_763111395fcf224a8e694cdfbf3bb3d198914536.webp',
         time: '22 months',
-        classNames: ['light-orange-back', 'light-orange-border', 'light-orange-color', 'light-orange-triangle', 'light-orange-content-course'],
+        classNames: ['light-orange-back', 'light-orange-border', 'light-orange-color', 'light-orange-triangle', 'light-orange-program-course'],
         path: 'android',
 
         course: {
@@ -718,7 +718,7 @@ const initialState = {
                     'Create a program that will track the movement of trucks with sorted goods, distribute car flows between loading and unloading points, and warn if the goods in the truck exceed the carrying capacity',
                     'Develop an application for a photo sharing service where registered users can view photos, like them and download them',
                     'Create an app for runners and cyclists that allows you to track your activity and weight and get workout reminders',
-                    'Develop an application that allows users to post links, find interesting content and discuss it.'
+                    'Develop an application that allows users to post links, find interesting program and discuss it.'
                 ],
             },
             content: {
@@ -768,7 +768,7 @@ const initialState = {
         job_name: 'C# developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_9d6b6453a2e5702f3848771f0bb79eda7566a530.webp',
         time: '1 year',
-        classNames: ['blue-back', 'blue-border', 'blue-color', 'blue-triangle', 'blue-content-course'],
+        classNames: ['blue-back', 'blue-border', 'blue-color', 'blue-triangle', 'blue-program-course'],
         path: 'c-plus-plus-plus-plus-sharp',
 
         course: {
@@ -853,7 +853,7 @@ const initialState = {
         job_name: 'IOS-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_b0d52a8c5100ff4bb126ca5fc03cd1da32805b9b.webp',
         time: '1 year',
-        classNames: ['blue-back', 'blue-border', 'blue-color', 'blue-triangle', 'blue-content-course'],
+        classNames: ['blue-back', 'blue-border', 'blue-color', 'blue-triangle', 'blue-program-course'],
         path: 'ios',
 
         course: {
@@ -942,7 +942,7 @@ const initialState = {
                     'Will I definitely get a job?',
                 ],
                 texts: [
-                    'It will turn out. When we develop the content of the courses, we understand that the classes should be focused on those who want to learn programming from scratch. Therefore, speakers explain each topic from the most basic things - or you can always close unanswered questions through communication with the curator or in the course chat',
+                    'It will turn out. When we develop the program of the courses, we understand that the classes should be focused on those who want to learn programming from scratch. Therefore, speakers explain each topic from the most basic things - or you can always close unanswered questions through communication with the curator or in the course chat',
                     'Your Mac must also have at least 4 GB of memory and 12.5 GB of free disk space. Either up to 18.5 GB of free space when upgrading from OS X Yosemite or earlier',
                     'You will write code in the Swift 5 programming language and work in the Xcode 12.4 environment. Xcode 12.4 requires a Mac running macOS Catalina 10.15.4 or later',
                     'It is desirable to know English. In the course, we give links to the official Swift documentation, and it is completely written in English. If you are new to the language, Google Translate will help you at first, but it is better to study English additionally - any programmer needs it',
@@ -955,7 +955,7 @@ const initialState = {
         job_name: 'PHP Fullstack-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_62f01151670d0e3f00a7099b2501ac2e043a2314.webp',
         time: '1 year',
-        classNames: ['light-dark-blue-back', 'light-dark-blue-border', 'light-dark-blue-color', 'light-dark-blue-triangle', 'light-dark-blue-content-course'],
+        classNames: ['light-dark-blue-back', 'light-dark-blue-border', 'light-dark-blue-color', 'light-dark-blue-triangle', 'light-dark-blue-program-course'],
         path: 'php-fullstack',
 
         course: {
@@ -1048,7 +1048,7 @@ const initialState = {
         job_name: 'Mobile-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_b21b1ae4f5baf79bc47f29ca1ab1ef7ad0d3b615.webp',
         time: '2 years',
-        classNames: ['light-pink-back', 'light-pink-border', 'light-pink-color', 'light-pink-triangle', 'light-pink-content-course'],
+        classNames: ['light-pink-back', 'light-pink-border', 'light-pink-color', 'light-pink-triangle', 'light-pink-program-course'],
         path: 'mobile',
 
         course: {
@@ -1140,7 +1140,7 @@ const initialState = {
         job_name: 'Java-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_477ae814606ca5e5256c683921f40d2d7f29bad4.webp',
         time: '9 months',
-        classNames: ['orange-back', 'orange-border', 'orange-color', 'orange-triangle', 'orange-content-course'],
+        classNames: ['orange-back', 'orange-border', 'orange-color', 'orange-triangle', 'orange-program-course'],
         path: 'java',
 
         course: {
@@ -1219,7 +1219,7 @@ const initialState = {
                 course: 'Course "Profession Java-developer"',
                 texts: [
                     'I like the feedback from the curators, updating materials and a lot of additional useful information for self-study',
-                    'I like the opportunity to study at any time, the structure of the course and the reworked content of the program, the good presentation of the material on video and the response time of the curator - no more than one day. At the same time, I would like to be able to submit several works at once within the same block',
+                    'I like the opportunity to study at any time, the structure of the course and the reworked program of the program, the good presentation of the material on video and the response time of the curator - no more than one day. At the same time, I would like to be able to submit several works at once within the same block',
                     'There is a lot of interesting material in the course. I try to go through it carefully and study all the additional information on the topic. It\'s great that you can test the programs in practical tasks with autotests and figure it out yourself',
                     'Lots of practice, lots of topics to explore. Feedback from the curator. Positive attitude, beautiful and comfortable design. In general, it is difficult, but interesting',
                     'I liked the approach to learning. I myself choose the pace of study and how much time per week to devote to it',
@@ -1255,7 +1255,7 @@ const initialState = {
         job_name: 'Frontend-developer from zero to PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_af62204878d4eba3a075419b219ff11849d0bbc3.webp',
         time: '2 years',
-        classNames: ['grey-back', 'grey-border', 'grey-color', 'grey-triangle', 'grey-content-course'],
+        classNames: ['grey-back', 'grey-border', 'grey-color', 'grey-triangle', 'grey-program-course'],
         path: 'frontend-full',
 
         course: {
@@ -1332,7 +1332,7 @@ const initialState = {
         job_name: 'Frontend-developer PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_98a708fd2012f5033663fece150133eac4387673.webp',
         time: '1 year',
-        classNames: ['light-green-back', 'light-green-border', 'light-green-color', 'light-green-triangle', 'light-green-content-course'],
+        classNames: ['light-green-back', 'light-green-border', 'light-green-color', 'light-green-triangle', 'light-green-program-course'],
         path: 'frontend-pro',
 
         course: {
@@ -1426,7 +1426,7 @@ const initialState = {
         job_name: 'Javascript Fullstack-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_9567df25c360d949e492c6afcb047f9878baa2b3.webp',
         time: '1 year',
-        classNames: ['yellow-back', 'yellow-border', 'yellow-color', 'yellow-triangle', 'yellow-content-course'],
+        classNames: ['yellow-back', 'yellow-border', 'yellow-color', 'yellow-triangle', 'yellow-program-course'],
         path: 'javascript-fullstack',
 
         course: {
@@ -1540,7 +1540,7 @@ const initialState = {
         job_name: 'PHP-developer from zero to PRO',
         main_img: 'https://248006.selcdn.ru/LandGen/desktop_ef69df0ff2b047f7d37fea27a790dd8187e4404a.webp',
         time: '1 year',
-        classNames: ['light-yellow-back', 'light-yellow-border', 'light-yellow-color', 'light-yellow-triangle', 'light-yellow-content-course'],
+        classNames: ['light-yellow-back', 'light-yellow-border', 'light-yellow-color', 'light-yellow-triangle', 'light-yellow-program-course'],
         path: 'php-pro',
 
         course: {
@@ -1626,7 +1626,7 @@ const initialState = {
         job_name: 'Flutter-developer',
         main_img: 'https://248006.selcdn.ru/LandGen/phone_24ac61b9f3b96df7e1c5263ebfe4573425addfd0.png',
         time: '14 months',
-        classNames: ['grey-back', 'grey-border', 'grey-color', 'grey-triangle', 'grey-content-course'],
+        classNames: ['grey-back', 'grey-border', 'grey-color', 'grey-triangle', 'grey-program-course'],
         path: 'flutter',
 
         course: {

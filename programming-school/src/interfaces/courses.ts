@@ -29,7 +29,7 @@ export interface ForWhoI {
     text: string
 }
 
-export interface SkillI {
+interface SkillI {
     title?: string
     text: string
 }
@@ -56,7 +56,7 @@ export interface ProgramItemI {
     subtitle?: string
 }
 
-export interface ContentI {
+interface ProgramI {
     title: {
         text: string
         counts: CountI[]
@@ -64,22 +64,31 @@ export interface ContentI {
     programItems: ProgramItemI[]
 }
 
-export interface ReviewsI {
-    user_data: Array<string>
-    course: string
-    texts: Array<string>
-    letters: Array<string>
+export interface TeacherI {
+    imgSrc: string
+    fullName: string
+    text: string
+    additionalInfo?: string[]
 }
 
 export interface CvI {
     salary: string
-    texts: Array<string>
-    certificate: string
+    skills: string[]
+    projects: string[]
+    tools: string[]
 }
 
-export interface QuestionsI {
-    titles: Array<string>
-    texts: Array<string>
+export interface TermI {
+    term: string
+    text: string
+}
+
+export interface QuestionI {
+    title: string
+    text?: string
+    texts?: string[],
+    terms?: TermI[]
+    listItems?: string[]
 }
 
 export interface CourseI {
@@ -90,11 +99,11 @@ export interface CourseI {
         market: MarketI
         for_who: ForWhoI[]
         skills: SkillI[]
+        program: ProgramI
         projects: ProjectI[]
-        content: ContentI
-        reviews: ReviewsI
-        resume: CvI
-        questions: QuestionsI
+        teachers: TeacherI[]
+        cv: CvI
+        questions: QuestionI[]
     }
 }
 

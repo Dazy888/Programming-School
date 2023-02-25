@@ -18,6 +18,28 @@
   opacity: 0.9;
 }
 
+.ReactModal__Overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent !important;
+
+  img {
+    width: 155px;
+    height: 180px;
+  }
+
+  li:before {
+    content: "•";
+    color: black;
+    margin-right: 5px;
+  }
+
+  button {
+    background: #EDECEA;
+  }
+}
+
 .error-text {
   position: absolute;
   top: -26px;
@@ -51,11 +73,67 @@
     right: 130px;
     font-size: 18px;
   }
+
+  .ReactModal__Overlay {
+    .ReactModal__Content {
+      padding: 30px 50px !important;
+    }
+
+    img {
+      width: 120px;
+      height: 150px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    li, p {
+      font-size: 16px;
+    }
+
+    button {
+      width: 35px;
+      height: 35px;
+
+      i {
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 @media (max-width: 375px) {
   .error-icon {
     right: 115px;
     font-size: 18px;
+  }
+
+  .ReactModal__Overlay {
+    .ReactModal__Content {
+      padding: 30px 40px !important;
+    }
+
+    img {
+      width: 100px;
+      height: 130px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    li, p {
+      font-size: 15px;
+    }
+
+    button {
+      width: 30px;
+      height: 30px;
+
+      i {
+        font-size: 18px;
+      }
+    }
   }
 }

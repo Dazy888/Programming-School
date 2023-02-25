@@ -11,7 +11,7 @@ class TitleTextItem {
     }
 }
 
-class CoursesReducer {
+class TextItem {
     text: string
 
     constructor(text: string) {
@@ -55,6 +55,13 @@ class Count {
     }
 }
 
+function ProgramItem(info: any, number: number) {
+    return {
+        ...info,
+        number
+    }
+}
+
 class Project {
     imgSrc: string
     title: string
@@ -63,6 +70,52 @@ class Project {
     constructor(imgSrc: string, title: string, text: string) {
         this.imgSrc = imgSrc
         this.title = title
+        this.text = text
+    }
+}
+
+class Teacher {
+    imgSrc: string
+    fullName: string
+    text: string
+
+    constructor(imgSrc: string, fullName: string, text: string) {
+        this.imgSrc = imgSrc
+        this.fullName = fullName
+        this.text = text
+    }
+}
+
+class ExtendedTeacher {
+    imgSrc: string
+    fullName: string
+    text: string
+    additionalInfo: string[]
+
+    constructor(imgSrc: string, fullName: string, text: string, additionalInfo: string[]) {
+        this.imgSrc = imgSrc
+        this.fullName = fullName
+        this.text = text
+        this.additionalInfo = additionalInfo
+    }
+}
+
+class Question {
+    title: string
+    text: string
+
+    constructor(title: string, text: string) {
+        this.title = title
+        this.text = text
+    }
+}
+
+class Term {
+    term: string
+    text: string
+
+    constructor(term: string, text: string) {
+        this.term = term
         this.text = text
     }
 }
@@ -96,7 +149,7 @@ const commonItems = {
         devopsInfrastructure: new TitleTextItem('Manage infrastructure like code', 'Learn to create, modify and version environments with Terraform and Ansible'),
         devopsMonitoring: new TitleTextItem('Set up monitoring', 'You will collect metrics and logs using Prometheus and the elk stack, build convenient dashboards in Grafana. Learn about incident handling and feedback systems')
     },
-    content: {
+    program: {
         pythonBasic_1: {
             title: 'Fundamentals of Python. Part 1',
             listItems: [
@@ -286,6 +339,121 @@ const commonItems = {
                 'prepare documentation', 'plan infrastructure development'
             ],
         }
+    },
+    teachers: {
+        krotov: new Teacher('/courses/course/teachers/python/4.png', 'Sergey Krotov', 'Lead Software Engineer. Work experience - more than 5 years'),
+        shulaev: new Teacher('/courses/course/teachers/python/3.png', 'Andrey Shulaev', 'Lead Software Engineer. Work experience - more than 3 years'),
+        kornienko: new Teacher('/courses/course/teachers/web/1.png', 'Sergey Kornienko', 'Frontend teamlead at Prequel Inc. Over 20 years in development'),
+        vasyanovich: new ExtendedTeacher('/courses/course/teachers/web/2.png', 'Maksim Vasyanovich', 'Layout designer at Lenta, mentor of the Web Layout block. Programming for over 6 years',
+            ['2016–2021. Freelance layout designer. Created more than 50 commercial projects', 'Since 2021 — layout designer at Lenta', 'Leads the MaxGraph YouTube channel, talks about front-end development']
+        ),
+        tiunov: new ExtendedTeacher('/courses/course/teachers/web/3.png', 'Timofei Tiunov', 'System architect at SberMegaMarket. 10 years of experience in web development',
+            [
+                'Author of JavaScript courses', 'Member of the program committee of the Frontendconf conference', '2011–2012. Web Developer at OUTSIDE. Developed a system for online synchronization of data from car dealer websites',
+                `2013–2016. Leading web developer at the agency "Freedom Island". Worked on websites for the company's clients and internal projects`,
+                '2016–2017. Teamlead in "Delovik". Responsible for all development in a startup. Together with the team, he implemented and launched a portal for entrepreneurs from scratch with a complex rating system and search with a neural network',
+                '2018–2021. System architect at SberMegaMarket. He supervised the entire frontend direction, was responsible for infrastructure projects on information security, fault tolerance and CI / CD',
+                'Since 2021 — Tech Lead at Isfors. Developed from scratch and launched a new version of the site for the largest esports media in the CIS'
+            ]
+        ),
+        avdeev: new Teacher('/courses/course/teachers/web/4.png', 'Alexey Avdeev', 'CTO at Mish Design Lab. 10 years in web development'),
+        molescu: new ExtendedTeacher('/courses/course/teachers/web/6.png', 'Michael Molescu', 'PHP developer, branch manager of ITRex Group',
+            ['In the profession since the age of 18, programming in more than 10 languages. He worked on a service for predicting the life expectancy of cancer patients, developed a news portal with video streaming of sports competitions for the official partner of Euro and Al Jazeera. Created an accounting system for brokers of an American insurance company, a platform for booking golf courses and renting equipment for a company from the USA']
+        ),
+        pozdnyakov: new ExtendedTeacher('/courses/course/teachers/web/7.png', 'Alexander Pozdnyakov', 'Angular Developer at Insilico Medicine. More than 10 years in front-end development',
+            [
+                'Speaker of the course "Profession Frontend-developer"', 'Uses Angular 2 since its inception',
+                '2014–2017. Web developer at Comrade Digital Marketing Agency, Chicago', '2017–2020. Lead Front End Developer at Société Générale',
+                'Developed interfaces for USbank', 'Since 2020 — front-end developer at Insilico Medicine. Works on a medical project in Skolkovo',
+                'Since 2021 — Software Architect at Kaspersky Lab'
+            ]
+        ),
+        bondarovich: new Teacher('/courses/course/teachers/web/8.png', 'Pavel Bondarovich', 'Creonit CTO. Over 13 years in development'),
+        savchenko: new Teacher('/courses/course/teachers/web/9.png', 'Maksim Savchenko', 'Senior frontend developer at Motivity. 12 years in development'),
+        mirotin: new ExtendedTeacher('/courses/course/teachers/web/10.png', 'Evgeny Mirotin', 'Software Development Engineer at Play North. 16 years of experience in IT',
+            [
+                'Worked as a JavaScript programmer for the last 9 years (frontend and fullstack)',
+                'Speaker at the Internet of Things and International Mobile Developers Conference (Moscow), online conference of Prof IT Academy (Kyiv) and MinskJS meetup',
+                '2012. Front-end developer at EPAM. Worked on projects for Viacom: MTV, European Music Awards',
+                "2012–2014. Full stack developer at Like'n'Pay. Created a platform to support authors",
+                '2014–2017. Developer at balena. 2018 startup. Developer at Botpress. Created a platform-constructor for chatbots',
+                'Since 2019 — Software Development Engineer at Play North. Develops solutions for gaming sites'
+            ]
+        ),
+        ignatiev: new ExtendedTeacher('/courses/course/teachers/web/11.png', 'Dmitry Ignatiev', 'Managed the product team at Rabota.ru. Experience in development — 15 years', ['Designs non-standard, complex and highly loaded systems in PHP, works with Symfony. Able to write complex logic in native ways, without using frameworks. 2006–2012 Developer at Dom Programs. Created templates for online stores for foreign customers and sites on Wordpress. 2012–2017 PHP developer at Embria. Supported the work of a high-load video portal and designed new features. 2017–2018. Senior PHP Developer at EPAM. Developed an internal company project for accounting and booking time for offices. Wrote a service from scratch in Symfony. Since 2019, he has been a team leader at Rabota.ru. Personally writes complex pieces of code, conducts reviews, manages teams and coordinates tasks']),
+        pilipenko: new ExtendedTeacher('/courses/course/teachers/web/12.png', 'Daniel Pilipenko', 'Java programmer with 18 years of experience, director of the SymbioWay recruitment center', ['Graduate of Moscow State University named after M. V. Lomonosov, candidate of sciences. Proficient in Java, PHP, frontend development technologies. 2006–2012 Head of the development department at the publishing house "Vokrug Sveta". 2012–2013 Lead developer of Utinet.Ru, created the portal and external services of the project. 2013–2014 Head of development at PilotCards, managed the team that created the website and mobile apps for iOS and Android. Author of courses, speaker and program director of backend development']),
+        yakovushen: new Teacher('/courses/course/teachers/fullstack-python/4.png', 'Egor Yakovushen', 'Setka, senior frontend-developer. Block «Javascript»'),
+        mikheev: new Teacher('/courses/course/teachers/frontend/1.png', 'Gleb Mikheev', 'CTO of our Holding. 19 years in development'),
+        klimonova: new Teacher('/courses/course/teachers/frontend/2.png', 'Olga Klimonova', 'Lead developer TASS'),
+        kuznetsov: new Teacher('/courses/course/teachers/frontend/3.png', 'Aleksandr Kuznetsov', 'Frontend developer at TASS'),
+        borzunov: new Teacher('/courses/course/teachers/frontend/4.png', 'Igor Borzunov', 'Frontend Tech Lead at Rosbank'),
+        lisakov: new ExtendedTeacher('/courses/course/teachers/android/1.png', 'Egor Lisakov', '9 years developing applications for Android. Lead Developer, Arcadia',
+            ['During his time at Arcadia, he managed to launch large projects in Russian and foreign companies. Has been using Kotlin for the last 3 years']
+        ),
+        alexandrov: new ExtendedTeacher('/courses/course/teachers/android/2.png', 'Denis Alexandrov', 'Team Lead Software Developer at Arcadia, in development for 13 years',
+            ['Program Director of Mobile Development. More than 11 years of experience in education. Conducted online and offline courses, internships and practices. 2013–2017 Developer at Game Insight. Worked on games: Build a Kingdom, Mirrors of Albion, Mystery Manor. 2017–2018. Lead mobile developer at Mentalstack, created educational portals and social networks. Since 2018 - Lead Kotlin Developer at Arcadia']
+        ),
+        martynenko: new Teacher('/courses/course/teachers/android/3.png', 'Eugene Martynenko', 'In development for 7 years. Lead Android Developer at Kitchen on the District'),
+        machikhin: new Teacher('/courses/course/teachers/android/4.png', 'Anton Machikhin', 'In development for 10 years. Senior Android Developer at Alfa-Bank'),
+        firsov: new Teacher('/courses/course/teachers/android/5.png', 'Alexei Firsov', 'In development for 8 years. Head of Android, MTC Shop'),
+        malykh: new Teacher('/courses/course/teachers/android/8.png', 'Andrey Malykh', 'QA Automation Lead'),
+        shadrin: new Teacher('/courses/course/teachers/android/9.png', 'Dmitry Shadrin', 'Head of QA at Social Solutions'),
+        rybakov: new Teacher('/courses/course/teachers/android/12.png', 'Anton Rybakov', 'Senior UI/UX Designer at KROK'),
+        kudryavtsev: new ExtendedTeacher('/courses/course/teachers/ios/1.png', 'Alexey Kudryavtsev', 'Developer Advocate at inDriver',
+            ['Developing iOS applications since 2013. From 2017 to 2022, he worked at Avito, organized 6 seasons of Podlodka iOS crew online conferences, and now advises on sustainable career development in IT']
+        ),
+        aniskov: new ExtendedTeacher('/courses/course/teachers/ios/2.png', 'Roman Aniskov', 'Technical Lead for Mobile Development at Home Credit Bank',
+            ['More than 10 years in IT. For 5 years he worked as an iOS developer at ivi, and now he is responsible for the development of the mobile application of Home Credit Bank']
+        ),
+        nikolaev: new ExtendedTeacher('/courses/course/teachers/ios/3.png', 'Maxim Nikolaev', 'Senior iOS developer at Alfa-Bank', ['Developing mobile applications since 2014. He was engaged in backend development, Python programming and testing. Created projects for Alfa-Bank, Sreda Solutions, Motorola Solutions']),
+        sotsky: new ExtendedTeacher('/courses/course/teachers/ios/4.png', 'Nikolay Sotsky', 'Chief Executive Officer at InstaDev', ["In mobile development since 2013. Prior to that, he led teams in technical projects. For the last 4 years, he has been combining iOS programming and managing the company's production department"]),
+        ovchinnikov: new Teacher('/courses/course/teachers/android/11.png', 'Michael Ovchinnikov', 'Badoo dating social network developer with more than 15 years of experience in IT'),
+        naumenko: new Teacher('/courses/course/teachers/devops/1.png', 'Artyom Naumenko', 'Head of IT infrastructure SkyEng'),
+        zaycev: new Teacher('/courses/course/teachers/devops/2.png', 'Dmitriy Zaycev', 'CTO/CIO @ Flocktory'),
+        aquilin: new Teacher('/courses/course/teachers/devops/3.png', 'Alexander Aquilin', 'DevOps Engineer at Data Travel and Aquiva Labs'),
+        bryukhanov: new Teacher('/courses/course/teachers/devops/4.png', 'Konstantin Bryukhanov', 'Head of DevOps, VTB Internet Bank'),
+        krylov: new Teacher('/courses/course/teachers/devops/5.png', 'Alexander Krylov', 'Lead DevOps services at Rosgosstrakh'),
+        dmitriev: new Teacher('/courses/course/teachers/devops/6.png', 'Eugene Dmitriev', 'DevOps engineer at InfoTeKS')
+    },
+    questions: {
+        frontend: new Term('Front-end', 'that part of the site or application with which the user interacts directly. First of all: interface and appearance.'),
+        backend: new Term('Back-end', 'that part of the site or application that the user does not see. For example, interacting with servers, synchronizing data between systems, storing user data, and so on.'),
+        figma: new Term('Figma', 'a service in which designers design interfaces for websites and mobile applications.'),
+        framework: new Term('Framework', 'a language-specific tool that helps you complete routine tasks faster. For example, the Vue framework works with JavaScript and helps build user interfaces by automating many processes.'),
+        api: new Term('API', 'a software component that describes how one program or service interacts with others. For example, many sites allow you to host videos from YouTube. The code that describes how such an inclusion works is the API.'),
+        ui: new Term('UI', 'user interface. This is the part of the program that users see with their eyes. All windows, buttons, pictures, interactive elements are part of the UI.'),
+        js: new Term('JavaScript', 'main programming language in web development. JS is used to program site functions, add interactivity and describe user interaction scenarios. It also works great with HTML and CSS.'),
+        html: new Term('HTML', 'the most common layout language on the Internet. You can think of HTML as a set of commands that defines the structure and logic of the site.'),
+        css: new Term('CSS', 'a language that describes the style of the site. If HTML is responsible for the content, then CSS is responsible for the appearance of the site.'),
+        css_grid: new Term('CSS Grid', 'tool in CSS: a special ruler that helps to arrange site elements symmetrically and neatly.'),
+        default_questions: [
+            new Question('I have never programmed. Will I succeed?', 'Of course! With the right approach to learning, independent expansion of horizons and timely completion of practical tasks, you can achieve results even without special basic knowledge. Experienced tutors will help you with everything, who will accompany you throughout the course.'),
+            new Question('What is the training schedule on the platform? Can you combine it with work?', 'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time.'),
+            new Question('How many hours per week will I need to devote to training on the platform?', 'Everything depends on you. On average, platform users spend 3 to 5 hours a week.'),
+            new Question('Who will help me learn on the platform?', "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks."),
+        ],
+        site_development: new Question('I have never developed websites. Will I succeed?', 'Certainly! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be assisted by practicing experts who will accompany you throughout the course.'),
+        remote: new Question('Will I be able to work from home?', 'Certainly! Many companies offer telecommuting on an ongoing basis. You do not have to go to the office - the main thing is to be in touch with the team. And if you want to choose projects and customers yourself, freelance platforms are always available for you.'),
+        system_requirements: {
+            title: 'Do you need a powerful computer to develop websites?',
+            text: 'Front-end development does not require large computing resources, so a laptop or a medium-sized computer is suitable for work. Here are the minimum specs:',
+            listItems: [
+                'Operating system: Windows 8.0 or higher, macOS 10.12 (macOS Sierra) or higher.', 'Processor: 4-core with a frequency of 2.5 GHz or higher.', 'RAM: from 4 GB.',
+                'Video Card: Intel HD Graphics 4000, Nvidia 330m or ATI Radeon HD 4850 or higher.', 'It is desirable, but not necessary, that the memory be on an SSD.',
+                'Screen resolution: preferably 1920x1080.', 'Internet access.'
+            ]
+        },
+        soft: new Question('Do I need to install programs to work on the course?', "You don't need to download anything beforehand. During the course, we will help you install all the necessary software for work and provide access to paid tools."),
+        english: new Question('Do you need to know English?', 'Not at all necessary. You will memorize the names of built-in functions and expressions in programming languages in the process, and unfamiliar phrases can be translated using Google Translate. In addition, you will have access to lessons and materials from the online English learning platform. Improve your grammar and expand your vocabulary.'),
+        freelance: new Question('How much do freelancers pay to create websites?', 'Depends on the scope of the project. For example, for the layout of a landing page, you can earn from 500 USD, and the development of an online store can cost hundreds of thousands. Sometimes it is required not only to create a site on a turnkey basis, but to correct something in the existing code. Such orders are inexpensive. But if you take several of these a month at once, you will have a good additional source of income.'),
+        help: new Question('Who will help me learn on the platform?', "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks."),
+        schedule: new Question('What is the training schedule on the platform? Can you combine it with work?', "You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. What's more, all videos will be available at the end of the course, so you can brush up on your knowledge at any time."),
+        kotlin: new Term('Kotlin', 'the programming language in which Android applications have been developed since 2019.'),
+        swift: new Term('Swift', 'programming language used to create applications for Apple devices.'),
+        androidSDK: new Term('Android SDK', 'an additional set of tools to assist in application development.'),
+        iosSDK: new Term('iOS SDK', 'is a set of tools for developing applications for iOS. For example, the SDK includes resources for working with multi-touch screens, an accelerometer, animation, and a camera.'),
+        oop: new Term('Principles of object-oriented programming (OOP)', 'ideas and rules that govern how to write a program. With an object-oriented approach, an application consists of separate entities - objects. They have their own properties, methods and can interact with each other or be inherited. For example, a Cat object may have properties inherited from an Animal object.'),
+        java_development: new Question('I have never done Java development. Will I succeed?', 'Certainly! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be assisted by practicing experts who will accompany you throughout the course.'),
     }
 }
 
@@ -312,13 +480,56 @@ const frontend = {
         new TitleTextItem('Develop server applications with Node.js', 'Learn how to create a backend part of a service, work on its security and load resistance. You can take on more tasks and increase your earnings'),
         new TitleTextItem('Work in a team like a pro', 'Boost your time management and personal efficiency. You will be able to work effectively in a team with other developers, designers and team leaders'),
     ],
-    content: {
+    program: {
         programItems: [
-            { ...commonItems.content.webLayout, number: 1 }, { ...commonItems.content.jsBasic, number: 2 }, { ...commonItems.content.frameworks, number: 3 },
-            { ...commonItems.content.nodejs, number: 4 }, { ...commonItems.content.typescript, number: 5 }, { ...commonItems.content.careerCourse, number: 6 },
-            { ...commonItems.content.employment, number: 7 }, { ...commonItems.content.additionalCourses, number: 8 }
+            ProgramItem(commonItems.program.webLayout, 1), ProgramItem(commonItems.program.jsBasic, 2), ProgramItem(commonItems.program.frameworks, 3),
+            ProgramItem(commonItems.program.nodejs, 4), ProgramItem(commonItems.program.typescript, 5), ProgramItem(commonItems.program.careerCourse, 6),
+            ProgramItem(commonItems.program.employment, 7), ProgramItem(commonItems.program.additionalCourses, 8)
         ]
-    }
+    },
+    teachers: [
+        commonItems.teachers.mikheev, commonItems.teachers.tiunov, commonItems.teachers.kornienko, commonItems.teachers.vasyanovich, commonItems.teachers.avdeev,
+        commonItems.teachers.bondarovich, commonItems.teachers.savchenko, commonItems.teachers.mirotin, commonItems.teachers.pozdnyakov,
+        commonItems.teachers.klimonova, commonItems.teachers.kuznetsov, commonItems.teachers.borzunov
+    ],
+    cv: {
+        skills: [
+            'Responsive layout of websites and emails', 'Working with TypeScript', 'Strong knowledge of JavaScript and OOP',
+            'Developing Server Applications with Node.js', 'Working with Git Version Control', 'Understanding algorithms and data structures in projects',
+            'Knowledge of React.js/Angular/Vue.js'
+        ],
+        tools: ['HTML', 'CSS', 'JavaScript', 'Angular', 'React', 'Vue 3.0', 'Node.js', 'TypeScript', 'Git', 'Bash', 'SQL', 'Figma']
+    },
+    questions: [
+        commonItems.questions.site_development, commonItems.questions.freelance, commonItems.questions.system_requirements, commonItems.questions.soft, commonItems.questions.english,
+        commonItems.questions.remote, commonItems.questions.help,
+        new Question('How many hours per week will I need to devote to the course?', 'Depends on how quickly you want to master the profession. To complete the course in 8 months and get a job in 6.5 months, you need to study the materials for 2 hours a day. But such a schedule is not necessary to follow - you can take the course at a comfortable pace.'),
+        {
+            title: 'I see a lot of unfamiliar terms: CSS, JavaScript, framework? What does all of this mean?',
+            terms: [
+                commonItems.questions.frontend, commonItems.questions.backend, commonItems.questions.framework, commonItems.questions.js, commonItems.questions.html,
+                commonItems.questions.css, commonItems.questions.css_grid, commonItems.questions.api, commonItems.questions.ui, commonItems.questions.figma,
+                new Term('TypeScript', 'a programming language based on JavaScript that extends its capabilities and allows you to quickly develop reliable, stable and secure systems.'),
+                new Term('Node.js', 'a JavaScript-based platform that allows you to work on the back-end of the application.')
+            ]
+        },
+        {
+            title: 'What kind of projects can I do?',
+            texts: [
+                'Sites with the ability to buy a product or service, sign up for an event. For example, online stores, barbershop websites, food ordering services.',
+                'Streaming services with music, podcasts, movies and series.',
+                'Platforms for processing data of company clients, documents, invoices. For example, large CRM systems for banks.'
+            ]
+        },
+        new Question('What do you need to know to start taking the first orders or get a job?', `A web developer's career always starts with layout. To master the necessary skills, you need to take three courses within the profession: “Web layout. Basic level”, “JavaScript. Basic level" and master one of the technologies to choose from: Vue, React or Angular`),
+        {
+            title: 'How to develop in the profession?',
+            texts: [
+                'Things change quickly in frontend development: new technologies and frameworks appear, new features are added to JavaScript and CSS. Therefore, to study something once and forever remain in demand will not work.',
+                'You need to constantly expand your knowledge in the field - communicate with team leaders in your company, attend conferences, read articles on Habré and other resources for developers.'
+            ]
+        }
+    ]
 }
 
 const initialState = {
@@ -331,9 +542,8 @@ const initialState = {
                 header: {
                     text: 'Python is used to write web applications and neural networks, conduct scientific calculations and automate processes. The language is easy to learn, even if you have never programmed. On the course, you will create a Telegram bot, a full-fledged store and an analogue of a popular social network for a portfolio, and the Career Center will help you find a job as a Python developer',
                     features: [
-                        new TitleTextItem('★ 4,75 out of 5', 'based on 26 293 course evaluations'), commonItems.header.features.getJobInSixMonths,
-                        new TitleTextItem('9 courses', 'you can start working'), new TitleTextItem('4 projects', 'including group training'),
-                        commonItems.header.features.guarantees
+                        new TitleTextItem('★ 4,75 out of 5', 'based on 26 293 course evaluations'), new TitleTextItem('9 courses', 'you can start working'),
+                        new TitleTextItem('4 projects', 'including group training'), commonItems.header.features.guarantees, commonItems.header.features.getJobInSixMonths
                     ]
                 },
                 market: {
@@ -350,25 +560,24 @@ const initialState = {
                     new ForWho('/courses/course/for-who/python/2.png', 'Beginning developers', 'For those who are already learning Python on their own or from textbooks. But there is no one to ask a question and ask for help')
                 ],
                 skills: [
-                    new CoursesReducer('Create simple and complex modular programs: from console scripts to chat bots'), new CoursesReducer('Write autotests'),
-                    new CoursesReducer('Deploy applications to the server'), new CoursesReducer('Work with databases'),
-                    new CoursesReducer('Work with popular frameworks - Django, Flask'), new CoursesReducer('Package projects in Docker and apply DevOps practices'),
-                    new CoursesReducer('Use industrial development tools: Git, PyCharm, Postman'), new CoursesReducer('Write database queries in Python with Sqlalchemy, Django-ORM'),
-                    new CoursesReducer('Work in a team')
+                    new TextItem('Create simple and complex modular programs: from console scripts to chat bots'), new TextItem('Write autotests'),
+                    new TextItem('Deploy applications to the server'), new TextItem('Work with databases'), new TextItem('Work in a team'),
+                    new TextItem('Work with popular frameworks - Django, Flask'), new TextItem('Package projects in Docker and apply DevOps practices'),
+                    new TextItem('Use industrial development tools: Git, PyCharm, Postman'), new TextItem('Write database queries in Python with Sqlalchemy, Django-ORM'),
                 ],
                 projects: [
                     new Project('/courses/course/projects/python/1.png', 'Chatbot for hotel search', commonItems.projects.texts.chatBot),
                     new Project('/courses/course/projects/python/2.png', 'Online store', 'A team of five course participants developed the server part for the marketplace, an analogue of Yandex Market. The marketplace has a search by category and filters, a shopping cart, an order form with the possibility of online payment'),
                     new Project('/courses/course/projects/python/3.png', 'Social network', 'The participant developed the server part of the application, used the Flask framework and the principles of asynchronous programming. Its users will be able to publish posts, comment on them and put likes')
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'You are waiting for 3 blocks of programming in Python and more than 100 topics for analysis. The difficulty of the lessons increases gradually. Additional and bonus courses can be taken in parallel with the main ones',
                         counts: [new Count('10', 'months'), new Count('3', 'final project')]
                     },
                     programItems: [
-                        { ...commonItems.content.pythonBasic_1, number: 1 },
-                        { ...commonItems.content.pythonBasic_2, number: 2 },
+                        ProgramItem(commonItems.program.pythonBasic_1, 1),
+                        ProgramItem(commonItems.program.pythonBasic_2, 2),
                         {
                             title: 'Final project: Telegram bot',
                             text: 'Develop a Telegram bot on the instructions of the travel agency Too Easy Travel. The bot will take the approximate cost of living and the location of the user, and return a list of the most suitable hotels',
@@ -391,8 +600,8 @@ const initialState = {
                             ],
                             number: 5
                         },
-                        { ...commonItems.content.careerCenter, number: 6 },
-                        { ...commonItems.content.pythonAdvanced, number: 7 },
+                        ProgramItem(commonItems.program.careerCenter, 6),
+                        ProgramItem(commonItems.program.pythonAdvanced, 7),
                         {
                             title: 'Final project: social network',
                             text: 'You will write an analogue of Twitter, in which users will be able to publish posts, comment on them and put likes',
@@ -410,48 +619,52 @@ const initialState = {
                         }
                     ]
                 },
-                reviews: {
-                    letters: ['M', 'I', 'N', 'S', 'P', 'P'],
-                    user_data: ['Maxim Brechko, Russia, Moscow', 'Igor Novikov, Moscow', 'Nikita Pack', 'Sergey Kolesnik', 'Pavel Semenov', 'Phedor Egorov, Gagarin'],
-                    course: `Course "Profession Python-developer"`,
-                    texts: [
-                        'I like the presentation, the ability to explain a topic that you could not understand on your own for a week in a few 10-minute videos, and moderately complex practical work that allows you to consolidate the studied material',
-                        'I like that you can choose the pace of learning that suits you. Clear and uncluttered videos with elements of humor. Good practical tasks that help to consolidate the studied material and develop practical skills. Prompt and friendly support of the curator. Interesting Telegram channel',
-                        'I like the constant feedback from the platform and the curator. A large number of practical work, allowing you to instantly apply the knowledge gained. An abundance of bonus courses that provide an opportunity to independently develop not only according to the program chosen for study, but also in other aspects. The process of checking practical tasks sometimes takes time, but this is not a minus: while you wait, you can consolidate the material you have covered and remember important formulations and concepts',
-                        'Very extensive training, excellent practical tasks, excellent communication with the curator. I will say right away that it is not for the lazy - you have to work here',
-                        'I liked the communication with the curator and the depth of knowledge gained on the course. Some points at first seem incomprehensible, but as practical tasks are completed, everything becomes clear as two times two',
-                        "It's all pretty compelling. But the most magnificent thing is the curator's approach to the participants. Good open dialogue, without pretense of severity and precision. You feel free, and not shaking from tension, as before defending your thesis at the university",
-                    ]
-                },
-                resume: {
-                    salary: '300 usd',
-                    texts: ['Python Core', 'Installing and configuring the web server', 'Clean code', 'Working with external APIs', 'Git version control system',
-                        'Async/await', 'Working with databases (pure SQL, ORM, Postgres)', 'Working with Django, Flask, FastAPI frameworks', 'Web mark-up',
-                        'Deploying applications and working with docker/docker-compose', 'Creation of bots', 'API design'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have no programming experience. Is this course right for me?',
-                        'Do you need to know math?',
-                        'How is streaming learning different from regular learning?',
-                        'How many hours per week will I need to devote to the course?',
-                        'Who will help me on the course?',
-                        'Will there be bonuses for results on the course?',
-                        'Are there any special computer requirements?',
-                        'Are there any installment programs?',
+                teachers: [
+                    commonItems.teachers.shulaev, commonItems.teachers.krotov,
+                    new Teacher('/courses/course/teachers/python/1.png', 'Roman Bulgakov', 'Computer science and programming teacher with more than 5 years of experience'),
+                    new Teacher('/courses/course/teachers/python/2.png', 'Alexei Polovinkin', 'AGIMA Python-teamlead. Work experience - more than 7 years'),
+                    new Teacher('/courses/course/teachers/python/5.png', 'Nikita Nesterenko', 'Project manager and chief development engineer at Sberbank. Work experience - more than 5 years'),
+                    new Teacher('/courses/course/teachers/python/6.png', 'Alexei Nekrasov', 'Leader of the Python direction at MTS, Program Director of the Python direction. Work experience - more than 6 years')
+                ],
+                cv: {
+                    salary: 'From 96.000 USD',
+                    skills: [
+                        'I create applications of any complexity in Python: from scripts to web applications', 'Automate Application Deployment with Docker',
+                        'Connect third party libraries', 'I develop multi-threaded applications', 'I test the code: manually and automatically',
+                        'Know and apply application design patterns', 'I work with databases and APIs of third-party services',
+                        'I create web applications with Django and Flask', 'I set up automatic deployment and integration of applications - CI / CD'
                     ],
-                    texts: [
-                        'Of course - the course is designed for absolute beginners. But you will have to try - read additional literature, do not miss classes and do practical work on time. Skillbox will help with the rest - curators will analyze practical tasks, assistants will answer questions about the process of passing, and the Career Center will take care of your animation',
-                        'At the initial stages, advanced knowledge is not required from you - a school mathematics course is enough. However, do not be alarmed if you have to figure out topics that you forgot or did not go through - the curator will help you refresh your knowledge or give useful links',
-                        'In the stream, you will complete the Python Basic course in 2 times faster than regular participants. You are waiting for daily online classes in a group, deadlines for completing training modules and reviewing work at online meetings with the curator and the team',
-                        'Depends on the format. According to the usual schedule, you can study at a convenient time - on average, platform users spend 3 to 5 hours a week on the course. You do not have a rigid schedule and deadlines. An accelerated schedule in the stream requires more time - you need to find at least 3 hours a day for practical classes and 1.5 hours a week for an online meeting with a curator. It is also impossible to postpone the execution of practical work in the flow - you must hand it in before a certain deadline',
-                        "Practical work is checked by a curator - a practicing Python developer. You can ask him a question in your personal account or contact the course's Telegram chat.Participants of streaming training communicate with the group curator in Discord, discuss difficult tasks with a personal partner - buddy. The team leader at the weekly team meeting makes a list of topics for analysis at the final webinar with the curator",
-                        'Participants who complete practical work and submit projects receive internship invitations before the end of the course. For individual achievements in streaming training, you will receive achievements - awards that can be attached to the name',
-                        'Python does not require powerful hardware and large resources. Any computer running Windows 7 or 10, Linux Ubuntu or macOS 10.11 or higher will do. To install the PyCharm development environment, you will need at least 4Gb of RAM, 5 Gb of free hard disk space and one of the latest versions of a 64-bit operating system',
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                    projects: ['1. Telegram bot for hotel search', '2. Online store', '3. Social network'],
+                    tools: ['Python', 'Django', 'HTML', 'CSS', 'SQL', 'Git']
+                },
+                questions: [
+                    new Question('I have no programming experience. Is this course right for me?', 'Of course - the course is designed for absolute beginners. But you will have to try - read additional literature, do not miss classes and do practical work on time. We will help you with the rest - curators will sort out practical tasks, assistants will answer questions about the process of passing, and the Career Center will take care of your employment.'),
+                    new Question('Why exactly Python? There are other programming languages', `Python is great because it's easy to learn - it's like a normal language that people speak. No need to put semicolons and brackets, think about concepts that are difficult for a beginner, such as "garbage collection" or "type overflow". On the other hand, Python opens up great opportunities - you can create chat bots, analyze data, automate tasks and develop logic for websites on it.`),
+                    new Question('Do you need to know math?', 'At the initial stages, advanced knowledge is not required from you - a school mathematics course is enough. However, do not be alarmed if you have to figure out topics that you forgot or did not go through - the curator will help you refresh your knowledge or give useful links.'),
+                    new Question('How many hours per week will I need to devote to the course?', 'Depends on how quickly you want to master the profession. To complete the course in 10 months, you need to practice 2 hours a day. But it is not at all necessary to follow a rigid schedule - you can study at any convenient time.'),
+                    new Question('Who will help me on the course?', "Practical work is checked by a curator - a practicing Python developer. You can ask him a question in your personal account or contact the course's Telegram chat.Participants of streaming training communicate with the group curator in Discord, discuss difficult tasks with a personal partner - buddy. The team leader at the weekly team meeting makes a list of topics for analysis at the final webinar with the curator."),
+                    {
+                       title: 'How is the internship on the course?',
+                       texts: [
+                           'As soon as you complete the courses "Fundamentals of Python", "Django" and complete all the practical work, you will have access to the final project. Leave a request, and we will gather teams and appoint a team leader.',
+                           'Together with a team leader and a team of 3-5 people, you will start developing a marketplace. You will work on the Scrum or Kanban system, use Git, call regularly and discuss current tasks. Prepare to work in a real company and create a powerful portfolio project'
+                       ]
+                    },
+                    new Question('What to do after employment?', 'A good developer never stops learning. In our school, you can find a job already during the training - but this is not a reason to quit the course. On the contrary, combining the course and real work will help you grow to the Middle level faster.'),
+                    new Question('Are there any special computer requirements?', 'Python does not require powerful hardware and large resources. Any computer running Windows 7 or 10, Linux Ubuntu or macOS 10.11 or higher will do. To install the PyCharm development environment, you will need at least 4Gb of RAM, 5 Gb of free hard disk space and one of the latest versions of a 64-bit operating system.'),
+                    {
+                        title: 'Explaining terms used on this site',
+                        terms: [
+                            new Term('Scrum', 'a methodology in which a large task is broken down into small steps. The teams develop different features of the application in parallel, work on tight deadlines, and call regularly to discuss progress.'),
+                            new Term('Kanban', 'a methodology that allows you to visualize product development in the form of a "board". With the help of Kanban boards, it is convenient to track progress on tasks and quickly solve problems.'),
+                            new Term('IDE (development environment)', 'a special program in which you will write code. Unlike a regular text editor, there are many useful features available. For example, highlighting errors in the code, a console for test output of the program result, and even tooltips that will help you remember the name of the function.'),
+                            new Term('Library', 'it is code from other developers that you can "refer to" in your program to make your job easier. For example, Python has a library for complex mathematical calculations - NumPy. Thanks to it, developers do not need to describe the formulas in the code themselves - just call the desired function.'),
+                            new Term('Multithreaded Applications', 'these are programs in which several tasks can be executed in parallel. Such tasks are called threads. An example of a multi-threaded application is the operating system. You can simultaneously scroll through the site and, for example, chat in the messenger. In this case, the system will work without glitches.'),
+                            new Term('Application Design Patterns', 'these are the rules by which you need to write and format the code so that it is easier for the team to work with it.'),
+                            new Term('Deploy', 'is the process of uploading the application to the server. You can’t just take the code and place it on the server - you need to install all the dependencies, set up work with databases and do a lot of other routine. Due to the fact that the deployment takes a lot of time, this process is automated.')
+                        ]
+                    }
+                ]
             }
         } as CourseI,
         fullstack_python:  {
@@ -472,60 +685,45 @@ const initialState = {
                     new ForWho('/courses/course/for-who/fullstack-python/3.png', 'Experienced programmers', 'You will increase your chances of getting a high-paying job, get advice from experienced teachers and learn how to develop as a fullstack programmer and work on complex and expensive projects')
                 ],
                 skills: [
-                    new CoursesReducer('Build websites in HTML and CSS'), new CoursesReducer('Work with databases'), new CoursesReducer('Work with API'),
-                    new CoursesReducer('Programming in Python'), new CoursesReducer('Build modern web applications'), new CoursesReducer('Use the Git version control system'),
-                    new CoursesReducer('Create interactive websites with JavaScript'), new CoursesReducer('Apply the principles of OOP in practice'),
-                    new CoursesReducer('Understand modern web frameworks for frontend and backend development')
+                    new TextItem('Build websites in HTML and CSS'), new TextItem('Work with databases'), new TextItem('Work with API'),
+                    new TextItem('Programming in Python'), new TextItem('Build modern web applications'), new TextItem('Use the Git version control system'),
+                    new TextItem('Create interactive websites with JavaScript'), new TextItem('Apply the principles of OOP in practice'),
+                    new TextItem('Understand modern web frameworks for frontend and backend development')
                 ],
                 projects: [
                     new Project('/courses/course/projects/fullstack-python/1.png', 'Landing', 'You create a landing page based on the brief to consolidate the knowledge gained in the course'),
                     new Project('/courses/course/projects/fullstack-python/2.png', 'User interface', 'You will develop a user interface similar to Instagram'),
                     new Project('/courses/course/projects/fullstack-python/3.png', 'Space game', 'You will write a behavior algorithm for space drones that collect fuel from asteroids')
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'You are waiting for 4 main blocks and 119 additional courses with video materials and practical tasks',
                         counts: [new Count('100+', 'thematic modules'), new Count('500+', 'video footage')]
                     },
                     programItems: [
-                        { ...commonItems.content.webLayout, number: 1 }, { ...commonItems.content.jsBasic, number: 2 }, { ...commonItems.content.pythonBasic_1, number: 3 },
-                        { ...commonItems.content.pythonBasic_2, number: 4 }, { ...commonItems.content.pythonAdvanced, number: 5 }, { ...commonItems.content.frameworks, number: 6 },
-                        { ...commonItems.content.careerCourse, number: 7 }, { ...commonItems.content.employment, number: 8 }, { ...commonItems.content.additionalCourses, number: 9 }
+                        ProgramItem(commonItems.program.webLayout, 1), ProgramItem(commonItems.program.jsBasic, 2),
+                        ProgramItem(commonItems.program.pythonBasic_1, 3), ProgramItem(commonItems.program.pythonBasic_2, 4),
+                        ProgramItem(commonItems.program.pythonAdvanced, 5), ProgramItem(commonItems.program.frameworks, 6),
+                        ProgramItem(commonItems.program.employment, 7), ProgramItem(commonItems.program.additionalCourses, 9)
                     ]
                 },
-                reviews: {
-                    letters: ['V', 'A', 'P'],
-                    user_data: ['Vyacheslav Smirnov', 'Alexander Chemakin', 'Pavel Shkaburin'],
-                    course: `Course "Profession Python Fullstack-developer"`,
-                    texts: [
-                        'Very well designed curriculum. Curators are always ready to help and suggest the best solution to problems',
-                        'Skillbox is the best educational platform: cool speakers and curators, very good feedback, understandable and high-quality educational content',
-                        'Excellent presentation of information. The volume of new material in each module is such that it is neither too much nor too little. The content of the modules is constantly updated'
-                    ]
-                },
-                resume: {
-                    salary: '300 usd',
-                    texts: ['Development of turnkey online stores', 'Writing commented and formatted code', 'Administration and deployment of pilot works',
-                        'Ability to set and meet deadlines', 'Creation of animation sites', "Ability to understand other people's code", 'Setting up CRM integration with external systems',
-                        'Writing queries against relational databases'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have never programmed. Will I succeed?',
-                        'What is the training schedule on the platform? Can you combine it with work?',
-                        'How many hours per week will I need to devote to training on the platform?',
-                        'Who will help me learn on the platform?',
-                        'Are there any installment programs?',
+                teachers: [
+                    new Teacher('/courses/course/teachers/fullstack-python/1.png', 'Vadim Shandrinov', 'Python developer with over 16 years of experience. Block "Python Basic"'),
+                    new Teacher('/courses/course/teachers/fullstack-python/2.png', 'Anton Turin', 'Senior developer at Twitter'),
+                    new Teacher('/courses/course/teachers/fullstack-python/3.png', 'Nikita Levashov', 'Co-founder and technical director at Angry Developers'),
+                    commonItems.teachers.yakovushen, commonItems.teachers.shulaev, commonItems.teachers.krotov
+                ],
+                cv: {
+                    salary: 'From 100.000 USD',
+                    skills: [
+                        'Development of turnkey online stores', 'Administration and deployment of pilot works', 'Creation of animation sites',
+                        'Setting up CRM integration with external systems', 'Writing commented and formatted code', 'Ability to set and meet deadlines',
+                        "Ability to understand other people's code", 'Writing queries against relational databases'
                     ],
-                    texts: [
-                        'Of course! With the right approach to learning, independent expansion of horizons and timely completion of practical tasks, you can achieve results even without special basic knowledge. Experienced tutors will help you with everything, who will accompany you throughout the course',
-                        'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
-                        'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
-                        "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                    projects: ['1. Landing', '2. User interface', '3. Space game'],
+                    tools: ['HTML', 'CSS', 'JavaScript', 'Python', 'Angular', 'React', 'Vue 3.0', 'Git', 'Bash', 'SQL', 'Figma']
+                },
+                questions: commonItems.questions.default_questions
             }
         } as CourseI,
         web: {
@@ -567,13 +765,13 @@ const initialState = {
                     new Project('/courses/course/projects/web/5.png', 'Pomodoro task tracker', 'Write a task tracker with a timer in the ReactFramework framework'),
                     new Project('/courses/course/projects/web/6.png', 'Note service', 'Develop a note service with the ability to autosave, delete, upload to PDF, search by notes and infinite scroll. Deploy the result to the server')
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'Practice based on real cases is waiting for you. Training on the platform can be equated to a year of work',
                         counts: [new Count('1100', 'video footage'), new Count('131', 'practical work')]
                     },
                     programItems: [
-                        { ...commonItems.content.webLayout, number: 1 }, { ...commonItems.content.jsBasic, number: 2 },
+                        ProgramItem(commonItems.program.webLayout, 1), ProgramItem(commonItems.program.jsBasic, 2),
                         {
                             title: 'Choice course. Vue 2 months',
                             subtitle: 'You will learn how to develop applications using the Vue JavaScript framework',
@@ -605,7 +803,7 @@ const initialState = {
                             ],
                             number: 5
                         },
-                        { title: '✦ Job placement with our Career Center', number: 6},
+                        {title: '✦ Job placement with our Career Center', number: 6},
                         {
                             title: 'PHP developer. Baseline 2.5 months',
                             subtitle: 'You will learn how to write working, clean code in PHP, you will be able to work with functions, classes, databases. Learn how to build simple applications with the Laravel framework',
@@ -648,42 +846,51 @@ const initialState = {
                         }
                     ]
                 },
-                reviews: {
-                    letters: ['S', 'E', 'S', 'E', 'A', 'R'],
-                    user_data: ['Sergey Gadaev', 'Elena Nekit, Moldova, Kishinev', 'Salavat Sadriev', 'Elena Volkova', 'Andrey Korobka', 'Radik Gataulin'],
-                    course: `Course "Profession Web-developer"`,
-                    texts: [
-                        'I have never regretted that I took the courses of the “Web developer” profession. Everything is cool, I especially liked the work of the curators - Alexander Dudukalo and Maxim Vasyanovich, thanks to them and the whole Skillbox team! I also want to highlight the availability of additional courses on intersecting technologies and knowledge, they are very useful',
-                        "I want to note the live presentation of the material. The speakers explain in detail, and most importantly, clearly explain and share their personal experience. This is very valuable and distinguishes learning in Skillbox from the classical university. I'm still only at the beginning of the journey, but I like it, and this is already a lot to maintain motivation",
-                        'Proper distribution of materials, step-by-step training - I really like everything! I have been going to this for a long time',
-                        'I really like that I can adjust the training schedule as it suits me. As well as interesting and informative videos',
-                        "I like how the material for training is presented, tests are presented, as well as the curators' answers to questions in the course's Telegram chat",
-                        'I like the opportunity to build my own training schedule, as well as the presence of an assistant when performing practical tasks. It is worth noting special attention to the verification of practical work: they check it qualitatively and reasonably'
-                    ]
-                },
-                resume: {
-                    salary: '270 usd',
-                    texts: ['Cross-browser, adaptive layout on HTML, CSS', 'Working with databases', 'Developing Laravel-applications', 'Teamwork',
-                        'Working with front-end frameworks React, Vue, Angular', 'PHP and JavaScript programming', 'Working with external APIs', 'Knowledge of algorithms and data structures',
-                        'JavaScript programming', 'Applying the principles of OOP in practice', 'Application testing', 'Building a high load backend'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have no experience in web development. Is this course right for me?',
-                        'Is English required?',
-                        'How many hours per week will I need to study?',
-                        'Who will help me learn on the platform?',
-                        'Are there any installment programs?',
+                teachers: [
+                    commonItems.teachers.kornienko, commonItems.teachers.vasyanovich, commonItems.teachers.tiunov, commonItems.teachers.avdeev, commonItems.teachers.molescu,
+                    commonItems.teachers.pozdnyakov, commonItems.teachers.bondarovich, commonItems.teachers.savchenko, commonItems.teachers.mirotin,
+                    commonItems.teachers.ignatiev, commonItems.teachers.pilipenko,
+                    new ExtendedTeacher('/courses/course/teachers/web/5.png', 'Andrey Grekov', 'Google Developer Expert. More than 12 years in IT',
+                        ['TypeScript course speaker. Lead Angular & .NET Developer. Angular Technical Writer at Depth and Angular Fox. 2010–2011 Software developer at Rusoft. 2012–2015 Developed software for an online broker at AMarkets (AForex). Since 2016 — Leading Frontender at IndigoSoft LTD. Since 2020 — Google Developer Expert. Speaker at major conferences such as FrontendConf']
+                    )
+                ],
+                cv: {
+                    salary: 'From 80.000 USD',
+                    skills: [
+                        'Cross-browser, adaptive layout on HTML, CSS', 'Working with front-end frameworks React, Vue, Angular', 'JavaScript programming, TypeScript knowledge',
+                        'Working with databases', 'PHP and JavaScript programming', 'Applying the principles of OOP in practice', 'Developing Laravel Applications',
+                        'Working with external APIs', 'Application Testing', 'Teamwork', 'Knowledge of algorithms and data structures', 'Building a high load backend'
                     ],
-                    texts: [
-                        'Yes, the course is suitable for absolute beginners with no programming experience. But in order to achieve a result, you need to try - to complete practical tasks, read additional literature and develop final projects. The rest will be helped by practicing experts who will accompany you throughout the course',
-                        'Not at all necessary. The documentation of all programming languages has a translation into Russian, and you will remember the names of the code functions in the process of learning on the platform',
-                        'Everything depends on you. On average, platform users spend 3 to 5 hours per week. Next to each course name is an approximate duration in hours. You can focus on this data and plan training on the platform according to the schedule that is convenient for you',
-                        "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                    projects: [
+                        '1. Art gallery landing page / podcast platform', '2. CRM system', '3. Online store / task tracker', '4. Cloud file storage', '5. Frontend part of the online store',
+                        '6. Frontend part of the banking service'
+                    ],
+                    tools: ['HTML', 'CSS', 'JavaScript', 'Bash', 'Git', 'SQL', 'Angular', 'React', 'Vue 3.0', 'Laravel', 'Symfony', 'Node.js', 'Figma']
+                },
+                questions: [
+                    new Question('I have no experience in web development. Is this course right for me?', 'Yes, the course is suitable for absolute beginners with no programming experience. But in order to achieve a result, you need to try - to complete practical tasks, read additional literature and develop final projects. The rest will be assisted by practicing experts who will accompany you throughout the course.'),
+                    new Question('How many hours per week will I need to devote to training on the platform?', 'On average, platform users study for about 2 hours a day and complete the course in 9 months. But we don’t have hard deadlines — learn on the platform at your own pace.'),
+                    commonItems.questions.system_requirements, commonItems.questions.soft, commonItems.questions.english, commonItems.questions.remote,
+                    {
+                        title: 'I see a lot of unfamiliar terms: CSS, PHP, framework? What does all of this mean?',
+                        terms: [
+                            commonItems.questions.html, commonItems.questions.css, commonItems.questions.css_grid, commonItems.questions.js, commonItems.questions.framework,
+                            new Term('PHP', 'a programming language that I use, first of all, to write the server part of the site: everything that “lies under the hood”, away from the user’s eyes. For example, in PHP, you can create an authorization system, user file storage, and so on.'),
+                            commonItems.questions.api, commonItems.questions.ui, commonItems.questions.figma, commonItems.questions.frontend, commonItems.questions.backend
+                        ]
+                    },
+                    {
+                        title: 'What kind of projects can I create?',
+                        listItems: [
+                            'Sites with the ability to buy and pay for a product or service, sign up for an event. For example, online stores, barbershop websites, food ordering services.',
+                            'Streaming services with music, podcasts, movies and series.',
+                            'Platforms for processing company customer data, documents, invoices - for example, large CRM systems for banks.'
+                        ]
+                    },
+                    new Question('What do you need to know to start taking the first orders or get a job?', `A web developer's career always starts with layout. To master the necessary skills, you need to take three courses within the profession: “Web layout. Basic level”, “JavaScript. Basic level" and master one of the technologies to choose from: Vue, React or Angular.`),
+                    new Question('How to develop further in the profession?', 'In web development, everything is changing rapidly: technologies, frameworks appear, new features are brought into JavaScript and CSS. Therefore, it is impossible to learn something once and always remain in demand. You need to constantly develop in the profession - communicate with team leaders in your company, attend conferences, read articles on Habré on your topic and other resources.'),
+                    commonItems.questions.help, commonItems.questions.freelance
+                ]
             }
         } as CourseI,
         fullstack_php: {
@@ -704,53 +911,42 @@ const initialState = {
                     new ForWho('/courses/course/for-who/fullstack-php/3.png', 'IT specialists', 'You will be able to create projects in JavaScript and its frameworks, program in PHP and make up. Learn to work in a team and be a versatile developer')
                 ],
                 skills: [
-                    new CoursesReducer('Build quality and fast websites'), new CoursesReducer('Apply the principles of OOP in practice'),
-                    new CoursesReducer('Work in the Git version control system'), new CoursesReducer('Responsive layout for mobile devices'),
-                    new CoursesReducer('Develop pages and site modules in PHP'), new CoursesReducer('Create admin panels with Bootstrap and Laravel'),
-                    new CoursesReducer('Create interactive websites with JavaScript'), new CoursesReducer('Work with technical documentation')
+                    new TextItem('Build quality and fast websites'), new TextItem('Apply the principles of OOP in practice'),
+                    new TextItem('Work in the Git version control system'), new TextItem('Responsive layout for mobile devices'),
+                    new TextItem('Develop pages and site modules in PHP'), new TextItem('Create admin panels with Bootstrap and Laravel'),
+                    new TextItem('Create interactive websites with JavaScript'), new TextItem('Work with technical documentation')
                 ],
                 projects: [
                     new Project('/courses/course/projects/fullstack-php/1.png', 'One page website', 'You will create an adaptive one-page website on the subject given by the teacher'),
                     new Project('/courses/course/projects/fullstack-php/2.png', 'Online store', 'You are designing web pages for an online furniture store')
                 ],
-                content: {
+                program: {
                     title: {
                         text: '3 basic courses are waiting for you: on web layout, JavaScript basics and one of its frameworks - ReactFramework, Vue or Angular.To master backend development, you will learn PHP. And then take 11 additional courses on algorithms, Git, technical EnglishBig and more',
                         counts: [new Count('100+', 'thematic modules'), new Count('500', 'video footage')]
                     },
                     programItems: [
-                        { ...commonItems.content.webLayout, number: 1 }, { ...commonItems.content.jsBasic, number: 2 }, { ...commonItems.content.php, number: 3 },
-                        { ...commonItems.content.laravel, number: 4 }, { ...commonItems.content.frameworks, number: 5 }, { ...commonItems.content.additionalCourses, number: 6 }
+                        ProgramItem(commonItems.program.webLayout, 1), ProgramItem(commonItems.program.jsBasic, 2), ProgramItem(commonItems.program.php, 3),
+                        ProgramItem(commonItems.program.laravel, 4), ProgramItem(commonItems.program.frameworks, 5),
+                        ProgramItem(commonItems.program.additionalCourses, 6)
                     ]
                 },
-                reviews: {
-                    letters: ['I'],
-                    user_data: ['Ivan Dudikov'],
-                    course: 'Course "Profession PHP Fullstack-developer"',
-                    texts: ['I liked the video answer on practical work with a detailed report. I see that the curator has a deep knowledge of the course material. He easily navigates the topic, gives advice on improving my code. I am facing this for the first time']
-                },
-                resume: {
-                    salary: '800 usd',
-                    texts: ['Development of turnkey online stores', 'Ability to set and meet deadlines', 'Writing commented and formatted code', 'Creation of animation sites',
-                        'Writing queries against relational databases', "Ability to understand other people's code", 'Setting up CRM integration with external systems', 'Administration and deployment of pilot works'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have never done web development. Will I succeed?',
-                        'What is the training schedule on the platform? Can you combine it with work?',
-                        'How many hours per week will I need to devote to training on the platform?',
-                        'Who will help me learn on the platform?',
-                        'Are there any installment programs?',
+                teachers: [
+                    new Teacher('/courses/course/teachers/fullstack-php/1.png', 'Vasiliy Grudistov', 'Chief executive officer in InstaDev'),
+                    new Teacher('/courses/course/teachers/fullstack-php/2.png', 'Michael Volkov', 'Technical director Qsoft'),
+                    commonItems.teachers.pilipenko, commonItems.teachers.yakovushen
+                ],
+                cv: {
+                    salary: 'From 75.000 USD',
+                    skills: [
+                        'Development of turnkey online stores', 'Writing commented and formatted code', 'Writing queries against relational databases',
+                        'Setting up CRM integration with external systems', 'Ability to set and meet deadlines', 'Creation of animation sites',
+                        "Ability to understand other people's code", 'Administration and deployment of pilot works'
                     ],
-                    texts: [
-                        'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course',
-                        'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
-                        'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
-                        "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                    projects: ['1. One page website', '2. Online store'],
+                    tools: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'Angular', 'React', 'Vue 3.0', 'Git', 'Bash', 'SQL', 'Figma']
+                },
+                questions: commonItems.questions.default_questions
             }
         } as CourseI,
         frontend: {
@@ -764,13 +960,24 @@ const initialState = {
                     new ForWho('/courses/course/for-who/frontend/2.png', 'Beginning programmers', 'Improve your layout skills, learn how to work with frameworks and create desktop applications in JS. Become a sought-after web developer and understand how to develop in the profession')
                 ],
                 skills: frontend.skills,
-                content: {
+                program: {
                     title: {
                         text: 'Master the profession and become a Junior specialist. Practice based on real cases awaits you. Training on the platform can be equated to a year of work. The training period is 8 months',
                         counts: [new Count('609', 'video footage'), new Count('49', 'practical work')]
                     },
-                    programItems: frontend.content.programItems
-                }
+                    programItems: frontend.program.programItems
+                },
+                teachers: frontend.teachers,
+                cv: {
+                    salary: 'From 80.000 USD',
+                    skills: frontend.cv.skills,
+                    projects: [
+                        '1. Art gallery/podcast platform landing page', '2. CRM system', '3. Issue tracker', '4. Note service on Node.js', '5. Construction company website',
+                        '6. Tour operator website', '7. Online store of electronic equipment/premium lingerie', '8. Frontend part of a streaming service in TypeScript'
+                    ],
+                    tools: frontend.cv.tools
+                },
+                questions: frontend.questions
             }
         } as CourseI,
         frontend_pro: {
@@ -785,36 +992,25 @@ const initialState = {
                     new ForWho('/courses/course/for-who/frontend-pro/3.png', 'Freelancers with no experience in IT', 'Turn programming from a hobby into a profitable profession. Master advanced layout skills, learn JavaScript and frameworks in depth. Close gaps in knowledge and be able to apply for the position of a middle-developer in a large company')
                 ],
                 skills: frontend.skills,
-                content: {
+                program: {
                     title: {
                         text: 'Master the profession, become a Junior specialist or develop to the Middle level through online consultations with an expert. Practice based on real cases awaits you. Training on the platform can be equated to a year of work. The training period is 10 months',
                         counts: [new Count('721', 'video footage'), new Count('67', 'practical work')]
                     },
-                    programItems: frontend.content.programItems
+                    programItems: frontend.program.programItems
                 },
-                resume: {
-                    salary: '300 usd',
-                    texts: ['Responsive and cross-browser layout', 'Adjusting layouts in Figma and Photoshop', 'Knowledge of JavaScript', 'Scrum development',
-                        'Working with Web API and HTTP/HTTPS protocols', 'Knowledge of SQL', 'Creation of sites and applications on Vue.js, React.js', 'Working on the Bash command line',
-                        'Advanced CSS3 and HTML5 skills', 'Working with Git version control systems', 'Building server solutions', 'Deploy, assembly of projects for production'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have never programmed. Will I succeed?',
-                        'What is the training schedule on the platform? Can you combine it with work?',
-                        'How many hours per week will I need to devote to training on the platform?',
-                        "Who will help me learn on the platform?",
-                        'Are there any installment programs?',
+                teachers: frontend.teachers,
+                cv: {
+                    salary: 'From 90.000 USD',
+                    skills: frontend.cv.skills,
+                    projects: [
+                        '1. Art gallery/podcast platform landing page', '2. Online furniture store', '3. CRM system', '4. Frontend part of the banking service',
+                        '5. Issue tracker', '6. Note service on Node.js', '7. Construction company website', '8. Tour operator website',
+                        '9. Online store of electronic equipment/premium lingerie', '10. Frontend part of a streaming service in TypeScript'
                     ],
-                    texts: [
-                        'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course',
-                        'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
-                        'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
-                        "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                    tools: frontend.cv.tools
+                },
+                questions: frontend.questions
             }
         } as CourseI,
         fullstack_js: {
@@ -853,45 +1049,31 @@ const initialState = {
                     new Project('/courses/course/projects/fullstack-php/5.png', 'Integration with Reddit', 'Set up the integration of posts from the Reddit news site using the ReactFramework.js framework'),
                     new Project('/courses/course/projects/fullstack-php/6.png', 'Online store', 'Develop a full-fledged online store on the Angular framework')
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'Online lectures and practical tasks based on real cases are waiting for you',
                         counts: [new Count('100+', 'thematic modules'), new Count('500+', 'online lessons')]
                     },
                     programItems: [
-                        { ...commonItems.content.webLayout, number: 1 }, { ...commonItems.content.jsBasic, number: 2 }, { ...commonItems.content.nodejs, number: 3 },
-                        { ...commonItems.content.frameworks, number: 4 }, { ...commonItems.content.additionalCourses, number: 5 },
+                        ProgramItem(commonItems.program.webLayout, 1), ProgramItem(commonItems.program.jsBasic, 2), ProgramItem(commonItems.program.nodejs, 3),
+                        ProgramItem(commonItems.program.frameworks, 4), ProgramItem(commonItems.program.additionalCourses, 5)
                     ]
                 },
-                reviews: {
-                    letters: ['M'],
-                    user_data: ['Muxamadzhon Nabiev, Uzbekistan, Phergana'],
-                    course: 'Course "Profession Javascript Fullstack-developer"',
-                    texts: ['Everything is clear and clearly explained. Before starting my studies, I thought that it would be simply unrealistic to learn this profession, but Skillbox proved the opposite, which I am very happy about. Thanks a lot!']
-                },
-                resume: {
-                    salary: '540 usd',
-                    texts: ['Layout of sites on HTML and CSS', 'Working with HTTP/HTTPS protocols', 'Redux basics', 'Web development with JavaScript',
-                        'Backend development with Node.js', 'Working with Web API', 'Adaptive layout', 'Working with databases: MySQL, MongoDB, Redis', 'Creating web applications on the React.js/Vue.js/Angular framework',
-                        'Working with the Git version control system'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have never done programming. Will I succeed?',
-                        'What is the training schedule? Can you combine it with work?',
-                        'How many hours per week will I need to study?',
-                        'Will I be able to communicate with teachers?',
-                        'Are there any installment programs?',
+                teachers: [
+                    commonItems.teachers.bondarovich, commonItems.teachers.savchenko, commonItems.teachers.kuznetsov, commonItems.teachers.kornienko,
+                    commonItems.teachers.vasyanovich, commonItems.teachers.yakovushen, commonItems.teachers.mirotin, commonItems.teachers.klimonova
+                ],
+                cv: {
+                    salary: 'From 95.000 USD',
+                    skills: [
+                        'Layout of sites on HTML and CSS', 'Backend development with Node.js', 'Creating web applications on the React.js/Vue.js/Angular framework',
+                        'Working with HTTP/HTTPS protocols', 'Working with Web API', 'Working with the Git version control system', 'Redux basics', 'Adaptive layout',
+                        'Web development with JavaScript', 'Working with databases: MySQL, MongoDB, Redis'
                     ],
-                    texts: [
-                        'Of course! With the right approach to learning, independent expansion of horizons and timely completion of homework, you can achieve results even without special basic knowledge. Experienced mentors will help you with everything, who will supervise you throughout the course',
-                        'You can work through the course materials at your convenience, moving through the program at your own pace. Moreover, all lessons will be available at the end of the course, forever, so you can refresh your knowledge at any time. Training is organized in such a way that you can combine it with work, study and personal life',
-                        'Everything depends on you. On average, our students study three to five hours per week',
-                        'You will have a curator in the Telegram chat, and the teacher will personally comment on homework and give useful advice. So you can learn from experience, professional knowledge and life hacks from leading experts',
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                    projects: ['1. Landing', '2. User interface', '3. Note service', '4. Online store', '5. Integration with Reddit'],
+                    tools: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Angular', 'React', 'Vue 3.0', 'Git', 'Bash', 'SQL', 'Figma']
+                },
+                questions: commonItems.questions.default_questions
             }
         } as CourseI,
         php_pro: {
@@ -901,9 +1083,8 @@ const initialState = {
                 header: {
                     text: 'You will learn how to program sites and web applications in PHP from scratch, master the Laravel framework, write cloud storage and work on an online store as a team.You could apply for a junior developer position',
                     features: [
-                        new TitleTextItem('6 courses', 'for professional immersion'), commonItems.header.features.durationSevenMonths,
-                        new TitleTextItem('Internship', 'in a team led by a team leader'), commonItems.header.features.threeProjectsInPortfolio,
-                        commonItems.header.features.guarantees
+                        new TitleTextItem('6 courses', 'for professional immersion'), new TitleTextItem('Internship', 'in a team led by a team leader'),
+                        commonItems.header.features.threeProjectsInPortfolio, commonItems.header.features.guarantees, commonItems.header.features.durationSevenMonths
                     ]
                 },
                 market: {
@@ -922,14 +1103,15 @@ const initialState = {
                     new TitleTextItem('Work with databases', 'Learn how to connect MySQL to a project. Learn how to write queries in SQL, get, add, delete and change information in the database'),
                     new TitleTextItem('Develop on Laravel', 'Get acquainted with the principles of the framework, routing, set up interaction with the database, connect the Blade templating engine. Learn to write and test complex business logic')
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'Webinars and practice based on real cases are waiting for you',
                         counts: [new Count('39', 'modules'), new Count('206', 'video footage')]
                     },
                     programItems: [
-                        { ...commonItems.content.php, number: 1 }, { ...commonItems.content.laravel, number: 2 }, { ...commonItems.content.bash, number: 3 },
-                        { ...commonItems.content.git, number: 4 }, { ...commonItems.content.sql, number: 5 }, { ...commonItems.content.knowledge, number: 6 },
+                        ProgramItem(commonItems.program.php, 1), ProgramItem(commonItems.program.laravel, 2),
+                        ProgramItem(commonItems.program.bash, 3), ProgramItem(commonItems.program.git, 4),
+                        ProgramItem(commonItems.program.sql, 5), ProgramItem(commonItems.program.knowledge, 6),
                         {
                             title: 'Cloud storage',
                             text: 'Users will register on the service, upload files and create folders, search through documents, and share files with other participants',
@@ -952,36 +1134,28 @@ const initialState = {
                     new Project('/courses/course/projects/php/2.png', 'Mikhail Terentiev. Booking service for hotels', 'The course participant developed a booking service similar to Booking.com. Through a personal account, customers can set prices for room categories, and visitors can book rooms for certain dates.'),
                     new Project('/courses/course/projects/php/3.png', 'The third stream of course participants. Product aggregator on the Laravel framework', 'A team of four members created an online store, an analogue of Yandex.Market. The project was developed using the latest version of Laravel. We used a flexible service-repository approach'),
                 ],
-                resume: {
-                    salary: '270 usd',
-                    texts: ['Install and configure Denwer, OpenServer', 'Understand and apply OOP in projects', 'Structure the code into files and folders',
-                        'I understand the principles of network operation, GET- and POST-requests', 'Working on the command line', 'Working with MySQL databases',
-                        'Working with the file system', 'Knowledge of Laravel PHP framework', 'Programming in PHP 7', 'I know the basics of HTML/CSS', 'I debug code manually and am familiar with Xdebug',
-                        'I adhere to the DRY principles and follow the code style'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have no programming experience. Will this course help me?',
-                        'What is the training schedule on the platform? Can you combine it with work?',
-                        'How many hours per week will I need to devote to training on the platform?',
-                        'Who will help me learn on the platform?',
-                        'Will I be able to communicate with teachers?',
+                teachers: [commonItems.teachers.ignatiev, commonItems.teachers.molescu],
+                cv: {
+                    salary: 'From 90.000 USD',
+                    skills: [
+                        'Install and configure Denwer, OpenServer', 'Understand and apply OOP in projects', 'Structure the code into files and folders',
+                        'I understand the principles of network operation, GET- and POST-requests', 'Working on the command line', 'Working with MySQL databases'
                     ],
-                    texts: [
-                        'Of course! The course is designed for beginners, and the PHP programming language can be mastered without special technical training. The main thing - do not forget to read additional literature and consolidate knowledge on practical tasks at the end of the module',
-                        'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
-                        'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
-                        "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
-                        'You will have a curator in the Telegram chat, and the checking teacher will comment on homework and give useful advice. So you can learn from experience, professional knowledge and life hacks from leading experts',
-                    ]
-                }
+                    projects: ['1. Cloud storage', '2. Booking service for hotels', '3. Product aggregator on the Laravel framework'],
+                    tools: ['PHP', 'Laravel', 'Bash', 'Git', 'SQL']
+                },
+                questions: [
+                    new Question('I have no programming experience. Will this course help me?', 'Certainly! The course is designed for beginners, and the PHP programming language can be mastered without special technical training. The main thing - do not forget to read additional literature and consolidate knowledge on practical tasks at the end of the module.'),
+                    new Question('How many hours per week will I need to devote to training on the platform?', 'On average, platform users study for about 2 hours a day and complete the course in 7 months. But we don’t have hard deadlines — learn on the platform at your own pace.'),
+                    new Question('Will I be able to communicate with teachers?', 'You will have a curator in the Telegram chat, and a checking teacher will comment on homework and give useful advice. So you can learn from experience, professional knowledge and life hacks from leading experts.'),
+                    commonItems.questions.schedule, commonItems.questions.help
+                ]
             }
         } as CourseI,
         c_plus_plus: {
-            preview: new Preview('C++ developer', '/courses/previews/c-plus-plus-plus-plus++.png', '7 months', 'c-plus-plus-plus-plus-plus-plus'),
+            preview: new Preview('C++ developer', '/courses/previews/c++.png', '7 months', 'c-plus-plus'),
             course: {
-                logoSrc: '/courses/course/logos/c-plus-plus-plus-plus++.png',
+                logoSrc: '/courses/course/logos/c++.png',
                 header: {
                     text: 'C++ programmers create complex programs and services. They develop high-load network applications, games, graphics engines, components for operating systems and hardware. Windows, Linux and macOS, Android, Chrome, Counter-Strike, StarCraft and Diablo are written in this language. You will master the legendary programming language from scratch: write a search engine, your own browser, and gain teamwork skills',
                     features: [
@@ -1009,7 +1183,7 @@ const initialState = {
                     new Project('/courses/course/projects/c-plus-plus/1.png', 'Search engine', "You will develop a search engine for the company's corporate portal - an analogue of the Yandex or Google search string. Learn to get data from web pages and build search indexes. Write a relevancy formula to return search results"),
                     new Project('/courses/course/projects/c-plus-plus/2.png', 'Browser', 'Work with other course participants to create an app that your friends and family can use. Write a full-fledged browser in C ++: with its help, you can search for information, browse the web and surf social networks - like in Google Chrome or Yandex Browser')
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'Webinars and practical tasks are waiting for you. You will learn how to program in C ++, work with databases, Git version control system and develop games on the Unreal Engine 4. Practice developing services and add projects to your portfolio',
                         counts: [new Count('95', 'thematic modules'), new Count('450', 'video footage')]
@@ -1026,7 +1200,9 @@ const initialState = {
                             ],
                             number: 1
                         },
-                        { ...commonItems.content.git, number: 2 }, { ...commonItems.content.sql, number: 3 }, { ...commonItems.content.knowledge, number: 4 },
+                        ProgramItem(commonItems.program.git, 2),
+                        ProgramItem(commonItems.program.sql, 3),
+                        ProgramItem(commonItems.program.knowledge, 4),
                         {
                             title: 'Advanced C++ and creating GUIs',
                             listItems: [
@@ -1053,39 +1229,29 @@ const initialState = {
                         }
                     ]
                 },
-                reviews: {
-                    letters: ['D', 'N', 'S'],
-                    user_data: ['Denis Katkov', 'Nikita Xolodkov', 'Stanisla Talanov'],
-                    course: `Course "Profession C++ developer"`,
-                    texts: [
-                        'I like the availability of explanations, conciseness, brevity of presentation of rather complex things. A fairly quick response of the curator to messages and completed tasks, detailed recommendations and links to additional materials on the topic, if required',
-                        "I liked the attitude of the curators and the understanding that the study of absolutely new material is given to everyone in different ways. Regardless of the student's skill level, the curators will always respond as positively as possible, support and guide, so to speak, on the right path",
-                        'Well chosen material. Interesting practical tasks motivate to study additional sources and deeper immersion in the topic. At the same time, there is enough material in the videos to complete them'
-                    ]
-                },
-                resume: {
-                    salary: '650 usd',
-                    texts: ['Application development in C++', 'Cross-platform development', 'Working with the STL library', 'Debugging and monitoring applications',
-                        'Working with SQL', 'Working with multithreading', 'Writing code for Unreal Engine 4', 'Creating microservices', 'Working with git, gcc, gdb',
-                        'Creating a REST API', 'Work with the documentation'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have never programmed in C++. Will I succeed?',
-                        'What is the training schedule on the platform? Can you combine it with work?',
-                        'How many hours per week will I need to devote to training on the platform?',
-                        'Who will help me learn on the platform?',
-                        'Are there any installment programs?',
+                teachers: [
+                    new ExtendedTeacher('/courses/course/teachers/c-plus-plus/1.png', 'Vladislav Turbanov', 'C++ developer', ['10+ years of experience in creating games, websites and mobile applications. Worked at Gaijin Entertainment and Mail.ru game studios. Now he creates graphics for the Night is Coming project']),
+                    new Teacher('/courses/course/teachers/c-plus-plus/2.png', 'Alexander Shvets', 'Head of development service at Yandex.Market'),
+                    new ExtendedTeacher('/courses/course/teachers/c-plus-plus/3.png', 'Denis Krakhmalev', 'C++ developer',
+                        ['C++ teacher at the MIPT Programming Department']
+                    )
+                ],
+                cv: {
+                    salary: 'From 100.000 USD',
+                    skills: [
+                        'Application development in C++', 'Cross-platform development', 'Working with the STL Library', 'Debugging and Monitoring Applications',
+                        'Working with SQL', 'Working with multithreading', 'Writing code for Unreal Engine 4 and Unreal Engine 5', 'Creating microservices',
+                        'Working with git, gcc, gdb', 'Creating a REST API', 'Work with documents'
                     ],
-                    texts: [
-                        'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course. The rest will be helped by experienced mentors who will supervise you throughout the course',
-                        'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
-                        'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
-                        "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                    projects: ['1. Search engine', '2. Browser'],
+                    tools: ['C++', 'Git', 'SQL']
+                },
+                questions: [
+                    new Question('I have never programmed in C++. Will I succeed?', 'Certainly! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course. The rest will be helped by experienced mentors who will supervise you throughout the course.'),
+                    new Question('What is the training schedule on the platform? Can you combine it with work?', "You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. What's more, all videos will be available at the end of the course, so you can brush up on your knowledge at any time."),
+                    new Question('How many hours per week will I need to devote to training on the platform?', 'On average, platform users study for about 2 hours a day and complete the course in 7 months. But we don’t have hard deadlines — learn on the platform at your own pace.'),
+                    commonItems.questions.schedule, commonItems.questions.help
+                ]
             }
         } as CourseI,
         android: {
@@ -1124,14 +1290,14 @@ const initialState = {
                     new Project('/courses/course/projects/android/2.png', 'Application for finding movies and series', commonItems.projects.texts.finder),
                     new Project('/courses/course/projects/android/3.png', 'Team Internship: Mobile App for Android', commonItems.projects.texts.teamProject)
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'You will get all the necessary skills that employers expect from aspiring Android developers in 2022',
                         counts: [new Count('7', 'months'), new Count('43', 'practical work')]
                     },
                     programItems: [
-                        { ...commonItems.content.kotlin, number: 1 },
-                        { title: 'Final work. Distribution center emulator', number: 2 },
+                        ProgramItem(commonItems.program.kotlin, 1),
+                        ProgramItem({ title: 'Final work. Distribution center emulator' }, 2),
                         {
                             title: 'Android developer. 3 months',
                             subtitle: 'You will go through the basics of Android development: learn how to make screens, animate interfaces, program logic, work with data and the network. Write over 7 mini-projects, including a quiz app, gallery, news feed, and point of interest map',
@@ -1152,40 +1318,52 @@ const initialState = {
                             ],
                             number: 5
                         },
-                        { title: 'Final work. Team app development', number: 6 }, { ...commonItems.content.careerCenter, number: 7 }, { ...commonItems.content.mobileAdditionalCourses, number: 8 }
+                        ProgramItem({title: 'Final work. Team app development'}, 6),
+                        ProgramItem(commonItems.program.careerCenter, 7),
+                        ProgramItem(commonItems.program.mobileAdditionalCourses, 8)
                     ]
                 },
-                reviews: {
-                    letters: ['B'],
-                    user_data: ['Bukreev Andrey'],
-                    course: `Course "Profession Android-developer"`,
-                    texts: ["Learning on the Skillbox platform gave me exactly what I wanted. But keep in mind that you have to write a lot of code. Sometimes, in order to do practical work, you need to ask the curator for help. It's cool that he does not give direct hints, but advises additional materials. Sometimes it was necessary to literally break the brain to correct the mistake. But it was worth it. Thanks to my curator Octavian for his support. Also, some advice for newbies. Don't be afraid to make tasks with an asterisk if you want to get the most out of the course"]
-                },
-                resume: {
-                    salary: '400 usd',
-                    texts: ['Strong knowledge of the Kotlin programming language', 'Testing mobile apps', 'Experience with multithreading', 'Basic skills in Figma',
-                        'I create applications for Android devices', 'Conducting a code review', 'Skills with SQLite, Firebase', 'I follow the code style — my code is easy to read and understand for colleagues',
-                        'Understand design patterns', 'Working with the API', 'Version control in Git', 'Technical english'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have never developed mobile applications. Will I succeed?',
-                        'Which computer is suitable for the course?',
-                        'What is the training schedule on the platform? Can you combine it with work?',
-                        'How many hours per week will I need to devote to training on the platform?',
-                        'Who will accompany me?',
-                        'Are there any installment programs?'
+                teachers: [
+                    commonItems.teachers.lisakov, commonItems.teachers.alexandrov, commonItems.teachers.martynenko, commonItems.teachers.machikhin, commonItems.teachers.firsov,
+                    commonItems.teachers.malykh, commonItems.teachers.pilipenko, commonItems.teachers.shadrin, commonItems.teachers.ovchinnikov, commonItems.teachers.rybakov,
+                    new Teacher('/courses/course/teachers/android/3.png', 'Artyom Bagritsevich', 'In development for 11 years. Chief Android Developer'),
+                    new Teacher('/courses/course/teachers/android/4.png', 'Alexandr Oplachnikov', 'Senior Android Developer'),
+                    new Teacher('/courses/course/teachers/android/10.png', 'Alexandr Ageychenko', 'Lead Android-developer, Tinkoff')
+                ],
+                cv: {
+                    salary: 'From 85.000 USD',
+                    skills: [
+                        'Programming in Kotlin', 'I create applications for Android devices', 'Understand design patterns', 'Testing mobile apps', 'Conducting a code review',
+                        'I use multithreading', 'Working with the network: writing GET and POST requests', 'I do version control in Git', 'Working with SQLite and Firebase',
+                        'I follow the code style — my code is easy to read and understand for colleagues', 'I speak technical English'
                     ],
-                    texts: [
-                        'Of course! The course is ideal for beginners without special knowledge. The main thing is not to miss classes and do not forget to practice. Under some videos you will find additional materials - we advise you to devote time to them. If you have any questions about the topic of classes, do not hesitate to contact the Telegram chat',
-                        'To work in Android Studio, you need Windows (64 bit), Linux (64 bit) or macOS versions from 10.10 (Yosemite) to 10.14 (Mojave). Minimum 4 GB RAM, recommended 8 GB. Minimum - 2 gigabytes of free disk space, recommended size - 4 GB. Screen resolution - from 1280x800',
-                        'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
-                        'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
-                        'You will have a mentor in the Telegram chat, and the curator will comment on practical work and give useful advice. So you can learn from experience, professional knowledge and life hacks from leading experts',
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                    projects: ['1. Distribution center software', '2. Quiz Application', '3. Satellite image gallery', '4. News application', '5. Landmarks app'],
+                    tools: ['Kotlin', 'SQLite', 'Firebase', 'AndroidX', 'Android Studio', 'Jetpack Compose', 'IntelliJ idea', 'Git', 'SQL', 'Figma']
+                },
+                questions: [
+                    new Question('I have never developed mobile applications. Will I succeed?', 'Certainly! The course is ideal for beginners without special knowledge. The main thing is not to miss classes and do not forget to practice. Under some videos you will find additional materials - we advise you to devote time to them. If you have any questions about the topic of the classes, do not hesitate to contact the Telegram chat.'),
+                    new Question('How many hours per week will I need to devote to the course?', 'Depends on how quickly you want to master the profession. To complete the course in 7 months and find a job by this time, you need to study for 2 hours a day. But it’s not at all necessary to follow a rigid schedule - you can study when it’s convenient.'),
+                    new Question('Which computer is suitable for the course?', 'To work in Android Studio, you need Windows (64 bit), Linux (64 bit) or macOS versions from 10.10 (Yosemite) to 10.14 (Mojave). Minimum 4 GB RAM, recommended 8 GB. Minimum - 2 gigabytes of free disk space, recommended size - 4 GB. Screen resolution - from 1280x800.'),
+                    commonItems.questions.schedule,
+                    new Question('What is the total length of the videos?', '396 hours is the main track of the course. Additional courses contain 100 more hours of video.'),
+                    new Question('Who will accompany me?', 'You will have a mentor in the Telegram chat, and the curator will comment on practical work and give useful advice. So you can learn from experience, professional knowledge and life hacks from leading experts.'),
+                    {
+                        title: 'Explaining terms used on this page',
+                        terms: [
+                            commonItems.questions.kotlin, commonItems.questions.figma, commonItems.questions.androidSDK,
+                            new Term('AndroidX', 'new version of android support library.'),
+                            new Term('Android Studio', 'Android application development environment with built-in code and interface editor, real device emulator, project builder and application debugging system.'),
+                            new Term('Jetpack Compose', 'a tool that simplifies the development of user interfaces for Android.'),
+                            new Term('IntelliJ idea', 'development environment for Java and Kotlin with built-in auto-completion, code analyzer and other useful features that allow you to speed up your work.'),
+                            new Term('SQLite', 'an embedded database management system that allows you to store data locally.'),
+                            new Term('Firebase', 'a platform for developing web and mobile applications with the ability to integrate analytics, monitoring, and cloud storage services.'),
+                            new Term('Git', 'A version control system that helps developers track code changes and collaborate on a project.'),
+                            new Term('Junior-developer', 'a novice programmer who can only solve small, simple and well-defined tasks.'),
+                            new Term('Middle-developer', 'programmer with 1-3 years experience. Able to independently perform complex tasks within the framework of the project, not only technical, but also administrative.'),
+                            new Term('Senior', 'the highest level of excellence. Such a developer is able to keep incredibly large and complex tasks in mind, take into account the most non-obvious interactions and consequences. He reviews the code, designs the architecture, and makes important decisions.'),
+                        ]
+                    }
+                ]
             }
         } as CourseI,
         ios: {
@@ -1195,9 +1373,9 @@ const initialState = {
                 header: {
                     text: 'An IOS developer creates applications for Apple devices — online banks, navigators, fitness trackers, and other useful services. He programs logic in Swift and designs interfaces, tests code, and uploads projects to the App Store. On the course, you will master Swift from scratch, write a news application, take part in the team development of an analogue of Yandex:GO and get help in finding a job',
                     features: [
-                        commonItems.header.features.getJobInSixMonths, new TitleTextItem('Feedback', 'on practical work from experienced professionals'),
-                        new TitleTextItem('Team internship', 'under the leadership of a team leader'), commonItems.header.features.guarantees,
-                        commonItems.header.features.forBeginners
+                        commonItems.header.features.getJobInSixMonths, commonItems.header.features.forBeginners, commonItems.header.features.guarantees,
+                        new TitleTextItem('Feedback', 'on practical work from experienced professionals'),
+                        new TitleTextItem('Team internship', 'under the leadership of a team leader')
                     ]
                 },
                 market: {
@@ -1218,46 +1396,49 @@ const initialState = {
                     new TitleTextItem('Work in a team', 'In practice, you will understand how the software development process works in large companies. Present team final project')
                 ],
                 projects: [new Project('/courses/course/projects/ios/1.png', 'Yandex Disk analogue', commonItems.projects.texts.yandexDisc)],
-                content: {
+                program: {
                     title: {
                         text: 'You will get all the necessary skills that employers expect from aspiring iOS developers in 2022',
                         counts: [new Count('6', 'months'), new Count('89', 'modules')]
                     },
                     programItems: [
-                        { ...commonItems.content.iosBasic, number: 1 }, { title: 'Final work. Application for working with Yandex Disk', number: 2 }, { ...commonItems.content.iosAdvanced, number: 3 },
-                        { title: '✦ Job placement with Career Center', number: 4 }, { ...commonItems.content.mobileAdditionalCourses, number: 5 }
+                        ProgramItem(commonItems.program.iosBasic, 1), ProgramItem({title: 'Final work. Application for working with Yandex Disk'}, 2),
+                        ProgramItem(commonItems.program.iosAdvanced, 3), ProgramItem({title: '✦ Job placement with Career Center'}, 4),
+                        ProgramItem(commonItems.program.mobileAdditionalCourses, 5)
                     ]
                 },
-                reviews: {
-                    letters: ['I'],
-                    user_data: ['Ivan Pestov'],
-                    course: 'Course "Profession IOS-developer"',
-                    texts: ['I liked that the teacher answers quickly, even on his days off']
-                },
-                resume: {
-                    salary: '400 usd',
-                    texts: ['I develop mobile applications for IOS', 'I know basic sorting and searching algorithms', 'Writing reactive code using RxSwift',
-                        'Teamwork experience in Git', 'I own the IOS SDK', 'Experience in developing multithreaded applications', 'Layout complex interfaces using UIKit and Swift',
-                        'I can meet deadlines', 'Network request skills', 'I follow the principles of OOP and SOLID, I apply design patterns', "Read and understand other people's code",
-                        'I understand the specifics of working with the App Store'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have never programmed. Will I succeed?',
-                        'What are the general Mac requirements for iOS development?',
-                        'What are the Mac hardware requirements?',
-                        'Is English required?',
-                        'Will I definitely get a job?',
+                teachers: [
+                    commonItems.teachers.kudryavtsev, commonItems.teachers.aniskov, commonItems.teachers.nikolaev, commonItems.teachers.sotsky, commonItems.teachers.pilipenko,
+                    commonItems.teachers.rybakov, commonItems.teachers.malykh, commonItems.teachers.shadrin
+                ],
+                cv: {
+                    salary: 'From 80.000 USD',
+                    skills: [
+                        'Programming in Swift', 'Write and process network requests', 'I know and apply the principles of OOP - object-oriented programming',
+                        'I test the code: manually and automatically', 'Building responsive interfaces with UIKit, SwiftUI and Combine', 'I use multithreading',
+                        'I follow the code style - my code is easy to read and maintain', 'I work with databases and built-in storage', 'I do version control in Git',
+                        'I create iOS applications with support for push notifications', 'I know basic sorting and searching algorithms'
                     ],
-                    texts: [
-                        'It will turn out. When we develop the content of the courses, we understand that the classes should be focused on those who want to learn programming from scratch. Therefore, speakers explain each topic from the most basic things - or you can always close unanswered questions through communication with the curator or in the course chat',
-                        'Your Mac must also have at least 4 GB of memory and 12.5 GB of free disk space. Either up to 18.5 GB of free space when upgrading from OS X Yosemite or earlier',
-                        'You will write code in the Swift 5 programming language and work in the Xcode 12.4 environment. Xcode 12.4 requires a Mac running macOS Catalina 10.15.4 or later',
-                        'It is desirable to know English. In the course, we give links to the official Swift documentation, and it is completely written in English. If you are new to the language, Google Translate will help you at first, but it is better to study English additionally - any programmer needs it',
-                        'Yes, if you take the course - it teaches enough skills to get a job as a programmer. For our part, we will help you to correctly compose a resume and arrange a portfolio, as well as provide contacts of companies',
-                    ]
-                }
+                    projects: ['1. Yandex Disk analogue'],
+                    tools: ['Swift', 'XCode', 'Swiftui', 'REST API', 'CoreData', 'Git', 'SQL', 'Figma']
+                },
+                questions: [
+                    new Question('I have never programmed. Will I succeed?', 'It will turn out. When we develop the content of the courses, we understand that the classes should be focused on those who want to learn programming from scratch. Therefore, speakers explain each topic from the most basic things - or you can always close unanswered questions through communication with the curator or in the course chat.'),
+                    new Question('How many hours per week will I need to devote to the course?', 'Depends on how quickly you want to master the profession. To complete the course in 6 months and find a job by this time, you need to study for 2 hours a day. But it’s not at all necessary to follow a rigid schedule - you can study when it’s convenient.'),
+                    new Question('What are the general Mac requirements for iOS development?', 'Your Mac must also have at least 4 GB of memory and 12.5 GB of free disk space. Either up to 18.5 GB of free space when upgrading from OS X Yosemite or earlier.'),
+                    new Question('What are the Mac hardware requirements?', 'You will write code in the Swift 5 programming language and work in the Xcode 12.4 environment. Xcode 12.4 requires a Mac running macOS Catalina 10.15.4 or later.'),
+                    commonItems.questions.english,
+                    new Question('Will I definitely get a job?', 'Yes, if you take the course - it teaches enough skills to get a job as a programmer. For our part, we will help you to correctly compose a resume and arrange a portfolio, as well as provide contacts of companies.'),
+                    {
+                        title: 'Explaining terms used on this site',
+                        terms: [
+                            commonItems.questions.swift, commonItems.questions.figma, commonItems.questions.ui, commonItems.questions.iosSDK,
+                            new Term('App Store Connect', 'a program that allows you to manage applications that you have developed. For example, testing new features or tracking the number of downloads from the App Store.'),
+                            new Term('Models MVC, MVVM, SOLID', 'they are patterns, or application design patterns. Such templates help to reduce the number of errors, speed up and synchronize the work of different teams - developers, testers, designers, analysts and managers.'),
+                            new Term('Teamlead', 'development team leader. The team leader evaluates the complexity of tasks and distributes them, communicates with customers and makes sure that the project is completed on time.')
+                        ]
+                    }
+                ]
             }
         } as CourseI,
         mobile: {
@@ -1299,13 +1480,14 @@ const initialState = {
                     new Project('/courses/course/projects/android/1.png', 'Profession Android developer. Console application for the logistics center', commonItems.projects.texts.emulator),
                     new Project('/courses/course/projects/android/3.png', 'Team Internship: Mobile App for Android', commonItems.projects.texts.teamProject),
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'You will choose one of the directions - iOS or Android and become a mobile developer. The difficulty of the course increases gradually. We constantly update the course so that you get the skills that employers need right now',
                         counts: [new Count('7', 'months'), new Count('39', 'practical work')]
                     },
                     programItems: [
-                        { ...commonItems.content.iosBasic, number: 1 }, { ...commonItems.content.iosAdvanced, number: 2 },
+                        ProgramItem(commonItems.program.iosBasic, 1),
+                        ProgramItem(commonItems.program.iosAdvanced, 2),
                         {
                             title: '✦ Job placement with Career Center',
                             listItems: [
@@ -1314,7 +1496,7 @@ const initialState = {
                             ],
                             number: 3
                         },
-                        { ...commonItems.content.kotlin, number: 4 },
+                        ProgramItem(commonItems.program.kotlin, 4),
                         {
                             title: 'Android developer. Basics. 3 months',
                             subtitle: 'You will go through the basics of Android development: learn how to make screens, animate interfaces, program logic, work with data and the network. Write over 7 mini-projects, including a quiz app, gallery, news feed, and point of interest map',
@@ -1344,32 +1526,44 @@ const initialState = {
                             ],
                             number: 7
                         },
-                        { ...commonItems.content.mobileAdditionalCourses, number: 8 }
+                        ProgramItem(commonItems.program.mobileAdditionalCourses, 8)
                     ]
                 },
-                questions: {
-                    titles: [
-                        "I don't really understand what to choose - iOS or Android. Tell!",
-                        'I have no experience in mobile development. Is this course right for me?',
-                        'Which computer is suitable for the course?',
-                        'Is English required?',
-                        'Will I get a job after the course?',
-                        'What is the training schedule on the platform? Can you combine it with work?',
-                        'How many hours per week will I need to devote to training on the platform?',
-                        'Who will help me learn on the platform?',
-                        'Are there any installment programs?',
-                    ],
-                    texts: [
-                        "Don't worry if you haven't decided yet. After the application, we will discuss specialization options together by phone. We will tell you in detail about the features of each platform, answer questions and choose a direction",
-                        'Of course! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be helped by practicing experts who will accompany you throughout the course',
-                        "To work in Android Studio, you need Windows 8/10 (64 bit), Linux (64 bit) with support for Gnome, KDE or macOS version 10.14 (Mojave) or higher. 4 GB RAM minimum, 8 GB recommended. Minimum - 2 free gigabytes on the disk, the recommended amount is 4 GB. Screen resolution - from 1280 × 800. You'll need a MacBook or other macOS computer to take iOS courses. The operating system is macOS Catalina 10.15.4 or later. The course uses the Swift 5 programming language, as well as the Xcode 12.4 development environment. The Mac must also have at least 4 GB of memory and 12.5 GB of free disk space. Either up to 18.5 GB of free space when upgrading from OS X Yosemite or earlier",
-                        'It is desirable to know English. In the course, we provide links to the official Swift/Kotlin documentation, and it is written entirely in English. If you are not familiar with the language, then Google Translate will help you at first, but it is better to study English additionally - any programmer needs it',
-                        'The courses cover all the topics that a mobile developer needs. If you study regularly, complete practical tasks and work on final projects, then by the end of the course you will be ready for animation. We will take care of the rest — we will select vacancies, help you write a resume, correctly draw up a portfolio and prepare for an interview. If the interview fails, we will collect feedback from the employer and suggest in what aspects you need to develop, and continue working. Most often, platform users get a chance to prove themselves in an internship or get a junior position',
-                        'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
-                        "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                teachers: [
+                    commonItems.teachers.kudryavtsev, commonItems.teachers.aniskov, commonItems.teachers.nikolaev, commonItems.teachers.sotsky, commonItems.teachers.lisakov,
+                    commonItems.teachers.alexandrov, commonItems.teachers.martynenko, commonItems.teachers.machikhin, commonItems.teachers.firsov
+                ],
+                questions: [
+                    new Question("I don't really understand what to choose - iOS or Android. Tell!", "Don't worry if you haven't decided yet. After the application, we will discuss specialization options together by phone. We will tell you in detail about the features of each platform, answer questions and choose a direction."),
+                    new Question('How many hours per week will I need to devote to the course?', 'Depends on how quickly you want to master the profession. To complete the course in 7.5 months and find a job by this time, you need to study for 2 hours a day. But it’s not at all necessary to follow a rigid schedule - you can study when it’s convenient.'),
+                    new Question('I have no experience in mobile development. Is this course right for me?', 'Certainly! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be assisted by practicing experts who will accompany you throughout the course.'),
+                    {
+                        title: 'Which computer is suitable for the course?',
+                        texts: [
+                            'To work in Android Studio, you need Windows 8/10 (64 bit), Linux (64 bit) with support for Gnome, KDE or macOS version 10.14 (Mojave) or higher. 4 GB RAM minimum, 8 GB recommended. Minimum - 2 free gigabytes on the disk, the recommended amount is 4 GB. Screen resolution - from 1280 × 800.',
+                            "You'll need a MacBook or other macOS computer to take iOS courses. The operating system is macOS Catalina 10.15.4 or later. The course uses the Swift 5 programming language, as well as the Xcode 12.4 development environment. The Mac must also have at least 4 GB of memory and 12.5 GB of free disk space. Or up to 18.5 GB of free space when upgrading from OS X Yosemite or earlier."
+                        ]
+                    },
+                    {
+                        title: 'Will I get a job after the course?',
+                        texts: [
+                            'The courses cover all the topics that a mobile developer needs. If you study regularly, complete practical tasks and work on final projects, then by the end of the course you will be ready for employment. We will take care of the rest — we will select vacancies, help you write a resume, correctly draw up a portfolio and prepare for an interview.',
+                            'If the interview fails, we will collect feedback from the employer and suggest in what aspects you need to develop, and continue working. Most often, platform users get a chance to prove themselves in an internship or get a junior position.'
+                        ]
+                    },
+                    new Question('How many hours per week will I need to devote to training on the platform?', 'Depends on how quickly you want to master the profession. To complete the course in 7.5 months and find a job by this time, you need to study for 2 hours a day. But it is not at all necessary to follow a rigid schedule - you can study when it is convenient.'),
+                    {
+                        title: 'I see a lot of unfamiliar terms: Kotlin, Swift, libraries. What does all of this mean?',
+                        terms: [
+                            commonItems.questions.kotlin, commonItems.questions.swift, commonItems.questions.androidSDK, commonItems.questions.iosSDK, commonItems.questions.oop,
+                            new Term('Interface, or UI', 'this is the "face" of the application. Colors, fonts, animation - everything that the user sees with his eyes. In addition to the appearance, the interface includes the convenience of managing and navigating the application.'),
+                            new Term('Library', 'ready-made code that helps to solve any narrow problem. The library can be installed in your project so as not to reinvent the wheel and use a ready-made solution.'),
+                            new Term('Asynchronous programming', 'a programming approach in which an application can perform several operations at the same time.'),
+                            new Term('Design patterns', 'ready-made templates that allow you to write programs according to certain principles that are understandable to all developers.')
+                        ]
+                    },
+                    commonItems.questions.english, commonItems.questions.schedule, commonItems.questions.help,
+                ]
             }
         } as CourseI,
         flutter: {
@@ -1396,7 +1590,7 @@ const initialState = {
                     new TitleTextItem('Interact with UX design', 'Master Figma. You will be able to customize user interfaces and develop design for application pages'),
                     new TitleTextItem('Test applications', 'Learn how to find errors using the built-in tools of Android Studio and XCode. You can remove data about the operation of the application')
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'You are waiting for a video with theory and 38 practical work. Materials updated in 2022',
                         counts: [new Count('115', 'topics'), new Count('6', 'months')]
@@ -1453,37 +1647,58 @@ const initialState = {
                     new Project('/courses/course/projects/flutter/1.png', 'Flutter course. Expense tracker app', 'Develop an app to track monthly expenses. Write the logic for removing and adding expenses and their categories. Add an expense schedule for each month and switch between months'),
                     new Project('/courses/course/projects/flutter/1.png', 'Flutter course. Analogue of Instagram*', 'You will develop an application with a feed of publications with a description of the photo and the ability to like it. Add a feature to view the post page, which displays users who have liked it')
                 ],
-                resume: {
-                    salary: '600 usd',
-                    texts: ['Creation of mobile applications according to platform guidelines', 'Experience in designing client-server applications', "Ability to understand other people's code",
-                        'Knowledge of Flutter and Dart', 'Working with API, including social networks', 'Working with eactive libraries', 'Creating blocks in Swift or Kotlin',
-                        'Working with Git version control', 'Working with multithreading in applications', 'Ability to set and meet deadlines', 'Uploading the application to the store',
-                        'Mobile application testing'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have never developed applications for mobile platforms. Will I succeed?',
-                        'What are the hardware requirements?',
-                        'What are the general Mac requirements for iOS development?',
-                        'Is English required?',
-                        'What is the training schedule on the platform? Can you combine it with work?',
-                        'How many hours per week will I need to devote to training on the platform?',
-                        'Who will help me learn on the platform?',
-                        'Are there any installment programs?'
+                teachers: [
+                    commonItems.teachers.ovchinnikov, commonItems.teachers.alexandrov, commonItems.teachers.rybakov, commonItems.teachers.pilipenko, commonItems.teachers.malykh,
+                    new Teacher('/courses/course/teachers/flutter/1.png', 'Anatoly Kirsanov', 'Practicing speaker and Flutter developer'),
+                    new Teacher('/courses/course/teachers/flutter/2.png', 'Alexander Denisov', 'Chief Software Engineer, Co-Head of Flutter Competency'),
+                    new Teacher('/courses/course/teachers/flutter/3.png', 'Vladimir Polyukhovich', 'Senior Software Developer'),
+                    new Teacher('/courses/course/teachers/flutter/4.png', 'Nikita Arkhipov', 'Founder of mobile app studio Anvics'),
+                    new Teacher('/courses/course/teachers/flutter/5.png', 'Mikhail Nikipelov', 'Art Director at Distillery'),
+                    new Teacher('/courses/course/teachers/flutter/6.png', 'Pavel Yarets', 'Our speaker'),
+                    new Teacher('/courses/course/teachers/flutter/7.png', 'Pavel Gorshkov', 'Former Design Director at Red_mad_robot'),
+                ],
+                cv: {
+                    salary: 'From 90.000 USD',
+                    skills: [
+                        'Creation of mobile applications according to platform guidelines', "Ability to understand other people's code", 'Working with API, including social networks',
+                        'Creating Blocks in Swift or Kotlin', 'Working with multithreading in applications', 'Uploading the application to the store',
+                        'Experience in designing client-server applications', 'Knowledge of Flutter and Dart', 'Working with Reactive Libraries', 'Working with Git Version Control',
+                        'Ability to set and meet deadlines', 'Mobile Application Testing'
                     ],
-                    texts: [
-                        'The course is designed for mobile developers or developers from related fields. During the course, we recommend paying attention to practical work and reading additional literature. The rest will be assisted by experienced practitioners who will accompany you throughout the profession',
-                        'If you choose Swift as your native language to learn, Mac models that are compatible with macOS from High Sierra and above are suitable: MacBook and iMac (Late 2009 or later), MacBook Pro, MacBook Air, Mac mini, and Mac Pro (Mid 2010) year or newer). To get information about your Mac model, click the Apple icon in the top left corner of the screen and choose About This Mac from the menu. The course uses the Swift programming language (version 4 at the first level, version 5 at the second level), as well as the Xcode development environment (version 10 at the first level, 11.1 at the second level).',
-                        'If you choose the Kotlin language, you will need Windows (64 bit), Linux (64 bit) or macOS versions from 10.10 (Yosemite) to 10.14 (Mojave). Minimum 4 GB RAM, recommended 8 GB. Minimum - 2 free gigabytes on the disk, the recommended amount is 4 GB. Screen resolution - from 1280x800',
-                        'OS X 10.8 or later, 2 GB RAM, 14.3 GB free space for system updates. Some features require an Apple ID and a compatible ISP',
-                        'Basic knowledge of English is required. In the future, the language will come in handy, since all documentation for developers and the latest information is published on it',
-                        'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
-                        'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
-                        "You will have reviewing experts and a curator in the course's Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks",
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments'
-                    ]
-                }
+                    projects: ['1. Spotify analogue', '2. Expense tracker app', '3. Instagram analogue'],
+                    tools: ['Flutter', 'Kotlin', 'Swift', 'Figma', 'SQL']
+                },
+                questions: [
+                    {
+                        title: 'I have never developed applications for mobile platforms. Will I succeed?',
+                        texts: [
+                            'The course is designed for mobile developers or developers from related fields. If you are a beginner, you can leave a request, and we will help you choose the right course.',
+                            'During the course, we recommend paying attention to practical work and reading additional literature. The rest will be assisted by experienced practicing experts who will accompany you throughout the profession.'
+                        ]
+                    },
+                    {
+                        title: 'What are the hardware requirements?',
+                        texts: [
+                            'If you choose Swift as your native language to learn, Mac models that are compatible with macOS from High Sierra and above are suitable: MacBook and iMac (Late 2009 or later), MacBook Pro, MacBook Air, Mac mini, and Mac Pro (Mid 2010) year or newer). To get information about your Mac model, click the Apple icon in the top left corner of the screen and choose About This Mac from the menu. The course uses the Swift programming language (version 4 at the first level, version 5 at the second level), as well as the Xcode development environment (version 10 at the first level, 11.1 at the second level).',
+                            'If you choose the Kotlin language, you will need Windows (64 bit), Linux (64 bit) or macOS versions from 10.10 (Yosemite) to 10.14 (Mojave). Minimum 4 GB RAM, recommended 8 GB. Minimum - 2 free gigabytes on the disk, the recommended amount is 4 GB. Screen resolution - from 1280x800.'
+                        ]
+                    },
+                    new Question('What are the general Mac requirements for iOS development?', 'OS X 10.8 or later, 2 GB RAM, 14.3 GB free space for system updates. Some features require an Apple ID and a compatible ISP.'),
+                    new Question('How many hours per week will I need to devote to training on the platform?', 'To master the profession and get a job after 6 months from the start of the course, you need to study the materials for 2 hours a day. But there is no strict schedule and deadlines - you can take the course at a comfortable pace.'),
+                    {
+                        title: 'Explaining terms used on this site',
+                        terms: [
+                            new Term('Framework Flutter', 'a development tool that allows you to develop cross-platform applications for iOS and Android.'),
+                            new Term('Dart', 'programming language used for development on Flutter.'),
+                            new Term('UX-design', '"user experience"; how the user interacts with the interface and how the site or application is understandable and convenient for him.'),
+                            new Term('Agile', 'a group of methods for flexible project management and a way of team interaction between employees, which allows them to jointly create products.'),
+                            new Term('Scrum', 'approach to management, when a universal team of specialists works on each project, to which two people join: the product owner and the scrum master.'),
+                            new Term('Kanban', 'management approach, when the workflow is divided into the stages of performing specific tasks: "Planned", "Developed", "Tested", "Completed", etc.'),
+                            commonItems.questions.swift, commonItems.questions.kotlin, commonItems.questions.figma
+                        ]
+                    },
+                    commonItems.questions.english, commonItems.questions.schedule, commonItems.questions.help,
+                ]
             }
         } as CourseI,
         java: {
@@ -1507,11 +1722,11 @@ const initialState = {
                     new ForWho('/courses/course/for-who/java/2.png', 'Beginners', 'If you are attracted by modern technologies and high salaries in the field of IT, then this course is definitely for you. You will learn how to write code, learn that the legend that a programmer must be perfect in mathematics is a fiction, begin to think critically and be able to code in the most popular language in the world')
                 ],
                 skills: [
-                    new CoursesReducer('Administration and deployment of pilot works'), new CoursesReducer('Knowledge of OOP principles'),
-                    new CoursesReducer('Java web application development'), new CoursesReducer('Development of web applications on the Spring framework'),
-                    new CoursesReducer('Working with the Git version control system'), new CoursesReducer('Relational database query writing skills')
+                    new TextItem('Administration and deployment of pilot works'), new TextItem('Knowledge of OOP principles'),
+                    new TextItem('Java web application development'), new TextItem('Development of web applications on the Spring framework'),
+                    new TextItem('Working with the Git version control system'), new TextItem('Relational database query writing skills')
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'We constantly update the course so that you get the skills that employers need right now. 57 topical topics and practical work are waiting for you to help you become a developer in demand',
                         counts: [new Count('6', 'months'), new Count('69', 'practical work')]
@@ -1535,54 +1750,50 @@ const initialState = {
                             listItems: ['Variables, conditional statements, comments, loops, methods, classes, encapsulation, static typing, primitives, numbers, dates, strings, arrays, lists, inheritance, OOP, exceptions, testing, file manipulation, JSON, MySQL, multithreading, HTTP, Spring Boot, Redis, algorithms, data structures, design patterns'],
                             number: 2
                         },
-                        { title: 'You will develop a search engine that will help site visitors quickly find the information they need using the search box', number: 3 },
-                        {
-                            title: 'You will work under the guidance of an experienced team leader as part of a team of 5-7 people. Create your own social network in 3 months according to the TOR from a real customer. In practice, get acquainted with the SCRUM project management methodology',
-                            number: 4
-                        },
-                        {
-                            title: 'All the processes that you will go through are experiences that are as close to real conditions as possible. This is how commercial software is created in employer companies',
-                            number: 5
-                        },
-                        { ...commonItems.content.careerCenter, number: 6 }, { ...commonItems.content.mobileAdditionalCourses, number: 7 }
+                        ProgramItem({title: 'You will develop a search engine that will help site visitors quickly find the information they need using the search box'}, 3),
+                        ProgramItem({title: 'You will work under the guidance of an experienced team leader as part of a team of 5-7 people. Create your own social network in 3 months according to the TOR from a real customer. In practice, get acquainted with the SCRUM project management methodology'}, 4),
+                        ProgramItem({title: 'All the processes that you will go through are experiences that are as close to real conditions as possible. This is how commercial software is created in employer companies'}, 5),
+                        ProgramItem(commonItems.program.careerCenter, 6),
+                        ProgramItem(commonItems.program.mobileAdditionalCourses, 7)
                     ]
                 },
-                reviews: {
-                    letters: ['A', 'D', 'D', 'V', 'A', 'M'],
-                    user_data: ['Anna Rudova', 'Dmitry Slepec, Belgorod', 'Danil Panik', 'Vladislav Vidin', 'Anton Chupin', 'Max Vlasov'],
-                    course: 'Course "Profession Java-developer"',
-                    texts: [
-                        'I like the feedback from the curators, updating materials and a lot of additional useful information for self-study',
-                        'I like the opportunity to study at any time, the structure of the course and the reworked content of the program, the good presentation of the material on video and the response time of the curator - no more than one day. At the same time, I would like to be able to submit several works at once within the same block',
-                        'There is a lot of interesting material in the course. I try to go through it carefully and study all the additional information on the topic. It\'s great that you can test the programs in practical tasks with autotests and figure it out yourself',
-                        'Lots of practice, lots of topics to explore. Feedback from the curator. Positive attitude, beautiful and comfortable design. In general, it is difficult, but interesting',
-                        'I liked the approach to learning. I myself choose the pace of study and how much time per week to devote to it',
-                        'I like the good elaboration of old material. Skillbox does not stand still, and every month the courses improve: new videos are added, the material of practical work becomes more interesting. Webinars from Konstantin are very useful for learning and consolidating the material. Good community of participants'
-                    ]
-                },
-                resume: {
-                    salary: '540 usd',
-                    texts: ['Administration and deployment of pilot works', 'Knowledge of OOP principles', 'Ability to set and meet deadlines', 'The habit of writing commented and strongly formatted code',
-                        'Java web application development', 'Development of web applications on the Spring framework', 'Relational database query writing skills', "Ability to understand other people's code",
-                        'Working with the Git version control system'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have never done Java development. Will I succeed?',
-                        'What is the training schedule? Can you combine it with work?',
-                        'How many hours per week will I need to study?',
-                        'Will I be able to communicate with teachers?',
-                        'Are there any installment programs?',
+                teachers: [commonItems.teachers.pilipenko, commonItems.teachers.ovchinnikov],
+                cv: {
+                    salary: 'From 80.000 USD',
+                    skills: [
+                        'I develop web applications in Java', 'Working with file system and databases', 'Testing applications', 'Know and apply application design patterns',
+                        'I know the principles of object-oriented programming', "I can read other people's code", 'I apply algorithms to solve problems',
+                        'Working with the Git version control system', 'I develop multi-threaded applications', 'Ability to work in a distributed team using the SCRUM methodology',
+                        'I write clear code that is easy to maintain', 'Basic knowledge of the Spring framework (Spring Boot)',
+                        'I create web applications on the Spring framework (Spring Boot)'
                     ],
-                    texts: [
-                        'Of course! With diligent study and timely completion of homework, you can achieve results even without special basic knowledge. Experienced mentors will help you with everything, who will supervise you throughout the course',
-                        'You can work through the course materials at your convenience, moving through the program at your own pace. Moreover, all lessons will be available at the end of the course, forever, so you can refresh your knowledge at any time. Training is organized in such a way that you can combine it with work, study and personal life',
-                        'Everything depends on you. On average, our students study three to five hours per week',
-                        'You will have a curator in the Telegram chat, and the teacher will personally comment on homework and give useful advice. So you can learn from experience, professional knowledge and life hacks from leading experts',
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                    projects: ['1. Search engine', '2. Social network', '3. And 15 more mini-projects'],
+                    tools: ['Java', 'IntelliJ idea', 'MySQL', 'PostgreSQL', 'Spring', 'Git', 'Bash', 'SQL', 'Figma']
+                },
+                questions: [
+                    commonItems.questions.java_development, commonItems.questions.help,
+                    new Question('What is the training schedule on the platform? Can you combine it with work?', "You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. What's more, all videos will be available at the end of the course, so you can brush up on your knowledge at any time."),
+                    new Question('What is the duration of the course?', 'The duration of the main course is 6 months. During this time, you will be able to study 338 videos and complete 62 practical tasks at an average pace to hone your skills.'),
+                    new Question('How many hours per week will I need to devote to the course?', 'Depends on how quickly you want to master the profession. To complete the course in six months and find a job by this time, you need to study for 2 hours a day. But it is not at all necessary to follow a rigid schedule - you can study when it is convenient for you, at a pace that is comfortable for you.'),
+                    {
+                        title: 'Explaining terms used on this site',
+                        terms: [
+                            new Term('Code', 'instructions that are written in a programming language. Such instructions can be "translated" into a special format - a set of zeros and ones, which will be understood by the computer.'),
+                            new Term('Data store', 'computer system for storing information. The closest analogy is a library in which various documents are stored in an orderly manner: books, magazines, newspapers. We can choose and get the data we need for a while.'),
+                            new Term('Application optimization', 'improving the performance of the application, for example, reducing the search time, increasing the number of clients served. At the same time, the result that we expect from the application does not change. For example, we found a shorter route to the bakery, and instead of 15 minutes on the road, we now spend 10. This means that we have optimized the route in terms of time.'),
+                            new Term('Search engine', 'a program that allows you to search for information among a large amount of data. For example, Yandex searches for websites, online stores help to find suitable products among tens of thousands of items. In all these examples, a search engine is running under the hood.'),
+                            new Term('Terms of Reference, or TK', 'a document that contains all the requirements for the program. Written in an understandable language, contains diagrams, charts, tables, images. When the developers hand over the program to the customer, he evaluates the result according to the requirements from the TOR.'),
+                            new Term('Variables', 'areas of memory that a program uses to store data while it is running. Variables can be compared to boxes in a storage room. Like boxes, each variable has a number - an identifier. It can be accessed to use the data that is stored inside.'),
+                            new Term('Pilot work', "work to test hypotheses. Before doing something large-scale, it is advisable to check: will it work at all and does anyone need it? For example, in the production of TV shows, they often shoot a pilot episode - they show it to a focus group and determine whether it is worth working further and trying something new. It's the same with programs."),
+                            commonItems.questions.oop,
+                            new Term('Framework Spring', 'a software platform that facilitates the development of web applications in Java. The framework takes care of all routine tasks, allowing the developer to focus only on business tasks.'),
+                            new Term('Writing queries', 'create database commands for reading, adding, modifying, and deleting database data.'),
+                            new Term('Database', 'programs that allow you to store various data and work with them: read, add new ones, change and delete existing ones.'),
+                            new Term('Relational databases', 'databases that store data in tables that can be linked. These databases include MySQL, PostgreSQL, Oracle Database, YDB, and many others.'),
+                            new Term('Git version control system', 'a system with which you can conveniently store and track changes in the code. Git helps development teams work in sync — you can see who is doing what, and if something goes wrong, you can roll back at any time. For any developer, knowing the basics of GIt is a must.')
+                        ]
+                    }
+                ]
             }
         } as CourseI,
         java_pro: {
@@ -1613,7 +1824,7 @@ const initialState = {
                     new TitleTextItem('Optimize code', 'Learn how to debug and optimize your code, and be able to create programs with high performance'),
                     new TitleTextItem('Use Spring', 'Explore the capabilities of the Spring framework and learn how to build web applications with it')
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'You are waiting for 3 blocks with different levels of difficulty, videos from experts and practical tasks',
                         counts: [new Count('145', 'thematic modules'), new Count('1043', 'video footage')]
@@ -1651,7 +1862,8 @@ const initialState = {
                             ],
                             number: 3
                         },
-                        { ...commonItems.content.webLayout, number: 4 }, { ...commonItems.content.additionalCourses, number: 5 },
+                        ProgramItem(commonItems.program.webLayout, 4),
+                        ProgramItem(commonItems.program.additionalCourses, 5),
                         {
                             title: 'Search engine',
                             text: 'You will develop a search engine that will help site visitors quickly find the information they need using the search field',
@@ -1664,49 +1876,34 @@ const initialState = {
                         }
                     ]
                 },
-                reviews: {
-                    letters: ['R', 'E', 'A', 'V', 'O', 'R'],
-                    user_data: ['Roman Zulcov', 'Eduard Kuksa', 'Alex Zemlyakov', 'Vyacheslav Mamontov', 'Olga Shvec', 'Roman Akamelkov'],
-                    course: `Course "Profession Java-developer PRO"`,
-                    texts: [
-                        'I liked the new videos on the "Java developer from scratch" course: the speaker energetically talks and shares useful information. As well as autotests in practical work, which speed up the approval of assignments if you do not need the help of a curator',
-                        'Tasks are great! Not always everything turns out right away, sometimes you have to look for additional information in third-party sources, but they make you think, this is a plus',
-                        'I like that the information is presented in great detail, as well as the realization that, in fact, all the material is here and even more than is necessary for obtaining the cherished profession. In some practical tasks, they make you think too much :)',
-                        'A MEGA resource and a great help for those who decide to change their profession and start a new life. I speak as a person who not only completed the course, but also successfully found a job. When questions or problems arose, I was helped by associates from the chat and mentors. And when the motivation weakened, the mailings from Skillbox were very encouraging. Thanks to the whole team, you are doing a great job!',
-                        'I like how the material was chosen, the program was drawn up. The video explains everything clearly and interestingly. Lots of practical tasks. The good thing is that you can do it anytime',
-                        "The quality of the training videos is high. The tasks are interesting, although sometimes too simple :). The curator responded within a day, plus or minus a few hours. And if I asked questions, I always got exhaustive answers to them. In the profession, in addition to the main program, there are many related training materials on various topics: from hard methodologies to soft skills and topics that broaden one's horizons - you can choose what you like. And, of course, it is convenient that you can practice at a pace that suits you"
-                    ]
-                },
-                resume: {
-                    salary: '550 usd',
-                    texts: ['Java application development', 'Working with the Git version control system', 'Working on the Bash command line',
-                        'Debugging and testing applications, JUnit', 'Working with MySQL, ability to write queries with JOIN, knowledge of HAVING, GROUP BY, ORDER BY',
-                        'Development of web applications on the Spring framework, working with Hibernate', 'Excellent knowledge of OOP principles and design patterns',
-                        'Java Core, Collections Framework, Multithreading', 'Work on Scrum methodology', 'Web mark-up', 'Application optimization'],
-                    certificate: 'https://248006.selcdn.ru/LandGen/blocks/resume/certificate.svg'
-                },
-                questions: {
-                    titles: [
-                        'I have never done Java development. Will I succeed?',
-                        'What is the training schedule on the platform? Can you combine it with work?',
-                        'How many hours per week will I need to devote to training on the platform?',
-                        'Who will help me learn on the platform?',
-                        'Are there any installment programs?',
+                teachers: [
+                    commonItems.teachers.pilipenko, commonItems.teachers.ovchinnikov,
+                    new ExtendedTeacher('/courses/course/teachers/java-pro/1.png', 'Kirill Koshaev', 'Technical Director at QWEP. More than 7 years of experience in Java and JavaScript programming and business application development on the Spring Framework',
+                        ['2012–2013 IT support specialist at Castorama. 2018–2021. Developer at Gazprom. Participated in the creation of a corporate portal. Since 2021 - CTO at QWEP. Develops solutions for the automotive business. Created games and applications for Android. Team leader in teams of course participants who work on group final projects']
+                    ),
+                    new ExtendedTeacher('/courses/course/teachers/java-pro/2.png', 'Andrey Lichman', 'CTO at Raiffeisenbank. Development experience — 14 years',
+                        ['Specializes in microservice architecture and distributed systems. 2008–2011 Java developer at IATVT. Created a web application for delivery. 2011–2012 Senior Java Developer at AMARGO. Developed a highly loaded ticket search engine, statistics collection and analytics functions, optimized the system performance. 2012–2018 Lead developer and team leader at Sberbank. Created web applications for internal use, designed the architecture for the analytical platform. 2018–2020. Lead Developer at Kryptonite. Designed and developed algorithms for a company that deals with cryptography, Big Data storage, neural networks and information security. Since 2020 — CTO at Raiffeisenbank. Developed a system for receiving electronic payments']
+                    ),
+                ],
+                cv: {
+                    salary: 'From 83.000 USD',
+                    skills: [
+                        'Java application development', 'Working with the Git version control system', 'Working on the Bash command line',
+                        'Debugging and testing applications, JUnit', 'Working with MySQL, ability to write queries with JOIN, knowledge of HAVING, GROUP BY, ORDER BY'
                     ],
-                    texts: [
-                        'Of course! With hard work and timely implementation of practical work, you can achieve results even without special basic knowledge. Experienced mentors will help you with everything, who will supervise you throughout the course',
-                        'You can study the course materials in a mode convenient for you, combine learning on the platform with work and personal life. Moreover, all videos will be available at the end of the course, so you can brush up on your knowledge at any time',
-                        'Everything depends on you. On average, platform users spend 3 to 5 hours a week',
-                        'You will have reviewing experts and a curator in the course\'s Telegram chat. They will comment on practical work, give useful advice and answer any questions. You will be able to adopt their experience, professional knowledge and life hacks',
-                        'Yes, you can buy the course in installments - and plan your budget by breaking the entire amount into small monthly payments',
-                    ]
-                }
+                    projects: ['1. Search engine', '2. Social network', '3. And 15 more mini-projects'],
+                    tools: ['Java', 'IntelliJ idea', 'MySQL', 'PostgreSQL', 'Redis', 'Spring', 'Git', 'Bash', 'SQL', 'Figma']
+                },
+                questions: [
+                    commonItems.questions.java_development, commonItems.questions.schedule, commonItems.questions.help,
+                    new Question('How many hours per week will I need to devote to the course?', 'Depends on how quickly you want to master the profession. To complete the course in 11 months, you need to practice 2 hours a day. But you do not have a rigid schedule - you can study at any convenient time, at a pace that is comfortable for you.'),
+                ]
             }
         } as CourseI,
         cyber_security: {
-            preview: new Preview('Cyber security specialist', '/courses/previews/cyber-security.png', '1 year', 'cyber-security'),
+            preview: new Preview('Cyber security specialist', '/courses/previews/cybersecurity.png', '1 year', 'cybersecurity'),
             course: {
-                logoSrc: '/courses/course/logos/cyber-security.png',
+                logoSrc: '/courses/course/logos/cybersecurity.png',
                 header: {
                     text: 'You will learn how to look for vulnerabilities, prevent threats and ensure the security of IT systems. Learn a sought-after profession even with zero experience in IT',
                     features: [
@@ -1719,13 +1916,13 @@ const initialState = {
                     list: [new TitleTextItem('2,000+ jobs for cyber security professionals', 'open'), new TitleTextItem('70 000 dollars', 'cyber security specialist salary')],
                 },
                 skills: [
-                    new CoursesReducer('Understand system and network administration'), new CoursesReducer('Find and exploit OS and web application vulnerabilities'),
-                    new CoursesReducer('Analyze application source code'), new CoursesReducer('Identify potential cyber threats to systems'),
-                    new CoursesReducer('Recover systems after a cyberattack'), new CoursesReducer('Work with security and access policies'),
-                    new CoursesReducer('Capture and analyze network traffic'), new CoursesReducer('Automate routine cyber security processes'),
-                    new CoursesReducer('Work with intrusion detection systems')
+                    new TextItem('Understand system and network administration'), new TextItem('Find and exploit OS and web application vulnerabilities'),
+                    new TextItem('Analyze application source code'), new TextItem('Identify potential cyber threats to systems'),
+                    new TextItem('Recover systems after a cyberattack'), new TextItem('Work with security and access policies'),
+                    new TextItem('Capture and analyze network traffic'), new TextItem('Automate routine cyber security processes'),
+                    new TextItem('Work with intrusion detection systems')
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'We regularly update the course, and each time we consult with employers to understand what skills they expect from applicants. You will be able to find an internship in 5-6 months from the start of training',
                         counts: [new Count('12', 'months'), new Count('110', 'modules')]
@@ -1746,8 +1943,16 @@ const initialState = {
                             listItems: ['Learn how to administer computers on Linux, including managing user data, installing programs, working with the system kernel. Learn how to issue commands to the computer using the bash line'],
                             number: 3
                         },
-                        { title: 'Linux network administration. 1 month', listItems: ['Learn how to administer your network environment using Linux computers'], number: 4 },
-                        { title: 'Database security. 3 weeks',  listItems: ['Learn how to secure your databases with encryption, access restrictions, and more'], number: 5 },
+                        {
+                            title: 'Linux network administration. 1 month',
+                            listItems: ['Learn how to administer your network environment using Linux computers'],
+                            number: 4
+                        },
+                        {
+                            title: 'Database security. 3 weeks',
+                            listItems: ['Learn how to secure your databases with encryption, access restrictions, and more'],
+                            number: 5
+                        },
                         {
                             title: 'Fundamentals of Python. Part 1. 2 weeks',
                             listItems: ["Learn the basics of one of the world's premier programming languages. Python is very popular among backend developers working with servers. Therefore, mastering it is one of the key skills of a cybersecurity specialist"],
@@ -1800,9 +2005,54 @@ const initialState = {
                         }
                     ]
                 },
+                teachers: [
+                    new ExtendedTeacher('/courses/course/teachers/cybersecurity/1.png', 'Lev Paley', 'Head of the information security service of SO UES',
+                        ['Head of the information security service of SO UES. 16+ years of experience in IT and information security, 7 years of experience in managing information security departments and processes. Lecturer in MBA courses and head of the cybersecurity expert group of the Digital Energy Association']
+                    ),
+                    new ExtendedTeacher('/courses/course/teachers/cybersecurity/2.png', 'Aleksandr Kuznetsov', 'Head of Architecture Group at JSOC Rostelecom-Solar',
+                        ['16+ years of experience in information security. 7+ years of experience in SOC in Russia and abroad. 10+ years of experience in teaching and public activities (author of publications in ISACA Journal, Hacker, Windows IT Pro/RE, etc.). Implemented the first in Russia practical cyber exercises for SOC, several hundred cybersecurity projects']
+                    ),
+                    new ExtendedTeacher('/courses/course/teachers/cybersecurity/3.png', 'Denis Rozhkov', 'Head of software development at Gazinformservice LLC',
+                        ['Head of software development at Gazinformservice LLC. More than 15 years in IT. Participant of large projects of the federal level. Speaker of technical conferences Highload++, Infostart, GISDAYs and others']
+                    ),
+                    new ExtendedTeacher('/courses/course/teachers/cybersecurity/4.png', 'Sergei Smirnov', 'Researcher of the activities of APT-groups and malicious software',
+                        ['Author of the course "Security Analysis". Threat Hunting/Threat Intelligence engineer at a major Russian bank. 5 years of experience in cyber intelligence, incident investigation and threat detection. 3 years of experience in researching the activities of APT groups, malware analysis']
+                    ),
+                    new ExtendedTeacher('/courses/course/teachers/cybersecurity/5.png', 'Konstantin Samatov', 'Advisor to the Director of ANO DPO "Institute of Business and Information Technologies"',
+                        ['Author of the course "Ensuring Compliance". Advisor to the Director of ANO DPO "Institute of Business and Information Technologies". 19 years of experience in the field of security. Member of the Board of the Association of Chief Information Security Officers']
+                    ),
+                    new ExtendedTeacher('/courses/course/teachers/cybersecurity/6.png', 'Natalia Onishchenko', 'Head of Network Security at SO UES',
+                        ['Author of the course "Implementation, modernization and support of information security systems". 20 years of experience in IT, 5 years in teaching. Head of Network Security at SO UES']
+                    ),
+                    new ExtendedTeacher('/courses/course/teachers/cybersecurity/7.png', 'Konstantin Vasiliev', 'Leading SOC engineer of a large Russian state corporation',
+                        ['Leading SOC engineer of a large Russian state corporation. 6+ years of experience in practical information security: penetration testing, investigation of cyber incidents, building monitoring and response systems. 3+ years of teaching and mentoring experience']
+                    )
+                ],
                 projects: [
-                    new Project('/courses/course/projects/cyber-security/1.png', 'Company Case: Incident Investigation', 'You have to find vulnerabilities, write a report and give recommendations on how to fix them. You will get a full experience of working on a project in a real company — you will complete tasks in a cloud environment on virtual stands'),
-                    new Project('/courses/course/projects/cyber-security/2.png', 'Telegram bot for a travel agency', 'Develop a Telegram bot on the instructions of the travel agency Too Easy Travel. The bot will take the approximate cost of living and the location of the user, and return a list of the most suitable hotels')
+                    new Project('/courses/course/projects/cybersecurity/1.png', 'Company Case: Incident Investigation', 'You have to find vulnerabilities, write a report and give recommendations on how to fix them. You will get a full experience of working on a project in a real company — you will complete tasks in a cloud environment on virtual stands'),
+                    new Project('/courses/course/projects/cybersecurity/2.png', 'Telegram bot for a travel agency', 'Develop a Telegram bot on the instructions of the travel agency Too Easy Travel. The bot will take the approximate cost of living and the location of the user, and return a list of the most suitable hotels')
+                ],
+                cv: {
+                    salary: 'From 90.000 USD',
+                    skills: [
+                        'Security analysis of web applications and network infrastructure', 'Conducting a security audit', 'Malware analysis', 'Development of safety recommendations',
+                        'Conducting penetration tests', 'Advanced Linux Administration', 'Preparation of documentation and reports on test results'
+                    ],
+                    projects: ['1. Investigation of an incident with the search for vulnerabilities', '2. Telegram bot for a travel agency'],
+                    tools: ['PowerShell', 'Linux OS', 'Python', 'Git']
+                },
+                questions: [
+                    new Question('I have never done cybersecurity. Will I succeed?', 'Yes. First, you will learn administration on Windows and Linux, working with databases, the basics of programming in Python. By the time you move on to cybersecurity, you will have a sufficient base of IT skills to complete the course.'),
+                    new Question('I see that the course has separate blocks on finding vulnerabilities and testing protection systems. How legal is it?', 'There is no illegal content on the course. You will become familiar with cybersecurity legislation, so you will understand what activities are allowed and which are illegal.'),
+                    {
+                        title: 'Will I need to earn additional certifications to start a career in cybersecurity?',
+                        texts: [
+                            'In the early stages of a career, certifications are a nice addition, but not essential. First of all, they save interviewers time when applying for a job. But if you can describe and prove your skills (and the Career Center will show you how to do this), then you will not need certificates.',
+                            'By the way, according to Habr, 88% of cybersecurity specialists do not have certificates.'
+                        ]
+                    },
+                    new Question('How many hours per week will I need to devote to training on the platform?', 'To complete the course in 12 months, we recommend studying the materials for 2 hours a day. But there is no hard schedule - it all depends on you. On average, platform users spend 3 to 5 hours per week.'),
+                    commonItems.questions.schedule, commonItems.questions.help
                 ]
             }
         } as CourseI,
@@ -1826,19 +2076,18 @@ const initialState = {
                 skills: [
                     new TitleTextItem('Administer linux', 'Learn how this operating system works and get to know the Linux terminal'),
                     new TitleTextItem('Work with databases', 'Get familiar with SQL and MySQL databases. Learn to manage large volumes of information and quickly get what you need using queries'),
-                    commonItems.skills.devopsDocker,
                     new TitleTextItem('Apply CI/CD principles', 'Understand what problems continuous integration and delivery solves. Using gitlab-ci as an example, learn how to set up the layout of services in development and testing environments'),
-                    commonItems.skills.devopsInfrastructure,
-                    commonItems.skills.devopsMonitoring
+                    commonItems.skills.devopsDocker, commonItems.skills.devopsInfrastructure, commonItems.skills.devopsMonitoring
                 ],
-                content: {
+                program: {
                     title: {
                         text: 'The course is suitable for absolute beginners. First, you will learn the basics of Linux, Python, the command line, databases, networking, and web servers. And then get a full set of skills for working as a Junior DevOps engineer',
                         counts: [new Count('49', 'modules'), new Count('271', 'video footage')]
                     },
                     programItems: [
-                        { ...commonItems.content.pythonBasic_1, number: 1 }, { ...commonItems.content.devopsStart, number: 2 }, { ...commonItems.content.devopsBasic, number: 3 },
-                        { ...commonItems.content.git, number: 4 }, { ...commonItems.content.pythonBasic_2, number: 5 }, { ...commonItems.content.sql, number: 6},
+                        ProgramItem(commonItems.program.pythonBasic_1, 1), ProgramItem(commonItems.program.devopsStart, 2),
+                        ProgramItem(commonItems.program.devopsBasic, 3), ProgramItem(commonItems.program.git, 4),
+                        ProgramItem(commonItems.program.pythonBasic_2, 5), ProgramItem(commonItems.program.sql, 6),
                         {
                             title: 'Workshops for participants',
                             listItems: ['Gitlab architecture', "Let's dive into Gitlab CI", 'Solving practical problems using Gitlab CI'],
@@ -1846,7 +2095,30 @@ const initialState = {
                         }
                     ]
                 },
-                projects: [commonItems.projects.infrastructure, commonItems.projects.accountManagement, new Project('/courses/course/projects/python/1.png', 'Python Basic Course: Travel Agency Bot', commonItems.projects.texts.chatBot)]
+                projects: [
+                    commonItems.projects.infrastructure, commonItems.projects.accountManagement,
+                    new Project('/courses/course/projects/python/1.png', 'Python Basic Course: Travel Agency Bot', commonItems.projects.texts.chatBot)
+                ],
+                teachers: [
+                    commonItems.teachers.naumenko, commonItems.teachers.zaycev, commonItems.teachers.aquilin, commonItems.teachers.bryukhanov, commonItems.teachers.krylov,
+                    commonItems.teachers.dmitriev
+                ],
+                cv: {
+                    salary: 'From 95.000 USD',
+                    skills: [
+                        'Programming in Python', 'Working with containers and building images (Docker)', 'Ensuring the stability and security of servers',
+                        'Continuous integration management, ability to set up CI/CD pipelines (Gitlab)', 'Ansible code testing (Molecule, Karate)',
+                        'Implementing DevOps in a company with existing processes', 'Working with infrastructure as code (Ansible, Terraform)',
+                        'Monitoring setup (Prometheus, Grafana, ELK)'
+                    ],
+                    projects: ['1. Infrastructure platform', '2. Framework for Account Management', '3. Travel Agency Bot'],
+                    tools: ['Python', 'Git', 'SQL']
+                },
+                questions: [
+                    new Question('I have never done system administration and know nothing about DevOps. Will I succeed?', 'Certainly! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. The rest will be assisted by practicing experts who will accompany you throughout the course.'),
+                    new Question('How much time should be devoted to the course?', 'To complete the course in 7 months, you need to study 9 hours a week. But you do not have a rigid schedule - you can watch course materials at any time and study according to a schedule that is comfortable for you.'),
+                    commonItems.questions.schedule, commonItems.questions.help
+                ]
             }
         } as CourseI,
         devops_pro: {
@@ -1867,37 +2139,38 @@ const initialState = {
                     new ForWho('/courses/course/for-who/devops-pro/3.png', 'Professionals who need DevOps skills', 'You will understand the intricacies of the DevOps methodology from scratch, expand your working competencies and increase your value as a specialist')
                 ],
                 skills: [
-                    commonItems.skills.devopsDocker,
-                    commonItems.skills.devopsInfrastructure,
+                    commonItems.skills.devopsDocker, commonItems.skills.devopsInfrastructure, commonItems.skills.devopsMonitoring,
                     new TitleTextItem('Work with version control systems', 'Learn Git to work effectively with your codebase. Learn to apply the principles of CI / CD, learn how to set up the layout of services in development and testing environments'),
                     new TitleTextItem('Automate processes', 'Get to know Ansible: learn how to set up servers and deploy applications at the click of a button'),
                     new TitleTextItem('Use kubernetes (k8s)', 'You will manage loads between containers, automate deployment, and ensure data privacy'),
-                    commonItems.skills.devopsMonitoring
                 ],
-                content: {
+                program: {
                     title:  {
                         text: 'The course is suitable for absolute beginners. First, you will learn the basics of Linux, Python, the command line, databases, networking, and web servers. And then get a full set of skills for working as a Middle DevOps engineer',
                         counts: [new Count('49', 'modules'), new Count('271', 'video footage')]
                     },
                     programItems: [
-                        { ...commonItems.content.pythonBasic_1, number: 1 }, { ...commonItems.content.devopsStart, number: 2 }, { ...commonItems.content.devopsStart, number: 3 },
-                        { ...commonItems.content.devopsBasic, number: 4 },
+                        ProgramItem(commonItems.program.pythonBasic_1, 1),
+                        ProgramItem(commonItems.program.devopsStart, 2),
+                        ProgramItem(commonItems.program.devopsBasic, 3),
                         {
                             title: 'DevOps engineer. Advanced',
                             listItems: [
                                 'Introduction: YAML, Utilities, Git', 'Service Discovery', 'CMS (Configuration Management System). Ansible', 'Docker', 'CI/CD: Jenkins, GitLab',
                                 'Monitoring: collection of metrics', 'Monitoring: collection of logs', 'Safety', 'Networks', 'Cloud services', 'Final work'
                             ],
-                            number: 5
+                            number: 4
                         },
-                        { ...commonItems.content.git, number: 6 }, { ...commonItems.content.pythonBasic_2, number: 7 }, { ...commonItems.content.sql, number: 8 },
+                        ProgramItem(commonItems.program.git, 5),
+                        ProgramItem(commonItems.program.pythonBasic_2, 6),
+                        ProgramItem(commonItems.program.sql, 7),
                         {
                             title: 'Docker',
                             listItems: [
                                 'Core components of Docker', 'Basic Docker Concepts', 'Docker Builder and Dockerfile', 'Additional tools for working with Docker', 'Container orchestration',
                                 'How docker works. Inside view', 'Final work'
                             ],
-                            number: 9
+                            number: 8
                         },
                         {
                             title: 'Infrastructure platform based on Kubernetes',
@@ -1907,15 +2180,35 @@ const initialState = {
                                 'Service mesh. Introduction to Istio and Envoy', 'Kubernetes for Continuous Delivery (CI/CD). Integration with CI service', 'Cluster operation',
                                 'Final work'
                             ],
-                            number: 10
+                            number: 9
                         },
-                        { title: 'GitLab Architecture', number: 11 }, { title: 'Diving into Gitlab CI', number: 12 }, { title: 'Solving practical problems using Gitlab CI', number: 13 }
+                        ProgramItem({ title: 'GitLab Architecture' }, 10),
+                        ProgramItem({ title: 'Diving into Gitlab CI' }, 11),
+                        ProgramItem({ title: 'Solving practical problems using Gitlab CI' }, 12)
                     ]
                 },
-                projects: [
-                    commonItems.projects.infrastructure,
-                    new Project('/courses/course/projects/devops-pro/1.png', 'Python Basic Course: Travel Agency Bot', 'Develop a Telegram bot on the instructions of the travel agency Too Easy Travel. The bot will take the approximate cost of living and the location of the user, and return a list of the most suitable hotels'),
-                    commonItems.projects.accountManagement
+                projects: [commonItems.projects.infrastructure, commonItems.projects.accountManagement, new Project('/courses/course/projects/devops-pro/1.png', 'Python Basic Course: Travel Agency Bot', 'Develop a Telegram bot on the instructions of the travel agency Too Easy Travel. The bot will take the approximate cost of living and the location of the user, and return a list of the most suitable hotels')],
+                teachers: [
+                    commonItems.teachers.naumenko, commonItems.teachers.zaycev, commonItems.teachers.aquilin, commonItems.teachers.bryukhanov, commonItems.teachers.krylov,
+                    commonItems.teachers.dmitriev, new Teacher('/courses/course/teachers/devops-pro/1.png', 'Ilya Feoktistov', 'Head of DevOps at Bling'),
+                    new Teacher('/courses/course/teachers/devops-pro/2.png', 'Denis Matveev', 'Sysadmin/DevOps at Ignitia AB (Sweden)')
+                ],
+                cv: {
+                    salary: 'From 100.000 USD',
+                    skills: [
+                        'Programming in Python', 'Working with containers and building images (Docker)', 'Ensuring the stability and security of servers',
+                        'Creation of a full-fledged infrastructure platform based on a Kubernetes cluster', 'Ansible code testing (Molecule, Testinfra)',
+                        'Continuous integration management, ability to set up CI/CD pipelines (Gitlab)', 'Implementing DevOps in a company with existing processes',
+                        'Working with cloud services', 'Working with infrastructure as code (Ansible, Terraform)', 'Monitoring setup (Prometheus, Grafana, ELK)',
+                        'Development of own CI/CD and monitoring solutions'
+                    ],
+                    projects: ['1. Infrastructure platform', '2. Framework for Account Management', '3. Travel Agency Bot'],
+                    tools: ['Python', 'Git', 'SQL', 'Docker']
+                },
+                questions: [
+                    new Question("I don't know anything about DevOps. Will I succeed?", 'Certainly! You will succeed even without special knowledge - just pay more attention to practice and read additional literature. Everything else will be assisted by practicing experts who will accompany you throughout the course.'),
+                    new Question('How many hours per week will I need to devote to training on the platform?', 'On average, platform users study about 9 hours a week and complete the course in 12 months. But we don’t have hard deadlines — learn on the platform at your own pace.'),
+                    commonItems.questions.schedule, commonItems.questions.help
                 ]
             }
         } as CourseI

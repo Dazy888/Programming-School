@@ -509,7 +509,7 @@
       }
     }
 
-    #content {
+    #program {
       background: white;
       border: 3px solid $python-color;
 
@@ -522,8 +522,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $fullstack-python-color;
 
             &:last-child {
@@ -542,8 +542,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $web-color;
 
             &:last-child {
@@ -562,8 +562,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $fullstack-php-color;
 
             &:last-child {
@@ -582,8 +582,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $frontend-color;
 
             &:last-child {
@@ -602,8 +602,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $frontend-pro-color;
 
             &:last-child {
@@ -622,8 +622,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $fullstack-js-color;
 
             &:last-child {
@@ -642,8 +642,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $php-pro-color;
 
             &:last-child {
@@ -662,8 +662,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $c-color;
 
             &:last-child {
@@ -682,8 +682,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $android-color;
 
             &:last-child {
@@ -702,8 +702,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $ios-color;
 
             &:last-child {
@@ -722,8 +722,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $mobile-color;
 
             &:last-child {
@@ -742,8 +742,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $flutter-color;
 
             &:last-child {
@@ -762,8 +762,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $java-color;
 
             &:last-child {
@@ -782,8 +782,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $java-pro-color;
 
             &:last-child {
@@ -802,8 +802,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $cyber-security-color;
 
             &:last-child {
@@ -822,8 +822,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $devops-color;
 
             &:last-child {
@@ -842,8 +842,8 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
+        .program__content {
+          .program__content-item {
             border-top: 2px solid $devops-pro-color;
 
             &:last-child {
@@ -934,23 +934,23 @@
         }
       }
 
-      .content__title {
-        .content__count-item {
+      .program__title {
+        .program__count-item {
           div {
             background: black;
           }
         }
       }
 
-      .content__program {
-        .content__program-item {
+      .program__content {
+        .program__content-item {
           border-top: 2px solid $python-color;
 
           &:last-child {
             border-bottom: 2px solid $python-color;
           }
 
-          .content__program-item-title {
+          .program__content-item-title {
             cursor: pointer;
 
             .rotate {
@@ -979,8 +979,99 @@
         }
       }
 
-      .content__disclaimer-icon {
+      .program__disclaimer-icon {
         background: black;
+      }
+    }
+
+    #projects {
+      img {
+        width: 670px;
+        height: 378px;
+      }
+
+      .projects__slider-content {
+        max-width: 440px;
+      }
+
+      .projects__arrow {
+        border: 1px solid white;
+        transition: 0.1s;
+
+        &:hover {
+          background: white;
+          color: black;
+        }
+      }
+
+      li:before {
+        content: "•";
+        color: white;
+        margin-right: 5px;
+      }
+    }
+
+    #teachers {
+      .extended {
+        cursor: pointer;
+
+        &:hover {
+          i {
+            opacity: 0.4;
+          }
+        }
+      }
+
+      .teachers__teacher {
+        width: 270px;
+        height: 314px;
+        background: #F7F7F5;
+
+        img {
+          width: 110px;
+          height: 128px;
+        }
+
+        i {
+          transition: 0.1s;
+        }
+      }
+    }
+
+    #cv {
+      .cv__content {
+        background: #F7F7F5;
+
+        .cv__skills {
+          ul {
+            column-count: 2;
+          }
+
+          li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+          }
+
+          li {
+            padding-left: 15px;
+            max-width: 375px;
+          }
+        }
+
+        .cv__skills, .cv__projects {
+          li {
+            margin-bottom: 8px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .cv__tool {
+          background: #EDECEA;
+        }
       }
     }
   }
@@ -1186,15 +1277,43 @@
         }
       }
 
-      #content {
-        .content__title {
-          .content__subtitle {
+      #program {
+        .program__title {
+          .program__subtitle {
             width: 360px;
           }
         }
 
-        .content__disclaimer {
+        .program__disclaimer {
            width: 500px;
+        }
+      }
+
+      #projects {
+        h1 {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        .projects__slider {
+          width: fit-content;
+          grid-template-columns: repeat(1, auto);
+          margin: auto;
+
+          .projects__slider-content {
+            margin: auto;
+
+            .projects__slider-controllers {
+              margin: 30px auto auto;
+            }
+          }
+        }
+      }
+
+      #cv {
+        h3 {
+          width: 150px;
+          margin-right: 50px;
         }
       }
     }
@@ -1286,8 +1405,8 @@
         }
       }
 
-      #content {
-        .content__title {
+      #program {
+        .program__title {
           flex-direction: column;
 
           h1 {
@@ -1295,7 +1414,7 @@
             margin-bottom: 30px;
           }
 
-          .content__subtitle {
+          .program__subtitle {
             width: 90%;
             margin: auto;
 
@@ -1305,12 +1424,28 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
-            .content__program-item-title {
+        .program__content {
+          .program__content-item {
+            .program__content-item-title {
               cursor: none;
             }
           }
+        }
+      }
+
+      #cv {
+        .cv__tools, .cv__skills, .cv__projects {
+          flex-direction: column;
+
+          h3 {
+            margin: auto auto 20px;
+            text-align: center;
+          }
+        }
+
+        .cv__tools {
+          width: fit-content;
+          margin: auto;
         }
       }
     }
@@ -1608,7 +1743,7 @@
         }
       }
 
-      #content {
+      #program {
         padding: 20px 50px;
 
         .rectangle {
@@ -1691,20 +1826,20 @@
           }
         }
 
-        .content__title {
+        .program__title {
           h1 {
             font-size: 40px;
           }
 
-          .content__subtitle {
+          .projects__subtitle {
             p:first-child {
               font-size: 17px;
             }
 
-            .content__counts {
+            .projects__counts {
               grid-template-columns: repeat(1, auto);
 
-              .content__count-item {
+              .projects__count-item {
                 margin: auto;
 
                 div {
@@ -1719,9 +1854,9 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
-            .content__program-item-title {
+        .program__content {
+          .program__content-item {
+            .program__content-item-title {
               font-size: 18px;
 
               h1 {
@@ -1730,7 +1865,7 @@
             }
           }
 
-          .content__program-item-content {
+          .program__content-item-content {
             p {
               width: 95%;
             }
@@ -1742,7 +1877,7 @@
           }
         }
 
-        .content__disclaimer {
+        .program__disclaimer {
           width: fit-content;
           flex-direction: column;
           margin: 30px auto auto;
@@ -1750,6 +1885,42 @@
 
           div {
             margin-bottom: 10px;
+          }
+        }
+      }
+
+      #projects {
+        img {
+          height: 300px;
+        }
+      }
+
+      #cv {
+        .cv__title {
+          flex-direction: column;
+
+          div:first-child {
+            margin-bottom: 20px;
+          }
+        }
+
+        .cv__tools {
+          div {
+            width: fit-content;
+            flex-wrap: wrap;
+          }
+        }
+
+        .cv__content {
+          .cv__skills {
+            ul {
+              column-count: 1;
+              margin: auto;
+
+              li {
+                max-width: 100%;
+              }
+            }
           }
         }
       }
@@ -2054,19 +2225,19 @@
         }
       }
 
-      #content {
-        .content__title {
+      #program {
+        .program__title {
           h1 {
             font-size: 35px;
           }
 
-          .content__subtitle {
+          .program__subtitle {
             p:first-child {
               font-size: 16px;
             }
 
-            .content__counts {
-              .content__count-item:first-child {
+            .program__counts {
+              .program__count-item:first-child {
                 margin-bottom: 10px;
               }
             }
@@ -2329,7 +2500,7 @@
         }
       }
 
-      #content {
+      #program {
         padding: 20px 30px;
 
         .rectangle {
@@ -2417,13 +2588,13 @@
             font-size: 32px;
           }
 
-          .content__subtitle {
+          .program__subtitle {
             p:first-child {
               font-size: 15px;
             }
 
-            .content__counts {
-              .content__count-item {
+            .program__counts {
+              .program__count-item {
                 width: 170px;
 
                 div {
@@ -2444,9 +2615,9 @@
           }
         }
 
-        .content__program {
-          .content__program-item {
-            .content__program-item-title {
+        .program__content {
+          .program__content-item {
+            .program__content-item-title {
               font-size: 16px;
 
               h1 {
@@ -2466,8 +2637,8 @@
           }
         }
 
-        .content__disclaimer {
-          .content__disclaimer-icon {
+        .program__disclaimer {
+          .program__disclaimer-icon {
             width: 35px;
             height: 35px;
           }

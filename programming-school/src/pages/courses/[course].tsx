@@ -17,7 +17,10 @@ import { ForWho } from "@/components/courses/course/sections/for-who/ForWho"
 import { Skills } from "@/components/courses/course/sections/skills/Skills"
 import { Consultation } from "@/components/courses/course/sections/consultation/Consultation"
 import { Employment } from "@/components/courses/course/sections/employment/Employment"
-import {Content} from "@/components/courses/course/sections/content/Content";
+import { Program } from "@/components/courses/course/sections/program/Program"
+import { Projects } from "@/components/courses/course/sections/projects/Projects"
+import { Teachers } from "@/components/courses/course/sections/teachers/Teachers"
+import { CV } from "@/components/courses/course/sections/cv/CV"
 
 const Course = () => {
     const dispatch = useDispatch()
@@ -32,7 +35,9 @@ const Course = () => {
     const header = course.course.header
     const market = course.course.market
     const for_who = course.course.for_who
-    const content = course.course.content
+    const program = course.course.program
+    const projects = course.course.projects
+    const cv = course.course.cv
 
     return(
         <NavigationLayout>
@@ -50,7 +55,10 @@ const Course = () => {
                 <Consultation courseAttr={courseAttr}/>
                 <div className={`${styles['course__container']} mx-auto px-2`}>
                     <Employment/>
-                    <Content programItems={content.programItems} countItems={content.title.counts} titleText={content.title.text} courseAttr={courseAttr}/>
+                    <Program programItems={program.programItems} countItems={program.title.counts} titleText={program.title.text} courseAttr={courseAttr}/>
+                    {projects && <Projects projects={projects}/>}
+                    <Teachers teachers={course.course.teachers}/>
+                    {cv && <CV title={course.preview.profession} salary={cv.salary} skills={cv.skills} projects={cv.projects} tools={cv.tools}/>}
                 </div>
             </div>
         </NavigationLayout>
