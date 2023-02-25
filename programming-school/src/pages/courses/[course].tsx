@@ -21,6 +21,7 @@ import { Program } from "@/components/courses/course/sections/program/Program"
 import { Projects } from "@/components/courses/course/sections/projects/Projects"
 import { Teachers } from "@/components/courses/course/sections/teachers/Teachers"
 import { CV } from "@/components/courses/course/sections/cv/CV"
+import {Questions} from "@/components/courses/course/sections/questions/Questions";
 
 const Course = () => {
     const dispatch = useDispatch()
@@ -59,6 +60,7 @@ const Course = () => {
                     {projects && <Projects projects={projects}/>}
                     <Teachers teachers={course.course.teachers}/>
                     {cv && <CV title={course.preview.profession} salary={cv.salary} skills={cv.skills} projects={cv.projects} tools={cv.tools}/>}
+                    <Questions questions={course.course.questions}/>
                 </div>
             </div>
         </NavigationLayout>

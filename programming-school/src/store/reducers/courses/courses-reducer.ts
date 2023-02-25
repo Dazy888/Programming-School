@@ -1,4 +1,4 @@
-import { CourseI } from "@/interfaces/courses"
+import { CourseI } from "@/interfaces/course"
 import { InferActionTypes } from "../../../../../src/Redux/Redux-Store"
 
 class TitleTextItem {
