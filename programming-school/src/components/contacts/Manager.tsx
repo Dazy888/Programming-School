@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import Image from "next/image";
 
 interface Props {
     imgSrc: string
@@ -10,10 +11,10 @@ interface Props {
 const ManagerComponent: React.FC<Props> = ({ mail, name, occupation, imgSrc }) => {
     return(
         <div>
-            <img className={'mx-auto'} alt={`${name} Manager`} src={imgSrc}/>
-            <h3 className={'text-xl text-normal my-2.5'}>{name}</h3>
+            <Image width={200} height={200} className={'mx-auto'} alt={`${name} Manager`} src={imgSrc}/>
+            <h3 className={'text-xl my-2.5'}>{name}</h3>
             <p className={'text-lg opacity-80'}>{`${occupation} manager`}</p>
-            <p className={'text-base opacity-60 mt-2.5'}>{`${mail}@gmail.com`}</p>
+            <p className={'opacity-60 mt-2.5'}>{`${mail}@gmail.com`}</p>
         </div>
     )
 }

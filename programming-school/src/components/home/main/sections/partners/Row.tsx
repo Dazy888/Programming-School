@@ -8,7 +8,7 @@ interface Props {
     borderNone?: boolean
 }
 
-const LogosRowComponent: React.FC<Props> = ({ imgAlts, imgPaths, borderNone = false }) => {
+const RowComponent: React.FC<Props> = ({ imgAlts, imgPaths, borderNone = false }) => {
     return(
         <div className={`${styles['row']} ${borderNone ? 'border-none' : ''} flex`}>
             <RowItem imgPath={imgPaths[0]} imgAlt={imgAlts[0]}/>
@@ -19,4 +19,4 @@ const LogosRowComponent: React.FC<Props> = ({ imgAlts, imgPaths, borderNone = fa
     )
 }
 
-export const LogosRow = React.memo(LogosRowComponent)
+export const Row = React.memo(RowComponent)

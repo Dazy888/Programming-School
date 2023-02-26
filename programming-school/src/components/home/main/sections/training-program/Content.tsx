@@ -2,7 +2,7 @@ import React from "react"
 import styles from "@/styles/Home.module.scss"
 // Components
 import { ContentColumn } from "@/components/home/main/sections/training-program/ContentColumn"
-import { ColumnItem } from "@/components/home/main/sections/training-program/ColumnItem"
+import { ContentItem } from "@/components/home/main/sections/training-program/ContentItem"
 // Interface
 import { TrainingProgramItemI } from "@/interfaces/home"
 
@@ -19,7 +19,7 @@ const ContentComponent: React.FC<Props> = ({ smallResolution, content, secondCol
             {smallResolution
                 ?   <>
                         <div className={styles['content__column']}>
-                            {...content.map((item, key) => <ColumnItem key={key} month={item.month} text={item.text} rightLinePosition={true}/>)}
+                            {...content.map((item, key) => <ContentItem key={key} month={item.month} text={item.text} rightLinePosition={true}/>)}
                         </div>
                         <hr className={styles['content__line']}/>
                     </>

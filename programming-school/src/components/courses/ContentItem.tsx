@@ -9,11 +9,11 @@ interface Props {
     path: string
 }
 
-const ColumnItemComponent: React.FC<Props> = ({ path, imgPath, time, title }) => {
+const ContentItemComponent: React.FC<Props> = ({ path, imgPath, time, title }) => {
     const router = useRouter()
 
     return(
-        <div onClick={() => router.push(`/courses/${path}`)} className={`${styles['courses__item']} h-48 flex justify-between items-center cursor-pointer duration-300 p-4 mb-14 rounded-xl`}>
+        <div onClick={() => router.push(`/courses/${path}`)} className={`${styles['content__item']} h-48 flex justify-between items-center cursor-pointer duration-300 p-4 mb-14 rounded-xl`}>
             <div className={'flex flex-col justify-between h-full'}>
                 <h2 className={'text-2xl font-medium'}>{title}</h2>
                 <p className={'font-medium'}>{time}</p>
@@ -23,4 +23,4 @@ const ColumnItemComponent: React.FC<Props> = ({ path, imgPath, time, title }) =>
     )
 }
 
-export const ColumnItem = React.memo(ColumnItemComponent)
+export const ContentItem = React.memo(ContentItemComponent)

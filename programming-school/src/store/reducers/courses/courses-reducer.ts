@@ -1,5 +1,5 @@
 import { CourseI } from "@/interfaces/course"
-import { InferActionTypes } from "../../../../../src/Redux/Redux-Store"
+import { InferActionsTypes } from "@/store/store"
 
 class TitleTextItem {
     title: string
@@ -2231,7 +2231,7 @@ export function coursesReducer(state = initialState, action: ActionType): Initia
     }
 }
 
-type ActionType = InferActionTypes<typeof CoursesReducerActions>
+type ActionType = InferActionsTypes<typeof CoursesReducerActions>
 
 export const CoursesReducerActions = {
     setOpenedCourse: (course: string) => ({type: 'PROGRAMMING-SCHOOL/COURSES/SET-OPENED-COURSE', course} as const)

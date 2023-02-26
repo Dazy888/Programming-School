@@ -9,6 +9,7 @@ import IMask from "imask"
 
 const FormComponent = ({  }) => {
     const phoneRef: any = useRef()
+
     useEffect(() => {
         let element = phoneRef.current.querySelector('.phone')
         let mask: any
@@ -36,7 +37,7 @@ const FormComponent = ({  }) => {
     }, [])
 
     const { handleSubmit, reset, register, formState: { errors } } = useForm<FormI>({mode: 'onChange'})
-    const onSubmit: SubmitHandler<FormI> = (data) => reset()
+    const onSubmit: SubmitHandler<FormI> = () => reset()
 
     return(
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -48,7 +49,7 @@ const FormComponent = ({  }) => {
                 </div>
                 <textarea className={'w-1/2 text-black rounded-lg p-2.5'} minLength={20} {...(register('description', {required: true}))}/>
             </div>
-            <p className={'text-base font-normal text-center'}>By clicking the send button you agree to the processing of personal data in accordance with the privacy policy</p>
+            <p className={'text-center'}>By clicking the send button you agree to the processing of personal data in accordance with the privacy policy</p>
             <button className={'w-full text-xl rounded h-9 mt-5'}>Send</button>
         </form>
     )

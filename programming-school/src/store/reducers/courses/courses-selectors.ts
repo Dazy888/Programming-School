@@ -1,4 +1,4 @@
-import { PreviewsResponse } from "@/interfaces/courses"
+import { PreviewsResponse } from "@/interfaces/course"
 import { AppStateType } from "@/store/store"
 
 export const getAllPreviewData: PreviewsResponse = (state) => {

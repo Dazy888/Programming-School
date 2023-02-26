@@ -18,14 +18,14 @@ $devops-color : #80CAF2;
 $devops-pro-color : #B4DF92;
 
 #courses {
-  .courses__content {
+  .content {
     max-width: 1000px;
 
-    .courses__column {
+    .content__column {
       width: 425px;
 
       &:nth-child(1) {
-        .courses__item {
+        .content__item {
           &:nth-child(2) {
             background: $fullstack-python-color;
           }
@@ -61,7 +61,7 @@ $devops-pro-color : #B4DF92;
       }
 
       &:nth-child(2) {
-        .courses__item {
+        .content__item {
           &:nth-child(1) {
             background: $android-color;
           }
@@ -100,7 +100,7 @@ $devops-pro-color : #B4DF92;
         }
       }
 
-      .courses__item {
+      .content__item {
         background: $python-color;
 
         &:hover {
@@ -117,13 +117,13 @@ $devops-pro-color : #B4DF92;
       font-size: 45px;
     }
 
-    .courses__content {
+    .content {
       flex-direction: column;
 
-      .courses__column {
+      .content__column {
         margin: auto;
 
-        .courses__item {
+        .content__item {
           margin-bottom: 50px;
 
           &:hover {
@@ -141,8 +141,8 @@ $devops-pro-color : #B4DF92;
       font-size: 40px;
     }
 
-    .courses__content {
-      .courses__column {
+    .content {
+      .content__column {
         width: 370px;
       }
     }
@@ -155,11 +155,11 @@ $devops-pro-color : #B4DF92;
       font-size: 35px;
     }
 
-    .courses__content {
-      .courses__column {
+    .content {
+      .content__column {
         width: 320px;
 
-        .courses__item {
+        .content__item {
           height: 150px;
 
           div {

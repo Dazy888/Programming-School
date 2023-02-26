@@ -2,7 +2,7 @@ import React from "react"
 import styles from '@/styles/Home.module.scss'
 import { TrainingProgramItemI } from "@/interfaces/home"
 
-const ColumnItemComponent: React.FC<TrainingProgramItemI> = ({ month, text, rightLinePosition }) => {
+const ContentItemComponent: React.FC<TrainingProgramItemI> = ({ month, text, rightLinePosition }) => {
     return(
         <div className={`${styles['content__item']} flex justify-between items-center text-right mb-24 w-80 h-24`}>
             {!rightLinePosition && <hr className={'w-10 h-px'}/>}
@@ -15,4 +15,4 @@ const ColumnItemComponent: React.FC<TrainingProgramItemI> = ({ month, text, righ
     )
 }
 
-export const ColumnItem = React.memo(ColumnItemComponent)
+export const ContentItem = React.memo(ContentItemComponent)

@@ -1,21 +1,16 @@
 #contacts {
-  .contacts__container {
+  .container {
     width: 1200px;
 
-    .contacts__row {
+    .managers__row {
       width: 800px;
-
-      img {
-        width: 200px;
-        height: 200px;
-      }
     }
 
     iframe {
       border: 3px solid mediumpurple;
     }
 
-    .contacts__connection {
+    .feedback {
       span {
         top: -25px;
         color: #f92552;
@@ -44,7 +39,7 @@
 
 @media (max-width: 1440px) {
   #contacts {
-    .contacts__container {
+    .container {
       width: 1020px;
     }
   }
@@ -52,22 +47,22 @@
 
 @media (max-width: 1024px) {
   #contacts {
-    .contacts__container {
+    .container {
       width: 760px;
 
-      .contacts__row {
+      .managers__row {
         width: 100%;
       }
 
-      .contacts__connection {
+      .feedback {
         flex-direction: column;
 
-        .contacts__contact-information {
+        .feedback__information {
           margin: auto;
           text-align: center;
         }
 
-        .contacts__form {
+        .feedback__form {
           width: fit-content;
           margin-top: 80px;
           text-align: center;
@@ -79,10 +74,10 @@
 
 @media (max-width: 768px) {
   #contacts {
-    .contacts__container {
+    .container {
       width: 420px;
 
-      .contacts__row {
+      .managers__row {
         flex-direction: column;
 
         div:nth-child(2) {
@@ -90,8 +85,8 @@
         }
       }
 
-      .contacts__connection {
-        .contacts__form {
+      .feedback {
+        .feedback__form {
           div {
             flex-direction: column;
 
@@ -109,7 +104,7 @@
 
 @media (max-width: 425px) {
   #contacts {
-    .contacts__container {
+    .container {
       width: 370px;
     }
   }
@@ -117,7 +112,7 @@
 
 @media (max-width: 375px) {
   #contacts {
-    .contacts__container {
+    .container {
       width: 320px;
     }
   }

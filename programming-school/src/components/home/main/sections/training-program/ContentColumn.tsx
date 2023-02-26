@@ -1,14 +1,14 @@
 import React from "react"
 import styles from '@/styles/Home.module.scss'
 import { TrainingProgramItemI } from "@/interfaces/home"
-import { ColumnItem } from "@/components/home/main/sections/training-program/ColumnItem"
+import { ContentItem } from "@/components/home/main/sections/training-program/ContentItem"
 
 interface Props {
     content: TrainingProgramItemI[]
 }
 
 const ContentColumnComponent: React.FC<Props> = ({ content }) => {
-    const items = content.map((item, key) => <ColumnItem key={key} month={item.month} text={item.text} rightLinePosition={item.rightLinePosition}/>)
+    const items = content.map((item, key) => <ContentItem key={key} month={item.month} text={item.text} rightLinePosition={item.rightLinePosition}/>)
 
     return(
         <div className={styles['content__column']}>
