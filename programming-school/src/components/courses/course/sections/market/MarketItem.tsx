@@ -1,5 +1,5 @@
 import React from "react"
-import { ListItemTextI } from "@/interfaces/courses"
+import { ListItemTextI } from "@/interfaces/course"
 
 const MarketItemComponent: React.FC<ListItemTextI> = ({ text, title }) => {
     return(

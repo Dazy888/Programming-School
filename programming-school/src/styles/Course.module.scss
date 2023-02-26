@@ -1,7 +1,7 @@
 @import "Courses.module";
 
 #course {
-  .course__container {
+  .container {
     max-width: 1430px;
 
     #header {
@@ -16,11 +16,6 @@
           background: #3D3BFF;
         }
 
-        img {
-          width: 486px;
-          height: 486px;
-        }
-
         &[course=fullstack-python] {
           background: $fullstack-python-color;
         }
@@ -32,6 +27,7 @@
         &[course=fullstack-php] {
           background: $fullstack-php-color;
         }
+
         &[course=frontend] {
           background: $frontend-color;
         }
@@ -49,7 +45,7 @@
         }
 
         &[course=c-plus-plus] {
-          background: $c-color;
+          background: $c-plus-plus-color;
         }
 
         &[course=android] {
@@ -134,7 +130,7 @@
           }
 
           &[course=c-plus-plus] {
-            border: 3px solid $c-color;
+            border: 3px solid $c-plus-plus-color;
           }
 
           &[course=android] {
@@ -177,11 +173,11 @@
     }
 
     #disclaimer {
-      background: #F7F7F5;
+      background: #272727;
     }
 
     #skills {
-      .skills__content {
+      .content {
         &[course=fullstack-python] {
           div {
             border: 3px solid $fullstack-python-color;
@@ -226,7 +222,7 @@
 
         &[course=c-plus-plus] {
           div {
-            border: 3px solid $c-color;
+            border: 3px solid $c-plus-plus-color;
           }
         }
 
@@ -291,10 +287,10 @@
     }
 
     #employment {
-      background: white;
+      background: #272727;
 
-      .employment__container {
-        .employment__animation {
+      .container {
+        .header__animation {
           grid-column: 2/-1;
           grid-row: 1/-1;
 
@@ -303,16 +299,7 @@
             animation-direction: alternate;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
-          }
-
-          .big {
-            width: 115px;
-            height: 115px;
-          }
-
-          .medium {
-            width: 90px;
-            height: 90px;
+            position: absolute;
           }
 
           .small {
@@ -425,15 +412,15 @@
           }
         }
 
-        .employment__guarantees {
-          .employment__stats {
+        .guarantees {
+          .guarantees__stats {
             grid-row: 1/-1;
             grid-column: 1/2;
-            background: black;
+            background: white;
             padding: 48px 24px 24px;
 
-            .employment__stats-item {
-              border: 1px solid #e4e4e4;
+            .guarantees__stats-item {
+              border: 1px solid black;
               margin-bottom: 12px;
 
               &:last-child {
@@ -442,16 +429,15 @@
             }
           }
 
-          .employment__text {
+          .guarantees__text {
             div:last-child {
               margin-bottom: 0;
             }
           }
         }
-
       }
 
-      .employment__career-center {
+      .career-center {
         h1 {
           margin-left: 135px;
         }
@@ -472,7 +458,7 @@
           background: rgb(163, 163, 255) !important;
         }
 
-        .employment__career-center-slide {
+        .career-center__slide {
           width: 336px;
           height: 346px;
           background: rgb(255, 223, 110);
@@ -486,6 +472,7 @@
           &:hover {
             .invisible-text {
               opacity: 1;
+              color: black !important;
             }
 
             .title {
@@ -495,22 +482,26 @@
         }
       }
 
-      .employment__reviews {
+      .reviews {
         h1 {
           margin-left: 135px;
         }
 
-        .employment__reviews-slide {
+        .reviews__slide {
           width: 470px;
           height: 300px;
           margin-left: 17px;
           background: #353535;
+
+          img:first-child {
+            height: 56px;
+          }
         }
       }
     }
 
     #program {
-      background: white;
+      background: #202020;
       border: 3px solid $python-color;
 
       &[course=fullstack-python] {
@@ -654,20 +645,20 @@
       }
 
       &[course=c-plus-plus] {
-        border: 3px solid $c-color;
+        border: 3px solid $c-plus-plus-color;
 
         .rectangle {
           div {
-            border-bottom: 65px solid $c-color;
+            border-bottom: 65px solid $c-plus-plus-color;
           }
         }
 
         .program__content {
           .program__content-item {
-            border-top: 2px solid $c-color;
+            border-top: 2px solid $c-plus-plus-color;
 
             &:last-child {
-              border-bottom: 2px solid $c-color;
+              border-bottom: 2px solid $c-plus-plus-color;
             }
           }
         }
@@ -893,7 +884,7 @@
           }
 
           &[course=c-plus-plus] {
-            border-bottom: 65px solid $c-color;
+            border-bottom: 65px solid $c-plus-plus-color;
           }
 
           &[course=android] {
@@ -934,53 +925,51 @@
         }
       }
 
-      .program__title {
-        .program__count-item {
+      .title {
+        .title__count-item {
           div {
-            background: black;
+            background: white;
           }
         }
       }
 
-      .program__content {
-        .program__content-item {
+      .content {
+        .content__item {
           border-top: 2px solid $python-color;
 
           &:last-child {
             border-bottom: 2px solid $python-color;
           }
 
-          .program__content-item-title {
-            cursor: pointer;
-
+          .content__item-title {
             .rotate {
               transform: rotate(45deg);
             }
 
             &:hover {
               button {
-                color: white;
-                background: black;
+                color: black;
+                background: white;
               }
             }
 
             button {
-              border: 1px solid black;
-              transition: 0.1s;
+              border: 1px solid #B2B2B2;
+              color: #B2B2B2;
+              transition: 0.2s;
             }
           }
 
           li:before {
             content: '\2022';
-            color: black;
             position: absolute;
             left: 0;
           }
         }
       }
 
-      .program__disclaimer-icon {
-        background: black;
+      .disclaimer__icon {
+        background: white;
       }
     }
 
@@ -990,11 +979,11 @@
         height: 378px;
       }
 
-      .projects__slider-content {
+      .slider__content {
         max-width: 440px;
       }
 
-      .projects__arrow {
+      .slider__arrow {
         border: 1px solid white;
         transition: 0.1s;
 
@@ -1022,10 +1011,11 @@
         }
       }
 
-      .teachers__teacher {
+      .teacher {
         width: 270px;
         height: 314px;
         background: #F7F7F5;
+        color: black;
 
         img {
           width: 110px;
@@ -1039,10 +1029,10 @@
     }
 
     #cv {
-      .cv__content {
-        background: #F7F7F5;
+      .content {
+        background: #272727;
 
-        .cv__skills {
+        .content__skills {
           ul {
             column-count: 2;
           }
@@ -1059,7 +1049,7 @@
           }
         }
 
-        .cv__skills, .cv__projects {
+        .content__skills, .content__projects {
           li {
             margin-bottom: 8px;
 
@@ -1069,20 +1059,20 @@
           }
         }
 
-        .cv__tool {
-          background: #EDECEA;
+        .content__tool {
+          background: white;
         }
       }
     }
 
     #questions {
-      .questions__content {
+      .content {
         width: 700px;
 
-        .questions__question {
+        .content__question {
           background: #272727;
 
-          .questions__title {
+          .content__title {
             &:hover {
               button {
                 background: white;
@@ -1107,7 +1097,7 @@
             margin: 0 2px;
           }
 
-          .questions__text {
+          .content__text {
             background: #141414;
             max-height: 0;
             overflow: hidden;
@@ -1142,7 +1132,7 @@
   #consultation {
     background: $python-color;
 
-    .consultation__content {
+    .content {
       background: white;
 
       .error-text {
@@ -1174,12 +1164,12 @@
         transition: 0.2s;
       }
 
-      .consultation__phone-number {
+      .content__phone-number {
         input {
           border-radius: 0 10px 10px 0;
         }
 
-        .consultation__selected-country {
+        .content__selected-country {
           background: #F7F7F5;
           padding: 18px 14px;
           border-radius: 10px 0 0 10px;
@@ -1191,7 +1181,7 @@
           }
         }
 
-        .consultation__countries-list {
+        .content__countries-list {
           width: 240px;
           padding: 16px 12px;
           bottom: -350px;
@@ -1204,7 +1194,7 @@
             color: white;
           }
 
-          .consultation__country {
+          .content__country {
             padding: 8px 12px;
             border-radius: 10px;
 
@@ -1230,13 +1220,12 @@
 
 @media (max-width: 1440px) {
   #course {
-    .course__container {
-      max-width: 1020px;
-      margin: auto;
+    .container {
+      width: 100%;
 
       #header {
         .header__title {
-          padding: 40px 120px;
+          padding: 40px 140px;
 
           h1 {
             font-size: 35px;
@@ -1278,53 +1267,53 @@
       }
 
       #for-who {
-        .for-who__content {
+        .content {
           grid-template-columns: repeat(2, auto);
         }
       }
 
       #employment {
-        .employment__header {
+        .header {
           grid-template-columns: repeat(1, auto);
           text-align: center;
 
-          .employment__animation {
+          .header__animation {
             height: 500px;
             grid-column: 1/-1;
           }
 
-          .employment__title {
+          .header__title {
             margin: auto;
           }
         }
 
-        .employment__career-center {
+        .career-center {
           h1 {
             margin-left: 0;
             text-align: center;
           }
         }
 
-        .employment__guarantees {
+        .guarantees {
           grid-template-columns: repeat(1, auto);
 
-          .employment__stats {
+          .guarantees__stats {
             width: 90%;
             grid-row: 2/2;
             display: flex;
             justify-content: space-between;
             margin: 0 auto 30px;
 
-            .employment__stats-title {
+            .guarantees__stats-title {
               margin: 0;
             }
 
-            .employment__stats-item {
+            .guarantees__stats-item {
               max-width: 280px;
             }
           }
 
-          .employment__text {
+          .guarantees__text {
             h1 {
               text-align: center;
             }
@@ -1332,7 +1321,7 @@
           }
         }
 
-        .employment__reviews {
+        .reviews {
           h1 {
             text-align: center;
             margin-left: 0;
@@ -1341,13 +1330,13 @@
       }
 
       #program {
-        .program__title {
-          .program__subtitle {
+        .title {
+          .title__subtitle {
             width: 360px;
           }
         }
 
-        .program__disclaimer {
+        .disclaimer {
            width: 500px;
         }
       }
@@ -1358,15 +1347,20 @@
           margin-bottom: 30px;
         }
 
-        .projects__slider {
+        .slider {
           width: fit-content;
           grid-template-columns: repeat(1, auto);
           margin: auto;
 
-          .projects__slider-content {
+          img {
             margin: auto;
+          }
 
-            .projects__slider-controllers {
+          .slider__content {
+            margin: auto;
+            text-align: center;
+
+            .slider__controllers {
               margin: 30px auto auto;
             }
           }
@@ -1374,9 +1368,21 @@
       }
 
       #cv {
-        h3 {
-          width: 150px;
-          margin-right: 50px;
+        .content__tools, .content__skills, .content__projects {
+          width: fit-content;
+          margin: auto;
+          flex-direction: column;
+
+          h3 {
+            margin: auto auto 20px;
+            text-align: center;
+          }
+        }
+
+        .content {
+          .content__skills {
+            margin: 60px auto;
+          }
         }
       }
     }
@@ -1385,12 +1391,18 @@
 
 @media (max-width: 1024px) {
   #course {
-    .course__container {
-      max-width: 760px;
-
+    .container {
       #header {
         .header__title {
           flex-direction: column;
+
+          h1 {
+            font-size: 40px;
+          }
+
+          p {
+            font-size: 18px;
+          }
         }
 
         .header__features {
@@ -1405,42 +1417,24 @@
       }
 
       #disclaimer {
+        padding: 30px 80px;
+
         p {
-          font-size: 16px;
-          line-height: 24px;
-        }
-      }
-
-      #for-who {
-        .for-who__content {
-          grid-template-columns: repeat(2,354px);
-
-          img {
-            width: 130px;
-            height: 130px;
-          }
-
-          h3 {
-            font-size: 18px;
-          }
-
-          p {
-            font-size: 14px;
-          }
+          font-size: 17px;
         }
       }
 
       #skills {
-        .skills__content {
+        .content {
           grid-template-columns: repeat(2,auto);
         }
       }
 
       #employment {
-        .employment__career-center {
+        .career-center {
           padding: 0 68px;
 
-          .employment__career-center-slide {
+          .career-center__slide {
             width: 100%;
             height: fit-content !important;
             margin: auto auto 30px;
@@ -1451,14 +1445,14 @@
           }
         }
 
-        .employment__guarantees {
-          .employment__stats {
+        .guarantees {
+          .guarantees__stats {
             width: 100%;
           }
         }
 
-        .employment__reviews {
-          .employment__reviews-slide {
+        .reviews {
+          .reviews__slide {
             margin: 0 auto 30px;
 
             &:last-child {
@@ -1469,7 +1463,7 @@
       }
 
       #program {
-        .program__title {
+        .title {
           flex-direction: column;
 
           h1 {
@@ -1477,7 +1471,7 @@
             margin-bottom: 30px;
           }
 
-          .program__subtitle {
+          .title__subtitle {
             width: 90%;
             margin: auto;
 
@@ -1487,34 +1481,46 @@
           }
         }
 
-        .program__content {
-          .program__content-item {
-            .program__content-item-title {
+        .content {
+          .content__item {
+            .content__item-title {
               cursor: none;
             }
           }
         }
       }
 
-      #cv {
-        .cv__tools, .cv__skills, .cv__projects {
-          flex-direction: column;
+      #projects {
+        .slider__controllers {
+          width: 250px;
 
-          h3 {
-            margin: auto auto 20px;
-            text-align: center;
+          .slider__arrow {
+            width: 40px;
+            height: 40px;
+          }
+
+          div:nth-child(2) {
+            font-size: 20px;
           }
         }
+      }
 
-        .cv__tools {
-          width: fit-content;
-          margin: auto;
+      #questions {
+        flex-direction: column;
+        margin: auto;
+
+        h1 {
+          text-align: center;
+        }
+
+        .content {
+          margin: 50px auto 0;
         }
       }
     }
 
     #consultation {
-      .consultation__content {
+      .content {
         grid-template-columns: repeat(1, auto);
 
         h1 {
@@ -1531,7 +1537,7 @@
           width: 100%;
         }
 
-        .agreement {
+        .content__agreement {
           text-align: center;
         }
       }
@@ -1541,16 +1547,13 @@
 
 @media (max-width: 768px) {
   #course {
-    .course__container {
-      width: 100%;
-
+    .container {
       #header {
         .header__title {
-          flex-direction: column;
-          padding: 20px;
+          padding: 20px 10px;
 
           h1 {
-            font-size: 30px;
+            font-size: 35px;
           }
 
           img {
@@ -1590,7 +1593,7 @@
 
       #market {
         h1 {
-          font-size: 39px;
+          font-size: 42px;
           line-height: 44px;
         }
 
@@ -1599,7 +1602,7 @@
           line-height: 30px;
         }
 
-        .market__list {
+        .list {
           grid-template-columns: repeat(1, auto);
 
           p {
@@ -1611,43 +1614,40 @@
 
       #for-who {
         h1 {
+          text-align: center;
           font-size: 38px;
         }
 
-        .for-who__content {
+        .content {
           grid-template-columns: repeat(1, auto);
 
+          div {
+            text-align: center;
+            margin: auto;
+          }
+
           img {
-            width: 160px;
-            height: 160px;
-          }
-
-          h3 {
-            font-size: 20px;
-          }
-
-          p {
-            font-size: 16px;
+            margin: auto;
           }
         }
       }
 
       #skills {
-        .skills__content {
+        .content {
           grid-template-columns: repeat(1,auto);
         }
       }
 
       #employment {
-        .employment__container {
+        .container {
           padding: 60px 10px;
         }
 
-        .employment__header {
+        .header {
           grid-template-columns: repeat(1, auto);
           text-align: center;
 
-          .employment__animation {
+          .header__animation {
             .main {
               width: 210px;
               height: 210px;
@@ -1741,7 +1741,7 @@
             }
           }
 
-          .employment__title {
+          .header__title {
             h1 {
               font-size: 39px;
             }
@@ -1752,40 +1752,40 @@
           }
         }
 
-        .employment__career-center {
+        .career-center {
           padding: 0 10px;
         }
 
-        .employment__guarantees {
-          .employment__text {
+        .guarantees {
+          .guarantees__text {
             h1 {
               font-size: 37px;
             }
           }
 
-          .employment__stats {
+          .guarantees__stats {
             flex-direction: column;
 
-            .employment__stats-title {
+            .guarantees__stats-title {
               text-align: center;
               margin-bottom: 20px;
             }
 
-            .employment__stats-item {
+            .guarantees__stats-item {
               max-width: 100%;
             }
           }
         }
 
-        .employment__reviews {
-          .employment__reviews-slide {
+        .reviews {
+          .reviews__slide {
             width: 380px;
             height: 250px;
             padding: 20px;
 
             img {
-              width: 45px;
-              height: 45px;
+              width: 45px !important;
+              height: 45px !important;
             }
 
             p {
@@ -1848,7 +1848,7 @@
             }
 
             &[course=c-plus-plus] {
-              border-bottom: 50px solid $c-color;
+              border-bottom: 50px solid $c-plus-plus-color;
             }
 
             &[course=android] {
@@ -1889,20 +1889,20 @@
           }
         }
 
-        .program__title {
+        .title {
           h1 {
             font-size: 40px;
           }
 
-          .projects__subtitle {
+          .title__subtitle {
             p:first-child {
               font-size: 17px;
             }
 
-            .projects__counts {
+            .title__counts {
               grid-template-columns: repeat(1, auto);
 
-              .projects__count-item {
+              .title__count-item {
                 margin: auto;
 
                 div {
@@ -1917,9 +1917,9 @@
           }
         }
 
-        .program__content {
-          .program__content-item {
-            .program__content-item-title {
+        .content {
+          .content__item {
+            .content__item-title {
               font-size: 18px;
 
               h1 {
@@ -1928,7 +1928,7 @@
             }
           }
 
-          .program__content-item-content {
+          .content__item-content {
             p {
               width: 95%;
             }
@@ -1940,7 +1940,7 @@
           }
         }
 
-        .program__disclaimer {
+        .disclaimer {
           width: fit-content;
           flex-direction: column;
           margin: 30px auto auto;
@@ -1959,7 +1959,12 @@
       }
 
       #cv {
-        .cv__title {
+        h1 {
+          font-size: 37px;
+          line-height: 45px;
+        }
+
+        .content__title {
           flex-direction: column;
 
           div:first-child {
@@ -1967,15 +1972,15 @@
           }
         }
 
-        .cv__tools {
+        .content__tools {
           div {
             width: fit-content;
             flex-wrap: wrap;
           }
         }
 
-        .cv__content {
-          .cv__skills {
+        .content {
+          .content__skills {
             ul {
               column-count: 1;
               margin: auto;
@@ -1987,10 +1992,31 @@
           }
         }
       }
+
+      #questions {
+        .content {
+          width: 400px;
+        }
+
+        .content__question {
+          margin: auto auto 4px;
+
+          .content__title {
+            h3 {
+              max-width: 280px;
+              font-size: 16px;
+            }
+          }
+
+          .content__text {
+            font-size: 14px;
+          }
+        }
+      }
     }
 
     #consultation {
-      .consultation__content {
+      .content {
         grid-template-columns: repeat(1, auto);
 
         h1 {
@@ -2002,12 +2028,12 @@
           max-width: 420px;
           margin: auto;
 
-          .consultation__inputs {
+          .content__inputs {
             grid-template-columns: repeat(1, auto);
           }
 
-          .consultation__phone-number {
-            .consultation__input {
+          .content__phone-number {
+            .content__input {
               width: 88%;
             }
           }
@@ -2019,16 +2045,15 @@
 
 @media (max-width: 425px) {
   #course {
-    .course__container {
+    .container {
       #header {
         .header__title {
           h1 {
-            font-size: 25px;
+            font-size: 30px;
           }
 
           p {
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 16px;
           }
 
           button {
@@ -2057,21 +2082,30 @@
         }
       }
 
+      #disclaimer {
+        padding: 30px;
+      }
+
       #market {
         h1 {
-          font-size: 36px;
-          line-height: 40px;
+          font-size: 40px;
+          line-height: 50px;
+        }
+
+        .subtitle {
+          margin: 50px 0;
         }
 
         p, h3 {
-          font-size: 20px;
+          font-size: 19px;
           line-height: 28px;
         }
 
-        .market__list {
+        .list {
           p {
             font-size: 16px;
             line-height: 24px;
+            margin-top: 8px;
           }
         }
       }
@@ -2079,12 +2113,13 @@
       #for-who {
         h1 {
           font-size: 36px;
+          line-height: 50px;
         }
       }
 
       #employment {
-        .employment__header {
-          .employment__animation {
+        .header {
+          .header__animation {
             .main {
               width: 190px;
               height: 190px;
@@ -2178,7 +2213,7 @@
             }
           }
 
-          .employment__title {
+          .header__title {
             h1 {
               font-size: 35px;
             }
@@ -2189,12 +2224,12 @@
           }
         }
 
-        .employment__career-center {
+        .career-center {
           h1 {
             font-size: 28px;
           }
 
-          .employment__career-center-slide {
+          .career-center__slide {
             h3 {
               font-size: 20px;
             }
@@ -2214,8 +2249,8 @@
           }
         }
 
-        .employment__guarantees {
-          .employment__text {
+        .guarantees {
+          .guarantees__text {
             h1 {
               font-size: 32px;
             }
@@ -2229,8 +2264,8 @@
             }
           }
 
-          .employment__stats {
-            .employment__stats-title {
+          .guarantees__stats {
+            .guarantees__stats-title {
               h1 {
                 font-size: 40px;
               }
@@ -2240,7 +2275,7 @@
               }
             }
 
-            .employment__stats-item {
+            .guarantees__stats-item {
               h1 {
                 font-size: 28px;
               }
@@ -2252,12 +2287,12 @@
           }
         }
 
-        .employment__reviews {
+        .reviews {
           h1 {
               font-size: 28px;
           }
 
-          .employment__reviews-slide {
+          .reviews__slide {
             width: 340px;
             height: 220px;
             padding: 15px;
@@ -2289,20 +2324,46 @@
       }
 
       #program {
-        .program__title {
+        .title {
           h1 {
             font-size: 35px;
           }
 
-          .program__subtitle {
+          .title__subtitle {
             p:first-child {
               font-size: 16px;
             }
 
-            .program__counts {
-              .program__count-item:first-child {
+            .title__counts {
+              .title__count-item:first-child {
                 margin-bottom: 10px;
               }
+            }
+          }
+        }
+      }
+
+      #projects {
+        img {
+          height: 250px;
+        }
+      }
+
+      #cv {
+        h1 {
+          font-size: 32px;
+        }
+      }
+
+      #questions {
+        .content {
+          width: 350px;
+        }
+
+        .content__question {
+          .content__title {
+            h3 {
+              max-width: 260px;
             }
           }
         }
@@ -2311,10 +2372,10 @@
 
     #consultation {
       h1 {
-        font-size: 30px;
+        font-size: 28px;
       }
 
-      .consultation__content {
+      .content {
         input {
           height: 45px;
           padding: 23px 18px 10px;
@@ -2326,8 +2387,8 @@
           transition: 0.2s;
         }
 
-        .consultation__phone-number {
-          .consultation__selected-country {
+        .content__phone-number {
+          .content__selected-country {
             height: 45px;
           }
         }
@@ -2342,16 +2403,11 @@
 
 @media (max-width: 375px) {
   #course {
-    .course__container {
+    .container {
       #header {
         .header__title {
-          h1 {
-            font-size: 30px;
-          }
-
           p {
             font-size: 15px;
-            line-height: 20px;
           }
 
           button {
@@ -2365,26 +2421,13 @@
         }
       }
 
-      #for-who {
-        .for-who__content {
-          img {
-            width: 140px;
-            height: 140px;
-          }
-
-          h3 {
-            font-size: 19px;
-          }
-
-          p {
-            font-size: 15px;
-          }
-        }
+      #disclaimer {
+        padding: 30px 20px;
       }
 
       #employment {
-        .employment__header {
-          .employment__animation {
+        .header {
+          .header__animation {
             .main {
               width: 180px;
               height: 180px;
@@ -2479,8 +2522,8 @@
           }
         }
 
-        .employment__career-center {
-          .employment__career-center-slide {
+        .career-center {
+          .career-center__slide {
             h3 {
               font-size: 17px;
             }
@@ -2500,8 +2543,8 @@
           }
         }
 
-        .employment__guarantees {
-          .employment__text {
+        .guarantees {
+          .guarantees__text {
             h1 {
               font-size: 27px;
             }
@@ -2515,8 +2558,8 @@
             }
           }
 
-          .employment__stats {
-            .employment__stats-title {
+          .guarantees__stats {
+            .guarantees__stats-title {
               h1 {
                 font-size: 38px;
               }
@@ -2526,7 +2569,7 @@
               }
             }
 
-            .employment__stats-item {
+            .guarantees__stats-item {
               h1 {
                 font-size: 26px;
               }
@@ -2534,12 +2577,12 @@
           }
         }
 
-        .employment__reviews {
+        .reviews {
           h1 {
             font-size: 24px;
           }
 
-          .employment__reviews-slide {
+          .reviews__slide {
             width: 290px;
             height: 200px;
 
@@ -2605,7 +2648,7 @@
             }
 
             &[course=c-plus-plus] {
-              border-bottom: 30px solid $c-color;
+              border-bottom: 30px solid $c-plus-plus-color;
             }
 
             &[course=android] {
@@ -2646,18 +2689,18 @@
           }
         }
 
-        .content__title {
+        .title {
           h1 {
             font-size: 32px;
           }
 
-          .program__subtitle {
+          .title__subtitle {
             p:first-child {
               font-size: 15px;
             }
 
-            .program__counts {
-              .program__count-item {
+            .title__counts {
+              .title__count-item {
                 width: 170px;
 
                 div {
@@ -2678,9 +2721,9 @@
           }
         }
 
-        .program__content {
-          .program__content-item {
-            .program__content-item-title {
+        .content {
+          .content__item {
+            .content__item-title {
               font-size: 16px;
 
               h1 {
@@ -2700,8 +2743,8 @@
           }
         }
 
-        .program__disclaimer {
-          .program__disclaimer-icon {
+        .disclaimer {
+          .disclaimer__icon {
             width: 35px;
             height: 35px;
           }
@@ -2712,6 +2755,32 @@
 
           p {
             font-size: 14px;
+          }
+        }
+      }
+
+      #projects {
+        img {
+          height: 220px;
+        }
+      }
+
+      #cv {
+        h1 {
+          font-size: 27px;
+        }
+      }
+
+      #questions {
+        .content {
+          width: 300px;
+        }
+
+        .content__question {
+          .content__title {
+            h3 {
+              max-width: 220px;
+            }
           }
         }
       }

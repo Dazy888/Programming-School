@@ -3,7 +3,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import { useDispatch, useSelector } from "react-redux"
 // Layout
-import { NavigationLayout } from "@/layouts/pageFrame-layout"
+import { PageFrame } from "@/layouts/pageFrame-layout"
 // Styles
 import styles from '@/styles/Course.module.scss'
 // Store
@@ -21,11 +21,12 @@ import { Program } from "@/components/courses/course/sections/program/Program"
 import { Projects } from "@/components/courses/course/sections/projects/Projects"
 import { Teachers } from "@/components/courses/course/sections/teachers/Teachers"
 import { CV } from "@/components/courses/course/sections/cv/CV"
-import {Questions} from "@/components/courses/course/sections/questions/Questions";
+import { Questions } from "@/components/courses/course/sections/questions/Questions"
 
 const Course = () => {
     const dispatch = useDispatch()
     const router = useRouter()
+
     const courseName: any = router.query.course
     dispatch(CoursesReducerActions.setOpenedCourse(courseName))
     const course = useSelector(getCoursePage)
@@ -41,12 +42,12 @@ const Course = () => {
     const cv = course.course.cv
 
     return(
-        <NavigationLayout>
+        <PageFrame>
             <Head>
                 <title>{courseName && courseName[0].toUpperCase() + courseName.slice(1)}</title>
             </Head>
             <div id={styles['course']} className={'items-center py-24'}>
-                <div className={`${styles['course__container']} mx-auto px-2`}>
+                <div className={`${styles['container']} mx-auto px-2`}>
                     <Header courseAttr={courseAttr} profession={course.preview.profession} text={header.text} imgSrc={course.course.logoSrc} columnsAttr={columnsAttr} features={header.features}/>
                     <Disclaimer/>
                     <Market title={market.titleText} list={market.list}/>
@@ -54,7 +55,7 @@ const Course = () => {
                     <Skills courseAttr={courseAttr} skills={course.course.skills}/>
                 </div>
                 <Consultation courseAttr={courseAttr}/>
-                <div className={`${styles['course__container']} mx-auto px-2`}>
+                <div className={`${styles['container']} mx-auto px-2`}>
                     <Employment/>
                     <Program programItems={program.programItems} countItems={program.title.counts} titleText={program.title.text} courseAttr={courseAttr}/>
                     {projects && <Projects projects={projects}/>}
@@ -63,10 +64,7 @@ const Course = () => {
                     <Questions questions={course.course.questions}/>
                 </div>
             </div>
-            <div>
-
-            </div>
-        </NavigationLayout>
+        </PageFrame>
     )
 }
 

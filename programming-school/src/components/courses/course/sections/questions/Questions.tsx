@@ -11,15 +11,15 @@ interface Props {
     questions: QuestionI[]
 }
 
-const QuestionsComponent: React.FC<Props> = ({ questions }) => {
+const QuestionsSection: React.FC<Props> = ({ questions }) => {
     return(
         <div id={styles['questions']} className={'flex justify-between mb-32'}>
             <TitleText text={'FAQ'}/>
-            <div className={styles['questions__content']}>
+            <div className={styles['content']}>
                 {questions.map((question, key) => <Question key={key} title={question.title} text={question.text} texts={question.texts} listItems={question.listItems} terms={question.terms}/>)}
             </div>
         </div>
     )
 }
 
-export const Questions = React.memo(QuestionsComponent)
+export const Questions = React.memo(QuestionsSection)

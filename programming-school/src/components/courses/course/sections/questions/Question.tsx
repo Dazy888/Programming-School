@@ -16,14 +16,14 @@ const QuestionComponent: React.FC<QuestionI> = ({ title, terms, text, texts, lis
     }
 
     return(
-        <div className={`${styles['questions__question']} mb-1 text-white pb-0.5`}>
-            <div className={`${styles['questions__title']} flex justify-between items-center cursor-pointer p-5`} onClick={openQuestion}>
+        <div className={`${styles['content__question']} mb-1 pb-0.5`}>
+            <div className={`${styles['content__title']} flex justify-between items-center cursor-pointer p-5`} onClick={openQuestion}>
                 <h3 className={'text-lg font-medium'}>{title}</h3>
                 <button className={'w-8 h-8 flex justify-center items-center rounded-full'}>
                     <i className={'fa-solid fa-chevron-down'}/>
                 </button>
             </div>
-            <div ref={textRef} className={`${styles['questions__text']} rounded-xl`}>
+            <div ref={textRef} className={`${styles['content__text']} rounded-xl`}>
                 {(text) && text}
                 {(text && listItems &&
                     <>

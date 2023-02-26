@@ -11,13 +11,25 @@ import { SliderProps } from "@/interfaces/course"
 const CareerCenterComponent: React.FC<SliderProps> = ({ isSlider }) => {
     const [slidesPerView, setSlidesPerView] = useState(3.9)
 
+    function slidesPerViewListener() {
+        if (window.innerWidth <= 1150) {
+            setSlidesPerView(2.7)
+        } else if (window.innerWidth <= 1300) {
+            setSlidesPerView(3)
+        } else if (window.innerWidth <= 1440) {
+            setSlidesPerView(3.5)
+        } else {
+            setSlidesPerView(3.9)
+        }
+    }
+
     useEffect(() => {
-        (window.innerWidth <= 1440) ? setSlidesPerView(2.8) : setSlidesPerView(3.9)
-        window.onresize = () => (window.innerWidth <= 1440) ? setSlidesPerView(2.8) : setSlidesPerView(3.9)
+        slidesPerViewListener()
+        window.onresize = slidesPerViewListener
     }, [])
 
     return(
-        <div className={`${styles['employment__career-center']} mt-24 mb-16 w-full`}>
+        <div className={`${styles['career-center']} mt-24 mb-16 w-full`}>
             <h1 className={'text-3xl font-bold mb-10'}>How the Career Center can help you:</h1>
             {isSlider
                 ?   <Swiper slidesPerView={slidesPerView}>

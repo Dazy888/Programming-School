@@ -8,9 +8,9 @@ interface Props {
 
 const FeaturesItemComponent: React.FC<Props> = ({ title, text, styleAttr }) => {
     return(
-        <div {...styleAttr} className={'text-white rounded-xl p-2 text-center'}>
+        <div {...styleAttr} className={'rounded-xl p-2 text-center'}>
             <h3 className={'text-xl font-bold'}>{title}</h3>
-            <p className={'text-base mt-2 opacity-90'}>{text}</p>
+            <p className={'mt-2 opacity-90'}>{text}</p>
         </div>
     )
 }

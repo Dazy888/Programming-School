@@ -8,7 +8,7 @@ interface Props {
 
 const StatsItemComponent: React.FC<Props> = ({ text, title }) => {
     return(
-        <div className={`${styles['employment__stats-item']} p-4 rounded-xl`}>
+        <div className={`${styles['guarantees__stats-item']} p-4 rounded-xl`}>
             <h1 className={'text-3xl font-bold'}>{title}</h1>
             <p>{text}</p>
         </div>

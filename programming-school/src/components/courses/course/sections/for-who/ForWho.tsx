@@ -5,7 +5,7 @@ import styles from "@/styles/Course.module.scss"
 import { TitleText } from "@/components/common/TitleText"
 import { ForWhoItem } from "@/components/courses/course/sections/for-who/ForWhoItem"
 // Interface
-import { ForWhoI } from "@/interfaces/courses"
+import { ForWhoI } from "@/interfaces/course"
 
 interface Props {
     list: ForWhoI[]
@@ -13,9 +13,9 @@ interface Props {
 
 const ForWhoComponent: React.FC<Props> = ({ list }) => {
     return(
-        <section id={styles['for-who']} className={'mb-32 text-white'}>
+        <section id={styles['for-who']} className={'mb-32'}>
             <TitleText text={'Who is this course for'}/>
-            <div className={`${styles['for-who__content']} mt-14 grid gap-12 grid-cols-3`}>
+            <div className={`${styles['content']} mt-14 grid gap-12 grid-cols-3`}>
                 {...list.map((item, key) => <ForWhoItem key={key} imgSrc={item.imgSrc} subtitle={item.subtitle} text={item.text}/>)}
             </div>
         </section>

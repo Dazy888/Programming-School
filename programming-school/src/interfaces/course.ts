@@ -1,4 +1,8 @@
-import {AppStateType} from "@/store/store";
+import { AppStateType } from "@/store/store"
+
+export interface CourseAttrI {
+    course: string
+}
 
 export interface SliderProps {
     isSlider: boolean
@@ -33,7 +37,7 @@ export interface ForWhoI {
     text: string
 }
 
-interface SkillI {
+export interface SkillI {
     title?: string
     text: string
 }

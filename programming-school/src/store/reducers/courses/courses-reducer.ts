@@ -123,15 +123,15 @@ class Term {
 const commonItems = {
     header: {
         features: {
-            guarantees: new TitleTextItem('We guarantee animation', 'or refund money *' ),
-            getJobInSixMonths: new TitleTextItem('6 months later', 'you can get a job' ),
-            getJobInSevenMonths: new TitleTextItem('7 months later', 'you can get a job' ),
-            fourProjectsInPortfolio: new TitleTextItem('4 projects', 'in portfolio' ),
-            threeProjectsInPortfolio: new TitleTextItem('3 projects', 'in portfolio' ),
-            durationSevenMonths: new TitleTextItem('Duration', '7 months' ),
-            forBeginners: new TitleTextItem('For beginners', 'the course is suitable for those who start from scratch' ),
-            feedback: new TitleTextItem('Feedback', 'on practical work from experts' ),
-            durationOneYear: new TitleTextItem('Duration', '1 year' )
+            guarantees: new TitleTextItem('We guarantee animation', 'or refund money *'),
+            getJobInSixMonths: new TitleTextItem('6 months later', 'you can get a job'),
+            getJobInSevenMonths: new TitleTextItem('7 months later', 'you can get a job'),
+            fourProjectsInPortfolio: new TitleTextItem('4 projects', 'in portfolio'),
+            threeProjectsInPortfolio: new TitleTextItem('3 projects', 'in portfolio'),
+            durationSevenMonths: new TitleTextItem('Duration', '7 months'),
+            forBeginners: new TitleTextItem('For beginners', 'the course is suitable for those who start from scratch'),
+            feedback: new TitleTextItem('Feedback', 'on practical work from experts'),
+            durationOneYear: new TitleTextItem('Duration', '1 year')
         }
     },
     market: {
@@ -536,9 +536,9 @@ const initialState = {
     openedCourse: '',
     courses: {
         python: {
-            preview: new Preview('Python developer', '/courses/previews/python.png', '10 months', 'python'),
+            preview: new Preview('Python developer', '/courses/previews/python-logo.png', '10 months', 'python'),
             course: {
-                logoSrc: '/courses/course/logos/python.png',
+                logoSrc: '/courses/course/logos/python-logo.png',
                 header: {
                     text: 'Python is used to write web applications and neural networks, conduct scientific calculations and automate processes. The language is easy to learn, even if you have never programmed. On the course, you will create a Telegram bot, a full-fledged store and an analogue of a popular social network for a portfolio, and the Career Center will help you find a job as a Python developer',
                     features: [
@@ -668,9 +668,9 @@ const initialState = {
             }
         } as CourseI,
         fullstack_python:  {
-            preview: new Preview('Fullstack Python developer', '/courses/previews/fullstack-python.png', '10 months', 'fullstack-python'),
+            preview: new Preview('Fullstack Python developer', '/courses/previews/fullstackPython-logo.png', '10 months', 'fullstack-python'),
             course: {
-                logoSrc: '/courses/course/logos/fullstack-python.png',
+                logoSrc: '/courses/course/logos/fullstackPython-logo.png',
                 header: {
                     text: 'You will be able to actively participate in all stages of the development of sites and web interfaces - from working with design layouts to programming and configuring servers. Get comprehensive knowledge in web development and start earning more',
                     features: [ commonItems.header.features.getJobInSixMonths, new TitleTextItem('Help', 'in animation'), commonItems.header.features.fourProjectsInPortfolio ]
@@ -727,9 +727,9 @@ const initialState = {
             }
         } as CourseI,
         web: {
-            preview: new Preview('Web developer', '/courses/previews/web.png', '9 months', 'web'),
+            preview: new Preview('Web developer', '/courses/previews/web-logo.png', '9 months', 'web'),
             course: {
-                logoSrc: '/courses/course/logos/web.png',
+                logoSrc: '/courses/course/logos/web-logo.png',
                 header: {
                     text: 'A web developer creates websites, services and applications that we use every day. He develops online stores, online banks, search engines, maps and email clients. A web developer designs the appearance of the site - the frontend and programs the service part - the backend',
                     features: [
@@ -894,9 +894,9 @@ const initialState = {
             }
         } as CourseI,
         fullstack_php: {
-            preview: new Preview('Fullstack PHP developer', '/courses/previews/fullstack-php.png', '10 months', 'fullstack-php'),
+            preview: new Preview('Fullstack PHP developer', '/courses/previews/fullstackPHP-logo.png', '10 months', 'fullstack-php'),
             course: {
-                logoSrc: '/courses/course/logos/fullstack-php.png',
+                logoSrc: '/courses/course/logos/fullstackPHP-logo.png',
                 header: {
                     text: 'You will learn how to design web pages from scratch, as well as how to program and create turnkey web applications in PHP. You can start a career as a fullstack specialist or reach a new level in web development',
                     features: [new TitleTextItem('10+ courses', 'included'), commonItems.header.features.getJobInSixMonths, commonItems.header.features.fourProjectsInPortfolio]
@@ -950,9 +950,9 @@ const initialState = {
             }
         } as CourseI,
         frontend: {
-            preview: new Preview('Frontend developer', '/courses/previews/frontend.png', '7 months', 'frontend'),
+            preview: new Preview('Frontend developer', '/courses/previews/frontend-logo.png', '7 months', 'frontend'),
             course: {
-                logoSrc: '/courses/course/logos/frontend.png',
+                logoSrc: '/courses/course/logos/frontend-logo.png',
                 header: frontend.header,
                 market: frontend.market,
                 for_who: [
@@ -981,9 +981,9 @@ const initialState = {
             }
         } as CourseI,
         frontend_pro: {
-            preview: new Preview('Frontend developer PRO', '/courses/previews/frontend-pro.png', '10 months', 'frontend-pro'),
+            preview: new Preview('Frontend developer PRO', '/courses/previews/frontendPro-logo.png', '10 months', 'frontend-pro'),
             course: {
-                logoSrc: '/courses/course/logos/frontend-pro.png',
+                logoSrc: '/courses/course/logos/frontendPro-logo.png',
                 header: frontend.header,
                 market: frontend.market,
                 for_who: [
@@ -1014,9 +1014,9 @@ const initialState = {
             }
         } as CourseI,
         fullstack_js: {
-            preview: new Preview('Fullstack JavaScript developer', '/courses/previews/fullstack-js.png', '10 months', 'fullstack-js'),
+            preview: new Preview('Fullstack JavaScript developer', '/courses/previews/fullstackJS-logo.png', '10 months', 'fullstack-js'),
             course: {
-                logoSrc: '/courses/course/logos/fullstack-js.png',
+                logoSrc: '/courses/course/logos/fullstackJS-logo.png',
                 header: {
                     text: 'You will learn how to develop full-fledged websites and web applications in JS from scratch and learn one of the frameworks - Vue, ReactFramework or Angular. Become a valuable employee for any IT company, understand how to get a promotion, and be able to earn more',
                     features: [
@@ -1077,9 +1077,9 @@ const initialState = {
             }
         } as CourseI,
         php_pro: {
-            preview: new Preview('PHP developer PRO', '/courses/previews/php-pro.png', '7 months', 'php-pro'),
+            preview: new Preview('PHP developer PRO', '/courses/previews/phpPro-logo.png', '7 months', 'php-pro'),
             course: {
-                logoSrc: '/courses/course/logos/php-pro.png',
+                logoSrc: '/courses/course/logos/phpPro-logo.png',
                 header: {
                     text: 'You will learn how to program sites and web applications in PHP from scratch, master the Laravel framework, write cloud storage and work on an online store as a team.You could apply for a junior developer position',
                     features: [
@@ -1153,9 +1153,9 @@ const initialState = {
             }
         } as CourseI,
         c_plus_plus: {
-            preview: new Preview('C++ developer', '/courses/previews/c++.png', '7 months', 'c-plus-plus'),
+            preview: new Preview('C++ developer', '/courses/previews/cPlusPlus-logo.png', '7 months', 'c-plus-plus'),
             course: {
-                logoSrc: '/courses/course/logos/c++.png',
+                logoSrc: '/courses/course/logos/cPlusPlus-logo.png',
                 header: {
                     text: 'C++ programmers create complex programs and services. They develop high-load network applications, games, graphics engines, components for operating systems and hardware. Windows, Linux and macOS, Android, Chrome, Counter-Strike, StarCraft and Diablo are written in this language. You will master the legendary programming language from scratch: write a search engine, your own browser, and gain teamwork skills',
                     features: [
@@ -1255,9 +1255,9 @@ const initialState = {
             }
         } as CourseI,
         android: {
-            preview: new Preview('Android developer', '/courses/previews/android.png', '7 months', 'android'),
+            preview: new Preview('Android developer', '/courses/previews/android-logo.png', '7 months', 'android'),
             course: {
-                logoSrc: '/courses/course/logos/android.png',
+                logoSrc: '/courses/course/logos/android-logo.png',
                 header: {
                     text: "According to Google, 3 billion devices run on Android. TVs, smartphones and smartwatches are packed with useful apps that we use to watch TV shows, pay for purchases, communicate and order food. Now you can create such services. You'll add up to five apps to your portfolio, gain teamwork experience, and become an Android developer. And the Career Center will help you find a job already during the course",
                     features: [
@@ -1367,9 +1367,9 @@ const initialState = {
             }
         } as CourseI,
         ios: {
-            preview: new Preview('iOS developer', '/courses/previews/ios.png', '6 months', 'ios'),
+            preview: new Preview('iOS developer', '/courses/previews/iOS-logo.png', '6 months', 'ios'),
             course: {
-                logoSrc: '/courses/course/logos/ios.png',
+                logoSrc: '/courses/course/logos/iOS-logo.png',
                 header: {
                     text: 'An IOS developer creates applications for Apple devices — online banks, navigators, fitness trackers, and other useful services. He programs logic in Swift and designs interfaces, tests code, and uploads projects to the App Store. On the course, you will master Swift from scratch, write a news application, take part in the team development of an analogue of Yandex:GO and get help in finding a job',
                     features: [
@@ -1442,9 +1442,9 @@ const initialState = {
             }
         } as CourseI,
         mobile: {
-            preview: new Preview('Mobile developer', '/courses/previews/mobile.png', '7 months', 'mobile'),
+            preview: new Preview('Mobile developer', '/courses/previews/mobile-logo.png', '7 months', 'mobile'),
             course: {
-                logoSrc: '/courses/course/logos/mobile.png',
+                logoSrc: '/courses/course/logos/mobile-logo.png',
                 header: {
                     text: 'You will learn how to create applications for devices based on iOS or Android from scratch. Practice on real tasks and add projects to your portfolio. You can get a full-time mobile developer or work as a freelancer',
                     features: [
@@ -1567,9 +1567,9 @@ const initialState = {
             }
         } as CourseI,
         flutter: {
-            preview: new Preview('Flutter developer', '/courses/previews/flutter.png', '6 months', 'flutter'),
+            preview: new Preview('Flutter developer', '/courses/previews/flutter-logo.png', '6 months', 'flutter'),
             course: {
-                logoSrc: '/courses/course/logos/flutter.png',
+                logoSrc: '/courses/course/logos/flutter-logo.png',
                 header: {
                     text: 'You will master the Flutter development tool and be able to create mobile applications immediately for iOS and Android. Learn one of the native languages to choose from - Kotlin or Swift and become a sought-after specialist who can work with different platforms',
                     features: [new TitleTextItem('Employment', 'in 6 months'), commonItems.header.features.guarantees, commonItems.header.features.feedback]
@@ -1702,9 +1702,9 @@ const initialState = {
             }
         } as CourseI,
         java: {
-            preview: new Preview('Java developer', '/courses/previews/java.png', '6 months', 'java'),
+            preview: new Preview('Java developer', '/courses/previews/java-logo.png', '6 months', 'java'),
             course: {
-                logoSrc: '/courses/course/logos/java.png',
+                logoSrc: '/courses/course/logos/java-logo.png',
                 header: {
                     text: "Java is one of the most popular programming languages in the world. It is used to create reliable applications for banks, IT corporations and streaming services, develop online stores, games and cloud solutions. Java is used in their products by: Twitter, Spotify, State Services. Minecraft and Assassin's Creed games are also written in Java. Java is possible to learn on your own, but much easier - on a course with the support of an experienced expert",
                     features: [
@@ -1797,9 +1797,9 @@ const initialState = {
             }
         } as CourseI,
         java_pro: {
-            preview: new Preview('Java developer PRO', '/courses/previews/java-pro.png', '11 months', 'java-pro'),
+            preview: new Preview('Java developer PRO', '/courses/previews/javaPro-logo.png', '11 months', 'java-pro'),
             course: {
-                logoSrc: '/courses/course/logos/java-pro.png',
+                logoSrc: '/courses/course/logos/javaPro-logo.png',
                 header: {
                     text: 'You will master a popular programming language from scratch, learn how to create high-quality applications for different platforms, and become a valuable middle-level Java specialist',
                     features: [
@@ -1901,9 +1901,9 @@ const initialState = {
             }
         } as CourseI,
         cyber_security: {
-            preview: new Preview('Cyber security specialist', '/courses/previews/cybersecurity.png', '1 year', 'cybersecurity'),
+            preview: new Preview('Cyber security specialist', '/courses/previews/cybersecurity-logo.png', '1 year', 'cybersecurity'),
             course: {
-                logoSrc: '/courses/course/logos/cybersecurity.png',
+                logoSrc: '/courses/course/logos/cybersecurity-logo.png',
                 header: {
                     text: 'You will learn how to look for vulnerabilities, prevent threats and ensure the security of IT systems. Learn a sought-after profession even with zero experience in IT',
                     features: [
@@ -2057,9 +2057,9 @@ const initialState = {
             }
         } as CourseI,
         devops: {
-            preview: new Preview('DevOps engineer', '/courses/previews/devops.png', '7 months', 'devops'),
+            preview: new Preview('DevOps engineer', '/courses/previews/devops-logo.png', '7 months', 'devops'),
             course: {
-                logoSrc: '/courses/course/logos/devops.png',
+                logoSrc: '/courses/course/logos/devops-logo.png',
                 header: {
                     text: 'You will learn how to administer Linux, set up web servers and master the DevOps methodology: you will automate the development of complex IT products. Get support from the Career Center and get a job as a Junior Specialist in 7 months. The course will suit you even if you have never done system administration or programming',
                     features: [commonItems.header.features.durationSevenMonths, commonItems.header.features.threeProjectsInPortfolio, commonItems.header.features.guarantees]
@@ -2122,9 +2122,9 @@ const initialState = {
             }
         } as CourseI,
         devops_pro: {
-            preview: new Preview('DevOps engineer PRO', '/courses/previews/devops-pro.png', '1 year', 'devops-pro'),
+            preview: new Preview('DevOps engineer PRO', '/courses/previews/devopsPro-logo.png', '1 year', 'devops-pro'),
             course: {
-                logoSrc: '/courses/course/logos/devops-pro.png',
+                logoSrc: '/courses/course/logos/devopsPro-logo.png',
                 header: {
                     text: 'You will master the DevOps methodology from scratch: combine development and operation processes, accelerate the implementation and delivery of new features to the user. Become a middle-level DevOps specialist',
                     features: [commonItems.header.features.durationOneYear, new TitleTextItem('6 projects', 'in portfolio'), commonItems.header.features.guarantees]

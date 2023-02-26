@@ -30,7 +30,7 @@ const TeacherComponent: React.FC<Props> = ({ additionalInf, fullName, text, imgS
 
     return(
         <>
-            <div onClick={openModal} className={`${styles['teachers__teacher']} p-5 rounded-xl ${!!additionalInf ? styles['extended'] : ''} relative`}>
+            <div onClick={openModal} className={`${styles['teacher']} p-5 rounded-xl ${!!additionalInf ? styles['extended'] : ''} relative`}>
                 <img className={'rounded-xl'} alt={"Speaker's photo"} src={imgSrc}/>
                 <h3 className={'text-xl font-medium mb-1 mt-5'}>{fullName}</h3>
                 <p>{text}</p>
@@ -50,7 +50,7 @@ const TeacherComponent: React.FC<Props> = ({ additionalInf, fullName, text, imgS
                         }
                     </div>
                     <button className={'w-10 h-10 absolute top-5 right-5 rounded-full'} onClick={closeModal}>
-                        <i className={"fa-solid fa-xmark text-2xl"}/>
+                        <i className={'fa-solid fa-xmark text-2xl'}/>
                     </button>
                 </Modal>
             }

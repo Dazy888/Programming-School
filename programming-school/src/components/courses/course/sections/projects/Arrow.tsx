@@ -8,7 +8,7 @@ interface Props {
 
 const ArrowComponent: React.FC<Props> = ({ direction, changeSlide }) => {
     return(
-        <div onClick={changeSlide} className={`${styles['projects__arrow']} w-7 h-7 rounded-full flex justify-center items-center cursor-pointer`}>
+        <div onClick={changeSlide} className={`${styles['slider__arrow']} w-7 h-7 rounded-full flex justify-center items-center cursor-pointer`}>
             <i className={`fa-solid fa-angle-${direction}`}/>
         </div>
     )

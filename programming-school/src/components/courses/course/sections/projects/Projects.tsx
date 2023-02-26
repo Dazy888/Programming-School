@@ -5,13 +5,13 @@ import styles from '@/styles/Course.module.scss'
 import { TitleText } from "@/components/common/TitleText"
 import { Slider } from "@/components/courses/course/sections/projects/Slider"
 // Interface
-import { ProjectI } from "@/interfaces/courses"
+import { ProjectI } from "@/interfaces/course"
 
 interface Props {
     projects: ProjectI[]
 }
 
-const ProjectsComponent: React.FC<Props> = ({ projects }) => {
+const ProjectsSection: React.FC<Props> = ({ projects }) => {
     const [slideNumber, setSlide] = useState(0)
 
     return(
@@ -22,4 +22,4 @@ const ProjectsComponent: React.FC<Props> = ({ projects }) => {
     )
 }
 
-export const Projects = React.memo(ProjectsComponent)
+export const Projects = React.memo(ProjectsSection)

@@ -24,8 +24,8 @@ const ProgramItemComponent: React.FC<Props> = ({ title, number, listItems, text,
     }
 
     return(
-        <div className={styles['program__content-item']}>
-            <div onClick={clickListener} className={`${styles['program__content-item-title']} flex justify-between items-center text-xl font-semibold py-7`}>
+        <div className={styles['content__item']}>
+            <div onClick={clickListener} className={`${styles['content__item-title']} flex justify-between items-center text-xl font-semibold py-7 cursor-pointer`}>
                 <h1>{number}. {title}</h1>
                 {(listItems || text) &&
                     <button className={`${buttonClass} w-8 h-8 flex justify-center items-center rounded-full`}>
@@ -33,7 +33,7 @@ const ProgramItemComponent: React.FC<Props> = ({ title, number, listItems, text,
                     </button>
                 }
             </div>
-            <div className={`${styles['program__content-item-program']} ${openedClass}`}>
+            <div className={`${styles['content__item-program']} ${openedClass}`}>
                 {listItems &&
                     <>
                         {subtitle && <p className={'text-lg mb-7 w-9/12'}>{subtitle}</p>}

@@ -7,7 +7,7 @@ interface Props {
 
 const ToolComponent: React.FC<Props> = ({ title }) => {
     return(
-        <div className={`${styles['cv__tool']} rounded-lg py-1.5 px-3 mr-2 mb-2`}>
+        <div className={`${styles['content__tool']} rounded-lg py-1.5 px-3 mr-2 mb-2 text-black`}>
             <p>{title}</p>
         </div>
     )

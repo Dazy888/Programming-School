@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Image from "next/image"
 // Styles
 import styles from "@/styles/Course.module.scss"
 // Components
@@ -7,7 +8,7 @@ import { CountriesListItem } from "@/components/courses/course/sections/consulta
 // Form
 import { SubmitHandler, useForm } from "react-hook-form"
 // Interface
-import { FormI } from "@/interfaces/courses"
+import { FormI } from "@/interfaces/course"
 
 const FormComponent = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<FormI>({mode: 'onChange'})
@@ -36,12 +37,12 @@ const FormComponent = () => {
     return(
         <form onSubmit={handleSubmit(onSubmit)}>
             <Input name={'name'} errorMessage={errors.name?.message} pattern={/^[a-zA-Z]+$/} register={register} placeholder={'Name'}/>
-            <div className={`${styles['consultation__inputs']} grid grid-cols-2 gap-4 mt-4`}>
-                <div className={`${styles['consultation__phone-number']} relative`}>
+            <div className={`${styles['content__inputs']} grid grid-cols-2 gap-4 mt-4`}>
+                <div className={`${styles['content__phone-number']} relative`}>
                     <div className={'flex'}>
-                        <div onClick={consultationCountriesListener} className={`${styles['consultation__selected-country']} ${errors.phoneNumber?.message ? styles['error'] : ''} flex items-center cursor-pointer h-14`}>
+                        <div onClick={consultationCountriesListener} className={`${styles['content__selected-country']} ${errors.phoneNumber?.message ? styles['error'] : ''} flex items-center cursor-pointer h-14`}>
                             <div className={'flex'}>
-                                <img className={'w-5 h-4 mr-1.5'} alt={'Country IMG'} src={`/courses/course/countries/${activeCountry}.png`}/>
+                                <Image width={20} height={15} className={'mr-1.5'} alt={'Country Flag'} src={`/courses/course/countries/${activeCountry}.png`}/>
                                 <i className={`fa-solid fa-chevron-down text-xs duration-300 ${arrowAnimation}`}/>
                             </div>
                         </div>
@@ -52,7 +53,7 @@ const FormComponent = () => {
                         {activeCountry === 'canada' && <Input pattern={/.*/} isPhoneInput={true} name={'phoneNumber'} maskValue={'+1 ___ ___ ____'} phoneMask={'+{1} 000 000 0000'} errorMessage={errors.phoneNumber?.message} register={register} placeholder={'Phone'}/>}
                     </div>
                     {errors.phoneNumber?.message && <p className={`mt-2 text-xs ${styles['error-text']}`}>{errors.phoneNumber?.message}</p>}
-                    <div className={`${styles['consultation__countries-list']} ${displayCountriesList} absolute z-10`}>
+                    <div className={`${styles['content__countries-list']} ${displayCountriesList} absolute z-10`}>
                         <CountriesListItem countryName={'ukraine'} clickListener={clickListener} active={(activeCountry === 'ukraine') ? styles['active'] : ''} imgSrc={'/courses/course/countries/ukraine.png'} name={'Ukraine (Україна)'} phoneNumber={'+380'}/>
                         <CountriesListItem countryName={'belarus'} clickListener={clickListener} active={(activeCountry === 'belarus') ? styles['active'] : ''} imgSrc={'/courses/course/countries/belarus.png'} name={'Belarus (Беларусь)'} phoneNumber={'+375'}/>
                         <CountriesListItem countryName={'kazakhstan'} clickListener={clickListener} active={(activeCountry === 'kazakhstan') ? styles['active'] : ''} imgSrc={'/courses/course/countries/kazakhstan.png'} name={'Kazakhstan (Казахстан)'} phoneNumber={'+7'}/>
@@ -63,7 +64,7 @@ const FormComponent = () => {
                 <Input name={'mail'} errorMessage={errors.mail?.message} pattern={/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/} register={register} placeholder={'Mail'}/>
             </div>
             <button className={'w-1/2 h-14 my-4 text-lg text-white rounded-xl'}>Enroll in course</button>
-            <p className={`${styles['agreement']} text-xs grey-color`}>By clicking on the button, I agree to the processing of personal data and the terms of use of the Platform</p>
+            <p className={`${styles['content__agreement']} text-xs grey-color`}>By clicking on the button, I agree to the processing of personal data and the terms of use of the Platform</p>
         </form>
     )
 }

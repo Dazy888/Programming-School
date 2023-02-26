@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, { useEffect, useState } from "react"
 // Styles
 import styles from '@/styles/Course.module.scss'
 // Component
@@ -7,16 +7,16 @@ import { Teacher } from "@/components/courses/course/sections/teachers/Teacher"
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react"
 // Interface
-import { TeacherI } from "@/interfaces/courses"
+import { TeacherI } from "@/interfaces/course"
 
 interface Props {
     teachers: TeacherI[]
 }
 
-const TeachersComponent: React.FC<Props> = ({ teachers }) => {
+const TeachersSection: React.FC<Props> = ({ teachers }) => {
     const [slidesPerView, setSlidesPerView] = useState(4)
 
-    function checkWindowWidth() {
+    function SlidesPerViewListener() {
         if (window.innerWidth <= 375) {
             setSlidesPerView(1.05)
         } else if (window.innerWidth <= 460) {
@@ -35,24 +35,22 @@ const TeachersComponent: React.FC<Props> = ({ teachers }) => {
     }
 
     useEffect(() => {
-        checkWindowWidth()
-        window.onresize = checkWindowWidth
+        SlidesPerViewListener()
+        window.onresize = SlidesPerViewListener
     })
 
     return(
         <div id={styles['teachers']} className={'mb-32'}>
             <TitleText text={'Speakers'}/>
             <Swiper className={'mt-12'} slidesPerView={slidesPerView}>
-                {teachers.map((teacher, key) => {
-                    return(
-                        <SwiperSlide>
-                            <Teacher key={key} imgSrc={teacher.imgSrc} fullName={teacher.fullName} text={teacher.text} additionalInf={teacher.additionalInfo}/>
-                        </SwiperSlide>
-                    )
-                })}
+                {teachers.map((teacher, key) =>
+                    <SwiperSlide>
+                        <Teacher key={key} imgSrc={teacher.imgSrc} fullName={teacher.fullName} text={teacher.text} additionalInf={teacher.additionalInfo}/>
+                    </SwiperSlide>
+                )}
             </Swiper>
         </div>
     )
 }
 
-export const Teachers = React.memo(TeachersComponent)
+export const Teachers = React.memo(TeachersSection)

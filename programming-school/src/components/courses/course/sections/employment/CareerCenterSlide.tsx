@@ -12,26 +12,26 @@ interface Props {
 
 const CareerCenterSlideComponent: React.FC<Props> = ({ number, subtitle, hiddenText, title, bgColor = '', isSlider = true }) => {
     return(
-        <div className={`${styles['employment__career-center-slide']} ${bgColor} p-7 cursor-pointer rounded-3xl relative`}>
+        <div className={`${styles['career-center__slide']} ${bgColor} p-7 cursor-pointer rounded-3xl relative`}>
             {isSlider
                 ?   <>
                         <span className={'w-11 h-11 rounded-full flex justify-center items-center'}>
-                            <p className={'text-lg font-bold text-white'}>{number}</p>
+                            <p className={'text-lg font-bold'}>{number}</p>
                         </span>
                         <p className={`${styles['invisible-text']} w-72 absolute opacity-0 duration-500 text-lg font-medium bottom-8`}>{hiddenText}</p>
-                        <div className={`${styles['title']} duration-500`}>
+                        <div className={`${styles['title']} duration-500 text-black`}>
                             <h3 className={'text-2xl font-bold my-20'}>{title}</h3>
                             <p>{subtitle}</p>
                         </div>
                     </>
                 :   <>
                         <div className={'flex justify-between items-center h-12'}>
-                            <h3 className={'text-2xl font-bold my-20'}>{title}</h3>
+                            <h3 className={'text-2xl font-bold my-20 text-black'}>{title}</h3>
                             <span className={'w-11 h-11 rounded-full flex justify-center items-center'}>
-                                <p className={'text-lg font-bold text-white'}>{number}</p>
+                                <p className={'text-lg font-bold'}>{number}</p>
                             </span>
                         </div>
-                        <p className={`${styles['invisible-text']} text-lg font-medium mt-6`}>{hiddenText}</p>
+                        <p className={`${styles['invisible-text']} text-lg font-medium mt-6 text-black`}>{hiddenText}</p>
                     </>
             }
         </div>
