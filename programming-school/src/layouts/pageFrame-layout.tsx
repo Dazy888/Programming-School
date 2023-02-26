@@ -10,7 +10,7 @@ const PageFrameLayout: React.FC<Props> = ({ children }) => {
     return(
         <div id={'wrapper'} className={'text-white'}>
             <header className={'flex items-center justify-between py-10 px-20'}>
-                <Image height={40} width={40} src={"/navigation/logo.png"} alt={"Logo"}/>
+                <Image height={40} width={40} src={"/common/logo.png"} alt={"Logo"}/>
                 <NavigationLinks/>
                 <button className={'office-btn w-44 h-11 rounded-full'}>Go to office</button>
             </header>
