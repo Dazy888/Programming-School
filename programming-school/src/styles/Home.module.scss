@@ -100,7 +100,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
 
       #partners {
-        .partners__row {
+        .row {
           border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
           &:last-child {
@@ -210,9 +210,9 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
         }
 
         #partners {
-          .partners__row {
+          .row {
             display: grid;
-            grid-template-areas:  'first second'
+            grid-template-areas:    'first second'
                                     'third fourth';
             border: none;
             grid-gap: 10px;
@@ -355,7 +355,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
         }
 
         #partners {
-          .partners__row {
+          .row {
             width: fit-content;
             display: flex;
             flex-direction: column;
@@ -683,7 +683,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
         }
 
         #partners {
-          .partners__logos {
+          .row {
             div {
               width: 300px;
             }

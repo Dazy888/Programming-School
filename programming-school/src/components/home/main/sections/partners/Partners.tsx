@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.scss"
 import { Title } from "@/components/home/main/Title"
 import { LogosRow } from "@/components/home/main/sections/partners/LogosRow"
 
-const PartnersComponent = () => {
+const PartnersSection = () => {
     return(
         <section id={styles['partners']} className={'mt-48'}>
             <Title title={'Partners - top brands'}/>
@@ -15,4 +15,4 @@ const PartnersComponent = () => {
     )
 }
 
-export const Partners = React.memo(PartnersComponent)
+export const Partners = React.memo(PartnersSection)
