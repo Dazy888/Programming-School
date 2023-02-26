@@ -11,7 +11,7 @@ const ContentColumnComponent: React.FC<Props> = ({ content }) => {
     const items = content.map((item, key) => <ColumnItem key={key} month={item.month} text={item.text} rightLinePosition={item.rightLinePosition}/>)
 
     return(
-        <div className={styles['training-program__column']}>
+        <div className={styles['content__column']}>
             {...items}
         </div>
     )

@@ -15,17 +15,17 @@ interface Props {
 
 const ContentComponent: React.FC<Props> = ({ smallResolution, content, secondColumnContent, firstColumnContent }) => {
     return(
-        <div className={`${styles['training-program__content']} flex justify-center items-center`}>
+        <div className={`${styles['content']} flex justify-center items-center`}>
             {smallResolution
                 ?   <>
-                        <div className={styles['training-program__column']}>
+                        <div className={styles['content__column']}>
                             {...content.map((item, key) => <ColumnItem key={key} month={item.month} text={item.text} rightLinePosition={true}/>)}
                         </div>
-                        <hr className={styles['training-program__line']}/>
+                        <hr className={styles['content__line']}/>
                     </>
                 :   <>
                         <ContentColumn content={firstColumnContent}/>
-                        <hr className={`${styles['training-program__line']} w-1.5`}/>
+                        <hr className={`${styles['content__line']} w-1.5`}/>
                         <ContentColumn content={secondColumnContent}/>
                     </>
             }

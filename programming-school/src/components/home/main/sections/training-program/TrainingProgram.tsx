@@ -4,11 +4,11 @@ import { useSelector } from "react-redux"
 import styles from "@/styles/Home.module.scss"
 // Components
 import { Title} from "@/components/home/main/Title"
-import { Content } from "@/components/home/main/sections/training-program/Content";
+import { Content } from "@/components/home/main/sections/training-program/Content"
 // Store
 import { getTrainingProgramFirstColumnContent, getTrainingProgramSecondColumnContent } from "@/store/reducers/home/home-selectors"
 
-const TrainingProgramComponent = () => {
+const TrainingProgramSection = () => {
     const firstColumnContent = useSelector(getTrainingProgramFirstColumnContent)
     const secondColumnContent = useSelector(getTrainingProgramSecondColumnContent)
 
@@ -32,4 +32,4 @@ const TrainingProgramComponent = () => {
     )
 }
 
-export const TrainingProgram = React.memo(TrainingProgramComponent)
+export const TrainingProgram = React.memo(TrainingProgramSection)

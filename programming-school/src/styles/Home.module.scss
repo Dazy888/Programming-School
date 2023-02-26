@@ -118,19 +118,19 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
 
       #training-program {
-        .training-program__column {
+        .content__column {
           &:last-child {
-            .column__item {
+            .content__item {
               text-align: left;
 
-              .item__txt {
+              div {
                 margin-left: 35px;
                 margin-right: 0 !important;
               }
             }
           }
 
-          .training-program__item {
+          .content__item {
             &:last-child {
               margin-bottom: 0;
             }
@@ -141,7 +141,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
           }
         }
 
-        .training-program__line {
+        .content__line {
           height: 677px;
           background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
         }
@@ -364,14 +364,14 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
         }
 
         #training-program {
-          .training-program__content {
-            .training-program__line {
+          .content {
+            .content__line {
               width: 5px;
             }
           }
 
-          .training-program__column {
-            .training-program__item {
+          .content__column {
+            .content__item {
               width: 210px;
 
               div {
@@ -511,12 +511,12 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
         }
 
         #training-program {
-          .training-program__line {
+          .content__line {
             height: 1200px;
           }
 
-          .training-program__column {
-            .training-program__item {
+          .content__column {
+            .content__item {
               width: 300px;
               height: fit-content;
 
