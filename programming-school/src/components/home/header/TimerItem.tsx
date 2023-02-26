@@ -10,8 +10,8 @@ const TimerItemComponent: React.FC<Props> = ({ text, time }) => {
     return(
         <div className={`${styles['timer__item']} w-32 h-32 flex items-center justify-center`}>
             <div>
-                <span className={'text-4xl font-bold text-white'}>{(time < 10) ? `0${time}` : time}</span>
-                <p className={'text-base text-white opacity-50'}>{text}</p>
+                <span className={'text-4xl font-bold'}>{(time < 10) ? `0${time}` : time}</span>
+                <p className={'opacity-50'}>{text}</p>
             </div>
         </div>
     )

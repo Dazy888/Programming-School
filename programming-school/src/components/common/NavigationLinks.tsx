@@ -13,7 +13,7 @@ const NavigationLinksComponents = () => {
     }
 
     return(
-        <nav className={`${navHeight} duration-500 text-white`}> { /* Add animation class */ }
+        <nav className={`${navHeight} duration-500`}>
             <button onClick={() => (isNavOpened) ? setMenu(false, '') : setMenu(true, 'show-nav')} className={'w-fit text-3xl mx-auto hidden'}>
                 <i className={`fa-solid fa-${isNavOpened ? 'xmark' : 'bars'}`}/>
             </button>

@@ -66,7 +66,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
     }
   }
 
-  main {
+  #main {
     .title-column {
       flex-direction: column;
       text-align: center;
@@ -88,7 +88,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       max-width: 1310px;
 
       #about-us {
-        .about-us__img {
+        .img-block {
           width: 550px;
           height: 520px;
           border: 30px solid #9370db;
@@ -184,14 +184,18 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
     }
 
-    main {
+    #main {
       .container {
         #about-us {
           flex-direction: column;
 
-          .about-us__text {
+          .text-block {
             text-align: center;
             margin-top: 80px;
+
+            p {
+              font-size: 18px;
+            }
           }
         }
 
@@ -315,7 +319,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
     }
 
-    main {
+    #main {
       .title-block {
         width: 420px;
 
@@ -326,7 +330,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
 
       .container {
         #about-us {
-          .about-us__img {
+          .img-block {
             width: 420px;
             height: 400px;
 
@@ -335,7 +339,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
             }
           }
 
-          .about-us__text {
+          .text-block {
             h1 {
               font-size: 40px;
               margin-bottom: 40px;
@@ -343,7 +347,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
 
             p {
               max-width: 420px;
-              font-size: 15px;
+              font-size: 17px;
             }
           }
         }
@@ -466,7 +470,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
     }
 
-    main {
+    #main {
       .title-block {
         width: 370px;
 
@@ -477,7 +481,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
 
       .container {
         #about-us {
-          .about-us__img {
+          .img-block {
             width: 370px;
             height: 350px;
             border: 25px solid #9370db;
@@ -487,7 +491,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
             }
           }
 
-          .about-us__text {
+          .text-block {
             h1 {
               font-size: 35px;
               margin-bottom: 35px;
@@ -495,7 +499,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
 
             p {
               max-width: 370px;
-              font-size: 14px;
+              font-size: 16px;
             }
           }
         }
@@ -634,7 +638,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
     }
 
-    main {
+    #main {
       .title-block {
         width: 320px;
 
@@ -645,7 +649,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
 
       .container {
         #about-us {
-          .about-us__img {
+          .img-block {
             width: 320px;
             height: 300px;
             border: 20px solid #9370db;
@@ -655,7 +659,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
             }
           }
 
-          .about-us__text {
+          .text-block {
             h1 {
               font-size: 30px;
               margin-bottom: 30px;
@@ -663,7 +667,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
 
             p {
               max-width: 320px;
-              font-size: 13px;
+              font-size: 15px;
             }
           }
         }

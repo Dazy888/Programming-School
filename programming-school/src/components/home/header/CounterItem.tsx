@@ -11,7 +11,7 @@ interface Props {
 const CounterItemComponent: React.FC<Props> = ({ amount, text, isMarginBottom }) => {
     return(
         <div className={`flex ${isMarginBottom ? 'mb-3' : ''}`}>
-            <GreyText classNames={'w-72 mr-2'} text={text}/>
+            <GreyText additionalClassNames={'w-72 mr-2'} text={text}/>
             <Number number={amount}/>
         </div>
     )

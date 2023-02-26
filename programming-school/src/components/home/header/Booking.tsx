@@ -13,7 +13,7 @@ const BookingComponent = () => {
     return(
         <div className={`${styles['booking']} flex justify-center h-32`}>
             <div className={`${styles['booking__container']} flex justify-between items-center`}>
-                <button onClick={() => router.push('/courses')} className={'w-40 h-11 rounded-full flex-center font-bold text-base text-white'}>Book a course</button>
+                <button onClick={() => router.push('/courses')} className={'w-40 h-11 rounded-full flex-center font-bold'}>Book a course</button>
                 <div className={`${styles['booking__students-counter']}`}>
                     <CounterItem isMarginBottom={true} text={'Total students :'} amount={'1200'}/>
                     <CounterItem text={'Successfully completed the courses :'} amount={'1000'}/>
