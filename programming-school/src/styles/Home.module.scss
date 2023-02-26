@@ -40,7 +40,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
     }
   }
 
-  header {
+  #header {
     .timer__item {
       background: #121212;
     }
@@ -48,14 +48,14 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
     .booking {
       background: #121212;
 
-      .booking__content {
-        width: 1400px;
+      .booking__container {
+        width: 90%;
 
         button {
           background: $linearGradientColor
         }
 
-        .booking__orders_progress-bar {
+        .booking__progress-bar {
           width: 715px;
 
           div:first-child {
@@ -165,20 +165,16 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
     }
   }
-
-  footer {
-    background: #242424;
-  }
 }
 
 @media (max-width: 1440px) {
   #home {
-    header {
+    #header {
       .booking {
         height: fit-content;
         padding: 30px 0;
 
-        .booking__content {
+        .booking__container {
           flex-direction: column;
 
           .booking__students-counter {
@@ -268,8 +264,10 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
     }
 
-    header {
+    #header {
       .timer {
+        margin: 150px auto;
+
         h1 {
           font-size: 44px;
         }
@@ -293,29 +291,25 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
 
       .booking {
-        .booking__content {
-          width: fit-content;
+        .booking__btn {
+          width: 140px;
+          height: 40px;
+          font-size: 15px;
+        }
 
-          .booking__btn {
-            width: 140px;
-            height: 40px;
-            font-size: 15px;
-          }
+        .booking__students-counter {
+          width: 290px;
 
-          .booking__students-counter {
-            width: 290px;
-
-            div {
-              p {
-                font-size: 15px;
-              }
+          div {
+            p {
+              font-size: 15px;
             }
           }
+        }
 
-          .booking__orders {
-            .booking__orders_progress-bar {
-              width: 420px;
-            }
+        .booking__container {
+          .booking__progress-bar {
+            width: 420px;
           }
         }
       }
@@ -420,9 +414,9 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
 
 @media (max-width: 425px) {
   #home {
-    header {
+    #header {
       .timer {
-        margin: 160px auto;
+        margin: 130px auto;
 
         h1 {
           font-size: 38px;
@@ -448,27 +442,25 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
 
       .booking {
-        .booking__content {
-          .booking__btn {
-            width: 120px;
-            height: 35px;
-            font-size: 14px;
-          }
+        button {
+          width: 120px;
+          height: 35px;
+          font-size: 13px;
+        }
 
-          .booking__students-counter {
-            width: 270px;
+        .booking__students-counter {
+          width: 270px;
 
-            div {
-              p {
-                font-size: 14px;
-              }
+          div {
+            p {
+              font-size: 14px;
             }
           }
+        }
 
-          .booking__orders {
-            .booking__orders_progress-bar {
-              width: 370px;
-            }
+        .booking__container {
+          .booking__progress-bar {
+            width: 370px;
           }
         }
       }
@@ -597,9 +589,9 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
     }
 
-    header {
+    #header {
       .timer {
-        margin: 160px auto;
+        margin: 120px auto;
 
         h1 {
           font-size: 33px;
@@ -624,25 +616,19 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
       }
 
       .booking {
-        .booking__content {
-          .booking__btn {
-            font-size: 13px;
-          }
+        .booking__students-counter {
+          width: 250px;
 
-          .booking__students-counter {
-            width: 250px;
-
-            div {
-              p {
-                font-size: 13px;
-              }
+          div {
+            p {
+              font-size: 13px;
             }
           }
+        }
 
-          .booking__orders {
-            .booking__orders_progress-bar {
-              width: 310px;
-            }
+        .booking__container {
+          .booking__progress-bar {
+            width: 310px;
           }
         }
       }

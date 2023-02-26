@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { useRouter } from "next/router"
 import Link from "next/link"
-import styles from "@/styles/Home.module.scss"
 
 const NavigationLinksComponents = () => {
     const router = useRouter()

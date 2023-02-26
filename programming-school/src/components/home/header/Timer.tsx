@@ -40,4 +40,4 @@ const TimerComponent = () => {
     )
 }
 
-export const Timer = React.memo(TimerComponent);
+export const Timer = React.memo(TimerComponent)
