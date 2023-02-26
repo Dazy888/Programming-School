@@ -1,7 +1,7 @@
 import React from "react"
 import styles from '@/styles/Home.module.scss'
-import {TitleText} from "@/components/common/TitleText";
-import {Subtitle} from "@/components/home/main/Subtitle";
+import { TitleText } from "@/components/common/TitleText"
+import { Subtitle } from "@/components/home/main/Subtitle"
 
 interface Props {
     title: string

@@ -5,6 +5,5 @@ interface Props {
     classNames?: string
 }
 
-const SubtitleComponent: React.FC<Props> = ({ text, classNames = '' }) => <p className={`text-base text-white opacity-50 ${classNames}`}>{text}</p>
-
+const SubtitleComponent: React.FC<Props> = ({ text, classNames = '' }) => <p className={`opacity-50 ${classNames}`}>{text}</p>
 export const Subtitle = React.memo(SubtitleComponent)
