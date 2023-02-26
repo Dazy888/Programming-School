@@ -200,15 +200,11 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
         }
 
         #about-courses {
-          .about-courses__content {
+          .content {
             flex-direction: column;
 
             div:nth-child(2) {
               margin: 100px 0;
-            }
-
-            p {
-              margin: auto;
             }
           }
         }
@@ -509,19 +505,8 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
             font-size: 30px;
           }
 
-          img {
-            width: 90px;
-            height: 90px;
-          }
-
-          h3 {
-            margin: 50px 0 25px;
-            font-size: 22px;
-          }
-
           p {
             max-width: 370px;
-            font-size: 15px;
           }
         }
 
@@ -677,13 +662,13 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
             font-size: 29px;
           }
 
-          .about-courses__content {
+          .content {
             margin-top: 100px;
           }
 
           img {
-            width: 85px;
-            height: 85px;
+            width: 90px;
+            height: 90px;
           }
 
           h3 {
@@ -693,7 +678,7 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
 
           p {
             max-width: 320px;
-            font-size: 14px;
+            font-size: 15px;
           }
         }
 
