@@ -52,6 +52,11 @@ const QuestionComponent: React.FC<QuestionI> = ({ title, terms, text, texts, lis
                         }
                     </ul>
                 }
+                {listItems &&
+                    <ul className={styles['simple-list']}>
+                        {listItems.map((item, key) => <li className={'pl-2.5'} key={key}>{item}</li>)}
+                    </ul>
+                }
             </div>
         </div>
     )

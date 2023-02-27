@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React, {useEffect, useRef, useState} from "react"
 import styles from '@/styles/Course.module.scss'
+import { CourseAttrI } from "@/interfaces/course"
 
 interface Props {
     title: string
@@ -7,9 +8,12 @@ interface Props {
     listItems?: string[]
     text?: string
     subtitle?: string
+    courseAttr: CourseAttrI
 }
 
 const ProgramItemComponent: React.FC<Props> = ({ title, number, listItems, text, subtitle }) => {
+    const titleRef: any = useRef()
+
     const [buttonClass, setButtonClass] = useState('')
     const [openedClass, setOpenedClass] = useState('hidden')
 
@@ -23,9 +27,15 @@ const ProgramItemComponent: React.FC<Props> = ({ title, number, listItems, text,
         }
     }
 
+    useEffect(() => {
+        const title = titleRef.current
+        const titleBtn = title.querySelector('button')
+        if (titleBtn) title.style.cursor = 'pointer'
+    })
+
     return(
-        <div className={styles['content__item']}>
-            <div onClick={clickListener} className={`${styles['content__item-title']} flex justify-between items-center text-xl font-semibold py-7 cursor-pointer`}>
+        <div className={styles['content__item']} >
+            <div ref={titleRef} onClick={clickListener} className={`${styles['content__title']} flex justify-between items-center text-xl font-semibold py-7`}>
                 <h1>{number}. {title}</h1>
                 {(listItems || text) &&
                     <button className={`${buttonClass} w-8 h-8 flex justify-center items-center rounded-full`}>

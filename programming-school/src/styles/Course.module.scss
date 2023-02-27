@@ -72,7 +72,7 @@
           background: $java-pro-color;
         }
 
-        &[course=cyber-security] {
+        &[course=cybersecurity] {
           background: $cyber-security-color;
         }
 
@@ -157,7 +157,7 @@
             border: 3px solid $java-pro-color;
           }
 
-          &[course=cyber-security] {
+          &[course=cybersecurity] {
             border: 3px solid $cyber-security-color;
           }
 
@@ -262,7 +262,7 @@
           }
         }
 
-        &[course=cyber-security] {
+        &[course=cybersecurity] {
           div {
             border: 3px solid $cyber-security-color;
           }
@@ -784,7 +784,7 @@
         }
       }
 
-      &[course=cyber-security] {
+      &[course=cybersecurity] {
         border: 3px solid $cyber-security-color;
 
         .rectangle {
@@ -911,7 +911,7 @@
             border-bottom: 65px solid $java-pro-color;
           }
 
-          &[course=cyber-security] {
+          &[course=cybersecurity] {
             border-bottom: 65px solid $cyber-security-color;
           }
 
@@ -934,6 +934,176 @@
       }
 
       .content {
+        &[course=fullstack-python] {
+          .content__item {
+            border-top: 2px solid $fullstack-python-color;
+
+            &:last-child {
+              border-bottom: 2px solid $fullstack-python-color;
+            }
+          }
+        }
+
+        &[course=web] {
+          .content__item {
+            border-top: 2px solid $web-color;
+
+            &:last-child {
+              border-bottom: 2px solid $web-color;
+            }
+          }
+        }
+
+        &[course=fullstack-php] {
+          .content__item {
+            border-top: 2px solid $fullstack-php-color;
+
+            &:last-child {
+              border-bottom: 2px solid $fullstack-php-color;
+            }
+          }
+        }
+
+        &[course=frontend] {
+          .content__item {
+            border-top: 2px solid $frontend-color;
+
+            &:last-child {
+              border-bottom: 2px solid $frontend-color;
+            }
+          }
+        }
+
+        &[course=frontend-pro] {
+          .content__item {
+            border-top: 2px solid $frontend-pro-color;
+
+            &:last-child {
+              border-bottom: 2px solid $frontend-pro-color;
+            }
+          }
+        }
+
+        &[course=fullstack-js] {
+          .content__item {
+            border-top: 2px solid $fullstack-js-color;
+
+            &:last-child {
+              border-bottom: 2px solid $fullstack-js-color;
+            }
+          }
+        }
+
+        &[course=php-pro] {
+          .content__item {
+            border-top: 2px solid $php-pro-color;
+
+            &:last-child {
+              border-bottom: 2px solid $php-pro-color;
+            }
+          }
+        }
+
+        &[course=c-plus-plus] {
+          .content__item {
+            border-top: 2px solid $c-plus-plus-color;
+
+            &:last-child {
+              border-bottom: 2px solid $c-plus-plus-color;
+            }
+          }
+        }
+
+        &[course=android] {
+          .content__item {
+            border-top: 2px solid $android-color;
+
+            &:last-child {
+              border-bottom: 2px solid $android-color;
+            }
+          }
+        }
+
+        &[course=ios] {
+          .content__item {
+            border-top: 2px solid $ios-color;
+
+            &:last-child {
+              border-bottom: 2px solid $ios-color;
+            }
+          }
+        }
+
+        &[course=mobile] {
+          .content__item {
+            border-top: 2px solid $mobile-color;
+
+            &:last-child {
+              border-bottom: 2px solid $mobile-color;
+            }
+          }
+        }
+
+        &[course=flutter] {
+          .content__item {
+            border-top: 2px solid $flutter-color;
+
+            &:last-child {
+              border-bottom: 2px solid $flutter-color;
+            }
+          }
+        }
+
+        &[course=java] {
+          .content__item {
+            border-top: 2px solid $java-color;
+
+            &:last-child {
+              border-bottom: 2px solid $java-color;
+            }
+          }
+        }
+
+        &[course=java-pro] {
+          .content__item {
+            border-top: 2px solid $java-pro-color;
+
+            &:last-child {
+              border-bottom: 2px solid $java-pro-color;
+            }
+          }
+        }
+
+        &[course=cybersecurity] {
+          .content__item {
+            border-top: 2px solid $cyber-security-color;
+
+            &:last-child {
+              border-bottom: 2px solid $cyber-security-color;
+            }
+          }
+        }
+
+        &[course=devops] {
+          .content__item {
+            border-top: 2px solid $devops-color;
+
+            &:last-child {
+              border-bottom: 2px solid $devops-color;
+            }
+          }
+        }
+
+        &[course=devops-pro] {
+          .content__item {
+            border-top: 2px solid $devops-pro-color;
+
+            &:last-child {
+              border-bottom: 2px solid $devops-pro-color;
+            }
+          }
+        }
+
         .content__item {
           border-top: 2px solid $python-color;
 
@@ -941,7 +1111,7 @@
             border-bottom: 2px solid $python-color;
           }
 
-          .content__item-title {
+          .content__title {
             .rotate {
               transform: rotate(45deg);
             }
@@ -1013,7 +1183,7 @@
 
       .teacher {
         width: 270px;
-        height: 314px;
+        height: 360px;
         background: #F7F7F5;
         color: black;
 
@@ -1123,6 +1293,18 @@
                 }
               }
             }
+
+            .simple-list {
+              li {
+                position: relative;
+
+                &:before {
+                  content: "•";
+                  position: absolute;
+                  left: 0;
+                }
+              }
+            }
           }
         }
       }
@@ -1131,6 +1313,74 @@
 
   #consultation {
     background: $python-color;
+
+    &[course=fullstack-python] {
+      background: $fullstack-python-color;
+    }
+
+    &[course=web] {
+      background: $web-color;
+    }
+
+    &[course=fullstack-php] {
+      background: $fullstack-php-color;
+    }
+
+    &[course=frontend] {
+      background: $frontend-color;
+    }
+
+    &[course=frontend-pro] {
+      background: $frontend-pro-color;
+    }
+
+    &[course=fullstack-js] {
+      background: $fullstack-js-color;
+    }
+
+    &[course=php-pro] {
+      background: $php-pro-color;
+    }
+
+    &[course=c-plus-plus] {
+      background: $c-plus-plus-color;
+    }
+
+    &[course=android] {
+      background: $android-color;
+    }
+
+    &[course=ios] {
+      background: $ios-color;
+    }
+
+    &[course=mobile] {
+      background: $mobile-color;
+    }
+
+    &[course=flutter] {
+      background: $flutter-color;
+    }
+
+    &[course=java] {
+      background: $java-color;
+    }
+
+    &[course=java-pro] {
+      background: $java-pro-color;
+    }
+
+    &[course=cybersecurity] {
+      background: $cyber-security-color;
+    }
+
+    &[course=devops] {
+      background: $devops-color;
+    }
+
+    &[course=devops-pro] {
+      background: $devops-pro-color;
+    }
 
     .content {
       background: white;
@@ -1483,7 +1733,7 @@
 
         .content {
           .content__item {
-            .content__item-title {
+            .content__title {
               cursor: none;
             }
           }
@@ -1875,7 +2125,7 @@
               border-bottom: 50px solid $java-pro-color;
             }
 
-            &[course=cyber-security] {
+            &[course=cybersecurity] {
               border-bottom: 50px solid $cyber-security-color;
             }
 
@@ -1919,7 +2169,7 @@
 
         .content {
           .content__item {
-            .content__item-title {
+            .content__title {
               font-size: 18px;
 
               h1 {
@@ -2675,7 +2925,7 @@
               border-bottom: 30px solid $java-pro-color;
             }
 
-            &[course=cyber-security] {
+            &[course=cybersecurity] {
               border-bottom: 30px solid $cyber-security-color;
             }
 
@@ -2723,7 +2973,7 @@
 
         .content {
           .content__item {
-            .content__item-title {
+            .content__title {
               font-size: 16px;
 
               h1 {

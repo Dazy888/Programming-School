@@ -15,7 +15,7 @@ interface Props {
 
 const SliderComponent: React.FC<Props> = ({ slide, currentSlide, slidesAmount, setSlide }) => {
     const prevSlide = () => (currentSlide >= 1) && setSlide(currentSlide - 1)
-    const nextSlide = () => (currentSlide < 2) && setSlide(currentSlide + 1)
+    const nextSlide = () => (currentSlide < slidesAmount - 1) && setSlide(currentSlide + 1)
 
     return(
         <div className={`${styles['slider']} mt-12 grid grid-cols-2 gap-16`}>

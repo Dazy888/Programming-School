@@ -5,10 +5,10 @@ import styles from '@/styles/Course.module.scss'
 import { CountItem } from "@/components/courses/course/sections/program/CountItem"
 import { ProgramItem } from "@/components/courses/course/sections/program/ProgramItem"
 // Interface
-import { CountI, ProgramItemI } from "@/interfaces/course"
+import { CountI, CourseAttrI, ProgramItemI } from "@/interfaces/course"
 
 interface Props {
-    courseAttr: any
+    courseAttr: CourseAttrI
     countItems: CountI[]
     titleText: string
     programItems: ProgramItemI[]
@@ -29,8 +29,8 @@ const ProgramSection: React.FC<Props> = ({ courseAttr, titleText, countItems, pr
                     </div>
                 </div>
             </div>
-            <div className={styles['content']}>
-                {...programItems.map((item, key) => <ProgramItem key={key} title={item.title} subtitle={item.subtitle} number={item.number} listItems={item.listItems} text={item.text}/>)}
+            <div className={styles['content']} {...courseAttr}>
+                {...programItems.map((item, key) => <ProgramItem courseAttr={courseAttr} key={key} title={item.title} subtitle={item.subtitle} number={item.number} listItems={item.listItems} text={item.text}/>)}
             </div>
             <div className={`${styles['disclaimer']} flex justify-between items-center mt-20 w-5/12`}>
                 <div className={`${styles['disclaimer__icon']} w-11 h-11 flex justify-center items-center rounded-full`}>

@@ -1,9 +1,10 @@
 import React from "react"
 import styles from "@/styles/Course.module.scss"
 import { Form } from "@/components/courses/course/sections/consultation/Form"
+import { CourseAttrI } from "@/interfaces/course"
 
 interface Props {
-    courseAttr: any
+    courseAttr: CourseAttrI
 }
 
 const ConsultationSection: React.FC<Props> = ({ courseAttr }) => {

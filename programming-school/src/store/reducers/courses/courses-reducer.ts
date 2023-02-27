@@ -1042,12 +1042,12 @@ const initialState = {
                     new TitleTextItem('Work with the network', 'You will understand how client-server interaction works, learn how to work with the API and be able to set up frontend and backend communication within one project')
                 ],
                 projects: [
-                    new Project('/courses/course/projects/fullstack-php/1.png', 'Landing', 'Build a landing page based on a brief from a customer using HTML and CSS'),
-                    new Project('/courses/course/projects/fullstack-php/2.png', 'User interface', 'Develop a web application using JavaScript'),
-                    new Project('/courses/course/projects/fullstack-php/3.png', 'Note service', 'Develop the frontend and backend for a personal note service using Node.js'),
-                    new Project('/courses/course/projects/fullstack-php/4.png', 'Online store', 'Create a full-fledged online store using the Vue.js framework'),
-                    new Project('/courses/course/projects/fullstack-php/5.png', 'Integration with Reddit', 'Set up the integration of posts from the Reddit news site using the ReactFramework.js framework'),
-                    new Project('/courses/course/projects/fullstack-php/6.png', 'Online store', 'Develop a full-fledged online store on the Angular framework')
+                    new Project('/courses/course/projects/fullstack-js/1.png', 'Landing', 'Build a landing page based on a brief from a customer using HTML and CSS'),
+                    new Project('/courses/course/projects/fullstack-js/2.png', 'User interface', 'Develop a web application using JavaScript'),
+                    new Project('/courses/course/projects/fullstack-js/3.png', 'Note service', 'Develop the frontend and backend for a personal note service using Node.js'),
+                    new Project('/courses/course/projects/fullstack-js/4.png', 'Online store', 'Create a full-fledged online store using the Vue.js framework'),
+                    new Project('/courses/course/projects/fullstack-js/5.png', 'Integration with Reddit', 'Set up the integration of posts from the Reddit news site using the ReactFramework.js framework'),
+                    new Project('/courses/course/projects/fullstack-js/6.png', 'Online store', 'Develop a full-fledged online store on the Angular framework')
                 ],
                 program: {
                     title: {
@@ -1155,7 +1155,7 @@ const initialState = {
         c_plus_plus: {
             preview: new Preview('C++ developer', '/courses/previews/cPlusPlus-logo.png', '7 months', 'c-plus-plus'),
             course: {
-                logoSrc: '/courses/course/logos/cPlusPlus-logo.png',
+                logoSrc: '/courses/course/logos/c-plus-plus-logo.png',
                 header: {
                     text: 'C++ programmers create complex programs and services. They develop high-load network applications, games, graphics engines, components for operating systems and hardware. Windows, Linux and macOS, Android, Chrome, Counter-Strike, StarCraft and Diablo are written in this language. You will master the legendary programming language from scratch: write a search engine, your own browser, and gain teamwork skills',
                     features: [
@@ -1168,8 +1168,8 @@ const initialState = {
                     list: [new TitleTextItem('4 018 companies', 'currently looking for C++ developers'), new TitleTextItem('100 000 dollars', 'average C++ developer salary')]
                 },
                 for_who: [
-                    new ForWho('/courses/course/for-who/c-plus-plus-plus-plus/1.png', 'For those who want to become a programmer', 'Learn the basic principles of C++ programming. Write your first programs, build a portfolio and start a career in the direction you like'),
-                    new ForWho('/courses/course/for-who/c-plus-plus-plus-plus/2.png', 'Developers in other languages', 'Get familiar with C++ syntax and learn the in-demand language. Write a microservice, make a game for UE4 and be able to apply for the position of a middle developer in a game dev or IT company')
+                    new ForWho('/courses/course/for-who/c-plus-plus/1.png', 'For those who want to become a programmer', 'Learn the basic principles of C++ programming. Write your first programs, build a portfolio and start a career in the direction you like'),
+                    new ForWho('/courses/course/for-who/c-plus-plus/2.png', 'Developers in other languages', 'Get familiar with C++ syntax and learn the in-demand language. Write a microservice, make a game for UE4 and be able to apply for the position of a middle developer in a game dev or IT company')
                 ],
                 skills: [
                     new TitleTextItem('Program in C++', 'Learn the syntax, loops, conditions, and features of the language. Learn how to turn lines of code into working programs'),
@@ -1225,7 +1225,8 @@ const initialState = {
                             listItems: [
                                 'Event system', 'Pawn base class', 'The mechanism of procedural destruction (Destructable Mesh)', 'Interaction between Actor', 'Controller (Controller)',
                                 'Navigation data (Navmesh) and navigation', 'Getting control of the Pawn class (Possess), creating new Actors (Spawn)', 'Function reference (Delegates)'
-                            ]
+                            ],
+                            number: 7
                         }
                     ]
                 },
@@ -1644,8 +1645,8 @@ const initialState = {
                 },
                 projects: [
                     new Project('/courses/course/projects/flutter/1.png', 'Flutter course. Spotify analogue', 'Develop an application for listening to music. Add a search by artist, a list of the most popular tracks, and a collection feature'),
-                    new Project('/courses/course/projects/flutter/1.png', 'Flutter course. Expense tracker app', 'Develop an app to track monthly expenses. Write the logic for removing and adding expenses and their categories. Add an expense schedule for each month and switch between months'),
-                    new Project('/courses/course/projects/flutter/1.png', 'Flutter course. Analogue of Instagram*', 'You will develop an application with a feed of publications with a description of the photo and the ability to like it. Add a feature to view the post page, which displays users who have liked it')
+                    new Project('/courses/course/projects/flutter/2.png', 'Flutter course. Expense tracker app', 'Develop an app to track monthly expenses. Write the logic for removing and adding expenses and their categories. Add an expense schedule for each month and switch between months'),
+                    new Project('/courses/course/projects/flutter/3.png', 'Flutter course. Analogue of Instagram*', 'You will develop an application with a feed of publications with a description of the photo and the ability to like it. Add a feature to view the post page, which displays users who have liked it')
                 ],
                 teachers: [
                     commonItems.teachers.ovchinnikov, commonItems.teachers.alexandrov, commonItems.teachers.rybakov, commonItems.teachers.pilipenko, commonItems.teachers.malykh,
