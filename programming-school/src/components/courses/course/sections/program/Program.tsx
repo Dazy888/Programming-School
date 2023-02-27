@@ -18,7 +18,7 @@ const ProgramSection: React.FC<Props> = ({ courseAttr, titleText, countItems, pr
     return(
         <div {...courseAttr} id={styles['program']} className={'mb-32 pt-16 px-28 pb-20 relative rounded-3xl'}>
             <div className={`${styles['rectangle']} absolute`}>
-                <div {...courseAttr}></div>
+                <div {...courseAttr}>{null}</div>
             </div>
             <div className={`${styles['title']} flex justify-between mb-20`}>
                 <h1 className={'text-5xl font-bold tracking-wide'}>Program</h1>
