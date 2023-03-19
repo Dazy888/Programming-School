@@ -5,7 +5,7 @@ This is a Programming school's website which contains 20 different professions
 1: Go to the project's folder
 
 ```bash
-cd programming-school
+cd client
 ```
 
 2:
@@ -13,7 +13,7 @@ cd programming-school
 1) For view - pull docker image
 
 ```bash
-docker pull dazy/programming-school:latest
+docker pull dazy/client:latest
 ```
 
 2) For development - install all dependencies
@@ -29,7 +29,7 @@ yarn
 1) For view - run docker container
 
 ```bash
-docker run -d -p 3000:3000 --rm --name programming-school dazy/programming-school
+docker run -d -p 3000:3000 --rm --name client dazy/client
 ```
 
 2) For development - run dev server

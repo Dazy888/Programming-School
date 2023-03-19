@@ -1,0 +1,20 @@
+import React from "react"
+import { GreyText } from "@/components/home/header/GreyText"
+import { Number } from "@/components/home/header/Number"
+
+interface Props {
+    text: string
+    amount: string
+    isMarginBottom?: boolean
+}
+
+const CounterItemComponent: React.FC<Props> = ({ amount, text, isMarginBottom }) => {
+    return(
+        <div className={`flex ${isMarginBottom ? 'mb-3' : ''}`}>
+            <GreyText additionalClassNames={'w-72 mr-2'} text={text}/>
+            <Number number={amount}/>
+        </div>
+    )
+}
+
+export const CounterItem = React.memo(CounterItemComponent)
