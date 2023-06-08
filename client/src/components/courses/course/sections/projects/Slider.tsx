@@ -1,9 +1,6 @@
 import React from "react"
-// Styles
 import styles from "@/styles/Course.module.scss"
-// Model
 import { IProject } from "@/models/course"
-// Component
 import { Arrow } from "@/components/courses/course/sections/projects/Arrow"
 
 interface Props {
@@ -27,16 +24,14 @@ const SliderComponent: React.FC<Props> = ({ slide, currentSlide, slidesAmount, s
                     {slide.firstParagraph && <p>{slide.firstParagraph}</p>}
                     {slide.listItems &&
                         <ul className={'my-4'}>
-                            {...slide.listItems.map((item, key) => <li key={key}>{item}</li>)}
+                            {slide.listItems.map((item, key) => <li key={key}>{item}</li>)}
                         </ul>
                     }
                     {slide.secondParagraph && <p className={'mb-4'}>{slide.secondParagraph}</p>}
                 </div>
                 <div className={`${styles['slider__controllers']} flex justify-between w-32`}>
                     <Arrow changeSlide={prevSlide} direction={'left'}/>
-                    <div>
-                        {currentSlide + 1} / {slidesAmount}
-                    </div>
+                    <div>{currentSlide + 1} / {slidesAmount}</div>
                     <Arrow changeSlide={nextSlide} direction={'right'}/>
                 </div>
             </div>

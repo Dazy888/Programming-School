@@ -1,9 +1,6 @@
 import React from "react"
-// Styles
 import styles from '@/styles/Home.module.scss'
-// Model
 import { TrainingProgramItem } from "@/models/home"
-// Component
 import { ContentItem } from "@/components/home/main/sections/training-program/ContentItem"
 
 interface Props {

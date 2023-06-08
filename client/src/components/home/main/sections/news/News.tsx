@@ -1,13 +1,10 @@
 import React from "react"
-// Styles
 import styles from "@/styles/Home.module.scss"
-// Components
+import { SubmitHandler, useForm } from "react-hook-form"
 import { Link } from "@/components/home/main/sections/news/Link"
 import { Form } from "@/components/home/main/sections/news/Form"
 import { TitleText } from "@/components/common/TitleText"
 import { Subtitle } from "@/components/home/main/Subtitle"
-// Form
-import { SubmitHandler, useForm } from "react-hook-form"
 
 interface HomeForm {
     email: string
@@ -31,4 +28,4 @@ const NewsComponent = () => {
     )
 }
 
-export const News = React.memo(NewsComponent)
+export default React.memo(NewsComponent)

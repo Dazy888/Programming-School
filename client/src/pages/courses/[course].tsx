@@ -1,31 +1,28 @@
-import React, { useState } from "react"
+import React from "react"
 import Head from "next/head"
 import { useRouter } from "next/router"
-// Layout
-import { PageFrame } from "@/layouts/PageFrame"
-// Styles
+import dynamic from "next/dynamic"
+import { MainLayout } from "@/layouts/MainLayout"
 import styles from '@/styles/Course.module.scss'
 // Sections
 import { Header } from "@/components/courses/course/sections/header/Header"
 import { Disclaimer } from "@/components/courses/course/sections/disclaimer/Disclaimer"
-import { Market } from "@/components/courses/course/sections/market/Market"
-import { ForWho } from "@/components/courses/course/sections/for-who/ForWho"
-import { Skills } from "@/components/courses/course/sections/skills/Skills"
-import { Consultation } from "@/components/courses/course/sections/consultation/Consultation"
-import { Employment } from "@/components/courses/course/sections/employment/Employment"
-import { Program } from "@/components/courses/course/sections/program/Program"
-import { Projects } from "@/components/courses/course/sections/projects/Projects"
-import { Teachers } from "@/components/courses/course/sections/teachers/Teachers"
-import { CV } from "@/components/courses/course/sections/cv/CV"
-import { Questions } from "@/components/courses/course/sections/questions/Questions"
+const Market = dynamic(() => import('@/components/courses/course/sections/market/Market'), { ssr: false })
+const ForWho = dynamic(() => import('@/components/courses/course/sections/for-who/ForWho'), { ssr: false })
+const Skills = dynamic(() => import('@/components/courses/course/sections/skills/Skills'), { ssr: false })
+const Consultation = dynamic(() => import('@/components/courses/course/sections/consultation/Consultation'), { ssr: false })
+const Employment = dynamic(() => import('@/components/courses/course/sections/employment/Employment'), { ssr: false })
+const Program = dynamic(() => import('@/components/courses/course/sections/program/Program'), { ssr: false })
+const Projects = dynamic(() => import('@/components/courses/course/sections/projects/Projects'), { ssr: false })
+const Teachers = dynamic(() => import('@/components/courses/course/sections/teachers/Teachers'), { ssr: false })
+const CV = dynamic(() => import('@/components/courses/course/sections/cv/CV'), { ssr: false })
+const Questions = dynamic(() => import('@/components/courses/course/sections/questions/Questions'), { ssr: false })
 // Store
 import { useAppDispatch, useAppSelector } from "@/hooks/redux"
 import { setOpenedCourse } from "@/store/reducers/CoursesSlice"
-// Model
-import { ICourse } from "@/models/course"
 
 const Course = () => {
-    const [courseData, setCourse] = useState<ICourse>(useAppSelector(state => state.coursesReducer.courses.python))
+    let courseData = useAppSelector(state => state.coursesReducer.courses.python)
     const dispatch = useAppDispatch()
     const router = useRouter()
 
@@ -36,7 +33,7 @@ const Course = () => {
     const courses = Object.values(useAppSelector(state => state.coursesReducer.courses))
 
     for (const course of courses) {
-        if (course.preview.path === openedCourse) setCourse(course)
+        if (course.preview.path === openedCourse) courseData = course
     }
 
     const courseAttr = { 'course' : courseData.preview.path }
@@ -50,7 +47,7 @@ const Course = () => {
     const cv = courseData.course.cv
 
     return(
-        <PageFrame>
+        <MainLayout>
             <Head>
                 <title>{courseName && courseName[0].toUpperCase() + courseName.slice(1)}</title>
             </Head>
@@ -72,7 +69,7 @@ const Course = () => {
                     <Questions questions={courseData.course.questions}/>
                 </div>
             </div>
-        </PageFrame>
+        </MainLayout>
     )
 }
 

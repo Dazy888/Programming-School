@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from "react"
-// Components
 import { ValidatedInput } from "@/components/contacts/ValidatedInput"
-// Form
 import { SubmitHandler, useForm,} from "react-hook-form"
-// Phone Mask
 import IMask from "imask"
 
 interface ContactsForm {

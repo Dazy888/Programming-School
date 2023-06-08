@@ -1,10 +1,7 @@
 import React, { useState } from "react"
-// Styles
 import styles from '@/styles/Course.module.scss'
-// Components
 import { TitleText } from "@/components/common/TitleText"
 import { Slider } from "@/components/courses/course/sections/projects/Slider"
-// Model
 import { IProject } from "@/models/course"
 
 interface Props {
@@ -22,4 +19,4 @@ const ProjectsSection: React.FC<Props> = ({ projects }) => {
     )
 }
 
-export const Projects = React.memo(ProjectsSection)
+export default React.memo(ProjectsSection)

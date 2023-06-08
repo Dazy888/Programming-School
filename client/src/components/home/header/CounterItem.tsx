@@ -8,13 +8,11 @@ interface Props {
     isMarginBottom?: boolean
 }
 
-const CounterItemComponent: React.FC<Props> = ({ amount, text, isMarginBottom }) => {
-    return(
-        <div className={`flex ${isMarginBottom ? 'mb-3' : ''}`}>
-            <GreyText additionalClassNames={'w-72 mr-2'} text={text}/>
-            <Number number={amount}/>
-        </div>
-    )
-}
+const CounterItemComponent: React.FC<Props> = ({ amount, text, isMarginBottom }) => (
+    <div className={`flex ${isMarginBottom ? 'mb-3' : ''}`}>
+        <GreyText additionalClassNames={'w-72 mr-2'} text={text}/>
+        <Number number={amount}/>
+    </div>
+)
 
 export const CounterItem = React.memo(CounterItemComponent)

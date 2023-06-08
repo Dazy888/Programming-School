@@ -1,8 +1,6 @@
 import React from "react"
 import { useRouter } from "next/router"
-// Styles
 import styles from "@/styles/Home.module.scss"
-// Components
 import { CounterItem } from "@/components/home/header/CounterItem"
 import { GreyText } from "@/components/home/header/GreyText"
 import { Number } from "@/components/home/header/Number"

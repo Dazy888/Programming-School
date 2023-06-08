@@ -1,37 +1,22 @@
-import React, { useEffect, useState } from "react"
-// Styles
+import React from "react"
 import styles from '@/styles/Course.module.scss'
-// Swiper
+import { SliderProps } from "@/models/course"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { ReviewsSlide } from "@/components/courses/course/sections/employment/ReviewsSlide"
-// Model
-import { SliderProps } from "@/models/course"
 
 const ReviewsComponent: React.FC<SliderProps> = ({ isSlider }) => {
-    const [slidesPerView, setSlidesPerView] = useState(2.7)
-
-    const slidesPerViewListener = () => {
-        if (window.innerWidth <= 1160) {
-            setSlidesPerView(2)
-        } else if (window.innerWidth <= 1300) {
-            setSlidesPerView(2.3)
-        } else if (window.innerWidth <= 1440) {
-            setSlidesPerView(2.6)
-        } else {
-            setSlidesPerView(2.9)
-        }
+    const breakpoints = {
+        0: { slidesPerView: 2 },
+        1160: { slidesPerView: 2.3 },
+        1300: { slidesPerView: 2.6 },
+        1440: { slidesPerView: 2.9 }
     }
-
-    useEffect(() => {
-        slidesPerViewListener()
-        window.onresize = slidesPerViewListener
-    }, [])
 
     return(
         <div className={`${styles.reviews} mt-16`}>
             <h1 className={'text-3xl font-bold mb-9'}>Feedback from employers</h1>
             {isSlider
-                ?   <Swiper slidesPerView={slidesPerView}>
+                ?   <Swiper breakpoints={breakpoints}>
                         <SwiperSlide>
                             <ReviewsSlide imgSrc={'/courses/course/reviews/yulia.png'} name={'Yulia Iliaeva'} profession={'Development director Team for Dream'} text={'Candidates are always distinguished by their high motivation, so we are happy to invite them for internships and job offers. For several times already, we have accepted participants in the course "Profession Event Manager" for Junior positions'}/>
                         </SwiperSlide>

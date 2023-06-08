@@ -48,7 +48,7 @@ const ProgramItemComponent: React.FC<Props> = ({ title, number, listItems, text,
                     <>
                         {subtitle && <p className={'text-lg mb-7 w-9/12'}>{subtitle}</p>}
                         <ul className={'pl-5'}>
-                            {...listItems.map((text, key) => <li className={'text-lg pl-5 mb-7 relative'} key={key}>{text}</li>)}
+                            {listItems.map((text, key) => <li className={'text-lg pl-5 mb-7 relative'} key={key}>{text}</li>)}
                         </ul>
                     </>
                 }

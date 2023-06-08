@@ -20,7 +20,7 @@ const customStyles = {
         borderRadius: '20px',
         overflow: 'auto'
     },
-};
+}
 
 const TeacherComponent: React.FC<Props> = ({ additionalInf, fullName, text, imgSrc }) => {
     const [modalIsOpen, setIsOpen] = useState(false)

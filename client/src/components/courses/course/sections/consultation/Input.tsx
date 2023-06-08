@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
-// Styles
 import styles from '@/styles/Course.module.scss'
-// Models
 import { UseFormRegister } from "react-hook-form"
 import { CourseForm } from "@/models/course"
-// Phone Mask
 import IMask from "imask"
 
 interface Props {

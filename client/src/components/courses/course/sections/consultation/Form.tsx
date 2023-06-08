@@ -1,14 +1,10 @@
 import React, { useState } from "react"
 import Image from "next/image"
-// Styles
 import styles from "@/styles/Course.module.scss"
-// Components
+import { SubmitHandler, useForm } from "react-hook-form"
+import { CourseForm } from "@/models/course"
 import { Input } from "@/components/courses/course/sections/consultation/Input"
 import { CountriesListItem } from "@/components/courses/course/sections/consultation/CountriesListItem"
-// Form
-import { SubmitHandler, useForm } from "react-hook-form"
-// Model
-import { CourseForm } from "@/models/course"
 
 const FormComponent = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<CourseForm>({ mode: 'onChange' })

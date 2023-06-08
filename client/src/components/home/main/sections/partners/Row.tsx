@@ -8,15 +8,10 @@ interface Props {
     borderNone?: boolean
 }
 
-const RowComponent: React.FC<Props> = ({ imgAlts, imgPaths, borderNone = false }) => {
-    return(
-        <div className={`${styles.row} ${borderNone ? 'border-none' : ''} flex`}>
-            <RowItem imgPath={imgPaths[0]} imgAlt={imgAlts[0]}/>
-            <RowItem imgPath={imgPaths[1]} imgAlt={imgAlts[1]}/>
-            <RowItem imgPath={imgPaths[2]} imgAlt={imgAlts[2]}/>
-            <RowItem imgPath={imgPaths[3]} imgAlt={imgAlts[3]}/>
-        </div>
-    )
-}
+const RowComponent: React.FC<Props> = ({ imgAlts, imgPaths, borderNone = false }) => (
+    <div className={`${styles.row} ${borderNone ? 'border-none' : ''} flex`}>
+        {imgAlts.map((value, index) => <RowItem imgPath={imgPaths[index]} imgAlt={value}/>)}
+    </div>
+)
 
 export const Row = React.memo(RowComponent)

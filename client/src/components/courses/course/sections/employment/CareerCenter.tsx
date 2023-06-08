@@ -1,38 +1,23 @@
-import React, { useEffect, useState } from "react"
-// Styles
+import React from "react"
 import styles from "@/styles/Course.module.scss"
-// Slider
-import { Swiper, SwiperSlide } from "swiper/react"
-import { CareerCenterSlide } from "@/components/courses/course/sections/employment/CareerCenterSlide"
-import 'swiper/css'
-// Model
 import { SliderProps } from "@/models/course"
+import { CareerCenterSlide } from "@/components/courses/course/sections/employment/CareerCenterSlide"
+import { Swiper, SwiperSlide } from "swiper/react"
+import 'swiper/css'
 
 const CareerCenterComponent: React.FC<SliderProps> = ({ isSlider }) => {
-    const [slidesPerView, setSlidesPerView] = useState(3.9)
-
-    const slidesPerViewListener = () => {
-        if (window.innerWidth <= 1150) {
-            setSlidesPerView(2.7)
-        } else if (window.innerWidth <= 1300) {
-            setSlidesPerView(3)
-        } else if (window.innerWidth <= 1440) {
-            setSlidesPerView(3.5)
-        } else {
-            setSlidesPerView(3.9)
-        }
+    const breakpoints = {
+        0: { slidesPerView: 2.7 },
+        1150: { slidesPerView: 3 },
+        1300: { slidesPerView: 3.5 },
+        1440: { slidesPerView: 3.9 }
     }
-
-    useEffect(() => {
-        slidesPerViewListener()
-        window.onresize = slidesPerViewListener
-    }, [])
 
     return(
         <div className={`${styles['career-center']} mt-24 mb-16 w-full`}>
             <h1 className={'text-3xl font-bold mb-10'}>How the Career Center can help you:</h1>
             {isSlider
-                ?   <Swiper slidesPerView={slidesPerView}>
+                ?   <Swiper breakpoints={breakpoints}>
                         <SwiperSlide>
                             <CareerCenterSlide margin={styles['first-slide']} number={1} hiddenText={'We will hold an online meeting where we will evaluate your strengths, skills and professional experience. We will help you create a profile on job sites and develop an attractive resume that will definitely impress employers'} title={'CV'} subtitle={'We present you to employers from a profitable side'}/>
                         </SwiperSlide>

@@ -1,18 +1,16 @@
 import React from "react"
 import type { AppProps } from 'next/app'
 import { Provider } from "react-redux"
-// Styles
+import { store } from "@/store/store"
+import { Analytics } from '@vercel/analytics/react'
 import '@/styles/reset.scss'
 import '@/styles/main.scss'
-// Store
-import { store } from "@/store/store"
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => {
-  return (
-      <Provider store={store}>
+const App: React.FC<AppProps> = ({ Component, pageProps }) => (
+    <Provider store={store}>
         <Component {...pageProps} />
-      </Provider>
-  )
-}
+        <Analytics />
+    </Provider>
+)
 
 export default React.memo(App)

@@ -1,25 +1,20 @@
 import React from "react"
 import Head from "next/head"
-// Styles
 import styles from '@/styles/Home.module.scss'
-// Layout
-import { PageFrame } from "@/layouts/PageFrame"
-// Components
+import { MainLayout } from "@/layouts/MainLayout"
 import { Main } from "@/components/home/main/Main"
 import { Header } from "@/components/home/header/Header"
 
-const Index = () => {
-    return (
-        <PageFrame>
-            <Head>
-                <title>Home</title>
-            </Head>
-            <div id={styles.home}>
-                <Header/>
-                <Main/>
-            </div>
-        </PageFrame>
-    )
-}
+const Home = () => (
+    <MainLayout>
+        <Head>
+            <title>Home</title>
+        </Head>
+        <div id={styles.home}>
+            <Header/>
+            <Main/>
+        </div>
+    </MainLayout>
+)
 
-export default React.memo(Index)
+export default React.memo(Home)
