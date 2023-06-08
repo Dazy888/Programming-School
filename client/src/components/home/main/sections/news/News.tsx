@@ -8,8 +8,10 @@ import { TitleText } from "@/components/common/TitleText"
 import { Subtitle } from "@/components/home/main/Subtitle"
 // Form
 import { SubmitHandler, useForm } from "react-hook-form"
-// Model
-import { HomeForm } from "@/models/home"
+
+interface HomeForm {
+    email: string
+}
 
 const NewsComponent = () => {
     const { register, reset, handleSubmit, formState: { errors } } = useForm<HomeForm>({ mode: 'onChange' })

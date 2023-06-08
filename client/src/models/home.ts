@@ -3,7 +3,3 @@ export interface TrainingProgramItem {
     text: string
     rightLinePosition: boolean
 }
-
-export interface HomeForm {
-    email: string
-}

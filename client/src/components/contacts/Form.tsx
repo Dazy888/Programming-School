@@ -3,9 +3,15 @@ import React, { useEffect, useRef } from "react"
 import { ValidatedInput } from "@/components/contacts/ValidatedInput"
 // Form
 import { SubmitHandler, useForm,} from "react-hook-form"
-import { ContactsForm } from "@/models/contacts"
 // Phone Mask
 import IMask from "imask"
+
+interface ContactsForm {
+    name: string
+    reason: string
+    phone: string
+    description: string
+}
 
 const FormComponent = () => {
     const phoneRef: any = useRef()

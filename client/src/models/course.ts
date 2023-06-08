@@ -18,17 +18,6 @@ export interface IListItemText {
     text: string
 }
 
-interface IHeader {
-    text: string
-    features: IListItemText[]
-    imgSrc: string
-}
-
-interface IMarket {
-    titleText: string
-    list: IListItemText[]
-}
-
 export interface IForWho {
     imgSrc: string
     subtitle: string
@@ -62,26 +51,11 @@ export interface IProgramItem {
     subtitle?: string
 }
 
-interface IProgram {
-    title: {
-        text: string
-        counts: ICount[]
-    }
-    programItems: IProgramItem[]
-}
-
 export interface ITeacher {
     imgSrc: string
     fullName: string
     text: string
     additionalInfo?: string[]
-}
-
-export interface ICV {
-    salary: string
-    skills: string[]
-    projects: string[]
-    tools: string[]
 }
 
 export interface ITerm {
@@ -101,14 +75,32 @@ export interface ICourse {
     preview: IPreview
     course: {
         logoSrc: string
-        header: IHeader
-        market: IMarket
+        header: {
+            text: string
+            features: IListItemText[]
+            imgSrc: string
+        }
+        market: {
+            titleText: string
+            list: IListItemText[]
+        }
         for_who: IForWho[]
         skills: ISkill[]
-        program: IProgram
+        program: {
+            title: {
+                text: string
+                counts: ICount[]
+            }
+            programItems: IProgramItem[]
+        }
         projects: IProject[]
         teachers: ITeacher[]
-        cv: ICV
+        cv: {
+            salary: string
+            skills: string[]
+            projects: string[]
+            tools: string[]
+        }
         questions: IQuestion[]
     }
 }
