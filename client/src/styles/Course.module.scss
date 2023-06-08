@@ -176,113 +176,111 @@
       background: #272727;
     }
 
-    #skills {
-      .content {
-        &[course=fullstack-python] {
-          div {
-            border: 3px solid $fullstack-python-color;
-          }
-        }
-
-        &[course=web] {
-          div {
-            border: 3px solid $web-color;
-          }
-        }
-
-        &[course=fullstack-php] {
-          div {
-            border: 3px solid $fullstack-php-color;
-          }
-        }
-
-        &[course=frontend] {
-          div {
-            border: 3px solid $frontend-color;
-          }
-        }
-
-        &[course=frontend-pro] {
-          div {
-            border: 3px solid $frontend-pro-color;
-          }
-        }
-
-        &[course=fullstack-js] {
-          div {
-            border: 3px solid $fullstack-js-color;
-          }
-        }
-
-        &[course=php-pro] {
-          div {
-            border: 3px solid $php-pro-color;
-          }
-        }
-
-        &[course=c-plus-plus] {
-          div {
-            border: 3px solid $c-plus-plus-color;
-          }
-        }
-
-        &[course=android] {
-          div {
-            border: 3px solid $android-color;
-          }
-        }
-
-        &[course=ios] {
-          div {
-            border: 3px solid $ios-color;
-          }
-        }
-
-        &[course=mobile] {
-          div {
-            border: 3px solid $mobile-color;
-          }
-        }
-
-        &[course=flutter] {
-          div {
-            border: 3px solid $flutter-color;
-          }
-        }
-
-        &[course=java] {
-          div {
-            border: 3px solid $java-color;
-          }
-        }
-
-        &[course=java-pro] {
-          div {
-            border: 3px solid $java-pro-color;
-          }
-        }
-
-        &[course=cybersecurity] {
-          div {
-            border: 3px solid $cyber-security-color;
-          }
-        }
-
-        &[course=devops] {
-          div {
-            border: 3px solid $devops-color;
-          }
-        }
-
-        &[course=devops-pro] {
-          div {
-            border: 3px solid $devops-pro-color;
-          }
-        }
-
+    #skills .content {
+      &[course=fullstack-python] {
         div {
-          border: 3px solid $python-color;
+          border: 3px solid $fullstack-python-color;
         }
+      }
+
+      &[course=web] {
+        div {
+          border: 3px solid $web-color;
+        }
+      }
+
+      &[course=fullstack-php] {
+        div {
+          border: 3px solid $fullstack-php-color;
+        }
+      }
+
+      &[course=frontend] {
+        div {
+          border: 3px solid $frontend-color;
+        }
+      }
+
+      &[course=frontend-pro] {
+        div {
+          border: 3px solid $frontend-pro-color;
+        }
+      }
+
+      &[course=fullstack-js] {
+        div {
+          border: 3px solid $fullstack-js-color;
+        }
+      }
+
+      &[course=php-pro] {
+        div {
+          border: 3px solid $php-pro-color;
+        }
+      }
+
+      &[course=c-plus-plus] {
+        div {
+          border: 3px solid $c-plus-plus-color;
+        }
+      }
+
+      &[course=android] {
+        div {
+          border: 3px solid $android-color;
+        }
+      }
+
+      &[course=ios] {
+        div {
+          border: 3px solid $ios-color;
+        }
+      }
+
+      &[course=mobile] {
+        div {
+          border: 3px solid $mobile-color;
+        }
+      }
+
+      &[course=flutter] {
+        div {
+          border: 3px solid $flutter-color;
+        }
+      }
+
+      &[course=java] {
+        div {
+          border: 3px solid $java-color;
+        }
+      }
+
+      &[course=java-pro] {
+        div {
+          border: 3px solid $java-pro-color;
+        }
+      }
+
+      &[course=cybersecurity] {
+        div {
+          border: 3px solid $cyber-security-color;
+        }
+      }
+
+      &[course=devops] {
+        div {
+          border: 3px solid $devops-color;
+        }
+      }
+
+      &[course=devops-pro] {
+        div {
+          border: 3px solid $devops-pro-color;
+        }
+      }
+
+      div {
+        border: 3px solid $python-color;
       }
     }
 
@@ -507,19 +505,15 @@
       &[course=fullstack-python] {
         border: 3px solid $fullstack-python-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $fullstack-python-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $fullstack-python-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $fullstack-python-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $fullstack-python-color;
 
-            &:last-child {
-              border-bottom: 2px solid $fullstack-python-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $fullstack-python-color;
           }
         }
       }
@@ -527,19 +521,15 @@
       &[course=web] {
         border: 3px solid $web-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $web-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $web-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $web-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $web-color;
 
-            &:last-child {
-              border-bottom: 2px solid $web-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $web-color;
           }
         }
       }
@@ -547,19 +537,15 @@
       &[course=fullstack-php] {
         border: 3px solid $fullstack-php-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $fullstack-php-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $fullstack-php-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $fullstack-php-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $fullstack-php-color;
 
-            &:last-child {
-              border-bottom: 2px solid $fullstack-php-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $fullstack-php-color;
           }
         }
       }
@@ -567,19 +553,15 @@
       &[course=frontend] {
         border: 3px solid $frontend-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $frontend-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $frontend-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $frontend-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $frontend-color;
 
-            &:last-child {
-              border-bottom: 2px solid $frontend-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $frontend-color;
           }
         }
       }
@@ -587,19 +569,15 @@
       &[course=frontend-pro] {
         border: 3px solid $frontend-pro-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $frontend-pro-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $frontend-pro-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $frontend-pro-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $frontend-pro-color;
 
-            &:last-child {
-              border-bottom: 2px solid $frontend-pro-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $frontend-pro-color;
           }
         }
       }
@@ -607,19 +585,15 @@
       &[course=fullstack-js] {
         border: 3px solid $fullstack-js-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $fullstack-js-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $fullstack-js-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $fullstack-js-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $fullstack-js-color;
 
-            &:last-child {
-              border-bottom: 2px solid $fullstack-js-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $fullstack-js-color;
           }
         }
       }
@@ -627,19 +601,15 @@
       &[course=php-pro] {
         border: 3px solid $php-pro-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $php-pro-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $php-pro-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $php-pro-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $php-pro-color;
 
-            &:last-child {
-              border-bottom: 2px solid $php-pro-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $php-pro-color;
           }
         }
       }
@@ -647,19 +617,15 @@
       &[course=c-plus-plus] {
         border: 3px solid $c-plus-plus-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $c-plus-plus-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $c-plus-plus-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $c-plus-plus-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $c-plus-plus-color;
 
-            &:last-child {
-              border-bottom: 2px solid $c-plus-plus-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $c-plus-plus-color;
           }
         }
       }
@@ -667,19 +633,15 @@
       &[course=android] {
         border: 3px solid $android-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $android-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $android-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $android-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $android-color;
 
-            &:last-child {
-              border-bottom: 2px solid $android-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $android-color;
           }
         }
       }
@@ -687,19 +649,15 @@
       &[course=ios] {
         border: 3px solid $ios-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $ios-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $ios-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $ios-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $ios-color;
 
-            &:last-child {
-              border-bottom: 2px solid $ios-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $ios-color;
           }
         }
       }
@@ -707,19 +665,15 @@
       &[course=mobile] {
         border: 3px solid $mobile-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $mobile-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $mobile-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $mobile-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $mobile-color;
 
-            &:last-child {
-              border-bottom: 2px solid $mobile-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $mobile-color;
           }
         }
       }
@@ -727,19 +681,15 @@
       &[course=flutter] {
         border: 3px solid $flutter-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $flutter-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $flutter-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $flutter-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $flutter-color;
 
-            &:last-child {
-              border-bottom: 2px solid $flutter-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $flutter-color;
           }
         }
       }
@@ -747,19 +697,15 @@
       &[course=java] {
         border: 3px solid $java-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $java-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $java-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $java-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $java-color;
 
-            &:last-child {
-              border-bottom: 2px solid $java-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $java-color;
           }
         }
       }
@@ -767,19 +713,15 @@
       &[course=java-pro] {
         border: 3px solid $java-pro-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $java-pro-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $java-pro-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $java-pro-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $java-pro-color;
 
-            &:last-child {
-              border-bottom: 2px solid $java-pro-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $java-pro-color;
           }
         }
       }
@@ -787,19 +729,15 @@
       &[course=cybersecurity] {
         border: 3px solid $cyber-security-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $cyber-security-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $cyber-security-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $cyber-security-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $cyber-security-color;
 
-            &:last-child {
-              border-bottom: 2px solid $cyber-security-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $cyber-security-color;
           }
         }
       }
@@ -807,19 +745,15 @@
       &[course=devops] {
         border: 3px solid $devops-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $devops-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $devops-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $devops-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $devops-color;
 
-            &:last-child {
-              border-bottom: 2px solid $devops-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $devops-color;
           }
         }
       }
@@ -827,19 +761,15 @@
       &[course=devops-pro] {
         border: 3px solid $devops-pro-color;
 
-        .rectangle {
-          div {
-            border-bottom: 65px solid $devops-pro-color;
-          }
+        .rectangle div {
+          border-bottom: 65px solid $devops-pro-color;
         }
 
-        .program__content {
-          .program__content-item {
-            border-top: 2px solid $devops-pro-color;
+        .program__content .program__content-item {
+          border-top: 2px solid $devops-pro-color;
 
-            &:last-child {
-              border-bottom: 2px solid $devops-pro-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $devops-pro-color;
           }
         }
       }
@@ -925,182 +855,144 @@
         }
       }
 
-      .title {
-        .title__count-item {
-          div {
-            background: white;
-          }
-        }
+      .title .title__count-item div {
+        background: white;
       }
 
       .content {
-        &[course=fullstack-python] {
-          .content__item {
-            border-top: 2px solid $fullstack-python-color;
+        &[course=fullstack-python] .content__item {
+          border-top: 2px solid $fullstack-python-color;
 
-            &:last-child {
-              border-bottom: 2px solid $fullstack-python-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $fullstack-python-color;
           }
         }
 
-        &[course=web] {
-          .content__item {
-            border-top: 2px solid $web-color;
+        &[course=web] .content__item {
+          border-top: 2px solid $web-color;
 
-            &:last-child {
-              border-bottom: 2px solid $web-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $web-color;
           }
         }
 
-        &[course=fullstack-php] {
-          .content__item {
-            border-top: 2px solid $fullstack-php-color;
+        &[course=fullstack-php] .content__item {
+          border-top: 2px solid $fullstack-php-color;
 
-            &:last-child {
-              border-bottom: 2px solid $fullstack-php-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $fullstack-php-color;
           }
         }
 
-        &[course=frontend] {
-          .content__item {
-            border-top: 2px solid $frontend-color;
+        &[course=frontend] .content__item {
+          border-top: 2px solid $frontend-color;
 
-            &:last-child {
-              border-bottom: 2px solid $frontend-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $frontend-color;
           }
         }
 
-        &[course=frontend-pro] {
-          .content__item {
-            border-top: 2px solid $frontend-pro-color;
+        &[course=frontend-pro] .content__item {
+          border-top: 2px solid $frontend-pro-color;
 
-            &:last-child {
-              border-bottom: 2px solid $frontend-pro-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $frontend-pro-color;
           }
         }
 
-        &[course=fullstack-js] {
-          .content__item {
-            border-top: 2px solid $fullstack-js-color;
+        &[course=fullstack-js] .content__item {
+          border-top: 2px solid $fullstack-js-color;
 
-            &:last-child {
-              border-bottom: 2px solid $fullstack-js-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $fullstack-js-color;
           }
         }
 
-        &[course=php-pro] {
-          .content__item {
-            border-top: 2px solid $php-pro-color;
+        &[course=php-pro] .content__item {
+          border-top: 2px solid $php-pro-color;
 
-            &:last-child {
-              border-bottom: 2px solid $php-pro-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $php-pro-color;
           }
         }
 
-        &[course=c-plus-plus] {
-          .content__item {
-            border-top: 2px solid $c-plus-plus-color;
+        &[course=c-plus-plus] .content__item {
+          border-top: 2px solid $c-plus-plus-color;
 
-            &:last-child {
-              border-bottom: 2px solid $c-plus-plus-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $c-plus-plus-color;
           }
         }
 
-        &[course=android] {
-          .content__item {
-            border-top: 2px solid $android-color;
+        &[course=android] .content__item {
+          border-top: 2px solid $android-color;
 
-            &:last-child {
-              border-bottom: 2px solid $android-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $android-color;
           }
         }
 
-        &[course=ios] {
-          .content__item {
-            border-top: 2px solid $ios-color;
+        &[course=ios] .content__item {
+          border-top: 2px solid $ios-color;
 
-            &:last-child {
-              border-bottom: 2px solid $ios-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $ios-color;
           }
         }
 
-        &[course=mobile] {
-          .content__item {
-            border-top: 2px solid $mobile-color;
+        &[course=mobile] .content__item {
+          border-top: 2px solid $mobile-color;
 
-            &:last-child {
-              border-bottom: 2px solid $mobile-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $mobile-color;
           }
         }
 
-        &[course=flutter] {
-          .content__item {
-            border-top: 2px solid $flutter-color;
+        &[course=flutter] .content__item {
+          border-top: 2px solid $flutter-color;
 
-            &:last-child {
-              border-bottom: 2px solid $flutter-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $flutter-color;
           }
         }
 
-        &[course=java] {
-          .content__item {
-            border-top: 2px solid $java-color;
+        &[course=java] .content__item {
+          border-top: 2px solid $java-color;
 
-            &:last-child {
-              border-bottom: 2px solid $java-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $java-color;
           }
         }
 
-        &[course=java-pro] {
-          .content__item {
-            border-top: 2px solid $java-pro-color;
+        &[course=java-pro] .content__item {
+          border-top: 2px solid $java-pro-color;
 
-            &:last-child {
-              border-bottom: 2px solid $java-pro-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $java-pro-color;
           }
         }
 
-        &[course=cybersecurity] {
-          .content__item {
-            border-top: 2px solid $cyber-security-color;
+        &[course=cybersecurity] .content__item {
+          border-top: 2px solid $cyber-security-color;
 
-            &:last-child {
-              border-bottom: 2px solid $cyber-security-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $cyber-security-color;
           }
         }
 
-        &[course=devops] {
-          .content__item {
-            border-top: 2px solid $devops-color;
+        &[course=devops] .content__item {
+          border-top: 2px solid $devops-color;
 
-            &:last-child {
-              border-bottom: 2px solid $devops-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $devops-color;
           }
         }
 
-        &[course=devops-pro] {
-          .content__item {
-            border-top: 2px solid $devops-pro-color;
+        &[course=devops-pro] .content__item {
+          border-top: 2px solid $devops-pro-color;
 
-            &:last-child {
-              border-bottom: 2px solid $devops-pro-color;
-            }
+          &:last-child {
+            border-bottom: 2px solid $devops-pro-color;
           }
         }
 
@@ -1116,11 +1008,9 @@
               transform: rotate(45deg);
             }
 
-            &:hover {
-              button {
-                color: black;
-                background: white;
-              }
+            &:hover button {
+              color: black;
+              background: white;
             }
 
             button {
@@ -1174,10 +1064,8 @@
       .extended {
         cursor: pointer;
 
-        &:hover {
-          i {
-            opacity: 0.4;
-          }
+        &:hover i {
+          opacity: 0.4;
         }
       }
 
@@ -1198,112 +1086,102 @@
       }
     }
 
-    #cv {
-      .content {
-        background: #272727;
+    #cv .content {
+      background: #272727;
 
-        .content__skills {
-          ul {
-            column-count: 2;
-          }
-
-          li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-          }
-
-          li {
-            padding-left: 15px;
-            max-width: 375px;
-          }
+      .content__skills {
+        ul {
+          column-count: 2;
         }
 
-        .content__skills, .content__projects {
-          li {
-            margin-bottom: 8px;
+        li:before {
+          content: "•";
+          position: absolute;
+          left: 0;
+        }
 
-            &:last-child {
-              margin-bottom: 0;
-            }
+        li {
+          padding-left: 15px;
+          max-width: 375px;
+        }
+      }
+
+      .content__skills, .content__projects {
+        li {
+          margin-bottom: 8px;
+
+          &:last-child {
+            margin-bottom: 0;
           }
         }
+      }
 
-        .content__tool {
-          background: white;
-        }
+      .content__tool {
+        background: white;
       }
     }
 
-    #questions {
-      .content {
-        width: 700px;
+    #questions .content {
+      width: 700px;
 
-        .content__question {
-          background: #272727;
+      .content__question {
+        background: #272727;
 
-          .content__title {
-            &:hover {
-              button {
-                background: white;
-                color: black;
+        .content__title:hover button {
+          background: white;
+          color: black;
+        }
+
+        &:first-child {
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+        }
+
+        button {
+          background: #141414;
+          transition: 0.2s;
+        }
+
+        .show-text {
+          max-height: 1000px !important;
+          padding: 20px;
+          margin: 0 2px;
+        }
+
+        .content__text {
+          background: #141414;
+          max-height: 0;
+          overflow: hidden;
+          transition: 0.4s;
+
+          p:not(:last-child) {
+            margin-bottom: 15px;
+          }
+
+          li:not(:last-child) {
+            margin-bottom: 15px;
+          }
+
+          ol {
+            margin-top: 10px;
+
+            li {
+              margin-bottom: 2px !important;
+
+              &:before {
+                content: "•";
+                margin-right: 5px;
               }
             }
           }
 
-          &:first-child {
-            border-top-left-radius: 1rem;
-            border-top-right-radius: 1rem;
-          }
+          .simple-list li {
+            position: relative;
 
-          button {
-            background: #141414;
-            transition: 0.2s;
-          }
-
-          .show-text {
-            max-height: 1000px !important;
-            padding: 20px;
-            margin: 0 2px;
-          }
-
-          .content__text {
-            background: #141414;
-            max-height: 0;
-            overflow: hidden;
-            transition: 0.4s;
-
-            p:not(:last-child) {
-              margin-bottom: 15px;
-            }
-
-            li:not(:last-child) {
-              margin-bottom: 15px;
-            }
-
-            ol {
-              margin-top: 10px;
-
-              li {
-                margin-bottom: 2px !important;
-
-                &:before {
-                  content: "•";
-                  margin-right: 5px;
-                }
-              }
-            }
-
-            .simple-list {
-              li {
-                position: relative;
-
-                &:before {
-                  content: "•";
-                  position: absolute;
-                  left: 0;
-                }
-              }
+            &:before {
+              content: "•";
+              position: absolute;
+              left: 0;
             }
           }
         }
@@ -1452,10 +1330,8 @@
               margin-bottom: 0;
             }
 
-            div {
-              p {
-                max-width: 100px;
-              }
+            div p {
+              max-width: 100px;
             }
           }
         }
@@ -1469,171 +1345,156 @@
 }
 
 @media (max-width: 1440px) {
-  #course {
-    .container {
-      width: 100%;
+  #course .container {
+    width: 100%;
 
-      #header {
-        .header__title {
-          padding: 40px 140px;
+    #header {
+      .header__title {
+        padding: 40px 140px;
 
-          h1 {
-            font-size: 35px;
-          }
-
-          p {
-            font-size: 16px;
-            line-height: 24px;
-          }
-
-          button {
-            height: 45px;
-          }
-
-          img {
-            width: 350px;
-            height: 350px;
-          }
-        }
-
-        .header__features {
-          &[columns='5'] {
-            grid-template-columns: repeat(4, auto);
-          }
-
-          h3 {
-            font-size: 18px;
-          }
-
-          p {
-            font-size: 14px;
-            line-height: 20px;
-          }
-
-          i {
-            font-size: 7px;
-          }
-        }
-      }
-
-      #for-who {
-        .content {
-          grid-template-columns: repeat(2, auto);
-        }
-      }
-
-      #employment {
-        .header {
-          grid-template-columns: repeat(1, auto);
-          text-align: center;
-
-          .header__animation {
-            height: 500px;
-            grid-column: 1/-1;
-          }
-
-          .header__title {
-            margin: auto;
-          }
-        }
-
-        .career-center {
-          h1 {
-            margin-left: 0;
-            text-align: center;
-          }
-        }
-
-        .guarantees {
-          grid-template-columns: repeat(1, auto);
-
-          .guarantees__stats {
-            width: 90%;
-            grid-row: 2/2;
-            display: flex;
-            justify-content: space-between;
-            margin: 0 auto 30px;
-
-            .guarantees__stats-title {
-              margin: 0;
-            }
-
-            .guarantees__stats-item {
-              max-width: 280px;
-            }
-          }
-
-          .guarantees__text {
-            h1 {
-              text-align: center;
-            }
-
-          }
-        }
-
-        .reviews {
-          h1 {
-            text-align: center;
-            margin-left: 0;
-          }
-        }
-      }
-
-      #program {
-        .title {
-          .title__subtitle {
-            width: 360px;
-          }
-        }
-
-        .disclaimer {
-           width: 500px;
-        }
-      }
-
-      #projects {
         h1 {
-          text-align: center;
-          margin-bottom: 30px;
+          font-size: 35px;
         }
 
-        .slider {
-          width: fit-content;
-          grid-template-columns: repeat(1, auto);
-          margin: auto;
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
 
-          img {
-            margin: auto;
-          }
+        button {
+          height: 45px;
+        }
 
-          .slider__content {
-            margin: auto;
-            text-align: center;
-
-            .slider__controllers {
-              margin: 30px auto auto;
-            }
-          }
+        img {
+          width: 350px;
+          height: 350px;
         }
       }
 
-      #cv {
-        .content__tools, .content__skills, .content__projects {
-          width: fit-content;
+      .header__features {
+        &[columns='5'] {
+          grid-template-columns: repeat(4, auto);
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        i {
+          font-size: 7px;
+        }
+      }
+    }
+
+    #for-who .content {
+      grid-template-columns: repeat(2, auto);
+    }
+
+    #employment {
+      .header {
+        grid-template-columns: repeat(1, auto);
+        text-align: center;
+
+        .header__animation {
+          height: 500px;
+          grid-column: 1/-1;
+        }
+
+        .header__title {
           margin: auto;
-          flex-direction: column;
+        }
+      }
 
-          h3 {
-            margin: auto auto 20px;
-            text-align: center;
+      .career-center h1 {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      .guarantees {
+        grid-template-columns: repeat(1, auto);
+
+        .guarantees__stats {
+          width: 90%;
+          grid-row: 2/2;
+          display: flex;
+          justify-content: space-between;
+          margin: 0 auto 30px;
+
+          .guarantees__stats-title {
+            margin: 0;
+          }
+
+          .guarantees__stats-item {
+            max-width: 280px;
           }
         }
 
-        .content {
-          .content__skills {
-            margin: 60px auto;
+        .guarantees__text h1 {
+          text-align: center;
+        }
+      }
+
+      .reviews h1 {
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+
+    #program {
+      .title .title__subtitle {
+        width: 360px;
+      }
+
+      .disclaimer {
+        width: 500px;
+      }
+    }
+
+    #projects {
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .slider {
+        width: fit-content;
+        grid-template-columns: repeat(1, auto);
+        margin: auto;
+
+        img {
+          margin: auto;
+        }
+
+        .slider__content {
+          margin: auto;
+          text-align: center;
+
+          .slider__controllers {
+            margin: 30px auto auto;
           }
         }
+      }
+    }
+
+    #cv {
+      .content__tools, .content__skills, .content__projects {
+        width: fit-content;
+        margin: auto;
+        flex-direction: column;
+
+        h3 {
+          margin: auto auto 20px;
+          text-align: center;
+        }
+      }
+
+      .content .content__skills {
+        margin: 60px auto;
       }
     }
   }
@@ -1656,11 +1517,7 @@
         }
 
         .header__features {
-          &[columns='4'] {
-            grid-template-columns: repeat(3, auto);
-          }
-
-          &[columns='5'] {
+          &[columns='4'], &[columns='5'] {
             grid-template-columns: repeat(3, auto);
           }
         }
@@ -1674,10 +1531,8 @@
         }
       }
 
-      #skills {
-        .content {
-          grid-template-columns: repeat(2,auto);
-        }
+      #skills .content {
+        grid-template-columns: repeat(2,auto);
       }
 
       #employment {
@@ -1695,19 +1550,15 @@
           }
         }
 
-        .guarantees {
-          .guarantees__stats {
-            width: 100%;
-          }
+        .guarantees .guarantees__stats {
+          width: 100%;
         }
 
-        .reviews {
-          .reviews__slide {
-            margin: 0 auto 30px;
+        .reviews .reviews__slide {
+          margin: 0 auto 30px;
 
-            &:last-child {
-              margin-bottom: 0;
-            }
+          &:last-child {
+            margin-bottom: 0;
           }
         }
       }
@@ -1731,27 +1582,21 @@
           }
         }
 
-        .content {
-          .content__item {
-            .content__title {
-              cursor: none;
-            }
-          }
+        .content .content__item .content__title {
+          cursor: none;
         }
       }
 
-      #projects {
-        .slider__controllers {
-          width: 250px;
+      #projects .slider__controllers {
+        width: 250px;
 
-          .slider__arrow {
-            width: 40px;
-            height: 40px;
-          }
+        .slider__arrow {
+          width: 40px;
+          height: 40px;
+        }
 
-          div:nth-child(2) {
-            font-size: 20px;
-          }
+        div:nth-child(2) {
+          font-size: 20px;
         }
       }
 
@@ -1769,27 +1614,25 @@
       }
     }
 
-    #consultation {
-      .content {
-        grid-template-columns: repeat(1, auto);
+    #consultation .content {
+      grid-template-columns: repeat(1, auto);
 
-        h1 {
-          text-align: center;
-          margin: auto;
-        }
+      h1 {
+        text-align: center;
+        margin: auto;
+      }
 
-        form {
-          max-width: 760px;
-          margin: auto;
-        }
+      form {
+        max-width: 760px;
+        margin: auto;
+      }
 
-        button {
-          width: 100%;
-        }
+      button {
+        width: 100%;
+      }
 
-        .content__agreement {
-          text-align: center;
-        }
+      .content__agreement {
+        text-align: center;
       }
     }
   }
@@ -1813,15 +1656,7 @@
         }
 
         .header__features {
-          &[columns='3'] {
-            grid-template-columns: repeat(2, auto);
-          }
-
-          &[columns='4'] {
-            grid-template-columns: repeat(2, auto);
-          }
-
-          &[columns='5'] {
+          &[columns='3'], &[columns='4'], &[columns='5'] {
             grid-template-columns: repeat(2, auto);
           }
         }
@@ -1882,10 +1717,8 @@
         }
       }
 
-      #skills {
-        .content {
-          grid-template-columns: repeat(1,auto);
-        }
+      #skills .content {
+        grid-template-columns: repeat(1,auto);
       }
 
       #employment {
@@ -2007,10 +1840,8 @@
         }
 
         .guarantees {
-          .guarantees__text {
-            h1 {
-              font-size: 37px;
-            }
+          .guarantees__text h1 {
+            font-size: 37px;
           }
 
           .guarantees__stats {
@@ -2168,20 +1999,16 @@
         }
 
         .content {
-          .content__item {
-            .content__title {
-              font-size: 18px;
+          .content__item .content__title {
+            font-size: 18px;
 
-              h1 {
-                max-width: 250px;
-              }
+            h1 {
+              max-width: 250px;
             }
           }
 
-          .content__item-content {
-            p {
-              width: 95%;
-            }
+          .content__item-content p {
+            width: 95%;
           }
 
           li {
@@ -2202,10 +2029,8 @@
         }
       }
 
-      #projects {
-        img {
-          height: 300px;
-        }
+      #projects img {
+        height: 300px;
       }
 
       #cv {
@@ -2222,23 +2047,17 @@
           }
         }
 
-        .content__tools {
-          div {
-            width: fit-content;
-            flex-wrap: wrap;
-          }
+        .content__tools div {
+          width: fit-content;
+          flex-wrap: wrap;
         }
 
-        .content {
-          .content__skills {
-            ul {
-              column-count: 1;
-              margin: auto;
+        .content .content__skills ul {
+          column-count: 1;
+          margin: auto;
 
-              li {
-                max-width: 100%;
-              }
-            }
+          li {
+            max-width: 100%;
           }
         }
       }
@@ -2251,11 +2070,9 @@
         .content__question {
           margin: auto auto 4px;
 
-          .content__title {
-            h3 {
-              max-width: 280px;
-              font-size: 16px;
-            }
+          .content__title h3 {
+            max-width: 280px;
+            font-size: 16px;
           }
 
           .content__text {
@@ -2282,10 +2099,8 @@
             grid-template-columns: repeat(1, auto);
           }
 
-          .content__phone-number {
-            .content__input {
-              width: 88%;
-            }
+          .content__phone-number .content__input {
+            width: 88%;
           }
         }
       }
@@ -2318,15 +2133,7 @@
         }
 
         .header__features {
-          &[columns='3'] {
-            grid-template-columns: repeat(1, auto);
-          }
-
-          &[columns='4'] {
-            grid-template-columns: repeat(1, auto);
-          }
-
-          &[columns='5'] {
+          &[columns='3'], &[columns='4'], &[columns='5'] {
             grid-template-columns: repeat(1, auto);
           }
         }
@@ -2351,20 +2158,16 @@
           line-height: 28px;
         }
 
-        .list {
-          p {
-            font-size: 16px;
-            line-height: 24px;
-            margin-top: 8px;
-          }
+        .list p {
+          font-size: 16px;
+          line-height: 24px;
+          margin-top: 8px;
         }
       }
 
-      #for-who {
-        h1 {
-          font-size: 36px;
-          line-height: 50px;
-        }
+      #for-who h1 {
+        font-size: 36px;
+        line-height: 50px;
       }
 
       #employment {
@@ -2584,25 +2387,19 @@
               font-size: 16px;
             }
 
-            .title__counts {
-              .title__count-item:first-child {
-                margin-bottom: 10px;
-              }
+            .title__counts .title__count-item:first-child {
+              margin-bottom: 10px;
             }
           }
         }
       }
 
-      #projects {
-        img {
-          height: 250px;
-        }
+      #projects img {
+        height: 250px;
       }
 
-      #cv {
-        h1 {
-          font-size: 32px;
-        }
+      #cv h1 {
+        font-size: 32px;
       }
 
       #questions {
@@ -2610,12 +2407,8 @@
           width: 350px;
         }
 
-        .content__question {
-          .content__title {
-            h3 {
-              max-width: 260px;
-            }
-          }
+        .content__question .content__title h3 {
+          max-width: 260px;
         }
       }
     }
@@ -2637,10 +2430,8 @@
           transition: 0.2s;
         }
 
-        .content__phone-number {
-          .content__selected-country {
-            height: 45px;
-          }
+        .content__phone-number .content__selected-country {
+          height: 45px;
         }
 
         button {
@@ -2772,24 +2563,22 @@
           }
         }
 
-        .career-center {
-          .career-center__slide {
-            h3 {
+        .career-center .career-center__slide {
+          h3 {
+            font-size: 17px;
+          }
+
+          span {
+            width: 36px;
+            height: 36px;
+
+            i {
               font-size: 17px;
             }
+          }
 
-            span {
-              width: 36px;
-              height: 36px;
-
-              i {
-                font-size: 17px;
-              }
-            }
-
-            p {
-              font-size: 15px;
-            }
+          p {
+            font-size: 15px;
           }
         }
 
@@ -2819,10 +2608,8 @@
               }
             }
 
-            .guarantees__stats-item {
-              h1 {
-                font-size: 26px;
-              }
+            .guarantees__stats-item h1 {
+              font-size: 26px;
             }
           }
         }
@@ -2949,41 +2736,37 @@
               font-size: 15px;
             }
 
-            .title__counts {
-              .title__count-item {
-                width: 170px;
+            .title__counts .title__count-item {
+              width: 170px;
 
-                div {
-                  width: 55px;
-                  height: 35px;
-                  font-size: 14px;
-                }
+              div {
+                width: 55px;
+                height: 35px;
+                font-size: 14px;
+              }
 
-                p {
-                  font-size: 14px;
-                }
+              p {
+                font-size: 14px;
+              }
 
-                &:first-child {
-                  margin-bottom: 10px;
-                }
+              &:first-child {
+                margin-bottom: 10px;
               }
             }
           }
         }
 
         .content {
-          .content__item {
-            .content__title {
-              font-size: 16px;
+          .content__item .content__title {
+            font-size: 16px;
 
-              h1 {
-                max-width: 200px;
-              }
+            h1 {
+              max-width: 200px;
+            }
 
-              button {
-                width: 30px;
-                height: 30px;
-              }
+            button {
+              width: 30px;
+              height: 30px;
             }
           }
 
@@ -3009,16 +2792,12 @@
         }
       }
 
-      #projects {
-        img {
-          height: 220px;
-        }
+      #projects img {
+        height: 220px;
       }
 
-      #cv {
-        h1 {
-          font-size: 27px;
-        }
+      #cv h1 {
+        font-size: 27px;
       }
 
       #questions {
@@ -3026,12 +2805,8 @@
           width: 300px;
         }
 
-        .content__question {
-          .content__title {
-            h3 {
-              max-width: 220px;
-            }
-          }
+        .content__question .content__title h3 {
+          max-width: 220px;
         }
       }
     }

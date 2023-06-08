@@ -24,79 +24,75 @@ $devops-pro-color : #B4DF92;
     .content__column {
       width: 425px;
 
-      &:nth-child(1) {
-        .content__item {
-          &:nth-child(2) {
-            background: $fullstack-python-color;
-          }
+      &:nth-child(1) .content__item {
+        &:nth-child(2) {
+          background: $fullstack-python-color;
+        }
 
-          &:nth-child(3) {
-            background: $web-color;
-          }
+        &:nth-child(3) {
+          background: $web-color;
+        }
 
-          &:nth-child(4) {
-            background: $fullstack-php-color;
-          }
+        &:nth-child(4) {
+          background: $fullstack-php-color;
+        }
 
-          &:nth-child(5) {
-            background: $frontend-color;
-          }
+        &:nth-child(5) {
+          background: $frontend-color;
+        }
 
-          &:nth-child(6) {
-            background: $frontend-pro-color;
-          }
+        &:nth-child(6) {
+          background: $frontend-pro-color;
+        }
 
-          &:nth-child(7) {
-            background: $fullstack-js-color;
-          }
+        &:nth-child(7) {
+          background: $fullstack-js-color;
+        }
 
-          &:nth-child(8) {
-            background: $php-pro-color;
-          }
+        &:nth-child(8) {
+          background: $php-pro-color;
+        }
 
-          &:nth-child(9) {
-            background: $c-plus-plus-color;
-          }
+        &:nth-child(9) {
+          background: $c-plus-plus-color;
         }
       }
 
-      &:nth-child(2) {
-        .content__item {
-          &:nth-child(1) {
-            background: $android-color;
-          }
+      &:nth-child(2) .content__item {
+        &:nth-child(1) {
+          background: $android-color;
+        }
 
-          &:nth-child(2) {
-            background: $ios-color;
-          }
+        &:nth-child(2) {
+          background: $ios-color;
+        }
 
-          &:nth-child(3) {
-            background: $mobile-color;
-          }
+        &:nth-child(3) {
+          background: $mobile-color;
+        }
 
-          &:nth-child(4) {
-            background: $flutter-color;
-          }
+        &:nth-child(4) {
+          background: $flutter-color;
+        }
 
-          &:nth-child(5) {
-            background: $java-color;
-          }
+        &:nth-child(5) {
+          background: $java-color;
+        }
 
-          &:nth-child(6) {
-            background: $java-pro-color;
-          }
+        &:nth-child(6) {
+          background: $java-pro-color;
+        }
 
-          &:nth-child(7) {
-            background: $cyber-security-color;
-          }
+        &:nth-child(7) {
+          background: $cyber-security-color;
+        }
 
-          &:nth-child(8) {
-            background: $devops-color;
-          }
+        &:nth-child(8) {
+          background: $devops-color;
+        }
 
-          &:nth-child(9) {
-            background: $devops-pro-color;
-          }
+        &:nth-child(9) {
+          background: $devops-pro-color;
         }
       }
 
@@ -141,10 +137,8 @@ $devops-pro-color : #B4DF92;
       font-size: 40px;
     }
 
-    .content {
-      .content__column {
-        width: 370px;
-      }
+    .content .content__column {
+      width: 370px;
     }
   }
 }
@@ -155,23 +149,19 @@ $devops-pro-color : #B4DF92;
       font-size: 35px;
     }
 
-    .content {
-      .content__column {
-        width: 320px;
+    .content .content__column {
+      width: 320px;
 
-        .content__item {
-          height: 150px;
+      .content__item {
+        height: 150px;
 
-          div {
-            h2 {
-              font-size: 20px;
-            }
-          }
+        div h2 {
+          font-size: 20px;
+        }
 
-          img {
-            width: 100px;
-            height: 100px;
-          }
+        img {
+          width: 100px;
+          height: 100px;
         }
       }
     }

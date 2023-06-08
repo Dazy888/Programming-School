@@ -87,46 +87,40 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
     .container {
       max-width: 1310px;
 
-      #about-us {
-        .img-block {
-          width: 550px;
-          height: 520px;
-          border: 30px solid #9370db;
+      #about-us .img-block {
+        width: 550px;
+        height: 520px;
+        border: 30px solid #9370db;
 
-          img {
-            bottom: -80px;
-          }
+        img {
+          bottom: -80px;
         }
       }
 
-      #partners {
-        .row {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      #partners .row {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+        &:last-child {
+          border: none;
+        }
+
+        div {
+          border-right: 1px solid rgba(255, 255, 255, 0.3);
 
           &:last-child {
             border: none;
-          }
-
-          div {
-            border-right: 1px solid rgba(255, 255, 255, 0.3);
-
-            &:last-child {
-              border: none;
-            }
           }
         }
       }
 
       #training-program {
         .content__column {
-          &:last-child {
-            .content__item {
-              text-align: left;
+          &:last-child .content__item {
+            text-align: left;
 
-              div {
-                margin-left: 35px;
-                margin-right: 0 !important;
-              }
+            div {
+              margin-left: 35px;
+              margin-right: 0 !important;
             }
           }
 
@@ -169,17 +163,15 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
 
 @media (max-width: 1440px) {
   #home {
-    #header {
-      .booking {
-        height: fit-content;
-        padding: 30px 0;
+    #header .booking {
+      height: fit-content;
+      padding: 30px 0;
 
-        .booking__container {
-          flex-direction: column;
+      .booking__container {
+        flex-direction: column;
 
-          .booking__students-counter {
-            margin: 40px 0;
-          }
+        .booking__students-counter {
+          margin: 40px 0;
         }
       }
     }
@@ -199,13 +191,11 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
           }
         }
 
-        #about-courses {
-          .content {
-            flex-direction: column;
+        #about-courses .content {
+          flex-direction: column;
 
-            div:nth-child(2) {
-              margin: 100px 0;
-            }
+          div:nth-child(2) {
+            margin: 100px 0;
           }
         }
 
@@ -300,17 +290,13 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
         .booking__students-counter {
           width: 290px;
 
-          div {
-            p {
-              font-size: 15px;
-            }
+          div p {
+            font-size: 15px;
           }
         }
 
-        .booking__container {
-          .booking__progress-bar {
-            width: 420px;
-          }
+        .booking__container .booking__progress-bar {
+          width: 420px;
         }
       }
     }
@@ -348,47 +334,39 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
           }
         }
 
-        #about-courses {
-          h1 {
-            font-size: 40px;
-          }
+        #about-courses h1 {
+          font-size: 40px;
         }
 
-        #partners {
-          .row {
-            width: fit-content;
-            display: flex;
-            flex-direction: column;
-            margin: 0 auto 10px auto;
-          }
+        #partners .row {
+          width: fit-content;
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto 10px auto;
         }
 
         #training-program {
-          .content {
-            .content__line {
-              width: 5px;
-            }
+          .content .content__line {
+            width: 5px;
           }
 
-          .content__column {
-            .content__item {
-              width: 210px;
+          .content__column .content__item {
+            width: 210px;
 
-              div {
-                margin-right: 20px;
+            div {
+              margin-right: 20px;
 
-                h4 {
-                  font-size: 10px;
-                }
-
-                p {
-                  font-size: 12px;
-                }
+              h4 {
+                font-size: 10px;
               }
 
-              hr {
-                width: 25px;
+              p {
+                font-size: 12px;
               }
+            }
+
+            hr {
+              width: 25px;
             }
           }
         }
@@ -451,17 +429,13 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
         .booking__students-counter {
           width: 270px;
 
-          div {
-            p {
-              font-size: 14px;
-            }
+          div p {
+            font-size: 14px;
           }
         }
 
-        .booking__container {
-          .booking__progress-bar {
-            width: 370px;
-          }
+        .booking__container .booking__progress-bar {
+          width: 370px;
         }
       }
     }
@@ -515,26 +489,24 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
             height: 1200px;
           }
 
-          .content__column {
-            .content__item {
-              width: 300px;
-              height: fit-content;
+          .content__column .content__item {
+            width: 300px;
+            height: fit-content;
 
-              div {
-                margin-right: 25px;
+            div {
+              margin-right: 25px;
 
-                h4 {
-                  font-size: 14px;
-                }
-
-                p {
-                  font-size: 16px;
-                }
+              h4 {
+                font-size: 14px;
               }
 
-              hr {
-                width: 35px;
+              p {
+                font-size: 16px;
               }
+            }
+
+            hr {
+              width: 35px;
             }
           }
         }
@@ -608,17 +580,13 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
         .booking__students-counter {
           width: 250px;
 
-          div {
-            p {
-              font-size: 13px;
-            }
+          div p {
+            font-size: 13px;
           }
         }
 
-        .booking__container {
-          .booking__progress-bar {
-            width: 310px;
-          }
+        .booking__container .booking__progress-bar {
+          width: 310px;
         }
       }
     }
@@ -682,12 +650,8 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
           }
         }
 
-        #partners {
-          .row {
-            div {
-              width: 300px;
-            }
-          }
+        #partners .row div {
+          width: 300px;
         }
 
         #news {
