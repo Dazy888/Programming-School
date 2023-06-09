@@ -18,7 +18,7 @@ const CVSection: React.FC<Props> = ({ projects, salary, skills, tools, title }) 
         <div className={`${styles.content} mt-14 rounded-xl p-12`}>
             <div className={`${styles['content__title']} flex justify-between items-center mb-12`}>
                 <div className={'flex items-center'}>
-                    <Image width={65} height={64} alt={'Your photo'} src={'/courses/course/cv/avatar.png'} className={'mr-6'}/>
+                    <Image width={65} height={65} alt={'Your photo'} src={'/courses/course/cv/avatar.png'} className={'mr-6'}/>
                     <h2 className={'text-2xl font-medium'}>{title}</h2>
                 </div>
                 <h2 className={'text-2xl font-medium'}>{salary}</h2>

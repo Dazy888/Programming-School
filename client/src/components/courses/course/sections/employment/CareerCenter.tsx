@@ -17,7 +17,7 @@ const CareerCenterComponent: React.FC<SliderProps> = ({ isSlider }) => {
         <div className={`${styles['career-center']} mt-24 mb-16 w-full`}>
             <h1 className={'text-3xl font-bold mb-10'}>How the Career Center can help you:</h1>
             {isSlider
-                ?   <Swiper breakpoints={breakpoints}>
+                ?   <Swiper grabCursor={true} breakpoints={breakpoints}>
                         <SwiperSlide>
                             <CareerCenterSlide margin={styles['first-slide']} number={1} hiddenText={'We will hold an online meeting where we will evaluate your strengths, skills and professional experience. We will help you create a profile on job sites and develop an attractive resume that will definitely impress employers'} title={'CV'} subtitle={'We present you to employers from a profitable side'}/>
                         </SwiperSlide>

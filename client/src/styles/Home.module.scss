@@ -110,6 +110,11 @@ $linearGradientColor : linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%)
           &:last-child {
             border: none;
           }
+
+          img {
+            width: 200px;
+            height: 100px;
+          }
         }
       }
 

@@ -300,6 +300,11 @@
             position: absolute;
           }
 
+          .main {
+            width: 240px;
+            height: 240px;
+          }
+
           .small {
             width: 70px;
             height: 70px;
@@ -1124,6 +1129,18 @@
     #questions .content {
       width: 700px;
 
+      .show-answer {
+        button {
+          transform: rotate(180deg);
+        }
+
+        .content__text  {
+          max-height: 1000px !important;
+          padding: 20px;
+          margin: 0 2px;
+        }
+      }
+
       .content__question {
         background: #272727;
 
@@ -1140,12 +1157,6 @@
         button {
           background: #141414;
           transition: 0.2s;
-        }
-
-        .show-text {
-          max-height: 1000px !important;
-          padding: 20px;
-          margin: 0 2px;
         }
 
         .content__text {
@@ -1290,6 +1301,11 @@
         top: 20px;
         left: 18px;
         transition: 0.2s;
+      }
+
+      img {
+        width: 20px;
+        height: 16px;
       }
 
       .content__phone-number {

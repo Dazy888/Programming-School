@@ -12,7 +12,7 @@ interface Props {
 }
 
 const CareerCenterSlideComponent: React.FC<Props> = ({ number, subtitle, hiddenText, title, bgColor = '', isSlider = true }) => (
-    <div className={`${styles['career-center__slide']} ${bgColor} p-7 cursor-pointer rounded-3xl relative`}>
+    <div className={`${styles['career-center__slide']} ${bgColor} p-7 rounded-3xl relative`}>
         {isSlider
             ?   <>
                 <span className={'w-11 h-11 rounded-full flex justify-center items-center'}>

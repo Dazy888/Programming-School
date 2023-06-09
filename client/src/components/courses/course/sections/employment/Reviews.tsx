@@ -16,7 +16,7 @@ const ReviewsComponent: React.FC<SliderProps> = ({ isSlider }) => {
         <div className={`${styles.reviews} mt-16`}>
             <h1 className={'text-3xl font-bold mb-9'}>Feedback from employers</h1>
             {isSlider
-                ?   <Swiper breakpoints={breakpoints}>
+                ?   <Swiper grabCursor={true} breakpoints={breakpoints}>
                         <SwiperSlide>
                             <ReviewsSlide imgSrc={'/courses/course/reviews/yulia.png'} name={'Yulia Iliaeva'} profession={'Development director Team for Dream'} text={'Candidates are always distinguished by their high motivation, so we are happy to invite them for internships and job offers. For several times already, we have accepted participants in the course "Profession Event Manager" for Junior positions'}/>
                         </SwiperSlide>

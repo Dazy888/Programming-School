@@ -58,8 +58,8 @@ export interface ITeacher {
     additionalInfo?: string[]
 }
 
-export interface ITerm {
-    term: string
+interface Text {
+    title: string
     text: string
 }
 
@@ -67,8 +67,15 @@ export interface IQuestion {
     title: string
     text?: string
     texts?: string[],
-    terms?: ITerm[]
+    terms?: Text[]
     listItems?: string[]
+}
+
+interface CV {
+    salary: string
+    skills: string[]
+    projects: string[]
+    tools: string[]
 }
 
 export interface ICourse {
@@ -78,13 +85,12 @@ export interface ICourse {
         header: {
             text: string
             features: IListItemText[]
-            imgSrc: string
         }
         market: {
             titleText: string
             list: IListItemText[]
         }
-        for_who: IForWho[]
+        for_who?: IForWho[]
         skills: ISkill[]
         program: {
             title: {
@@ -93,14 +99,9 @@ export interface ICourse {
             }
             programItems: IProgramItem[]
         }
-        projects: IProject[]
+        projects?: IProject[]
         teachers: ITeacher[]
-        cv: {
-            salary: string
-            skills: string[]
-            projects: string[]
-            tools: string[]
-        }
+        cv?: CV
         questions: IQuestion[]
     }
 }

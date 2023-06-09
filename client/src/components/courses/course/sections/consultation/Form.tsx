@@ -38,7 +38,7 @@ const FormComponent = () => {
                     <div className={'flex'}>
                         <div onClick={consultationCountriesListener} className={`${styles['content__selected-country']} ${errors.phoneNumber?.message ? styles['error'] : ''} flex items-center cursor-pointer h-14`}>
                             <div className={'flex'}>
-                                <Image width={20} height={15} className={'mr-1.5'} alt={'Country Flag'} src={`/courses/course/countries/${activeCountry}.png`}/>
+                                <Image width={20} height={16} className={'mr-1.5'} alt={'Country Flag'} src={`/courses/course/countries/${activeCountry}.png`}/>
                                 <i className={`fa-solid fa-chevron-down text-xs duration-300 ${arrowAnimation}`}/>
                             </div>
                         </div>

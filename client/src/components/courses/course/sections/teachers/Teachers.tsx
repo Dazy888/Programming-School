@@ -4,6 +4,7 @@ import { TitleText } from "@/components/common/TitleText"
 import { Teacher } from "@/components/courses/course/sections/teachers/Teacher"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { ITeacher } from "@/models/course"
+import { v4 } from "uuid"
 
 interface Props {
     teachers: ITeacher[]
@@ -23,9 +24,9 @@ const TeachersSection: React.FC<Props> = ({ teachers }) => {
     return(
         <div id={styles.teachers} className={'mb-32'}>
             <TitleText text={'Speakers'}/>
-            <Swiper className={'mt-12'} breakpoints={breakpoints}>
+            <Swiper grabCursor={true} className={'mt-12'} breakpoints={breakpoints}>
                 {teachers.map((teacher, key) =>
-                    <SwiperSlide>
+                    <SwiperSlide key={v4()}>
                         <Teacher key={key} imgSrc={teacher.imgSrc} fullName={teacher.fullName} text={teacher.text} additionalInf={teacher.additionalInfo}/>
                     </SwiperSlide>
                 )}

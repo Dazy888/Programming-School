@@ -22,7 +22,7 @@ const HeaderSection: React.FC<Props> = ({ courseAttr, text, profession, imgSrc, 
                 <p className={'text-xl my-5 font-medium'}>{text}</p>
                 <button className={'w-2/5 h-14 text-white rounded-xl text-lg font-medium'}>Book a course</button>
             </div>
-            <Image width={486} height={486} alt={'Course Logo'} src={imgSrc}/>
+            <Image priority width={486} height={486} alt={'Course Logo'} src={imgSrc}/>
         </div>
         <div {...columnsAttr} className={`${styles['header__features']} grid gap-9 mt-20 mx-auto w-fit`}>
             {features.map((feature, key) => <FeaturesItem styleAttr={courseAttr} key={key} title={feature.title} text={feature.text}/>)}
