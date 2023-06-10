@@ -61,7 +61,7 @@ export interface Text {
     text: string
 }
 
-export interface Question {
+export interface IQuestion {
     title: string
     text?: string
     texts?: string[],
@@ -99,7 +99,7 @@ export interface ICourse {
         projects?: Project[]
         teachers: ITeacher[]
         cv?: CV
-        questions: Question[]
+        questions: IQuestion[]
     }
 }
 
