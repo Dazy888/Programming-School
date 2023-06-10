@@ -4,8 +4,9 @@ import { useRouter } from "next/router"
 import dynamic from "next/dynamic"
 import { MainLayout } from "@/layouts/MainLayout"
 import styles from '@/styles/Course.module.scss'
-import { useAppSelector } from "@/hooks/redux"
+import { useAppDispatch, useAppSelector } from "@/hooks/redux"
 import { CourseAttr, ICourse } from "@/models/course"
+import { setOpenedCourse } from "@/store/reducers/CoursesSlice"
 // Sections
 import { Header } from "@/components/courses/course/sections/header/Header"
 import { Disclaimer } from "@/components/courses/course/sections/disclaimer/Disclaimer"
@@ -22,6 +23,7 @@ const Questions = dynamic(() => import('@/components/courses/course/sections/que
 
 const Course = () => {
     const [courseData, setCourseData] = useState<ICourse>()
+    const dispatch = useAppDispatch()
     const router = useRouter()
 
     const courseName: any = router.query.course
@@ -29,7 +31,10 @@ const Course = () => {
 
     useEffect(() => {
         if (courseName) for (const course of courses) {
-            if (course.preview.path === courseName) return setCourseData(course)
+            if (course.preview.path === courseName) {
+                dispatch(setOpenedCourse(course.preview.path))
+                return setCourseData(course)
+            }
         }
     }, [courseName])
 
@@ -37,9 +42,9 @@ const Course = () => {
     const columnsAttr = { 'columns': courseData?.course.header.features.length }
 
     const header = courseData?.course.header
-    const market: any = courseData?.course.market
+    const market = courseData?.course.market
     const for_who = courseData?.course.for_who
-    const program: any = courseData?.course.program
+    const program = courseData?.course.program
     const projects = courseData?.course.projects
     const cv = courseData?.course.cv
 
@@ -52,9 +57,9 @@ const Course = () => {
                 {(courseData && header && market && program && courseAttr) &&
                     <>
                         <div className={`${styles['container']} mx-auto px-2`}>
-                            <Header courseAttr={courseAttr as CourseAttr} profession={courseData.preview.profession} text={header.text} imgSrc={courseData.course.logoSrc} columnsAttr={columnsAttr} features={header.features}/>
+                            <Header courseAttr={courseAttr as CourseAttr} profession={courseData.preview.profession} text={header.text} columnsAttr={columnsAttr} features={header.features}/>
                             <Disclaimer/>
-                            <Market title={market.titleText} list={market.list}/>
+                            <Market title={market.title} list={market.list}/>
                             {for_who && <ForWho list={for_who}/>}
                             <Skills courseAttr={courseAttr as CourseAttr} skills={courseData.course.skills}/>
                         </div>

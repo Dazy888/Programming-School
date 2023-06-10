@@ -6,39 +6,37 @@ export interface SliderProps {
     isSlider: boolean
 }
 
-export interface IPreview {
+export interface Preview {
     profession: string
     time: string
-    imgSrc: string
     path: string
 }
 
-export interface IListItemText {
+export interface ListItemText {
     title: string
     text: string
 }
 
-export interface IForWho {
-    imgSrc: string
+export interface ForWho {
     subtitle: string
     text: string
 }
 
-export interface ISkill {
+export interface Skill {
     title?: string
     text: string
 }
 
-export interface IProject {
-    imgSrc: string
+export interface Project {
     title: string
+    imgSrc?: string
     text?: string
     firstParagraph?: string
     listItems?: string[]
     secondParagraph?: string
 }
 
-export interface ICount {
+export interface Count {
     number: string
     text: string
 }
@@ -52,18 +50,18 @@ export interface IProgramItem {
 }
 
 export interface ITeacher {
-    imgSrc: string
     fullName: string
     text: string
+    imgSrc?: string
     additionalInfo?: string[]
 }
 
-interface Text {
+export interface Text {
     title: string
     text: string
 }
 
-export interface IQuestion {
+export interface Question {
     title: string
     text?: string
     texts?: string[],
@@ -79,30 +77,29 @@ interface CV {
 }
 
 export interface ICourse {
-    preview: IPreview
+    preview: Preview
     course: {
-        logoSrc: string
         header: {
             text: string
-            features: IListItemText[]
+            features: ListItemText[]
         }
         market: {
-            titleText: string
-            list: IListItemText[]
+            title: string
+            list: ListItemText[]
         }
-        for_who?: IForWho[]
-        skills: ISkill[]
+        for_who?: ForWho[]
+        skills: Skill[]
         program: {
             title: {
                 text: string
-                counts: ICount[]
+                counts: Count[]
             }
             programItems: IProgramItem[]
         }
-        projects?: IProject[]
+        projects?: Project[]
         teachers: ITeacher[]
         cv?: CV
-        questions: IQuestion[]
+        questions: Question[]
     }
 }
 

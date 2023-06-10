@@ -2,10 +2,10 @@ import React, { useState } from "react"
 import styles from '@/styles/Course.module.scss'
 import { TitleText } from "@/components/common/TitleText"
 import { Slider } from "@/components/courses/course/sections/projects/Slider"
-import { IProject } from "@/models/course"
+import { Project } from "@/models/course"
 
 interface Props {
-    projects: IProject[]
+    projects: Project[]
 }
 
 const ProjectsSection: React.FC<Props> = ({ projects }) => {

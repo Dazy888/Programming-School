@@ -25,9 +25,9 @@ const TeachersSection: React.FC<Props> = ({ teachers }) => {
         <div id={styles.teachers} className={'mb-32'}>
             <TitleText text={'Speakers'}/>
             <Swiper grabCursor={true} className={'mt-12'} breakpoints={breakpoints}>
-                {teachers.map((teacher, key) =>
+                {teachers.map(({ text, imgSrc, additionalInfo, fullName}, index) =>
                     <SwiperSlide key={v4()}>
-                        <Teacher key={key} imgSrc={teacher.imgSrc} fullName={teacher.fullName} text={teacher.text} additionalInf={teacher.additionalInfo}/>
+                        <Teacher index={index} imgSrc={imgSrc} fullName={fullName} text={text} additionalInf={additionalInfo}/>
                     </SwiperSlide>
                 )}
             </Swiper>

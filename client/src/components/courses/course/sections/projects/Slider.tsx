@@ -1,10 +1,12 @@
 import React from "react"
 import styles from "@/styles/Course.module.scss"
-import { IProject } from "@/models/course"
+import { Project } from "@/models/course"
 import { Arrow } from "@/components/courses/course/sections/projects/Arrow"
+import { useAppSelector } from "@/hooks/redux"
+import { v4 } from "uuid"
 
 interface Props {
-    slide: IProject
+    slide: Project
     currentSlide: number
     slidesAmount: number
     setSlide: (slideNumber: number) => void
@@ -14,9 +16,11 @@ const SliderComponent: React.FC<Props> = ({ slide, currentSlide, slidesAmount, s
     const prevSlide = () => (currentSlide >= 1) && setSlide(currentSlide - 1)
     const nextSlide = () => (currentSlide < slidesAmount - 1) && setSlide(currentSlide + 1)
 
+    const openedCourse = useAppSelector(state => state.coursesReducer.openedCourse)
+
     return(
         <div className={`${styles.slider} mt-12 grid grid-cols-2 gap-16`}>
-            <img alt={"Project's img"} src={slide.imgSrc}/>
+            <img alt={"Project's img"} src={`/courses/course/projects/${slide.imgSrc ? slide.imgSrc : `${openedCourse}/${currentSlide + 1}`}.png`}/>
             <div className={`${styles['slider__content']} text-white flex justify-between flex-col`}>
                 <div className={`${styles['slider__text']}`}>
                     <h3 className={'text-2xl font-medium mb-2'}>{slide.title}</h3>
@@ -24,7 +28,7 @@ const SliderComponent: React.FC<Props> = ({ slide, currentSlide, slidesAmount, s
                     {slide.firstParagraph && <p>{slide.firstParagraph}</p>}
                     {slide.listItems &&
                         <ul className={'my-4'}>
-                            {slide.listItems.map((item, key) => <li key={key}>{item}</li>)}
+                            {slide.listItems.map((item) => <li key={v4()}>{item}</li>)}
                         </ul>
                     }
                     {slide.secondParagraph && <p className={'mb-4'}>{slide.secondParagraph}</p>}

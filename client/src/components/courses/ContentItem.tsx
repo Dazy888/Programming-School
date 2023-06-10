@@ -5,11 +5,10 @@ import styles from '@/styles/Courses.module.scss'
 interface Props {
     title: string
     time: string
-    imgPath: string
     path: string
 }
 
-const ContentItemComponent: React.FC<Props> = ({ path, imgPath, time, title }) => {
+const ContentItemComponent: React.FC<Props> = ({ path, time, title }) => {
     const router = useRouter()
 
     return(
@@ -18,7 +17,7 @@ const ContentItemComponent: React.FC<Props> = ({ path, imgPath, time, title }) =
                 <h2 className={'text-2xl font-medium'}>{title}</h2>
                 <p className={'font-medium'}>{time}</p>
             </div>
-            <img className={'w-28 h-28'} alt={'Logo'} src={imgPath}/>
+            <img className={'w-28 h-28'} alt={'Logo'} src={`/courses/previews/${path}.png`}/>
         </div>
     )
 }

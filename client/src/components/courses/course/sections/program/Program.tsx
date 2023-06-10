@@ -2,11 +2,11 @@ import React from "react"
 import styles from '@/styles/Course.module.scss'
 import { CountItem } from "@/components/courses/course/sections/program/CountItem"
 import { ProgramItem } from "@/components/courses/course/sections/program/ProgramItem"
-import { ICount, CourseAttr, IProgramItem } from "@/models/course"
+import { Count, CourseAttr, IProgramItem } from "@/models/course"
 
 interface Props {
     courseAttr: CourseAttr
-    countItems: ICount[]
+    countItems: Count[]
     titleText: string
     programItems: IProgramItem[]
 }
