@@ -22,7 +22,7 @@ export interface ForWho {
     text: string
 }
 
-export interface Skill {
+export interface ISkill {
     title?: string
     text: string
 }
@@ -88,7 +88,7 @@ export interface ICourse {
             list: ListItemText[]
         }
         for_who?: ForWho[]
-        skills: Skill[]
+        skills: ISkill[]
         program: {
             title: {
                 text: string
