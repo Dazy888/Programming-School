@@ -2,11 +2,11 @@ import React from "react"
 import styles from "@/styles/Course.module.scss"
 import { TitleText } from "@/components/common/TitleText"
 import { MarketItem } from "@/components/courses/course/sections/market/MarketItem"
-import { IListItemText } from "@/models/course"
+import { ListItemText } from "@/models/course"
 
 interface Props {
     title: string
-    list: IListItemText[]
+    list: ListItemText[]
 }
 
 const MarketComponent: React.FC<Props> = ({ title, list }) => (
