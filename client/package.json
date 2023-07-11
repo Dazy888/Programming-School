@@ -29,6 +29,7 @@
     "react-input-mask": "^2.0.4",
     "react-modal": "^3.16.1",
     "react-redux": "^8.0.5",
+    "react-timer-hook": "^3.0.6",
     "redux": "^4.2.1",
     "redux-toolkit": "^1.1.2",
     "sass": "^1.57.1",

@@ -4,7 +4,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 const Document = () => (
     <Html lang="en">
         <Head>
-            <link rel={'icon'} href={'/common/favicon.png'}/>
+            <link rel={'icon'} href={'/common/favicon.webp'}/>
             <link rel={'stylesheet'} href={'/fontawesome/css/all.css'}/>
         </Head>
         <body>

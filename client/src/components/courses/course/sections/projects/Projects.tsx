@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styles from '@/styles/Course.module.scss'
-import { TitleText } from "@/components/common/TitleText"
+import { TitleText } from "@/components/layout/TitleText"
 import { Slider } from "@/components/courses/course/sections/projects/Slider"
 import { Project } from "@/models/course"
 

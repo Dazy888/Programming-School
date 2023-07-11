@@ -1,6 +1,6 @@
 import React from "react"
 import styles from '@/styles/Course.module.scss'
-import { TitleText } from "@/components/common/TitleText"
+import { TitleText } from "@/components/layout/TitleText"
 import { Teacher } from "@/components/courses/course/sections/teachers/Teacher"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { ITeacher } from "@/models/course"

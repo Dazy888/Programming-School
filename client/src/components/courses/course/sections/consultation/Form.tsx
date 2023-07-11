@@ -50,11 +50,11 @@ const FormComponent = () => {
                     </div>
                     {errors.phoneNumber?.message && <p className={`mt-2 text-xs ${styles['error-text']}`}>{errors.phoneNumber?.message}</p>}
                     <div className={`${styles['content__countries-list']} ${displayCountriesList} absolute z-10`}>
-                        <CountriesListItem countryName={'ukraine'} clickListener={clickListener} active={(activeCountry === 'ukraine') ? styles['active'] : ''} imgSrc={'/courses/course/countries/ukraine.png'} name={'Ukraine (Україна)'} phoneNumber={'+380'}/>
-                        <CountriesListItem countryName={'belarus'} clickListener={clickListener} active={(activeCountry === 'belarus') ? styles['active'] : ''} imgSrc={'/courses/course/countries/belarus.png'} name={'Belarus (Беларусь)'} phoneNumber={'+375'}/>
-                        <CountriesListItem countryName={'kazakhstan'} clickListener={clickListener} active={(activeCountry === 'kazakhstan') ? styles['active'] : ''} imgSrc={'/courses/course/countries/kazakhstan.png'} name={'Kazakhstan (Казахстан)'} phoneNumber={'+7'}/>
-                        <CountriesListItem countryName={'usa'} clickListener={clickListener} active={(activeCountry === 'usa') ? styles['active'] : ''} imgSrc={'/courses/course/countries/usa.png'} name={'United States'} phoneNumber={'+1'}/>
-                        <CountriesListItem countryName={'canada'} clickListener={clickListener} active={(activeCountry === 'canada') ? styles['active'] : ''} imgSrc={'/courses/course/countries/canada.png'} name={'Canada'} phoneNumber={'+1'}/>
+                        <CountriesListItem countryName={'ukraine'} clickListener={clickListener} active={(activeCountry === 'ukraine') ? styles['active'] : ''} imgSrc={'ukraine'} name={'Ukraine (Україна)'} phoneNumber={'+380'}/>
+                        <CountriesListItem countryName={'belarus'} clickListener={clickListener} active={(activeCountry === 'belarus') ? styles['active'] : ''} imgSrc={'belarus'} name={'Belarus (Беларусь)'} phoneNumber={'+375'}/>
+                        <CountriesListItem countryName={'kazakhstan'} clickListener={clickListener} active={(activeCountry === 'kazakhstan') ? styles['active'] : ''} imgSrc={'kazakhstan'} name={'Kazakhstan (Казахстан)'} phoneNumber={'+7'}/>
+                        <CountriesListItem countryName={'usa'} clickListener={clickListener} active={(activeCountry === 'usa') ? styles['active'] : ''} imgSrc={'usa'} name={'United States'} phoneNumber={'+1'}/>
+                        <CountriesListItem countryName={'canada'} clickListener={clickListener} active={(activeCountry === 'canada') ? styles['active'] : ''} imgSrc={'canada'} name={'Canada'} phoneNumber={'+1'}/>
                     </div>
                 </div>
                 <Input name={'mail'} errorMessage={errors.mail?.message} pattern={/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/} register={register} placeholder={'Mail'}/>

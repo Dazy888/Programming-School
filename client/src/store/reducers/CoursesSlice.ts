@@ -394,25 +394,25 @@ const commonItems = {
             text: 'Senior UI/UX Designer at KROK'
         },
         kudryavtsev: {
-            imgSrc: 'ios/1',
+            imgSrc: 'iOS/1',
             fullName: 'Alexey Kudryavtsev',
             text: 'Developer Advocate at inDriver',
             additionalInfo: ['Developing iOS applications since 2013. From 2017 to 2022, he worked at Avito, organized 6 seasons of Podlodka iOS crew online conferences, and now advises on sustainable career development in IT']
         },
         aniskov: {
-            imgSrc: 'ios/2',
+            imgSrc: 'iOS/2',
             fullName: 'Roman Aniskov',
             text: 'Technical Lead for Mobile Development at Home Credit Bank',
             additionalInfo: ['More than 10 years in IT. For 5 years he worked as an iOS developer at ivi, and now he is responsible for the development of the mobile application of Home Credit Bank']
         },
         nikolaev: {
-            imgSrc: 'ios/3',
+            imgSrc: 'iOS/3',
             fullName: 'Maxim Nikolaev',
             text: 'Senior iOS developer at Alfa-Bank',
             additionalInfo: ['Developing mobile applications since 2014. He was engaged in backend development, Python programming and testing. Created projects for Alfa-Bank, Sreda Solutions, Motorola Solutions']
         },
         sotsky: {
-            imgSrc: 'ios/4',
+            imgSrc: 'iOS/4',
             fullName: 'Nikolay Sotsky',
             text: 'Chief Executive Officer at InstaDev',
             additionalInfo: ["In mobile development since 2013. Prior to that, he led teams in technical projects. For the last 4 years, he has been combining iOS programming and managing the company's production department"]
@@ -484,7 +484,7 @@ const commonItems = {
         },
         html: {
             title: 'HTML',
-            text: 'the most common layout language on the Internet. You can think of HTML as a set of commands that defines the structure and logic of the site.'
+            text: 'the most layout layout language on the Internet. You can think of HTML as a set of commands that defines the structure and logic of the site.'
         },
         css: {
             title: 'CSS',
@@ -794,10 +794,10 @@ const initialState: CoursesState = {
                 teachers: [
                     commonItems.teachers.shulaev,
                     commonItems.teachers.krotov,
-                    { imgSrc: '/python/1.png', fullName: 'Roman Bulgakov', text: 'Computer science and programming teacher with more than 5 years of experience' },
-                    { imgSrc: '/python/2.png', fullName: 'Alexei Polovinkin', text: 'AGIMA Python-teamlead. Work experience - more than 7 years' },
-                    { imgSrc: '/python/5.png', fullName: 'Nikita Nesterenko', text: 'Project manager and chief development engineer at Sberbank. Work experience - more than 5 years' },
-                    { imgSrc: '/python/6.png', fullName: 'Alexei Nekrasov', text: 'Leader of the Python direction at MTS, Program Director of the Python direction. Work experience - more than 6 years' }
+                    { imgSrc: '/python/1', fullName: 'Roman Bulgakov', text: 'Computer science and programming teacher with more than 5 years of experience' },
+                    { imgSrc: '/python/2', fullName: 'Alexei Polovinkin', text: 'AGIMA Python-teamlead. Work experience - more than 7 years' },
+                    { imgSrc: '/python/5', fullName: 'Nikita Nesterenko', text: 'Project manager and chief development engineer at Sberbank. Work experience - more than 5 years' },
+                    { imgSrc: '/python/6', fullName: 'Alexei Nekrasov', text: 'Leader of the Python direction at MTS, Program Director of the Python direction. Work experience - more than 6 years' }
                 ],
                 cv: {
                     salary: 'From 96.000 USD',
@@ -1263,8 +1263,10 @@ const initialState: CoursesState = {
                     { title: 'Online store', text: 'You are designing web pages for an online furniture store' }
                 ],
                 teachers: [
-                    { fullName: 'Vasiliy Grudistov', text: 'Chief executive officer in InstaDev' }, { fullName: 'Michael Volkov', text: 'Technical director Qsoft' },
-                    commonItems.teachers.pilipenko, commonItems.teachers.yakovushen
+                    { fullName: 'Vasiliy Grudistov', text: 'Chief executive officer in InstaDev' },
+                    { fullName: 'Michael Volkov', text: 'Technical director Qsoft' },
+                    commonItems.teachers.pilipenko,
+                    commonItems.teachers.yakovushen
                 ],
                 cv: {
                     salary: 'From 75.000 USD',
@@ -1833,9 +1835,9 @@ const initialState: CoursesState = {
                     commonItems.teachers.shadrin,
                     commonItems.teachers.ovchinnikov,
                     commonItems.teachers.rybakov,
-                    { imgSrc: 'android/3.png', fullName: 'Artyom Bagritsevich', text: 'In development for 11 years. Chief Android Developer' },
-                    { imgSrc: 'android/4.png', fullName: 'Alexandr Oplachnikov', text: 'Senior Android Developer' },
-                    { imgSrc: 'android/10.png', fullName: 'Alexandr Ageychenko', text: 'Lead Android-developer, Tinkoff' }
+                    { imgSrc: 'android/3', fullName: 'Artyom Bagritsevich', text: 'In development for 11 years. Chief Android Developer' },
+                    { imgSrc: 'android/4', fullName: 'Alexandr Oplachnikov', text: 'Senior Android Developer' },
+                    { imgSrc: 'android/10', fullName: 'Alexandr Ageychenko', text: 'Lead Android-developer, Tinkoff' }
                 ],
                 cv: {
                     salary: 'From 85.000 USD',

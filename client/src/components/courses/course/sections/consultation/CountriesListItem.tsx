@@ -14,7 +14,7 @@ interface Props {
 const CountriesListItemComponent: React.FC<Props> = ({ name, phoneNumber, imgSrc, active, clickListener, countryName }) => (
     <div onClick={() => clickListener(countryName)} className={`${styles['content__country']} flex justify-between items-center cursor-pointer mb-2.5 ${active}`}>
         <div className={'flex items-center'}>
-            <Image width={20} height={15} className={'mr-2'} src={imgSrc} alt={'Country Flag'}/>
+            <Image width={20} height={15} className={'mr-2'} src={`/courses/course/countries/${imgSrc}.webp`} alt={'Country Flag'}/>
             <p>{name}</p>
         </div>
         <p>{phoneNumber}</p>

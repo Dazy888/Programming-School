@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import styles from "@/styles/Course.module.scss"
-import { TitleText } from "@/components/common/TitleText"
+import { TitleText } from "@/components/layout/TitleText"
 import { FeaturesItem } from "@/components/courses/course/sections/header/FeaturesItem"
 import { CourseAttr, ListItemText } from "@/models/course"
 import { v4 } from "uuid"

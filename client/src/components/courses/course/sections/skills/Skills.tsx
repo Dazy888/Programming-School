@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "@/styles/Course.module.scss"
-import { TitleText } from "@/components/common/TitleText"
+import { TitleText } from "@/components/layout/TitleText"
 import { Skill } from "@/components/courses/course/sections/skills/Skill"
 import { CourseAttr, ISkill } from "@/models/course"
 

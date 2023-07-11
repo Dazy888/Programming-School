@@ -2,7 +2,7 @@ import React from "react"
 import Head from "next/head"
 import styles from '@/styles/Contacs.module.scss'
 import { MainLayout } from "@/layouts/MainLayout"
-import { TitleText } from "@/components/common/TitleText"
+import { TitleText } from "@/components/layout/TitleText"
 import { Form } from "@/components/contacts/Form"
 import { Manager } from "@/components/contacts/Manager"
 
@@ -16,9 +16,9 @@ const Contacts = () => (
                 <div className={`${styles.managers} text-center`}>
                     <TitleText text={'Contacts'}/>
                     <div className={`${styles['managers__row']} flex justify-between mt-12 mx-auto`}>
-                        <Manager imgSrc={'/contacts/alex-manager.png'} name={'Alex'} occupation={'Advertising'} mail={'alexmanager'}/>
-                        <Manager imgSrc={'/contacts/svetlana-manager.png'} name={'Svetlana'} occupation={'Social media'} mail={'svetlanamanager'}/>
-                        <Manager imgSrc={'/contacts/yulia-manager.png'} name={'Yulia'} occupation={'Technical manager'} mail={'yuliamanager'}/>
+                        <Manager imgSrc={'alex'} name={'Alex'} occupation={'Advertising'} mail={'alexmanager'}/>
+                        <Manager imgSrc={'svetlana'} name={'Svetlana'} occupation={'Social media'} mail={'svetlanamanager'}/>
+                        <Manager imgSrc={'yulia'} name={'Yulia'} occupation={'Technical manager'} mail={'yuliamanager'}/>
                     </div>
                 </div>
                 <div className={`${styles.map} mt-40 mb-32`}>

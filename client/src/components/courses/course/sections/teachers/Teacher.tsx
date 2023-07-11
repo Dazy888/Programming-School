@@ -3,6 +3,7 @@ import styles from '@/styles/Course.module.scss'
 import Modal from 'react-modal'
 import { v4 } from "uuid"
 import { useAppSelector } from "@/hooks/redux"
+import Image from "next/image";
 
 Modal.setAppElement('#wrapper')
 
@@ -44,7 +45,7 @@ const TeacherComponent: React.FC<Props> = ({ additionalInf, fullName, text, imgS
             {additionalInf &&
                 <Modal style={customStyles} className={`${styles.modal} relative`} isOpen={modalIsOpen} onRequestClose={closeModal}>
                     <div>
-                        <img className={'rounded-xl'} alt={"Speaker's photo"} src={imgSrc}/>
+                        <Image width={100} height={100} className={'rounded-xl'} alt={"Speaker's photo"} src={`${imgSrc}.webp`}/>
                         <h2 className={'text-3xl font-bold mb-2 mt-9'}>{fullName}</h2>
                         <p className={'text-lg mb-8'}>{text}</p>
                         {additionalInf.length > 1

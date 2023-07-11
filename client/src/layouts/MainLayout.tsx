@@ -1,17 +1,18 @@
 import React, { ReactNode } from "react"
 import Image from "next/image"
-import { NavigationLinks } from "@/components/common/NavigationLinks"
+import styles from '@/styles/MainLayout.module.scss'
+import { NavLinks } from "@/components/layout/NavLinks"
 
 interface Props {
     children: ReactNode
 }
 
 const MainLayoutComponent: React.FC<Props> = ({ children }) => (
-    <div id={'wrapper'} className={'text-white'}>
+    <div id={styles.wrapper} className={'text-white'}>
         <header className={'flex items-center justify-between py-10 px-20'}>
-            <Image height={40} width={40} src={'/common/logo.png'} alt={'Logo'}/>
-            <NavigationLinks/>
-            <button className={'office-btn w-44 h-11 rounded-full'}>Go to office</button>
+            <Image height={40} width={40} src={'/common/logo.webp'} alt={'Logo'}/>
+            <NavLinks />
+            <button className={`${styles['office-btn']} py-2 px-7 font-medium rounded-full`}>Go to office</button>
         </header>
         <main>
             {children}
