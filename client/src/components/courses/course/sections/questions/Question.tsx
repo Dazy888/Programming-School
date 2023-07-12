@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styles from '@/styles/Course.module.scss'
-import { IQuestion } from "@/models/course"
+import { IQuestion } from "@/models/course.models"
 import { v4 } from "uuid"
 
 const QuestionComponent: React.FC<IQuestion> = ({ title, terms, text, texts, listItems }) => {

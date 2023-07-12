@@ -1,7 +1,7 @@
 import React from "react"
 import styles from '@/styles/Courses.module.scss'
 import { ContentItem } from "@/components/courses/ContentItem"
-import { Preview } from "@/models/course"
+import { Preview } from "@/models/course.models"
 import { v4 } from "uuid"
 
 interface Props {

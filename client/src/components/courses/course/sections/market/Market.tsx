@@ -2,7 +2,7 @@ import React from "react"
 import styles from "@/styles/Course.module.scss"
 import { TitleText } from "@/components/layout/TitleText"
 import { MarketItem } from "@/components/courses/course/sections/market/MarketItem"
-import { ListItemText } from "@/models/course"
+import { ListItemText } from "@/models/course.models"
 
 interface Props {
     title: string

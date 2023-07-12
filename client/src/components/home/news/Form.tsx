@@ -13,7 +13,7 @@ const FormComponent = () => {
 
     return(
         <form onSubmit={handleSubmit(onSubmit)} className={'w-fit mx-auto'}>
-            <input className={'font-base text-white pl-6 py-3 rounded-full'} minLength={5} maxLength={30} type={'email'} {...register('email')} />
+            <input className={'font-base text-white pl-6 py-3 rounded-full'} required minLength={5} maxLength={30} type={'email'} {...register('email')} />
             <button className={'font-bold text-white text-base block mx-auto duration-300 rounded-full mt-3 py-2 px-6'}>Subscribe</button>
         </form>
     )

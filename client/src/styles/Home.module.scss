@@ -43,8 +43,20 @@ $pink: #f92552;
     background: #121212;
 
     .booking__container {
+      @keyframes gradientAnimation {
+        0%{ background-position: 0 50% }
+        50%{ background-position: 100% 50% }
+        100%{ background-position: 0 50% }
+      }
+
       a {
-        background: $linearGradientColor
+        background: $linearGradientColor;
+        background-size: 200% 200%;
+        transition: 300ms;
+
+        &:hover {
+          background-position: 100% 50%
+        }
       }
 
       .booking__progress-bar {
@@ -146,6 +158,11 @@ $pink: #f92552;
 
       a {
         background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+        transition: 300ms;
+
+        &:hover {
+          transform: translateY(-10px);
+        }
       }
     }
   }

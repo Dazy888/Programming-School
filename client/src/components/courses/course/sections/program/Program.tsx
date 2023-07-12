@@ -2,7 +2,7 @@ import React from "react"
 import styles from '@/styles/Course.module.scss'
 import { CountItem } from "@/components/courses/course/sections/program/CountItem"
 import { ProgramItem } from "@/components/courses/course/sections/program/ProgramItem"
-import { Count, CourseAttr, IProgramItem } from "@/models/course"
+import { Count, CourseAttr, IProgramItem } from "@/models/course.models"
 
 interface Props {
     courseAttr: CourseAttr

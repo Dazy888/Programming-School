@@ -1,5 +1,5 @@
 import React from "react"
-import { ISkill } from "@/models/course"
+import { ISkill } from "@/models/course.models"
 
 const SkillComponent: React.FC<ISkill> = ({ title, text }) => (
     <div className={'p-2.5 rounded-xl'}>

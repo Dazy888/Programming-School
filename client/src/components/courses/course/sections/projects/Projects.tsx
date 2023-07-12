@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styles from '@/styles/Course.module.scss'
 import { TitleText } from "@/components/layout/TitleText"
 import { Slider } from "@/components/courses/course/sections/projects/Slider"
-import { Project } from "@/models/course"
+import { Project } from "@/models/course.models"
 
 interface Props {
     projects: Project[]

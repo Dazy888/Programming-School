@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import styles from '@/styles/Course.module.scss'
-import { CourseAttr } from "@/models/course"
+import { CourseAttr } from "@/models/course.models"
 
 interface Props {
     title: string

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Image from "next/image"
 import styles from "@/styles/Course.module.scss"
 import { SubmitHandler, useForm } from "react-hook-form"
-import { CourseForm } from "@/models/course"
+import { CourseForm } from "@/models/course.models"
 import { Input } from "@/components/courses/course/sections/consultation/Input"
 import { CountriesListItem } from "@/components/courses/course/sections/consultation/CountriesListItem"
 

@@ -1,6 +1,6 @@
 import React from "react"
 import styles from '@/styles/Home.module.scss'
-import { TrainingProgramItem } from "@/models/home"
+import { TrainingProgramItem } from "@/models/home.models"
 
 const ContentItemComponent: React.FC<TrainingProgramItem> = ({ month, text, rightLinePosition }) => (
     <div className={`${styles['content__item']} flex justify-between items-center text-right mb-24 w-80 h-24`}>

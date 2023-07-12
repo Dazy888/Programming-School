@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "@/styles/Course.module.scss"
 import { Form } from "@/components/courses/course/sections/consultation/Form"
-import { CourseAttr } from "@/models/course"
+import { CourseAttr } from "@/models/course.models"
 
 interface Props {
     courseAttr: CourseAttr

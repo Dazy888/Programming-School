@@ -2,7 +2,7 @@ import React from "react"
 import styles from "@/styles/Course.module.scss"
 import { TitleText } from "@/components/layout/TitleText"
 import { ForWhoItem } from "@/components/courses/course/sections/for-who/ForWhoItem"
-import { ForWho } from "@/models/course"
+import { ForWho } from "@/models/course.models"
 import { v4 } from "uuid"
 
 interface Props {

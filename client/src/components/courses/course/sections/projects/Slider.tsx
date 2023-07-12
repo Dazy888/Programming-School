@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "@/styles/Course.module.scss"
-import { Project } from "@/models/course"
+import { Project } from "@/models/course.models"
 import { Arrow } from "@/components/courses/course/sections/projects/Arrow"
 import { useAppSelector } from "@/hooks/redux"
 import { v4 } from "uuid"

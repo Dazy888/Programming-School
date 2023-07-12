@@ -1,4 +1,4 @@
-import { ICourse } from "@/models/course"
+import { ICourse } from "@/models/course.models"
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import Questions from "@/components/courses/course/sections/questions/Questions"
 

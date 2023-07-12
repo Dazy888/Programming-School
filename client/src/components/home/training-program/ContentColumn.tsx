@@ -1,6 +1,6 @@
 import React from "react"
 import styles from '@/styles/Home.module.scss'
-import { TrainingProgramItem } from "@/models/home"
+import { TrainingProgramItem } from "@/models/home.models"
 import { ContentItem } from "@/components/home/training-program/ContentItem"
 
 interface Props {

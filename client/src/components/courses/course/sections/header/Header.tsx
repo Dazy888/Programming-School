@@ -3,7 +3,7 @@ import Image from "next/image"
 import styles from "@/styles/Course.module.scss"
 import { TitleText } from "@/components/layout/TitleText"
 import { FeaturesItem } from "@/components/courses/course/sections/header/FeaturesItem"
-import { CourseAttr, ListItemText } from "@/models/course"
+import { CourseAttr, ListItemText } from "@/models/course.models"
 import { v4 } from "uuid"
 import { useAppSelector } from "@/hooks/redux"
 

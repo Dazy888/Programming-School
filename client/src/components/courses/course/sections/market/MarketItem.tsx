@@ -1,5 +1,5 @@
 import React from "react"
-import { ListItemText } from "@/models/course"
+import { ListItemText } from "@/models/course.models"
 
 const MarketItemComponent: React.FC<ListItemText> = ({ text, title }) => (
     <div>

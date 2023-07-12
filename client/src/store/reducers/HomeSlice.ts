@@ -1,4 +1,4 @@
-import { TrainingProgramItem } from "@/models/home"
+import { TrainingProgramItem } from "@/models/home.models"
 import { createSlice } from "@reduxjs/toolkit"
 
 interface HomeState {

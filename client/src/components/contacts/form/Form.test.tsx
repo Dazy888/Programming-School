@@ -1,7 +1,7 @@
 import React from "react"
 import userEvent from "@testing-library/user-event"
 import {act, render, screen} from "@testing-library/react"
-import { Form } from "@/components/contacts/Form"
+import { Form } from "@/components/contacts/form/Form"
 
 describe('Contacts form', () => {
     it('Name input : should be "Invalid name" error', async () => {

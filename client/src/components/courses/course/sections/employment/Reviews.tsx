@@ -1,6 +1,6 @@
 import React from "react"
 import styles from '@/styles/Course.module.scss'
-import { SliderProps } from "@/models/course"
+import { SliderProps } from "@/models/course.models"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { ReviewsSlide } from "@/components/courses/course/sections/employment/ReviewsSlide"
 

@@ -3,7 +3,7 @@ import styles from '@/styles/Course.module.scss'
 import { TitleText } from "@/components/layout/TitleText"
 import { Teacher } from "@/components/courses/course/sections/teachers/Teacher"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { ITeacher } from "@/models/course"
+import { ITeacher } from "@/models/course.models"
 import { v4 } from "uuid"
 
 interface Props {

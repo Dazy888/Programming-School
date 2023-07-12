@@ -1,6 +1,6 @@
 import React from "react"
 import styles from '@/styles/Course.module.scss'
-import { Count } from "@/models/course"
+import { Count } from "@/models/course.models"
 
 const CountItemComponent: React.FC<Count> = ({ number, text }) => (
     <div className={`${styles['title__count-item']} flex items-center`}>

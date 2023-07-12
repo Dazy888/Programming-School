@@ -5,7 +5,7 @@ import dynamic from "next/dynamic"
 import { MainLayout } from "@/layouts/MainLayout"
 import styles from '@/styles/Course.module.scss'
 import { useAppDispatch, useAppSelector } from "@/hooks/redux"
-import { CourseAttr, ICourse } from "@/models/course"
+import { CourseAttr, ICourse } from "@/models/course.models"
 import { setOpenedCourse } from "@/store/reducers/CoursesSlice"
 // Sections
 import { Header } from "@/components/courses/course/sections/header/Header"

@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image"
-import { ForWho } from "@/models/course"
+import { ForWho } from "@/models/course.models"
 import { useAppSelector } from "@/hooks/redux"
 
 interface Props extends ForWho {

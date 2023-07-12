@@ -18,8 +18,19 @@
       }
     }
 
+    @keyframes gradientAnimation {
+      0%{ background-position: 0 50% }
+      50%{ background-position: 100% 50% }
+      100%{ background-position: 0 50% }
+    }
+
     .office-btn {
       background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+      background-size: 400% 400%;
+
+      &:hover {
+        animation: gradientAnimation 1.5s ease infinite;
+      }
     }
   }
 
@@ -60,6 +71,10 @@
       &:hover {
         transform: none;
       }
+    }
+
+    .office-btn:hover {
+      animation: none !important;
     }
   }
 }
