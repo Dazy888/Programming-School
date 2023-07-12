@@ -8,7 +8,7 @@ interface Props {
     path: string
 }
 
-const ContentItemComponent: React.FC<Props> = ({ path, time, title }) => {
+const CoursePreviewComponent: React.FC<Props> = ({ path, time, title }) => {
     const router = useRouter()
 
     return(
@@ -17,9 +17,9 @@ const ContentItemComponent: React.FC<Props> = ({ path, time, title }) => {
                 <h2 className={'text-2xl font-medium'}>{title}</h2>
                 <p className={'font-medium'}>{time}</p>
             </div>
-            <img className={'w-28 h-28'} alt={'Logo'} src={`/courses/previews/${path}.png`}/>
+            <img className={'w-28 h-28'} alt={'Logo'} src={`/courses/previews/${path}.webp`}/>
         </div>
     )
 }
 
-export const ContentItem = React.memo(ContentItemComponent)
+export const CoursePreview = React.memo(CoursePreviewComponent)

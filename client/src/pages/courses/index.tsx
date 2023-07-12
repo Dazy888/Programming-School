@@ -1,9 +1,10 @@
 import React from "react"
-import Head from "next/head"
-import { MainLayout } from "@/layouts/MainLayout"
+import { v4 } from "uuid"
 import styles from '@/styles/Courses.module.scss'
-import { ContentColumn } from "@/components/courses/ContentColumn"
 import { useAppSelector } from "@/hooks/redux"
+// Components
+import { MainLayout } from "@/layouts/MainLayout"
+import { CoursePreview } from "@/components/courses/CoursePreview"
 
 const Courses = () => {
     const coursesData = []
@@ -11,15 +12,11 @@ const Courses = () => {
     for (const course of courses) coursesData.push(course.preview)
 
     return(
-        <MainLayout>
-            <Head>
-                <title>Courses</title>
-            </Head>
+        <MainLayout title={'Courses'}>
             <div id={styles.courses} className={'py-24 text-black'}>
-                <h1 className={'text-5xl font-bold text-center tracking-wide'}>Courses</h1>
-                <div className={`${styles['content']} flex justify-between mt-24 mx-auto`}>
-                    <ContentColumn data={[coursesData[0], coursesData[1], coursesData[2], coursesData[3], coursesData[4], coursesData[5], coursesData[6], coursesData[7], coursesData[8]]}/>
-                    <ContentColumn data={[coursesData[9], coursesData[10], coursesData[11], coursesData[12], coursesData[13], coursesData[14], coursesData[15], coursesData[16], coursesData[17]]}/>
+                <h1 className={'text-5xl font-bold text-center tracking-wide text-white'}>Courses</h1>
+                <div className={`${styles['content']} grid grid-cols-2 gap-16 mt-24 mx-auto`}>
+                    {coursesData.map(({ time, path, profession}) => <CoursePreview key={v4()} title={profession} time={time} path={path} />)}
                 </div>
             </div>
         </MainLayout>

@@ -1,4 +1,4 @@
-$python-color : #60b3ff;
+ $python-color : #60b3ff;
 $fullstack-python-color : #FECECF;
 $web-color : #A3A3FF;
 $fullstack-php-color : #94BFFF;
@@ -21,87 +21,39 @@ $devops-pro-color : #B4DF92;
   .content {
     max-width: 1000px;
 
-    .content__column {
-      width: 425px;
+    .content__item {
+      $colors: (
+        $fullstack-python-color,
+        $web-color,
+        $fullstack-php-color,
+        $frontend-color,
+        $frontend-pro-color,
+        $fullstack-js-color,
+        $php-pro-color,
+        $c-plus-plus-color,
+        $android-color,
+        $ios-color,
+        $mobile-color,
+        $flutter-color,
+        $java-color,
+        $java-pro-color,
+        $cyber-security-color,
+        $devops-color,
+        $devops-pro-color
+      );
 
-      &:nth-child(1) .content__item {
-        &:nth-child(2) {
-          background: $fullstack-python-color;
-        }
-
-        &:nth-child(3) {
-          background: $web-color;
-        }
-
-        &:nth-child(4) {
-          background: $fullstack-php-color;
-        }
-
-        &:nth-child(5) {
-          background: $frontend-color;
-        }
-
-        &:nth-child(6) {
-          background: $frontend-pro-color;
-        }
-
-        &:nth-child(7) {
-          background: $fullstack-js-color;
-        }
-
-        &:nth-child(8) {
-          background: $php-pro-color;
-        }
-
-        &:nth-child(9) {
-          background: $c-plus-plus-color;
+      @for $i from 1 through length($colors) {
+        &:nth-child(#{$i}) {
+          background: nth($colors, $i);
         }
       }
+    }
 
-      &:nth-child(2) .content__item {
-        &:nth-child(1) {
-          background: $android-color;
-        }
+    .content__item {
+      background: $python-color;
 
-        &:nth-child(2) {
-          background: $ios-color;
-        }
-
-        &:nth-child(3) {
-          background: $mobile-color;
-        }
-
-        &:nth-child(4) {
-          background: $flutter-color;
-        }
-
-        &:nth-child(5) {
-          background: $java-color;
-        }
-
-        &:nth-child(6) {
-          background: $java-pro-color;
-        }
-
-        &:nth-child(7) {
-          background: $cyber-security-color;
-        }
-
-        &:nth-child(8) {
-          background: $devops-color;
-        }
-
-        &:nth-child(9) {
-          background: $devops-pro-color;
-        }
-      }
-
-      .content__item {
-        background: $python-color;
-
-        &:hover {
-          transform: scale(1.02);
-        }
+      &:hover {
+        transform: scale(1.02);
       }
     }
   }
@@ -114,19 +66,21 @@ $devops-pro-color : #B4DF92;
     }
 
     .content {
-      flex-direction: column;
+      width: fit-content;
+      grid-template-columns: repeat(1, 500px);
 
-      .content__column {
-        margin: auto;
-
-        .content__item {
-          margin-bottom: 50px;
-
-          &:hover {
-            transform: none;
-          }
-        }
+      .content__item {
+        margin-bottom: 0;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #courses {
+    .content {
+      grid-template-columns: repeat(1, auto);
+      padding: 0 10px;
     }
   }
 }
@@ -137,8 +91,12 @@ $devops-pro-color : #B4DF92;
       font-size: 40px;
     }
 
-    .content .content__column {
-      width: 370px;
+    h2 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 15px;
     }
   }
 }
@@ -149,21 +107,40 @@ $devops-pro-color : #B4DF92;
       font-size: 35px;
     }
 
-    .content .content__column {
-      width: 320px;
+    .content__item {
+      height: 150px;
 
-      .content__item {
-        height: 150px;
+      h2 {
+        font-size: 20px;
+      }
 
-        div h2 {
-          font-size: 20px;
-        }
+      p {
+        font-size: 14px;
+      }
 
-        img {
-          width: 100px;
-          height: 100px;
-        }
+      img {
+        width: 90px;
+        height: 90px;
       }
     }
   }
+}
+
+@media (max-width: 320px) {
+ #courses .content__item {
+   height: 130px;
+
+   h2 {
+     font-size: 18px;
+   }
+
+   p {
+     font-size: 13px;
+   }
+
+   img {
+     width: 80px;
+     height: 80px;
+   }
+ }
 }
