@@ -1,4 +1,4 @@
- $python-color : #60b3ff;
+$python-color : #60b3ff;
 $fullstack-python-color : #FECECF;
 $web-color : #A3A3FF;
 $fullstack-php-color : #94BFFF;
@@ -23,6 +23,7 @@ $devops-pro-color : #B4DF92;
 
     .content__item {
       $colors: (
+        $python-color,
         $fullstack-python-color,
         $web-color,
         $fullstack-php-color,

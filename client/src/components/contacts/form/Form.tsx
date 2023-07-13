@@ -27,25 +27,14 @@ const FormComponent = () => {
         let element = phoneRef.current.querySelector('.phone')
         let mask: any
 
-        mask = IMask(element, {
-            mask: '',
-            lazy: true
-        })
+        mask = IMask(element, { mask: '', lazy: true })
 
         element.addEventListener('focus', () => {
-            mask.updateOptions({
-                mask: '+{38\\0} 00 000 00 00',
-                lazy: false
-            })
+            mask.updateOptions({ mask: '+{38\\0} 00 000 00 00', lazy: false })
         })
 
         element.addEventListener('blur', () => {
-            if (element.value === '+380 __ ___ __ __') {
-                mask.updateOptions({
-                    mask: '',
-                    lazy: false
-                })
-            }
+            if (element.value === '+380 __ ___ __ __') mask.updateOptions({ mask: '', lazy: false })
         })
     }, [])
 

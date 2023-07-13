@@ -1,11 +1,32 @@
 @import "Courses.module";
 
 #course {
+  $course-colors: (
+          python: $python-color,
+          fullstack-python: $fullstack-python-color,
+          web: $web-color,
+          fullstack-php: $fullstack-php-color,
+          frontend: $frontend-color,
+          frontend-pro: $frontend-pro-color,
+          fullstack-js: $fullstack-js-color,
+          php-pro: $php-pro-color,
+          c-plus-plus: $c-plus-plus-color,
+          android: $android-color,
+          ios: $ios-color,
+          mobile: $mobile-color,
+          flutter: $flutter-color,
+          java: $java-color,
+          java-pro: $java-pro-color,
+          cybersecurity: $cyber-security-color,
+          devops: $devops-color,
+          devops-pro: $devops-pro-color
+  );
+
   .container {
     max-width: 1430px;
 
-    #header {
-      .header__title {
+    #intro {
+      .title {
         background: $python-color;
 
         h1 {
@@ -14,78 +35,20 @@
 
         button {
           background: #3D3BFF;
+
+          &:hover {
+            background: rgba(61, 30, 290, 1) !important;
+          }
         }
 
-        &[course=fullstack-python] {
-          background: $fullstack-python-color;
-        }
-
-        &[course=web] {
-          background: $web-color;
-        }
-
-        &[course=fullstack-php] {
-          background: $fullstack-php-color;
-        }
-
-        &[course=frontend] {
-          background: $frontend-color;
-        }
-
-        &[course=frontend-pro] {
-          background: $frontend-pro-color;
-        }
-
-        &[course=fullstack-js] {
-          background: $fullstack-js-color;
-        }
-
-        &[course=php-pro] {
-          background: $php-pro-color;
-        }
-
-        &[course=c-plus-plus] {
-          background: $c-plus-plus-color;
-        }
-
-        &[course=android] {
-          background: $android-color;
-        }
-
-        &[course=ios] {
-          background: $ios-color;
-        }
-
-        &[course=mobile] {
-          background: $mobile-color;
-        }
-
-        &[course=flutter] {
-          background: $flutter-color;
-        }
-
-        &[course=java] {
-          background: $java-color;
-        }
-
-        &[course=java-pro] {
-          background: $java-pro-color;
-        }
-
-        &[course=cybersecurity] {
-          background: $cyber-security-color;
-        }
-
-        &[course=devops] {
-          background: $devops-color;
-        }
-
-        &[course=devops-pro] {
-          background: $devops-pro-color;
+        @each $course, $color in $course-colors {
+          &[course=#{$course}] {
+            background: $color;
+          }
         }
       }
 
-      .header__features {
+      .features {
         &[columns='3'] {
           grid-template-columns: repeat(3, auto);
         }
@@ -99,74 +62,10 @@
         }
 
         div {
-          border: 3px solid $python-color;
-
-          &[course=fullstack-python] {
-            border: 3px solid $fullstack-python-color;
-          }
-
-          &[course=web] {
-            border: 3px solid $web-color;
-          }
-
-          &[course=fullstack-php] {
-            border: 3px solid $fullstack-php-color;
-          }
-
-          &[course=frontend] {
-            border: 3px solid $frontend-color;
-          }
-
-          &[course=frontend-pro] {
-            border: 3px solid $frontend-pro-color;
-          }
-
-          &[course=fullstack-js] {
-            border: 3px solid $fullstack-js-color;
-          }
-
-          &[course=php-pro] {
-            border: 3px solid $php-pro-color;
-          }
-
-          &[course=c-plus-plus] {
-            border: 3px solid $c-plus-plus-color;
-          }
-
-          &[course=android] {
-            border: 3px solid $android-color;
-          }
-
-          &[course=ios] {
-            border: 3px solid $ios-color;
-          }
-
-          &[course=mobile] {
-            border: 3px solid $mobile-color;
-          }
-
-          &[course=flutter] {
-            border: 3px solid $flutter-color;
-          }
-
-          &[course=java] {
-            border: 3px solid $java-color;
-          }
-
-          &[course=java-pro] {
-            border: 3px solid $java-pro-color;
-          }
-
-          &[course=cybersecurity] {
-            border: 3px solid $cyber-security-color;
-          }
-
-          &[course=devops] {
-            border: 3px solid $devops-color;
-          }
-
-          &[course=devops-pro] {
-            border: 3px solid $devops-pro-color;
+          @each $course, $color in $course-colors {
+            &[course=#{$course}] {
+              border: 3px solid $color;
+            }
           }
         }
       }
@@ -177,265 +76,57 @@
     }
 
     #skills .content {
-      &[course=fullstack-python] {
-        div {
-          border: 3px solid $fullstack-python-color;
+      @each $course, $color in $course-colors {
+        &[course=#{$course}] div {
+          border: 3px solid $color;
         }
-      }
-
-      &[course=web] {
-        div {
-          border: 3px solid $web-color;
-        }
-      }
-
-      &[course=fullstack-php] {
-        div {
-          border: 3px solid $fullstack-php-color;
-        }
-      }
-
-      &[course=frontend] {
-        div {
-          border: 3px solid $frontend-color;
-        }
-      }
-
-      &[course=frontend-pro] {
-        div {
-          border: 3px solid $frontend-pro-color;
-        }
-      }
-
-      &[course=fullstack-js] {
-        div {
-          border: 3px solid $fullstack-js-color;
-        }
-      }
-
-      &[course=php-pro] {
-        div {
-          border: 3px solid $php-pro-color;
-        }
-      }
-
-      &[course=c-plus-plus] {
-        div {
-          border: 3px solid $c-plus-plus-color;
-        }
-      }
-
-      &[course=android] {
-        div {
-          border: 3px solid $android-color;
-        }
-      }
-
-      &[course=ios] {
-        div {
-          border: 3px solid $ios-color;
-        }
-      }
-
-      &[course=mobile] {
-        div {
-          border: 3px solid $mobile-color;
-        }
-      }
-
-      &[course=flutter] {
-        div {
-          border: 3px solid $flutter-color;
-        }
-      }
-
-      &[course=java] {
-        div {
-          border: 3px solid $java-color;
-        }
-      }
-
-      &[course=java-pro] {
-        div {
-          border: 3px solid $java-pro-color;
-        }
-      }
-
-      &[course=cybersecurity] {
-        div {
-          border: 3px solid $cyber-security-color;
-        }
-      }
-
-      &[course=devops] {
-        div {
-          border: 3px solid $devops-color;
-        }
-      }
-
-      &[course=devops-pro] {
-        div {
-          border: 3px solid $devops-pro-color;
-        }
-      }
-
-      div {
-        border: 3px solid $python-color;
       }
     }
 
     #employment {
       background: #272727;
 
-      .container {
-        .header__animation {
-          grid-column: 2/-1;
-          grid-row: 1/-1;
+      .title .title__animation {
+        grid-column: 2/-1;
+        grid-row: 1/-1;
 
-          img {
-            animation-duration: 4s;
-            animation-direction: alternate;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            position: absolute;
-          }
-
-          .main {
-            width: 240px;
-            height: 240px;
-          }
-
-          .small {
-            width: 70px;
-            height: 70px;
-          }
-
-          @keyframes top-left {
-            from {
-              transform: translate(-110px, -180px)
-            }
-            to {
-              transform: translate(-110px, -150px)
-            }
-          }
-
-          @keyframes bottom-right {
-            from {
-              transform: translate(110px, 190px)
-            }
-            to {
-              transform: translate(110px, 165px)
-            }
-          }
-
-          @keyframes top-right {
-            from {
-              transform: translate(180px, -60px)
-            }
-            to {
-              transform: translate(180px, -40px)
-            }
-          }
-
-          @keyframes bottom-left {
-            from {
-              transform: translate(-130px, 90px)
-            }
-            to {
-              transform: translate(-130px, 130px)
-            }
-          }
-
-          @keyframes aic {
-            from {
-              transform: translate(115px, -145px)
-            }
-            to {
-              transform: translate(115px, -120px)
-            }
-          }
-
-          @keyframes mail {
-            from {
-              transform: translate(-20px, 195px)
-            }
-            to {
-              transform: translate(-20px, 225px)
-            }
-          }
-
-          @keyframes vk {
-            from {
-              transform: translate(185px, 110px)
-            }
-            to {
-              transform: translate(185px, 95px)
-            }
-          }
-
-          @keyframes youla {
-            from {
-              transform: translate(-190px, -20px)
-            }
-            to {
-              transform: translate(-190px, -50px)
-            }
-          }
-
-          .top-left {
-            animation-name: top-left;
-          }
-
-          .bottom-right {
-            animation-name: bottom-right;
-          }
-
-          .top-right {
-            animation-name: top-right;
-          }
-
-          .bottom-left {
-            animation-name: bottom-left;
-          }
-
-          .aic {
-            animation-name: aic;
-          }
-
-          .mail {
-            animation-name: mail;
-          }
-
-          .vk {
-            animation-name: vk;
-          }
-
-          .youla {
-            animation-name: youla;
-          }
+        img {
+          animation-duration: 4s;
+          animation-direction: alternate;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          position: absolute;
         }
 
-        .guarantees {
-          .guarantees__stats {
-            grid-row: 1/-1;
-            grid-column: 1/2;
-            background: white;
-            padding: 48px 24px 24px;
+        .main {
+          width: 240px;
+          height: 240px;
+        }
 
-            .guarantees__stats-item {
-              border: 1px solid black;
-              margin-bottom: 12px;
+        .small {
+          width: 70px;
+          height: 70px;
+        }
 
-              &:last-child {
-                margin-bottom: 0;
-              }
-            }
+        $animations: (
+                top-left: (-110px, -180px, -110px, -150px),
+                bottom-right: (110px, 190px, 110px, 165px),
+                top-right: (180px, -60px, 180px, -40px),
+                bottom-left: (-130px, 90px, -130px, 130px),
+                aic: (115px, -145px, 115px, -120px),
+                mail: (-20px, 195px, -20px, 225px),
+                vk: (185px, 110px, 185px, 95px),
+                youla: (-190px, -20px, -190px, -50px)
+        );
+
+        @each $name, $values in $animations {
+          $animation-name: $name;
+          @keyframes #{$animation-name} {
+            from { transform: translate(nth($values, 1), nth($values, 2)); }
+            to { transform: translate(nth($values, 3), nth($values, 4)); }
           }
-
-          .guarantees__text {
-            div:last-child {
-              margin-bottom: 0;
-            }
+          .#{$name} {
+            animation-name: #{$animation-name};
           }
         }
       }
@@ -465,7 +156,6 @@
           width: 336px;
           height: 346px;
           background: rgb(255, 223, 110);
-          position: relative;
           margin-left: 17px;
 
           span {
@@ -482,6 +172,28 @@
               opacity: 0;
             }
           }
+        }
+      }
+
+      .guarantees {
+        .guarantees__stats {
+          grid-row: 1/-1;
+          grid-column: 1/2;
+          background: white;
+          padding: 48px 24px 24px;
+
+          .guarantees__stats-item {
+            border: 1px solid black;
+            margin-bottom: 12px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .guarantees__text div:last-child {
+          margin-bottom: 0;
         }
       }
 
@@ -505,276 +217,21 @@
 
     #program {
       background: #202020;
-      border: 3px solid $python-color;
 
-      &[course=fullstack-python] {
-        border: 3px solid $fullstack-python-color;
+      @each $course, $color in $course-colors {
+        &[course=#{$course}] {
+          border: 3px solid $color;
 
-        .rectangle div {
-          border-bottom: 65px solid $fullstack-python-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $fullstack-python-color;
-
-          &:last-child {
-            border-bottom: 2px solid $fullstack-python-color;
+          .rectangle div {
+            border-bottom: 65px solid $color;
           }
-        }
-      }
 
-      &[course=web] {
-        border: 3px solid $web-color;
+          .program__content .program__content-item {
+            border-top: 2px solid $color;
 
-        .rectangle div {
-          border-bottom: 65px solid $web-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $web-color;
-
-          &:last-child {
-            border-bottom: 2px solid $web-color;
-          }
-        }
-      }
-
-      &[course=fullstack-php] {
-        border: 3px solid $fullstack-php-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $fullstack-php-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $fullstack-php-color;
-
-          &:last-child {
-            border-bottom: 2px solid $fullstack-php-color;
-          }
-        }
-      }
-
-      &[course=frontend] {
-        border: 3px solid $frontend-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $frontend-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $frontend-color;
-
-          &:last-child {
-            border-bottom: 2px solid $frontend-color;
-          }
-        }
-      }
-
-      &[course=frontend-pro] {
-        border: 3px solid $frontend-pro-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $frontend-pro-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $frontend-pro-color;
-
-          &:last-child {
-            border-bottom: 2px solid $frontend-pro-color;
-          }
-        }
-      }
-
-      &[course=fullstack-js] {
-        border: 3px solid $fullstack-js-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $fullstack-js-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $fullstack-js-color;
-
-          &:last-child {
-            border-bottom: 2px solid $fullstack-js-color;
-          }
-        }
-      }
-
-      &[course=php-pro] {
-        border: 3px solid $php-pro-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $php-pro-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $php-pro-color;
-
-          &:last-child {
-            border-bottom: 2px solid $php-pro-color;
-          }
-        }
-      }
-
-      &[course=c-plus-plus] {
-        border: 3px solid $c-plus-plus-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $c-plus-plus-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $c-plus-plus-color;
-
-          &:last-child {
-            border-bottom: 2px solid $c-plus-plus-color;
-          }
-        }
-      }
-
-      &[course=android] {
-        border: 3px solid $android-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $android-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $android-color;
-
-          &:last-child {
-            border-bottom: 2px solid $android-color;
-          }
-        }
-      }
-
-      &[course=ios] {
-        border: 3px solid $ios-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $ios-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $ios-color;
-
-          &:last-child {
-            border-bottom: 2px solid $ios-color;
-          }
-        }
-      }
-
-      &[course=mobile] {
-        border: 3px solid $mobile-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $mobile-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $mobile-color;
-
-          &:last-child {
-            border-bottom: 2px solid $mobile-color;
-          }
-        }
-      }
-
-      &[course=flutter] {
-        border: 3px solid $flutter-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $flutter-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $flutter-color;
-
-          &:last-child {
-            border-bottom: 2px solid $flutter-color;
-          }
-        }
-      }
-
-      &[course=java] {
-        border: 3px solid $java-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $java-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $java-color;
-
-          &:last-child {
-            border-bottom: 2px solid $java-color;
-          }
-        }
-      }
-
-      &[course=java-pro] {
-        border: 3px solid $java-pro-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $java-pro-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $java-pro-color;
-
-          &:last-child {
-            border-bottom: 2px solid $java-pro-color;
-          }
-        }
-      }
-
-      &[course=cybersecurity] {
-        border: 3px solid $cyber-security-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $cyber-security-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $cyber-security-color;
-
-          &:last-child {
-            border-bottom: 2px solid $cyber-security-color;
-          }
-        }
-      }
-
-      &[course=devops] {
-        border: 3px solid $devops-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $devops-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $devops-color;
-
-          &:last-child {
-            border-bottom: 2px solid $devops-color;
-          }
-        }
-      }
-
-      &[course=devops-pro] {
-        border: 3px solid $devops-pro-color;
-
-        .rectangle div {
-          border-bottom: 65px solid $devops-pro-color;
-        }
-
-        .program__content .program__content-item {
-          border-top: 2px solid $devops-pro-color;
-
-          &:last-child {
-            border-bottom: 2px solid $devops-pro-color;
+            &:last-child {
+              border-bottom: 2px solid $color;
+            }
           }
         }
       }
@@ -787,75 +244,12 @@
 
         div {
           border: 65px solid black;
-          border-bottom: 65px solid $python-color;
           border-left: 65px;
 
-          &[course=fullstack-python] {
-            border-bottom: 65px solid $fullstack-python-color;
-          }
-
-          &[course=web] {
-            border-bottom: 65px solid $web-color;
-          }
-
-          &[course=fullstack-php] {
-            border-bottom: 65px solid $fullstack-php-color;
-          }
-
-          &[course=frontend] {
-            border-bottom: 65px solid $frontend-color;
-          }
-
-          &[course=frontend-pro] {
-            border-bottom: 65px solid $frontend-pro-color;
-          }
-
-          &[course=fullstack-js] {
-            border-bottom: 65px solid $fullstack-js-color;
-          }
-
-          &[course=php-pro] {
-            border-bottom: 65px solid $php-pro-color;
-          }
-
-          &[course=c-plus-plus] {
-            border-bottom: 65px solid $c-plus-plus-color;
-          }
-
-          &[course=android] {
-            border-bottom: 65px solid $android-color;
-          }
-
-          &[course=ios] {
-            border-bottom: 65px solid $ios-color;
-          }
-
-          &[course=mobile] {
-            border-bottom: 65px solid $mobile-color;
-          }
-
-          &[course=flutter] {
-            border-bottom: 65px solid $flutter-color;
-          }
-
-          &[course=java] {
-            border-bottom: 65px solid $java-color;
-          }
-
-          &[course=java-pro] {
-            border-bottom: 65px solid $java-pro-color;
-          }
-
-          &[course=cybersecurity] {
-            border-bottom: 65px solid $cyber-security-color;
-          }
-
-          &[course=devops] {
-            border-bottom: 65px solid $devops-color;
-          }
-
-          &[course=devops-pro] {
-            border-bottom: 65px solid $devops-pro-color;
+          @each $course, $color in $course-colors {
+            &[course=#{$course}] {
+              border-bottom: 65px solid $color;
+            }
           }
         }
       }
@@ -865,149 +259,17 @@
       }
 
       .content {
-        &[course=fullstack-python] .content__item {
-          border-top: 2px solid $fullstack-python-color;
+        @each $course, $color in $course-colors {
+          &[course=#{$course}] .content__item {
+            border-top: 2px solid $color;
 
-          &:last-child {
-            border-bottom: 2px solid $fullstack-python-color;
-          }
-        }
-
-        &[course=web] .content__item {
-          border-top: 2px solid $web-color;
-
-          &:last-child {
-            border-bottom: 2px solid $web-color;
-          }
-        }
-
-        &[course=fullstack-php] .content__item {
-          border-top: 2px solid $fullstack-php-color;
-
-          &:last-child {
-            border-bottom: 2px solid $fullstack-php-color;
-          }
-        }
-
-        &[course=frontend] .content__item {
-          border-top: 2px solid $frontend-color;
-
-          &:last-child {
-            border-bottom: 2px solid $frontend-color;
-          }
-        }
-
-        &[course=frontend-pro] .content__item {
-          border-top: 2px solid $frontend-pro-color;
-
-          &:last-child {
-            border-bottom: 2px solid $frontend-pro-color;
-          }
-        }
-
-        &[course=fullstack-js] .content__item {
-          border-top: 2px solid $fullstack-js-color;
-
-          &:last-child {
-            border-bottom: 2px solid $fullstack-js-color;
-          }
-        }
-
-        &[course=php-pro] .content__item {
-          border-top: 2px solid $php-pro-color;
-
-          &:last-child {
-            border-bottom: 2px solid $php-pro-color;
-          }
-        }
-
-        &[course=c-plus-plus] .content__item {
-          border-top: 2px solid $c-plus-plus-color;
-
-          &:last-child {
-            border-bottom: 2px solid $c-plus-plus-color;
-          }
-        }
-
-        &[course=android] .content__item {
-          border-top: 2px solid $android-color;
-
-          &:last-child {
-            border-bottom: 2px solid $android-color;
-          }
-        }
-
-        &[course=ios] .content__item {
-          border-top: 2px solid $ios-color;
-
-          &:last-child {
-            border-bottom: 2px solid $ios-color;
-          }
-        }
-
-        &[course=mobile] .content__item {
-          border-top: 2px solid $mobile-color;
-
-          &:last-child {
-            border-bottom: 2px solid $mobile-color;
-          }
-        }
-
-        &[course=flutter] .content__item {
-          border-top: 2px solid $flutter-color;
-
-          &:last-child {
-            border-bottom: 2px solid $flutter-color;
-          }
-        }
-
-        &[course=java] .content__item {
-          border-top: 2px solid $java-color;
-
-          &:last-child {
-            border-bottom: 2px solid $java-color;
-          }
-        }
-
-        &[course=java-pro] .content__item {
-          border-top: 2px solid $java-pro-color;
-
-          &:last-child {
-            border-bottom: 2px solid $java-pro-color;
-          }
-        }
-
-        &[course=cybersecurity] .content__item {
-          border-top: 2px solid $cyber-security-color;
-
-          &:last-child {
-            border-bottom: 2px solid $cyber-security-color;
-          }
-        }
-
-        &[course=devops] .content__item {
-          border-top: 2px solid $devops-color;
-
-          &:last-child {
-            border-bottom: 2px solid $devops-color;
-          }
-        }
-
-        &[course=devops-pro] .content__item {
-          border-top: 2px solid $devops-pro-color;
-
-          &:last-child {
-            border-bottom: 2px solid $devops-pro-color;
+            &:last-child {
+              border-bottom: 2px solid $color;
+            }
           }
         }
 
         .content__item {
-          border-top: 2px solid $python-color;
-
-          &:last-child {
-            border-bottom: 2px solid $python-color;
-          }
-
           .content__title {
             .rotate {
               transform: rotate(45deg);
@@ -1065,16 +327,20 @@
       }
     }
 
-    #teachers {
+    #speakers {
       .extended {
         cursor: pointer;
 
+        i {
+          transition: 150ms !important;
+        }
+
         &:hover i {
-          opacity: 0.4;
+          opacity: 0.6;
         }
       }
 
-      .teacher {
+      .speaker {
         width: 270px;
         height: 360px;
         background: #F7F7F5;
@@ -1083,10 +349,6 @@
         img {
           width: 110px;
           height: 128px;
-        }
-
-        i {
-          transition: 0.1s;
         }
       }
     }
@@ -1111,13 +373,11 @@
         }
       }
 
-      .content__skills, .content__projects {
-        li {
-          margin-bottom: 8px;
+      .content__skills, .content__projects li {
+        margin-bottom: 8px;
 
-          &:last-child {
-            margin-bottom: 0;
-          }
+        &:last-child {
+          margin-bottom: 0;
         }
       }
 
@@ -1201,74 +461,10 @@
   }
 
   #consultation {
-    background: $python-color;
-
-    &[course=fullstack-python] {
-      background: $fullstack-python-color;
-    }
-
-    &[course=web] {
-      background: $web-color;
-    }
-
-    &[course=fullstack-php] {
-      background: $fullstack-php-color;
-    }
-
-    &[course=frontend] {
-      background: $frontend-color;
-    }
-
-    &[course=frontend-pro] {
-      background: $frontend-pro-color;
-    }
-
-    &[course=fullstack-js] {
-      background: $fullstack-js-color;
-    }
-
-    &[course=php-pro] {
-      background: $php-pro-color;
-    }
-
-    &[course=c-plus-plus] {
-      background: $c-plus-plus-color;
-    }
-
-    &[course=android] {
-      background: $android-color;
-    }
-
-    &[course=ios] {
-      background: $ios-color;
-    }
-
-    &[course=mobile] {
-      background: $mobile-color;
-    }
-
-    &[course=flutter] {
-      background: $flutter-color;
-    }
-
-    &[course=java] {
-      background: $java-color;
-    }
-
-    &[course=java-pro] {
-      background: $java-pro-color;
-    }
-
-    &[course=cybersecurity] {
-      background: $cyber-security-color;
-    }
-
-    &[course=devops] {
-      background: $devops-color;
-    }
-
-    &[course=devops-pro] {
-      background: $devops-pro-color;
+    @each $course, $color in $course-colors {
+      &[course=#{$course}] {
+        background: $color;
+      }
     }
 
     .content {
@@ -1308,12 +504,12 @@
         height: 16px;
       }
 
-      .content__phone-number {
+      .phone-number {
         input {
           border-radius: 0 10px 10px 0;
         }
 
-        .content__selected-country {
+        .selected-country {
           background: #F7F7F5;
           padding: 18px 14px;
           border-radius: 10px 0 0 10px;
@@ -1325,7 +521,7 @@
           }
         }
 
-        .content__countries-list {
+        .countries-list {
           width: 240px;
           padding: 16px 12px;
           bottom: -350px;
@@ -1338,12 +534,17 @@
             color: white;
           }
 
-          .content__country {
+          .countries-list__country {
             padding: 8px 12px;
             border-radius: 10px;
 
             &:last-child {
               margin-bottom: 0;
+            }
+
+            &:hover {
+              background: #3D3BFF;
+              color: white;
             }
 
             div p {
@@ -1355,6 +556,10 @@
 
       button {
         background: #3D3BFF;
+
+        &:hover {
+          background: rgba(61, 30, 290, 1) !important;
+        }
       }
     }
   }

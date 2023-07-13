@@ -21,7 +21,7 @@ const TrainingProgramSection = () => {
 
     return(
         <section id={styles['training-program']} className={'mt-48'}>
-            <Title column={true} title={'Training program'} text={'This is our training program developed by the bests teachers'}/>
+            <Title column={true} title={'Training program'} text={'This is our training program developed by the bests speakers'}/>
             <Content {...{ content, firstColumnContent, secondColumnContent, smallResolution }} />
         </section>
     )

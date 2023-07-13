@@ -12,9 +12,9 @@ const ForWhoItemComponent: React.FC<Props> = ({ subtitle, text, index }) => {
 
     return(
         <div>
-            <Image width={160} height={160} alt={'IMG'} src={`/courses/course/for-who/${openedCourse}/${index + 1}.png`}/>
+            <Image width={160} height={160} alt={'IMG'} src={`/courses/course/for-who/${openedCourse}/${index}.webp`}/>
             <h3 className={'text-xl font-medium mt-6 mb-2'}>{subtitle}</h3>
-            <p className={'max-w-sm'}>{text}</p>
+            <p className={'max-w-sm'}>{text}.</p>
         </div>
     )
 }

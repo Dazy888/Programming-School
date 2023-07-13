@@ -1,20 +1,13 @@
 import React from "react"
 import styles from '@/styles/Course.module.scss'
+import { QuestionsProps } from "@/models/course.models"
 import { TitleText } from "@/components/layout/TitleText"
-import { Question } from "@/components/courses/course/sections/questions/Question"
-import { IQuestion } from "@/models/course.models"
-import { v4 } from "uuid"
+import { QuestionsContent } from "@/components/courses/course/sections/questions/QuestionsContent"
 
-interface Props {
-    questions: IQuestion[]
-}
-
-const QuestionsSection: React.FC<Props> = ({ questions }) => (
+const QuestionsSection: React.FC<QuestionsProps> = ({ questions }) => (
     <div id={styles.questions} className={'flex justify-between mb-32'}>
-        <TitleText text={'FAQ'}/>
-        <div className={styles.content}>
-            {questions.map((question) => <Question key={v4()} title={question.title} text={question.text} texts={question.texts} listItems={question.listItems} terms={question.terms}/>)}
-        </div>
+        <TitleText text={'FAQ'} />
+        <QuestionsContent questions={questions} />
     </div>
 )
 

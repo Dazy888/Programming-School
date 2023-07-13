@@ -1,47 +1,13 @@
 import React from "react"
-import Image from "next/image"
 import styles from '@/styles/Course.module.scss'
+import { CVProps } from "@/models/course.models"
 import { TitleText } from "@/components/layout/TitleText"
-import { Tool } from "@/components/courses/course/sections/cv/Tool"
+import { CVContent } from "@/components/courses/course/sections/cv/CVContent"
 
-interface Props {
-    title: string
-    salary: string
-    skills: string[]
-    projects: string[]
-    tools: string[]
-}
-
-const CVSection: React.FC<Props> = ({ projects, salary, skills, tools, title }) => (
+const CVSection: React.FC<CVProps> = ({ projects, salary, skills, tools, title }) => (
     <div id={styles.cv} className={'mb-32'}>
         <TitleText text={'Your CV after completing the course'}/>
-        <div className={`${styles.content} mt-14 rounded-xl p-12`}>
-            <div className={`${styles['content__title']} flex justify-between items-center mb-12`}>
-                <div className={'flex items-center'}>
-                    <Image width={65} height={65} alt={'Your photo'} src={'/courses/course/cv/avatar.webp'} className={'mr-6'}/>
-                    <h2 className={'text-2xl font-medium'}>{title}</h2>
-                </div>
-                <h2 className={'text-2xl font-medium'}>{salary}</h2>
-            </div>
-            <div className={`${styles['content__tools']} flex`}>
-                <h3 className={'text-lg font-medium w-56 mr-14'}>I own tools:</h3>
-                <div className={'flex flex-wrap'}>
-                    {tools.map((tool, key) => <Tool title={tool} key={key}/>)}
-                </div>
-            </div>
-            <div className={`${styles['content__skills']} flex my-12`}>
-                <h3 className={'text-lg font-medium w-56 mr-14'}>My skills:</h3>
-                <ul>
-                    {skills.map((skill, key) => <li className={'relative'} key={key}>{skill}</li>)}
-                </ul>
-            </div>
-            <div className={`${styles['content__projects']} flex`}>
-                <h3 className={'text-lg font-medium w-56 mr-14'}>My projects:</h3>
-                <ul>
-                    {projects.map((project, key) => <li key={key}>{project}</li>)}
-                </ul>
-            </div>
-        </div>
+        <CVContent {...{ title, tools, skills, salary, projects }} />
     </div>
 )
 

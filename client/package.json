@@ -15,7 +15,7 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@types/react-input-mask": "^3.0.2",
-    "@types/react-modal": "^3.13.1",
+    "@types/react-modal": "^3.16.0",
     "@types/swiper": "^6.0.0",
     "@types/uuid": "^9.0.1",
     "@vercel/analytics": "^1.0.1",

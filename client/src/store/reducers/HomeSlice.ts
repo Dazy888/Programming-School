@@ -8,7 +8,7 @@ interface HomeState {
 
 let initialState: HomeState = {
     trainingProgramFirstColumn: [
-        { month: 1, text: 'Meeting teachers and learning the basics of programming', rightLinePosition: true },
+        { month: 1, text: 'Meeting speakers and learning the basics of programming', rightLinePosition: true },
         { month: 3, text: 'Deepening into programming and building a portfolio', rightLinePosition: true },
         { month: 5, text: 'Continue to study complex technologies and create a good portfolio', rightLinePosition: true },
         { month: 7, text: 'Writing the final work, obtaining a certificate and the first work', rightLinePosition: true },

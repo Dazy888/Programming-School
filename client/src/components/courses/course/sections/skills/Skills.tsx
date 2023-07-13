@@ -1,8 +1,9 @@
 import React from "react"
+import { v4 } from "uuid"
 import styles from "@/styles/Course.module.scss"
+import { CourseAttr, ISkill } from "@/models/course.models"
 import { TitleText } from "@/components/layout/TitleText"
 import { Skill } from "@/components/courses/course/sections/skills/Skill"
-import { CourseAttr, ISkill } from "@/models/course.models"
 
 interface Props {
     courseAttr: CourseAttr
@@ -13,7 +14,7 @@ const SkillsSection: React.FC<Props> = ({ skills, courseAttr}) => (
     <section id={styles.skills} className={'mb-32'}>
         <TitleText text={'What will you learn'}/>
         <div {...courseAttr} className={`${styles.content} mt-16 grid gap-12 grid-cols-3`}>
-            {skills.map((item, key) => <Skill key={key} title={item?.title} text={item.text}/>)}
+            {skills.map((skill) => <Skill key={v4()} title={skill?.title} text={skill.text}/>)}
         </div>
     </section>
 )

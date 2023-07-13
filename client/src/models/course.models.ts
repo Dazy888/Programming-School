@@ -2,8 +2,12 @@ export interface CourseAttr {
     course: string
 }
 
-export interface SliderProps {
-    isSlider: boolean
+export interface IntroProps {
+    courseAttr: CourseAttr
+    profession: string
+    text: string
+    columnsAttr: any
+    features: ListItemText[]
 }
 
 export interface Preview {
@@ -41,15 +45,21 @@ export interface Count {
     text: string
 }
 
+export interface ProgramProps {
+    courseAttr: CourseAttr
+    countItems: Count[]
+    titleText: string
+    programItems: IProgramItem[]
+}
+
 export interface IProgramItem {
     title: string
-    number: number
     listItems?: string[]
     text?: string
     subtitle?: string
 }
 
-export interface ITeacher {
+export interface ISpeaker {
     fullName: string
     text: string
     imgSrc?: string
@@ -76,10 +86,18 @@ interface CV {
     tools: string[]
 }
 
+export interface CVProps extends CV {
+    title: string
+}
+
+export interface QuestionsProps {
+    questions: IQuestion[]
+}
+
 export interface ICourse {
     preview: Preview
     course: {
-        header: {
+        title: {
             text: string
             features: ListItemText[]
         }
@@ -97,7 +115,7 @@ export interface ICourse {
             programItems: IProgramItem[]
         }
         projects?: Project[]
-        teachers: ITeacher[]
+        speakers: ISpeaker[]
         cv?: CV
         questions: IQuestion[]
     }
@@ -106,5 +124,5 @@ export interface ICourse {
 export interface CourseForm {
     name: string
     phoneNumber: string
-    mail: string
+    email: string
 }

@@ -1,31 +1,17 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import styles from '@/styles/Course.module.scss'
-import { Header } from "@/components/courses/course/sections/employment/Header"
-import { CareerCenter } from "@/components/courses/course/sections/employment/CareerCenter"
-import { Guarantees } from "@/components/courses/course/sections/employment/Guarantees"
-import { Reviews } from "@/components/courses/course/sections/employment/Reviews"
+import { Title } from "@/components/courses/course/sections/employment/title/Title"
+import { CareerCenter } from "@/components/courses/course/sections/employment/career-center/CareerCenter"
+import { Guarantees } from "@/components/courses/course/sections/employment/guarantees/Guarantees"
+import { Reviews } from "@/components/courses/course/sections/employment/reviews/Reviews"
 
-const EmploymentSection = () => {
-    const [isSliders, setSliders] = useState(true)
-    const isSlidersListener = () => (window.innerWidth <= 1024) ? setSliders(false) : setSliders(true)
-
-    useEffect(() => {
-        isSlidersListener()
-        window.onresize = isSlidersListener
-    }, [])
-
-    return(
-        <section id={styles.employment} className={'rounded-xl py-16 mb-32'}>
-            <div className={`${styles.container} max-w-7xl mx-auto px-16`}>
-                <Header/>
-            </div>
-            <CareerCenter isSlider={isSliders}/>
-            <div className={`${styles.container} max-w-7xl mx-auto px-16`}>
-                <Guarantees/>
-            </div>
-            <Reviews isSlider={isSliders}/>
-        </section>
-    )
-}
+const EmploymentSection = () => (
+    <section id={styles.employment} className={'rounded-xl py-16 mb-32'}>
+        <Title />
+        <CareerCenter />
+        <Guarantees />
+        <Reviews />
+    </section>
+)
 
 export default React.memo(EmploymentSection)
