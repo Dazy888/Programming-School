@@ -6,7 +6,7 @@ import 'swiper/css'
 
 const CareerCenterComponent = () => {
     const breakpoints = {
-        0: { slidesPerView: 2.7 },
+        0: { slidesPerView: 1 },
         1150: { slidesPerView: 3 },
         1300: { slidesPerView: 3.5 },
         1440: { slidesPerView: 3.9 }

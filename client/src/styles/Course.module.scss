@@ -569,8 +569,8 @@
   #course .container {
     width: 100%;
 
-    #header {
-      .header__title {
+    #intro {
+      .title {
         padding: 40px 140px;
 
         h1 {
@@ -592,7 +592,7 @@
         }
       }
 
-      .header__features {
+      .features {
         &[columns='5'] {
           grid-template-columns: repeat(4, auto);
         }
@@ -617,16 +617,16 @@
     }
 
     #employment {
-      .header {
+      .title {
         grid-template-columns: repeat(1, auto);
         text-align: center;
 
-        .header__animation {
+        .title__animation {
           height: 500px;
           grid-column: 1/-1;
         }
 
-        .header__title {
+        div:last-child {
           margin: auto;
         }
       }
@@ -638,6 +638,7 @@
 
       .guarantees {
         grid-template-columns: repeat(1, auto);
+        gap: 30px;
 
         .guarantees__stats {
           width: 90%;
@@ -653,10 +654,6 @@
           .guarantees__stats-item {
             max-width: 280px;
           }
-        }
-
-        .guarantees__text h1 {
-          text-align: center;
         }
       }
 
@@ -724,8 +721,8 @@
 @media (max-width: 1024px) {
   #course {
     .container {
-      #header {
-        .header__title {
+      #intro {
+        .title {
           flex-direction: column;
 
           h1 {
@@ -737,7 +734,7 @@
           }
         }
 
-        .header__features {
+        .features {
           &[columns='4'], &[columns='5'] {
             grid-template-columns: repeat(3, auto);
           }

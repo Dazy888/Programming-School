@@ -36,7 +36,11 @@ const SpeakerComponent: React.FC<Props> = ({ additionalInfo, fullName, text, img
         setIsModal(true)
     }
 
-    const closeModal = () => setIsModal(false)
+    const closeModal = () => {
+        const body = document.querySelector('body')
+        if (body) body.style.overflow = 'none'
+        setIsModal(false)
+    }
 
     return(
         <>
