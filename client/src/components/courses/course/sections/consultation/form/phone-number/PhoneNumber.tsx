@@ -37,9 +37,9 @@ const PhoneNumberComponent: React.FC<Props> = ({ register, errMessage }) => {
         <div className={`${styles['phone-number']} relative`}>
             <div className={'flex'}>
                 <SelectedCountry clickListener={countriesSelectListener} isErr={!!errMessage} {...{ arrowAnimation, activeCountry }} />
-                {(activeCountry === 'ukraine') && <PhoneInput maskValue={'+380 __ ___ __ __'} phoneMask={'+{38\\0} 00 000 00 00'} {...{ errMessage, register }} />}
-                {(activeCountry === 'belarus') && <PhoneInput maskValue={'+375 __ ___ __ __'} phoneMask={'+{375} 00 000 00 00'} {...{ errMessage, register }} />}
-                {(activeCountry === 'kazakhstan') && <PhoneInput maskValue={'+7 ___ ___ __ __'} phoneMask={'+{7} 000 000 00 00'} {...{ errMessage, register }} />}
+                {(activeCountry === 'ukraine') && <PhoneInput maskValue={'+38 ___ ___ __ __'} phoneMask={'+{38} 000 000 0000'} {...{ errMessage, register }} />}
+                {(activeCountry === 'belarus') && <PhoneInput maskValue={'+375 __ ___ __ __'} phoneMask={'+{375} 00 000 0000'} {...{ errMessage, register }} />}
+                {(activeCountry === 'kazakhstan') && <PhoneInput maskValue={'+7 ___ ___ __ __'} phoneMask={'+{7} 000 000 0000'} {...{ errMessage, register }} />}
                 {(activeCountry === 'us') && <PhoneInput maskValue={'+1 ___ ___ ____'} phoneMask={'+{1} 000 000 0000'} {...{ errMessage, register }}/>}
                 {(activeCountry === 'canada') && <PhoneInput maskValue={'+1 ___ ___ ____'} phoneMask={'+{1} 000 000 0000'} {...{ errMessage, register }} />}
             </div>

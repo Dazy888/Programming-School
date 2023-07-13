@@ -2,6 +2,8 @@ import React from "react"
 import styles from "@/styles/Course.module.scss"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { CourseForm } from "@/models/course.models"
+import { notify } from "@/components/contacts/form/Form"
+// Components
 import { Input } from "@/components/courses/course/sections/consultation/form/Input"
 import { PhoneNumber } from "@/components/courses/course/sections/consultation/form/phone-number/PhoneNumber"
 
@@ -10,7 +12,7 @@ const FormComponent = () => {
         formState: { errors}
     } = useForm<CourseForm>({ mode: 'onChange' })
 
-    const onSubmit: SubmitHandler<CourseForm> = () => reset()
+    const onSubmit: SubmitHandler<CourseForm> = () => notify('Form submitted successfully', 'success')
 
     const name = watch('name')
     const email = watch('email')
