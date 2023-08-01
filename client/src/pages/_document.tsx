@@ -6,6 +6,7 @@ const Document = () => (
         <Head>
             <link rel={'icon'} href={'/common/favicon.webp'}/>
             <link rel={'stylesheet'} href={'/fontawesome/css/all.css'}/>
+            <link rel={'manifest'} href={'/manifest/manifest.json'}/>
         </Head>
         <body>
         <Main />
