@@ -36,9 +36,9 @@ client/.vercel
 client/*.tsbuildinfo
 client/next-env.d.ts
 
-client/public/manifest/sw.js
-client/public/manifest/workbox-*.js
-client/public/manifest/worker-*.js
-client/public/manifest/sw.js.map
-client/public/manifest/workbox-*.js.map
-client/public/manifest/worker-*.js.map
+client/manifest/sw.js
+client/manifest/workbox-*.js
+client/manifest/worker-*.js
+client/manifest/sw.js.map
+client/manifest/workbox-*.js.map
+client/manifest/worker-*.js.map

@@ -1,5 +1,5 @@
 const withPWA = require('next-pwa')({
-    dest: 'public/manifest'
+    dest: 'public'
 })
 
 module.exports = withPWA({})
